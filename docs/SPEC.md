@@ -8,11 +8,11 @@ Most motors draw power directly from the 4S battery (not via a DC-DC converter).
 
 | Type | Qty | Spec |
 | --- | --- | --- |
-| Drive wheel | 2 | DC 14.4V 19 Ohm, measured 0.14A no load / 1.7A stall, H-bridge DRV8231, DRV8871 or similar |
-| Suction fan | 1 | BLDC 14.4V, measured 1.7A free / 2.7A intake blocked (BL24131607 at 15V), high-side load switch P-FET, PWM input to fan, FG feedback to STM32 |
+| Drive wheel | 2 | DC 14.4V H-bridge DRV8231, DRV8871 or similar |
+| Suction fan | 1 | BLDC 14.4V PWM input to fan, FG feedback to STM32 |
 | LiDAR | 1 | 5V 0.35A max, Mabuchi-style RF-500TB-14350 or similar, low-side load switch N-FET |
-| Main brush | 1 | DC 14.4-15V, measured 0.26A no load / 3.5A stall, PRI-390SV-24100, JLS-395PH-2248A, RS-390WM-3107GCF or similar (bridge or FET TBD) |
-| Side brush | 1 | DC 14.4V, 1.3A stall estimated (not yet measured), RC500-KW/14440/DV, PR-500EV-14440 or similar (bridge or FET TBD) |
+| Main brush | 1 | DC 14.4-15V PRI-390SV-24100, JLS-395PH-2248A, RS-390WM-3107GCF or similar (bridge or FET TBD) |
+| Side brush | 1 | DC 14.4V RC500-KW/14440/DV, PR-500EV-14440 or similar (bridge or FET TBD) |
 | Mop | 2 | GM-RS385Y-24065 or similar, DC 14.4V |
 | Mop lift | 1 | Likely MG90S servo |
 | Mop arm | 1 | Likely MG90S servo |
@@ -23,7 +23,7 @@ Motor pinouts
 
 ```
 Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p (mates board f)
-  0.14A no load, 1.7A stall at 14.4V
+  0.14A no load, 1.7A stall at 14.4V, 19 Ohm
   pin 7 wheel-drop-switch on
   pin 6 wheel-drop-switch com
   pin 5 orange Hall 3.3-5V
@@ -32,7 +32,7 @@ Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p (mates board f)
   pin 2 MOT-
   pin 1 MOT+
 
-BL24131607 suction fan DC 14.4V; 15V 1.7A unobstructed, 2.7A intake obstructed
+BL24131607 suction fan ~7kPa DC 14.4V; 15V 1.7A unobstructed, 2.7A intake obstructed
  JST PH2.0 female 5p (mates m-m fan-to-board cable)
  pin 5 +  (VMOT)
  pin 4 -  (GND)
@@ -42,16 +42,16 @@ BL24131607 suction fan DC 14.4V; 15V 1.7A unobstructed, 2.7A intake obstructed
 
 DC 14.4-15V 4S suction fans:
 - 20N704R990F
-- MSD-C-3
-- MSD-D
-- 20N709U020
+- MSD-C-3 ~6kPa
+- MSD-D ~7kPa
+- 20N709U020 ~6kPa
   JST PH2.0 female 4p (mates m-m fan-to-board cable)
   pin 4 VMOT
   pin 3 GND
   pin 2 PWM, low == off; drive at 5V?
   pin 1 TACH open collector
 
-22N704V160 suction fan DC 14.4V - JST PA 2mm 5 pin (needs male)
+22N704V160 suction fan ~10kPa DC 14.4V - JST PA 2mm 5 pin (needs male)
 
 BL27302101 suction fan DC 14.4V - JST PA 2mm 6-pin (needs male)
   pin 1 VCC
@@ -61,14 +61,14 @@ BL27302101 suction fan DC 14.4V - JST PA 2mm 6-pin (needs male)
   pin 5 PWM
   pin 6 FG (TACH)
 
-BL24131616 suction fan DC 14.4V - JST PA 2mm 5 pin  (needs male)
+BL24131616 suction fan ~10kPa DC 14.4V - JST PA 2mm 5 pin (needs male)
   pin 5 VM
   pin 4 GND
   pin 3 PWM
   pin 2 FG (TACH)
   pin 1 ID
 
-MSD-G-V1 suction fan - LHE MX3.0 2x2 (4-pin) 3mm pitch with latch male (aka Molex Micro-Fit 3.0)
+MSD-G-V1 suction fan ~20kPa LHE MX3.0 2x2 (4-pin) 3mm pitch with latch male (aka Molex Micro-Fit 3.0)
 ```
 
 Main brush Roborock S50 S51 S55 XIAOWA C10 0.26A no load, stall 3.5A at 14.4V

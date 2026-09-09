@@ -111,6 +111,8 @@ Battery BRR-2P4S-5200 14.4V nominal - 4-pin 3mm pitch with latch male LHE MX3.0 
   - Healthy charge ~40 W (~0.5C into the 75 Wh pack)
   - ~65–70 W total
 - cap charge at ~0.5C regardless of charging adapter power
+- MCU reset drops everything to a safe state, so motors are off during reset, firmware upload and firmware crash
+  - watchdog
 
 ### Dock
 

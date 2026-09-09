@@ -28,7 +28,7 @@ Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p housing, RS-360-SH-15250
 ```
 
 <table>
-  <tr><th>Part</th><th>Voltage</th><th>Idle</th><th>Peak</th><th>Pinout</th></tr>
+  <tr><th>Part</th><th>Voltage</th><th>Idle</th><th>Peak</th><th>Notes</th></tr>
   <tr>
     <td rowspan="3">Fan MSD-G v1, ~20kPa</td><td>16.8V</td><td>3.65A</td><td>6A</td>
     <td rowspan="3">LHE MX3.0 2x2 (4-pin) 3mm pitch with latch male (aka Molex Micro-Fit 3.0); 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off)</td>
@@ -100,8 +100,15 @@ Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p housing, RS-360-SH-15250
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Side brush RC500-KW/14440/DV</td><td></td><td></td><td></td>
-    <td rowspan="3">Roborock FlexiArm?</td>
+    <td rowspan="3">Side brush FlexiArm</td><td></td><td></td><td></td>
+    <td rowspan="3">RC500-KW/14440/DV motor; fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra</td>
+  </tr>
+  <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
+  <tr><td></td><td></td><td></td></tr>
+
+  <tr>
+    <td rowspan="3">Side brush fixed</td><td></td><td></td><td></td>
+    <td rowspan="3">RC500-KW/14440/DV motor; fits Roborock Robot Vacuum S50 S51 S52 S55 S502-00/01/02/03** S552-00 S60 S61 S65 S5 Max S6 Pure MAX S7 S70 S75</td>
   </tr>
   <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>

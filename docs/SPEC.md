@@ -8,22 +8,16 @@ Most motors draw power directly from the 4S battery (not via a DC-DC converter).
 
 | Type | Qty | Spec |
 | --- | --- | --- |
-| Drive wheel | 2 | DC 14.4V H-bridge DRV8231, DRV8871 or similar |
-| Suction fan | 1 | BLDC 14.4V PWM input to fan, FG feedback to STM32 |
 | LiDAR | 1 | 5V 0.35A max, Mabuchi-style RF-500TB-14350 or similar, low-side load switch N-FET |
-| Main brush | 1 | DC 14.4-15V PRI-390SV-24100, JLS-395PH-2248A, RS-390WM-3107GCF or similar (bridge or FET TBD) |
-| Side brush | 1 | DC 14.4V RC500-KW/14440/DV, PR-500EV-14440 or similar (bridge or FET TBD) |
+| Main brush | 1 | DC 14.4-15V PRI-390SV-24100, JLS-395PH-2248A, RS-390WM-3107GCF or similar |
+| Side brush | 1 | DC 14.4V RC500-KW/14440/DV, PR-500EV-14440 or similar |
 | Mop | 2 | GM-RS385Y-24065 or similar, DC 14.4V |
-| Mop lift | 1 | Likely MG90S servo |
-| Mop arm | 1 | Likely MG90S servo |
-| Water pump | 1 | TBD |
-| Side brush arm | 1 | Likely MG90S servo |
 
 Motor pinouts
 
 ```
-Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p (mates board f)
-  0.14A no load, 1.7A stall at 14.4V, 19 Ohm
+Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p housing, RS-360-SH-15250
+  16.8V 0.12A no load, 2A stall
   pin 7 wheel-drop-switch on
   pin 6 wheel-drop-switch com
   pin 5 orange Hall 3.3-5V
@@ -71,7 +65,18 @@ BL24131616 suction fan ~10kPa DC 14.4V - JST PA 2mm 5 pin (needs male)
 MSD-G-V1 suction fan ~20kPa LHE MX3.0 2x2 (4-pin) 3mm pitch with latch male (aka Molex Micro-Fit 3.0)
 ```
 
-Main brush Roborock S50 S51 S55 XIAOWA C10 0.26A no load, stall 3.5A at 14.4V
+Main brush
+- Roborock S50 S51 S55 XIAOWA C10
+- 16.8V 0.27A no load, 7A stall
+
+Side brush
+- RC500-KW/14440/DV
+- 16.8V 0.07A no load, 1.7A stall
+- the motor both actuates the brush and the extendable arm
+
+Mop lift TBD
+
+Mop arm actuator TBD
 
 ## Cliff sensors
 
@@ -208,9 +213,9 @@ Mystery mini - JST GH 1.25mm 5-pin female (needs m)
   - hookup schematic https://eu.mouser.com/en/new/stmicroelectronics/stm-vl53l7ch-tof-sensor
   - LPn pin sets I2C address
 
-## Pump
+## Water pump
 
-- 6V DC motor, peristaltic; ~0.6A rated, 1A max
+- 5V DC motor, peristaltic; ~0.6A rated, 1A max
 - make DC settable by replacing resistors
 
 ## GPIO
@@ -218,6 +223,17 @@ Mystery mini - JST GH 1.25mm 5-pin female (needs m)
 Please see the [PCB schematic](https://github.com/makerspet/oomwoo-io-board/tree/main/kicad/PDF) for up-to-date GPIO list.
 
 TODO before layout/fabrication: confirm whether GPIO entries 36 and 46 are intentionally separate bumper inputs or a duplicate label.
+
+## Side brush FlexiArm assembly
+
+JST ZH 1.25mm 5-pin housing, 14.4V motor
+```
+pin 1 MOT-
+pin 2 MOT+
+pin 3 IR output? Arm folded in fully -> sensor blocked
+pin 4 IR GND?
+pin 5 IR VDD?
+```
 
 ## Carpet sensors
 

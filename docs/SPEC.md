@@ -107,7 +107,8 @@ Battery BRR-2P4S-5200 14.4V nominal - 4-pin 3mm pitch with latch male LHE MX3.0 
 - robot requires 65W minimum input (from the dock) with system power-path charger (a charger IC with a SYS rail)
   - support the vacuum charging and Raspberry Pi running simultaneously
   - assume Raspberry Pi is always on (to handle user access over Wi-Fi at any time)
-  - Pi 5 worst case ~25 W (5 V/5 A) + housekeeping ≈ up to ~25–30 W
+  - Pi CM5 worst case ~15.6W
+  - M.2
   - Healthy charge ~40 W (~0.5C into the 75 Wh pack)
   - ~65–70 W total
 - cap charge at ~0.5C regardless of charging adapter power

@@ -135,17 +135,17 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>55mA</td><td></td>
-    <td>JSB15224025 peristaltic, 5V nominal (loud); JST ZH 2-pin housing; pin 1 MOT+, 2 MOT-</td>
+    <td><a href="https://www.tcstec.com">TCS Precision Technology<a>JSB1523025 peristaltic, 5V nominal (loud); JST ZH 2-pin housing; pin 1 MOT+, 2 MOT-</td>
   </tr>
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>60mA</td><td></td>
-    <td><a href="www.dyxminipump.com">ShenZhen Deyuxin Technology</a>DSB030-C peristaltic, 5V nominal (quiet); JST PH 2.0 2-pin housing; pin 1 MOT+, 2 MOT-</td>
+    <td><a href="https://www.dyxminipump.com">ShenZhen Deyuxin Technology</a>DSB030-C peristaltic, 5V nominal (quiet); JST PH 2.0 2-pin housing; pin 1 MOT+, 2 MOT-</td>
   </tr>
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>87mA</td><td></td>
-    <td><a href="www.tcstec.com">TCS Precision Technology<a>JSB030-5A peristaltic, 5V nominal (loud)</td>
+    <td><a href="https://www.dgjbf.com">Dongguan Jingbofang Precision Electronics<a>JSB030-5A peristaltic, 5V nominal (loud); no connector</td>
   </tr>
 
   <tr>

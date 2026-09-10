@@ -150,12 +150,12 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>110mA</td><td></td>
-    <td><a href="www.yyjiayin.com">Jiayin</a> JYPDM-6B peristaltic, 5V nominal; 2mm pitch housing with a "squish" latch; pin 1 MOT+, 2 MOT-</td>
+    <td><a href="www.yyjiayin.com">Jiayin</a> JYPDM-6B peristaltic, 5V nominal (quit-ish); JST XH 2.54mm 2-pin; pin 1 MOT+, 2 MOT-</td>
   </tr>
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>330mA</td><td></td>
-    <td>Conjoin CJWP12-AA05A peristaltic, 5V nominal (loud); likely JST GH 1.25mm housing; pin 1 blue (ground?), 2 red (power?)</td>
+    <td><a href="https://conjoinfluid.com/">Conjoin</a> CJWP12-AA05A peristaltic, 5V nominal (loud); likely JST GH 1.25mm housing; pin 1 blue (ground?), 2 red (power?)</td>
   </tr>
 
   <tr>

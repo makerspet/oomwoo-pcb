@@ -105,35 +105,34 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>
 
+  <tr>
+    <td>Cliff sensors</td><td></td><td></td><td></td>
+    <td>JST PAD 2.0mm 8x2 housing, mates JST S16B-PHDSS, JST B16B-PADSS; fits iRobot Roomba 500 600 700 800 528 552 564 595 560 570 610 615 620 625 630 650</td>
+  </tr>
+
+  <tr>
+    <td>Battery</td><td></td><td></td><td></td>
+    <td>4S2P 14.4V nominal [BRR-2P4S-5200FL battery datasheet](https://images.thdstatic.com/catalog/pdfImages/55/55d2f7f6-2ed9-44ed-ab4e-fb20d231c897.pdf) or similar;
+    4-pin 3mm pitch with latch male LHE MX3.0 (C3001-H04), Molex Micro-Fit 3.0;
+    4 BAT+, 3 NTC (10.7K), 2 ID (0.62M to ground), 1 GND</td>
+  </tr>
+
 </table>
 
 Mop lift TBD
 
-Mop arm actuator TBD
-
-## Cliff sensors
-
-JST PAD 2.0mm 8x2 housing, mates JST S16B-PHDSS, JST B16B-PADSS.
+Mop arm actuator - Roborock FlexiArm; later replace with own design
 
 ## Compute + Camera
 
 - 2x 15-pin ArduCam-style connectors for OV5647
 - TODO add USB to I/O board
+- provision an M.2 slot, route a PICe lane, populate later - to experiment with NPU accelerator(s) like Hailo
 
 Undecided TODO 
-- maybe provision an M.2 slot, route a PICe lane, populate later - to experiment with NPU accelerator(s) like Hailo
 - USB-C 3.0+, CM5 only - to experiment with accelerator(s) like Coral TPU
 - Keep the compute socket able to take an integrated-NPU module too (Radxa CM5) or premium-upgradeable (CM5 + M.2 Hailo).
 - Flag it to the PCB contractor as a design item: M.2 E-key (WiFi) + an M.2 M-key/PCIe (NPU or NVMe), PCIe lane routing, and the thermal path for a few-watt accelerator in a suction-cooled enclosure
-
-## Charging
-
-View [BRR-2P4S-5200FL battery datasheet](https://images.thdstatic.com/catalog/pdfImages/55/55d2f7f6-2ed9-44ed-ab4e-fb20d231c897.pdf) as a sample.
-
-```
-Battery BRR-2P4S-5200 14.4V nominal - 4-pin 3mm pitch with latch male LHE MX3.0 (C3001-H04), Molex Micro-Fit 3.0
-[o66o] 4321 BAT+ 10.7K/NTC 0.62M/ID GND
-```
 
 ### Robot
 
@@ -207,13 +206,13 @@ Net spec
 ## LiDAR pinouts
 
 ```
-X-WPFTB-V2.6.2 PCB marking - JST GH 1.25mm 4-pin female (needs m)
+X-WPFTB-V2.6.2 PCB marking - JST GH 1.25mm 4-pin shrouded housing
 
-D-WPFTBCD-V1.0.1 PCB marking - JST GH 1.25mm 4-pin female (needs m)
+D-WPFTBCD-V1.0.1 PCB marking - JST GH 1.25mm 4-pin shrouded housing
 
-LDROBOT LD14P lookalike - JST GH 1.25mm 4-pin female (needs m)
+LDROBOT LD14P lookalike - JST GH 1.25mm 4-pin shrouded housing
 
-Mystery mini - JST GH 1.25mm 5-pin female (needs m)
+Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 ```
 
 ## Front sensors module board
@@ -278,7 +277,7 @@ How to drive
 - 2-pin connector "1.25mm Y" per spec, exact model unclear
   - not Molex PicoBlade 1.25mm, not JST GH 1.25mm
 
-## TBD
+## TODO
 
 | Type | Qty | Spec |
 | --- | --- | --- |

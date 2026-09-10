@@ -2,7 +2,7 @@
 
 See [vacuum BOM](https://github.com/makerspet/oomwoo/blob/main/BOM.md) for details.
 
-## Motor assembly data
+## Reverse engineering data
 
 Drive, brush and fan motors draw power directly from the 4S battery (not via a DC-DC converter). The battery is 4*3.6V=14.4V nominal, 4*2.9V=11.6V discharged and 4*4.2V=16.8V fully charged.
 

@@ -140,22 +140,23 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>60mA</td><td></td>
-    <td>DSB030-C peristaltic, 5V nominal (quiet); JST PH 2.0 2-pin housing; pin 1 MOT+, 2 MOT-</td>
+    <td><a href="www.dyxminipump.com">ShenZhen Deyuxin Technology</a>DSB030-C peristaltic, 5V nominal (quiet); JST PH 2.0 2-pin housing; pin 1 MOT+, 2 MOT-</td>
   </tr>
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>87mA</td><td></td>
-    <td>JSB030-5A peristaltic, 5V nominal (loud)</td>
+    <td><a href="www.tcstec.com">TCS Precision Technology<a>JSB030-5A peristaltic, 5V nominal (loud)</td>
   </tr>
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>110mA</td><td></td>
-    <td>JYPDM-6B peristaltic, 5V nominal; 2mm pitch housing with a "squish" latch; pin 1 MOT+, 2 MOT-</td>
+    <td><a href="www.yyjiayin.com">Jiayin</a> JYPDM-6B peristaltic, 5V nominal; 2mm pitch housing with a "squish" latch; pin 1 MOT+, 2 MOT-</td>
   </tr>
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>330mA</td><td></td>
-    <td>CJWP12-AA05A peristaltic, 5V nominal (loud); 1.25mm pitch housing mystery latch</td>
+    <td>Conjoin CJWP12-AA05A peristaltic, 5V nominal (loud); 1.25mm pitch housing mystery latch;
+    pin 1 blue (ground?), 2 red (power?)</td>
   </tr>
 
   <tr>

@@ -12,7 +12,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr>
     <td rowspan="3">Drive wheel</td><td>16.8V</td><td>0.12A</td><td>2A</td>
     <td rowspan="3">JST ZH 1.5mm 7-pin housing; RS-360-SH-15250 motor;
-      1 MOT+, 2 MOT-, 3 Hall GND (brown), 4 Hall signal out (blue, open collector), 5 Hall VCC (3.3-5V, orange), 6 COM wheel drop switch, 7 ON wheel drop switch;
+      pin 1 MOT+, 2 MOT-, 3 Hall GND (brown), 4 Hall signal out (blue, open collector), 5 Hall VCC (3.3-5V, orange), 6 COM wheel drop switch, 7 ON wheel drop switch;
       fits Roborock S4 Max, S45 Max, S5 Max, S50 Max, S55 Max, S6 MaxV, S6 Pure, S65 Pure, S65 MaxV, S7, S7 Pro, S7 MaxV, S7 Max Ultra, S70, S75, E4, E45, E5, E50, E55, G10, T7, T7S, Q5, Q7, Q7 Max, and Q Revo
     </td>
   </tr>
@@ -21,63 +21,63 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   
   <tr>
     <td rowspan="3">Fan MSD-G v1, ~20kPa</td><td>16.8V</td><td>3.65A</td><td>6A</td>
-    <td rowspan="3">LHE MX3.0 4-pin (2x2) 3.0mm with latch header (aka Molex Micro-Fit 3.0); 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off)</td>
+    <td rowspan="3">LHE MX3.0 4-pin (2x2) 3.0mm with latch header (aka Molex Micro-Fit 3.0); pin 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off)</td>
   </tr>
   <tr><td>14.4V</td><td>4.2A</td><td></td></tr>
   <tr><td>12V</td><td>5.25A</td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan BL27302101</td><td>16.8V</td><td>1.8A</td><td>1.8A</td>
-    <td rowspan="3">JST PA 2mm 6-pin shrouded header; 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM (low off), 6 FG (open collector)</td>
+    <td rowspan="3">JST PA 2mm 6-pin shrouded header; pin 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM (low off), 6 FG (open collector)</td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td></td></tr>
   <tr><td>12V</td><td>2.5A</td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan BL24131616 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>1.75A</td>
-    <td rowspan="3">JST PA 2mm 5-pin shrouded header; 1 ID (22k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (22k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td>2.1A</td></tr>
   <tr><td>12V</td><td>2.6A</td><td>2.6A</td></tr>
 
   <tr>
     <td rowspan="3">Fan 22N704V160 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>3.25A</td>
-    <td rowspan="3">JST PA 2mm 5-pin shrouded header; 1 ID (5 Ohm to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (5 Ohm to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
   </tr>
   <tr><td>14.4V</td><td>2.05A</td><td>2.7A</td></tr>
   <tr><td>12V</td><td>2.5A</td><td>2A</td></tr>
 
   <tr>
     <td rowspan="3">Fan 20N704R990F</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan MSD-C-3 ~6kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan MSD-D ~7kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan 20N709U020 ~6kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan BL24131607 ~7kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 5-pin shrouded header; 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 5-pin shrouded header; pin 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
   </tr>
   <tr><td>15V</td><td>1.7A</td><td>2.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>
@@ -92,7 +92,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr>
     <td rowspan="3">Side brush FlexiArm</td><td></td><td></td><td></td>
     <td rowspan="3">RC500-KW/14440/DV motor; JST ZH 1.25mm 5-pin housing, 14.4V motor nominal;
-      1 MOT-, 2 MOT+, 3 IR output? (Arm folded in fully -> sensor blocked), 4 IR GND? 5 IR VDD?
+      pin 1 MOT-, 2 MOT+, 3 IR output? (Arm folded in fully -> sensor blocked), 4 IR GND? 5 IR VDD?
       fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra</td>
   </tr>
   <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
@@ -112,9 +112,57 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
   <tr>
     <td>Battery</td><td></td><td></td><td></td>
-    <td>4S2P 14.4V nominal [BRR-2P4S-5200FL battery datasheet](https://images.thdstatic.com/catalog/pdfImages/55/55d2f7f6-2ed9-44ed-ab4e-fb20d231c897.pdf) or similar;
+    <td>4S2P 14.4V nominal BRR-2P4S-5200FL battery datasheet](https://images.thdstatic.com/catalog/pdfImages/55/55d2f7f6-2ed9-44ed-ab4e-fb20d231c897.pdf) or similar;
     4-pin 3mm pitch with latch male LHE MX3.0 (C3001-H04), Molex Micro-Fit 3.0;
-    4 BAT+, 3 NTC (10.7K), 2 ID (0.62M to ground), 1 GND</td>
+    pin 4 BAT+, 3 NTC (10.7K), 2 ID (0.62M to ground), 1 GND</td>
+  </tr>
+
+  <tr>
+    <td rowspan="3">Mop rotary fixed</td><td>16.8V</td><td>0.15A</td><td>5.3A</td>
+    <td rowspan="3">JST PH 2.0 4-pin housing, RS-385PH-2466 motor; pin 1 VCC fixed, 2 GND fixed, 3 GND FlexiArm, 4 VCC FlexiArm;
+    fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra, G20S, V20, P10S Pro</td>
+  </tr>
+  <tr><td>14.4V</td><td>0.16A</td><td>4.3A</td></tr>
+  <tr><td>11.6V</td><td>0.15A</td><td>3.7A</td></tr>
+
+  <tr>
+    <td rowspan="3">Mop rotary FlexiArm</td><td>16.8V</td><td>0.2A</td><td>5A</td>
+    <td rowspan="3">JST PH 2.0 4-pin housing, RS-385PH-2466 motor; pin 1 VCC fixed, 2 GND fixed, 3 GND FlexiArm, 4 VCC FlexiArm;
+    fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra, G20S, V20, P10S Pro</td>
+  </tr>
+  <tr><td>14.4V</td><td>0.17A</td><td>4.3A</td></tr>
+  <tr><td>11.6V</td><td>0.16A</td><td>3.6A</td></tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>55mA</td><td></td>
+    <td>JSB15224025 peristaltic, 5V nominal (loud); JST ZH 2-pin housing; pin 1 MOT+, 2 MOT-</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>60mA</td><td></td>
+    <td>DSB030-C peristaltic, 5V nominal (quiet); JST PH 2.0 2-pin housing; pin 1 MOT+, 2 MOT-</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>87mA</td><td></td>
+    <td>JSB030-5A peristaltic, 5V nominal (loud)</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>110mA</td><td></td>
+    <td>JYPDM-6B peristaltic, 5V nominal; 2mm pitch housing with a "squish" latch; pin 1 MOT+, 2 MOT-</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>330mA</td><td></td>
+    <td>CJWP12-AA05A peristaltic, 5V nominal (loud); 1.25mm pitch housing mystery latch</td>
+  </tr>
+
+  <tr>
+    <td>Carpet sensor</td><td></td><td></td><td></td>
+    <td>290KHz piezo ultrasonic, <a href="https://htwsensor.en.made-in-china.com/product/HfMYgjwoZxVh/China-300kHz-Carpet-Material-Recognition-Sensor-for-Robotic-Vacuum-Cleaner-Ultraosinc-Sensor.html">likely this one</a>,
+      12V minimum; JST ZH 2-pin housing; <a href="https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor">sourcing notes</a>
+    </td>
   </tr>
 
 </table>
@@ -203,6 +251,27 @@ Net spec
 2. Power-path 4S charger with a SYS rail feeding the Pi's 5 V buck, so the Pi is always-on from input when docked and from battery when not, with seamless handoff and battery-supplement under load.
 3. DPM + 0.5C charge-current cap; OR the two DC inputs into one VBUS; dock contacts rated ~4 A.
 
+## How to drive carpet sensor
+
+- 290KHz ultrasonic piezoelectric analog
+- ≥12V DC stabilized per spec (not 4S battery directly)
+  - make DC voltage configurable using a resistive divider
+  - current consumption - calculate 300KHz driving 1300±20% pF per sensor spec
+  - make it withstand shorts
+- connect sensor analog I/O to MCU ADC input
+- use STM32G473VCT6 internal op-amp as echo input (AC via a cap)
+- clamp amplitude to 3.3V (back-to-back clamp diodes)
+- add a series resistor to STM32 op-amp input (extra protection against 12V)
+- (firmware) bias the MCU internal op-amp to Vref/2 using MCU internal DAC
+- (firmware) configure ADC pre-amp gain, PGA mode (op-amp bandwidth is 10MHz)
+- (firmware) configure op-amp to output signal to internal ADC channel
+- drive sensor analog I/O using a FET half-bridge
+- drive the half-bridge by MCU, one GPIO for high side, one GPIO for low side
+- add pull-up/down to FET inputs, so the bridge is off when MCU GPIO is tristated
+- (firmware) drive the sensor for a brief while
+- (firmware) tristate both FETs
+- (firmware) measure using ADC, calculate return amplitude
+
 ## LiDAR pinouts
 
 ```
@@ -255,11 +324,6 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 Please see the [PCB schematic](https://github.com/makerspet/oomwoo-io-board/tree/main/kicad/PDF) for up-to-date GPIO list.
 
 TODO before layout/fabrication: confirm whether GPIO entries 36 and 46 are intentionally separate bumper inputs or a duplicate label.
-
-## Carpet sensors
-
-- Read [sourcing notes](https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor).
-- 290KHz ultrasonic piezoelectric analog, likely [this one](https://htwsensor.en.made-in-china.com/product/HfMYgjwoZxVh/China-300kHz-Carpet-Material-Recognition-Sensor-for-Robotic-Vacuum-Cleaner-Ultraosinc-Sensor.html)
 
 How to drive
 - ≥12V DC stabilized per spec (not 4S battery directly?)

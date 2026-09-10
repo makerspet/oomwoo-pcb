@@ -162,6 +162,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
     <td>Carpet sensor</td><td></td><td></td><td></td>
     <td>290KHz piezo ultrasonic, <a href="https://htwsensor.en.made-in-china.com/product/HfMYgjwoZxVh/China-300kHz-Carpet-Material-Recognition-Sensor-for-Robotic-Vacuum-Cleaner-Ultraosinc-Sensor.html">likely this one</a>,
       12V minimum; JST ZH 2-pin housing; <a href="https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor">sourcing notes</a>
+      pin 1 white, 2 black (driven by AC, polarity doesn't matter?)
     </td>
   </tr>
 

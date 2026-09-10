@@ -128,6 +128,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr>
     <td rowspan="3">Mop rotary FlexiArm</td><td>16.8V</td><td>0.2A</td><td>5A</td>
     <td rowspan="3">JST PH 2.0 4-pin housing, RS-385PH-2466 motor; pin 1 VCC fixed, 2 GND fixed, 3 GND FlexiArm, 4 VCC FlexiArm;
+    arm actuator likely JST GH 1.25; pin 1 black (ground?), 2 red (power?);
     fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra, G20S, V20, P10S Pro</td>
   </tr>
   <tr><td>14.4V</td><td>0.17A</td><td>4.3A</td></tr>

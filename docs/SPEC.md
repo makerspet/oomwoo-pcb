@@ -2,92 +2,82 @@
 
 See [vacuum BOM](https://github.com/makerspet/oomwoo/blob/main/BOM.md) for details.
 
-## Motors
+## Motor assembly data
 
-Most motors draw power directly from the 4S battery (not via a DC-DC converter). The battery is 14.4V nominal, 12V discharged and 16.8V fully charged.
-
-| Type | Qty | Spec |
-| --- | --- | --- |
-| LiDAR | 1 | 5V 0.35A max, Mabuchi-style RF-500TB-14350 or similar, low-side load switch N-FET |
-| Main brush | 1 | DC 14.4-15V PRI-390SV-24100, JLS-395PH-2248A, RS-390WM-3107GCF or similar |
-| Side brush | 1 | DC 14.4V RC500-KW/14440/DV, PR-500EV-14440 or similar |
-| Mop | 2 | GM-RS385Y-24065 or similar, DC 14.4V |
-
-Motor pinouts
-
-```
-Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p housing, RS-360-SH-15250
-  16.8V 0.12A no load, 2A stall
-  pin 7 wheel-drop-switch on
-  pin 6 wheel-drop-switch com
-  pin 5 orange Hall 3.3-5V
-  pin 4 blue Hall signal OUT, open collector
-  pin 3 brown Hall GND
-  pin 2 MOT-
-  pin 1 MOT+
-```
+Drive, brush and fan motors draw power directly from the 4S battery (not via a DC-DC converter). The battery is 4*3.6V=14.4V nominal, 4*2.9V=11.6V discharged and 4*4.2V=16.8V fully charged.
 
 <table>
   <tr><th>Part</th><th>Voltage</th><th>Idle</th><th>Peak</th><th>Notes</th></tr>
+
+  <tr>
+    <td rowspan="3">Drive wheel</td><td>16.8V</td><td>0.12A</td><td>2A</td>
+    <td rowspan="3">JST ZH 1.5mm 7-pin housing; RS-360-SH-15250 motor;
+      1 MOT+, 2 MOT-, 3 Hall GND (brown), 4 Hall signal out (blue, open collector), 5 Hall VCC (3.3-5V, orange), 6 COM wheel drop switch, 7 ON wheel drop switch;
+      fits Roborock S4 Max, S45 Max, S5 Max, S50 Max, S55 Max, S6 MaxV, S6 Pure, S65 Pure, S65 MaxV, S7, S7 Pro, S7 MaxV, S7 Max Ultra, S70, S75, E4, E45, E5, E50, E55, G10, T7, T7S, Q5, Q7, Q7 Max, and Q Revo
+    </td>
+  </tr>
+  <tr><td>14.4V</td><td>4.2A</td><td></td></tr>
+  <tr><td>12V</td><td>5.25A</td><td></td></tr>
+  
   <tr>
     <td rowspan="3">Fan MSD-G v1, ~20kPa</td><td>16.8V</td><td>3.65A</td><td>6A</td>
-    <td rowspan="3">LHE MX3.0 2x2 (4-pin) 3mm pitch with latch male (aka Molex Micro-Fit 3.0); 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off)</td>
+    <td rowspan="3">LHE MX3.0 4-pin (2x2) 3.0mm with latch header (aka Molex Micro-Fit 3.0); 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off)</td>
   </tr>
   <tr><td>14.4V</td><td>4.2A</td><td></td></tr>
   <tr><td>12V</td><td>5.25A</td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan BL27302101</td><td>16.8V</td><td>1.8A</td><td>1.8A</td>
-    <td rowspan="3">JST PA 2mm 6-pin housing; 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM (low off), 6 FG (open collector)</td>
+    <td rowspan="3">JST PA 2mm 6-pin shrouded header; 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM (low off), 6 FG (open collector)</td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td></td></tr>
   <tr><td>12V</td><td>2.5A</td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan BL24131616 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>1.75A</td>
-    <td rowspan="3">JST PA 2mm 5-pin housing; 1 ID (22k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">JST PA 2mm 5-pin shrouded header; 1 ID (22k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td>2.1A</td></tr>
   <tr><td>12V</td><td>2.6A</td><td>2.6A</td></tr>
 
   <tr>
     <td rowspan="3">Fan 22N704V160 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>3.25A</td>
-    <td rowspan="3">JST PA 2mm 5-pin housing; 1 ID (5 Ohm to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">JST PA 2mm 5-pin shrouded header; 1 ID (5 Ohm to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
   </tr>
   <tr><td>14.4V</td><td>2.05A</td><td>2.7A</td></tr>
   <tr><td>12V</td><td>2.5A</td><td>2A</td></tr>
 
   <tr>
     <td rowspan="3">Fan 20N704R990F</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin housing; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan MSD-C-3 ~6kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin housing; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan MSD-D ~7kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin housing; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan 20N709U020 ~6kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin housing; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan BL24131607 ~7kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 5-pin housing; 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">JST PH 2.0mm 5-pin shrouded header; 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
   </tr>
   <tr><td>15V</td><td>1.7A</td><td>2.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>
@@ -101,7 +91,9 @@ Roborock S5 Max wheel assembly - JST ZH 1.5mm male 7p housing, RS-360-SH-15250
 
   <tr>
     <td rowspan="3">Side brush FlexiArm</td><td></td><td></td><td></td>
-    <td rowspan="3">RC500-KW/14440/DV motor; fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra</td>
+    <td rowspan="3">RC500-KW/14440/DV motor; JST ZH 1.25mm 5-pin housing, 14.4V motor nominal;
+      1 MOT-, 2 MOT+, 3 IR output? (Arm folded in fully -> sensor blocked), 4 IR GND? 5 IR VDD?
+      fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra</td>
   </tr>
   <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>
@@ -265,17 +257,6 @@ Please see the [PCB schematic](https://github.com/makerspet/oomwoo-io-board/tree
 
 TODO before layout/fabrication: confirm whether GPIO entries 36 and 46 are intentionally separate bumper inputs or a duplicate label.
 
-## Side brush FlexiArm assembly
-
-JST ZH 1.25mm 5-pin housing, 14.4V motor
-```
-pin 1 MOT-
-pin 2 MOT+
-pin 3 IR output? Arm folded in fully -> sensor blocked
-pin 4 IR GND?
-pin 5 IR VDD?
-```
-
 ## Carpet sensors
 
 - Read [sourcing notes](https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor).
@@ -296,3 +277,12 @@ How to drive
   - calibrate return amplitude when docked
 - 2-pin connector "1.25mm Y" per spec, exact model unclear
   - not Molex PicoBlade 1.25mm, not JST GH 1.25mm
+
+## TBD
+
+| Type | Qty | Spec |
+| --- | --- | --- |
+| LiDAR | 1 | 5V 0.35A max, Mabuchi-style RF-500TB-14350 or similar, low-side load switch N-FET |
+| Main brush | 1 | DC 14.4-15V PRI-390SV-24100, JLS-395PH-2248A, RS-390WM-3107GCF or similar |
+| Side brush | 1 | DC 14.4V RC500-KW/14440/DV, PR-500EV-14440 or similar |
+| Mop | 2 | GM-RS385Y-24065 or similar, DC 14.4V |

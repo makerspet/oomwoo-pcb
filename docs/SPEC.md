@@ -7,7 +7,7 @@ See [vacuum BOM](https://github.com/makerspet/oomwoo/blob/main/BOM.md) for detai
 Drive, brush and fan motors draw power directly from the 4S battery (not via a DC-DC converter). The battery is 4*3.6V=14.4V nominal, 4*2.9V=11.6V discharged and 4*4.2V=16.8V fully charged.
 
 <table>
-  <tr><th>Part</th><th>Voltage</th><th>Idle</th><th>Peak</th><th>Notes</th></tr>
+  <tr><th>Part</th><th>Voltage</th><th>No load</th><th>Max Load</th><th>Notes</th></tr>
 
   <tr>
     <td rowspan="3">Drive wheel</td><td>16.8V</td><td>0.12A</td><td>2A</td>
@@ -151,7 +151,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
   <tr>
     <td>Water mini-pump</td><td>5V</td><td>110mA</td><td></td>
-    <td><a href="www.yyjiayin.com">Jiayin</a> JYPDM-6B peristaltic, 5V nominal (quit-ish); JST XH 2.54mm 2-pin; pin 1 MOT+, 2 MOT-</td>
+    <td><a href="www.yyjiayin.com">Jiayin</a> JYPDM-6B peristaltic, 5V nominal (quiet-ish); JST XH 2.54mm 2-pin; pin 1 MOT+, 2 MOT-</td>
   </tr>
 
   <tr>

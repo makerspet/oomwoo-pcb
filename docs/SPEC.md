@@ -16,8 +16,8 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
       fits Roborock S4 Max, S45 Max, S5 Max, S50 Max, S55 Max, S6 MaxV, S6 Pure, S65 Pure, S65 MaxV, S7, S7 Pro, S7 MaxV, S7 Max Ultra, S70, S75, E4, E45, E5, E50, E55, G10, T7, T7S, Q5, Q7, Q7 Max, and Q Revo
     </td>
   </tr>
-  <tr><td>14.4V</td><td>4.2A</td><td></td></tr>
-  <tr><td>12V</td><td>5.25A</td><td></td></tr>
+  <tr><td>14.4V</td><td>0.12A</td><td>1.7A</td></tr>
+  <tr><td>12V</td><td></td><td></td></tr>
   
   <tr>
     <td rowspan="3">Fan MSD-G v1, ~20kPa</td><td>16.8V</td><td>3.65A</td><td>6A</td>

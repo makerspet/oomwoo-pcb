@@ -323,7 +323,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:TC-6601-5_0-260-8_3"
+		(symbol "JLCImport:TS-1187A-B-A-B"
 			(pin_names
 				(offset 1.016)
 			)
@@ -333,7 +333,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "SW"
-				(at 0 7.08 0)
+				(at 0 4.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -342,7 +342,7 @@
 					)
 				)
 			)
-			(property "Value" "TC-6601-5_0-260-8_3"
+			(property "Value" "TS-1187A-B-A-B"
 				(at 0 -7.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -352,7 +352,7 @@
 					)
 				)
 			)
-			(property "Footprint" "JLCImport:TC-6601-5_0-260-8_3"
+			(property "Footprint" "JLCImport:TS-1187A-B-A-B"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -363,7 +363,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401191747_FG-TC-6601-5-0-260-8-3_C7528752.pdf"
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XKB-Connection-TS-1187A-B-A-B_C318884.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -374,7 +374,7 @@
 					)
 				)
 			)
-			(property "Description" "-25℃~+85℃ 12V 2.6N 50,000 cycles 50mA 6mm 6mm Black Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,6x6mm Tactile Switches ROHS"
+			(property "Description" "-30℃~+85℃ 1.5mm 1.6N 100,000 cycles 12V 5.1mm 5.1mm 50mA Gold No Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,5.1x5.1mm Tactile Switches ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -385,7 +385,7 @@
 					)
 				)
 			)
-			(property "LCSC" "C7528752"
+			(property "LCSC" "C318884"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -396,7 +396,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "FG"
+			(property "Manufacturer" "XKB Connection"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -407,7 +407,7 @@
 					)
 				)
 			)
-			(property "Manufacturer Part" "TC-6601-5.0-260-8.3"
+			(property "Manufacturer Part" "TS-1187A-B-A-B"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -418,7 +418,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "C7528752 FG SW-SMD_4P-L6.0-W6.0-P4.50-LS8.2 TC-6601-5.0-260-8.3"
+			(property "ki_keywords" "C318884 SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5 TS-1187A-B-A-B XKB Connection"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -429,10 +429,46 @@
 					)
 				)
 			)
-			(symbol "TC-6601-5_0-260-8_3_0_1"
+			(symbol "TS-1187A-B-A-B_0_1"
 				(polyline
 					(pts
-						(xy 0 3.302) (xy 0 5.08)
+						(xy -2.54 2.54) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -5.08) (xy 2.54 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0.762) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 0 2.54)
 					)
 					(stroke
 						(width 0.254)
@@ -443,8 +479,8 @@
 					)
 				)
 				(circle
-					(center 0 2.54)
-					(radius 0.635)
+					(center 0 0.508)
+					(radius 0.3175)
 					(stroke
 						(width 0.254)
 						(type solid)
@@ -454,8 +490,8 @@
 					)
 				)
 				(circle
-					(center 0 -2.54)
-					(radius 0.635)
+					(center 0 -2.794)
+					(radius 0.3175)
 					(stroke
 						(width 0.254)
 						(type solid)
@@ -476,46 +512,10 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.508 2.032) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -5.08) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin unspecified line
-					(at -5.08 5.08 0)
+					(at -5.08 2.54 0)
 					(length 2.54)
-					(name "1"
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -531,9 +531,9 @@
 					)
 				)
 				(pin unspecified line
-					(at 5.08 5.08 180)
+					(at 5.08 2.54 180)
 					(length 2.54)
-					(name "2"
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -551,7 +551,7 @@
 				(pin unspecified line
 					(at -5.08 -5.08 0)
 					(length 2.54)
-					(name "3"
+					(name "C"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -569,7 +569,7 @@
 				(pin unspecified line
 					(at 5.08 -5.08 180)
 					(length 2.54)
-					(name "4"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1104,19 +1104,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(rectangle
-		(start 212.09 132.08)
-		(end 394.97 257.81)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 0 72 0 1)
-		)
-		(uuid "68c2b9b1-6ca9-4aaa-bd0e-e31f53997661")
-	)
 	(text "LEDs AND BUTTONs"
 		(exclude_from_sim no)
 		(at 177.165 128.27 0)
@@ -1201,17 +1188,7 @@
 	)
 	(wire
 		(pts
-			(xy 339.725 193.675) (xy 346.075 193.675)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "123b6f3b-d85c-45fb-986e-935272741c13")
-	)
-	(wire
-		(pts
-			(xy 328.93 229.87) (xy 321.31 229.87)
+			(xy 321.31 229.87) (xy 330.2 229.87)
 		)
 		(stroke
 			(width 0)
@@ -1241,6 +1218,16 @@
 	)
 	(wire
 		(pts
+			(xy 337.82 219.71) (xy 346.075 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1943cc79-de3f-4e22-8f9f-e578d7613598")
+	)
+	(wire
+		(pts
 			(xy 312.42 183.515) (xy 312.42 193.675)
 		)
 		(stroke
@@ -1248,6 +1235,16 @@
 			(type default)
 		)
 		(uuid "2776fb5e-a406-411a-97f1-7d3ba8b8d405")
+	)
+	(wire
+		(pts
+			(xy 337.82 229.87) (xy 346.075 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ee52b67-055c-4bbe-8db6-6aa60109a492")
 	)
 	(wire
 		(pts
@@ -1261,7 +1258,7 @@
 	)
 	(wire
 		(pts
-			(xy 321.31 183.515) (xy 329.565 183.515)
+			(xy 321.31 183.515) (xy 330.835 183.515)
 		)
 		(stroke
 			(width 0)
@@ -1321,7 +1318,7 @@
 	)
 	(wire
 		(pts
-			(xy 321.31 219.71) (xy 328.93 219.71)
+			(xy 321.31 219.71) (xy 330.2 219.71)
 		)
 		(stroke
 			(width 0)
@@ -1351,7 +1348,7 @@
 	)
 	(wire
 		(pts
-			(xy 321.31 161.29) (xy 328.93 161.29)
+			(xy 321.31 161.29) (xy 330.2 161.29)
 		)
 		(stroke
 			(width 0)
@@ -1371,6 +1368,16 @@
 	)
 	(wire
 		(pts
+			(xy 337.82 171.45) (xy 346.075 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78c34e62-1989-4a60-b7d1-ff49191af5cd")
+	)
+	(wire
+		(pts
 			(xy 346.075 183.515) (xy 365.125 183.515)
 		)
 		(stroke
@@ -1378,16 +1385,6 @@
 			(type default)
 		)
 		(uuid "79b42190-f053-4d6c-8c0c-53f021553c73")
-	)
-	(wire
-		(pts
-			(xy 339.09 219.71) (xy 346.075 219.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b61693e-4089-4db9-a02c-9311e24170a5")
 	)
 	(wire
 		(pts
@@ -1401,27 +1398,7 @@
 	)
 	(wire
 		(pts
-			(xy 339.09 161.29) (xy 346.075 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8eb85ee2-dd67-4b1a-81c9-cce2cc7df6e5")
-	)
-	(wire
-		(pts
-			(xy 339.09 171.45) (xy 346.075 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c612355-3886-48e2-9e07-a3f125609c71")
-	)
-	(wire
-		(pts
-			(xy 329.565 193.675) (xy 321.31 193.675)
+			(xy 321.31 193.675) (xy 330.835 193.675)
 		)
 		(stroke
 			(width 0)
@@ -1448,26 +1425,6 @@
 			(type default)
 		)
 		(uuid "a40be01c-e719-4409-82fe-fac0ae1f5500")
-	)
-	(wire
-		(pts
-			(xy 339.09 229.87) (xy 346.075 229.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a57d40bb-716f-4bd2-b850-fa9ae4965ca5")
-	)
-	(wire
-		(pts
-			(xy 339.725 183.515) (xy 346.075 183.515)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6834654-3d20-43f6-8530-b3d0d1a3c455")
 	)
 	(wire
 		(pts
@@ -1511,13 +1468,23 @@
 	)
 	(wire
 		(pts
-			(xy 328.93 171.45) (xy 321.31 171.45)
+			(xy 321.31 171.45) (xy 330.2 171.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c6012545-3b62-458e-90d6-ab2e744c8477")
+	)
+	(wire
+		(pts
+			(xy 337.82 161.29) (xy 346.075 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb4d33a0-0f46-4108-937b-075bf178f193")
 	)
 	(wire
 		(pts
@@ -1538,6 +1505,26 @@
 			(type default)
 		)
 		(uuid "e572ef1f-2a5e-4b52-9394-d5f5bfded475")
+	)
+	(wire
+		(pts
+			(xy 338.455 193.675) (xy 346.075 193.675)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee1ccb9c-06f7-4b3c-a7d3-77c2a4963e29")
+	)
+	(wire
+		(pts
+			(xy 338.455 183.515) (xy 346.075 183.515)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f38100df-6794-4909-b0cc-ccef7bc98171")
 	)
 	(wire
 		(pts
@@ -2015,6 +2002,126 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:TS-1187A-B-A-B")
+		(at 332.74 166.37 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1a88ccd0-b417-411e-b29c-97392e805279")
+		(property "Reference" "SW_HOME1"
+			(at 331.47 158.115 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TS-1187A-B-A-B"
+			(at 339.725 167.6399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:TS-1187A-B-A-B"
+			(at 332.74 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XKB-Connection-TS-1187A-B-A-B_C318884.pdf"
+			(at 332.74 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-30℃~+85℃ 1.5mm 1.6N 100,000 cycles 12V 5.1mm 5.1mm 50mA Gold No Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,5.1x5.1mm Tactile Switches ROHS"
+			(at 332.74 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C318884"
+			(at 332.74 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XKB Connection"
+			(at 332.74 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "TS-1187A-B-A-B"
+			(at 332.74 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "4cd36503-4755-40a9-91a5-5a1473e42f02")
+		)
+		(pin "2"
+			(uuid "c6cefb9c-0050-4219-9e79-cbf2c9bdda08")
+		)
+		(pin "3"
+			(uuid "35c9a0b6-e195-481c-b054-693c6b73fb03")
+		)
+		(pin "1"
+			(uuid "fc646d4a-4273-4993-b204-2716c57de615")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ee620ee5-1d77-4392-93b6-4acdc78b883b"
+					(reference "SW_HOME1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "DesignLibrary:BUTTON-LED_1_Resistor-1_DesignLibrary.SchLib")
 		(at 349.885 158.75 180)
 		(unit 1)
@@ -2431,8 +2538,8 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:TC-6601-5_0-260-8_3")
-		(at 334.01 224.79 90)
+		(lib_id "JLCImport:TS-1187A-B-A-B")
+		(at 333.375 188.595 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2440,10 +2547,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "35458bdc-b807-40c8-9ae3-4dd66da00740")
-		(property "Reference" "SW3"
-			(at 340.995 223.5199 90)
+		(uuid "2ff3918c-587d-45b4-8347-36b7cae42737")
+		(property "Reference" "SW_PWR1"
+			(at 332.105 180.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2453,8 +2559,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TC-6601-5_0-260-8_3"
-			(at 340.995 226.0599 90)
+		(property "Value" "TS-1187A-B-A-B"
+			(at 340.36 189.8649 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2464,8 +2570,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "JLCImport:TC-6601-5_0-260-8_3"
-			(at 334.01 224.79 0)
+		(property "Footprint" "JLCImport:TS-1187A-B-A-B"
+			(at 333.375 188.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2475,8 +2581,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401191747_FG-TC-6601-5-0-260-8-3_C7528752.pdf"
-			(at 334.01 224.79 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XKB-Connection-TS-1187A-B-A-B_C318884.pdf"
+			(at 333.375 188.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2486,8 +2592,8 @@
 				)
 			)
 		)
-		(property "Description" "-25℃~+85℃ 12V 2.6N 50,000 cycles 50mA 6mm 6mm Black Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,6x6mm Tactile Switches ROHS"
-			(at 334.01 224.79 0)
+		(property "Description" "-30℃~+85℃ 1.5mm 1.6N 100,000 cycles 12V 5.1mm 5.1mm 50mA Gold No Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,5.1x5.1mm Tactile Switches ROHS"
+			(at 333.375 188.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2497,8 +2603,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C7528752"
-			(at 334.01 224.79 0)
+		(property "LCSC" "C318884"
+			(at 333.375 188.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2508,8 +2614,8 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FG"
-			(at 334.01 224.79 0)
+		(property "Manufacturer" "XKB Connection"
+			(at 333.375 188.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2519,8 +2625,8 @@
 				)
 			)
 		)
-		(property "Manufacturer Part" "TC-6601-5.0-260-8.3"
-			(at 334.01 224.79 0)
+		(property "Manufacturer Part" "TS-1187A-B-A-B"
+			(at 333.375 188.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2529,23 +2635,23 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "7dc2df2c-101b-4edd-8ce4-1b2c1655b676")
-		)
-		(pin "2"
-			(uuid "93f8262b-a989-4308-a538-62ddc25f4909")
-		)
-		(pin "3"
-			(uuid "cc87c248-07a8-43eb-952e-642347280f1b")
 		)
 		(pin "4"
-			(uuid "59e57544-a91e-49cd-ab80-c21c8a3a6fbc")
+			(uuid "2da00d3c-4299-4070-a71f-cd43e6f8b160")
+		)
+		(pin "2"
+			(uuid "9e5080a8-18e9-4ebb-9ebb-26f61e20c646")
+		)
+		(pin "3"
+			(uuid "e9b114c8-9a6d-4c2a-948c-1ccbfac57694")
+		)
+		(pin "1"
+			(uuid "dc977269-bcc6-4d07-ba27-74b032166f9c")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ee620ee5-1d77-4392-93b6-4acdc78b883b"
-					(reference "SW3")
+					(reference "SW_PWR1")
 					(unit 1)
 				)
 			)
@@ -2936,6 +3042,126 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ee620ee5-1d77-4392-93b6-4acdc78b883b"
 					(reference "HOME1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:TS-1187A-B-A-B")
+		(at 332.74 224.79 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5a0db37d-dfe8-4654-9336-5bbf731b8dfa")
+		(property "Reference" "SW_CLEAN1"
+			(at 331.47 216.535 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TS-1187A-B-A-B"
+			(at 339.725 226.0599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:TS-1187A-B-A-B"
+			(at 332.74 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XKB-Connection-TS-1187A-B-A-B_C318884.pdf"
+			(at 332.74 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-30℃~+85℃ 1.5mm 1.6N 100,000 cycles 12V 5.1mm 5.1mm 50mA Gold No Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,5.1x5.1mm Tactile Switches ROHS"
+			(at 332.74 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C318884"
+			(at 332.74 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XKB Connection"
+			(at 332.74 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "TS-1187A-B-A-B"
+			(at 332.74 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "30f23683-f757-4f9c-a823-188b8948abc8")
+		)
+		(pin "2"
+			(uuid "1562ba74-1fdc-4bd5-8dd0-38ee3ca9f384")
+		)
+		(pin "3"
+			(uuid "2de8bd14-68eb-4c24-aa5c-c5d26df864b3")
+		)
+		(pin "1"
+			(uuid "77d7e5dd-3503-4483-8769-74c9f3d869ce")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ee620ee5-1d77-4392-93b6-4acdc78b883b"
+					(reference "SW_CLEAN1")
 					(unit 1)
 				)
 			)
@@ -3371,127 +3597,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:TC-6601-5_0-260-8_3")
-		(at 334.645 188.595 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8bcc3e7e-f0e0-4edf-bc35-7d2eec597bb6")
-		(property "Reference" "SW1"
-			(at 341.63 187.3249 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TC-6601-5_0-260-8_3"
-			(at 341.63 189.8649 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:TC-6601-5_0-260-8_3"
-			(at 334.645 188.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401191747_FG-TC-6601-5-0-260-8-3_C7528752.pdf"
-			(at 334.645 188.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-25℃~+85℃ 12V 2.6N 50,000 cycles 50mA 6mm 6mm Black Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,6x6mm Tactile Switches ROHS"
-			(at 334.645 188.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C7528752"
-			(at 334.645 188.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FG"
-			(at 334.645 188.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "TC-6601-5.0-260-8.3"
-			(at 334.645 188.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6e58bc9a-d2c3-42f1-8124-9382ab6f486e")
-		)
-		(pin "2"
-			(uuid "074b91d1-2366-4b65-9b44-399467eac69a")
-		)
-		(pin "3"
-			(uuid "c782adc5-c32d-409d-abb2-bf72a4f4dd5e")
-		)
-		(pin "4"
-			(uuid "de12e8c9-d362-48e7-8d88-bcd62aff88b8")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ee620ee5-1d77-4392-93b6-4acdc78b883b"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 228.6 243.205 0)
 		(unit 1)
@@ -3634,127 +3739,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ee620ee5-1d77-4392-93b6-4acdc78b883b"
 					(reference "#PWR0623")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:TC-6601-5_0-260-8_3")
-		(at 334.01 166.37 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b154c54d-1dab-4440-a183-ae2aee695f8b")
-		(property "Reference" "SW2"
-			(at 340.995 165.0999 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TC-6601-5_0-260-8_3"
-			(at 340.995 167.6399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:TC-6601-5_0-260-8_3"
-			(at 334.01 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2401191747_FG-TC-6601-5-0-260-8-3_C7528752.pdf"
-			(at 334.01 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-25℃~+85℃ 12V 2.6N 50,000 cycles 50mA 6mm 6mm Black Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,6x6mm Tactile Switches ROHS"
-			(at 334.01 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C7528752"
-			(at 334.01 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FG"
-			(at 334.01 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "TC-6601-5.0-260-8.3"
-			(at 334.01 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "83e7080a-7590-4a77-aaa0-fd50881b0daa")
-		)
-		(pin "2"
-			(uuid "3e27e4a9-662d-4148-9a48-80a08fa14c0d")
-		)
-		(pin "3"
-			(uuid "c9d736ad-46f7-4e37-8361-7361a7ae10d9")
-		)
-		(pin "4"
-			(uuid "422c7d79-37d6-41aa-a8d5-88c2e59d6e2e")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ee620ee5-1d77-4392-93b6-4acdc78b883b"
-					(reference "SW2")
 					(unit 1)
 				)
 			)

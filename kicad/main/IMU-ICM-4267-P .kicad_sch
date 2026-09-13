@@ -1075,97 +1075,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(rectangle
-		(start 199.39 194.31)
-		(end 234.95 203.2)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "31a7c663-0146-4196-af31-d528506a472d")
-	)
-	(rectangle
-		(start 196.85 231.14)
-		(end 255.27 240.03)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "45cd5f05-57ea-43fc-b6f0-2a4a1c6fecd3")
-	)
-	(rectangle
-		(start 368.3 204.47)
-		(end 402.59 207.01)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "5553da85-2f0a-4452-ba8c-a1f566fe4906")
-	)
-	(rectangle
-		(start 339.09 198.12)
-		(end 354.33 201.93)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "5a7855bf-ed17-402b-9c57-7fc3edd7b1c3")
-	)
-	(rectangle
-		(start 254 180.34)
-		(end 269.24 189.23)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "9552a365-3bd1-4bd4-9bf5-b079871ac478")
-	)
-	(rectangle
-		(start 287.02 200.66)
-		(end 302.26 204.47)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "b16df4a2-9cdf-4b6e-aa61-d4615799e857")
-	)
-	(rectangle
-		(start 189.23 153.67)
-		(end 419.1 261.62)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 0 72 0 1)
-		)
-		(uuid "fcdff6f9-6ca6-4311-be9e-dd8ae0226c59")
-	)
 	(text "IMU-ICM-42607-P"
 		(exclude_from_sim no)
 		(at 198.755 141.605 0)
@@ -1217,10 +1126,10 @@
 		(uuid "4b1609a2-01f7-4274-b785-e47d99e7b07c")
 	)
 	(junction
-		(at 257.175 235.585)
+		(at 257.175 174.625)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5d63cb53-4fb8-4c65-88cd-5bc9c9c824e6")
+		(uuid "5f6151ea-8483-42a3-a927-e69f92c5cf81")
 	)
 	(junction
 		(at 241.935 207.645)
@@ -1259,10 +1168,32 @@
 		(uuid "d93df315-85c5-4328-9a40-25ed3bbdb2b6")
 	)
 	(junction
+		(at 266.065 197.485)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9d51e65-c66b-4300-bae9-793d8fa8ff97")
+	)
+	(junction
+		(at 353.695 197.485)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eb50b00f-1790-4736-9973-6eb9d8c39e45")
+	)
+	(junction
+		(at 257.175 200.025)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f02734f2-9fee-4930-ab85-bf2ad2799973")
+	)
+	(junction
 		(at 353.695 210.185)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f8806613-8a95-4be9-94b7-77f83cb18c6c")
+	)
+	(no_connect
+		(at 287.655 202.565)
+		(uuid "2db9d5ac-6857-4a65-ba74-c2fd74198ee2")
 	)
 	(wire
 		(pts
@@ -1346,13 +1277,23 @@
 	)
 	(wire
 		(pts
-			(xy 219.075 200.025) (xy 287.655 200.025)
+			(xy 219.075 200.025) (xy 257.175 200.025)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "28273340-502b-4b82-80b5-7a64317ab905")
+	)
+	(wire
+		(pts
+			(xy 348.615 200.025) (xy 353.695 200.025)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b36ac6e-019e-4da1-8bf1-0b1271960a0a")
 	)
 	(wire
 		(pts
@@ -1396,13 +1337,13 @@
 	)
 	(wire
 		(pts
-			(xy 257.175 189.865) (xy 257.175 235.585)
+			(xy 266.065 189.865) (xy 266.065 197.485)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3fbfd3a2-34f9-4b12-a184-e29836738923")
+		(uuid "3f1df4bd-9f27-49e2-9d0f-c6c3367755f1")
 	)
 	(wire
 		(pts
@@ -1416,6 +1357,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.175 189.865) (xy 257.175 200.025)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a795c01-891a-45b7-8ed3-e0018866593e")
+	)
+	(wire
+		(pts
 			(xy 368.935 194.945) (xy 379.095 194.945)
 		)
 		(stroke
@@ -1423,16 +1374,6 @@
 			(type default)
 		)
 		(uuid "4b507893-8995-453e-abc8-3c4a1cdde0ba")
-	)
-	(wire
-		(pts
-			(xy 361.315 200.025) (xy 361.315 235.585)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "649de0ad-b02a-4fb1-ac4e-0c0ec2872858")
 	)
 	(wire
 		(pts
@@ -1506,6 +1447,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.175 200.025) (xy 287.655 200.025)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fc5a85a-7490-430b-b4b4-46a543d82fed")
+	)
+	(wire
+		(pts
 			(xy 353.695 202.565) (xy 353.695 205.105)
 		)
 		(stroke
@@ -1566,6 +1517,26 @@
 	)
 	(wire
 		(pts
+			(xy 266.065 174.625) (xy 257.175 174.625)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b55ee96e-b276-4283-be89-54a9ef52ce75")
+	)
+	(wire
+		(pts
+			(xy 266.065 197.485) (xy 219.075 197.485)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b587ca19-d0c4-431a-abb9-91de983100e8")
+	)
+	(wire
+		(pts
 			(xy 379.095 205.105) (xy 379.095 210.185)
 		)
 		(stroke
@@ -1586,26 +1557,6 @@
 	)
 	(wire
 		(pts
-			(xy 287.655 202.565) (xy 219.075 202.565)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8eb260f-62d0-4580-bab3-dacdcdd2f166")
-	)
-	(wire
-		(pts
-			(xy 348.615 200.025) (xy 361.315 200.025)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2847967-dda2-434d-9387-76e1d2f3b7fb")
-	)
-	(wire
-		(pts
 			(xy 361.315 194.945) (xy 361.315 187.325)
 		)
 		(stroke
@@ -1623,16 +1574,6 @@
 			(type default)
 		)
 		(uuid "c6119b33-f77d-4c61-bf97-a42dc5f4dbe4")
-	)
-	(wire
-		(pts
-			(xy 361.315 235.585) (xy 257.175 235.585)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc925f43-e589-4c38-ac96-68d34eac3985")
 	)
 	(wire
 		(pts
@@ -1726,7 +1667,17 @@
 	)
 	(wire
 		(pts
-			(xy 287.655 197.485) (xy 219.075 197.485)
+			(xy 266.065 179.705) (xy 266.065 174.625)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f76614fd-818e-4043-8530-6c49f170aa1d")
+	)
+	(wire
+		(pts
+			(xy 287.655 197.485) (xy 266.065 197.485)
 		)
 		(stroke
 			(width 0)
@@ -1736,13 +1687,13 @@
 	)
 	(wire
 		(pts
-			(xy 257.175 235.585) (xy 219.075 235.585)
+			(xy 353.695 200.025) (xy 353.695 197.485)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "feaecfc0-cf49-46e8-8b94-7d0a1bfbc089")
+		(uuid "fe7468a3-ab4e-4c6f-866a-f4e0125f4eb2")
 	)
 	(hierarchical_label "IMU-INT#2"
 		(shape output)
@@ -1766,19 +1717,8 @@
 		)
 		(uuid "22495dec-f6f9-4168-8fd7-219929aff49d")
 	)
-	(hierarchical_label "IMU-SPI-CS"
-		(shape input)
-		(at 219.075 235.585 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2a3d58e2-e534-495d-8e3a-cc62d4bd2280")
-	)
-	(hierarchical_label "IMU-SPI-MOSI"
-		(shape input)
+	(hierarchical_label "IMU-SDA"
+		(shape bidirectional)
 		(at 219.075 200.025 180)
 		(effects
 			(font
@@ -1788,7 +1728,7 @@
 		)
 		(uuid "60e23599-bf20-47c9-9ab7-1caf9d9a7b43")
 	)
-	(hierarchical_label "IMU-SPI-SCLK"
+	(hierarchical_label "IMU-SCL"
 		(shape input)
 		(at 219.075 197.485 180)
 		(effects
@@ -1798,17 +1738,6 @@
 			(justify right)
 		)
 		(uuid "75fdba58-7b66-4de7-88ea-c25c70ee6322")
-	)
-	(hierarchical_label "IMU-SPI-MISO"
-		(shape output)
-		(at 219.075 202.565 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a61da886-840f-4717-8157-96099a1595ea")
 	)
 	(hierarchical_label "IMU-INT#1"
 		(shape output)
@@ -3638,6 +3567,422 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7b57c0fa-4a35-4109-8672-3c36267bf8ff"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DesignLibrary:IMU_3_Resistor-1_DesignLibrary.SchLib")
+		(at 266.065 179.705 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "acc76546-961e-4fb7-afe7-1d0d96bce47e")
+		(property "Reference" "R72"
+			(at 266.827 184.531 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "10k"
+			(at 266.827 187.071 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURINGPARTNUMBER" "*"
+			(at 265.303 179.197 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Manufacturer" "*"
+			(at 265.303 179.197 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "SUPPLIERPARTNUMBER" "*"
+			(at 265.303 179.197 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "SUPPLIER" "*"
+			(at 265.303 179.197 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "VOLTAGERATE" "*"
+			(at 265.303 179.197 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "CLASSNAME" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "C_VOLTAGE" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DC RESISTOR" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIELECTRIC" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "IC" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID_MAX" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "IRMS" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ISAT" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER PART NUMBER" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "NUMBER" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "OPTION" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "OPTIONAL" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PC" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PD" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "RESONACE FREQUENCY" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SPLIT_INST" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SWAP_INFO" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "TOLERANCE" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VCEO" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VDS" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VGS" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VGSTH" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VOLTAGE" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "WATTAGE" ""
+			(at 266.065 179.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1444f12b-bfa3-4591-b37e-3234c40e70d4")
+		)
+		(pin "2"
+			(uuid "9b0e0bd6-b39e-45af-8849-e2ff27941d94")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7b57c0fa-4a35-4109-8672-3c36267bf8ff"
+					(reference "R72")
 					(unit 1)
 				)
 			)

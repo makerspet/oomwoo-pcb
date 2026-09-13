@@ -521,135 +521,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DesignLibrary:WHEEL MOTOR_1_Resistor-1_DesignLibrary.SchLib"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*RES-0603*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "WHEEL MOTOR_1_Resistor-1_DesignLibrary.SchLib_1_0"
-				(polyline
-					(pts
-						(xy 0 -7.62) (xy 0 -6.604) (xy -0.508 -6.35) (xy 0.508 -5.842) (xy -0.508 -5.334) (xy 0.508 -4.826)
-						(xy -0.508 -4.318) (xy 0.508 -3.81) (xy 0 -3.556) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 0 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -10.16 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_US"
 			(pin_numbers
 				(hide yes)
@@ -992,6 +863,163 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "JLCImport:RL12FTNR250"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 3.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RL12FTNR250"
+				(at 0 -3.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:RL12FTNR250"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TA-I-Tech-RL12FTNR250_C160921.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "250mΩ 500mW Metal Film Resistor SMD ±1% ±200ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C160921"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "TA-I Tech"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Part" "RL12FTNR250"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "C160921 R1206 RL12FTNR250 TA-I Tech"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RL12FTNR250_0_1"
+				(rectangle
+					(start -2.54 1.016)
+					(end 2.54 -1.016)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
 					)
 				)
 				(pin unspecified line
@@ -1764,45 +1792,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(rectangle
-		(start 270.51 236.22)
-		(end 278.13 248.92)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "28a5db14-0a00-4fc6-bd1e-3a5990c3a2c1")
-	)
-	(rectangle
-		(start 151.13 106.68)
-		(end 415.29 278.13)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 0 72 0 1)
-		)
-		(uuid "524dce05-bb23-4c7f-9447-37e06136f388")
-	)
-	(rectangle
-		(start 267.97 151.13)
-		(end 275.59 161.29)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type color)
-			(color 72 0 0 1)
-		)
-		(uuid "bfec9cde-aebe-4f03-9cd1-249c6f1fbb68")
-	)
 	(text "WHEEL MOTOR CONTROL"
 		(exclude_from_sim no)
 		(at 172.72 91.44 0)
@@ -2363,6 +2352,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 148.59) (xy 270.51 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62504e2c-d002-4c38-9a5f-002b20c019bc")
+	)
+	(wire
+		(pts
 			(xy 369.824 242.57) (xy 369.824 251.46)
 		)
 		(stroke
@@ -2460,16 +2459,6 @@
 			(type default)
 		)
 		(uuid "79563101-bd63-4de7-8119-fdb68398788d")
-	)
-	(wire
-		(pts
-			(xy 270.51 148.59) (xy 270.51 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79dc7c90-4a33-45ce-81a8-4b1351f0a072")
 	)
 	(wire
 		(pts
@@ -3260,433 +3249,6 @@
 		(uuid "f1bb9481-dab0-4d25-a07f-e08e9363c6a2")
 	)
 	(symbol
-		(lib_id "DesignLibrary:WHEEL MOTOR_1_Resistor-1_DesignLibrary.SchLib")
-		(at 270.51 161.29 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "01ed0b23-8560-464f-80bc-9760c4991580")
-		(property "Reference" "R83"
-			(at 271.272 155.956 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "Value" "0.2R/10W"
-			(at 271.272 158.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MANUFACTURINGPARTNUMBER" "*"
-			(at 269.748 150.622 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "Manufacturer" "*"
-			(at 269.748 150.622 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "SUPPLIERPARTNUMBER" "*"
-			(at 269.748 150.622 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "SUPPLIER" "*"
-			(at 269.748 150.622 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "VOLTAGERATE" "*"
-			(at 269.748 150.622 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "CLASSNAME" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "C_VOLTAGE" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DC RESISTOR" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIELECTRIC" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "IC" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ID" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ID_MAX" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "IRMS" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ISAT" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MANUFACTURER PART NUMBER" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "NUMBER" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "OPTION" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "OPTIONAL" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PC" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PD" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "RESONACE FREQUENCY" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "SPLIT_INST" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "SWAP_INFO" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TOLERANCE" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VCEO" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VDS" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VGS" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VGSTH" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VOLTAGE" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "WATTAGE" ""
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C5375488"
-			(at 270.51 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "69385c40-d12a-44cd-9539-eefb9c9e231b")
-		)
-		(pin "1"
-			(uuid "f1ff3bdb-42fe-456c-be84-e17d234ab419")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/dc7554d6-6a04-4f93-8cb8-7c364fc629ef"
-					(reference "R83")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 267.97 247.65 0)
 		(unit 1)
@@ -4425,6 +3987,121 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/dc7554d6-6a04-4f93-8cb8-7c364fc629ef"
 					(reference "#PWR0617")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:RL12FTNR250")
+		(at 270.51 156.21 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b85c495-49c6-46a7-88fd-49e9fff6e1a5")
+		(property "Reference" "R15"
+			(at 272.415 154.9399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "RL12FTNR250"
+			(at 272.415 157.4799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:RL12FTNR250"
+			(at 270.51 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TA-I-Tech-RL12FTNR250_C160921.pdf"
+			(at 270.51 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "250mΩ 500mW Metal Film Resistor SMD ±1% ±200ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
+			(at 270.51 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C160921"
+			(at 270.51 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TA-I Tech"
+			(at 270.51 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "RL12FTNR250"
+			(at 270.51 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e86b600f-773b-4cc5-8692-d88b8f3ce522")
+		)
+		(pin "2"
+			(uuid "85af5f89-0219-455d-a125-8236a2751d62")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/dc7554d6-6a04-4f93-8cb8-7c364fc629ef"
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -5293,8 +4970,8 @@
 		)
 	)
 	(symbol
-		(lib_id "DesignLibrary:WHEEL MOTOR_1_Resistor-1_DesignLibrary.SchLib")
-		(at 273.05 247.65 180)
+		(lib_id "JLCImport:RL12FTNR250")
+		(at 273.05 242.57 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5302,31 +4979,32 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "32dbf8c1-43c4-43d9-81c8-f5aa0038c3fc")
-		(property "Reference" "R84"
-			(at 273.812 242.316 0)
+		(fields_autoplaced yes)
+		(uuid "3cf517aa-99ff-4e84-9d37-34d6758a421a")
+		(property "Reference" "R65"
+			(at 274.955 241.2999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right bottom)
+				(justify right)
 			)
 		)
-		(property "Value" "0.2R/10W"
-			(at 273.812 244.856 0)
+		(property "Value" "RL12FTNR250"
+			(at 274.955 243.8399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right bottom)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 273.05 247.65 0)
+		(property "Footprint" "JLCImport:RL12FTNR250"
+			(at 273.05 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5336,8 +5014,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 273.05 247.65 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TA-I-Tech-RL12FTNR250_C160921.pdf"
+			(at 273.05 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5347,8 +5025,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 273.05 247.65 0)
+		(property "Description" "250mΩ 500mW Metal Film Resistor SMD ±1% ±200ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
+			(at 273.05 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5358,68 +5036,8 @@
 				)
 			)
 		)
-		(property "MANUFACTURINGPARTNUMBER" "*"
-			(at 272.288 236.982 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "Manufacturer" "*"
-			(at 272.288 236.982 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "SUPPLIERPARTNUMBER" "*"
-			(at 272.288 236.982 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "SUPPLIER" "*"
-			(at 272.288 236.982 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "VOLTAGERATE" "*"
-			(at 272.288 236.982 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "CLASSNAME" ""
-			(at 273.05 247.65 0)
+		(property "LCSC" "C160921"
+			(at 273.05 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5429,8 +5047,8 @@
 				)
 			)
 		)
-		(property "C_VOLTAGE" ""
-			(at 273.05 247.65 0)
+		(property "Manufacturer" "TA-I Tech"
+			(at 273.05 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5440,8 +5058,8 @@
 				)
 			)
 		)
-		(property "DC RESISTOR" ""
-			(at 273.05 247.65 0)
+		(property "Manufacturer Part" "RL12FTNR250"
+			(at 273.05 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5450,270 +5068,17 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "DIELECTRIC" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "IC" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ID" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ID_MAX" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "IRMS" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ISAT" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MANUFACTURER PART NUMBER" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "NUMBER" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "OPTION" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "OPTIONAL" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PC" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PD" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "RESONACE FREQUENCY" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "SPLIT_INST" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "SWAP_INFO" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "TOLERANCE" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VCEO" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VDS" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VGS" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VGSTH" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VOLTAGE" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "WATTAGE" ""
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C5375488"
-			(at 273.05 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "95bfe545-6818-4c55-8f94-58eba528d47f")
 		)
 		(pin "1"
-			(uuid "b7bd1f0b-0638-4db0-a732-d5250139bf9d")
+			(uuid "d05e90a7-e5da-44ba-87d4-3eb2f9b7f263")
+		)
+		(pin "2"
+			(uuid "580cff93-ca1e-409d-8c1e-85c95bd8d56a")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/dc7554d6-6a04-4f93-8cb8-7c364fc629ef"
-					(reference "R84")
+					(reference "R65")
 					(unit 1)
 				)
 			)

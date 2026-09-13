@@ -30,7 +30,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr>
     <td rowspan="3">Fan BL27302101</td><td>16.8V</td><td>1.8A</td><td>1.8A</td>
     <td rowspan="3">JST PA 2mm 6-pin shrouded header; pin 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM (low off), 6 FG (open collector);
-    Fits Roborock Saros 20 (36 kPa); </td>
+    fits Roborock Saros 20 (36 kPa); </td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td></td></tr>
   <tr><td>12V</td><td>2.5A</td><td></td></tr>

@@ -179,7 +179,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
 </table>
 
-<sup>*</sup>, <sup>**</sup> Appear to be interchangeable
+<sup>*</sup> Appear to be interchangeable
 
 Mop lift TBD
 

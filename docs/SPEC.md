@@ -75,8 +75,10 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan 20N709U020 ~6kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">Fan 20N709U020</td><td></td><td></td><td></td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC;
+      fits Dreame L10s Ultra (5.3 kPa), L10s Pro (5.3 kPa), L10 Ultra (5.3 kPa), D10s Pro (5 kPa); Xiaomi X20+ (6 kPa), C102 B101CN, X10+ (4 kPa), S10 Plus (4 kPa)
+    </td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
@@ -175,7 +177,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
 </table>
 
-<sup>*</sup> Appear to be interchangeable
+<sup>*</sup>, <sup>**</sup> Appear to be interchangeable
 
 Mop lift TBD
 

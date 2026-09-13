@@ -53,7 +53,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
   <tr>
     <td rowspan="3">Fan 20N704R990F aka 20N704R980</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC;
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC; 20N <a href="https://www.nidec.com/en/product/search/category/B101/M102/S100/NCJ-20N-Type-4/">motor spec</a>
       ~5.1-6 kPa, fits Roborock S7 (2.5 kPa), S7 Pro (5.1 kPa), S7 MaxV (5.1 kPa), S75 MaxV (5.1 kPa), S8 (6 kPa), S8 Plus (6 kPa), S8 Pro Ultra (6 kPa), S8 MaxV Ultra (8 kPa), G20 (6 kPa), Q7 Max (4.2 kPa), Q7 Max Plus (4.2 kPa)</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>

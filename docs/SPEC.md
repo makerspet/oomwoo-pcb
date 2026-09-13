@@ -20,64 +20,74 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr><td>12V</td><td></td><td></td></tr>
   
   <tr>
-    <td rowspan="3">Fan MSD-G v1, ~20kPa</td><td>16.8V</td><td>3.65A</td><td>6A</td>
-    <td rowspan="3">LHE MX3.0 4-pin (2x2) 3.0mm with latch header (aka Molex Micro-Fit 3.0); pin 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off)</td>
+    <td rowspan="3">Fan MSD-G v1</td><td>16.8V</td><td>3.65A</td><td>6A</td>
+    <td rowspan="3">LHE MX3.0 4-pin (2x2) 3.0mm with latch header (aka Molex Micro-Fit 3.0); pin 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off);
+    fits Dreame X50 Ultra (20 kPa), X50 Master (20kPa)</td>
   </tr>
   <tr><td>14.4V</td><td>4.2A</td><td></td></tr>
   <tr><td>12V</td><td>5.25A</td><td></td></tr>
 
   <tr>
     <td rowspan="3">Fan BL27302101</td><td>16.8V</td><td>1.8A</td><td>1.8A</td>
-    <td rowspan="3">JST PA 2mm 6-pin shrouded header; pin 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM (low off), 6 FG (open collector)</td>
+    <td rowspan="3">JST PA 2mm 6-pin shrouded header; pin 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM (low off), 6 FG (open collector);
+    fits Roborock Saros 20 (36 kPa); </td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td></td></tr>
   <tr><td>12V</td><td>2.5A</td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan BL24131616 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>1.75A</td>
-    <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (22k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">Fan BL24131616<sup>*</sup></td><td>16.8V</td><td>1.75A</td><td>1.75A</td>
+    <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (22k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC;
+    fits Roborock G20S P10 Pro (7 kPa), P10s Pro (11 kPa), P20, G20S S8 MaxV (10 kPa), Xiaomi S40 OV81 (10 kPa)</td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td>2.1A</td></tr>
   <tr><td>12V</td><td>2.6A</td><td>2.6A</td></tr>
 
   <tr>
-    <td rowspan="3">Fan 22N704V160 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>3.25A</td>
-    <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (5 Ohm to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">Fan 22N704V160<sup>*</sup></td><td>16.8V</td><td>1.75A</td><td>3.25A</td>
+    <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (5 Ohm to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC;
+    fits Roborock G20S P10 Pro (7 kPa), P10s Pro (11 kPa), P20, G20S S8 MaxV (10 kPa), Xiaomi S40 OV81 (10 kPa)</td>
   </tr>
   <tr><td>14.4V</td><td>2.05A</td><td>2.7A</td></tr>
   <tr><td>12V</td><td>2.5A</td><td>2A</td></tr>
 
   <tr>
-    <td rowspan="3">Fan 20N704R990F</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">Fan 20N704R990F aka 20N704R980</td><td></td><td></td><td></td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC; 20N <a href="https://www.nidec.com/en/product/search/category/B101/M102/S100/NCJ-20N-Type-4/">motor spec</a>
+      ~5.1-6 kPa, fits Roborock S7 (2.5 kPa), S7 Pro (5.1 kPa), S7 MaxV (5.1 kPa), S75 MaxV (5.1 kPa), S8 (6 kPa), S8 Plus (6 kPa), S8 Pro Ultra (6 kPa), S8 MaxV Ultra (8 kPa), G20 (6 kPa), Q7 Max (4.2 kPa), Q7 Max Plus (4.2 kPa)</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan MSD-C-3 ~6kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">Fan MSD-C-3</td><td></td><td></td><td></td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC;
+      fits Dreame L10s Prime (4 kPa), L10s Prime Ultra (5.3 kPa v1), L10s Prime Pro, D10s Plus (5 kPa), X10+ (4 kPa), X20+ (6 kPa)</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan MSD-D ~7kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">Fan MSD-D</td><td></td><td></td><td></td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC;
+      fits Dreame L20 (7 kPa), L30 Ultra (7.3 kPa), S10 (5.3 kPa), S10 Plus (7 kPa)</td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan 20N709U020 ~6kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC</td>
+    <td rowspan="3">Fan 20N709U020</td><td></td><td></td><td></td>
+    <td rowspan="3">JST PH 2.0mm 4-pin shrouded header; pin 1 FG (open collector), 2 PWM (low off), 3 GND, 4 VCC;
+      fits Dreame L10s Ultra (5.3 kPa), L10s Pro (5.3 kPa), L10 Ultra (5.3 kPa), D10s Pro (5 kPa); Xiaomi X20+ (6 kPa), C102 B101CN, X10+ (4 kPa), S10 Plus (4 kPa)
+    </td>
   </tr>
   <tr><td></td><td></td><td></td></tr>
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan BL24131607 ~7kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 5-pin shrouded header; pin 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">Fan BL24131607</td><td></td><td></td><td></td>
+    <td rowspan="3">JST PH 2.0mm 5-pin shrouded header; pin 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC;
+      fits Roborock P10 Pro (7 kPa), Qrevo Maxv (7 kPa), P10S (7 kPa), Qrevo S (7 kPa), Qrevo Pro (7 kPa)</td>
   </tr>
   <tr><td>15V</td><td>1.7A</td><td>2.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>
@@ -107,12 +117,12 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
 
   <tr>
     <td>Cliff sensors</td><td></td><td></td><td></td>
-    <td>JST PAD 2.0mm 8x2 housing, mates JST S16B-PHDSS, JST B16B-PADSS; fits iRobot Roomba 500 600 700 800 528 552 564 595 560 570 610 615 620 625 630 650</td>
+    <td>JST PHDR-16VS 2.0mm 8x2 housing, mates JST S16B-PHDSS, JST B16B-PADSS; fits iRobot Roomba 500 600 700 800 528 552 564 595 560 570 610 615 620 625 630 650</td>
   </tr>
 
   <tr>
     <td>Battery</td><td></td><td></td><td></td>
-    <td>4S2P 14.4V nominal BRR-2P4S-5200FL battery datasheet](https://images.thdstatic.com/catalog/pdfImages/55/55d2f7f6-2ed9-44ed-ab4e-fb20d231c897.pdf) or similar;
+    <td>4S2P 14.4V nominal <a href="https://images.thdstatic.com/catalog/pdfImages/55/55d2f7f6-2ed9-44ed-ab4e-fb20d231c897.pdf">BRR-2P4S-5200FL battery</a> or similar;
     4-pin 3mm pitch with latch male LHE MX3.0 (C3001-H04), Molex Micro-Fit 3.0;
     pin 4 BAT+, 3 NTC (10.7K), 2 ID (0.62M to ground), 1 GND</td>
   </tr>
@@ -168,6 +178,8 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   </tr>
 
 </table>
+
+<sup>*</sup> Appear to be interchangeable
 
 Mop lift TBD
 

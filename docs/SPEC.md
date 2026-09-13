@@ -36,15 +36,15 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr><td>12V</td><td>2.5A</td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan BL24131616 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>1.75A</td>
+    <td rowspan="3">Fan BL24131616<sup>*</sup></td><td>16.8V</td><td>1.75A</td><td>1.75A</td>
     <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (22k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC;
-    fits Roborock G20S P10 Pro (7 kPa), P10s Pro (11 kPa), P20, G20S S8 MaxV (10 kPa), Xiaomi S40 OV81</td>
+    fits Roborock G20S P10 Pro (7 kPa), P10s Pro (11 kPa), P20, G20S S8 MaxV (10 kPa), Xiaomi S40 OV81 (10 kPa)</td>
   </tr>
   <tr><td>14.4V</td><td>2.1A</td><td>2.1A</td></tr>
   <tr><td>12V</td><td>2.6A</td><td>2.6A</td></tr>
 
   <tr>
-    <td rowspan="3">Fan 22N704V160 ~10kPa</td><td>16.8V</td><td>1.75A</td><td>3.25A</td>
+    <td rowspan="3">Fan 22N704V160<sup>*</sup> ~10kPa</td><td>16.8V</td><td>1.75A</td><td>3.25A</td>
     <td rowspan="3">JST PA 2mm 5-pin shrouded header; pin 1 ID (5 Ohm to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
   </tr>
   <tr><td>14.4V</td><td>2.05A</td><td>2.7A</td></tr>
@@ -171,6 +171,8 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   </tr>
 
 </table>
+
+<sup>*</sup> Appear to be interchangeable
 
 Mop lift TBD
 

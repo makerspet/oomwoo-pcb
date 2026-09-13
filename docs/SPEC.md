@@ -84,8 +84,9 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr><td></td><td></td><td></td></tr>
 
   <tr>
-    <td rowspan="3">Fan BL24131607 ~7kPa</td><td></td><td></td><td></td>
-    <td rowspan="3">JST PH 2.0mm 5-pin shrouded header; pin 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC</td>
+    <td rowspan="3">Fan BL24131607</td><td></td><td></td><td></td>
+    <td rowspan="3">JST PH 2.0mm 5-pin shrouded header; pin 1 ID (20k to GND), 2 FG (open collector), 3 PWM (low off), 4 GND, 5 VCC;
+      fits Roborock P10 Pro (7 kPa), Qrevo Maxv (7 kPa), P10S (7 kPa), Qrevo S (7 kPa), Qrevo Pro (7 kPa)</td>
   </tr>
   <tr><td>15V</td><td>1.7A</td><td>2.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>

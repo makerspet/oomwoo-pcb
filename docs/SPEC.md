@@ -246,9 +246,9 @@ Undecided TODO
   - dock stops 
 - TSOP38238 costs ~$0.56, relatively expensive; economical IC options, sorted by preference
   - Everlight IRM-H638T/TR2	C91447 SMD 5×4 $0.168 194k Deep stock, reputable.
-  - Everlight IRM-3638T	C42421366 Through-hole $0.103 206k Cheapest reputable through-hole.
+  - Everlight IRM-3638T	C42421366 Through-hole $0.103 206k Side-looking, cheapest reputable through-hole; [datasheet](https://www.alldatasheet.com/datasheet-pdf/view/229626/EVERLIGHT/IRM-3638T.html).
   - Yongyu GRM-4033H4C6-ET2	C51901765	SMD	$0.118	2.7k	50 µA, 2.4–5.5 V. Best SMD challenger.
-  - TONYU DY-IRM383T/LP-T-20	C46682928	Through-hole	$0.068	420	100 µA, 2.7–5.5 V. Cheapest real receiver, [datasheet](https://file.aichiplink.com/static/lcsc/documents/2026-01-29/18c143340b0d5fc0ffdf5ff7098aaff5.pdf).
+  - TONYU DY-IRM383T/LP-T-20	C46682928	Through-hole	$0.068	420	100 µA, 2.7–5.5 V. Cheapest real receiver, sunlight rejection not specified; [datasheet](https://file.aichiplink.com/static/lcsc/documents/2026-01-29/18c143340b0d5fc0ffdf5ff7098aaff5.pdf).
   - TONYU DY-IRMA385-T5-W1-F1	C7433009	SMD-3P	$0.110	2.1k	200 µA, ±35°. Narrower field of view.
   - Chau Light ZSIRM-Z1QN86	C5337492	SMD 5×4.2	$0.112	1.8k	400 µA, 45°.
   - TONYU DY-IRMA386/387	C6075467/68	Through-hole	$0.128	124/660	±60° wide field of view, low stock.

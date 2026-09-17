@@ -2163,6 +2163,200 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:JFC1206-2200FS"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 0 2 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "JFC1206-2200FS"
+				(at 0 -2 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:JFC1206-2200FS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2305151206_Shenzhen-JDT-Fuse-JFC1206-2200FS_C136357.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+125℃ 1.6mm 150A 20A 3.2mm 32V 32V 47.17 Surface Mount Fuse 1206 Disposable fuses ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C136357"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Shenzhen JDT Fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Part" "JFC1206-2200FS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "C136357 F1206 JFC1206-2200FS Shenzhen JDT Fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "JFC1206-2200FS_0_1"
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.54 0)
+					(mid -1.27 1.27)
+					(end 0 0)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.54 0)
+					(mid 1.27 -1.27)
+					(end 0 0)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:SMAJ18A_C148219"
 			(pin_names
 				(offset 1.016)
@@ -5976,12 +6170,6 @@
 		(uuid "720cd1df-f8bc-434d-9795-3e6cb63ef807")
 	)
 	(junction
-		(at 309.88 308.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "725e15ed-193c-4260-b067-253dbf034cef")
-	)
-	(junction
 		(at 73.025 264.16)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6114,6 +6302,12 @@
 		(uuid "afd9cd80-f9cd-4457-85ec-e652ab29e8c7")
 	)
 	(junction
+		(at 309.88 281.305)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b22c98d4-a11b-43db-9ed5-3c4e53aa7536")
+	)
+	(junction
 		(at 118.11 349.885)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6166,6 +6360,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c3013bd6-bce2-4849-9eaa-6f007ec2b34c")
+	)
+	(junction
+		(at 309.88 308.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9f4a37a-e8e5-4c8d-ab6d-5abbedc0c5b4")
 	)
 	(junction
 		(at 341.63 341.63)
@@ -6381,7 +6581,7 @@
 	)
 	(wire
 		(pts
-			(xy 339.725 310.515) (xy 339.725 308.61)
+			(xy 338.455 283.21) (xy 338.455 281.305)
 		)
 		(stroke
 			(width 0)
@@ -7721,6 +7921,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 281.305) (xy 309.88 283.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5808041e-1aa8-479a-b2f5-71d25982fd4c")
+	)
+	(wire
+		(pts
 			(xy 104.14 71.12) (xy 114.3 71.12)
 		)
 		(stroke
@@ -7821,7 +8031,7 @@
 	)
 	(wire
 		(pts
-			(xy 329.565 308.61) (xy 339.725 308.61)
+			(xy 328.295 281.305) (xy 338.455 281.305)
 		)
 		(stroke
 			(width 0)
@@ -8408,16 +8618,6 @@
 			(type default)
 		)
 		(uuid "889e0f46-f202-4edc-a9ab-2702440761fe")
-	)
-	(wire
-		(pts
-			(xy 309.88 308.61) (xy 319.405 308.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88edf857-29d8-43dc-a9cd-1a68faf79588")
 	)
 	(wire
 		(pts
@@ -9391,6 +9591,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 275.59) (xy 309.88 281.305)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c490174c-1c58-4304-95c0-a3816d40c863")
+	)
+	(wire
+		(pts
 			(xy 515.62 72.39) (xy 515.62 74.93)
 		)
 		(stroke
@@ -9628,6 +9838,16 @@
 			(type default)
 		)
 		(uuid "dc1bc075-235a-44d8-8a13-a3af480b1fdb")
+	)
+	(wire
+		(pts
+			(xy 309.88 298.45) (xy 309.88 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc917835-0f8b-4087-a49f-1e20051d80bf")
 	)
 	(wire
 		(pts
@@ -10158,6 +10378,16 @@
 			(type default)
 		)
 		(uuid "fadeea6c-1cf5-4ef8-9bba-bd4862d7a9ac")
+	)
+	(wire
+		(pts
+			(xy 318.135 281.305) (xy 309.88 281.305)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fafa0edd-c4f2-4b02-9a66-80dc586a8783")
 	)
 	(wire
 		(pts
@@ -16816,7 +17046,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 153.924 346.329 90)
 			(hide yes)
 			(show_name no)
@@ -20249,7 +20479,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 339.725 310.515 0)
+		(at 338.455 283.21 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -20260,7 +20490,7 @@
 		(dnp no)
 		(uuid "53d28e41-5254-4c4b-85e1-3aa421732e8e")
 		(property "Reference" "#PWR0735"
-			(at 339.725 310.515 0)
+			(at 338.455 283.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20271,7 +20501,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 339.725 316.865 0)
+			(at 338.455 289.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20281,7 +20511,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 339.725 310.515 0)
+			(at 338.455 283.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20291,7 +20521,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 339.725 310.515 0)
+			(at 338.455 283.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20301,7 +20531,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 339.725 310.515 0)
+			(at 338.455 283.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21123,7 +21353,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 260.604 325.374 90)
 			(hide yes)
 			(show_name no)
@@ -29274,7 +29504,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:SMAJ18A_C148219")
-		(at 324.485 308.61 0)
+		(at 323.215 281.305 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -29285,7 +29515,7 @@
 		(fields_autoplaced yes)
 		(uuid "a8e864aa-56d3-4bfd-b90b-9f7a57001222")
 		(property "Reference" "D3"
-			(at 323.977 301.625 0)
+			(at 322.707 274.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29295,7 +29525,7 @@
 			)
 		)
 		(property "Value" "SMAJ18A_C148219"
-			(at 323.977 304.165 0)
+			(at 322.707 276.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29305,7 +29535,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:SMAJ18A_C148219"
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29316,7 +29546,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Littelfuse-SMAJ18A_C148219.pdf"
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29327,7 +29557,7 @@
 			)
 		)
 		(property "Description" "-65℃~+150℃ 13.7A@10/1000us 18V 1uA 22.1V 29.2V 400W@10/1000us IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional DO-214AC(SMA) ESD and Surge Protection (TVS/ESD) ROHS"
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29338,7 +29568,7 @@
 			)
 		)
 		(property "LCSC" "C148219"
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29349,7 +29579,7 @@
 			)
 		)
 		(property "Manufacturer" "Littelfuse"
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29360,7 +29590,7 @@
 			)
 		)
 		(property "Manufacturer Part" "SMAJ18A"
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29371,7 +29601,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29382,7 +29612,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29393,7 +29623,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29404,7 +29634,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29415,7 +29645,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29426,7 +29656,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29437,7 +29667,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29448,7 +29678,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29459,7 +29689,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29470,7 +29700,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29481,7 +29711,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29492,7 +29722,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29503,7 +29733,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29514,7 +29744,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29525,7 +29755,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29536,7 +29766,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29547,7 +29777,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29558,7 +29788,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29569,7 +29799,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29580,7 +29810,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29591,7 +29821,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29602,7 +29832,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29613,7 +29843,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29624,7 +29854,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29635,7 +29865,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 324.485 308.61 0)
+			(at 323.215 281.305 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31880,6 +32110,80 @@
 		)
 	)
 	(symbol
+		(lib_id "oomwoo-kicad-altium-import:BAT-VCC_BAR")
+		(at 309.88 275.59 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cba9c5ef-40b7-464f-9fc5-5cd8f3159c00")
+		(property "Reference" "#PWR033"
+			(at 309.88 275.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT-VCC"
+			(at 309.88 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 309.88 275.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 275.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 309.88 275.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "0ae7799a-4853-436e-95bc-5ef50a17ffa9")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 408.305 267.335 0)
 		(mirror y)
@@ -32317,6 +32621,121 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "C65")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:JFC1206-2200FS")
+		(at 309.88 290.83 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d258160c-996a-4fa5-bb65-29909de92543")
+		(property "Reference" "F1"
+			(at 312.42 289.5599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "JFC1206-2200FS"
+			(at 312.42 292.0999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:JFC1206-2200FS"
+			(at 309.88 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2305151206_Shenzhen-JDT-Fuse-JFC1206-2200FS_C136357.pdf"
+			(at 309.88 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+125℃ 1.6mm 150A 20A 3.2mm 32V 32V 47.17 Surface Mount Fuse 1206 Disposable fuses ROHS"
+			(at 309.88 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C136357"
+			(at 309.88 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Shenzhen JDT Fuse"
+			(at 309.88 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "JFC1206-2200FS"
+			(at 309.88 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e0606f7-1304-4318-b192-6dcca12edc4e")
+		)
+		(pin "2"
+			(uuid "2977a878-c91c-4e9d-b8d6-8260b1720bb4")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -33568,80 +33987,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "R60")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:BAT-VCC_BAR")
-		(at 309.88 308.61 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dd56bf5c-12ec-488e-a682-946d25dc26ad")
-		(property "Reference" "#PWR033"
-			(at 309.88 308.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BAT-VCC"
-			(at 309.88 304.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 309.88 308.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 309.88 308.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 309.88 308.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "8e3108ee-872d-48f6-9605-28aad6479efb")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -35317,7 +35662,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 153.289 295.529 90)
 			(hide yes)
 			(show_name no)

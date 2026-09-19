@@ -6,19 +6,96 @@ See [vacuum BOM](https://github.com/makerspet/oomwoo/blob/main/BOM.md) for detai
 
 Drive, brush and fan motors draw power directly from the 4S battery (not via a DC-DC converter). The battery is 4*3.6V=14.4V nominal, 4*2.9V=11.6V discharged and 4*4.2V=16.8V fully charged.
 
+### DC Motors
+
 <table>
-  <tr><th>Part</th><th>Voltage</th><th>No load</th><th>Max Load</th><th>Notes</th></tr>
+  <tr><th>Part</th><th>Voltage</th><th>No load</th><th>Stall</th><th>Notes</th></tr>
 
   <tr>
     <td rowspan="3">Drive wheel</td><td>16.8V</td><td>0.12A</td><td>2A</td>
     <td rowspan="3">JST ZH 1.5mm 7-pin housing; RS-360-SH-15250 motor;
       pin 1 MOT+, 2 MOT-, 3 Hall GND (brown), 4 Hall signal out (blue, open collector), 5 Hall VCC (3.3-5V, orange), 6 COM wheel drop switch, 7 ON wheel drop switch;
-      fits Roborock S4 Max, S45 Max, S5 Max, S50 Max, S55 Max, S6 MaxV, S6 Pure, S65 Pure, S65 MaxV, S7, S7 Pro, S7 MaxV, S7 Max Ultra, S70, S75, E4, E45, E5, E50, E55, G10, T7, T7S, Q5, Q7, Q7 Max, and Q Revo
+      fits Roborock S4 Max, S45 Max, S5 Max, S50 Max, S55 Max, S6 MaxV, S6 Pure, S65 Pure, S65 MaxV, S7, S7 Pro, S7 MaxV, S7 Max Ultra, S70, S75, E4, E45, E5, E50, E55, G10, T7, T7S, Q5, Q7, Q7 Max, and Q Revo;
+      purchased <a href="https://www.aliexpress.us/item/3256811615892849.html">here</a>; power supply current limit headroom ~1A;
+      the wheel assembly appears to be identical to <a href="https://github.com/makerspet/oomwoo/tree/main/contributions/part-specs/IKsares/drive-wheel">this one</a> available
+      <a href="https://www.aliexpress.us/item/3256807172774304.html">here</a> that uses GM-RS360-16248 motor with stall current possibly reaching ~3A.
     </td>
   </tr>
   <tr><td>14.4V</td><td>0.12A</td><td>1.7A</td></tr>
   <tr><td>12V</td><td></td><td></td></tr>
-  
+
+  <tr>
+    <td rowspan="3">Main brush</td><td></td><td></td><td></td>
+    <td rowspan="3">Roborock S50 S51 S55 XIAOWA C10</td>
+  </tr>
+  <tr><td>16.8V</td><td>0.27A</td><td>7A</td></tr>
+  <tr><td></td><td></td><td></td></tr>
+
+  <tr>
+    <td rowspan="3">Side brush FlexiArm</td><td></td><td></td><td></td>
+    <td rowspan="3">RC500-KW/14440/DV motor; JST ZH 1.25mm 5-pin housing, 14.4V motor nominal;
+      pin 1 MOT-, 2 MOT+, 3 IR output? (Arm folded in fully -> sensor blocked), 4 IR GND? 5 IR VDD?
+      fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra</td>
+  </tr>
+  <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
+  <tr><td></td><td></td><td></td></tr>
+
+  <tr>
+    <td rowspan="3">Side brush fixed</td><td></td><td></td><td></td>
+    <td rowspan="3">RC500-KW/14440/DV motor; fits Roborock Robot Vacuum S50 S51 S52 S55 S502-00/01/02/03** S552-00 S60 S61 S65 S5 Max S6 Pure MAX S7 S70 S75</td>
+  </tr>
+  <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
+  <tr><td></td><td></td><td></td></tr>
+
+  <tr>
+    <td rowspan="3">Mop rotary fixed</td><td>16.8V</td><td>0.15A</td><td>5.3A</td>
+    <td rowspan="3">JST PH 2.0 4-pin housing, RS-385PH-2466 motor; pin 1 VCC fixed, 2 GND fixed, 3 GND FlexiArm, 4 VCC FlexiArm;
+    fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra, G20S, V20, P10S Pro</td>
+  </tr>
+  <tr><td>14.4V</td><td>0.16A</td><td>4.3A</td></tr>
+  <tr><td>11.6V</td><td>0.15A</td><td>3.7A</td></tr>
+
+  <tr>
+    <td rowspan="3">Mop rotary FlexiArm</td><td>16.8V</td><td>0.2A</td><td>5A</td>
+    <td rowspan="3">JST PH 2.0 4-pin housing, RS-385PH-2466 motor; pin 1 VCC fixed, 2 GND fixed, 3 GND FlexiArm, 4 VCC FlexiArm;
+    arm actuator likely JST GH 1.25; pin 1 black (ground?), 2 red (power?);
+    fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra, G20S, V20, P10S Pro</td>
+  </tr>
+  <tr><td>14.4V</td><td>0.17A</td><td>4.3A</td></tr>
+  <tr><td>11.6V</td><td>0.16A</td><td>3.6A</td></tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>55mA</td><td></td>
+    <td><a href="https://www.tcstec.com">TCS Precision Technology<a>JSB1523025 peristaltic, 5V nominal (loud); JST ZH 2-pin housing; pin 1 MOT+, 2 MOT-</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>60mA</td><td></td>
+    <td><a href="https://www.dyxminipump.com">ShenZhen Deyuxin Technology</a>DSB030-C peristaltic, 5V nominal (quiet); JST PH 2.0 2-pin housing; pin 1 MOT+, 2 MOT-</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>87mA</td><td></td>
+    <td><a href="https://www.dgjbf.com">Dongguan Jingbofang Precision Electronics<a>JSB030-5A peristaltic, 5V nominal (loud); no connector</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>110mA</td><td></td>
+    <td><a href="www.yyjiayin.com">Jiayin</a> JYPDM-6B peristaltic, 5V nominal (quiet-ish); JST XH 2.54mm 2-pin; pin 1 MOT+, 2 MOT-</td>
+  </tr>
+
+  <tr>
+    <td>Water mini-pump</td><td>5V</td><td>330mA</td><td></td>
+    <td><a href="https://conjoinfluid.com/">Conjoin</a> CJWP12-AA05A peristaltic, 5V nominal (loud); likely JST GH 1.25mm housing; pin 1 blue (ground?), 2 red (power?)</td>
+  </tr>
+
+</table>
+
+### BLDC Motors
+
+<table>
+  <tr><th>Part</th><th>Voltage</th><th>Unobstructed</th><th>Fully Obstructed</th><th>Notes</th></tr>
+
   <tr>
     <td rowspan="3">Fan MSD-G v1</td><td>16.8V</td><td>3.65A</td><td>6A</td>
     <td rowspan="3">LHE MX3.0 4-pin (2x2) 3.0mm with latch header (aka Molex Micro-Fit 3.0); pin 1 VCC, 2 GND, 3 FG (open collector), 4 PWM (low off);
@@ -92,92 +169,36 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr><td>15V</td><td>1.7A</td><td>2.7A</td></tr>
   <tr><td></td><td></td><td></td></tr>
 
-  <tr>
-    <td rowspan="3">Main brush</td><td></td><td></td><td></td>
-    <td rowspan="3">Roborock S50 S51 S55 XIAOWA C10</td>
-  </tr>
-  <tr><td>16.8V</td><td>0.27A</td><td>7A</td></tr>
-  <tr><td></td><td></td><td></td></tr>
+</table>
+
+### Sensors, Battery
+
+<table>
+  <tr><th>Part</th><th>Voltage</th><th>Notes</th></tr>
 
   <tr>
-    <td rowspan="3">Side brush FlexiArm</td><td></td><td></td><td></td>
-    <td rowspan="3">RC500-KW/14440/DV motor; JST ZH 1.25mm 5-pin housing, 14.4V motor nominal;
-      pin 1 MOT-, 2 MOT+, 3 IR output? (Arm folded in fully -> sensor blocked), 4 IR GND? 5 IR VDD?
-      fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra</td>
-  </tr>
-  <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
-  <tr><td></td><td></td><td></td></tr>
-
-  <tr>
-    <td rowspan="3">Side brush fixed</td><td></td><td></td><td></td>
-    <td rowspan="3">RC500-KW/14440/DV motor; fits Roborock Robot Vacuum S50 S51 S52 S55 S502-00/01/02/03** S552-00 S60 S61 S65 S5 Max S6 Pure MAX S7 S70 S75</td>
-  </tr>
-  <tr><td>16.8V</td><td>0.07A</td><td>1.7A</td></tr>
-  <tr><td></td><td></td><td></td></tr>
-
-  <tr>
-    <td>Cliff sensors</td><td></td><td></td><td></td>
+    <td>Cliff sensors</td><td></td>
     <td>JST PHDR-16VS 2.0mm 8x2 housing, mates JST S16B-PHDSS, JST B16B-PADSS; fits iRobot Roomba 500 600 700 800 528 552 564 595 560 570 610 615 620 625 630 650</td>
   </tr>
 
   <tr>
-    <td>Battery</td><td></td><td></td><td></td>
+    <td>Battery</td><td></td>
     <td>4S2P 14.4V nominal <a href="https://images.thdstatic.com/catalog/pdfImages/55/55d2f7f6-2ed9-44ed-ab4e-fb20d231c897.pdf">BRR-2P4S-5200FL battery</a> or similar;
     4-pin 3mm pitch with latch male LHE MX3.0 (C3001-H04), Molex Micro-Fit 3.0;
     pin 4 BAT+, 3 NTC (10.7K), 2 ID (0.62M to ground), 1 GND</td>
   </tr>
 
   <tr>
-    <td rowspan="3">Mop rotary fixed</td><td>16.8V</td><td>0.15A</td><td>5.3A</td>
-    <td rowspan="3">JST PH 2.0 4-pin housing, RS-385PH-2466 motor; pin 1 VCC fixed, 2 GND fixed, 3 GND FlexiArm, 4 VCC FlexiArm;
-    fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra, G20S, V20, P10S Pro</td>
-  </tr>
-  <tr><td>14.4V</td><td>0.16A</td><td>4.3A</td></tr>
-  <tr><td>11.6V</td><td>0.15A</td><td>3.7A</td></tr>
-
-  <tr>
-    <td rowspan="3">Mop rotary FlexiArm</td><td>16.8V</td><td>0.2A</td><td>5A</td>
-    <td rowspan="3">JST PH 2.0 4-pin housing, RS-385PH-2466 motor; pin 1 VCC fixed, 2 GND fixed, 3 GND FlexiArm, 4 VCC FlexiArm;
-    arm actuator likely JST GH 1.25; pin 1 black (ground?), 2 red (power?);
-    fits Roborock Qrevo Master, Qrevo Slim, S8 Max V Ultra, G20S, V20, P10S Pro</td>
-  </tr>
-  <tr><td>14.4V</td><td>0.17A</td><td>4.3A</td></tr>
-  <tr><td>11.6V</td><td>0.16A</td><td>3.6A</td></tr>
-
-  <tr>
-    <td>Water mini-pump</td><td>5V</td><td>55mA</td><td></td>
-    <td><a href="https://www.tcstec.com">TCS Precision Technology<a>JSB1523025 peristaltic, 5V nominal (loud); JST ZH 2-pin housing; pin 1 MOT+, 2 MOT-</td>
-  </tr>
-
-  <tr>
-    <td>Water mini-pump</td><td>5V</td><td>60mA</td><td></td>
-    <td><a href="https://www.dyxminipump.com">ShenZhen Deyuxin Technology</a>DSB030-C peristaltic, 5V nominal (quiet); JST PH 2.0 2-pin housing; pin 1 MOT+, 2 MOT-</td>
-  </tr>
-
-  <tr>
-    <td>Water mini-pump</td><td>5V</td><td>87mA</td><td></td>
-    <td><a href="https://www.dgjbf.com">Dongguan Jingbofang Precision Electronics<a>JSB030-5A peristaltic, 5V nominal (loud); no connector</td>
-  </tr>
-
-  <tr>
-    <td>Water mini-pump</td><td>5V</td><td>110mA</td><td></td>
-    <td><a href="www.yyjiayin.com">Jiayin</a> JYPDM-6B peristaltic, 5V nominal (quiet-ish); JST XH 2.54mm 2-pin; pin 1 MOT+, 2 MOT-</td>
-  </tr>
-
-  <tr>
-    <td>Water mini-pump</td><td>5V</td><td>330mA</td><td></td>
-    <td><a href="https://conjoinfluid.com/">Conjoin</a> CJWP12-AA05A peristaltic, 5V nominal (loud); likely JST GH 1.25mm housing; pin 1 blue (ground?), 2 red (power?)</td>
-  </tr>
-
-  <tr>
-    <td>Carpet sensor</td><td></td><td></td><td></td>
+    <td>Carpet sensor</td><td>≥12V, 14.4V?</td>
     <td>290KHz piezo ultrasonic, <a href="https://htwsensor.en.made-in-china.com/product/HfMYgjwoZxVh/China-300kHz-Carpet-Material-Recognition-Sensor-for-Robotic-Vacuum-Cleaner-Ultraosinc-Sensor.html">likely this one</a>,
-      12V minimum; JST ZH 2-pin housing; <a href="https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor">sourcing notes</a>
+      JST ZH 2-pin housing; <a href="https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor">sourcing notes</a>
       pin 1 white, 2 black (driven by AC, polarity doesn't matter?)
     </td>
   </tr>
 
 </table>
+
+All components tested with Agilent 6653A unless mentioned otherwise. The current limit was set high enough to not be triggered.
 
 <sup>*</sup> Appear to be interchangeable
 

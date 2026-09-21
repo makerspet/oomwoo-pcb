@@ -1742,125 +1742,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "oomwoo-kicad-altium-import:VCC-3V3-P_BAR"
-			(power global)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "VCC-3V3-P"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name 'VCC-3V3-P'"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "power-flag"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "VCC-3V3-P_BAR_0_0"
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy 1.27 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 0 0 0)
-					(length 0)
-					(hide yes)
-					(name "VCC-3V3-P"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(rectangle
 		(start 88.265 104.775)
@@ -1910,7 +1791,7 @@
 	)
 	(text "VDD"
 		(exclude_from_sim no)
-		(at 275.59 174.625 0)
+		(at 277.495 193.675 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1930,7 +1811,7 @@
 	)
 	(text "VDD"
 		(exclude_from_sim no)
-		(at 275.59 137.16 0)
+		(at 276.86 132.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2002,7 +1883,7 @@
 	)
 	(text "RECEIVER"
 		(exclude_from_sim no)
-		(at 273.05 144.78 0)
+		(at 274.32 139.7 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2032,7 +1913,7 @@
 	)
 	(text "https://thepihut.com/products/850nm-ir-led-modules?srsltid=AfmBOorZ0hl4HylQHd5JbNfaA7bqJMbzrmY0bn7Mm12pD_mKEoiRE0nX"
 		(exclude_from_sim no)
-		(at 408.305 120.015 0)
+		(at 411.48 114.935 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2042,7 +1923,7 @@
 	)
 	(text "GND"
 		(exclude_from_sim no)
-		(at 275.5301 177.165 0)
+		(at 277.4351 196.215 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2082,7 +1963,7 @@
 	)
 	(text "RECEIVER"
 		(exclude_from_sim no)
-		(at 273.05 182.245 0)
+		(at 274.955 201.295 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2092,7 +1973,7 @@
 	)
 	(text "GND"
 		(exclude_from_sim no)
-		(at 275.5301 139.7 0)
+		(at 276.8001 134.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2145,19 +2026,19 @@
 		(uuid "fee78ab6-1e06-441a-b18a-f7cf92357e36")
 	)
 	(junction
-		(at 273.685 177.8)
+		(at 275.59 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "03238385-436a-4b45-b9da-3856334d8a35")
 	)
 	(junction
-		(at 273.685 191.77)
+		(at 275.59 210.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0962eaae-539e-497b-aefb-b048e12fd6d0")
 	)
 	(junction
-		(at 271.78 137.795)
+		(at 273.05 132.715)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "20aab7f9-9a9e-4e28-bd53-16c8420033d9")
@@ -2169,7 +2050,7 @@
 		(uuid "273a23cb-b9ba-4bba-ab15-aa963fc6cf91")
 	)
 	(junction
-		(at 274.32 154.305)
+		(at 275.59 149.225)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "29154460-4d0c-431a-a0fa-d3ac179b441c")
@@ -2181,7 +2062,7 @@
 		(uuid "3c9c2440-9e20-48fb-8427-59bd8ac8299a")
 	)
 	(junction
-		(at 271.145 191.77)
+		(at 273.05 210.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "49a68d63-c335-43df-aa56-378337ed4a9b")
@@ -2193,19 +2074,19 @@
 		(uuid "4a6f30e5-420d-498f-af6b-a863042343ac")
 	)
 	(junction
-		(at 273.685 180.34)
+		(at 275.59 199.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4d3cc78f-80a7-422d-93cb-4ee38ad05617")
 	)
 	(junction
-		(at 271.145 175.26)
+		(at 273.05 194.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "50995c4b-e29b-4269-9c06-8c083d4d1d52")
 	)
 	(junction
-		(at 271.78 154.305)
+		(at 273.05 149.225)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5677f16a-3c91-44f2-af91-c5e1d5793649")
@@ -2229,12 +2110,6 @@
 		(uuid "7441ea5e-dfd2-4be0-a7c2-1ca8b52fd650")
 	)
 	(junction
-		(at 142.24 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7c90752f-a336-4353-a500-88798f179d3a")
-	)
-	(junction
 		(at 123.19 180.975)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2247,7 +2122,7 @@
 		(uuid "93332dbb-35a4-44bb-acf9-599a067a418a")
 	)
 	(junction
-		(at 274.32 140.335)
+		(at 275.59 135.255)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "988f3f1e-416f-4755-9010-eb54ca663110")
@@ -2295,10 +2170,10 @@
 		(uuid "b35c8c4e-e663-4cce-b107-dc58f3af6cc6")
 	)
 	(junction
-		(at 123.19 163.83)
+		(at 151.765 168.275)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bd8a5711-5f1a-4f35-aad4-2636fa918706")
+		(uuid "ba6cd16b-92ea-403f-9773-c582fd4df74e")
 	)
 	(junction
 		(at 438.15 154.94)
@@ -2319,6 +2194,12 @@
 		(uuid "d0b57191-4f5c-44c8-bd6a-004d74f58e04")
 	)
 	(junction
+		(at 151.765 137.795)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d59b1bd6-5e1a-451c-b398-54698d209c41")
+	)
+	(junction
 		(at 137.16 173.355)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2331,7 +2212,7 @@
 		(uuid "e75bc75a-fa76-407c-ab9a-042d0afb6165")
 	)
 	(junction
-		(at 274.32 142.875)
+		(at 275.59 137.795)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f1346b0a-a392-4935-bb50-472d8b4888b6")
@@ -2354,7 +2235,17 @@
 	)
 	(wire
 		(pts
-			(xy 277.495 137.795) (xy 271.78 137.795)
+			(xy 151.765 137.795) (xy 151.765 168.275)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06f35207-4d2c-412a-85a0-3da1a466a35b")
+	)
+	(wire
+		(pts
+			(xy 278.765 132.715) (xy 273.05 132.715)
 		)
 		(stroke
 			(width 0)
@@ -2414,7 +2305,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 191.77) (xy 271.145 193.04)
+			(xy 273.05 210.82) (xy 273.05 212.09)
 		)
 		(stroke
 			(width 0)
@@ -2434,7 +2325,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 142.875) (xy 274.32 154.305)
+			(xy 275.59 137.795) (xy 275.59 149.225)
 		)
 		(stroke
 			(width 0)
@@ -2464,7 +2355,7 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 175.26) (xy 271.145 175.26)
+			(xy 278.765 194.31) (xy 273.05 194.31)
 		)
 		(stroke
 			(width 0)
@@ -2514,7 +2405,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.845 132.715) (xy 283.845 130.81)
+			(xy 285.115 127.635) (xy 285.115 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2534,7 +2425,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 168.275) (xy 273.685 168.275)
+			(xy 285.115 187.325) (xy 275.59 187.325)
 		)
 		(stroke
 			(width 0)
@@ -2604,7 +2495,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 137.795) (xy 161.925 137.795)
+			(xy 142.24 137.795) (xy 151.765 137.795)
 		)
 		(stroke
 			(width 0)
@@ -2674,17 +2565,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 137.795) (xy 271.78 132.715)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d871193-a2af-4692-93b0-4853d94bea5a")
-	)
-	(wire
-		(pts
-			(xy 250.19 145.415) (xy 277.495 145.415)
+			(xy 251.46 140.335) (xy 278.765 140.335)
 		)
 		(stroke
 			(width 0)
@@ -2694,7 +2575,7 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 177.8) (xy 273.685 177.8)
+			(xy 278.765 196.85) (xy 275.59 196.85)
 		)
 		(stroke
 			(width 0)
@@ -2724,7 +2605,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.845 150.495) (xy 283.845 154.305)
+			(xy 285.115 145.415) (xy 285.115 149.225)
 		)
 		(stroke
 			(width 0)
@@ -2734,7 +2615,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.685 180.34) (xy 273.685 191.77)
+			(xy 275.59 199.39) (xy 275.59 210.82)
 		)
 		(stroke
 			(width 0)
@@ -2774,7 +2655,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.685 177.8) (xy 273.685 180.34)
+			(xy 275.59 196.85) (xy 275.59 199.39)
 		)
 		(stroke
 			(width 0)
@@ -2794,7 +2675,17 @@
 	)
 	(wire
 		(pts
-			(xy 249.555 182.88) (xy 276.86 182.88)
+			(xy 151.765 137.795) (xy 161.925 137.795)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "701ceef8-d9df-4f7d-904a-f054b0f9f6be")
+	)
+	(wire
+		(pts
+			(xy 251.46 201.93) (xy 278.765 201.93)
 		)
 		(stroke
 			(width 0)
@@ -2854,7 +2745,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 142.875) (xy 277.495 142.875)
+			(xy 275.59 137.795) (xy 278.765 137.795)
 		)
 		(stroke
 			(width 0)
@@ -2924,7 +2815,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.845 154.305) (xy 274.32 154.305)
+			(xy 285.115 149.225) (xy 275.59 149.225)
 		)
 		(stroke
 			(width 0)
@@ -2964,7 +2855,7 @@
 	)
 	(wire
 		(pts
-			(xy 277.495 140.335) (xy 274.32 140.335)
+			(xy 278.765 135.255) (xy 275.59 135.255)
 		)
 		(stroke
 			(width 0)
@@ -2974,7 +2865,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 140.335) (xy 274.32 142.875)
+			(xy 275.59 135.255) (xy 275.59 137.795)
 		)
 		(stroke
 			(width 0)
@@ -2994,7 +2885,17 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 189.865) (xy 271.145 191.77)
+			(xy 151.765 168.275) (xy 161.925 168.275)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9617d62e-64c6-44bb-bb03-52e875b0ea05")
+	)
+	(wire
+		(pts
+			(xy 273.05 208.915) (xy 273.05 210.82)
 		)
 		(stroke
 			(width 0)
@@ -3004,7 +2905,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.845 130.81) (xy 274.32 130.81)
+			(xy 285.115 125.73) (xy 275.59 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3044,7 +2945,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 152.4) (xy 271.78 154.305)
+			(xy 273.05 147.32) (xy 273.05 149.225)
 		)
 		(stroke
 			(width 0)
@@ -3064,7 +2965,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 168.275) (xy 161.925 168.275)
+			(xy 142.24 168.275) (xy 151.765 168.275)
 		)
 		(stroke
 			(width 0)
@@ -3074,7 +2975,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 175.26) (xy 271.145 184.785)
+			(xy 273.05 194.31) (xy 273.05 203.835)
 		)
 		(stroke
 			(width 0)
@@ -3154,7 +3055,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 154.305) (xy 271.78 154.305)
+			(xy 275.59 149.225) (xy 273.05 149.225)
 		)
 		(stroke
 			(width 0)
@@ -3184,7 +3085,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.685 168.275) (xy 273.685 177.8)
+			(xy 275.59 187.325) (xy 275.59 196.85)
 		)
 		(stroke
 			(width 0)
@@ -3214,7 +3115,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 137.795) (xy 271.78 147.32)
+			(xy 273.05 132.715) (xy 273.05 142.24)
 		)
 		(stroke
 			(width 0)
@@ -3274,7 +3175,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 154.305) (xy 271.78 155.575)
+			(xy 273.05 149.225) (xy 273.05 150.495)
 		)
 		(stroke
 			(width 0)
@@ -3304,7 +3205,17 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 191.77) (xy 273.685 191.77)
+			(xy 273.05 124.46) (xy 273.05 132.715)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4a0859d-63d0-4919-84df-c4be90ed3448")
+	)
+	(wire
+		(pts
+			(xy 285.115 210.82) (xy 275.59 210.82)
 		)
 		(stroke
 			(width 0)
@@ -3334,7 +3245,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 130.81) (xy 274.32 140.335)
+			(xy 275.59 125.73) (xy 275.59 135.255)
 		)
 		(stroke
 			(width 0)
@@ -3344,7 +3255,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.685 180.34) (xy 276.86 180.34)
+			(xy 275.59 199.39) (xy 278.765 199.39)
 		)
 		(stroke
 			(width 0)
@@ -3354,7 +3265,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 175.26) (xy 271.145 170.18)
+			(xy 273.05 182.245) (xy 273.05 194.31)
 		)
 		(stroke
 			(width 0)
@@ -3384,7 +3295,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 187.96) (xy 283.21 191.77)
+			(xy 285.115 207.01) (xy 285.115 210.82)
 		)
 		(stroke
 			(width 0)
@@ -3414,7 +3325,7 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 170.18) (xy 283.21 168.275)
+			(xy 285.115 189.23) (xy 285.115 187.325)
 		)
 		(stroke
 			(width 0)
@@ -3424,7 +3335,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.685 191.77) (xy 271.145 191.77)
+			(xy 275.59 210.82) (xy 273.05 210.82)
 		)
 		(stroke
 			(width 0)
@@ -3441,6 +3352,126 @@
 			(type default)
 		)
 		(uuid "fbd957a9-0e71-4f01-99c6-c88e1e4a9047")
+	)
+	(global_label "VCC-3V3-REG"
+		(shape input)
+		(at 123.19 163.83 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "37cfc47e-cf84-40aa-82f1-d26940064f74")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.2348 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "VCC-3V3-REG"
+		(shape input)
+		(at 273.05 182.245 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3cd9db3c-4985-4e3a-b97d-60f95ae1ef6a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 273.05 165.2898 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "VCC-3V3-REG"
+		(shape input)
+		(at 142.24 124.46 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "762ee5e0-d119-46d2-ac04-2f2b9cc077b6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 142.24 107.5048 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "VCC-3V3-REG"
+		(shape input)
+		(at 273.05 124.46 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a4a09005-c822-48bc-b5c3-f1a47dc9c512")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 273.05 107.5048 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "VCC-3V3-REG"
+		(shape input)
+		(at 427.355 134.62 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c62277c8-2a71-4f39-80e4-564f607d1a6c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 427.355 117.6648 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(hierarchical_label "VL-L-LPn"
 		(shape input)
@@ -3532,7 +3563,7 @@
 	)
 	(hierarchical_label "IR-F-RX1"
 		(shape output)
-		(at 250.19 145.415 180)
+		(at 251.46 140.335 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3543,7 +3574,7 @@
 	)
 	(hierarchical_label "IR-F-RX2"
 		(shape output)
-		(at 249.555 182.88 180)
+		(at 251.46 201.93 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3917,6 +3948,83 @@
 			)
 		)
 		(property "WATTAGE" ""
+			(at 167.005 145.415 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 167.005 145.415 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 167.005 145.415 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 167.005 145.415 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 167.005 145.415 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 167.005 145.415 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 167.005 145.415 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
 			(at 167.005 145.415 0)
 			(hide yes)
 			(show_name no)
@@ -4335,6 +4443,83 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 393.065 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 393.065 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 393.065 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 393.065 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 393.065 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 393.065 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 393.065 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dee49e10-fa87-4a15-a376-33fd29df36f2")
 		)
@@ -4728,6 +4913,83 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 167.005 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 167.005 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 167.005 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 167.005 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 167.005 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 167.005 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 167.005 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "8"
 			(uuid "e6ca79a4-1f84-4ae2-92d9-e75333d836ef")
 		)
@@ -4765,82 +5027,8 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:VCC-3V3-P_BAR")
-		(at 142.24 124.46 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1f1b7fb9-0cbe-48cb-9909-afed47ae9908")
-		(property "Reference" "#PWR028"
-			(at 142.24 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-3V3-P"
-			(at 142.24 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 142.24 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "7e693493-eaac-4249-9e9e-73334a7db9ec")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 271.78 155.575 0)
+		(at 273.05 150.495 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4850,7 +5038,7 @@
 		(dnp no)
 		(uuid "29aa2239-9fb0-4882-867c-f54abdf3d577")
 		(property "Reference" "#PWR0107"
-			(at 271.78 155.575 0)
+			(at 273.05 150.495 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4861,7 +5049,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 271.78 161.925 0)
+			(at 273.05 156.845 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4871,7 +5059,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 271.78 155.575 0)
+			(at 273.05 150.495 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4881,7 +5069,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.78 155.575 0)
+			(at 273.05 150.495 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4891,7 +5079,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 271.78 155.575 0)
+			(at 273.05 150.495 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5327,6 +5515,94 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 137.16 189.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "39796461-1cd2-4c6c-ac4a-885fd9a74a99")
 		)
@@ -5343,82 +5619,8 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:VCC-3V3-P_BAR")
-		(at 271.145 170.18 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "33d7d21a-5799-4ec6-8be5-165d603b1839")
-		(property "Reference" "#PWR0104"
-			(at 271.145 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-3V3-P"
-			(at 271.145 166.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 271.145 170.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 271.145 170.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 271.145 170.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "eba55b8f-6173-4209-8470-7aefd8e07ba7")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "#PWR0104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
-		(at 271.78 149.86 0)
+		(at 273.05 144.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5428,7 +5630,7 @@
 		(dnp no)
 		(uuid "43741f03-d038-44bc-b67f-fa43f5af3bed")
 		(property "Reference" "C91"
-			(at 265.43 147.32 0)
+			(at 266.7 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5438,8 +5640,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/25V"
-			(at 259.08 149.86 0)
+		(property "Value" "10uF/6.3V"
+			(at 260.35 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5450,7 +5652,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5461,7 +5663,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5471,8 +5673,8 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 271.78 149.86 0)
+		(property "Description" ""
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5483,7 +5685,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5494,7 +5696,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5505,7 +5707,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5516,7 +5718,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5527,7 +5729,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5538,7 +5740,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5549,7 +5751,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5560,7 +5762,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5571,7 +5773,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5582,7 +5784,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5593,7 +5795,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5604,7 +5806,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5615,7 +5817,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5626,7 +5828,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5637,7 +5839,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5648,7 +5850,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5659,7 +5861,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5670,7 +5872,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5681,7 +5883,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5692,7 +5894,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5703,7 +5905,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5714,7 +5916,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5725,7 +5927,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5736,7 +5938,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5747,7 +5949,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 271.78 149.86 0)
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5757,8 +5959,85 @@
 				)
 			)
 		)
-		(property "LCSC" "C96446"
-			(at 271.78 149.86 0)
+		(property "LCSC" "C1691"
+			(at 273.05 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 273.05 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 273.05 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 273.05 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 273.05 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 273.05 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 273.05 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 273.05 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5838,7 +6117,7 @@
 				)
 			)
 		)
-		(property "Description" "10uF 50V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+		(property "Description" ""
 			(at 427.355 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -6179,6 +6458,83 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 427.355 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 427.355 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 427.355 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 427.355 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 427.355 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 427.355 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 427.355 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "acfa073a-c01c-40a0-8de0-0cef1cf56968")
 		)
@@ -6189,154 +6545,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
 					(reference "C123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:VCC-3V3-P_BAR")
-		(at 427.355 134.62 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4d2747e5-a841-4d49-8de1-104e3b488d21")
-		(property "Reference" "#PWR0108"
-			(at 427.355 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-3V3-P"
-			(at 427.355 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 427.355 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 427.355 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 427.355 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "878fd7a7-508d-4d13-8f87-19ecedd136e7")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "#PWR0108")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:VCC-3V3-P_BAR")
-		(at 123.19 163.83 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "534483e4-b71f-449d-a3ae-a3bba2a0acf9")
-		(property "Reference" "#PWR082"
-			(at 123.19 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-3V3-P"
-			(at 123.19 160.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 123.19 163.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 163.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 123.19 163.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "a0a69b72-e103-4b80-a135-07609d815d2b")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -6683,6 +6891,94 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 375.92 178.435 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "79b025b4-2327-4be7-a6bf-2a2412534c75")
 		)
@@ -6700,7 +6996,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 271.145 193.04 0)
+		(at 273.05 212.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6710,7 +7006,7 @@
 		(dnp no)
 		(uuid "68f89740-8b06-45b8-b84f-d3c5263bb235")
 		(property "Reference" "#PWR0105"
-			(at 271.145 193.04 0)
+			(at 273.05 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6721,7 +7017,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 271.145 199.39 0)
+			(at 273.05 218.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6731,7 +7027,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 271.145 193.04 0)
+			(at 273.05 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6741,7 +7037,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.145 193.04 0)
+			(at 273.05 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6751,7 +7047,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 271.145 193.04 0)
+			(at 273.05 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6774,7 +7070,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-ZH1_5-4PWT")
-		(at 282.575 141.605 0)
+		(at 283.845 136.525 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6785,7 +7081,7 @@
 		(fields_autoplaced yes)
 		(uuid "6ad84a38-8f8e-470c-aebf-9557da9fb44e")
 		(property "Reference" "IR-F1"
-			(at 287.02 140.3349 0)
+			(at 288.29 135.2549 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6796,7 +7092,7 @@
 			)
 		)
 		(property "Value" "ZX-ZH1_5-4PWT"
-			(at 287.02 142.8749 0)
+			(at 288.29 137.7949 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6807,7 +7103,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-ZH1_5-4PWT"
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6818,7 +7114,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312011606_Megastar-ZX-ZH1-5-4PWT_C19272407.pdf"
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6829,7 +7125,7 @@
 			)
 		)
 		(property "Description" "-25℃~+85℃ 1 1.5mm 1A 1x4P 250V 3.8mm 4 4P 6mm 9mm Auxiliary Solder Pin Beige Brass LCP Surface Mount, Right Angle Tin ZH SMD,P=1.5mm,Surface Mount，Right Angle Wire To Board Connector ROHS"
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6840,7 +7136,7 @@
 			)
 		)
 		(property "LCSC" "C19272407"
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6851,7 +7147,7 @@
 			)
 		)
 		(property "Manufacturer" "Megastar"
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6862,7 +7158,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ZX-ZH1.5-4PWT"
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6873,7 +7169,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6884,7 +7180,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6895,7 +7191,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6906,7 +7202,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6917,7 +7213,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6928,7 +7224,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6939,7 +7235,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6950,7 +7246,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6961,7 +7257,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6972,7 +7268,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6983,7 +7279,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6994,7 +7290,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7005,7 +7301,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7016,7 +7312,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7027,7 +7323,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7038,7 +7334,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7049,7 +7345,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7060,7 +7356,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7071,7 +7367,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7082,7 +7378,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7093,7 +7389,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7104,7 +7400,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7115,7 +7411,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7126,7 +7422,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7137,7 +7433,84 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 282.575 141.605 0)
+			(at 283.845 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 283.845 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 283.845 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 283.845 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 283.845 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 283.845 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 283.845 136.525 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 283.845 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7515,6 +7888,94 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 126.365 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f0f585f0-afc9-404f-b992-b3216c9dcf54")
 		)
@@ -7553,7 +8014,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/25V"
+		(property "Value" "10uF/6.3V"
 			(at 145.415 160.0262 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7586,7 +8047,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 142.24 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -7872,7 +8333,84 @@
 				)
 			)
 		)
-		(property "LCSC" "C96446"
+		(property "LCSC" "C1691"
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
 			(at 142.24 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -8239,6 +8777,94 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 127.635 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6df06d5d-6aaa-4780-b4a8-5d3b7acdf0d9")
 		)
@@ -8256,7 +8882,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 271.145 187.325 0)
+		(at 273.05 206.375 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8266,7 +8892,7 @@
 		(dnp no)
 		(uuid "9782d8d9-efdc-4abc-8ce5-39cbdb82a15e")
 		(property "Reference" "C90"
-			(at 264.795 184.785 0)
+			(at 266.7 203.835 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8276,8 +8902,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/25V"
-			(at 258.445 187.325 0)
+		(property "Value" "10uF/6.3V"
+			(at 260.35 206.375 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8288,7 +8914,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8299,7 +8925,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8309,8 +8935,8 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 271.145 187.325 0)
+		(property "Description" ""
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8321,7 +8947,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8332,7 +8958,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8343,7 +8969,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8354,7 +8980,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8365,7 +8991,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8376,7 +9002,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8387,7 +9013,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8398,7 +9024,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8409,7 +9035,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8420,7 +9046,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8431,7 +9057,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8442,7 +9068,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8453,7 +9079,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8464,7 +9090,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8475,7 +9101,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8486,7 +9112,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8497,7 +9123,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8508,7 +9134,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8519,7 +9145,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8530,7 +9156,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8541,7 +9167,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8552,7 +9178,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8563,7 +9189,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8574,7 +9200,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8585,7 +9211,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 271.145 187.325 0)
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8595,8 +9221,85 @@
 				)
 			)
 		)
-		(property "LCSC" "C96446"
-			(at 271.145 187.325 0)
+		(property "LCSC" "C1691"
+			(at 273.05 206.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 273.05 206.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 273.05 206.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 273.05 206.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 273.05 206.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 273.05 206.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 273.05 206.375 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 273.05 206.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8690,80 +9393,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
 					(reference "#PWR090")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:VCC-3V3-P_BAR")
-		(at 271.78 132.715 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9c2a5ecc-8935-46d9-832f-e6c7b51de3cb")
-		(property "Reference" "#PWR0106"
-			(at 271.78 132.715 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-3V3-P"
-			(at 271.78 128.905 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 271.78 132.715 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 271.78 132.715 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 271.78 132.715 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "982335db-fec8-4600-b5aa-68ec20ede215")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -9184,6 +9813,94 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907005"
+			(at 133.985 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b4b1e1eb-d60b-480a-bc39-7fb812705dc9")
 		)
@@ -9201,7 +9918,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-ZH1_5-4PWT")
-		(at 281.94 179.07 0)
+		(at 283.845 198.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9212,7 +9929,7 @@
 		(fields_autoplaced yes)
 		(uuid "b58db786-2901-483d-b28d-7144abb04b77")
 		(property "Reference" "IR-F2"
-			(at 285.75 177.7999 0)
+			(at 287.655 196.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9223,7 +9940,7 @@
 			)
 		)
 		(property "Value" "ZX-ZH1_5-4PWT"
-			(at 285.75 180.3399 0)
+			(at 287.655 199.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9234,7 +9951,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-ZH1_5-4PWT"
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9245,7 +9962,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312011606_Megastar-ZX-ZH1-5-4PWT_C19272407.pdf"
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9256,7 +9973,7 @@
 			)
 		)
 		(property "Description" "-25℃~+85℃ 1 1.5mm 1A 1x4P 250V 3.8mm 4 4P 6mm 9mm Auxiliary Solder Pin Beige Brass LCP Surface Mount, Right Angle Tin ZH SMD,P=1.5mm,Surface Mount，Right Angle Wire To Board Connector ROHS"
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9267,7 +9984,7 @@
 			)
 		)
 		(property "LCSC" "C19272407"
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9278,7 +9995,7 @@
 			)
 		)
 		(property "Manufacturer" "Megastar"
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9289,7 +10006,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ZX-ZH1.5-4PWT"
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9300,7 +10017,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9311,7 +10028,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9322,7 +10039,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9333,7 +10050,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9344,7 +10061,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9355,7 +10072,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9366,7 +10083,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9377,7 +10094,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9388,7 +10105,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9399,7 +10116,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9410,7 +10127,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9421,7 +10138,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9432,7 +10149,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9443,7 +10160,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9454,7 +10171,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9465,7 +10182,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9476,7 +10193,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9487,7 +10204,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9498,7 +10215,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9509,7 +10226,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9520,7 +10237,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9531,7 +10248,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9542,7 +10259,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9553,7 +10270,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9564,7 +10281,84 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 281.94 179.07 0)
+			(at 283.845 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 283.845 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 283.845 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 283.845 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 283.845 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 283.845 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 283.845 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 283.845 198.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10016,6 +10810,94 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907005"
+			(at 131.445 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4812a622-befe-4548-8d72-7ca0724c877e")
 		)
@@ -10372,6 +11254,94 @@
 				)
 			)
 		)
+		(property "Arrow Part Number" ""
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 123.19 171.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fb7e85ef-bc98-492e-91f9-99233dd84279")
 		)
@@ -10410,7 +11380,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/25V"
+		(property "Value" "10uF/6.3V"
 			(at 145.415 191.7762 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10443,7 +11413,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 142.24 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -10729,7 +11699,84 @@
 				)
 			)
 		)
-		(property "LCSC" "C96446"
+		(property "LCSC" "C1691"
+			(at 142.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 142.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 142.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 142.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 142.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 142.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 142.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
 			(at 142.24 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -11120,6 +12167,83 @@
 			)
 		)
 		(property "WATTAGE" ""
+			(at 436.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 436.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 436.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 436.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 436.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 436.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 436.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
 			(at 436.88 146.05 0)
 			(hide yes)
 			(show_name no)

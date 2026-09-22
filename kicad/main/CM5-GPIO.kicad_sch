@@ -6795,6 +6795,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 127) (xy 269.875 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "291c63de-f6f0-4b76-ab82-e4f5b929ca68")
+	)
+	(wire
+		(pts
 			(xy 337.185 88.9) (xy 337.185 101.6)
 		)
 		(stroke
@@ -7022,16 +7032,6 @@
 			(type solid)
 		)
 		(uuid "4cd9d0a8-7292-4156-a0a3-ff26798fbfcc")
-	)
-	(wire
-		(pts
-			(xy 250.698 127) (xy 269.875 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cff3768-a20b-4e2e-8564-2bdf7006f31c")
 	)
 	(wire
 		(pts
@@ -8303,16 +8303,6 @@
 		)
 		(uuid "ff9aaa89-4438-4a7d-a940-4dd2c2c89f2a")
 	)
-	(label "GPIO10"
-		(at 472.44 202.565 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "062d2f0b-17c0-4a3b-ace3-25601dd6dd2c")
-	)
 	(label "SD_CLK"
 		(at 311.785 322.58 90)
 		(effects
@@ -8442,16 +8432,6 @@
 			(justify left bottom)
 		)
 		(uuid "610d07c0-db05-422f-9a5a-734e2b905e30")
-	)
-	(label "GPIO10"
-		(at 250.698 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "696f733f-a1b3-47b7-9e6c-e6d5c049e9d9")
 	)
 	(label "SD_CLK"
 		(at 347.345 144.78 180)
@@ -8878,6 +8858,17 @@
 			(justify right)
 		)
 		(uuid "61846dbb-9018-405e-9394-98044c2c1e3d")
+	)
+	(hierarchical_label "PI_SHUTDOWN"
+		(shape input)
+		(at 250.19 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "65edcf98-5a8c-44ab-88ea-de8b12542581")
 	)
 	(hierarchical_label "I2S_SCLK"
 		(shape output)
@@ -15853,6 +15844,83 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/e9095513-3c34-4c9e-b88d-b0637a4ecc78"
 					(reference "BOOT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 472.44 202.565 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e02d9872-b014-4b2d-95fc-1e655cdeb08d")
+		(property "Reference" "#PWR018"
+			(at 466.09 202.565 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 467.36 202.565 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 472.44 202.565 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 472.44 202.565 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 472.44 202.565 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6f9080a-bf9c-4cb7-af94-0519a39e2155")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/e9095513-3c34-4c9e-b88d-b0637a4ecc78"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)

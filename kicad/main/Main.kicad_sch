@@ -1477,6 +1477,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.89 215.9) (xy 306.07 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af0750ba-6db1-4f86-a1d1-61049d22790f")
+	)
+	(wire
+		(pts
 			(xy 194.31 234.315) (xy 194.31 259.715)
 		)
 		(stroke
@@ -3773,6 +3783,16 @@
 				(justify right)
 			)
 		)
+		(pin "PI_SHUTDOWN" output
+			(at 262.89 215.9 0)
+			(uuid "f2f28a90-d214-493d-a2d6-f0d81372d138")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
@@ -5084,6 +5104,16 @@
 		(pin "PI_DONE" output
 			(at 306.07 218.44 180)
 			(uuid "4146105d-52b1-483b-a555-bea3c28a06e8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PI_SHUTDOWN" input
+			(at 306.07 215.9 180)
+			(uuid "dc1bd1e2-0341-4869-a0c1-d2464fc3517e")
 			(effects
 				(font
 					(size 1.27 1.27)

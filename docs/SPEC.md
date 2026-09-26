@@ -412,6 +412,77 @@ Claude says:
 - Shutdown: wire the CTRL pin to a GPIO so you can power the amp down when idle. That saves the ~13 mA quiescent current and avoids pops at boot.
 - Pins: CM4 and CM5 both use GPIO18 (BCLK), GPIO19 (LRCK) and GPIO21 (DOUT). I²S is the one audio path both modules share. PWM audio on GPIO12/13 is cheaper on CM4, but I believe the CM5 doesn't support it, so it doesn't suit a carrier for both.
 
+## Mic array (optional)
+
+Claude: build it as a USB mic board. Four digital PDM MEMS mics sampled by an RP2040, which shows up as a standard 4-channel USB microphone. It needs no Pi-specific driver and costs roughly $2–3 in parts. It works the same on CM4 and CM5.
+
+Why not wire the mics to the Pi's I²S bus?
+- Not enough inputs. The CM4 has one I²S data-in pin (GPIO20). One data line carries two mics (left and right), so plain I²S tops out at 2 mics. Getting 4 means TDM-output mics, which are expensive and rare, plus fiddly TDM setup in the Linux device tree. The CM5's audio block is different again.
+- Shared with the speaker. The NS4168 already uses that I²S bus's clock lines. The mics would be forced to run at the speaker's sample rate, and the mic board would inherit any CM4/CM5 differences.
+- Fast clock over a cable. A ~3 MHz bit clock has to run up a flying cable to the top of the LiDAR cage, right beside the LiDAR motor.
+
+The one real advantage of I²S is that mic and speaker share a clock, which makes echo cancellation easier. See the trade-off near the end.
+
+Why USB with an RP2040
+- Works on any compute. It looks like an ordinary USB microphone, so it works on CM4, CM5, a laptop on the bench, and possibly a phone over USB OTG.
+- All four mics are sampled together. Pairs of PDM mics share a data line: one mic outputs on the rising clock edge and the other on the falling edge. So 4 mics need 1 clock line and 2 data lines, all on the same clock. That exact sample alignment is what direction-finding needs, and USB can't disturb it.
+- Converting PDM to audio: the RP2040's programmable I/O captures the raw bit streams and firmware filters them down to 16 kHz audio. Four channels at 16 kHz should fit on its two cores; confirm on the first board. The pin-compatible RP2350 has more headroom if it's tight. There is existing open-source code for Pico PDM mics and for TinyUSB USB-audio to start from.
+- Simple cable: 4 wires (5 V, D+, D−, GND) up to the cage.
+- Easy for people to hack: the RP2040 is well known, and there are free pins for LEDs or a button.
+
+Mic geometry
+- Use 4 mics, not 3. Three is enough to find a direction on the floor plane, but 4 in a square gives better beamforming, spare measurements and simpler maths.
+- Make the array as wide as the cage top allows, about 60–70 mm diameter, similar in size to ReSpeaker-type arrays. Wider spacing gives better direction accuracy.
+- At 65 mm across, sound takes at most 0.19 ms to cross the array: only about 3 samples at 16 kHz.
+- Frequency-domain methods such as SRP-PHAT (used by the ODAS direction-finding library) handle fractions of a sample. Capture at 48 kHz if you want finer resolution.
+- Mount the mics on the underside of the board. Use bottom-port mics with the sound hole drilled through to the top. The top stays flat and the mics are protected.
+- Cover each port with an acoustic mesh or membrane. It's a vacuum cleaner, so dust and hair are the main way these mics will fail.
+
+Mechanical and electrical notes
+- Isolate the board from vibration. MEMS mics pick up vibration through the structure, and the LiDAR motor sits right below. Mount on silicone grommets or foam, not rigid standoffs.
+- Keep it low. The cage top is usually the robot's highest point, so the board adds directly to under-furniture clearance. If you ever add a top-contact bump switch on the cage, plan the board around it.
+- Digital mics don't pick up the LiDAR motor's electrical noise. Keep the PDM traces short; a 22–33 Ω series resistor on the clock is enough.
+- Power: a 3.3 V regulator on the board, and ESD protection on the USB data lines at the connector.
+- Hardware mute: add a switch that cuts power to the mics, with an LED showing when they're off. People are wary of a mic that roams their home. A hardware switch is cheap and more convincing than a software mute.
+- Optional: a ring of a few WS2812 LEDs to show which direction the robot is listening.
+
+What noise cancellation can realistically do
+
+Set expectations before promising "noise cancellation":
+- The fan is loud. A running vacuum is roughly 65–75 dBA at a mic about 15 cm from the fan. Four-mic beamforming buys about 6 dB plus whatever the post-filter adds. That helps, but won't make speech clear during full-power cleaning.
+- The fan never moves relative to the mics. That is the one big advantage you have. An MVDR beamformer can "learn" the fan noise while the fan runs with nobody talking, and place a fixed null toward it. That works much better than generic noise suppression.
+- Plan the interaction around it. The robot hears the wake word, drops the fan to low or off, and then listens for the command. Commands at full suction would stay unreliable.
+- Echo cancellation: mic and speaker are on different clocks (USB vs I²S). PipeWire's WebRTC echo-cancel module copes with clock drift, but not perfectly. If you later want solid "barge-in" (talking over the robot's own voice prompts), the clean fix is to play one of the RP2040's spare channels as a loopback of the speaker signal. That can wait.
+
+Software
+- Linux sees a 4-channel USB microphone through ALSA or PipeWire.
+- ODAS (IntRoLab) handles direction-finding and sound tracking, and there is an odas_ros package for ROS 2.
+- Other options: openWakeWord for the wake word, and Vosk or whisper.cpp for speech recognition on a CM5.
+- Pair it with the LiDAR: the mics give the speaker's direction and the LiDAR gives the distance.
+
+Cheaper alternative: 2 mics on I²S, no MCU
+- Two I²S MEMS mics on GPIO20, sharing the NS4168's clock lines. This gets you direction-finding with front/back ambiguity, mild beamforming and easy echo cancellation.
+- It's a fine "lite" option, but it's limited to 2 mics and still runs a fast clock up the cage.
+
+## USB, UART allocation
+
+Put the Linux console to a UART (not USB). Then the single USB port can serve the mic board in normal use and only be needed for flashing, and neither job needs extra ICs.
+- UART0 on GPIO14/15 as the Linux console. This is standard on both CM4 and CM5.
+- SSH and Foxglove over Wi-Fi. A cable to a moving robot is awkward anyway.
+- Flashing eMMC, if available (rpiboot): Has to stay on USB; there's no UART alternative. But it's only needed for eMMC modules, rarely, and only while the robot isn't running.
+  - The two remaining USB jobs never happen at the same time. For flashing, the CM4 acts as a USB device to your PC. In normal running, it acts as the host for the mic board. So they can share one port.
+
+Proposed design
+- UART debug header. Use the same 3-pin JST-SH pinout as the Pi 5's debug UART connector. Then the official Raspberry Pi Debug Probe, or any 3.3 V USB-to-serial adapter, plugs straight in. It's free apart from the connector.
+  - If the STM32 link currently uses UART0, move it. The CM4 has UART2–5 available through device-tree overlays, so there are spares.
+- One internal USB header, for example a 4-pin JST-GH, wired to the CM4's USB 2.0 pins.
+  - Normal use: the mic board plugs in here. Or makers can plug in a USB hub, a USB stick, or a USB-audio or ReSpeaker-style array; it's their choice.
+  - Flashing: unplug the mic board, set the boot jumper (nRPIBOOT), and connect a JST-GH-to-USB-A adapter cable to the PC.
+  - Power (VBUS): feed the header's 5 V from the carrier through a polyfuse. Leave VBUS unconnected in the flashing adapter cable so the PC and the robot never feed power into each other; the robot powers itself while flashing. It's worth checking the CM4 datasheet for whether `rpiboot` needs to sense VBUS.
+- Host mode on CM4: the CM4's USB port is off by default. Add `[cm4]` then `otg_mode=1` in `config.txt`. That turns it on in host mode using the Pi's XHCI controller, which handles USB audio better than the older `dwc2` controller. The boot ROM still enters flashing mode when the nRPIBOOT jumper is set.
+- CM5: use the same header and the same mic board, so there's one design for both modules. The CM5's extra USB 3 ports stay free for whatever makers want.
+- The mic board is USB full-speed (12 Mbit/s), which puts little load on the port.
+
 ## TODO
 
 | Type | Qty | Spec |

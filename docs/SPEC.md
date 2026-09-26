@@ -395,6 +395,23 @@ How to drive
 - 2-pin connector "1.25mm Y" per spec, exact model unclear
   - not Molex PicoBlade 1.25mm, not JST GH 1.25mm
 
+## Audio IC
+
+I2S DAC MAX98357AETE_T C910544 TQFP is expensive at $0.88 100pcs, has a built-in speaker driver.
+NS4168 C910588 $0.47 is a MAX98357AETE_T clone, 7K+ stock, except in a different package (ESOP).
+That happens to be advantageous because ESOP is better than TQFP for bring-up and DIY hacking.
+
+Claude says:
+- NS4168 works the same way as the MAX98357A: I²S in, mono class-D out, driving the speaker directly.
+- Specs: 3.0–5.5 V supply, 2.5 W into 4 Ω at 5 V, 8–96 kHz sample rates. It has a CTRL pin that picks the left or right channel and also acts as shutdown.
+- No MCLK needed. This matters because the Pi's I²S port can't output an MCLK; the MAX98357A was chosen for the same reason.
+- Linux: like the MAX98357A, it has no control interface. The existing Raspberry Pi `max98357a` overlay drives any chip like this, so the software stays the same on CM4 and CM5.
+- Check the CTRL-pin voltage levels against the datasheet and strap it for the left channel or the (L+R)/2 mix; either is fine for mono voice prompts.
+- Power: run the amp from the 5 V rail, with 10–22 µF bulk plus 100 nF right at the power pin. Peak current into a 4 Ω, 2–3 W speaker is under 1 A.
+- EMI: the outputs switch at high frequency with no filter. Keep speaker traces short, or twisted if they go through wires, and away from the IR receivers and the LiDAR data lines. Leave pads for ferrite beads on the speaker leads in case the sim or bench test shows interference.
+- Shutdown: wire the CTRL pin to a GPIO so you can power the amp down when idle. That saves the ~13 mA quiescent current and avoids pops at boot.
+- Pins: CM4 and CM5 both use GPIO18 (BCLK), GPIO19 (LRCK) and GPIO21 (DOUT). I²S is the one audio path both modules share. PWM audio on GPIO12/13 is cheaper on CM4, but I believe the CM5 doesn't support it, so it doesn't suit a carrier for both.
+
 ## TODO
 
 | Type | Qty | Spec |

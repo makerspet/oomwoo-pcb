@@ -1571,12 +1571,6 @@
 		(uuid "127ad42d-7357-4cc6-8874-a2eefc18cee8")
 	)
 	(junction
-		(at 274.32 251.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3b80e349-ea35-44b1-a98a-3cb129b21d35")
-	)
-	(junction
 		(at 253.365 174.625)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1642,7 +1636,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.155 251.46) (xy 274.32 251.46)
+			(xy 224.155 251.46) (xy 295.91 251.46)
 		)
 		(stroke
 			(width 0)
@@ -1802,16 +1796,6 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 251.46) (xy 274.32 269.875)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6145f72-0a42-469d-820f-651d9d4e3a29")
-	)
-	(wire
-		(pts
 			(xy 282.575 192.405) (xy 253.365 192.405)
 		)
 		(stroke
@@ -1879,16 +1863,6 @@
 			(type default)
 		)
 		(uuid "ebab49ec-3ea0-4e75-ae0e-f98aa850e876")
-	)
-	(wire
-		(pts
-			(xy 274.32 251.46) (xy 295.91 251.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "edaee83d-8a5d-4e2b-a278-eee68b7ab0fd")
 	)
 	(wire
 		(pts
@@ -2865,80 +2839,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
 					(reference "LIDAR2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 274.32 269.875 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "42c6d381-4aaa-4abc-ac29-2f5a9cecda23")
-		(property "Reference" "#PWR0653"
-			(at 274.32 269.875 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 274.32 276.225 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 274.32 269.875 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 269.875 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 274.32 269.875 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "d36fd7de-2031-477e-b231-79d6af41319f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "#PWR0653")
 					(unit 1)
 				)
 			)

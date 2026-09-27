@@ -160,6 +160,195 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_US"
+				(at -2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.016 -0.254 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor, US symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_US_0_1"
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_US_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:STWD100NYWY3F"
 			(pin_names
 				(offset 1.016)
@@ -618,6 +807,302 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:WG3401"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 0 7.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "WG3401"
+				(at 0 -7.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:WG3401"
+				(at 1.27 -16.51 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2310101751_Wild-Goose-WG3401_C7541474.pdf"
+				(at 1.27 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+150℃ 1 P-Channel 1.3V 1.56W 20pF 30V 4A 50mΩ@10V 515pF 55pF 6.4nC@4.5V SOT-23 MOSFETs ROHS"
+				(at 1.27 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C7541474"
+				(at 7.62 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Wild Goose"
+				(at -11.43 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Part" "WG3401"
+				(at 7.62 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "C7541474 SOT-23-3_L2.9-W1.4-P1.91-LS2.6-BR WG3401 Wild Goose"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "WG3401_0_1"
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -3.048 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 2.286) (xy -3.048 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.286) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.778) (xy 0 1.778) (xy 0 2.54) (xy 2.54 2.54) (xy 2.54 0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.016 -0.508) (xy -1.016 0.508) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 0 0) (xy 0 -2.54) (xy 2.54 -2.54) (xy 2.54 -0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.508) (xy -2.54 0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.286) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.778) (xy -2.54 -1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.889) (xy 2.032 -0.635) (xy 3.048 -0.635) (xy 3.556 -0.381)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -0.635) (xy 3.302 0.635) (xy 1.778 0.635) (xy 2.54 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin unspecified line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "oomwoo-kicad-altium-import:GND_POWER_GROUND"
 			(power global)
 			(exclude_from_sim no)
@@ -774,6 +1259,30 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "RC CHARGE-PUMP WATCHDOG (motor power only; output not wired yet)"
+		(exclude_from_sim no)
+		(at 259.08 252.73 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+				(thickness 0.3556)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "b6f072d9-85d7-444d-954a-5f466b322350")
+	)
+	(text "Firmware toggles WDI in software (50-1000 Hz, ~50% duty) only while the control loop is healthy.\nNever drive WDI from a timer/PWM: a timer keeps running after the CPU hangs.\nEach falling edge on WDI pulls the Q7001 gate low through C7001 and tops up C7002 via R7003.\nWD_OK ~2.7 V while toggling. WDI stuck high, low or floating: <1 V in ~100 ms, <0.4 V in ~190 ms\n(10 uF nominal; DC-bias derating shortens this). WD_OK starts at 0 V at power-up (fail-safe).\nWD_OK drives N-FET gates only (14.4 V rail switch, water pump, LiDAR incl. laser): no resistive loads.\nWDI pin: high-Z at reset, no pull-down. All parts reuse existing BOM lines."
+		(exclude_from_sim no)
+		(at 259.08 320.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4676a50-1e11-4bb3-b61e-385409f401e5")
+	)
 	(junction
 		(at 314.325 224.79)
 		(diameter 0)
@@ -781,16 +1290,34 @@
 		(uuid "20c44c9b-3b6f-4be6-8218-f703f01b873b")
 	)
 	(junction
+		(at 292.1 257.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ae9d6c0-ac8c-4e23-a9ee-cf1db8ce37f2")
+	)
+	(junction
 		(at 314.325 204.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8aaa5697-ff88-49b7-8536-387a578e8acd")
+		(uuid "5274c094-e25f-4086-99d6-afd523bab3b8")
 	)
 	(junction
-		(at 319.405 204.47)
+		(at 284.48 270.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e6b185d6-2798-4a44-8b61-6cc6d1afefcb")
+		(uuid "b5c78eef-575f-4d0f-9e00-fcd0c1d3f792")
+	)
+	(junction
+		(at 314.96 288.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd3faccd-b36d-490f-b3e4-bcbe3140c506")
+	)
+	(junction
+		(at 299.72 288.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e68a56ab-41c4-4759-9bd5-21197b01608b")
 	)
 	(wire
 		(pts
@@ -804,13 +1331,13 @@
 	)
 	(wire
 		(pts
-			(xy 319.405 204.47) (xy 319.405 224.79)
+			(xy 314.325 204.47) (xy 319.405 204.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1d63a194-0757-4b9a-abc0-f8567a38f0b3")
+		(uuid "1a3e6def-7c60-4283-bbc6-3207247974a2")
 	)
 	(wire
 		(pts
@@ -821,6 +1348,76 @@
 			(type default)
 		)
 		(uuid "1d7aefac-40f3-420e-b090-934e4143ed41")
+	)
+	(wire
+		(pts
+			(xy 280.67 270.51) (xy 284.48 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ca3a728-c796-465d-8d21-6d3bfc916b6d")
+	)
+	(wire
+		(pts
+			(xy 292.1 284.48) (xy 292.1 288.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40613a59-6b40-48ca-bc05-fbf33b300c34")
+	)
+	(wire
+		(pts
+			(xy 292.1 275.59) (xy 292.1 276.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49055147-2e10-4abd-9710-e927f954e614")
+	)
+	(wire
+		(pts
+			(xy 259.08 270.51) (xy 262.89 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c09df8a-f252-4fbb-b46b-aeda768eb8a7")
+	)
+	(wire
+		(pts
+			(xy 318.135 224.79) (xy 314.325 224.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cff1253-34a9-4b11-9e8d-acbdfb66c5fe")
+	)
+	(wire
+		(pts
+			(xy 270.51 270.51) (xy 273.05 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51e81665-76b3-4418-993b-3489ad3ed18e")
+	)
+	(wire
+		(pts
+			(xy 284.48 265.43) (xy 284.48 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53c6ea03-faed-40e9-9f43-0b920d2d1839")
 	)
 	(wire
 		(pts
@@ -841,6 +1438,16 @@
 			(type default)
 		)
 		(uuid "622bfa9b-3e10-425d-9cd9-737e5d0e782e")
+	)
+	(wire
+		(pts
+			(xy 292.1 288.29) (xy 322.58 288.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "633b348e-8445-4b31-92fb-6c5e3a4cb2c9")
 	)
 	(wire
 		(pts
@@ -870,7 +1477,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "850859a8-dd3b-49ee-8ced-061ed31e93b1")
+		(uuid "8b4a8b2b-da83-4404-9589-86026bed864c")
 	)
 	(wire
 		(pts
@@ -884,13 +1491,13 @@
 	)
 	(wire
 		(pts
-			(xy 314.325 204.47) (xy 319.405 204.47)
+			(xy 318.135 201.93) (xy 318.135 224.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "97ae928a-5ee1-4924-9d9d-ea0f9571ef53")
+		(uuid "9f66ff09-af4a-4751-8b73-a809cf92e5ca")
 	)
 	(wire
 		(pts
@@ -914,6 +1521,16 @@
 	)
 	(wire
 		(pts
+			(xy 319.405 201.93) (xy 318.135 201.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8461c38-bb95-4f75-885e-7bf01bc1f708")
+	)
+	(wire
+		(pts
 			(xy 304.8 199.39) (xy 319.405 199.39)
 		)
 		(stroke
@@ -924,13 +1541,13 @@
 	)
 	(wire
 		(pts
-			(xy 319.405 201.93) (xy 319.405 204.47)
+			(xy 284.48 257.81) (xy 297.18 257.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cfab5c6f-b2d4-4a4f-ad8d-c70f0af1ae40")
+		(uuid "cf134e27-df8b-477d-ac4d-5e5ef6144314")
 	)
 	(wire
 		(pts
@@ -941,16 +1558,6 @@
 			(type default)
 		)
 		(uuid "cfb4fc86-3aa3-4fe3-ab90-e94794d588a1")
-	)
-	(wire
-		(pts
-			(xy 319.405 224.79) (xy 314.325 224.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d22fdb0e-746f-4204-86d5-18926b4dcdde")
 	)
 	(wire
 		(pts
@@ -971,6 +1578,40 @@
 			(type default)
 		)
 		(uuid "f8145c01-0d52-4e74-ab30-02a274f40bf7")
+	)
+	(wire
+		(pts
+			(xy 292.1 257.81) (xy 292.1 265.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff0e7884-669c-4c38-bc30-42227a6d27be")
+	)
+	(global_label "VCC-3V3"
+		(shape input)
+		(at 297.18 257.81 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "086b5dea-cf44-4353-9e71-c9c35205a7dd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 297.18 246.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(global_label "VCC-3V3"
 		(shape input)
@@ -1053,6 +1694,17 @@
 		)
 		(uuid "6cb3d8e4-2a86-41c1-9a0a-93ece657f07a")
 	)
+	(hierarchical_label "WD_OK"
+		(shape output)
+		(at 322.58 288.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8d9e1dbf-27cf-4bff-b3b2-04402f4fcee0")
+	)
 	(hierarchical_label "DIS2"
 		(shape input)
 		(at 342.9 201.93 0)
@@ -1074,6 +1726,109 @@
 			(justify right)
 		)
 		(uuid "cfb93ed0-c8ef-4e4b-83a0-735b21ac67e9")
+	)
+	(hierarchical_label "WDI"
+		(shape input)
+		(at 259.08 270.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ed484447-e8b7-4e5e-b7a9-b35603e5e8dc")
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 284.48 261.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "039f4abc-cff8-4c8d-8333-63c3c4e9a5e4")
+		(property "Reference" "R7002"
+			(at 276.86 260.985 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 276.86 263.525 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 284.48 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 284.48 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Gate pull-up: P-FET off unless WDI toggles"
+			(at 284.48 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 284.48 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cb53341f-c13f-404e-b275-a3181a2832a0")
+		)
+		(pin "2"
+			(uuid "7abada26-ee77-4fa5-9007-260cb61c3f4a")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "R7002")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -1586,6 +2341,268 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 292.1 280.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1c9421e1-25c9-447b-8f03-f064dc9c30e5")
+		(property "Reference" "R7003"
+			(at 294.64 280.035 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 294.64 282.575 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 292.1 280.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 292.1 280.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Charge current limit into C7002"
+			(at 292.1 280.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907113"
+			(at 292.1 280.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b08cf5b-23aa-4c83-a51e-a9d590fac7b3")
+		)
+		(pin "2"
+			(uuid "e6106197-3d2e-4b54-8e01-888499f8407e")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "R7003")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 314.96 295.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "39f7913d-7de9-46e1-9643-8b76c932c341")
+		(property "Reference" "#PWR07002"
+			(at 314.96 302.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 314.96 302.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 314.96 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 314.96 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 314.96 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "6ef944f5-779f-4a68-92a4-6ee6f06ccbb6")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "#PWR07002")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 299.72 292.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "570e1c4d-7c72-42c6-b1d3-547ceb62df6e")
+		(property "Reference" "C7002"
+			(at 301.625 291.465 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF/6.3V"
+			(at 301.625 294.005 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 299.72 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Hold capacitor: sets timeout with R7004"
+			(at 299.72 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1691"
+			(at 299.72 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84ae629d-7341-4d14-be78-703fcc91591a")
+		)
+		(pin "2"
+			(uuid "e47af59a-8bbb-49b8-a950-7d73ee7d676f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "C7002")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 271.78 224.79 0)
 		(mirror y)
@@ -1655,6 +2672,98 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
 					(reference "#PWR0672")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 276.86 270.51 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "64e2f857-096f-4a90-bff9-aa329a30ef02")
+		(property "Reference" "C7001"
+			(at 273.685 274.32 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF/6.3V"
+			(at 273.685 276.225 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 276.86 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.86 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "AC coupling: only WDI edges reach the P-FET gate"
+			(at 276.86 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5356672"
+			(at 276.86 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d7170fb-99f0-4435-8f08-98cfce241b45")
+		)
+		(pin "2"
+			(uuid "f9af0510-20db-49c9-a5a7-8ea546804ec0")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "C7001")
 					(unit 1)
 				)
 			)
@@ -1779,6 +2888,180 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:WG3401")
+		(at 292.1 270.51 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7575a57c-6a0a-47aa-b99b-e0c3b896185c")
+		(property "Reference" "Q7001"
+			(at 298.45 269.875 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "WG3401"
+			(at 298.45 272.415 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:WG3401"
+			(at 292.1 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2310101751_Wild-Goose-WG3401_C7541474.pdf"
+			(at 292.1 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "P-FET pump switch"
+			(at 292.1 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7541474"
+			(at 292.1 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32fecf8b-98aa-4cda-8d14-3d4b0a843c9f")
+		)
+		(pin "2"
+			(uuid "ee58841b-7c2d-4e73-b357-ca1ffd81f4c9")
+		)
+		(pin "3"
+			(uuid "93f5d4ff-bbc3-4eaa-a03e-7944588fdf7d")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "Q7001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 299.72 295.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "757b3d1b-a14b-4988-9604-2178a161a42e")
+		(property "Reference" "#PWR07001"
+			(at 299.72 302.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 299.72 302.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 299.72 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 299.72 295.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "72e57920-e88e-4ec8-995e-567e99691ada")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "#PWR07001")
 					(unit 1)
 				)
 			)
@@ -2295,6 +3578,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 314.96 292.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9b89989e-16ff-4293-aa37-a8b586cd5e4a")
+		(property "Reference" "R7004"
+			(at 317.5 291.465 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 317.5 294.005 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 314.96 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 314.96 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bleed: WD_OK decays to 0 V when WDI stops toggling"
+			(at 314.96 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98220"
+			(at 314.96 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1c026aed-fd40-4368-b53e-0a87633aa386")
+		)
+		(pin "2"
+			(uuid "7356f907-d179-473f-9fdf-ffc17452f045")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "R7004")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 306.705 224.79 0)
 		(mirror y)
@@ -2638,6 +4013,98 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 266.7 270.51 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fbc56831-99a7-4d37-a52a-3bd48ba79644")
+		(property "Reference" "R7001"
+			(at 263.525 274.32 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 263.525 276.225 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 266.7 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Series R: limits GPIO edge current into C7001"
+			(at 266.7 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907113"
+			(at 266.7 270.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "54b8fe3e-1bcb-4499-a4cb-71136e5e6931")
+		)
+		(pin "2"
+			(uuid "b7e601b4-5bac-4f99-844a-3c159654aec2")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
+					(reference "R7001")
 					(unit 1)
 				)
 			)

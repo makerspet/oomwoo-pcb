@@ -292,12 +292,6 @@
 		(uuid "2aa62d04-b058-41ea-9bf5-23dc4594714d")
 	)
 	(junction
-		(at 274.955 205.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "38c81637-59c1-43aa-98ee-118eb1c5f995")
-	)
-	(junction
 		(at 285.75 203.835)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1059,16 +1053,6 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 120.65) (xy 443.865 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "710ff7d9-ebea-406a-9394-63d609880b34")
-	)
-	(wire
-		(pts
 			(xy 179.07 42.545) (xy 210.82 42.545)
 		)
 		(stroke
@@ -1126,6 +1110,16 @@
 			(type default)
 		)
 		(uuid "7bb7b4b8-51d5-4726-b15d-bc9485da03b9")
+	)
+	(wire
+		(pts
+			(xy 274.955 275.59) (xy 274.955 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ca0bfe2-10eb-455a-9081-046d4cf326cd")
 	)
 	(wire
 		(pts
@@ -1529,16 +1523,6 @@
 	)
 	(wire
 		(pts
-			(xy 274.955 205.74) (xy 274.955 275.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6a0a8f8-9a7f-4ebe-bbc8-07b2f41af81d")
-	)
-	(wire
-		(pts
 			(xy 394.97 254.635) (xy 443.865 254.635)
 		)
 		(stroke
@@ -1746,6 +1730,16 @@
 			(type default)
 		)
 		(uuid "d32eac6d-1328-4192-a2f7-311e40cb8193")
+	)
+	(wire
+		(pts
+			(xy 266.7 120.65) (xy 270.51 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5d8c138-9002-4c0b-b499-3e8fc77fa25b")
 	)
 	(wire
 		(pts
@@ -2107,6 +2101,26 @@
 		)
 		(uuid "5bce4d68-d95f-43f1-9f34-31746d1d93cf")
 	)
+	(label "~{VM-VBAT-EN}"
+		(at 270.51 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e66d24ac-82e0-43e1-b654-6423d6174025")
+	)
+	(label "~{VM-VBAT-EN}"
+		(at 274.955 270.51 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea18f5b0-6cf2-4637-8300-143087adbb18")
+	)
 	(sheet
 		(at 306.07 275.336)
 		(size 88.9 99.949)
@@ -2462,7 +2476,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "BMS-SYSTEM-POWER.kicad_sch"
+		(property "Sheetfile" "SYSTEM-POWER.kicad_sch"
 			(at 240.03 308.5596 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2513,7 +2527,7 @@
 				(justify right)
 			)
 		)
-		(pin "V-MOTORS-EN" input
+		(pin "~{VM-VBAT-EN}" input
 			(at 274.955 275.59 90)
 			(uuid "dffed11f-e15f-4636-abb1-969f2078f2a0")
 			(effects
@@ -3635,7 +3649,7 @@
 				(justify right)
 			)
 		)
-		(pin "CARPET-SENSOR-HI" output
+		(pin "~{VM-VBAT-EN}" output
 			(at 266.7 120.65 0)
 			(uuid "d31174f3-f07b-41b3-b581-a8ecaa26fbf9")
 			(effects
@@ -4227,7 +4241,7 @@
 			(color 128 0 0 1)
 		)
 		(fill
-			(color 128 255 128 1)
+			(color 0 72 0 1)
 		)
 		(uuid "994d55da-8e8c-4fe8-9877-f2e4533982e7")
 		(property "Sheetname" "LiDAR"
@@ -4242,7 +4256,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "LiDAR .kicad_sch"
+		(property "Sheetfile" "LiDAR.kicad_sch"
 			(at 443.865 167.5896 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4314,7 +4328,7 @@
 			(type solid)
 		)
 		(fill
-			(color 128 255 128 1)
+			(color 0 72 0 1)
 		)
 		(uuid "b8feb78a-8098-4bc8-81b4-34551e1a6113")
 		(property "Sheetname" "CARPET-SENSOR"
@@ -4342,16 +4356,6 @@
 		(pin "ECHO_ADC" output
 			(at 443.865 118.11 180)
 			(uuid "9853c217-21b8-4b96-8cf9-2172cccc4997")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "HI" input
-			(at 443.865 120.65 180)
-			(uuid "58717ee1-3b29-44ca-bbf6-94b118873723")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4404,7 +4408,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Front Sensors.kicad_sch"
+		(property "Sheetfile" "Front-Sensors.kicad_sch"
 			(at 443.865 212.6746 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5582,7 +5586,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "WATER-PUMP .kicad_sch"
+		(property "Sheetfile" "WATER-PUMP.kicad_sch"
 			(at 39.37 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)

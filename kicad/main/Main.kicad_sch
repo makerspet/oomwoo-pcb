@@ -285,24 +285,6 @@
 		)
 		(uuid "ed9abd8e-7151-41fa-b724-9b34df67d91d")
 	)
-	(junction
-		(at 288.925 200.025)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2aa62d04-b058-41ea-9bf5-23dc4594714d")
-	)
-	(junction
-		(at 285.75 203.835)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "781f1820-8e40-4427-b02b-47202e45c09f")
-	)
-	(junction
-		(at 274.955 144.145)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ba877fbb-7349-41b6-ad20-786c1c59d4c2")
-	)
 	(no_connect
 		(at 394.97 219.075)
 		(uuid "99513325-2d79-4e10-8b77-f02573e1acae")
@@ -410,16 +392,6 @@
 			(type default)
 		)
 		(uuid "0fc86873-19db-4bb7-abb2-754ef3901cf3")
-	)
-	(wire
-		(pts
-			(xy 285.75 203.835) (xy 285.75 137.795)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10cd710b-5604-4812-995d-2cd371d21135")
 	)
 	(wire
 		(pts
@@ -703,26 +675,6 @@
 	)
 	(wire
 		(pts
-			(xy 274.955 144.145) (xy 443.865 144.145)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "316c2710-abe2-4d52-a1f0-41ba8e780443")
-	)
-	(wire
-		(pts
-			(xy 288.925 200.025) (xy 288.925 140.335)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3667ec7b-40d5-4c85-b882-c5df87bc55ff")
-	)
-	(wire
-		(pts
 			(xy 394.97 347.98) (xy 443.865 347.98)
 		)
 		(stroke
@@ -810,16 +762,6 @@
 			(type default)
 		)
 		(uuid "42f073c2-4cc8-4892-aa18-987217026af1")
-	)
-	(wire
-		(pts
-			(xy 285.75 203.835) (xy 306.07 203.835)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43b3cef5-872f-47cb-8c79-ac56d419f3be")
 	)
 	(wire
 		(pts
@@ -1133,16 +1075,6 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 135.255) (xy 443.865 135.255)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d31f31f-1f26-4b37-8cf0-c4430561e32b")
-	)
-	(wire
-		(pts
 			(xy 220.345 234.315) (xy 220.345 346.71)
 		)
 		(stroke
@@ -1150,16 +1082,6 @@
 			(type default)
 		)
 		(uuid "7d815a89-70ed-476d-a568-51a8f9888a6a")
-	)
-	(wire
-		(pts
-			(xy 285.75 137.795) (xy 443.865 137.795)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8238352b-00a2-4af7-9e00-57d1075e9eb9")
 	)
 	(wire
 		(pts
@@ -1223,7 +1145,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 203.835) (xy 285.75 203.835)
+			(xy 266.7 203.835) (xy 306.07 203.835)
 		)
 		(stroke
 			(width 0)
@@ -1380,16 +1302,6 @@
 			(type default)
 		)
 		(uuid "a043c407-da5f-4ca4-950c-880906f6c89d")
-	)
-	(wire
-		(pts
-			(xy 288.925 200.025) (xy 306.07 200.025)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a0ae257d-3b3f-4125-b557-81dcaa9ec4e3")
 	)
 	(wire
 		(pts
@@ -1570,16 +1482,6 @@
 			(type default)
 		)
 		(uuid "be82bf85-45b8-4d6f-be45-86c7bf70edfb")
-	)
-	(wire
-		(pts
-			(xy 288.925 140.335) (xy 443.865 140.335)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf0c8357-619e-4ec4-a276-66aa91b7ae00")
 	)
 	(wire
 		(pts
@@ -1993,7 +1895,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 200.025) (xy 288.925 200.025)
+			(xy 266.7 200.025) (xy 306.07 200.025)
 		)
 		(stroke
 			(width 0)
@@ -3609,7 +3511,7 @@
 				(justify right)
 			)
 		)
-		(pin "WDO" output
+		(pin "WDI" output
 			(at 266.7 146.685 0)
 			(uuid "ca86ebaf-2767-4251-994b-920d79100c0b")
 			(effects
@@ -3849,16 +3751,6 @@
 				(justify right)
 			)
 		)
-		(pin "JTAG_PRESENCE" output
-			(at 266.7 135.255 0)
-			(uuid "faa7d850-1e46-4d32-b82e-174c47bd409e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
@@ -4066,7 +3958,7 @@
 			(type solid)
 		)
 		(fill
-			(color 128 255 128 1)
+			(color 0 72 0 1)
 		)
 		(uuid "7f043eef-851b-4fc7-bc1b-c170004bfbd9")
 		(property "Sheetname" "WATCHDOG"
@@ -4094,46 +3986,6 @@
 		(pin "WDI" input
 			(at 443.865 146.685 180)
 			(uuid "4d0937f0-27a8-4d48-8ae4-8950b325b5ed")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "~{PULSE_OUT}" output
-			(at 443.865 144.145 180)
-			(uuid "8ce373d7-fb45-4e5d-be12-025d6c8b29e8")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "DIS1" input
-			(at 443.865 135.255 180)
-			(uuid "5624d2dc-5189-403b-bb98-549a446b89bf")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "DIS2" input
-			(at 443.865 137.795 180)
-			(uuid "da061508-c093-4c16-b4fe-cf879ef46bf2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "DIS3" input
-			(at 443.865 140.335 180)
-			(uuid "1e691530-0dfe-4a4a-86bf-04b6da860675")
 			(effects
 				(font
 					(size 1.27 1.27)

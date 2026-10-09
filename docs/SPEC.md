@@ -189,7 +189,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   </tr>
 
   <tr>
-    <td>Carpet sensor</td><td>≥12V, 14.4V?</td>
+    <td>Carpet sensor</td><td>14.4V (VUS boost rail)</td>
     <td>290KHz piezo ultrasonic, <a href="https://htwsensor.en.made-in-china.com/product/HfMYgjwoZxVh/China-300kHz-Carpet-Material-Recognition-Sensor-for-Robotic-Vacuum-Cleaner-Ultraosinc-Sensor.html">likely this one</a>,
       JST ZH 2-pin housing; <a href="https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor">sourcing notes</a>
       pin 1 white, 2 black (driven by AC, polarity doesn't matter?)
@@ -208,9 +208,10 @@ Mop arm actuator - Roborock FlexiArm; later replace with own design
 
 ## Compute + Camera
 
-- 2x 15-pin ArduCam-style connectors for OV5647
-- TODO add USB to I/O board
-- provision an M.2 slot, route a PICe lane, populate later - to experiment with NPU accelerator(s) like Hailo
+- Camera (changed Oct 2026): the camera moves off the Compute Module to the STM32 - one parallel-interface (DVP) RGB module, so it also works when an old smartphone is the compute. See [Front sensors module board](#front-sensors-module-board). **Open:** keep the 15-pin MIPI connectors as a Pi-only option, or drop them? The schematic's MIPI-CAMERA sheet predates this change.
+- internal USB 2.0 header (JST GH 4-pin, 0.5 A polyfuse, USBLC6 ESD) for the optional mic-array board or `rpiboot`; see [USB, UART allocation](#usb-uart-allocation)
+- M.2 slot provisioned, PCIe lane routed, with its own 3.3 V buck (VCC3V3_M2, enabled by the CM via PCIE_PWR_EN) - to experiment with NPU accelerator(s) like Hailo
+- SD card slot, powered through an RT9742 load switch (SD_PWR_ON)
 
 Undecided TODO 
 - USB-C 3.0+, CM5 only - to experiment with accelerator(s) like Coral TPU
@@ -219,6 +220,13 @@ Undecided TODO
 
 ### Robot
 
+Current schematic (2026-09):
+- charging input is 24 V DC, from the dock contacts (CONTACT_CHGR) or a DC-005 barrel jack, into an SLM6900 buck charger configured for 4S (about 2.2-2.6 A). The battery NTC goes straight to the charger, so over-temperature cut-off is in hardware
+- the system rails run from the battery (BAT-VCC), not from a power-path SYS rail
+- USB-C is a 5 V *output* for the phone-as-compute option (AP64501 buck enabled by PWR_EN, through a TMI6240 current-limited switch), with D+/D- to the STM32 USB (PA11/PA12). **TODO:** CC1/CC2 are unconnected; a phone on a C-to-C cable will neither charge nor enumerate until CC is configured (Rp to charge, Rd for the phone-as-host data mode)
+- the USB-C PD input and power-path charger below are the original plan, not in the current schematic
+
+Original plan:
 - the robot has 2 power inputs: USB-C and dock
   - robot receives 20-24V fixed DC from the dock
   - USB-C power use PD, request 20-24 V minimum (to step it down to 4S battery)
@@ -233,7 +241,7 @@ Undecided TODO
   - ~65–70 W total
 - cap charge at ~0.5C regardless of charging adapter power
 - MCU reset drops everything to a safe state, so motors are off during reset, firmware upload and firmware crash
-  - watchdog
+  - watchdog: see [Safety and power rails](#safety-and-power-rails)
 
 ### Dock
 
@@ -308,8 +316,8 @@ Net spec
 ## How to drive carpet sensor
 
 - 290KHz ultrasonic piezoelectric analog
-- ≥12V DC stabilized per spec (not 4S battery directly)
-  - make DC voltage configurable using a resistive divider
+- 14.4 V DC stabilized (VUS, MT3608 boost from 5 V; not the 4S battery directly)
+  - DC voltage set by the MT3608 feedback divider: VUS = 0.6 V x (1 + R160/R159) = 0.6 x (1 + 232k/10k) ≈ 14.5 V
   - current consumption - calculate 300KHz driving 1300±20% pF per sensor spec
   - make it withstand shorts
 - connect sensor analog I/O to MCU ADC input
@@ -319,14 +327,20 @@ Net spec
 - (firmware) bias the MCU internal op-amp to Vref/2 using MCU internal DAC
 - (firmware) configure ADC pre-amp gain, PGA mode (op-amp bandwidth is 10MHz)
 - (firmware) configure op-amp to output signal to internal ADC channel
-- drive sensor analog I/O using a FET half-bridge
-- drive the half-bridge by MCU, one GPIO for high side, one GPIO for low side
-- add pull-up/down to FET inputs, so the bridge is off when MCU GPIO is tristated
-- (firmware) drive the sensor for a brief while
-- (firmware) tristate both FETs
-- (firmware) measure using ADC, calculate return amplitude
+- drive sensor analog I/O with one low-side N-FET (Q18, AO3400) and a 330 Ω 1206 pull-up (R7011) from VUS, AC-coupled to the piezo through C18
+  - the earlier P/N half-bridge was dropped: its high side turned off through a 100k pull-up, far too slow at 290 kHz, so both FETs would conduct every cycle (shoot-through)
+  - one GPIO (LO) drives the gate through R60 (10 Ω); R7012 (100k) pulls the gate low so the FET is off while the MCU is in reset or being flashed
+  - the freed HI GPIO now enables the motor rail (~VM-VBAT-EN)
+- (firmware) drive the sensor in short bursts only: LO held high puts ~0.63 W into R7011
+- (firmware) release LO (low), then measure using ADC, calculate return amplitude
+- TODO get the sensor vendor's reference driver circuit to confirm drive voltage and pull-up value
 
 ## LiDAR pinouts
+
+On the main board (current schematic):
+- LIDAR1: JST GH 1.25 mm socket for the LDROBOT LD14P; MOTOR-CTRL through a 1k series resistor (R7008) so a hung MCU can't back-power an unpowered LiDAR
+- LIDAR2: 0.1" 1x4 male pin header (XFCN PZ254V-11-04P) for other 2D LiDARs via jumper wires: 1 LiDAR RX, 2 GND, 3 MOT- (low-side switched by Q20), 4 VM-5V-LIDAR
+- both are powered from VM-5V-LIDAR, which cuts the whole LiDAR (laser included), not just its motor; see [Safety and power rails](#safety-and-power-rails)
 
 ```
 X-WPFTB-V2.6.2 PCB marking - JST GH 1.25mm 4-pin shrouded housing
@@ -340,17 +354,26 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 
 ## Front sensors module board
 
-- 2x VL53L7CH (or VL53L7CX) 60° horizontal FoV each
-  - each turned 30° left, right to cover 120° horizontal FoV
-- 2x OV5647, 5M wide-angle for stereo depth + object recognition
-  - off-the-shelf breakout boards for now
-  - possibly $2 imaging ICs later
-- NIR illumination LEDs with a projection pattern
+- 2x VL53L7CH (or VL53L7CX), 90° diagonal = ~63° horizontal FoV each
+  - each turned ~30° left, right to cover ~126° horizontal FoV
+  - obstacle *detection*
+- 1x RGB camera, parallel (DVP) interface, wide-angle, pitched down (changed Oct 2026 from
+  2x OV5647 NIR stereo with structured illumination)
+  - images the floor - dirty or clean, and cleaning results - and obstacles ahead, up to about
+    the robot's height (privacy)
+  - obstacle *recognition*; colour helps, and RGB modules are cheaper with more lens choice than NIR
+  - non-MIPI and low bandwidth, read by the STM32, so it works with both a Pi CM and an old
+    smartphone over USB CDC; this rules out full ToF cameras, stereo depth and structured light
+  - **Open question:** the STM32G473 has **no DCMI** (camera interface) peripheral. Options:
+    GPIO capture with timer-triggered DMA at low resolution; a module with its own SPI/FIFO
+    buffer (ArduCAM-style); or a small bridge MCU with a camera interface
+- white torchlight LEDs for the camera (was NIR illumination with a projection pattern); many
+  consumer robots use white, e.g. Dreame L60 Ultra PE and Roomba j7
 - breaks into multiple PCBs using holes
   - central - 2x TSOP38238 (separated by a baffle) for dock homing
   - left - VL53L7CH pointed 30° left
   - right - VL53L7CH pointed 30° right
-  - stereo depth camera 2x OV5647 with NIR illumination LEDs
+  - RGB camera with white torchlight LEDs
 
 ## Side sensors module board
 
@@ -371,7 +394,9 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 ## Water pump
 
 - 5V DC motor, peristaltic; ~0.6A rated, 1A max
-- make DC settable by replacing resistors
+- powered from VCC-5V-REG through Q8 (AO3401 high-side switch) as rail VM-5V-WATER-PUMP; on only while WD_OK is high AND WATER-PUMPU-CTRL is low (Q7004)
+- the pump-side voltage is read by the STM32 ADC (WATER-PUMP-SENSE-ADC divider R81/R47)
+- supply is fixed at 5 V (the old "settable by resistors" idea isn't in the schematic)
 
 ## GPIO
 
@@ -379,19 +404,8 @@ Please see the [PCB schematic](https://github.com/makerspet/oomwoo-io-board/tree
 
 TODO before layout/fabrication: confirm whether GPIO entries 36 and 46 are intentionally separate bumper inputs or a duplicate label.
 
-How to drive
-- ≥12V DC stabilized per spec (not 4S battery directly?)
-- connect to MCU ADC input
-  - use STM32G473VCT6 internal op-amp as echo input (AC via a cap)
-  - clamp amplitude to 3.3V (back-to-back clamp diodes, series resistor)
-  - bias the MCU internal op-amp to Vref/2 using MCU internal DAC
-  - configure ADC pre-amp gain, PGA mode (op-amp bandwidth is 10MHz)
-  - configure op-amp to output signal to internal ADC channel
-- FET half-bridge driven by MCU
-  - drive the sensor for a brief while
-  - tristate both FETs
-  - measure using ADC, calculate return amplitude
-  - calibrate return amplitude when docked
+Carpet sensor notes (see [How to drive carpet sensor](#how-to-drive-carpet-sensor) for the driver)
+- calibrate return amplitude when docked
 - 2-pin connector "1.25mm Y" per spec, exact model unclear
   - not Molex PicoBlade 1.25mm, not JST GH 1.25mm
 
@@ -472,9 +486,11 @@ Put the Linux console to a UART (not USB). Then the single USB port can serve th
 - Flashing eMMC, if available (rpiboot): Has to stay on USB; there's no UART alternative. But it's only needed for eMMC modules, rarely, and only while the robot isn't running.
   - The two remaining USB jobs never happen at the same time. For flashing, the CM4 acts as a USB device to your PC. In normal running, it acts as the host for the mic board. So they can share one port.
 
-Proposed design
-- UART debug header. Use the same 3-pin JST-SH pinout as the Pi 5's debug UART connector. Then the official Raspberry Pi Debug Probe, or any 3.3 V USB-to-serial adapter, plugs straight in. It's free apart from the connector.
-  - If the STM32 link currently uses UART0, move it. The CM4 has UART2–5 available through device-tree overlays, so there are spares.
+Design (current schematic)
+- CM console: 0.1" 1x5 header (CM_CONSOLE1), TTL-234X-3V3 cable compatible. (A 3-pin JST-SH like the Pi 5 debug connector was considered and not used.)
+  - The STM32 link uses a separate UART; the CM4 has UART2–5 available through device-tree overlays.
+- STM32 debug: 0.1" 1x5 UART header (STM32_DEBUG1) and a 1.27 mm 2x7 STDC14 header (JTAG1) for an STLINK-V3MINIE. STDC14 pin 3 (T_VCC) is a sense input; pin 11 (GNDDetect) is not connected.
+- The CM reflashes the STM32 itself (STM32 UART bootloader via BOOT0/NRST from CM GPIOs, or SWD over CM GPIOs), so normal firmware updates need no probe.
 - One internal USB header, for example a 4-pin JST-GH, wired to the CM4's USB 2.0 pins.
   - Normal use: the mic board plugs in here. Or makers can plug in a USB hub, a USB stick, or a USB-audio or ReSpeaker-style array; it's their choice.
   - Flashing: unplug the mic board, set the boot jumper (nRPIBOOT), and connect a JST-GH-to-USB-A adapter cable to the PC.
@@ -483,11 +499,57 @@ Proposed design
 - CM5: use the same header and the same mic board, so there's one design for both modules. The CM5's extra USB 3 ports stay free for whatever makers want.
 - The mic board is USB full-speed (12 Mbit/s), which puts little load on the port.
 
+## Safety and power rails
+
+Rule: if the STM32 firmware hangs, is held in reset or is being flashed, every motor, the pump and the LiDAR lose power.
+
+Power rails (current schematic):
+
+| Rail | Made by | Feeds | Switched by |
+| --- | --- | --- | --- |
+| BAT-VCC (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
+| VCC-3V3 | AP64501 buck (U21) | STM32 | POWER-EN |
+| VCC-3V3-REG | from VCC-3V3 via Q16/Q17 | sensors, IMU, driver logic | STM32 (3.3V_EN) |
+| 3.3VBAT | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
+| VCC-5V-REG | AP64501 buck (U22) | CM5, speaker amp, USB header, LiDAR and pump switches, VUS boost | STM32 (5V_EN) |
+| VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
+| USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
+| VUS ≈ 14.5 V | MT3608 boost | carpet sensor | with VCC-5V-REG |
+| VM-VBAT | BAT-VCC via Q1 AO4407C | wheels, brushes, fan | WD_OK AND ~VM-VBAT-EN |
+| VM-5V-LIDAR | VCC-5V-REG via Q7002 AO3401 | whole LiDAR, laser included | WD_OK AND LiDAR-EN (low = on) |
+| VM-5V-WATER-PUMP | VCC-5V-REG via Q8 AO3401 | water pump | WD_OK AND WATER-PUMPU-CTRL (low = on) |
+
+RC charge-pump watchdog (WATCHDOG sheet):
+- the STM32 toggles WDI in software (50-1000 Hz, ~50% duty) from a healthy control loop - never from a timer/PWM, which keeps running after the CPU hangs
+- C7001 passes only WDI edges to Q7001 (AO3401); each falling edge tops up C7002 (10 µF) through R7003; R7004 (10k) bleeds it
+- WD_OK ≈ 2.7 V while toggling; WDI stuck high, low or floating → below 1 V in ~100 ms, below 0.4 V in ~190 ms; 0 V at power-up
+- the old STWD100 (U3), its OR gate (U4) and the JTAG-presence inverter (Q25) were removed: cutting actuator power is what makes the robot safe
+- STM32 recovery: internal IWDG forced on by the hardware option byte (freeze it in debug via DBGMCU); the CM pulses STM32 NRST if the STM32 heartbeat stops
+
+Each gated rail is WD_OK AND an MCU enable, without logic ICs:
+- an AO3400 N-FET has its gate on WD_OK and its source on the MCU GPIO; it pulls the rail P-FET's gate low only when WD_OK is high and the GPIO is low
+- a 100k pull-up to 3V3 on each GPIO keeps the rail off while the MCU pins float (reset, flashing)
+- VM-VBAT: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). TODO check VM-VBAT max current vs Q1 rating; measure the fan controller's input capacitance (inrush)
+- VM-5V-LIDAR: soft start R7006 10k + C7003 100 nF (≈1.5 ms on, ≈30 ms off) so the CM's 5 V doesn't dip
+- VM-5V-WATER-PUMP: no soft start, so the pump can be PWM-driven
+- PWM on an enable can only slow a gate-RC soft start; it can't soft-start a hard-switched FET
+
+MOSFET line-up (consolidated 2026-09, 8 part numbers → 4):
+
+| Role | Part | LCSC | Notes |
+| --- | --- | --- | --- |
+| all N-FETs | AO3400 (FOSAN) | C20628874 | 30 V, Vgs ±12 V, Vth 0.65-1.5 V, SOT-23 |
+| P-FETs whose gate sees ≤ 5 V | AO3401 (FOSAN) | C20628875 | -30 V, Vgs ±12 V, SOT-23 |
+| battery-side high-side switches (Q1, Q13) | AO4407C (AOS) | C469397 | -30 V, Vgs ±25 V, 11.5 mΩ, SOIC-8 |
+| charger, 24 V DC_IN (Q12, Q14) | AOD407 | C6396162 | -60 V for hot-plug margin |
+
+Any gate or drain that can see BAT-VCC (up to 16.8 V) needs Vds ≥ 30 V, and a gate swing that large needs Vgs ≥ 20 V.
+
 ## TODO
 
 | Type | Qty | Spec |
 | --- | --- | --- |
-| LiDAR | 1 | 5V 0.35A max, Mabuchi-style RF-500TB-14350 or similar, low-side load switch N-FET |
+| LiDAR | 1 | 5V 0.35A max (about 1 A at spin-up), Mabuchi-style RF-500TB-14350 or similar; whole LiDAR on the switched VM-5V-LIDAR rail, motor low-side N-FET (Q20) |
 | Main brush | 1 | DC 14.4-15V PRI-390SV-24100, JLS-395PH-2248A, RS-390WM-3107GCF or similar |
-| Side brush | 1 | DC 14.4V RC500-KW/14440/DV, PR-500EV-14440 or similar |
+| Side brush | 1 | JGA25-310 geared DC motor, 12 V, ~150 RPM, metal gearbox, no encoder; mounted vertically, drives the brush directly via a custom coupler. Runs off the 14.4-16.8 V pack, so PWM-limit to ~12 V average. (Was DC 14.4V RC500-KW/14440/DV in a Roborock-style gearbox assembly; dropped because those assemblies only mate older, non tangle-resistant brushes.) |
 | Mop | 2 | GM-RS385Y-24065 or similar, DC 14.4V |

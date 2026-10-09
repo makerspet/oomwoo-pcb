@@ -367,6 +367,15 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
   - **Open question:** the STM32G473 has **no DCMI** (camera interface) peripheral. Options:
     GPIO capture with timer-triggered DMA at low resolution; a module with its own SPI/FIFO
     buffer (ArduCAM-style); or a small bridge MCU with a camera interface
+  - **Tentative:** a Raspberry Pi Pico-class MCU (RP2040, or RP2350) as the camera bridge. Its PIO
+    blocks capture a DVP camera well (community OV7670/OV2640 examples exist); frames then go to
+    the STM32 over SPI or UART
+    - RP2040/RP2350 are QFN only, against the hand-solderable preference. A castellated module
+      (Pico-style, or a smaller RP2040 board) keeps it hand-solderable and brings its own flash and
+      crystal
+    - bandwidth: the STM32's USB FS (12 Mbit/s) to a phone carries raw QVGA RGB565 (150 kB a
+      frame) at only a few fps; a camera with hardware JPEG (e.g. OV2640) or a lower resolution
+      eases this
 - white torchlight LEDs for the camera (was NIR illumination with a projection pattern); many
   consumer robots use white, e.g. Dreame L60 Ultra PE and Roomba j7
 - breaks into multiple PCBs using holes

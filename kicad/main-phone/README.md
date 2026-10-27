@@ -22,6 +22,7 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
 - 20 V input: SMAJ22A TVS (D7301), 10 µF/50 V 1206 DC_IN capacitors, low-profile DC-044A-20A barrel jack (7.2 mm tall)
 - bumpers: 2x ITR9606 photo-interrupters on the board (BUMP-R1, BUMP-L1) in parallel with the harness bumpers (backup); Q7304 switches both emitters
 - DC_IN sense: R7310/R7311 (/11) + C7304 to PB15
+- VBUS lockout (Q7305, Q7306, R7312-R7314): the robot 5 V can't turn on while the phone sources VBUS
 - the unused sheet files copied from `main` (CM5, M.2, MIPI camera, speaker, water pump) are deleted
 - carpet: LO AC-coupled to the Q18 gate (C7303)
 - LIDAR2 and STM32_DEBUG1: the same right-angle 1x5 header (PZ254R-11-05P)

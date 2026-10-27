@@ -520,6 +520,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - firmware pin map and rules: [firmware spec](https://github.com/makerspet/oomwoo-io-firmware/blob/main/docs/SPEC.md)
 - USB-C: the phone is the USB host (the STM32G4 USB is device-only). CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default, so the phone becomes host and source; a PD power-role swap lets the robot charge the phone while it stays host (phone support varies; phones without it alternate charging and data)
 - the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q7101 (AO3401) + Q7102 (AO3400) disconnect the robot 5 V from VBUS unless PWR_EN is high
+- VBUS lockout: PWR_EN (PC10) reaches the TMI6240 and Q7102 only through R7312 (10k) as PWR_EN_G. Q7305 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R7313/R7314 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q7306 keeps Q7305 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader

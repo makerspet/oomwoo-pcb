@@ -245,13 +245,14 @@ Original plan:
 
 ### Dock
 
-- the dock is powered from an external certified 24/25.2 V DC brick (~200–350 W)
-  - use external brick for safety, the dock enclosure only ever sees 24 V DC
-  - reuse a 25.2 V stick-vac motor for auto-empty, e.g. Dreame M10-E-4 25.2 V/310 W
+- v1 is a **charging-only dock**, [`kicad/charging-dock`](../kicad/charging-dock/README.md) (rev 2, 2026-10-27): 20 V brick, CH32V003 MCU, robot detection by resistance signature, soft-start output switch with current sense, NEC IR beacon
 - the dock has only 2 contacts: DOCK+ and GND
-  - dock contacts feed a fixed 24V+ DC
-  - the dock detects load/robot presence, energizes DOCK+ only when robot is detected (reliably, after a couple of seconds)
+  - DOCK+ is the 20 V brick voltage (the robot needs 18.5-22 V)
+  - the dock measures the resistance across the contacts and energizes DOCK+ only when it sees the robot's signature (after a couple of seconds); it switches off when the charging current stops
   - dock contacts are spring loaded, gold-coated pogo pins ≥4 A, placed rear-vertical, above water line
+- full dock (later):
+  - powered from an external certified DC brick (~200–350 W); use an external brick for safety, so the dock enclosure only ever sees low-voltage DC
+  - reuse a 25.2 V stick-vac motor for auto-empty, e.g. Dreame M10-E-4 25.2 V/310 W; with a 24/25.2 V brick, the dock must still make 20 V for the contacts
 - ambient fan(s) for mop drying
   - no hot mop dry for now
 - 2x water pumps: clean-feed + dirty-evacuate
@@ -543,7 +544,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - Keep DC_IN ≤ 22 V: SMAJ22A TVS (D7301), and the rail-hold puts the full BAT-VCC across Q13's gate (AO4407C, Vgs ±25 V). DC_IN capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
 - Barrel jack: DC-044A-20A (C129006), 5.5/2.0 mm, 30 V 5 A, 7.2 mm tall (the DC-005 was 11 mm). Its switch pin disconnects the dock contacts' GND while a plug is in, so the two sources never fight.
 - DC_IN sense: R7310 (1M) / R7311 (100k) + C7304 (100 nF) to PB15 (ADC4_IN5), DC_IN = V_adc x 11 (20 V reads ~1.82 V; 3.3 V full scale is 36 V). The MCU sees charger power on either input.
-- Dock presence signature: ~130k from DC_IN to GND (R175 + R7305 = 147k in parallel with the 1.1M sense divider). The basic v1 dock needs no MCU: it detects the signature, then ramps 20 V onto its contact through a soft-start switch.
+- Dock presence signature: ~130k from DC_IN to GND (R175 + R7305 = 147k in parallel with the 1.1M sense divider), plus ~30 µF of DC_IN capacitance. The [charging dock](../kicad/charging-dock/README.md) measures both with a ~1.5 V probe (too low to turn Q7303 on), then ramps 20 V onto its contact through a soft-start switch. Changing R175, R7305, R7310, R7311 or the DC_IN capacitors changes the signature: update the dock firmware window too.
 
 ### Bumpers (v1)
 
@@ -567,6 +568,17 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - every 0603 10 µF rated ≤ 10 V is 10uF/10V (C19702): 2 lines → 1; the 25 V parts stay on ≥ 12 V nets
 - 1uF/25V (C14, C22): C380328
 
+### 3.3 V and 5 V bucks (v1, 2026-10-27)
+
+- U21 (VCC-3V3) and U22 (VCC-5V-REG) are TPS54560BDDAR (C1850354: 4.5-60 V, 5 A, SO-8 PowerPAD, ~$0.61). The AP64501SP-13 they replace was out of stock (1 left at LCSC). Same 0.8 V reference, so the FB dividers are unchanged.
+- Non-synchronous: SS56 catch diodes D7401/D7402 (SW to GND, same part as D12-D15). Keep the SW node, the diode and the input capacitors in a tight loop.
+- fsw 418 kHz: RT R7401/R7402 = 232k (same part as R160), where the AP64501 soft-start caps were. Soft start is internal.
+- Compensation, the same on both rails: R143/R147 4.7k + C112/C120 47 nF (crossover ~20 kHz with ~40 µF effective output capacitance). No high-frequency pole capacitor: the output capacitors are all ceramic, so there is no ESR zero to cancel.
+- U21 EN: POWER-EN is the full BAT-VCC (up to ~20 V while charging), and EN is rated 8.4 V. R7403 (100k) / R7404 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on 5V_EN (3.3 V logic, R168 100k pull-down).
+- BAT-VCC input capacitors C95, C106, C115, C116: 10 µF/50 V 1206 (C13585). The 10 µF/25 V 0603 parts kept only ~1 µF at 20 V.
+- Cost of the diode: ~1 W at 5 V / 3 A. If efficiency matters later, the synchronous AP64500 (40 V, 5 A, ~$1.04) is the alternative.
+- PCB engineer: new footprint (TI DDA, 2.95 x 4.9 mm thermal pad with vias).
+
 ## Safety and power rails
 
 Rule: if the STM32 firmware hangs, is held in reset or is being flashed, every motor, the pump and the LiDAR lose power.
@@ -576,10 +588,10 @@ Power rails (current schematic):
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
 | BAT-VCC (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
-| VCC-3V3 | AP64501 buck (U21) | STM32 | POWER-EN |
+| VCC-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | POWER-EN |
 | VCC-3V3-REG | from VCC-3V3 via Q16/Q17 | sensors, IMU, driver logic | STM32 (3.3V_EN) |
 | 3.3VBAT | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
-| VCC-5V-REG | AP64501 buck (U22) | CM5, speaker amp, USB header, LiDAR and pump switches, VUS boost | STM32 (5V_EN) |
+| VCC-5V-REG | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUS boost | STM32 (5V_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
 | USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
 | VUS ≈ 14.5 V | MT3608 boost | carpet sensor | with VCC-5V-REG |

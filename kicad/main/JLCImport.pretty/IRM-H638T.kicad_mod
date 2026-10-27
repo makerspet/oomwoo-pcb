@@ -1,0 +1,235 @@
+(footprint "IRM-H638T"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "IRM-H638T/TR2")
+	(property "Reference" "REF**"
+		(at 0 -5.27 0)
+		(layer "F.SilkS")
+		(uuid "19794cba-8b91-4af8-953c-5167a2f0aad6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SENSOR-SMD_IRM-H638T-TR2-TL"
+		(at 0 5.27 0)
+		(layer "F.Fab")
+		(uuid "70f35cb1-a96c-417c-989f-cfd6c215a51b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "476130d9-4f4b-470c-b81d-f0f0dd73dddf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7f61ed61-90f3-4d85-a0b8-577ec118097a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C91447"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "049b50d8-b78e-443f-ad9e-dfe0953226da")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 -2.5)
+		(end 2 -2.5)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "846a715a-0207-4ddc-8aa2-c8be9326cd47")
+	)
+	(fp_line
+		(start -2 2.5)
+		(end -2 -2.5)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "269d5750-5873-427d-ac3a-069440f37c6d")
+	)
+	(fp_line
+		(start 2 -2.5)
+		(end 2 2.5)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7d896716-543b-498f-a7f2-08a5d823459a")
+	)
+	(fp_line
+		(start 2 2.5)
+		(end -2 2.5)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2f4100ad-46b5-4df1-9365-1474c8dcd75b")
+	)
+	(fp_arc
+		(start -2.79 -2.67)
+		(mid -2.788726 -2.270004)
+		(end -2.792548 -2.669984)
+		(stroke
+			(width 0.4)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fd6a5f84-63d6-4059-937a-2e7d51b1c7a1")
+	)
+	(fp_circle
+		(center -3.5 -2.5)
+		(end -3.47 -2.5)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "650069ac-ae36-4492-8bee-2e241c49f12c")
+	)
+	(fp_circle
+		(center 0 -0.76)
+		(end 1.53 -0.76)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "27f90693-9127-4a56-a9cf-c6ed8c90083e")
+	)
+	(fp_circle
+		(center 0 -0.76)
+		(end 0.75 -0.76)
+		(stroke
+			(width 1.5)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "3c7d58c8-4a03-4242-b109-18d9cdc5643d")
+	)
+	(fp_line
+		(start -2 -2.5)
+		(end 2 -2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9528961a-e0f2-45fc-94d9-8409044e01e1")
+	)
+	(fp_line
+		(start -2 2.5)
+		(end -2 -2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "281c35e7-dc3e-4b6b-b1bf-c17a5ccccf1b")
+	)
+	(fp_line
+		(start 2 -2.5)
+		(end 2 2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ea9bb32c-8b0c-4139-842f-bcf19f38e493")
+	)
+	(fp_line
+		(start 2 2.5)
+		(end -2 2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "16c071ae-f62e-4fc1-a414-5454c4b0a4e3")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "0473878b-bc28-4105-99d9-ba3183e1dffd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.95 -1.27 90)
+		(size 0.9 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cbf2316f-cb89-4b64-ab72-d5e84be73058")
+	)
+	(pad "2" smd rect
+		(at -2.95 1.27 90)
+		(size 0.9 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7d440d0f-dfb3-47ed-9fef-e5d6788948cf")
+	)
+	(pad "3" smd rect
+		(at 2.95 1.27 90)
+		(size 0.9 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c238a7ad-58c3-4f24-ae1e-368cfd8dabf1")
+	)
+	(pad "4" smd rect
+		(at 2.92 -1.27 90)
+		(size 0.9 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a459c2d8-85a9-45e8-9b0a-b58f28cabd46")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/JLCImport.3dshapes/IRM-H638T.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)

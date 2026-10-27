@@ -27,6 +27,8 @@ I'm keeping the first board as simple as possible, so it can be built and tested
 
 Details for both are in the [I/O board spec](docs/SPEC.md).
 
+The v1 board comes with a **[charging-only dock](kicad/charging-dock/README.md)**: a 20 V brick, a CH32V003 MCU (Arduino core, ch32fun, PlatformIO), robot detection before the contacts go live, and an IR beacon. The plan is to make the v1 board, the dock and the small sensor boards as one panel (V-cuts or mouse bites), so they share parts and cost less to make and ship. Dock reference designators are 8xxx so they don't collide with the main board's.
+
 ## Architecture notes
 
 Consumer vacuums typically split compute into CPU and MCU. The MCU ([real examples](https://robotinfo.dev/)) controls

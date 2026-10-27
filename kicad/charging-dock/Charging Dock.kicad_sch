@@ -5,16 +5,6 @@
 	(uuid "b1780c3e-7100-4df4-97c9-2fd6186fb125")
 	(paper "A4")
 	(lib_symbols)
-	(wire
-		(pts
-			(xy 149.86 75.565) (xy 161.925 75.565)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef01319a-bded-4ea6-bcd9-29c5a1b1e6f4")
-	)
 	(sheet
 		(at 118.11 99.06)
 		(size 31.75 20.955)
@@ -99,16 +89,6 @@
 				(justify left top)
 			)
 		)
-		(pin "POWER_EN" input
-			(at 161.925 75.565 180)
-			(uuid "6694670e-112e-4528-b6a6-8e1f22df8eff")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
@@ -133,7 +113,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "98be3a95-74c8-4a8a-bf9d-07f6f90f1855")
-		(property "Sheetname" "PRESENCE SENSOR"
+		(property "Sheetname" "CONTROL"
 			(at 118.11 65.3284 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -144,7 +124,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Presence Sensor.kicad_sch"
+		(property "Sheetfile" "Control.kicad_sch"
 			(at 118.11 87.5796 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -155,16 +135,6 @@
 				(justify left top)
 			)
 		)
-		(pin "DETECTED" output
-			(at 149.86 75.565 0)
-			(uuid "9c583fae-dedc-4b26-a6d6-62c78a17a862")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
@@ -172,6 +142,17 @@
 				)
 			)
 		)
+	)
+	(text "OOMWOO charging-only dock, v2 (2026-10-27)\n20 V brick in; DOCK+ / DOCK- pogo contacts out (energized only after the robot\nis recognised by its ~130k / ~30 uF signature); 38 kHz NEC IR beacon.\nCH32V003 control (Arduino core, ch32fun, PlatformIO). Refs 8xxx: unique across the\nOOMWOO panel (robot main board, dock, sensor boards)."
+		(exclude_from_sim no)
+		(at 40.64 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c121ee0d-a62d-48df-96d0-aaa0927c9d8f")
 	)
 	(sheet_instances
 		(path "/"

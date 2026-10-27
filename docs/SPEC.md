@@ -332,6 +332,7 @@ Net spec
   - one GPIO (LO) drives the gate through R60 (10 Ω); R7012 (100k) pulls the gate low so the FET is off while the MCU is in reset or being flashed
   - the freed HI GPIO now enables the motor rail (~VM-VBAT-EN)
 - (firmware) drive the sensor in short bursts only: LO held high puts ~0.63 W into R7011
+  - v1 board: C7303 (100 nF) AC-couples LO to the gate, so a stuck-high LO turns Q18 off within ~10 ms (through R7012)
 - (firmware) release LO (low), then measure using ADC, calculate return amplitude
 - TODO get the sensor vendor's reference driver circuit to confirm drive voltage and pull-up value
 
@@ -339,7 +340,7 @@ Net spec
 
 On the main board (current schematic):
 - LIDAR1: JST GH 1.25 mm socket for the LDROBOT LD14P; MOTOR-CTRL through a 1k series resistor (R7008) so a hung MCU can't back-power an unpowered LiDAR
-- LIDAR2: 0.1" 1x4 male pin header (XFCN PZ254V-11-04P) for other 2D LiDARs via jumper wires: 1 LiDAR RX, 2 GND, 3 MOT- (low-side switched by Q20), 4 VM-5V-LIDAR
+- LIDAR2: 0.1" 1x4 male pin header (XFCN PZ254V-11-04P) for other 2D LiDARs via jumper wires: 1 LiDAR RX, 2 GND, 3 MOT- (low-side switched by Q20), 4 VM-5V-LIDAR. On the v1 board it is a right-angle 1x5 (PZ254R-11-05P, pin 5 unused), the same part as the STM32 debug header
 - both are powered from VM-5V-LIDAR, which cuts the whole LiDAR (laser included), not just its motor; see [Safety and power rails](#safety-and-power-rails)
 
 ```
@@ -409,7 +410,7 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 
 ## GPIO
 
-Please see the [PCB schematic](https://github.com/makerspet/oomwoo-io-board/tree/main/kicad/PDF) for up-to-date GPIO list.
+Please see the [PCB schematic](https://github.com/makerspet/oomwoo-pcb/tree/main/kicad/PDF) for up-to-date GPIO list.
 
 TODO before layout/fabrication: confirm whether GPIO entries 36 and 46 are intentionally separate bumper inputs or a duplicate label.
 
@@ -508,6 +509,63 @@ Design (current schematic)
 - CM5: use the same header and the same mic board, so there's one design for both modules. The CM5's extra USB 3 ports stay free for whatever makers want.
 - The mic board is USB full-speed (12 Mbit/s), which puts little load on the port.
 
+## Phone-compute board (v1)
+
+The first board drops the Raspberry Pi: an Android phone is the compute, talking to the STM32 over USB-C (CDC). Schematic: [`kicad/main-phone`](../kicad/main-phone/README.md), forked from `kicad/main` (the Pi carrier stays for later).
+
+- dropped: CM4/CM5, SD card, M.2 + its buck, MIPI cameras, speaker amp (no buzzer; LEDs for debug), water pump, front illumination, the phone's dedicated 5 V buck, the board fan (the phone stays cool), the left side-proximity sensor (OOMWOO One has a right one only)
+- kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
+- the six mounting standoffs (MP1-MP6) moved from the removed M.2 sheet to the POWER sheet
+- spare STM32 pins: PA10, PC9, PC11, PE4, PE5, PE6 (PB15 became the DC_IN sense)
+- firmware pin map and rules: [firmware spec](https://github.com/makerspet/oomwoo-io-firmware/blob/main/docs/SPEC.md)
+- USB-C: the phone is the USB host (the STM32G4 USB is device-only). CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default, so the phone becomes host and source; a PD power-role swap lets the robot charge the phone while it stays host (phone support varies; phones without it alternate charging and data)
+- the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q7101 (AO3401) + Q7102 (AO3400) disconnect the robot 5 V from VBUS unless PWR_EN is high
+- VBUS sense: 100k/47k divider to PA7
+- front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
+- STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
+- spare I/O header J7301 (0.1" 2x6, do not fit, pads only): 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 I2C4 SCL/SDA, 5-10 PA10, PE6, PC9, PC11, PE4, PE5, 11/12 GND
+- PB10 (3.3V_EN) drives the sensor-rail switch through R7306 (1k), so C64 (10 µF gate-drain soft start) doesn't load the pin directly
+- VL-R-LPn has a 47k pull-up (R7307), like VL-L-LPn
+
+### Power control (v1)
+
+- Power-on: the button pulls the Q13 (AO4407C) gate low through C14, Q13 feeds POWER-EN and the U21 3.3 V buck turns on the MCU rail. Firmware then holds the latch with STM-PWR-CTRL (PA15 → R7301 1k → Q23). Power-on starts only the MCU rail; firmware enables the other rails.
+- Off: firmware turns everything off after a 3 s press (all rails first, then PA15 low). 3 s while holding Home = factory reset, and the robot stays on.
+- Hardware off timer: holding the button ~4-9 s turns the MCU rail off even if the firmware hangs. Q7301 releases C7301 (10 µF, charged through R7304 1M), U7301 (74LVC1G17 Schmitt buffer) trips and Q7302 pulls the latch gate (PWR-LATCH) low. R7301 lets Q7302 win against PA15 driven high.
+- Charger rail-hold: DC_IN (dock or barrel jack) turns Q7303 on through the R175/R7305 divider, which pulls the Q13 gate (PWR-SW-G) low. Charger power alone turns the MCU rail on, and nothing turns it off while charging (the off timer can't either).
+- MCU rail off → every MCU pin floats → every other rail is held off by its enable pull resistor.
+- Charging is in hardware (SLM6900 + battery NTC) and continues while the MCU is in reset.
+
+### DC input (v1)
+
+- 20 V brick, through the dock contacts or the barrel jack. While charging, Q14 disconnects the battery from BAT-VCC and D14 feeds BAT-VCC from DC_IN (DC_IN - 0.4 V); the SLM6900's 95% maximum duty needs ≥ ~18.5 V to finish a 4S charge.
+- Keep DC_IN ≤ 22 V: SMAJ22A TVS (D7301), and the rail-hold puts the full BAT-VCC across Q13's gate (AO4407C, Vgs ±25 V). DC_IN capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
+- Barrel jack: DC-044A-20A (C129006), 5.5/2.0 mm, 30 V 5 A, 7.2 mm tall (the DC-005 was 11 mm). Its switch pin disconnects the dock contacts' GND while a plug is in, so the two sources never fight.
+- DC_IN sense: R7310 (1M) / R7311 (100k) + C7304 (100 nF) to PB15 (ADC4_IN5), DC_IN = V_adc x 11 (20 V reads ~1.82 V; 3.3 V full scale is 36 V). The MCU sees charger power on either input.
+- Dock presence signature: ~130k from DC_IN to GND (R175 + R7305 = 147k in parallel with the 1.1M sense divider). The basic v1 dock needs no MCU: it detects the signature, then ramps 20 V onto its contact through a soft-start switch.
+
+### Bumpers (v1)
+
+- 2x ITR9606 slotted photo-interrupters on the main board (BUMP-R1, BUMP-L1), plus the harness bumpers (BUMP_CLIFF1 pins 11-16) wired in parallel as a backup; fit either or both.
+- ITR9606 emitters in series from VCC-5V-REG through R7308 (120 Ω, ~20 mA); the harness LED through R30 (330 Ω) on pins 15/16. Q7304 low-side switches both (BUMP-LED-K) from BUMPER_LED_EN (PC3, high = on, R7309 100k pull-down).
+- Detectors pull BUMP-L-Q+ (PA4) / BUMP-R-Q+ (PA5) low when light passes the slot (R48/R44 47k pull-ups). With both sensors fitted the lines are wired-OR: either one seeing light reads low.
+
+### Component height (v1)
+
+Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
+- battery connector: Molex Micro-Fit 3.0 right-angle 43650-0412, 5.57 mm
+- barrel jack: DC-044A-20A, 7.2 mm
+- LIDAR2 and STM32_DEBUG1: the same right-angle 1x5 0.1" header (XFCN PZ254R-11-05P, C492413, ~2.5 mm body), one BOM line; J7301 is pads only
+- inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
+- exception: the ITR9606 bumper sensors (~11 mm), set by the bumper mechanism
+- PCB engineer: flag any other part taller than ~7 mm
+
+### BOM consolidation (v1, 2026-10-27)
+
+- every 100 nF is 100nF/50V X7R 0603 (C1591): 4 lines → 1
+- every 0603 10 µF rated ≤ 10 V is 10uF/10V (C19702): 2 lines → 1; the 25 V parts stay on ≥ 12 V nets
+- 1uF/25V (C14, C22): C380328
+
 ## Safety and power rails
 
 Rule: if the STM32 firmware hangs, is held in reset or is being flashed, every motor, the pump and the LiDAR lose power.
@@ -538,7 +596,7 @@ RC charge-pump watchdog (WATCHDOG sheet):
 Each gated rail is WD_OK AND an MCU enable, without logic ICs:
 - an AO3400 N-FET has its gate on WD_OK and its source on the MCU GPIO; it pulls the rail P-FET's gate low only when WD_OK is high and the GPIO is low
 - a 100k pull-up to 3V3 on each GPIO keeps the rail off while the MCU pins float (reset, flashing)
-- VM-VBAT: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). TODO check VM-VBAT max current vs Q1 rating; measure the fan controller's input capacitance (inrush)
+- VM-VBAT: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). Q1 dissipates ~0.3-0.4 W at the ~5 A normal load; short ~13 A stall peaks are fine with copper under the drain. TODO measure the fan controller's input capacitance (inrush)
 - VM-5V-LIDAR: soft start R7006 10k + C7003 100 nF (≈1.5 ms on, ≈30 ms off) so the CM's 5 V doesn't dip
 - VM-5V-WATER-PUMP: no soft start, so the pump can be PWM-driven
 - PWM on an enable can only slow a gate-RC soft start; it can't soft-start a hard-switched FET

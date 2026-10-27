@@ -4,7 +4,7 @@
 
 *Open-source robot vacuum you build yourself.*
 
-Raspberry Pi CM4/CM5 socket · STM32G473 MCU · Motor drivers · Sensors · 2x MIPI cameras · 4S charging · KiCad
+STM32G473 MCU · Motor drivers · Sensors · 4S charging · Smartphone compute (v1) · Raspberry Pi CM4/CM5 (planned) · KiCad
 
 ![License](https://img.shields.io/badge/License-Apache--2.0-blue)
 ![Status](https://img.shields.io/badge/Status-Placement-orange)
@@ -17,6 +17,15 @@ Part of [OOMWOO open-source robot vacuum](https://github.com/makerspet/oomwoo) p
 <img width="1335" height="815" alt="oomwoo_main_pcb_placement" src="https://github.com/user-attachments/assets/967f562d-f45b-44db-834b-56e3c3d44b5e" />
 
 Get [MCU firmware](https://github.com/makerspet/oomwoo-io-firmware/).
+
+## Two boards
+
+I'm keeping the first board as simple as possible, so it can be built and tested sooner:
+
+- **[`kicad/main-phone`](kicad/main-phone/README.md) - v1, in progress.** An Android phone is the compute, connected to the STM32 over USB-C. No Raspberry Pi, cameras, M.2, SD card, speaker or mopping. The STM32 runs every motor and sensor, including the LiDAR and the front ToF sensors, and forwards their data to the phone.
+- **[`kicad/main`](kicad/main) - Raspberry Pi CM4/CM5 carrier, planned.** The Pi is still in the plans: cameras, an NPU and always-on Wi-Fi come with it. The notes below describe this board.
+
+Details for both are in the [I/O board spec](docs/SPEC.md).
 
 ## Architecture notes
 
@@ -53,8 +62,8 @@ The MCU's overarching constraint is to ensure robot safety. This is necessary to
 
 Consumer vacuums place CPU and MCU on the same PCB board. Since OOMWOO has to be hackable, it seems best to separate I/O from the compute. Therefore, this I/O board needs to have
 - MCU and programming header
-  - likely STM32G070RBT6 because it has 56 GPIOs, 16 ADC channels, costs $1 at JLCPCB, has LQFP package for easy PCBA - a rare combination
-  - see tentative [I/O board spec](https://github.com/makerspet/oomwoo-io-board/blob/main/docs/SPEC.md)
+  - STM32G473VCT6 (LQFP-100): enough GPIOs, timers and ADCs for every motor and sensor, built-in op-amps for the carpet sensor echo, a USB device port and an RTC, in a hand-solderable package
+  - see the [I/O board spec](docs/SPEC.md)
 - all vacuum motor drivers (with connectors), driven by the MCU
   - cliff, side proximity, docking, bumper, carpet, water tank full/empty, dust bin present, motor overcurrent, motor encoders
 - MCU connected to all sensors (except those handled by CPU like LiDAR serial, MIPI cameras I/O, IMU); sensor connectors

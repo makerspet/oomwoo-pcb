@@ -25,7 +25,8 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
 - VBUS lockout (Q7305, Q7306, R7312-R7314): the robot 5 V can't turn on while the phone sources VBUS
 - the unused sheet files copied from `main` (CM5, M.2, MIPI camera, speaker, water pump) are deleted
 - carpet: LO AC-coupled to the Q18 gate (C7303)
-- LIDAR2 and STM32_DEBUG1: the same right-angle 1x5 header (PZ254R-11-05P)
+- LIDAR2: right-angle 1x5 header (PZ254R-11-05P)
+- STM32_DEBUG1 (1x5 0.1", PZ254V-11-05P) and JTAG1 (2x7 1.27 mm SMD, STDC14 pinout, C55099228): vertical, reached from the top under a small removable cover (changed 2026-10-28)
 - spare I/O pads J7301 (2x6, do not fit); R7306 1k on PB10; R7307 47k pull-up on VL-R-LPn
 - BOM: all 100 nF → 100nF/50V (C1591), 10uF/6.3V → 10uF/10V (C19702)
 - new DC-044A-20A footprint and 3D model in `../main/JLCImport.pretty` / `JLCImport.3dshapes`

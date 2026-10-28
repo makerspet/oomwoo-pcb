@@ -569,7 +569,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
 - battery connector: Molex Micro-Fit 3.0 right-angle 43650-0412, 5.57 mm
 - barrel jack: DC-044A-20A, 7.2 mm
-- LIDAR2 and STM32_DEBUG1: the same right-angle 1x5 0.1" header (XFCN PZ254R-11-05P, C492413, ~2.5 mm body), one BOM line; J7301 is pads only
+- LIDAR2: right-angle 1x5 0.1" header (XFCN PZ254R-11-05P, C492413, ~2.5 mm body); J7301 is pads only
+- exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x5 0.1" (XFCN PZ254V-11-05P, C492404, ~8.5 mm above the board) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
 - exception: the ITR9606 bumper sensors (~11 mm), set by the bumper mechanism
 - PCB engineer: flag any other part taller than ~7 mm

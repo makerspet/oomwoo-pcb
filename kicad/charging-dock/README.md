@@ -54,7 +54,7 @@ Firmware:
 
 ## IR beacon
 
-- The robot's receivers (IRM-H638T, AGC type) suppress a steady 38 kHz carrier, so the beacon must send bursts: NEC frames, with the TIM1 PWM at ~1/3 duty and the frame envelope gated in firmware.
+- The robot's receivers (IRM-V838M3-C, AGC type) suppress a steady 38 kHz carrier, so the beacon must send bursts: NEC frames, with the TIM1 PWM at ~1/3 duty and the frame envelope gated in firmware.
 - IR_L and IR_R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C8101/C8102 100 nF, R8102/R8104 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
 - R8101/R8103 are 150 Ω 2512 (1 W): 1.7 W peak, ~0.3 W average at NEC duty.

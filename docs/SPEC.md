@@ -285,6 +285,9 @@ Original plan:
   - XINGLIGHT XL-IRM0038C-38X	C42400831	SMD 5×4.2	$0.133	137	150 µA, 75°, –40 °C to +85 °C. Stock too thin.
 - Deciding factors - stock depth, sunlight rejection, SMD (cheaper to assemble), angle of view (wide for dock search, narrow for docking, comms), side-looking vs straight up orientation
   - current draw battery drain is not a factor
+- **v1 front receivers (2026-10-27): Everlight IRM-V838M3-C/TR1**, C3291489, ~$0.20, ~97k in stock, SMD 6.6×3 mm, side-looking: the lenses are on the long face opposite the pins, lens axis 1.8 mm above the board, ±45°. [Datasheet](https://www.everlighteurope.com/custom/files/datasheets/DMO-0000605.pdf). Pins: 1 GND, 2 VCC, 3 OUT, 4 GND; filter 47-220 Ω + ≥ 2.2 µF (v1: 100 Ω + 10 µF)
+  - the IRM-H638T is top-looking (the lens faces up from the board), so it can't look forward from a flat board
+  - the 3-pin IRM-V538M3 (same family) is out of stock at JLC; the IRM-3638T is side-looking but through-hole
 
 ### Power path
 
@@ -358,6 +361,7 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 
 - 2x VL53L7CH (or VL53L7CX), 90° diagonal = ~63° horizontal FoV each
   - each turned ~30° left, right to cover ~126° horizontal FoV
+  - JLC, 2026-10-27: VL53L7CH C19183986 $11.46, 2 in stock; VL53L7CX C5270520 $8.46, 77 in stock; VL53L5CX C3178303 $4.81, 3.8k in stock (same footprint and pinout, but 63° diagonal / 45° horizontal). Two per robot, so this is a large BOM line. **Decided:** the sensor is bought from a distributor (DigiKey VL53L7CX $6.06 at 1,000, Mouser $5.17 at 3,600, ST VL53L7CH $5.63 at 500) and placed by hand; JLC assembles the rest of the ToF board. See the [ToF board README](../kicad/front-sensors/README.md#assembly-the-sensor-is-placed-by-hand)
   - obstacle *detection*
 - 1x RGB camera, parallel (DVP) interface, wide-angle, pitched down (changed Oct 2026 from
   2x OV5647 NIR stereo with structured illumination)
@@ -380,11 +384,13 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
       eases this
 - white torchlight LEDs for the camera (was NIR illumination with a projection pattern); many
   consumer robots use white, e.g. Dreame L60 Ultra PE and Roomba j7
-- breaks into multiple PCBs using holes
-  - central - 2x TSOP38238 (separated by a baffle) for dock homing
-  - left - VL53L7CH pointed 30° left
-  - right - VL53L7CH pointed 30° right
-  - RGB camera with white torchlight LEDs
+- v1 (changed 2026-10-27): the dock-homing IR receivers move onto the main board, which sits at the very front of the robot anyway (some consumer robots do the same)
+  - 2x IRM-V838M3-C (side-looking), U7501 left and U7502 right, at the board's front edge with a baffle between them: see [IR receiver ICs](#ir-receiver-ics)
+  - two receivers, not one: when both see the dock it is straight ahead, when one does, steer to that side. With the dock's left and right codes, the robot knows both which way the dock is and which side of the dock it's on. One receiver only sees the dock or not, so it would have to turn and sweep to find the bearing
+- the ToF sensors are on small boards, one design fitted twice: [`kicad/front-sensors`](../kicad/front-sensors/README.md)
+  - left board aimed 30° left, right board 30° right
+  - each board has a JST SH 7-pin connector (ZX-SH1.0-7PWT); main board VL-L1 / VL-R1 use the same part
+- RGB camera with white torchlight LEDs: not in v1, no board yet
 
 ## Side sensors module board
 
@@ -527,7 +533,9 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
 - spare I/O header J7301 (0.1" 2x6, do not fit, pads only): 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 I2C4 SCL/SDA, 5-10 PA10, PE6, PC9, PC11, PE4, PE5, 11/12 GND
 - PB10 (3.3V_EN) drives the sensor-rail switch through R7306 (1k), so C64 (10 µF gate-drain soft start) doesn't load the pin directly
-- VL-R-LPn has a 47k pull-up (R7307), like VL-L-LPn
+- VL-R-LPn has a 47k pull-up (R7307), like VL-L-LPn. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
+- front IR receivers on the board (U7501 left, U7502 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
+- VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
 
 ### Power control (v1)
 

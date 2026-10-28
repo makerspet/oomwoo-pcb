@@ -394,6 +394,10 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 
 ## Side sensors module board
 
+- **v1 (decided 2026-10-27): VL53L0X + IRM-H638T** on [`kicad/side-sensors`](../kicad/side-sensors/README.md), right side only, JST SH 7-pin (ZX-SH1.0-7PWT), assembled at JLC
+  - VL53L0X (C91199, ~$1.63) over the VL53L4CD (~$2.07) to save cost; it is weak below ~3 cm, so the board is slightly recessed. The VL6180 is NRND/obsolete and needs 2.8 V I/O
+  - IRM-H638T (top-looking, same part as the dock's U8202) replaces the TSOP38238: it catches the dock's beacon while driving past or wall-following, without stopping to spin, and helps when there is no map yet
+- earlier notes:
 - TSOP38238 for dock detection
 - consumer vacuums use analog Sharp short-range distance sensor
   - use VL6180V1NR/1 C2655167 $1.03 100pcs 18° FoV diagonal? Obsolete, similar to VL53L4CD

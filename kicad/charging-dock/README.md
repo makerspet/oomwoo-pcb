@@ -58,13 +58,14 @@ Firmware:
 - IR_L and IR_R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C8101/C8102 100 nF, R8102/R8104 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
 - R8101/R8103 are 150 Ω 2512 (1 W): 1.7 W peak, ~0.3 W average at NEC duty.
-- U8202 (IRM-H638T, not fitted) is there for optional robot → dock messages later.
+- U8202 (IRM-H638T, not fitted) is there for optional robot → dock messages later. Its symbol pinout (1, 2 GND, 3 OUT, 4 VCC) matches Everlight's IRM-H6XX/TR2 datasheet (DMO-0000004); the robot's side board uses the same part.
 
 ## PCB notes (for layout)
 
 - Mount the three TSAL6200 of each string fanned out horizontally (they are ±17°), left string and right string to each side, overlapping in the middle.
 - Route the INA180 inputs (IN+ on DOCK-, IN- on GND) as a Kelvin pair to R8007's pads.
 - J8002/J8003: YZP0670-20143-01 pogo pins (4 A), rear-vertical, above the water line. DOCK+ / DOCK- traces sized for 4 A.
+- H8201-H8204: four M3 holes (`MountingHole_3.2mm_M3_Pad`, pads to GND, not in the BOM), on the CONTROL sheet.
 - Reference designators are 8xxx (POWER 80xx, IR BEACON 81xx, CONTROL 82xx), so they stay unique when the dock goes on the same panel as the robot board.
 
 ## Parts shared with the robot
@@ -76,4 +77,3 @@ Symbols and footprints come from the shared libraries in [`../main`](../main) (`
 ## Open items
 
 - Measure the real robot signature (resistance and settling time) on the first boards, with a full battery and a flat one, and set the firmware window from that.
-- Confirm the IRM-H638T footprint pinout (from LCSC/EasyEDA) before fitting U8202.

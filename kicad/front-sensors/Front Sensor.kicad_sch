@@ -1295,6 +1295,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3V3"
 			(power global)
 			(pin_numbers
@@ -1676,7 +1799,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "9b5a0d7e-72ff-4300-8e67-43396a424cf2")
+		(uuid "2ff24203-cd1f-4e4a-8e60-fe62baf3dc19")
 		(property "Reference" "J8301"
 			(at 59.69 85.09 0)
 			(show_name no)
@@ -1744,31 +1867,31 @@
 			)
 		)
 		(pin "1"
-			(uuid "bf1f484c-16ca-44db-9a2a-dd74bec79290")
+			(uuid "727f6956-c87b-4245-82af-ea1862776ea5")
 		)
 		(pin "2"
-			(uuid "56a9ed23-a277-40b5-af61-c6ee8044a809")
+			(uuid "b1b952bc-9df1-49e4-9b2d-07b0d14db259")
 		)
 		(pin "3"
-			(uuid "f7520a1a-c2ce-461f-b2c8-53fe67c3b8a2")
+			(uuid "47c06408-eca2-4328-ba14-f569780b530c")
 		)
 		(pin "4"
-			(uuid "d8a0cb3a-f6ae-49f8-aeb8-d6adc7e39cdc")
+			(uuid "46ef43f4-7dd9-43c1-a62d-e1254f3688f7")
 		)
 		(pin "5"
-			(uuid "7bc5d138-e5ff-42ee-965f-8cf4704dbd9d")
+			(uuid "9ccd94e4-f6ee-4a00-b8ac-48c309b08f0f")
 		)
 		(pin "6"
-			(uuid "d5913e4e-95b5-4503-983b-acc4d5a97fb8")
+			(uuid "7ee1c776-1746-4e10-a669-64f26c474a35")
 		)
 		(pin "7"
-			(uuid "091acdc2-aef2-4baf-a1c4-999ee623ab02")
+			(uuid "515cfe5e-59de-4648-82d3-9b453797c235")
 		)
 		(pin "8"
-			(uuid "43465e9c-ead4-46be-9010-34b5d16a763b")
+			(uuid "b6bd5362-88c7-46f6-a262-748d85d162d9")
 		)
 		(pin "9"
-			(uuid "3c3d97d5-990c-4946-a9b2-f956ab616fe9")
+			(uuid "dd075873-e219-46df-a7e0-aced039aa3d1")
 		)
 		(instances
 			(project "Front Sensor"
@@ -1787,7 +1910,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "dfe3b56c-241f-4417-ad65-44783a3dee81")
+		(uuid "1fd22e69-f722-4634-bc1c-adaf4f2d7a0b")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -1799,7 +1922,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "37e119e3-38f1-4538-b67a-e3b47562254d")
+		(uuid "c0f3a8fd-2b78-469d-ba0b-7e88ace51a2d")
 		(property "Reference" "#PWR8301"
 			(at 73.66 93.98 90)
 			(hide yes)
@@ -1856,7 +1979,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "ff431f16-afac-4453-9b55-2d3f4cb400c4")
+			(uuid "129759c7-d748-47a7-9eaf-d4b2b5219a09")
 		)
 		(instances
 			(project "Front Sensor"
@@ -1875,7 +1998,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "66e45efc-2540-42c1-8539-009f4e9bb00c")
+		(uuid "e56ee799-5c70-4f53-906f-e4dad9b0d48d")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1887,7 +2010,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "04058ced-cfff-4000-b336-d63765fe29bf")
+		(uuid "137b6dda-47bf-4c1a-9967-3e09ef33346d")
 		(property "Reference" "#PWR8302"
 			(at 73.66 96.52 90)
 			(hide yes)
@@ -1945,7 +2068,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "47aa39bf-b822-4f58-be92-844fa7a5f1c3")
+			(uuid "df5a2ec2-925e-4c28-85f9-59ec0c72687a")
 		)
 		(instances
 			(project "Front Sensor"
@@ -1964,7 +2087,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "09481ca4-f47a-41f0-96a1-64370c4f0cf5")
+		(uuid "7a1c505e-b6a3-4f4f-a385-ea1447b39b09")
 	)
 	(label "I2C_RST"
 		(at 73.66 99.06 0)
@@ -1974,7 +2097,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "80a77806-4c69-4c18-80e3-4ab74595dc48")
+		(uuid "3294aff4-6fc2-4a68-a937-403301c57184")
 	)
 	(wire
 		(pts
@@ -1984,7 +2107,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "acaee497-ea98-43d9-b4fc-68949a415293")
+		(uuid "a494a3f8-c94a-44c7-b33c-228ff7dcaa58")
 	)
 	(label "SDA"
 		(at 73.66 101.6 0)
@@ -1994,7 +2117,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ef23f01e-9539-4b51-9695-7bd2f0b557dc")
+		(uuid "ffd3f5d2-f2a2-4805-aaa5-ec0e6c913c85")
 	)
 	(wire
 		(pts
@@ -2004,7 +2127,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a7f26fb3-13a4-46a0-a7c5-d74a5de98951")
+		(uuid "e5ba3d27-5c16-45a4-a59a-4010abbed900")
 	)
 	(label "SCL"
 		(at 73.66 104.14 0)
@@ -2014,7 +2137,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "24ed4126-8805-4ea9-8cfd-4cd50cdfeeda")
+		(uuid "759a04b3-d2ba-4ce3-a0b4-83662f1a5753")
 	)
 	(wire
 		(pts
@@ -2024,7 +2147,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ad99b761-ab4a-42a1-b876-f39fd003a527")
+		(uuid "664b2c5d-0340-4053-bb5d-572fb903f577")
 	)
 	(label "INT"
 		(at 73.66 106.68 0)
@@ -2034,7 +2157,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a19ea64b-046c-4676-967f-e25d56f8baf1")
+		(uuid "c6029ad4-696d-4d17-b4b6-27eaf3976e82")
 	)
 	(wire
 		(pts
@@ -2044,7 +2167,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3d324508-cc69-447b-95df-ca92f73da634")
+		(uuid "b63d32c9-5729-480a-8da8-651dff49abbd")
 	)
 	(label "LPn"
 		(at 73.66 109.22 0)
@@ -2054,7 +2177,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1ac82883-cd76-40a9-bdcf-9fce92a0300b")
+		(uuid "bb2b76a2-cc40-49c1-969d-2f0a0cf4f356")
 	)
 	(wire
 		(pts
@@ -2064,7 +2187,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d90536bb-bdab-4ecd-b951-a93ac26bfe2a")
+		(uuid "505e875f-13d8-4b02-937d-0f9d1677b6c4")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2076,7 +2199,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5e9dc4f9-e99b-4a07-b85f-0e3dbc660806")
+		(uuid "8b42de75-7338-4bc1-8856-2c1f86538452")
 		(property "Reference" "#PWR8303"
 			(at 62.23 116.84 0)
 			(hide yes)
@@ -2133,7 +2256,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c94f4743-e613-4bbd-b500-d5b79f5ea3ee")
+			(uuid "16155e64-cd04-4ff1-9376-52e9b66f7dd3")
 		)
 		(instances
 			(project "Front Sensor"
@@ -2152,7 +2275,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d8db34ce-84da-4af8-953b-f81b1c6dcd38")
+		(uuid "329ab2f0-4443-48cf-8dc1-14f0a695d7cc")
 	)
 	(wire
 		(pts
@@ -2162,7 +2285,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "68813e39-661c-40de-859a-41a032d46d81")
+		(uuid "51398953-21d3-439b-b8ec-922cab8165fd")
 	)
 	(wire
 		(pts
@@ -2172,7 +2295,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "01502480-8dee-488f-bb0b-242a34ea9e86")
+		(uuid "3abd3f6e-f98f-4c4f-9c27-d309a33b7899")
 	)
 	(wire
 		(pts
@@ -2182,13 +2305,13 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4d68db51-7270-4d4d-b38f-caedca2c960c")
+		(uuid "986694c1-72a8-481c-bbd4-18ae3de6e404")
 	)
 	(junction
 		(at 62.23 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "61769e2c-515b-47e6-93c4-1110a31583a2")
+		(uuid "04efb4f2-36ed-4344-9dcd-4af8b7096ad4")
 	)
 	(text "J8301 pin 1 to main-board pin 1:\nuse a same-direction (pin 1 - pin 1)\nSH 7-pin cable"
 		(exclude_from_sim no)
@@ -2199,7 +2322,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "937d56cd-20d1-470c-8ec1-90b2e88c9d53")
+		(uuid "f6d155f0-7bb0-4b9b-a2fb-7034f7aadedb")
 	)
 	(symbol
 		(lib_id "JLCImport:VL53L7CHV0GC_1")
@@ -2211,7 +2334,7 @@
 		(on_board yes)
 		(in_pos_files no)
 		(dnp no)
-		(uuid "28ca9d0b-e821-477c-ada8-94cd6e8aa902")
+		(uuid "f264cd8c-24ae-4428-a661-18daad913206")
 		(property "Reference" "U8301"
 			(at 147.32 82.55 0)
 			(show_name no)
@@ -2290,55 +2413,55 @@
 			)
 		)
 		(pin "A1"
-			(uuid "02f672f4-c4ec-42fc-b629-6286de1b1e94")
+			(uuid "e7b9b30b-de8e-4170-87ae-fd7c14fe78ef")
 		)
 		(pin "A2"
-			(uuid "8560ea33-e14a-4c5c-b019-9371a21fa5f8")
+			(uuid "58963744-c390-47eb-b302-c773c222b65b")
 		)
 		(pin "A3"
-			(uuid "85e17878-792b-4fca-9bdd-91d74b6a543e")
+			(uuid "62025e23-c02f-49b6-b158-7c5634c6f664")
 		)
 		(pin "A4"
-			(uuid "83ed571c-25f6-40b3-a547-fc005e417d82")
+			(uuid "b71899e5-b95c-4441-b05e-b700d0fcfc62")
 		)
 		(pin "A5"
-			(uuid "c58ee3ca-3c8a-465b-8346-9457c2b8c59a")
+			(uuid "e46862a6-c6cf-4668-b84e-8b9e8f6697eb")
 		)
 		(pin "A6"
-			(uuid "0b563b0c-7673-4608-a53f-355b92aab427")
+			(uuid "dfc4eb33-57bb-4162-9437-a33dcdb22052")
 		)
 		(pin "A7"
-			(uuid "bd57e338-aacb-4e11-8e89-836eee0ce923")
+			(uuid "5ce07ca8-b693-41ad-bae1-2faf03b1f37f")
 		)
 		(pin "B1"
-			(uuid "fbd57cde-84c2-4600-8672-96c53743a8ee")
+			(uuid "d1f11b7a-9ba4-4516-b613-9ac91f1a7248")
 		)
 		(pin "B4"
-			(uuid "ae505e0b-75ef-409d-bf82-ce81627a21ac")
+			(uuid "11538e6d-5606-468e-92ec-0b0c63a3e570")
 		)
 		(pin "B7"
-			(uuid "d1d584bf-9f64-4e6d-ac63-59982f54d6af")
+			(uuid "2437c51f-21ee-4b14-a0bb-679f67888478")
 		)
 		(pin "C1"
-			(uuid "0fa84fdb-5778-409f-986f-2459726807b0")
+			(uuid "01b5bf4a-ed01-492e-b952-bc7f5863a42f")
 		)
 		(pin "C2"
-			(uuid "d0c5c9af-ed62-4461-bae2-65edfdbbf816")
+			(uuid "5c3091da-65e7-4cbd-8533-b09316fe7b52")
 		)
 		(pin "C3"
-			(uuid "dcb1b17a-b8c0-43b0-b014-251f493e3bbf")
+			(uuid "c733e0a5-1b6e-42d0-ac70-2f99f31fbbeb")
 		)
 		(pin "C4"
-			(uuid "ca1028b5-75aa-42e5-a567-a0a8a87b05ea")
+			(uuid "519be34b-aaad-49c5-be6e-bcbc062d8b7d")
 		)
 		(pin "C5"
-			(uuid "91b297fa-3707-483d-acd1-b6090dbaa855")
+			(uuid "05961472-c0dc-43ea-bb1c-363fd022482e")
 		)
 		(pin "C6"
-			(uuid "37f1035b-a8a7-4a00-a915-13724bf41ed6")
+			(uuid "5274a22e-235c-412f-88ac-32dab0961314")
 		)
 		(pin "C7"
-			(uuid "1b164ec3-2ddb-4d6b-8b7d-192af96fb13b")
+			(uuid "221d44f5-5962-4493-94d2-db478732ad36")
 		)
 		(instances
 			(project "Front Sensor"
@@ -2357,7 +2480,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "16686402-537c-4ada-b9f5-45f80a12b00b")
+		(uuid "c5c3ea8a-e952-4095-a477-075f86913f6e")
 	)
 	(label "I2C_RST"
 		(at 129.54 91.44 180)
@@ -2367,7 +2490,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "316075cf-2a79-42ff-aaf4-50818a49546d")
+		(uuid "8961591d-acf6-4efb-a14b-9456f3064be1")
 	)
 	(wire
 		(pts
@@ -2377,7 +2500,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4c771910-605a-45cf-aab5-3ca1e6e9b464")
+		(uuid "22a55ab5-6d7b-4dc6-a241-31f0fbb129ca")
 	)
 	(label "INT"
 		(at 129.54 93.98 180)
@@ -2387,7 +2510,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ec8d8e16-c487-4315-9f11-130d465846ae")
+		(uuid "afa31280-0a9a-4fad-a0d5-02bd49afa2ac")
 	)
 	(wire
 		(pts
@@ -2397,7 +2520,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b92925a2-98dc-4273-931d-0e58d12c58ca")
+		(uuid "7d6a31e2-e2b9-4175-a87e-1e97bdc8629f")
 	)
 	(label "LPn"
 		(at 129.54 104.14 180)
@@ -2407,7 +2530,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "7af5252f-3691-4c25-991b-41bdf81590d4")
+		(uuid "30259d72-5e53-45d6-97a3-1f859a29baa7")
 	)
 	(wire
 		(pts
@@ -2417,7 +2540,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0d158b56-a6c5-4c17-a63b-8ab24a2e538e")
+		(uuid "1ec195b2-bf97-43dd-8651-297ab49f0be1")
 	)
 	(label "SDA"
 		(at 129.54 100.33 180)
@@ -2427,7 +2550,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d26385a2-2003-475a-af30-6ea61688a2c0")
+		(uuid "96daa911-97b8-4a31-a73e-f1ca36362ff2")
 	)
 	(wire
 		(pts
@@ -2437,7 +2560,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f3ca0b59-339b-4887-9dbe-6aad84f88a1f")
+		(uuid "c54ccdc9-5e11-40a4-bada-3591395cc3f9")
 	)
 	(label "SCL"
 		(at 129.54 97.79 180)
@@ -2447,11 +2570,11 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "568159d8-802b-48d6-a3fc-f14ebdb453a6")
+		(uuid "d84837c3-85e3-450a-b915-681c87075fc4")
 	)
 	(no_connect
 		(at 168.91 110.49)
-		(uuid "0b26c517-0244-475c-8c3b-b4132a44bd62")
+		(uuid "2cf891ce-dc89-410a-838f-d162bc48b343")
 	)
 	(wire
 		(pts
@@ -2461,7 +2584,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1e815283-46cb-4257-89a9-9f373bb24ca1")
+		(uuid "3c5dd3fa-f1e5-4166-8c5b-16b39321c764")
 	)
 	(wire
 		(pts
@@ -2471,7 +2594,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "41770cf7-ae08-4708-a415-07283be72e98")
+		(uuid "cb2513f7-2e10-41bd-9469-0b79ffcc1149")
 	)
 	(wire
 		(pts
@@ -2481,7 +2604,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1311be31-84b1-4da6-898d-cf423a5d5fef")
+		(uuid "11f2edaa-0216-4336-8101-2b9d465673d1")
 	)
 	(wire
 		(pts
@@ -2491,13 +2614,13 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0b29dcad-f91c-4e37-8a9a-56592e95cd2b")
+		(uuid "c27b3f4d-b81d-443d-83be-ee6c95940b91")
 	)
 	(junction
 		(at 129.54 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e0248d83-27b0-4f79-bd2b-c6ad1c3d8505")
+		(uuid "e4390e72-cb8d-4327-81ab-bd39a2d684ef")
 	)
 	(wire
 		(pts
@@ -2507,13 +2630,13 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ad3c0130-f89b-4ddb-807a-6933b97b8ae0")
+		(uuid "5a7b2556-1ba4-4347-94cb-2d4539281f5a")
 	)
 	(junction
 		(at 129.54 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a0eb6a56-8c1a-4e3d-855a-e40b043ceec0")
+		(uuid "67b94891-2cbc-481f-aa9d-fa3fe517198d")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2525,7 +2648,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d308c025-5148-4b52-9f62-c2a06aa25d56")
+		(uuid "cfafe721-2202-4fcd-ba84-66b0a03bb3cb")
 		(property "Reference" "#PWR8304"
 			(at 129.54 115.57 0)
 			(hide yes)
@@ -2582,7 +2705,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e5da9cb-04eb-4c93-bffb-505f8b1bfb18")
+			(uuid "29d3ed4d-d257-47f0-ab5f-8f81fcf9ca77")
 		)
 		(instances
 			(project "Front Sensor"
@@ -2601,7 +2724,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2775c5df-366c-4f01-b786-4663c448ed1e")
+		(uuid "735a38e0-cbc8-48d2-912e-536df6a4e52d")
 	)
 	(wire
 		(pts
@@ -2611,7 +2734,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b0f896f0-fda0-4523-bb4a-b4725d2c4eb0")
+		(uuid "0401c813-4c9b-4eb3-a485-4aa6f2a4e613")
 	)
 	(wire
 		(pts
@@ -2621,7 +2744,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7ce1e545-b6c6-4b70-86a6-708b3afbc307")
+		(uuid "fdfb2cb2-74f9-4008-87cd-8fe21ab006b8")
 	)
 	(wire
 		(pts
@@ -2631,7 +2754,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3f6d4872-f574-42d5-ac38-f7451fce2836")
+		(uuid "8b60f2f2-8f93-44aa-a0d3-c4c4ead04f90")
 	)
 	(wire
 		(pts
@@ -2641,19 +2764,19 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "63785067-e6a3-40d9-8a3d-a34950ef022e")
+		(uuid "e66b48d4-dade-4532-a9ef-14439ac52229")
 	)
 	(junction
 		(at 173.99 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "63454cb1-f376-44f7-aa79-819729b0b752")
+		(uuid "bffd5c26-7997-4e6e-863b-c0fb35524e74")
 	)
 	(junction
 		(at 173.99 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "de23b024-82af-45e4-a97e-8dedb72195cc")
+		(uuid "b2c87d2f-dd9e-43db-84de-f45e50ffab2e")
 	)
 	(wire
 		(pts
@@ -2663,13 +2786,13 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0d83573a-fcf5-4e7e-8ade-5746a4da7a66")
+		(uuid "f29cbd60-b9b2-416d-923f-6f965c4a5b50")
 	)
 	(junction
 		(at 173.99 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "db5017bd-1280-49f2-9c07-b02a27c57f05")
+		(uuid "5be5a843-0c88-4b76-acd3-fcb11781e1f5")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2681,7 +2804,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "101dfbe8-3776-4edf-8813-ffffbaade713")
+		(uuid "616425f5-209c-468a-9b40-8a216983f3be")
 		(property "Reference" "#PWR8305"
 			(at 173.99 110.49 0)
 			(hide yes)
@@ -2738,7 +2861,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6c591868-d4de-45e0-85ba-6499c99d2281")
+			(uuid "2c055612-1397-4c21-b6cc-62b0b18da3c0")
 		)
 		(instances
 			(project "Front Sensor"
@@ -2757,7 +2880,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f42aaed5-e126-4d9b-be3f-a561e5da31ac")
+		(uuid "34798e38-0f3e-45af-a45b-c1f7fe685394")
 	)
 	(wire
 		(pts
@@ -2767,7 +2890,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8f285e83-5d22-4779-b45b-ec7a5ddda2da")
+		(uuid "bbddb711-3a4c-4004-8c9f-88b46cd9884d")
 	)
 	(wire
 		(pts
@@ -2777,13 +2900,13 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "094316e4-978b-4e88-8893-b78d1df41e04")
+		(uuid "66cee08b-37f9-4deb-ae81-82e45bc23343")
 	)
 	(junction
 		(at 173.99 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bb6d949d-6c3d-4137-b786-0a2a230a8e81")
+		(uuid "c1179048-d3b4-4f0b-8f3b-634c7dd027c6")
 	)
 	(wire
 		(pts
@@ -2793,7 +2916,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c0c52098-6dab-4950-826e-faf76b78783d")
+		(uuid "266e1a21-9a5e-48f2-82bb-a11703616295")
 	)
 	(label "AVDD"
 		(at 179.07 87.63 0)
@@ -2803,7 +2926,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "86a9180e-ce31-4400-acab-4e5cb9258469")
+		(uuid "61a930d2-3a1e-448c-b88e-badca78098d9")
 	)
 	(wire
 		(pts
@@ -2813,7 +2936,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "411c191c-5e11-4ce0-af8a-aef96393166a")
+		(uuid "6abadd4b-0011-4d33-be52-f5ae7db8145e")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -2825,7 +2948,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f1ff023b-8db3-41a4-9f50-1c683ce08822")
+		(uuid "e129edb3-c5cc-4340-ab90-601764ac6939")
 		(property "Reference" "#PWR8306"
 			(at 181.61 92.71 90)
 			(hide yes)
@@ -2882,7 +3005,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a9b93287-fe03-4a2e-a553-c6849a21861d")
+			(uuid "9a28b06d-0fc6-425d-a166-952308e73712")
 		)
 		(instances
 			(project "Front Sensor"
@@ -2903,7 +3026,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ddb215d2-2350-4afe-9ee2-7fc558fa5f17")
+		(uuid "070b626e-fc61-4457-9353-dc87dacfe85d")
 		(property "Reference" "R8301"
 			(at 179.07 115.57 90)
 			(show_name no)
@@ -2971,10 +3094,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "48243eea-c2e1-4e0f-922c-0e9aa0e6138c")
+			(uuid "fbe5ff6c-a5a7-473c-96f1-098022100101")
 		)
 		(pin "2"
-			(uuid "41d24f44-d8b0-4143-999b-f71ebd3166e8")
+			(uuid "296e3f36-2281-4e45-9a1d-a1f34b7041d2")
 		)
 		(instances
 			(project "Front Sensor"
@@ -2993,7 +3116,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "974e47ce-70e9-4913-a463-f0eab9730251")
+		(uuid "9b673387-13d5-4852-8f38-347bd45330b2")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -3005,7 +3128,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a3be6b53-c103-44c6-924f-cf06206005c6")
+		(uuid "a71ab1f8-30bf-4147-893f-e0d929b12abb")
 		(property "Reference" "#PWR8307"
 			(at 187.96 118.11 90)
 			(hide yes)
@@ -3062,7 +3185,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "763cd801-c164-4377-a5b6-9813c53f5be4")
+			(uuid "b6268b97-a7aa-4f43-b172-fa61b3150882")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3081,7 +3204,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a9cd92df-b29c-425d-9a3e-d68f5a52db93")
+		(uuid "ca84746e-5d27-455f-93d7-7a6f8eb75fb4")
 	)
 	(wire
 		(pts
@@ -3091,7 +3214,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f9253b00-a127-4f35-9736-109b1d38baa6")
+		(uuid "1015c0fb-fb6a-42e0-a4da-cdf8d6ac7e3f")
 	)
 	(wire
 		(pts
@@ -3101,7 +3224,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fbc4fc0a-76ce-4efd-b493-3128dc91f4e2")
+		(uuid "2b3693da-6dba-4938-af1a-0a2ad67d7bd6")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -3113,7 +3236,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "9d2b6112-c9d2-4fa7-b85d-582eef5e0eb4")
+		(uuid "565ad83c-0ae0-41d9-a686-292c254f3435")
 		(property "Reference" "#PWR8308"
 			(at 190.5 50.8 0)
 			(hide yes)
@@ -3169,7 +3292,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cb0de181-4ce7-42d1-8a61-c3d9ba5ff524")
+			(uuid "12914186-66d4-4e5c-881a-f0dd2533a249")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3188,13 +3311,13 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1f7e63c7-022a-46ad-b426-977ee4de2fcb")
+		(uuid "f59ced85-4d1a-4280-be2a-ea67e5f5099e")
 	)
 	(junction
 		(at 190.5 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0ca7c82b-0e30-4383-bf11-049c3d3424e3")
+		(uuid "b2531788-77ba-4d02-8a03-e234d32fac3d")
 	)
 	(symbol
 		(lib_id "JLCImport:BLM18PG121SN1D")
@@ -3206,7 +3329,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0808a6f6-cc67-4c97-9546-162cc7024e57")
+		(uuid "c424bef0-174a-4521-9985-c52b1f1317d0")
 		(property "Reference" "L8301"
 			(at 199.39 49.53 0)
 			(show_name no)
@@ -3274,10 +3397,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a55e9c4a-12d2-4ad4-b277-9e0ccab49637")
+			(uuid "c286ba0f-a6bd-4ecc-bfc3-fafbaa8f89c7")
 		)
 		(pin "2"
-			(uuid "7d4552ff-478d-47d8-9746-93746e2282c6")
+			(uuid "c5c7c793-74b6-4ca2-a24d-b80cc34bb1d0")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3296,7 +3419,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d3297487-7a40-46b5-abd9-a262ca06c100")
+		(uuid "88aecabf-05aa-4ac0-b7df-83ed1d913e06")
 	)
 	(wire
 		(pts
@@ -3306,7 +3429,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1e618319-626a-4331-8501-26e41f16f842")
+		(uuid "9a89ec90-3a69-49e1-a2cc-6e083e1bc771")
 	)
 	(wire
 		(pts
@@ -3316,7 +3439,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "784fd5ab-e448-41ff-9472-4e3c8f4b93c8")
+		(uuid "72b8e24d-f7b5-4f90-9df0-dc65b060aebc")
 	)
 	(wire
 		(pts
@@ -3326,7 +3449,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "95a31f63-59df-4c08-84eb-4d8afae5a094")
+		(uuid "2ebf19a7-cf00-468b-be1d-a1d73ea07d16")
 	)
 	(label "AVDD"
 		(at 238.76 53.34 0)
@@ -3336,7 +3459,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "018076fe-cf6e-4281-ba4c-8d4341f99ca5")
+		(uuid "bde6ce64-3430-4784-b5b7-615318867692")
 	)
 	(wire
 		(pts
@@ -3346,13 +3469,13 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9b84aedf-71a5-4506-a789-4fced803d8bf")
+		(uuid "0f0ba79c-cd7c-4af1-9c5b-7ab7e7e8a084")
 	)
 	(junction
 		(at 175.26 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ab83e6dd-a5c6-4361-9948-b23a64c7d979")
+		(uuid "41bd855f-6cc0-4389-8652-4797973cd776")
 	)
 	(wire
 		(pts
@@ -3362,7 +3485,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "54d7b2a3-e844-4b9c-9abf-5011bf27702b")
+		(uuid "ee97c68f-ce60-42c5-9f79-a0d4cec7c2bd")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -3374,7 +3497,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "988ded07-2418-4706-9283-a805767ca32b")
+		(uuid "c0b2e664-c5ac-4d24-a4f4-041285f1bed9")
 		(property "Reference" "C8303"
 			(at 176.53 59.69 0)
 			(show_name no)
@@ -3442,10 +3565,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b9b96658-58d0-4c19-ad8a-ffb582e82f79")
+			(uuid "06b59f58-85d9-408a-b360-efc8d1c43825")
 		)
 		(pin "2"
-			(uuid "ad47c4c7-6af9-41dc-abce-ac7def1f5d0d")
+			(uuid "8fd541c2-70f0-4707-9db0-6af728ae7484")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3466,7 +3589,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "dc9f6c41-87bb-467e-884a-07d66a2f5e8b")
+		(uuid "101c05ab-bcd6-4a02-ba9d-d71686bd1018")
 		(property "Reference" "#PWR8309"
 			(at 175.26 64.77 0)
 			(hide yes)
@@ -3523,7 +3646,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "571b1e39-7f72-44e0-961c-9466c5e0b5c2")
+			(uuid "abfb44d4-464b-4a2c-845f-504a0029bbca")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3538,7 +3661,7 @@
 		(at 160.02 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e0d78aa8-6285-4d7a-b2ac-e24b7ac391d2")
+		(uuid "d2bd4510-d574-447a-87a9-c5cf7b4e05a4")
 	)
 	(wire
 		(pts
@@ -3548,7 +3671,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c187daf8-ad12-4891-adac-b5bc1ec82488")
+		(uuid "cdd2aeca-bcc6-4386-bdd0-0ab837938bac")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -3560,7 +3683,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "71c487c7-eac6-4623-a1e5-65aef145dd38")
+		(uuid "df3e7e38-72d8-4bad-bc00-09de21e623c9")
 		(property "Reference" "C8304"
 			(at 161.29 59.69 0)
 			(show_name no)
@@ -3628,10 +3751,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a819de3f-b5f0-4634-96cc-68055f006d4a")
+			(uuid "6a782c0f-ec1c-497d-807d-f0890a2985c3")
 		)
 		(pin "2"
-			(uuid "4c4575ec-203b-4177-b93f-950eb763ab6d")
+			(uuid "c5f0562f-761a-4d04-b0db-0fa1d0b1cc53")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3652,7 +3775,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "37b0ece1-209d-414e-998c-85e3df1765d1")
+		(uuid "a57efa80-613b-4d5c-9ccf-c2d6a764b915")
 		(property "Reference" "#PWR8310"
 			(at 160.02 64.77 0)
 			(hide yes)
@@ -3709,7 +3832,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "b4768834-af26-4793-8d7f-568c357b4ec0")
+			(uuid "4906b465-da0a-4113-9917-e6b26458714d")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3724,7 +3847,7 @@
 		(at 215.9 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ffb5f3d4-6802-423b-9172-ea846eeed759")
+		(uuid "3c205672-d12f-4348-bb5b-151fa3c8a945")
 	)
 	(wire
 		(pts
@@ -3734,7 +3857,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "409bfca3-61f8-4ec4-9b08-7c3f1780f4a6")
+		(uuid "1e092f5c-e43b-41a8-a2f7-27c653088545")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -3746,7 +3869,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1efa93fb-1d22-4c87-8891-f9cfe78a24f3")
+		(uuid "28dc6336-f8b9-4dd9-a061-a61921c978b5")
 		(property "Reference" "C8301"
 			(at 217.17 59.69 0)
 			(show_name no)
@@ -3814,10 +3937,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "cdc94c6a-5bf3-476e-9df3-1dd93bdcfac7")
+			(uuid "472362a7-48f4-4d25-b621-400738d675bc")
 		)
 		(pin "2"
-			(uuid "bd80ff55-63e4-49f3-9307-27c4712b52ff")
+			(uuid "b62695d3-3939-4046-87ce-3616a6035de3")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3838,7 +3961,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "48089ba1-9f4b-425b-9087-b5e5edddfd17")
+		(uuid "deb1c441-7891-442a-a8a3-1d5e42ce7661")
 		(property "Reference" "#PWR8311"
 			(at 215.9 64.77 0)
 			(hide yes)
@@ -3895,7 +4018,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "dc744496-ef87-473f-8431-280b153cf6e1")
+			(uuid "d79839bd-07c4-4aad-90a6-5771c4f9af6f")
 		)
 		(instances
 			(project "Front Sensor"
@@ -3910,7 +4033,7 @@
 		(at 231.14 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ff444d67-ee30-408b-84a5-c9896d3662e3")
+		(uuid "aefb7b26-90cd-40af-b24c-6c1d9029306c")
 	)
 	(wire
 		(pts
@@ -3920,7 +4043,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c3bbff9d-7f17-4f60-9dfe-8090717432f1")
+		(uuid "562e91e2-5658-4783-8fc9-8f3f6b92d0e6")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -3932,7 +4055,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0e237ac6-ded1-46ab-8697-2855a397d60b")
+		(uuid "bf9b989d-d56f-4aa1-8a08-2681430c1195")
 		(property "Reference" "C8302"
 			(at 232.41 59.69 0)
 			(show_name no)
@@ -4000,10 +4123,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a6e905c1-9120-42b4-8ac2-c88e342b2ff2")
+			(uuid "f242eaa2-9818-4d23-b5cf-61d8be9b5084")
 		)
 		(pin "2"
-			(uuid "23a404eb-ebca-49a5-87c3-ef9a925fdf77")
+			(uuid "56089448-739a-4884-849d-69d91f0e6856")
 		)
 		(instances
 			(project "Front Sensor"
@@ -4024,7 +4147,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3b5e8e21-3725-4740-abad-3547d1d900b7")
+		(uuid "19f3acf3-2137-4271-9789-c15ec6d9b0b5")
 		(property "Reference" "#PWR8312"
 			(at 231.14 64.77 0)
 			(hide yes)
@@ -4081,7 +4204,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4244bcdf-4cb3-493f-a6cf-0c9fe0169450")
+			(uuid "8a6613b5-d3f6-4216-be78-17d8148a29b3")
 		)
 		(instances
 			(project "Front Sensor"
@@ -4102,7 +4225,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "88501585-5c47-4609-bae9-e39b74ee48c2")
+		(uuid "164648d8-7c42-4756-ab2b-e97e2457f6c3")
 		(property "Reference" "#FLG8313"
 			(at 160.02 53.34 0)
 			(hide yes)
@@ -4159,7 +4282,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e3ef939-acb6-42e4-9546-be04ddbd7b94")
+			(uuid "b2b45f98-e7b9-4130-b260-6744ea117e77")
 		)
 		(instances
 			(project "Front Sensor"
@@ -4180,7 +4303,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "2bf67083-d5b7-4d2e-8cd9-7f152bc6ec8a")
+		(uuid "ef9f298f-fcc4-4797-98b6-6adada526c0d")
 		(property "Reference" "#FLG8314"
 			(at 62.23 116.84 0)
 			(hide yes)
@@ -4237,7 +4360,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "336f0be0-7e96-48e8-95c1-8cfa5d3ff9f3")
+			(uuid "93619317-274a-48ad-8c40-0ee759d5b4f9")
 		)
 		(instances
 			(project "Front Sensor"
@@ -4257,7 +4380,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "19ac3772-a408-424e-8014-8a5b20c772a5")
+		(uuid "b946e90e-bee0-4e6f-9c0d-acdc42d87f2a")
 	)
 	(text "OOMWOO front ToF board (rev 2, 2026-10-27). One design, fitted twice: left and right,\neach aimed 30 deg off centre. The main board holds the I2C (2.2k), INT, LPn (47k) and I2C_RST (47k)\nresistors, so this board carries none of them. Refs 83xx: unique on the OOMWOO panel."
 		(exclude_from_sim no)
@@ -4268,7 +4391,350 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "aca66cbc-4975-4fba-99bf-f2680d6062e6")
+		(uuid "c5013496-28ed-455a-8ded-b462db101f77")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 152.4 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "51290921-1a7b-4a84-9a44-0e3222a07d64")
+		(property "Reference" "H8301"
+			(at 154.94 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M2"
+			(at 154.94 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad"
+			(at 152.4 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "M2 mounting hole, plated pad to GND"
+			(at 152.4 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bdf4f88c-89f9-4c6d-a58a-ad23420c4962")
+		)
+		(instances
+			(project "Front Sensor"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "H8301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 154.94) (xy 152.4 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54b8ced4-678f-4d32-a2d3-b8f51f67c73e")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4321e7b9-f2b3-4226-abb5-0ba14681b094")
+		(property "Reference" "#PWR8315"
+			(at 152.4 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 152.4 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d742d24-45e1-4870-8b85-2e9cc78cca1d")
+		)
+		(instances
+			(project "Front Sensor"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR8315")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 167.64 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "2a946c38-04d5-4625-a1ea-b0dce6bd39fd")
+		(property "Reference" "H8302"
+			(at 170.18 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M2"
+			(at 170.18 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad"
+			(at 167.64 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "M2 mounting hole, plated pad to GND"
+			(at 167.64 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a0621131-43f8-424f-ad83-dcb83bf902bd")
+		)
+		(instances
+			(project "Front Sensor"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "H8302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 167.64 154.94) (xy 167.64 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81b554f2-9976-4db7-ac2b-b4d08ef38353")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 167.64 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a586a8a-6fcc-4564-bf33-741a804e25e8")
+		(property "Reference" "#PWR8316"
+			(at 167.64 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 167.64 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 167.64 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2572972-6c0a-4e16-aa66-7966a7d644f2")
+		)
+		(instances
+			(project "Front Sensor"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR8316")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "Mounting: 2x M2 (pads to GND)"
+		(exclude_from_sim no)
+		(at 149.86 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ebfacc4e-ea17-42a1-b36c-953113c60a93")
 	)
 	(sheet_instances
 		(path "/"

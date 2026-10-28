@@ -31,7 +31,7 @@ Use a pin 1 to pin 1 cable (pre-made SH cables are sold both ways; Qwiic cables 
 ## PCB notes (for layout)
 
 - The PCB file in this folder is the old combined layout. Run *Update PCB from Schematic* before layout work.
-- Keep the board small, with a mounting hole or slot for the 30° bracket. The sensor looks out of the board face; the connector exits behind it.
+- Keep the board small. H8301/H8302: two M2 holes (`MountingHole_2.2mm_M2_Pad`, pads to GND, not in the BOM) for the 30° bracket; M2 keeps the board narrow (M3 pads would set most of its width). The sensor looks out of the board face; the connector exits behind it.
 - The sensor needs a clear view through the bumper window: no copper, silkscreen or part above it, and a cover window from a material on ST's cover-glass list.
 - Reference designators are 83xx, so they stay unique on the OOMWOO panel. The panel has two copies of this board; let KiKit (or the panel tool) rename references per copy so the assembly files stay unique.
 

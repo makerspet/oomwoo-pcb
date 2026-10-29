@@ -12,7 +12,7 @@ Removed compared with `main`:
 - the board fan (FAN1, Q3, D17, R87) and the left side-proximity connector (SIDE-L1)
 
 Moved or added:
-- front ToF boards (2x VL53L7) now on the STM32: I2C on I2C4 (shared with the side boards), PC0 = VL-I2C-RESET, PD12 = VL-L-INT, PC8 = VL-R-INT, PB13 = VL-L-LPn, PE8 = VL-R-LPn
+- front ToF boards (2x VL53L7) now on the STM32: I2C on I2C4 (shared with the side boards), PC0 = VL-I2C-RESET, PD12 = VL-L-INT, PB13 = VL-L-LPn
 - USB-C CC1/CC2 to the STM32 UCPD (PB6/PB4) with ESD (D7101); 5V_EN moved from PB4 to PB5
 - VBUS sense divider to PA7 (ADC); Q7101/Q7102 block the phone's VBUS from back-feeding the robot 5 V (the TMI6240 doesn't block reverse current)
 - the six mounting standoffs (MP1-MP6) moved to the POWER sheet
@@ -27,7 +27,12 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
 - carpet: LO AC-coupled to the Q18 gate (C7303)
 - LIDAR2: right-angle 1x5 header (PZ254R-11-05P)
 - STM32_DEBUG1 (1x5 0.1", PZ254V-11-05P) and JTAG1 (2x7 1.27 mm SMD, STDC14 pinout, C55099228): vertical, reached from the top under a small removable cover (changed 2026-10-28)
-- spare I/O pads J7301 (2x6, do not fit); R7306 1k on PB10; R7307 47k pull-up on VL-R-LPn
+- spare I/O pads J7301 (2x11, do not fit); R7306 1k on PB10; R7307 47k pull-up on VL-R-LPn
+- pins freed (2026-10-28), details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1):
+  - LiDAR rail enable joined ~VM-VBAT-EN (PE10)
+  - one ToF interrupt line (PD12) for both VL53L7s and the side sensor; the right LPn is held up by R7307
+  - IMU on I2C4 (R18/R72 not fitted); its FSYNC (100k pull-down R7601) and INT2 go to J7301
+  - PWR_EN on PD7, so PC10/PC11 are a spare UART on J7301; R7315 pulls PA9 up (UCPD dead-battery Rd on CC1)
 - BOM: all 100 nF → 100nF/50V (C1591), 10uF/6.3V → 10uF/10V (C19702)
 - new DC-044A-20A footprint and 3D model in `../main/JLCImport.pretty` / `JLCImport.3dshapes`
 - 3.3 V and 5 V bucks (U21, U22): TPS54560B replaces the out-of-stock AP64501, with SS56 catch diodes (D7401/D7402), RT resistors (R7401/R7402), a U21 EN divider (R7403/R7404) and new compensation; BAT-VCC input caps are now 10 µF/50 V 1206

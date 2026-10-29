@@ -24,7 +24,7 @@ ZX-SH1.0-7PWT (C7430449): JST SH compatible, 1.0 mm pitch, SMD, right angle. The
 | 1 | 3.3 V | |
 | 2 | GND | |
 | 3 | IR_OUT | PD6 (USART2 RX) |
-| 4 | GPIO1 (interrupt) | PE2 |
+| 4 | GPIO1 (interrupt) | PD12, shared with the front ToF interrupts (open drain) |
 | 5 | XSHUT | PE3 |
 | 6 | SCL | I2C4 SCL (PC6) |
 | 7 | SDA | I2C4 SDA (PC7) |
@@ -32,7 +32,7 @@ ZX-SH1.0-7PWT (C7430449): JST SH compatible, 1.0 mm pitch, SMD, right angle. The
 
 Use a pin 1 to pin 1 cable and mark pin 1 on the silkscreen of both boards.
 
-The VL53L0X starts at I2C address 0x52, the same as the two front VL53L7s on the same bus. At boot, hold both VL53L7 LPn pins low (that turns their I2C off), move the VL53L0X to a new address, then bring the front sensors up one at a time. XSHUT isn't needed for this; it stays wired for resetting a stuck sensor and for hardware standby.
+The VL53L0X starts at I2C address 0x52, the same as the two front VL53L7s on the same bus. Only the left VL53L7's LPn is on the MCU, so XSHUT takes part in addressing: at boot, hold the left LPn and XSHUT low, so only the right VL53L7 answers, and move it to a new address. Release the left LPn and move the left sensor, then release XSHUT; the VL53L0X can keep 0x52. XSHUT also resets a stuck sensor.
 
 ## PCB notes (for layout)
 

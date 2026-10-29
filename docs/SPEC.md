@@ -527,17 +527,24 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - dropped: CM4/CM5, SD card, M.2 + its buck, MIPI cameras, speaker amp (no buzzer; LEDs for debug), water pump, front illumination, the phone's dedicated 5 V buck, the board fan (the phone stays cool), the left side-proximity sensor (OOMWOO One has a right one only)
 - kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
 - the six mounting standoffs (MP1-MP6) moved from the removed M.2 sheet to the POWER sheet
-- spare STM32 pins: PA10, PC9, PC11, PE4, PE5, PE6 (PB15 became the DC_IN sense)
+- spare STM32 pins (2026-10-28): PA8, PA9, PA10, PC8, PC9, PC10, PC11, PD4, PD9, PE2, PE4, PE5, PE6, PE8, all on J7301; PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
+  - the LiDAR rail enable joined ~VM-VBAT-EN (PE10): the LiDAR is on whenever the motor rail is (PD9 freed)
+  - IMU FSYNC and INT2 go to J7301 instead of the MCU; FSYNC keeps a 100k pull-down (R7601) (PD4, PD7 freed)
+  - one shared open-drain ToF interrupt (VL-L-INT, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
+  - only the left VL53L7 LPn on the MCU; the right one is held up by R7307 (PE8 freed). Addressing uses the left LPn plus the side sensor's XSHUT
+  - the IMU moved from I2C2 to I2C4; its own pull-ups R18/R72 are not fitted (PA8, PA9 freed). PA9 keeps a 10k pull-up (R7315): it is the UCPD dead-battery control for CC1
+  - PWR_EN moved from PC10 to PD7, freeing the PC10/PC11 UART pair
+  - SWO (PB3) on JTAG1 counts as a spare when not tracing; the cliff and bumper LED enables stay separate (cliff LEDs may be modulated, bumper LEDs stay on)
 - firmware pin map and rules: [firmware spec](https://github.com/makerspet/oomwoo-io-firmware/blob/main/docs/SPEC.md)
 - USB-C: the phone is the USB host (the STM32G4 USB is device-only). CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default, so the phone becomes host and source; a PD power-role swap lets the robot charge the phone while it stays host (phone support varies; phones without it alternate charging and data)
 - the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q7101 (AO3401) + Q7102 (AO3400) disconnect the robot 5 V from VBUS unless PWR_EN is high
-- VBUS lockout: PWR_EN (PC10) reaches the TMI6240 and Q7102 only through R7312 (10k) as PWR_EN_G. Q7305 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R7313/R7314 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q7306 keeps Q7305 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.
+- VBUS lockout: PWR_EN (PD7) reaches the TMI6240 and Q7102 only through R7312 (10k) as PWR_EN_G. Q7305 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R7313/R7314 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q7306 keeps Q7305 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J7301 (0.1" 2x6, do not fit, pads only): 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 I2C4 SCL/SDA, 5-10 PA10, PE6, PC9, PC11, PE4, PE5, 11/12 GND
+- spare I/O header J7301 (0.1" 2x11, do not fit, pads only): 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 I2C4 SCL/SDA (shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7-18 PA10, PE6, PC9, PE4, PE5, PD9, PE8, PD4, PA8, PA9, PC8, PE2 (PD9 and PE8 are ADC-capable), 19/20 IMU FSYNC/INT2, 21/22 GND
 - PB10 (3.3V_EN) drives the sensor-rail switch through R7306 (1k), so C64 (10 µF gate-drain soft start) doesn't load the pin directly
-- VL-R-LPn has a 47k pull-up (R7307), like VL-L-LPn. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
+- VL-R-LPn has a 47k pull-up (R7307) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U7501 left, U7502 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
 
@@ -609,7 +616,7 @@ Power rails (current schematic):
 | USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
 | VUS ≈ 14.5 V | MT3608 boost | carpet sensor | with VCC-5V-REG |
 | VM-VBAT | BAT-VCC via Q1 AO4407C | wheels, brushes, fan | WD_OK AND ~VM-VBAT-EN |
-| VM-5V-LIDAR | VCC-5V-REG via Q7002 AO3401 | whole LiDAR, laser included | WD_OK AND LiDAR-EN (low = on) |
+| VM-5V-LIDAR | VCC-5V-REG via Q7002 AO3401 | whole LiDAR, laser included | WD_OK AND ~VM-VBAT-EN (low = on; the same pin as the motor rail since 2026-10-28) |
 | VM-5V-WATER-PUMP | VCC-5V-REG via Q8 AO3401 | water pump | WD_OK AND WATER-PUMPU-CTRL (low = on) |
 
 RC charge-pump watchdog (WATCHDOG sheet):

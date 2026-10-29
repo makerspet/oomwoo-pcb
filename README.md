@@ -98,6 +98,10 @@ Compute module headers should expose
 
 This board should be designed using an open-source PCB tool (KiCad seems like a good choice).
 
+## No manufacturing support
+
+These designs are shared as-is, for reference and for your own work. I don't support manufacturing them: I can't help with ordering (JLCPCB or otherwise), out-of-stock parts, part substitutions, or troubleshooting boards built by others.
+
 ## License
 
 [Apache License 2.0](LICENSE).

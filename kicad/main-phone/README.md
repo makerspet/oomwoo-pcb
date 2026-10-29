@@ -20,7 +20,7 @@ Moved or added:
 Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1)):
 - power control: charger rail-hold (Q7303, R7305) and a ~4-9 s hardware off timer (U7301, Q7301, Q7302); PA15 goes through R7301 (1k)
 - 20 V input: SMAJ22A TVS (D7301), 10 µF/50 V 1206 DC_IN capacitors, low-profile DC-044A-20A barrel jack (7.2 mm tall)
-- bumpers: 2x ITR9606 photo-interrupters on the board (BUMP-R1, BUMP-L1) in parallel with the harness bumpers (backup); Q7304 switches both emitters
+- bumpers: 2x ITR9606 photo-interrupters on the board (BUMP-R1, BUMP-L1); Q7304 switches both emitters
 - DC_IN sense: R7310/R7311 (/11) + C7304 to PB15
 - VBUS lockout (Q7305, Q7306, R7312-R7314): the robot 5 V can't turn on while the phone sources VBUS
 - the unused sheet files copied from `main` (CM5, M.2, MIPI camera, speaker, water pump) are deleted
@@ -38,6 +38,7 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
 - 3.3 V and 5 V bucks (U21, U22): TPS54560B replaces the out-of-stock AP64501, with SS56 catch diodes (D7401/D7402), RT resistors (R7401/R7402), a U21 EN divider (R7403/R7404) and new compensation; BAT-VCC input caps are now 10 µF/50 V 1206
 - front IR receivers moved onto the board: U7501 (left) and U7502 (right), IRM-V838M3-C side-looking SMD, each with 100 Ω (R7501/R7502) + 10 µF (C91/C90). The IR-F1/IR-F2 connectors are gone. Place both at the board's front edge, lenses facing forward, ~10 mm apart, with a baffle between them
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT) to the [front ToF boards](../front-sensors/README.md)
+- cliff sensors (2026-10-28): the Roomba harness (BUMP_CLIFF1, R30, R35) is replaced by six SH 4-pin vertical connectors (CLIFF-LF1 … CLIFF-RR1) for the [cliff sensor boards](../cliff-sensor/README.md); Q7701 switches all cliff LEDs from CLIFF_LED_EN (R7703 pull-down); new pull-ups R7701/R7702 for cliff LM (PD9) and RM (PE8)
 - SIDE-R1: JST SH 7-pin (ZX-SH1.0-7PWT) to the [side sensor board](../side-sensors/README.md) (VL53L0X + IRM-H638T), same pinout as before
 
 Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).

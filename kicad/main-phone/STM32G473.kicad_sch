@@ -7637,15 +7637,29 @@
 		)
 		(uuid "78869c50-0144-45fc-9f89-56fa28df47bd")
 	)
-	(label "SPARE-PD9"
+	(global_label "CLIFF-LM-Q+"
+		(shape input)
 		(at 272.415 162.56 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
-		(uuid "ab331e2e-e8cb-4c80-90a1-5dfedb034887")
+		(uuid "55101950-bc5d-4498-abc4-eea3d366ca59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 272.415 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(hierarchical_label "LiDAR-M-CTRL"
 		(shape output)
@@ -7724,15 +7738,29 @@
 		)
 		(uuid "00c36e6f-ba04-47b3-bfb0-65c3ec6c8f56")
 	)
-	(label "SPARE-PE8"
+	(global_label "CLIFF-RM-Q+"
+		(shape input)
 		(at 365.76 113.03 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "ef34391a-8757-476f-a026-aa98f3bdb351")
+		(uuid "931fcaf1-99b0-4ba5-9768-3e572cf210b6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 365.76 113.03 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
 	(hierarchical_label "USB_VBUS_SENSE"
 		(shape input)
@@ -23912,15 +23940,29 @@
 		)
 		(uuid "f6f14dfd-4711-40a5-ac73-165f8f8180fc")
 	)
-	(label "SPARE-PD9"
+	(global_label "CLIFF-LM-Q+"
+		(shape input)
 		(at 533.4 195.58 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
-		(uuid "add5a291-1820-4837-819e-cab39b9172f3")
+		(uuid "1ec5a538-2880-4adc-bde1-f82a8b69e105")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 533.4 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(wire
 		(pts
@@ -23932,15 +23974,29 @@
 		)
 		(uuid "9969f281-d0c4-428a-bb45-1de766eb98f5")
 	)
-	(label "SPARE-PE8"
+	(global_label "CLIFF-RM-Q+"
+		(shape input)
 		(at 510.54 198.12 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "b7214c93-7ab9-4943-92a7-31db1e41f0d4")
+		(uuid "1259680f-5ccb-4b73-bbb6-b11248e6e494")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 510.54 198.12 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
 	(wire
 		(pts
@@ -24280,7 +24336,7 @@
 			)
 		)
 	)
-	(text "J7301 spare I/O: 0.1in 2x11 pads, do not fit (zero height).\n1 VCC-3V3-REG (sensor rail), 2 VCC-5V-REG, 21/22 GND.\n3/4 I2C4 SCL/SDA (shared with the ToF, side sensor and IMU; 2.2k pull-ups).\n5/6 UART PC10 TX / PC11 RX (UART4 or USART3). 7-18 spare GPIO;\n12/13 PD9/PE8 are ADC-capable. 19/20 IMU FSYNC/INT2 (FSYNC: 100k\npull-down on the IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
+	(text "J7301 spare I/O: 0.1in 2x11 pads, do not fit (zero height).\n1 VCC-3V3-REG (sensor rail), 2 VCC-5V-REG, 21/22 GND.\n3/4 I2C4 SCL/SDA (shared with the ToF, side sensor and IMU; 2.2k pull-ups).\n5/6 UART PC10 TX / PC11 RX (UART4 or USART3). 7-18 spare GPIO, except\n12/13 = cliff LM/RM (PD9/PE8 ADC). 19/20 IMU FSYNC/INT2 (FSYNC: 100k\npull-down on the IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
 		(exclude_from_sim no)
 		(at 492.76 236.22 0)
 		(effects

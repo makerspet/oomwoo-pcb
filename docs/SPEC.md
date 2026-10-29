@@ -177,8 +177,8 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   <tr><th>Part</th><th>Voltage</th><th>Notes</th></tr>
 
   <tr>
-    <td>Cliff sensors</td><td></td>
-    <td>JST PHDR-16VS 2.0mm 8x2 housing, mates JST S16B-PHDSS, JST B16B-PADSS; fits iRobot Roomba 500 600 700 800 528 552 564 595 560 570 610 615 620 625 630 650</td>
+    <td>Cliff sensors</td><td>5 V LED, 3.3 V out</td>
+    <td>v1 (2026-10-28): six <a href="../kicad/cliff-sensor/README.md">cliff sensor boards</a> (IR333-A + PT333-3B, no lenses), JST SH 4-pin. Before: the Roomba 500-800 cliff/bumper harness (JST PHDR-16VS 2x8 housing)</td>
   </tr>
 
   <tr>
@@ -527,7 +527,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - dropped: CM4/CM5, SD card, M.2 + its buck, MIPI cameras, speaker amp (no buzzer; LEDs for debug), water pump, front illumination, the phone's dedicated 5 V buck, the board fan (the phone stays cool), the left side-proximity sensor (OOMWOO One has a right one only)
 - kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
 - the six mounting standoffs (MP1-MP6) moved from the removed M.2 sheet to the POWER sheet
-- spare STM32 pins (2026-10-28): PA8, PA9, PA10, PC8, PC9, PC10, PC11, PD4, PD9, PE2, PE4, PE5, PE6, PE8, all on J7301; PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
+- spare STM32 pins (2026-10-28): PA8, PA9, PA10, PC8, PC9, PC10, PC11, PD4, PE2, PE4, PE5, PE6, all on J7301 (PD9 and PE8 were freed too, then went to cliff sensors 5 and 6); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
   - the LiDAR rail enable joined ~VM-VBAT-EN (PE10): the LiDAR is on whenever the motor rail is (PD9 freed)
   - IMU FSYNC and INT2 go to J7301 instead of the MCU; FSYNC keeps a 100k pull-down (R7601) (PD4, PD7 freed)
   - one shared open-drain ToF interrupt (VL-L-INT, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
@@ -542,7 +542,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J7301 (0.1" 2x11, do not fit, pads only): 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 I2C4 SCL/SDA (shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7-18 PA10, PE6, PC9, PE4, PE5, PD9, PE8, PD4, PA8, PA9, PC8, PE2 (PD9 and PE8 are ADC-capable), 19/20 IMU FSYNC/INT2, 21/22 GND
+- spare I/O header J7301 (0.1" 2x11, do not fit, pads only): 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 I2C4 SCL/SDA (shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7-18 PA10, PE6, PC9, PE4, PE5, cliff LM (PD9), cliff RM (PE8), PD4, PA8, PA9, PC8, PE2, 19/20 IMU FSYNC/INT2, 21/22 GND
 - PB10 (3.3V_EN) drives the sensor-rail switch through R7306 (1k), so C64 (10 µF gate-drain soft start) doesn't load the pin directly
 - VL-R-LPn has a 47k pull-up (R7307) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U7501 left, U7502 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
@@ -567,9 +567,16 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### Bumpers (v1)
 
-- 2x ITR9606 slotted photo-interrupters on the main board (BUMP-R1, BUMP-L1), plus the harness bumpers (BUMP_CLIFF1 pins 11-16) wired in parallel as a backup; fit either or both.
-- ITR9606 emitters in series from VCC-5V-REG through R7308 (120 Ω, ~20 mA); the harness LED through R30 (330 Ω) on pins 15/16. Q7304 low-side switches both (BUMP-LED-K) from BUMPER_LED_EN (PC3, high = on, R7309 100k pull-down).
-- Detectors pull BUMP-L-Q+ (PA4) / BUMP-R-Q+ (PA5) low when light passes the slot (R48/R44 47k pull-ups). With both sensors fitted the lines are wired-OR: either one seeing light reads low.
+- 2x ITR9606 slotted photo-interrupters on the main board (BUMP-R1, BUMP-L1). The Roomba harness (BUMP_CLIFF1) and its backup bumpers are gone since 2026-10-28.
+- ITR9606 emitters in series from VCC-5V-REG through R7308 (120 Ω, ~20 mA). Q7304 low-side switches them (BUMP-LED-K) from BUMPER_LED_EN (PC3, high = on, R7309 100k pull-down).
+- Detectors pull BUMP-L-Q+ (PA4) / BUMP-R-Q+ (PA5) low when light passes the slot (R48/R44 47k pull-ups).
+
+### Cliff sensors (v1)
+
+- Six [cliff sensor boards](../kicad/cliff-sensor/README.md) on CLIFF-LF1, -RF1, -LR1, -RR1, -LM1, -RM1 (ZX-SH1.0-4PLT, SMD vertical): 1 VCC-5V-REG, 2 CLIFF-LED-K, 3 phototransistor collector, 4 GND.
+- Q7701 (AO3400) sinks all six LED cathodes from CLIFF_LED_EN (PC1, high = on, R7703 100k pull-down); ~25 mA per LED (150 Ω on each board), ~150 mA total.
+- 47k pull-ups to 3.3 V: R64 LF (PA3), R73 RF (PA1), R53 LR (PA2), R39 RR (PA0), R7701 LM (PD9), R7702 RM (PE8). LM/RM reach the MCU sheet through global labels and also appear on J7301 pins 12/13.
+- The cliff and bumper LED enables stay separate: modulate the cliff LEDs (LED-on minus LED-off cancels ambient light) while the bumper emitters stay on.
 
 ### Component height (v1)
 

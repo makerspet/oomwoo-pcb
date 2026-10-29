@@ -39,6 +39,7 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
 - front IR receivers moved onto the board: U7501 (left) and U7502 (right), IRM-V838M3-C side-looking SMD, each with 100 Ω (R7501/R7502) + 10 µF (C91/C90). The IR-F1/IR-F2 connectors are gone. Place both at the board's front edge, lenses facing forward, ~10 mm apart, with a baffle between them
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT) to the [front ToF boards](../front-sensors/README.md)
 - cliff sensors (2026-10-28): the Roomba harness (BUMP_CLIFF1, R30, R35) is replaced by six SH 4-pin vertical connectors (CLIFF-LF1 … CLIFF-RR1) for the [cliff sensor boards](../cliff-sensor/README.md); Q7701 switches all cliff LEDs from CLIFF_LED_EN (R7703 pull-down); new pull-ups R7701/R7702 for cliff LM (PD9) and RM (PE8)
+- rear docking IR and Hall boards (2026-10-28), on the SIDE-PROXI sheet: REAR-IR1 (PC8 left, PC9 right), HALL-BIN1 (PE4) and HALL-TOWER1 (PE5) with 47k pull-ups R7801/R7802; all ZX-SH1.0-4PLT, connected through global labels
 - SIDE-R1: JST SH 7-pin (ZX-SH1.0-7PWT) to the [side sensor board](../side-sensors/README.md) (VL53L0X + IRM-H638T), same pinout as before
 
 Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).

@@ -536,7 +536,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
   - the IMU moved from I2C2 to I2C4; its own pull-ups R18/R72 are not fitted (PA8, PA9 freed). PA9 keeps a 10k pull-up (R7315): it is the UCPD dead-battery control for CC1
   - PWR_EN moved from PC10 to PD7, freeing the PC10/PC11 UART pair
   - SWO (PB3) on JTAG1 counts as a spare when not tracing; the cliff and bumper LED enables stay separate (cliff LEDs may be modulated, bumper LEDs stay on)
-- firmware pin map and rules: [firmware spec](https://github.com/makerspet/oomwoo-io-firmware/blob/main/docs/SPEC.md)
+- firmware pin map and rules: [firmware spec](https://github.com/makerspet/oomwoo-firmware/blob/main/docs/SPEC.md)
 - USB-C: the phone is the USB host (the STM32G4 USB is device-only). CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default, so the phone becomes host and source; a PD power-role swap lets the robot charge the phone while it stays host (phone support varies; phones without it alternate charging and data)
 - the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q7101 (AO3401) + Q7102 (AO3400) disconnect the robot 5 V from VBUS unless PWR_EN is high
 - VBUS lockout: PWR_EN (PD7) reaches the TMI6240 and Q7102 only through R7312 (10k) as PWR_EN_G. Q7305 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R7313/R7314 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q7306 keeps Q7305 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.

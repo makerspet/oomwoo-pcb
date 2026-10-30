@@ -16,7 +16,7 @@ Part of [OOMWOO open-source robot vacuum](https://github.com/makerspet/oomwoo) p
 
 <img width="1335" height="815" alt="oomwoo_main_pcb_placement" src="https://github.com/user-attachments/assets/967f562d-f45b-44db-834b-56e3c3d44b5e" />
 
-Get [MCU firmware](https://github.com/makerspet/oomwoo-io-firmware/).
+Get [MCU firmware](https://github.com/makerspet/oomwoo-firmware/).
 
 ## Two boards
 

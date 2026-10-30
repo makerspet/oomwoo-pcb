@@ -343,8 +343,9 @@ Net spec
 ## LiDAR pinouts
 
 On the main board (current schematic):
-- LIDAR1: JST GH 1.25 mm socket for the LDROBOT LD14P; MOTOR-CTRL through a 1k series resistor (R7008) so a hung MCU can't back-power an unpowered LiDAR
-- LIDAR2: 0.1" 1x4 male pin header (XFCN PZ254V-11-04P) for other 2D LiDARs via jumper wires: 1 LiDAR RX, 2 GND, 3 MOT- (low-side switched by Q20), 4 VM-5V-LIDAR. On the v1 board it is a right-angle 1x5 (PZ254R-11-05P, pin 5 unused), the same part as the STM32 debug header
+- LIDAR1: JST GH 1.25 mm socket for the LDROBOT LD14P: 1 MOTOR-CTRL (PC2 through R7008), 2 GND, 3 LiDAR TX (to PD2 through R113), 4 VM-5V-LIDAR
+- LIDAR2 (v1, 2026-10-29): 2x3 0.1" through-hole pads, not fitted, for other 2D LiDARs (solder a header or a cable): 1 LiDAR RX (from PC12 through R66), 2 GND, 3 MOT- (low-side switched by Q20), 4 VM-5V-LIDAR, 5 LiDAR TX (shared with LIDAR1 pin 3), 6 VM-5V-LIDAR. A LiDAR that doesn't drive its own motor gets it between pins 6 (+) and 3 (MOT-). Fit only one LiDAR: LIDAR1 or LIDAR2.
+- R66, R113, R7008 are 100 Ω series resistors (v1, 2026-10-29; R7008/R113 were 1k, R117 is gone). At 100 Ω they no longer stop the MCU from back-powering an unpowered LiDAR through its inputs, so firmware drives PC2 and PC12 low (or makes them inputs) whenever the LiDAR rail is off.
 - both are powered from VM-5V-LIDAR, which cuts the whole LiDAR (laser included), not just its motor; see [Safety and power rails](#safety-and-power-rails)
 
 ```
@@ -575,7 +576,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 - [Rear docking IR board](../kicad/rear-ir/README.md) on REAR-IR1: two top-looking IRM-H638T, left PC8 (TIM3_CH3), right PC9 (TIM3_CH4). The robot backs into the dock (like a mop or auto-empty dock): LiDAR for the approach, the two receivers for the final alignment.
 - Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on HALL-BIN1 (PE4), LiDAR tower bumper on HALL-TOWER1 (PE5). Low = magnet near; 47k pull-ups R7801/R7802 on the main board.
-- All three use the same 4-pin SH vertical connector as the cliff sensors (ZX-SH1.0-4PLT) and sit on the SIDE-PROXI sheet.
+- REAR-IR1 uses the same 4-pin SH vertical connector as the cliff sensors (ZX-SH1.0-4PLT). The Hall boards use the 3-pin one (ZX-SH1.0-3PLT, C7430452; 1 3.3 V, 2 OUT, 3 GND), so a Hall cable can't be plugged into a cliff or rear IR socket (changed 2026-10-29). All three sit on the SIDE-PROXI sheet.
+- The mounting pads of every SH socket on the main board go to GND (2026-10-29), as they already did on the sensor boards.
 
 ### Cliff sensors (v1)
 
@@ -584,12 +586,24 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - 47k pull-ups to 3.3 V: R64 LF (PA3), R73 RF (PA1), R53 LR (PA2), R39 RR (PA0), R7701 LM (PD9), R7702 RM (PE8). LM/RM reach the MCU sheet through global labels and also appear on J7301 pins 12/13.
 - The cliff and bumper LED enables stay separate: modulate the cliff LEDs (LED-on minus LED-off cancels ambient light) while the bumper emitters stay on.
 
+### Motor current shunts (v1, 2026-10-29)
+
+The DRV8870s limit current at I = VREF / (10 × R_ISEN), with VREF tied to 3.3 V. At that limit the old 0.5 W shunts ran at 73-99 % of their rating, so they moved up a size:
+
+| Shunt | Motor | Part | Limit | Power at limit |
+| --- | --- | --- | --- | --- |
+| R15, R65 | wheels | 250 mΩ 1 W 1206, RLH12FTCR250 (C22464902) | 1.32 A | 0.44 W |
+| R83 | side brush | 300 mΩ 1 W 1206, RLH12FTCR300 (C22464904) | 1.10 A | 0.36 W |
+| R84 | main brush | 110 mΩ 2 W 2512, LRBK25EFER110 (C5121166) | 3.0 A | 0.99 W |
+
+The shunt only carries current while the driver drives, not while it chops, so a stalled motor heats it less than the table shows. Firmware still stops a motor on sustained overcurrent (ADC on each shunt).
+
 ### Component height (v1)
 
 Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
 - battery connector: Molex Micro-Fit 3.0 right-angle 43650-0412, 5.57 mm
 - barrel jack: DC-044A-20A, 7.2 mm
-- LIDAR2: right-angle 1x5 0.1" header (XFCN PZ254R-11-05P, C492413, ~2.5 mm body); J7301 is pads only
+- LIDAR2 (2x3) and J7301 (2x11) are through-hole pads only, not fitted
 - exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x5 0.1" (XFCN PZ254V-11-05P, C492404, ~8.5 mm above the board) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
 - exception: the ITR9606 bumper sensors (~11 mm), set by the bumper mechanism

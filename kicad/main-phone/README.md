@@ -25,7 +25,7 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
 - VBUS lockout (Q7305, Q7306, R7312-R7314): the robot 5 V can't turn on while the phone sources VBUS
 - the unused sheet files copied from `main` (CM5, M.2, MIPI camera, speaker, water pump) are deleted
 - carpet: LO AC-coupled to the Q18 gate (C7303)
-- LIDAR2: right-angle 1x5 header (PZ254R-11-05P)
+- LIDAR2: right-angle 1x5 header (PZ254R-11-05P); replaced 2026-10-29, see below
 - STM32_DEBUG1 (1x5 0.1", PZ254V-11-05P) and JTAG1 (2x7 1.27 mm SMD, STDC14 pinout, C55099228): vertical, reached from the top under a small removable cover (changed 2026-10-28)
 - spare I/O pads J7301 (2x11, do not fit); R7306 1k on PB10; R7307 47k pull-up on VL-R-LPn
 - pins freed (2026-10-28), details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1):
@@ -41,6 +41,16 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
 - cliff sensors (2026-10-28): the Roomba harness (BUMP_CLIFF1, R30, R35) is replaced by six SH 4-pin vertical connectors (CLIFF-LF1 … CLIFF-RR1) for the [cliff sensor boards](../cliff-sensor/README.md); Q7701 switches all cliff LEDs from CLIFF_LED_EN (R7703 pull-down); new pull-ups R7701/R7702 for cliff LM (PD9) and RM (PE8)
 - rear docking IR and Hall boards (2026-10-28), on the SIDE-PROXI sheet: REAR-IR1 (PC8 left, PC9 right), HALL-BIN1 (PE4) and HALL-TOWER1 (PE5) with 47k pull-ups R7801/R7802; all ZX-SH1.0-4PLT, connected through global labels
 - SIDE-R1: JST SH 7-pin (ZX-SH1.0-7PWT) to the [side sensor board](../side-sensors/README.md) (VL53L0X + IRM-H638T), same pinout as before
+
+Changed 2026-10-29 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1)):
+- LIDAR2 is now 2x3 0.1" through-hole pads, not fitted: 1 LiDAR RX, 2 GND, 3 MOT-, 4 VM-5V-LIDAR, 5 LiDAR TX (shared with LIDAR1 pin 3), 6 VM-5V-LIDAR (motor + for LiDARs that don't drive their own motor)
+- R113 moved to the LiDAR sheet (between LIDAR1 pin 3 and PD2); R117 removed; R66, R113, R7008 are 100 Ω
+- motor shunts: R15/R65 (wheels) RLH12FTCR250 1 W, R83 (side brush) RLH12FTCR300 1 W, R84 (main brush) LRBK25EFER110 2 W 2512 (new footprint)
+- HALL-BIN1 and HALL-TOWER1 are 3-pin SH (ZX-SH1.0-3PLT, C7430452): 1 3.3 V, 2 OUT, 3 GND
+- the mounting pads of all SH sockets go to GND (the cliff, rear IR and Hall ones were not connected)
+- R7 removed: the VL-R-INT pull-up was in parallel with R61, because both INT lines are joined on PD12
+
+Schematic PDF: [PDF/Main.pdf](PDF/Main.pdf), regenerated with `python tools/export_pdfs.py`. The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 
 Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).
 

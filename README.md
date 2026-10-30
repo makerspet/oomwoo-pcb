@@ -25,7 +25,7 @@ I'm keeping the first board as simple as possible, so it can be built and tested
 - **[`kicad/main-phone`](kicad/main-phone/README.md) - v1, in progress.** An Android phone is the compute, connected to the STM32 over USB-C. No Raspberry Pi, cameras, M.2, SD card, speaker or mopping. The STM32 runs every motor and sensor, including the LiDAR and the front ToF sensors, and forwards their data to the phone.
 - **[`kicad/main`](kicad/main) - Raspberry Pi CM4/CM5 carrier, planned.** The Pi is still in the plans: cameras, an NPU and always-on Wi-Fi come with it. The notes below describe this board.
 
-Details for both are in the [I/O board spec](docs/SPEC.md).
+Details for both are in the [I/O board spec](docs/SPEC.md). Each board folder has its schematic as a PDF in `PDF/`, e.g. [the v1 board](kicad/main-phone/PDF/Main.pdf).
 
 The v1 board comes with a **[charging-only dock](kicad/charging-dock/README.md)**: a 20 V brick, a CH32V003 MCU (Arduino core, ch32fun, PlatformIO), robot detection before the contacts go live, and an IR beacon. The plan is to make the v1 board, the dock and the small sensor boards (including the two [front ToF boards](kicad/front-sensors/README.md), one design fitted twice, the [side sensor board](kicad/side-sensors/README.md) six [cliff sensor boards](kicad/cliff-sensor/README.md), the [rear docking IR board](kicad/rear-ir/README.md) and two [Hall sensor boards](kicad/hall-sensor/README.md)) as one panel (V-cuts or mouse bites), so they share parts and cost less to make and ship. Dock reference designators are 8xxx so they don't collide with the main board's.
 

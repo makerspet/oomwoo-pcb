@@ -1,0 +1,163 @@
+"""Generate the firmware pin map (C/C++ header) from the KiCad schematic.
+
+Usage: python tools/gen_pins.py [-o OUT.h] [--board kicad/main-phone] [--mcu U13]
+
+Each MCU GPIO gets three macros, named after the net it drives:
+    PIN_LIDAR_TXD       PD2     Arduino (STM32duino) pin name
+    PIN_LIDAR_TXD_PORT  GPIOD   CMSIS port, for HAL/LL code
+    PIN_LIDAR_TXD_NUM   2       pin number within the port
+A pin that reaches its net through a series resistor takes that net's name.
+Overbar names (~{X}) become X_N, trailing +/- become _P/_N, and local names of 3 characters or
+less on a sheet other than the MCU's get their sheet name in front (LO -> CARPET_SENSOR_LO).
+GPIOs with no named net are listed in a comment at the end.
+Set KICAD_CLI if kicad-cli isn't on PATH or in the default Windows location.
+"""
+import argparse
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+GPIO = re.compile(r'^P([A-G])(\d{1,2})(?:_\d+)?$')
+
+
+def kicad_cli():
+    for c in (os.environ.get('KICAD_CLI'), shutil.which('kicad-cli'),
+              'C:/Program Files/KiCad/10.0/bin/kicad-cli.exe'):
+        if c and Path(c).exists():
+            return c
+    sys.exit('kicad-cli not found: set KICAD_CLI')
+
+
+def parse(s):
+    toks = re.findall(r'\(|\)|"(?:[^"\\]|\\.)*"|[^\s()]+', s)
+    pos = 0
+
+    def rd():
+        nonlocal pos
+        t = toks[pos]
+        pos += 1
+        if t != '(':
+            return t[1:-1] if t.startswith('"') else t
+        out = []
+        while toks[pos] != ')':
+            out.append(rd())
+        pos += 1
+        return out
+    return rd()
+
+
+def kids(node, key):
+    return [x for x in node if isinstance(x, list) and x and x[0] == key]
+
+
+def val(node, key):
+    k = kids(node, key)
+    return k[0][1] if k and len(k[0]) > 1 else ''
+
+
+def netlist(board):
+    sch = next(board.glob('*.kicad_pro')).with_suffix('.kicad_sch')
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d) / 'n.net'
+        r = subprocess.run([kicad_cli(), 'sch', 'export', 'netlist', '-o', str(out), str(sch)],
+                           capture_output=True, text=True)
+        if r.returncode:
+            sys.exit(r.stderr or r.stdout)
+        return sch, parse(out.read_text(encoding='utf-8'))
+
+
+def auto(name):
+    return name.startswith(('Net-(', 'unconnected-')) or not name
+
+
+def power(name):
+    return re.match(r'^/?(GND|VCC|VDD|VBAT|BAT-VCC|\+)', name.rsplit('/', 1)[-1]) is not None
+
+
+def ident(name):
+    parts = name.strip('/').split('/')
+    n = parts[-1]
+    short = len(re.sub(r'[^A-Za-z0-9]', '', n)) <= 3
+    if short and len(parts) > 1 and 'MCU' not in parts[-2]:   # short local names: add the sheet name
+        n = parts[-2] + '-' + n
+    n = re.sub(r'~\{([^}]*)\}', r'\1_N', n)
+    n = re.sub(r'\+$', '_P', re.sub(r'-$', '_N', n))
+    n = re.sub(r'[^A-Za-z0-9]+', '_', n).strip('_').upper()
+    return 'PIN_' + n
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('-o', '--out', help='output header (default: stdout)')
+    ap.add_argument('--board', default='kicad/main-phone')
+    ap.add_argument('--mcu', default='U13')
+    a = ap.parse_args()
+
+    sch, t = netlist(REPO / a.board)
+    nets = []            # (name, [(ref, pin, function)])
+    for n in kids(kids(t, 'nets')[0], 'net'):
+        nets.append((val(n, 'name'), [(val(x, 'ref'), val(x, 'pin'), val(x, 'pinfunction')) for x in kids(n, 'node')]))
+    net_of = {(r, p): name for name, nodes in nets for r, p, _ in nodes}
+
+    def through_resistor(name, nodes):
+        """Name of the net on the far side of a series resistor, if exactly one is found."""
+        far = set()
+        for r, p, _ in nodes:
+            if r != a.mcu and re.match(r'^R\d+$', r):
+                other = net_of.get((r, '2' if p == '1' else '1'))
+                if other and not auto(other) and not power(other):
+                    far.add(other)
+        return far.pop() if len(far) == 1 else None
+
+    pins, skipped = [], []
+    for name, nodes in nets:
+        for r, p, fn in nodes:
+            m = GPIO.match(fn or '')
+            if r != a.mcu or not m:
+                continue
+            port, num = m.group(1), int(m.group(2))
+            label, via = name, ''
+            if auto(name):
+                label = through_resistor(name, nodes)
+                via = ' (through a series resistor)'
+            if not label or len(nodes) == 1:
+                skipped.append('P%s%d' % (port, num))
+                continue
+            pins.append((ident(label), port, num, int(p), label + via))
+
+    seen = {}
+    for x in pins:
+        seen[x[0]] = seen.get(x[0], 0) + 1
+    rows = []
+    for idn, port, num, pin, label in sorted(pins, key=lambda x: (x[1], x[2])):
+        if seen[idn] > 1:
+            idn += '_P%s%d' % (port, num)
+        rows.append((idn, port, num, pin, label))
+
+    w = max(len(r[0]) for r in rows) + 5
+    out = ['/* OOMWOO pin map, generated by oomwoo-pcb/tools/gen_pins.py from %s. Do not edit by hand. */'
+           % sch.relative_to(REPO).as_posix(),
+           '#pragma once', '']
+    for idn, port, num, pin, label in rows:
+        out.append('/* %s: MCU pin %d, net %s */' % ('P%s%d' % (port, num), pin, label))
+        out.append('#define %-*s P%s%d' % (w, idn, port, num))
+        out.append('#define %-*s GPIO%s' % (w, idn + '_PORT', port))
+        out.append('#define %-*s %d' % (w, idn + '_NUM', num))
+    if skipped:
+        out += ['', '/* GPIOs not listed (unconnected, or no named net): %s */' % ', '.join(sorted(set(skipped)))]
+    out.append('')
+    text = '\n'.join(out)
+    if a.out:
+        Path(a.out).write_text(text, encoding='utf-8', newline='\n')
+        print('%s: %d pins' % (a.out, len(rows)))
+    else:
+        sys.stdout.write(text)
+
+
+if __name__ == '__main__':
+    main()

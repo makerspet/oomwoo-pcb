@@ -2073,7 +2073,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_01x05_Pin"
+		(symbol "Connector_Generic:Conn_02x03_Odd_Even"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -2084,7 +2084,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 7.62 0)
+				(at 1.27 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2093,8 +2093,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x05_Pin"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_02x03_Odd_Even"
+				(at 1.27 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2125,21 +2125,11 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x05, script generated"
+			(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2157,7 +2147,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2168,66 +2158,54 @@
 					)
 				)
 			)
-			(symbol "Conn_01x05_Pin_1_1"
+			(symbol "Conn_02x03_Odd_Even_1_1"
 				(rectangle
-					(start 0.8636 5.207)
-					(end 0 4.953)
+					(start -1.27 3.81)
+					(end 3.81 -3.81)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type background)
 					)
 				)
 				(rectangle
-					(start 0.8636 2.667)
+					(start -1.27 2.667)
 					(end 0 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(rectangle
-					(start 0.8636 0.127)
+					(start -1.27 0.127)
 					(end 0 -0.127)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(rectangle
-					(start 0.8636 -2.413)
+					(start -1.27 -2.413)
 					(end 0 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(rectangle
-					(start 0.8636 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 5.08) (xy 0.8636 5.08)
-					)
+					(start 3.81 2.667)
+					(end 2.54 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -2236,10 +2214,9 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy 0.8636 2.54)
-					)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -2248,34 +2225,9 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 0.8636 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 0.8636 -5.08)
-					)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -2285,7 +2237,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 5.08 180)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -2303,7 +2255,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
+					(at 7.62 2.54 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -2321,7 +2273,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -2339,7 +2291,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -2.54 180)
+					(at 7.62 0 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -2357,7 +2309,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -5.08 180)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -2367,6 +2319,24 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2392,7 +2362,7 @@
 		)
 		(uuid "28a1e70f-04ad-4f69-a658-39aae390eaa1")
 	)
-	(text "VM-5V-LIDAR powers the whole LiDAR (laser included) for any model. On only while WD_OK is high\nAND LiDAR-EN is low (Q7003 source-switched AND). R7006/C7003: ~1.5 ms soft start, ~30 ms soft stop.\nLIDAR2: 0.1in header for other LiDARs (pin 2 now GND)."
+	(text "VM-5V-LIDAR powers the whole LiDAR (laser included) for any model. On only while WD_OK is high\nAND LiDAR-EN is low (Q7003 source-switched AND). R7006/C7003: ~1.5 ms soft start, ~30 ms soft stop.\nLIDAR2: 2x3 0.1in through-hole pads (not fitted) for other LiDARs. Pin 6 = VM-5V-LIDAR for LiDARs\nthat need a separate motor supply (motor between pins 6 and 3). Pin 5 = the LiDAR TX, shared with LIDAR1 pin 3."
 		(exclude_from_sim no)
 		(at 60.325 35.56 0)
 		(effects
@@ -2403,7 +2373,7 @@
 		)
 		(uuid "5161315e-5b08-4f10-a84b-faaf83fb55e0")
 	)
-	(text "LIDAR2 and STM32_DEBUG1 use the same right-angle 1x5 0.1in header\n(PZ254R-11-05P), one BOM line. LIDAR2 pin 5 is unused."
+	(text "R66, R113, R7008: 100R series resistors on the LiDAR signals. Only one LiDAR is fitted:\nLIDAR1 (LD14P) or a header/cable on LIDAR2."
 		(exclude_from_sim no)
 		(at 190.5 172.72 0)
 		(effects
@@ -2427,22 +2397,10 @@
 		(uuid "127ad42d-7357-4cc6-8874-a2eefc18cee8")
 	)
 	(junction
-		(at 167.64 159.385)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3428c0a8-bd24-4c83-aee9-29a953dcd40d")
-	)
-	(junction
 		(at 128.27 64.135)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7797917d-3bd4-45f4-a57d-0f63d258d0f6")
-	)
-	(junction
-		(at 167.64 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7fbc3704-dc8c-45a6-b75b-1482edc08607")
 	)
 	(junction
 		(at 163.195 71.755)
@@ -2526,33 +2484,13 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 140.97) (xy 170.815 140.97)
+			(xy 99.06 140.97) (xy 175.26 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "182e03c0-0eb8-4080-a197-89d397279c47")
-	)
-	(wire
-		(pts
-			(xy 164.465 159.385) (xy 167.64 159.385)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1a2e8d49-e87c-4489-847d-21760ad7d227")
-	)
-	(wire
-		(pts
-			(xy 146.685 69.215) (xy 168.275 69.215)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "221fa96d-e800-48a2-80b8-b4d2e457c1e1")
 	)
 	(wire
 		(pts
@@ -2776,16 +2714,6 @@
 	)
 	(wire
 		(pts
-			(xy 164.465 138.43) (xy 164.465 159.385)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd4a7cd9-3051-4bc3-8abd-093886f0e637")
-	)
-	(wire
-		(pts
 			(xy 163.195 55.88) (xy 163.195 71.755)
 		)
 		(stroke
@@ -2806,7 +2734,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 135.89) (xy 170.815 135.89)
+			(xy 160.02 135.89) (xy 180.975 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2823,16 +2751,6 @@
 			(type default)
 		)
 		(uuid "d9d2f96f-e25e-4f92-8181-e631512aa780")
-	)
-	(wire
-		(pts
-			(xy 167.64 143.51) (xy 170.815 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e82c4c48-7282-452e-93c8-78f21804a6c0")
 	)
 	(wire
 		(pts
@@ -2873,16 +2791,6 @@
 			(type default)
 		)
 		(uuid "f57e6bce-8294-4f52-904c-f1d3b79e87d7")
-	)
-	(wire
-		(pts
-			(xy 170.815 138.43) (xy 164.465 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f879eb5e-94f4-4ecb-a982-baa560377e62")
 	)
 	(wire
 		(pts
@@ -3896,208 +3804,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x05_Pin")
-		(at 175.895 140.97 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2a239cfe-4331-4a32-90d3-f720be889029")
-		(property "Reference" "LIDAR2"
-			(at 177.8 135.89 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PZ254R-11-05P"
-			(at 177.8 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal"
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1x5 right-angle 0.1in header for other 2D LiDARs: 1 RX, 2 GND, 3 MOT-, 4 VM-5V-LIDAR, 5 NC"
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C492413"
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "XFCN"
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "PZ254R-11-05P"
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Part Number" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Price/Stock" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Comment" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 175.895 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cdb525a6-bd17-4bf9-8ccb-0a2d103d4ae3")
-		)
-		(pin "2"
-			(uuid "647a32ac-1634-4a32-9b51-ba78628201e2")
-		)
-		(pin "3"
-			(uuid "ec0e9e52-4f89-4f33-9b4f-71107a15f345")
-		)
-		(pin "4"
-			(uuid "32188382-2141-4280-a554-882b4bde910e")
-		)
-		(pin "5"
-			(uuid "043fe15e-6787-432c-bfef-9a2bbb978be9")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "LIDAR2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 141.605 64.135 90)
 		(unit 1)
@@ -4119,7 +3825,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100"
 			(at 139.065 62.23 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4152,7 +3858,7 @@
 				)
 			)
 		)
-		(property "Description" "Series R: a hung MCU cannot back-power an unpowered LiDAR through MOTOR-CTRL"
+		(property "Description" "Series R on the LiDAR motor PWM (PC2)"
 			(at 141.605 64.135 0)
 			(hide yes)
 			(show_name no)
@@ -4163,7 +3869,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907113"
+		(property "LCSC" "C2906981"
 			(at 141.605 64.135 0)
 			(hide yes)
 			(show_name no)
@@ -5876,7 +5582,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100"
 			(at 156.21 132.08 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6271,7 +5977,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907113"
+		(property "LCSC" "C2906981"
 			(at 156.21 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -7529,8 +7235,439 @@
 			)
 		)
 	)
-	(no_connect
-		(at 170.815 146.05)
-		(uuid "7fa392b7-ffc4-471b-be22-095b56a70660")
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 186.055 138.43 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "2ea9f3df-0445-4c19-9c2e-ac9350696a18")
+		(property "Reference" "LIDAR2"
+			(at 187.325 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LIDAR-ALT (DNP)"
+			(at 187.325 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical"
+			(at 186.055 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.055 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Other 2D LiDARs, 2x3 0.1in through-hole, not fitted: 1 LiDAR RX, 2 GND, 3 MOT- (Q20), 4 VM-5V-LIDAR, 5 LiDAR TX, 6 VM-5V-LIDAR (motor +)"
+			(at 186.055 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "633aa614-60c0-462d-a813-dd000459a715")
+		)
+		(pin "2"
+			(uuid "fdeb89f8-3d49-42ad-b0cc-bb8374db2665")
+		)
+		(pin "3"
+			(uuid "c5867617-e31c-4b2e-9ecf-1b46c82db46a")
+		)
+		(pin "4"
+			(uuid "6e666dce-4556-4dda-93b7-fbb0e941ed8a")
+		)
+		(pin "5"
+			(uuid "963edf6b-0cce-4b23-9688-53d8715a92d4")
+		)
+		(pin "6"
+			(uuid "c189f143-4a9f-4bed-bfc5-ba361d2fbefe")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
+					(reference "LIDAR2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 175.26 140.97) (xy 175.26 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b549bc1-6dc8-424d-86e2-775e33bac609")
+	)
+	(wire
+		(pts
+			(xy 175.26 138.43) (xy 180.975 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcbd3791-fb5b-48e7-b67a-a032c2c69167")
+	)
+	(wire
+		(pts
+			(xy 180.975 140.97) (xy 177.8 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e0e2bc8-e9c5-42db-acd3-21d7101b1589")
+	)
+	(wire
+		(pts
+			(xy 177.8 140.97) (xy 177.8 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fdff2df-2079-44ff-945e-e2a761a07bcf")
+	)
+	(label "LiDAR-TX-J"
+		(at 177.8 146.05 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "722231df-98a0-43cf-a50d-d2c7f7b8e243")
+	)
+	(wire
+		(pts
+			(xy 193.675 135.89) (xy 200.66 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afa472f9-9116-4b68-bfba-7eb14ffd03f4")
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 200.66 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ab31c014-336f-4a0a-978e-7d1b5d51fcd0")
+		(property "Reference" "#PWR07099"
+			(at 200.66 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 200.66 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "ab94d591-e8e2-4c90-8ba4-0ec50f310569")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
+					(reference "#PWR07099")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 193.675 138.43) (xy 196.215 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e395459b-70a8-41b9-84b5-b100c9925f75")
+	)
+	(wire
+		(pts
+			(xy 193.675 140.97) (xy 196.215 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ba10e3c-039d-4e94-befe-c74beaeed9bf")
+	)
+	(wire
+		(pts
+			(xy 196.215 138.43) (xy 196.215 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eab61398-c7c7-45d6-9e55-4c2e5405d54b")
+	)
+	(wire
+		(pts
+			(xy 196.215 140.97) (xy 196.215 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69c53652-02c0-4e8d-9d4d-0349882ca313")
+	)
+	(junction
+		(at 196.215 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56c19db8-ad1e-4245-9fd4-6798a4e8eb68")
+	)
+	(label "VM-5V-LIDAR"
+		(at 196.215 146.05 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0b07402d-7134-4a64-942b-f5704586742f")
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 152.4 69.215 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7e999fb2-2181-4150-ad85-c00e400841c9")
+		(property "Reference" "R113"
+			(at 152.4 65.405 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100"
+			(at 152.4 72.517 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Series R on the LiDAR TX (to PD2, UART5 RX)"
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44c1cf04-a140-4005-ac94-9de39a2c1658")
+		)
+		(pin "2"
+			(uuid "f202622d-e97f-424e-87d0-c19124e3bd63")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
+					(reference "R113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 146.685 69.215) (xy 148.59 69.215)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd6d5f75-dc56-465e-ac1e-f726b28bdff3")
+	)
+	(wire
+		(pts
+			(xy 156.21 69.215) (xy 160.655 69.215)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43f0b7cb-3a1b-43cb-bb9b-66ccdc5399d6")
+	)
+	(wire
+		(pts
+			(xy 160.655 69.215) (xy 168.275 69.215)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf1784ac-a3d0-4d80-9704-da7d5b9bd16b")
+	)
+	(wire
+		(pts
+			(xy 160.655 69.215) (xy 160.655 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2e7aa28-e1a0-464d-b237-d1e5042153c8")
+	)
+	(junction
+		(at 160.655 69.215)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d32bff45-e7aa-43b5-8098-cbc2d8547444")
+	)
+	(label "LiDAR-TX-J"
+		(at 160.655 76.2 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "91d12140-a453-4ea2-bb30-c1436e2a2451")
 	)
 )

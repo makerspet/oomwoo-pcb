@@ -1,6 +1,6 @@
 # OOMWOO Hall sensor board
 
-A tiny board with a Hall switch that detects a magnet. The robot fits two of them, from the same design: one for the dust bin (a magnet in the bin) and one for the LiDAR tower bumper (a magnet in the tower cover). Each plugs into the [main board](../main-phone/README.md) (HALL-BIN1 or HALL-TOWER1) with a 4-pin cable. Rev 1, 2026-10-28.
+A tiny board with a Hall switch that detects a magnet. The robot fits two of them, from the same design: one for the dust bin (a magnet in the bin) and one for the LiDAR tower bumper (a magnet in the tower cover). Each plugs into the [main board](../main-phone/README.md) (HALL-BIN1 or HALL-TOWER1) with a 3-pin cable. Rev 1, 2026-10-28.
 
 A separate board keeps the mechanics flexible: the bin sits between the blower and the main brush, far from any other board, and the tower cover changes with the LiDAR model.
 
@@ -14,22 +14,21 @@ A separate board keeps the mechanics flexible: the bin sits between the blower a
 
 ## Connector J8701
 
-ZX-SH1.0-4PLT (C7430453): the same 4-pin vertical SH part as the cliff and rear IR boards.
+ZX-SH1.0-3PLT (C7430452), vertical SH. It has 3 pins on purpose (changed 2026-10-29, was 4 with one unused): a Hall cable can't go into a 4-pin cliff or rear IR socket, and the cable is cheaper.
 
 | Pin | Signal | Main board |
 | --- | --- | --- |
 | 1 | 3.3 V | VCC-3V3-REG |
 | 2 | OUT (low = magnet) | PE4 (bin) / PE5 (tower) |
-| 3 | not used | |
-| 4 | GND | |
-| 5, 6 | mounting pads, GND | |
+| 3 | GND | |
+| 4, 5 | mounting pads, GND | |
 
 Use a pin 1 to pin 1 cable.
 
 ## PCB notes (for layout)
 
 - The sensing point is the centre of U8701's top face. Keep the board small so it fits next to the bin or under the tower cover.
-- H8701/H8702: two M2 holes (`MountingHole_2.2mm_M2_Pad`, pads to GND, not in the BOM).
+- H8701: one M2 hole (`MountingHole_2.2mm_M2_Pad`, pad to GND, not in the BOM). One is enough for a board this small (changed 2026-10-29, was two).
 - Reference designators are 87xx, so they stay unique on the OOMWOO panel. The panel has two copies; let KiKit (or the panel tool) rename references per copy.
 
 All parts are assembled at JLC. Symbols and footprints come from the shared libraries in [`../main`](../main) (`JLCImport`).

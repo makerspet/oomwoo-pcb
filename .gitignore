@@ -41,3 +41,7 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# Board outputs from tools/export.py are kept (BOM and placement CSVs included)
+!kicad/*/output/*.csv
+__pycache__/

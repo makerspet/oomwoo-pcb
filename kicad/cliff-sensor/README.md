@@ -5,7 +5,7 @@ A small board with an IR LED and a phototransistor that looks down at the floor.
 ## How it works
 
 - The LED and the phototransistor sit 18 mm apart and are tilted toward each other, so their beams cross at the floor. The floor sends the LED's light back into the phototransistor; over a cliff the floor is gone and the signal drops.
-- The beams are narrow, so there are no lenses: D8501 IR333-A (940 nm, 5 mm, 20° beam) and Q8501 PT333-3B (5 mm black lens, which blocks visible light).
+- The beams are narrow, so there are no lenses: D4001 IR333-A (940 nm, 5 mm, 20° beam) and Q4001 PT333-3B (5 mm black lens, which blocks visible light).
 - **The tilt sets the reference distance.** The beams cross at depth = (spacing / 2) / tan(tilt). With 18 mm spacing:
 
   | Tilt (each part, from vertical) | Beams cross at |
@@ -16,10 +16,10 @@ A small board with an IR LED and a phototransistor that looks down at the floor.
   | 35° | 12.9 mm |
 
   Aim the crossing at the normal floor distance. Past the crossing point the beams diverge, so a far floor returns little light even when it is white. This is what lets the sensor tell a dark floor (close, weak) from a cliff (far).
-- R8501 (150 Ω) sets the LED current: (5 V − 1.25 V) / 150 Ω ≈ 25 mA, 94 mW in the resistor if the LED is left on.
-- The main board switches all six LED cathodes at once (Q7701, `CLIFF_LED_EN` on PC1) and pulls each phototransistor collector up to 3.3 V (47k). Firmware should modulate the LEDs and use LED-on minus LED-off, so sunlight and lamps cancel out.
+- R4001 (150 Ω) sets the LED current: (5 V − 1.25 V) / 150 Ω ≈ 25 mA, 94 mW in the resistor if the LED is left on.
+- The main board switches all six LED cathodes at once (Q35, `CLIFF_LED_EN` on PC1) and pulls each phototransistor collector up to 3.3 V (47k). Firmware should modulate the LEDs and use LED-on minus LED-off, so sunlight and lamps cancel out.
 
-## Connector J8501
+## Connector J4001
 
 ZX-SH1.0-4PLT (C7430453): JST SH compatible, 1.0 mm pitch, SMD, vertical (top entry). The main board uses the same part.
 
@@ -48,14 +48,14 @@ The names (front, middle, rear) are placeholders; put the six sensors wherever t
 
 ## Assembly (JLC)
 
-- D8501 and Q8501 are through-hole. Order them with JLC's **assembly standoff** (about 2 mm, so the leads have room to bend) and **pin bending** to the tilt angle, or bend them by hand to fit the 3D-printed housing.
+- D4001 and Q4001 are through-hole. Order them with JLC's **assembly standoff** (about 2 mm, so the leads have room to bend) and **pin bending** to the tilt angle, or bend them by hand to fit the 3D-printed housing.
 - Polarity: LED flat side = cathode (pad 2); phototransistor flat side and square pad = emitter (pad 1).
 - Housing: give each part its own bore at the tilt angle, with a wall between them. Many black PLA/PETG filaments pass 940 nm light, so check yours with a phone camera, or line the bores (black paper or tape). The cover can be clear; no lenses are needed.
 
 ## PCB notes (for layout)
 
-- About 8 × 27 mm: D8501 and Q8501 18 mm apart centre to centre, J8501 between them, R8501 next to the LED. No mounting holes; the housing holds the board.
-- Reference designators are 85xx, so they stay unique on the OOMWOO panel. The panel has six copies; let KiKit (or the panel tool) rename references per copy.
+- About 8 × 27 mm: D4001 and Q4001 18 mm apart centre to centre, J4001 between them, R4001 next to the LED. No mounting holes; the housing holds the board.
+- Reference designators are in this board's 4000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has six copies; let KiKit (or the panel tool) rename references per copy.
 
 Symbols and footprints come from the shared libraries in [`../main`](../main) (`JLCImport`).
 

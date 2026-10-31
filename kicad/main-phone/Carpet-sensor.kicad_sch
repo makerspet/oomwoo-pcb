@@ -1456,7 +1456,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Carpet driver: one low-side AO3400 + 330R pull-up from VUS (14.4 V). The P-FET half-bridge was removed:\nits 100k gate pull-up could not turn it off at 290 kHz (shoot-through). R7012 holds LO low in reset/flash.\nDrive LO in short bursts only: LO stuck high puts 0.63 W into R7011."
+	(text "Carpet driver: one low-side AO3400 + 330R pull-up from VUS (14.4 V). The P-FET half-bridge was removed:\nits 100k gate pull-up could not turn it off at 290 kHz (shoot-through). R186 holds LO low in reset/flash.\nDrive LO in short bursts only: LO stuck high puts 0.63 W into R185."
 		(exclude_from_sim no)
 		(at 98.425 40.005 0)
 		(effects
@@ -1467,7 +1467,7 @@
 		)
 		(uuid "6c119fe5-c150-41dd-abf9-e5cafcd2ec25")
 	)
-	(text "C7303 AC-couples LO to the Q18 gate: if LO sticks high, the gate decays through R7012 (~10 ms)\nand Q18 turns off, so R7011 is never stressed by firmware holding LO high."
+	(text "C174 AC-couples LO to the Q18 gate: if LO sticks high, the gate decays through R186 (~10 ms)\nand Q18 turns off, so R185 is never stressed by firmware holding LO high."
 		(exclude_from_sim no)
 		(at 209.55 75.057 0)
 		(effects
@@ -3885,7 +3885,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5a72f0f6-5052-4a05-8fb4-c2dd8fdcd71c")
-		(property "Reference" "R7011"
+		(property "Reference" "R185"
 			(at 93.98 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3960,7 +3960,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/b8feb78a-8098-4bc8-81b4-34551e1a6113"
-					(reference "R7011")
+					(reference "R185")
 					(unit 1)
 				)
 			)
@@ -5077,7 +5077,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eb14d6ce-56b3-48e4-81b2-62fe79fa77f5")
-		(property "Reference" "R7012"
+		(property "Reference" "R186"
 			(at 78.74 80.645 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5152,7 +5152,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/b8feb78a-8098-4bc8-81b4-34551e1a6113"
-					(reference "R7012")
+					(reference "R186")
 					(unit 1)
 				)
 			)
@@ -5730,7 +5730,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f19e40b0-6256-4b03-9a67-e3a164c36d5f")
-		(property "Reference" "C7303"
+		(property "Reference" "C174"
 			(at 76.2 72.39 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5805,7 +5805,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/b8feb78a-8098-4bc8-81b4-34551e1a6113"
-					(reference "C7303")
+					(reference "C174")
 					(unit 1)
 				)
 			)

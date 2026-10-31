@@ -814,7 +814,7 @@
 		)
 		(uuid "b6f072d9-85d7-444d-954a-5f466b322350")
 	)
-	(text "Firmware toggles WDI in software (50-1000 Hz, ~50% duty) only while the control loop is healthy.\nNever drive WDI from a timer/PWM: a timer keeps running after the CPU hangs.\nEach falling edge on WDI pulls the Q7001 gate low through C7001 and tops up C7002 via R7003.\nWD_OK ~2.7 V while toggling. WDI stuck high, low or floating: <1 V in ~100 ms, <0.4 V in ~190 ms\n(10 uF nominal; DC-bias derating shortens this). WD_OK starts at 0 V at power-up (fail-safe).\nWD_OK drives N-FET gates only (14.4 V rail switch, water pump, LiDAR incl. laser): no resistive loads.\nWDI pin: high-Z at reset, no pull-down. All parts reuse existing BOM lines."
+	(text "Firmware toggles WDI in software (50-1000 Hz, ~50% duty) only while the control loop is healthy.\nNever drive WDI from a timer/PWM: a timer keeps running after the CPU hangs.\nEach falling edge on WDI pulls the Q24 gate low through C169 and tops up C170 via R178.\nWD_OK ~2.7 V while toggling. WDI stuck high, low or floating: <1 V in ~100 ms, <0.4 V in ~190 ms\n(10 uF nominal; DC-bias derating shortens this). WD_OK starts at 0 V at power-up (fail-safe).\nWD_OK drives N-FET gates only (14.4 V rail switch, water pump, LiDAR incl. laser): no resistive loads.\nWDI pin: high-Z at reset, no pull-down. All parts reuse existing BOM lines."
 		(exclude_from_sim no)
 		(at 69.85 140.97 0)
 		(effects
@@ -1009,7 +1009,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "039f4abc-cff8-4c8d-8333-63c3c4e9a5e4")
-		(property "Reference" "R7002"
+		(property "Reference" "R177"
 			(at 87.63 81.915 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1084,7 +1084,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
-					(reference "R7002")
+					(reference "R177")
 					(unit 1)
 				)
 			)
@@ -1101,7 +1101,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1c9421e1-25c9-447b-8f03-f064dc9c30e5")
-		(property "Reference" "R7003"
+		(property "Reference" "R178"
 			(at 105.41 100.965 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1145,7 +1145,7 @@
 				)
 			)
 		)
-		(property "Description" "Charge current limit into C7002"
+		(property "Description" "Charge current limit into C170"
 			(at 102.87 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -1176,7 +1176,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
-					(reference "R7003")
+					(reference "R178")
 					(unit 1)
 				)
 			)
@@ -1271,7 +1271,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "570e1c4d-7c72-42c6-b1d3-547ceb62df6e")
-		(property "Reference" "C7002"
+		(property "Reference" "C170"
 			(at 112.395 112.395 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1315,7 +1315,7 @@
 				)
 			)
 		)
-		(property "Description" "Hold capacitor: sets timeout with R7004"
+		(property "Description" "Hold capacitor: sets timeout with R179"
 			(at 110.49 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -1346,7 +1346,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
-					(reference "C7002")
+					(reference "C170")
 					(unit 1)
 				)
 			)
@@ -1363,7 +1363,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "64e2f857-096f-4a90-bff9-aa329a30ef02")
-		(property "Reference" "C7001"
+		(property "Reference" "C169"
 			(at 84.455 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1438,7 +1438,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
-					(reference "C7001")
+					(reference "C169")
 					(unit 1)
 				)
 			)
@@ -1456,7 +1456,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7575a57c-6a0a-47aa-b99b-e0c3b896185c")
-		(property "Reference" "Q7001"
+		(property "Reference" "Q24"
 			(at 109.22 90.805 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1556,7 +1556,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
-					(reference "Q7001")
+					(reference "Q24")
 					(unit 1)
 				)
 			)
@@ -1651,7 +1651,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b89989e-16ff-4293-aa37-a8b586cd5e4a")
-		(property "Reference" "R7004"
+		(property "Reference" "R179"
 			(at 128.27 112.395 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1726,7 +1726,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
-					(reference "R7004")
+					(reference "R179")
 					(unit 1)
 				)
 			)
@@ -1743,7 +1743,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fbc56831-99a7-4d37-a52a-3bd48ba79644")
-		(property "Reference" "R7001"
+		(property "Reference" "R176"
 			(at 74.295 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1787,7 +1787,7 @@
 				)
 			)
 		)
-		(property "Description" "Series R: limits GPIO edge current into C7001"
+		(property "Description" "Series R: limits GPIO edge current into C169"
 			(at 77.47 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -1818,7 +1818,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/7f043eef-851b-4fc7-bc1b-c170004bfbd9"
-					(reference "R7001")
+					(reference "R176")
 					(unit 1)
 				)
 			)

@@ -2,16 +2,16 @@
 
 A small breakout for one VL53L7 8x8-zone time-of-flight sensor. The robot fits two of them, from the same design: the left board aims 30° left and the right board 30° right, which together cover ~126° in front of the robot. Each board plugs into the [main board](../main-phone/README.md) (VL-L1 or VL-R1) with a 7-pin cable. Rev 2, 2026-10-27.
 
-Until rev 2, this project also held the two dock-homing IR receivers. They are now on the main board (U7501, U7502), since the main board sits at the very front of the robot anyway.
+Until rev 2, this project also held the two dock-homing IR receivers. They are now on the main board (U24, U25), since the main board sits at the very front of the robot anyway.
 
 ## Circuit
 
-- U8301: VL53L7CH (LCSC C19183986). The VL53L7CX (C5270520) and the VL53L5CX (C3178303, narrower 63° diagonal field of view) use the same footprint and pinout. Pin handling follows the datasheet (DS13865, table 3): RSVD1-4 to GND, RSVD5 not connected, RSVD6 47k pull-up (R8301), thermal pad to GND.
-- AVDD (the analog and laser supply) gets its 3.3 V through L8301 (BLM18PG121SN1D ferrite), so the laser current pulses stay off the shared 3.3 V. Each supply pin has 10 µF + 100 nF: C8301/C8302 on AVDD, C8303/C8304 on IOVDD. Place each pair right at its pins.
+- U2001: VL53L7CH (LCSC C19183986). The VL53L7CX (C5270520) and the VL53L5CX (C3178303, narrower 63° diagonal field of view) use the same footprint and pinout. Pin handling follows the datasheet (DS13865, table 3): RSVD1-4 to GND, RSVD5 not connected, RSVD6 47k pull-up (R2001), thermal pad to GND.
+- AVDD (the analog and laser supply) gets its 3.3 V through L2001 (BLM18PG121SN1D ferrite), so the laser current pulses stay off the shared 3.3 V. Each supply pin has 10 µF + 100 nF: C2001/C2002 on AVDD, C2003/C2004 on IOVDD. Place each pair right at its pins.
 - No pull-ups on this board. The main board holds all of them: I2C 2.2k, INT and LPn 47k, and the I2C_RST 47k pull-down. With pull-ups on every board, the shared I2C bus would be pulled up three times over (~730 Ω).
 - Both sensors start at I2C address 0x52. At start-up the firmware holds one sensor's LPn low and moves the other to a new address. The new address is lost on power-off, so this runs every boot.
 
-## Connector J8301
+## Connector J2001
 
 ZX-SH1.0-7PWT (C7430449): JST SH compatible, 1.0 mm pitch, SMD, right angle. The main board uses the same part.
 
@@ -33,11 +33,11 @@ Use a pin 1 to pin 1 cable (pre-made SH cables are sold both ways; Qwiic cables 
 - The PCB file in this folder is the old combined layout. Run *Update PCB from Schematic* before layout work.
 - Keep the board small. No mounting holes (removed 2026-10-29): the board slides into a holder by its two long edges. Keep about 1 mm along both long edges free of parts and copper. The sensor looks out of the board face; the connector exits behind it.
 - The sensor needs a clear view through the bumper window: no copper, silkscreen or part above it, and a cover window from a material on ST's cover-glass list.
-- Reference designators are 83xx, so they stay unique on the OOMWOO panel. The panel has two copies of this board; let KiKit (or the panel tool) rename references per copy so the assembly files stay unique.
+- Reference designators are in this board's 2000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has two copies of this board; let KiKit (or the panel tool) rename references per copy so the assembly files stay unique.
 
 ## Assembly: the sensor is placed by hand
 
-JLC assembles the passives and the connector; U8301 is left off (`in_bom no`, `in_pos_files no`) and placed and reflowed by hand. JLC's price for the sensor is high and stock is thin, while distributors are about $3 cheaper per sensor (2026-10-27, volume prices):
+JLC assembles the passives and the connector; U2001 is left off (`in_bom no`, `in_pos_files no`) and placed and reflowed by hand. JLC's price for the sensor is high and stock is thin, while distributors are about $3 cheaper per sensor (2026-10-27, volume prices):
 
 | Source | Part | Price |
 | --- | --- | --- |

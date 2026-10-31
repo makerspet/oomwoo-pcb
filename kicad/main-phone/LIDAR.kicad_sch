@@ -2362,7 +2362,7 @@
 		)
 		(uuid "28a1e70f-04ad-4f69-a658-39aae390eaa1")
 	)
-	(text "VM-5V-LIDAR powers the whole LiDAR (laser included) for any model. On only while WD_OK is high\nAND LiDAR-EN is low (Q7003 source-switched AND). R7006/C7003: ~1.5 ms soft start, ~30 ms soft stop.\nLIDAR2: 2x3 0.1in through-hole pads (not fitted) for other LiDARs. Pin 6 = VM-5V-LIDAR for LiDARs\nthat need a separate motor supply (motor between pins 6 and 3). Pin 5 = the LiDAR TX, shared with LIDAR1 pin 3."
+	(text "VM-5V-LIDAR powers the whole LiDAR (laser included) for any model. On only while WD_OK is high\nAND LiDAR-EN is low (Q26 source-switched AND). R181/C171: ~1.5 ms soft start, ~30 ms soft stop.\nLIDAR2: 2x3 0.1in through-hole pads (not fitted) for other LiDARs. Pin 6 = VM-5V-LIDAR for LiDARs\nthat need a separate motor supply (motor between pins 6 and 3). Pin 5 = the LiDAR TX, shared with LIDAR1 pin 3."
 		(exclude_from_sim no)
 		(at 60.325 35.56 0)
 		(effects
@@ -2373,7 +2373,7 @@
 		)
 		(uuid "5161315e-5b08-4f10-a84b-faaf83fb55e0")
 	)
-	(text "R66, R113, R7008: 100R series resistors on the LiDAR signals. Only one LiDAR is fitted:\nLIDAR1 (LD14P) or a header/cable on LIDAR2."
+	(text "R66, R113, R183: 100R series resistors on the LiDAR signals. Only one LiDAR is fitted:\nLIDAR1 (LD14P) or a header/cable on LIDAR2."
 		(exclude_from_sim no)
 		(at 190.5 172.72 0)
 		(effects
@@ -2969,7 +2969,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "01d5b0ba-e98b-4a20-a1fa-118a7cfd1cfb")
-		(property "Reference" "R7006"
+		(property "Reference" "R181"
 			(at 80.645 108.585 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3013,7 +3013,7 @@
 				)
 			)
 		)
-		(property "Description" "Soft-start: with C7003 about 1.5 ms turn-on ramp"
+		(property "Description" "Soft-start: with C171 about 1.5 ms turn-on ramp"
 			(at 86.36 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -3044,7 +3044,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "R7006")
+					(reference "R181")
 					(unit 1)
 				)
 			)
@@ -3061,7 +3061,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0312ff3a-6120-4c58-9d83-681ec4ade546")
-		(property "Reference" "Q7003"
+		(property "Reference" "Q26"
 			(at 88.9 117.475 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3161,7 +3161,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "Q7003")
+					(reference "Q26")
 					(unit 1)
 				)
 			)
@@ -3814,7 +3814,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3a0cefd7-8fd6-4c9c-8d90-02c64b98c193")
-		(property "Reference" "R7008"
+		(property "Reference" "R183"
 			(at 139.065 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3889,7 +3889,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "R7008")
+					(reference "R183")
 					(unit 1)
 				)
 			)
@@ -4689,7 +4689,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "70a7cefe-997d-4375-8ce2-e993c1c77861")
-		(property "Reference" "Q7002"
+		(property "Reference" "Q25"
 			(at 101.6 100.965 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4789,7 +4789,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "Q7002")
+					(reference "Q25")
 					(unit 1)
 				)
 			)
@@ -4806,7 +4806,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "74eeef74-e298-41a1-b9ec-063d5504a7d4")
-		(property "Reference" "R7007"
+		(property "Reference" "R182"
 			(at 81.915 128.905 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4881,7 +4881,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "R7007")
+					(reference "R182")
 					(unit 1)
 				)
 			)
@@ -4898,7 +4898,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9dfd41bd-93c4-41a5-958b-e786ec0f6a50")
-		(property "Reference" "C7003"
+		(property "Reference" "C171"
 			(at 93.345 114.3 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4973,7 +4973,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "C7003")
+					(reference "C171")
 					(unit 1)
 				)
 			)
@@ -7154,7 +7154,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f95fd2ee-ddcf-4268-bb9c-b8bea64a72db")
-		(property "Reference" "R7005"
+		(property "Reference" "R180"
 			(at 85.725 94.615 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7198,7 +7198,7 @@
 				)
 			)
 		)
-		(property "Description" "Q7002 gate-source pull-up (off by default)"
+		(property "Description" "Q25 gate-source pull-up (off by default)"
 			(at 91.44 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -7229,7 +7229,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "R7005")
+					(reference "R180")
 					(unit 1)
 				)
 			)

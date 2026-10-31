@@ -559,16 +559,6 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 262.255) (xy 196.85 262.255)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5565b7c6-be18-42ec-8f65-aab9e1d7426e")
-	)
-	(wire
-		(pts
 			(xy 110.49 254.635) (xy 100.33 254.635)
 		)
 		(stroke
@@ -696,26 +686,6 @@
 			(type default)
 		)
 		(uuid "6cffc6df-3487-40ee-b77b-f662dbc40bdd")
-	)
-	(wire
-		(pts
-			(xy 191.77 234.315) (xy 191.77 257.175)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e3a8003-87ae-4d43-afb6-83eff8147e46")
-	)
-	(wire
-		(pts
-			(xy 100.33 257.175) (xy 191.77 257.175)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f3535cb-23a1-46ad-990f-ddafbd557158")
 	)
 	(wire
 		(pts
@@ -1069,16 +1039,6 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 234.315) (xy 196.85 262.255)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c86fdaa3-021e-4706-b28f-90c8582e4d8a")
-	)
-	(wire
-		(pts
 			(xy 436.88 165.1) (xy 443.865 165.1)
 		)
 		(stroke
@@ -1417,16 +1377,6 @@
 		)
 		(uuid "279ad534-428e-46e5-af75-df1267eceb1f")
 	)
-	(label "IMU-FSYNC"
-		(at 123.19 262.255 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "28c519b7-af06-486e-a68d-155fb675dc39")
-	)
 	(label "VL-L-LPn"
 		(at 440.055 196.85 180)
 		(effects
@@ -1476,16 +1426,6 @@
 			(justify left bottom)
 		)
 		(uuid "59942155-486a-4e57-adac-d2ac3d8dc708")
-	)
-	(label "IMU-INT2"
-		(at 123.19 257.175 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5bce4d68-d95f-43f1-9f34-31746d1d93cf")
 	)
 	(label "I2C4_SCL"
 		(at 239.395 114.3 90)
@@ -2061,29 +2001,9 @@
 				(justify right)
 			)
 		)
-		(pin "IMU-INT#2" input
-			(at 191.77 234.315 270)
-			(uuid "1f8bcfa5-d596-4c14-93ad-b1797bc76d43")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "IMU-INT#1" input
 			(at 194.31 234.315 270)
 			(uuid "24028a77-3910-4b4f-870b-f88d13ff51bb")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "IMU-FSYNC" output
-			(at 196.85 234.315 270)
-			(uuid "0e0c4ace-edd7-4627-bb5d-ca2130ffdd32")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2549,29 +2469,9 @@
 				(justify left bottom)
 			)
 		)
-		(pin "IMU-INT#2" output
-			(at 100.33 257.175 0)
-			(uuid "6e39b6a6-a9b2-45f0-88da-7f6fcf784453")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "IMU-INT#1" output
 			(at 100.33 259.715 0)
 			(uuid "d6cbf1a1-2255-4ee4-9879-7c2c14480c67")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "IMU-FSYNC" input
-			(at 100.33 262.255 0)
-			(uuid "218da892-8baa-41d5-8b84-23b06358987e")
 			(effects
 				(font
 					(size 1.27 1.27)

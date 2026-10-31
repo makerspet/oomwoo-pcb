@@ -6,13 +6,13 @@ A separate board keeps the mechanics flexible: the bin sits between the blower a
 
 ## Circuit
 
-- U8701: Cross Chip CC6201ST (C285995, ~$0.06): an omnipolar micropower Hall switch, so either magnet pole works. OUT goes low while the magnet is near.
+- U6001: Cross Chip CC6201ST (C285995, ~$0.06): an omnipolar micropower Hall switch, so either magnet pole works. OUT goes low while the magnet is near.
   - It samples at roughly 20-45 Hz, so it reacts within ~25-50 ms. That's fine for the bin, and for the tower about as quick as a microswitch's travel.
-  - The output stage isn't confirmed (push-pull or open drain), so the main board pulls OUT up (R7801/R7802, 47k). Either type works.
+  - The output stage isn't confirmed (push-pull or open drain), so the main board pulls OUT up (R215/R216, 47k). Either type works.
   - Drop-in alternative with the same pinout (1 VDD, 2 OUT, 3 GND): TI DRV5032FADBZR (C140921, ~$0.10, push-pull).
-- C8701: 100 nF bypass at U8701.
+- C6001: 100 nF bypass at U6001.
 
-## Connector J8701
+## Connector J6001
 
 ZX-SH1.0-3PLT (C7430452), vertical SH. It has 3 pins on purpose (changed 2026-10-29, was 4 with one unused): a Hall cable can't go into a 4-pin cliff or rear IR socket, and the cable is cheaper.
 
@@ -27,9 +27,9 @@ Use a pin 1 to pin 1 cable.
 
 ## PCB notes (for layout)
 
-- The sensing point is the centre of U8701's top face. Keep the board small so it fits next to the bin or under the tower cover.
-- H8701: one M2 hole (`MountingHole_2.2mm_M2_Pad`, pad to GND, not in the BOM). One is enough for a board this small (changed 2026-10-29, was two).
-- Reference designators are 87xx, so they stay unique on the OOMWOO panel. The panel has two copies; let KiKit (or the panel tool) rename references per copy.
+- The sensing point is the centre of U6001's top face. Keep the board small so it fits next to the bin or under the tower cover.
+- H6001: one M2 hole (`MountingHole_2.2mm_M2_Pad`, pad to GND, not in the BOM). One is enough for a board this small (changed 2026-10-29, was two).
+- Reference designators are in this board's 6000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has two copies; let KiKit (or the panel tool) rename references per copy.
 
 All parts are assembled at JLC. Symbols and footprints come from the shared libraries in [`../main`](../main) (`JLCImport`).
 

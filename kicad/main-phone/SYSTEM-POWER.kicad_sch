@@ -5287,7 +5287,7 @@
 		)
 		(uuid "0ab010c9-f43f-4c47-b617-b98b7f7f82d4")
 	)
-	(text "VM-VBAT (motors, fan) is on only while WD_OK is high (RC watchdog fed) AND ~{VM-VBAT-EN} is low.\nQ19 source-switched AND: GPIO low = on. R7010 keeps it off in reset/flash. AO4407C: Vgs +/-25 V, no gate divider needed."
+	(text "VM-VBAT (motors, fan) is on only while WD_OK is high (RC watchdog fed) AND ~{VM-VBAT-EN} is low.\nQ19 source-switched AND: GPIO low = on. R184 keeps it off in reset/flash. AO4407C: Vgs +/-25 V, no gate divider needed."
 		(exclude_from_sim no)
 		(at 283.21 182.88 0)
 		(effects
@@ -31906,7 +31906,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a5378087-705c-4047-b700-cf27f30bee1a")
-		(property "Reference" "R7010"
+		(property "Reference" "R184"
 			(at 311.15 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31981,7 +31981,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7010")
+					(reference "R184")
 					(unit 1)
 				)
 			)
@@ -45224,7 +45224,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eeb15f22-907b-4176-ba13-5ea1a4d7ff97")
-		(property "Reference" "R7301"
+		(property "Reference" "R190"
 			(at 386.08 338.455 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45268,7 +45268,7 @@
 				)
 			)
 		)
-		(property "Description" "PA15 series: lets Q7302 (5 s off timer) override a high PA15"
+		(property "Description" "PA15 series: lets Q30 (5 s off timer) override a high PA15"
 			(at 381.635 341.63 0)
 			(hide yes)
 			(show_name no)
@@ -45299,7 +45299,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7301")
+					(reference "R190")
 					(unit 1)
 				)
 			)
@@ -45426,7 +45426,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "770e9ae4-b1f7-4fd8-86d4-cfc476f69a11")
-		(property "Reference" "R7302"
+		(property "Reference" "R191"
 			(at 445.77 360.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45470,7 +45470,7 @@
 				)
 			)
 		)
-		(property "Description" "Power button divider: Q7301 on while the button is up"
+		(property "Description" "Power button divider: Q29 on while the button is up"
 			(at 443.23 361.95 0)
 			(hide yes)
 			(show_name no)
@@ -45501,7 +45501,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7302")
+					(reference "R191")
 					(unit 1)
 				)
 			)
@@ -45534,7 +45534,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "94a4b81d-cf3a-4cbc-8228-4c6d92ab0cc5")
-		(property "Reference" "R7303"
+		(property "Reference" "R192"
 			(at 445.77 368.3 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45609,7 +45609,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7303")
+					(reference "R192")
 					(unit 1)
 				)
 			)
@@ -45704,7 +45704,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bfdc2e37-ac32-4b96-99c6-4fada9605428")
-		(property "Reference" "Q7301"
+		(property "Reference" "Q29"
 			(at 458.47 364.49 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45782,7 +45782,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "Q7301")
+					(reference "Q29")
 					(unit 1)
 				)
 			)
@@ -45897,7 +45897,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b59a0e27-b7f7-4ddc-8dee-f0c5f3072985")
-		(property "Reference" "R7304"
+		(property "Reference" "R193"
 			(at 458.47 350.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45972,7 +45972,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7304")
+					(reference "R193")
 					(unit 1)
 				)
 			)
@@ -46045,7 +46045,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "39cf9d0c-ae26-4351-9cc8-f944d893b01f")
-		(property "Reference" "C7301"
+		(property "Reference" "C172"
 			(at 466.09 358.14 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46120,7 +46120,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "C7301")
+					(reference "C172")
 					(unit 1)
 				)
 			)
@@ -46215,7 +46215,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c0b18df4-7c7f-4340-8394-ae25b5ec3722")
-		(property "Reference" "U7301"
+		(property "Reference" "U23"
 			(at 484.505 369.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46299,7 +46299,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "U7301")
+					(reference "U23")
 					(unit 1)
 				)
 			)
@@ -46444,7 +46444,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "214c38fa-767c-4625-a7cb-f1a0f8534264")
-		(property "Reference" "C7302"
+		(property "Reference" "C173"
 			(at 498.475 343.535 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46519,7 +46519,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "C7302")
+					(reference "C173")
 					(unit 1)
 				)
 			)
@@ -46624,7 +46624,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6f767ebf-375b-49cb-a01e-c02a2c4da54f")
-		(property "Reference" "Q7302"
+		(property "Reference" "Q30"
 			(at 509.27 354.33 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46702,7 +46702,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "Q7302")
+					(reference "Q30")
 					(unit 1)
 				)
 			)
@@ -46826,7 +46826,7 @@
 		)
 		(uuid "3f87f791-4dda-47ea-ba3e-e1154b7b883b")
 	)
-	(text "Hardware off timer: holding the power button for ~4-9 s turns the MCU rail off even if the firmware hangs\n(Q7301 releases C7301, U7301 trips, Q7302 pulls PWR-LATCH low). Firmware turns off at 3 s.\nWhile charging, the rail-hold (Q7303 on BATTERY-CHARGER, from DC_IN) keeps the MCU rail on regardless,\nand charger power alone turns the MCU rail on (Q7303 pulls PWR-SW-G low)."
+	(text "Hardware off timer: holding the power button for ~4-9 s turns the MCU rail off even if the firmware hangs\n(Q29 releases C172, U23 trips, Q30 pulls PWR-LATCH low). Firmware turns off at 3 s.\nWhile charging, the rail-hold (Q31 on BATTERY-CHARGER, from DC_IN) keeps the MCU rail on regardless,\nand charger power alone turns the MCU rail on (Q31 pulls PWR-SW-G low)."
 		(exclude_from_sim no)
 		(at 434.34 389.89 0)
 		(effects
@@ -46848,7 +46848,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3f251909-09e0-4df0-8884-58ef1f193edb")
-		(property "Reference" "R7401"
+		(property "Reference" "R205"
 			(at 72.39 293.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46923,7 +46923,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7401")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -46940,7 +46940,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "32c73d7b-493b-4280-a178-fa6e76a35492")
-		(property "Reference" "R7402"
+		(property "Reference" "R206"
 			(at 57.785 117.475 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47015,7 +47015,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7402")
+					(reference "R206")
 					(unit 1)
 				)
 			)
@@ -47038,7 +47038,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a27510ad-af73-4483-ac98-517b7cf1b118")
-		(property "Reference" "D7401"
+		(property "Reference" "D42"
 			(at 135.255 280.035 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47113,7 +47113,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "D7401")
+					(reference "D42")
 					(unit 1)
 				)
 			)
@@ -47152,7 +47152,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f97a3f46-0abb-4dca-a719-239bda9f908d")
-		(property "Reference" "D7402"
+		(property "Reference" "D43"
 			(at 135.255 104.14 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47227,7 +47227,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "D7402")
+					(reference "D43")
 					(unit 1)
 				)
 			)
@@ -47270,7 +47270,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "53ccd2ed-aa3a-4c6f-acb7-95f10e8128b6")
-		(property "Reference" "R7403"
+		(property "Reference" "R207"
 			(at 27.94 276.86 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47345,7 +47345,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7403")
+					(reference "R207")
 					(unit 1)
 				)
 			)
@@ -47388,7 +47388,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "05ea4039-032a-44d1-90ef-123ef16ece93")
-		(property "Reference" "R7404"
+		(property "Reference" "R208"
 			(at 38.735 284.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47463,7 +47463,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R7404")
+					(reference "R208")
 					(unit 1)
 				)
 			)
@@ -47557,7 +47557,7 @@
 			)
 		)
 	)
-	(text "TPS54560B (U21, U22): non-synchronous,\nSS56 catch diode; fsw 418 kHz (RT 232k);\nCOMP 4.7k + 47nF (all-ceramic Cout, no pole cap).\nEN abs max 8.4 V: R7403/R7404 on U21."
+	(text "TPS54560B (U21, U22): non-synchronous,\nSS56 catch diode; fsw 418 kHz (RT 232k);\nCOMP 4.7k + 47nF (all-ceramic Cout, no pole cap).\nEN abs max 8.4 V: R207/R208 on U21."
 		(exclude_from_sim no)
 		(at 15.24 250.19 0)
 		(effects

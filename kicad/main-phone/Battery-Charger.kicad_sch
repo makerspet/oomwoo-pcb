@@ -5275,7 +5275,7 @@
 		)
 		(uuid "0b290522-3710-4bfe-bc5a-834d20efccec")
 	)
-	(text "USB-C (phone): phone is the USB host. CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default,\nPD power-role swap lets the robot charge the phone while it stays host. Q7101 blocks the phone's\nVBUS from back-feeding the robot 5 V (the TMI6240 body diode conducts VOUT->VIN); PWR_EN turns\non TMI6240 and Q7101 together. TMI6240 now runs from VCC-5V-REG (U25 buck removed)."
+	(text "USB-C (phone): phone is the USB host. CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default,\nPD power-role swap lets the robot charge the phone while it stays host. Q27 blocks the phone's\nVBUS from back-feeding the robot 5 V (the TMI6240 body diode conducts VOUT->VIN); PWR_EN turns\non TMI6240 and Q27 together. TMI6240 now runs from VCC-5V-REG (U25 buck removed)."
 		(exclude_from_sim no)
 		(at 300.99 60.96 0)
 		(effects
@@ -8779,7 +8779,7 @@
 				)
 			)
 		)
-		(property "Description" "Rail-hold divider top (with R7305); with the DC_IN sense divider, ~130k to GND is the dock presence signature"
+		(property "Description" "Rail-hold divider top (with R194); with the DC_IN sense divider, ~130k to GND is the dock presence signature"
 			(at 316.865 314.325 0)
 			(hide yes)
 			(show_name no)
@@ -9179,7 +9179,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "28e24699-499f-4f96-b15a-e7169489f0d3")
-		(property "Reference" "Q7101"
+		(property "Reference" "Q27"
 			(at 327.66 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9279,7 +9279,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q7101")
+					(reference "Q27")
 					(unit 1)
 				)
 			)
@@ -10466,7 +10466,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "30e51604-f68f-4301-9aa0-f215b8b677e4")
-		(property "Reference" "R7103"
+		(property "Reference" "R189"
 			(at 347.472 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10893,7 +10893,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7103")
+					(reference "R189")
 					(unit 1)
 				)
 			)
@@ -12036,7 +12036,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5250729b-cf81-4e41-b46f-334b782876ee")
-		(property "Reference" "R7102"
+		(property "Reference" "R188"
 			(at 347.472 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12463,7 +12463,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7102")
+					(reference "R188")
 					(unit 1)
 				)
 			)
@@ -15144,7 +15144,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74b8e9d0-5942-417a-881f-d6da55b2d64f")
-		(property "Reference" "R7101"
+		(property "Reference" "R187"
 			(at 341.122 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15188,7 +15188,7 @@
 				)
 			)
 		)
-		(property "Description" "Q7101 gate-source pull-up: robot 5 V stays off the USB-C VBUS unless PWR_EN is high"
+		(property "Description" "Q27 gate-source pull-up: robot 5 V stays off the USB-C VBUS unless PWR_EN is high"
 			(at 339.09 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -15571,7 +15571,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7101")
+					(reference "R187")
 					(unit 1)
 				)
 			)
@@ -15588,7 +15588,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "764781ff-e34d-4d99-bfd4-9b67f5dba1b5")
-		(property "Reference" "Q7102"
+		(property "Reference" "Q28"
 			(at 332.74 86.995 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15688,7 +15688,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q7102")
+					(reference "Q28")
 					(unit 1)
 				)
 			)
@@ -15781,7 +15781,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "86eb513e-e731-4fc1-87d9-17526b1b8ee2")
-		(property "Reference" "D7101"
+		(property "Reference" "D40"
 			(at 374.65 169.545 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15888,7 +15888,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "D7101")
+					(reference "D40")
 					(unit 1)
 				)
 			)
@@ -23101,7 +23101,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e9f96e99-5e92-4ac3-9aca-67bbe10ae5ca")
-		(property "Reference" "R7305"
+		(property "Reference" "R194"
 			(at 328.93 316.865 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23176,7 +23176,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7305")
+					(reference "R194")
 					(unit 1)
 				)
 			)
@@ -23271,7 +23271,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "13e0b886-6549-4a5a-bc36-a09fbbd9f122")
-		(property "Reference" "Q7303"
+		(property "Reference" "Q31"
 			(at 339.09 313.055 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23349,7 +23349,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q7303")
+					(reference "Q31")
 					(unit 1)
 				)
 			)
@@ -23477,7 +23477,7 @@
 			)
 		)
 	)
-	(text "Rail-hold: charger power (dock or barrel jack)\nturns the MCU rail on and keeps it on.\nDC_IN to GND ~130k (R175+R7305 || R7310+R7311)\n= dock presence signature."
+	(text "Rail-hold: charger power (dock or barrel jack)\nturns the MCU rail on and keeps it on.\nDC_IN to GND ~130k (R175+R194 || R199+R200)\n= dock presence signature."
 		(exclude_from_sim no)
 		(at 311.15 332.74 0)
 		(effects
@@ -23515,7 +23515,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d4df08cb-8bee-4d51-a257-269b2dae30b8")
-		(property "Reference" "D7301"
+		(property "Reference" "D41"
 			(at 111.125 287.655 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23590,7 +23590,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "D7301")
+					(reference "D41")
 					(unit 1)
 				)
 			)
@@ -23674,7 +23674,7 @@
 			)
 		)
 	)
-	(text "DC_IN: 20 V brick or dock. With the battery disconnected (Q14 off) BAT-VCC = DC_IN - 0.4 V,\nso the SLM6900 (95% max duty) needs >= ~18.5 V to finish a 4S charge. Keep DC_IN <= 22 V (D7301, Q13 Vgs)."
+	(text "DC_IN: 20 V brick or dock. With the battery disconnected (Q14 off) BAT-VCC = DC_IN - 0.4 V,\nso the SLM6900 (95% max duty) needs >= ~18.5 V to finish a 4S charge. Keep DC_IN <= 22 V (D41, Q13 Vgs)."
 		(exclude_from_sim no)
 		(at 63.5 276.86 0)
 		(effects
@@ -23706,7 +23706,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c69e0643-a539-4843-b113-01aec44197f7")
-		(property "Reference" "R7310"
+		(property "Reference" "R199"
 			(at 69.85 304.165 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23781,7 +23781,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7310")
+					(reference "R199")
 					(unit 1)
 				)
 			)
@@ -23804,7 +23804,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "df88b0d7-5a14-4e82-838d-9c61922cde42")
-		(property "Reference" "R7311"
+		(property "Reference" "R200"
 			(at 68.58 311.785 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23879,7 +23879,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7311")
+					(reference "R200")
 					(unit 1)
 				)
 			)
@@ -23990,7 +23990,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4ad5934d-5149-4d1d-a7cd-0cdae27258dc")
-		(property "Reference" "C7304"
+		(property "Reference" "C175"
 			(at 85.725 313.055 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24065,7 +24065,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "C7304")
+					(reference "C175")
 					(unit 1)
 				)
 			)
@@ -24215,7 +24215,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "acc1854f-e892-451f-af7a-37c6418655ef")
-		(property "Reference" "R7312"
+		(property "Reference" "R201"
 			(at 208.28 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24259,7 +24259,7 @@
 				)
 			)
 		)
-		(property "Description" "PWR_EN series: Q7305 can hold PWR_EN_G low against the MCU"
+		(property "Description" "PWR_EN series: Q33 can hold PWR_EN_G low against the MCU"
 			(at 208.28 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -24290,7 +24290,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7312")
+					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -24343,7 +24343,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "83c1227e-d199-4217-b554-7bc552109716")
-		(property "Reference" "Q7305"
+		(property "Reference" "Q33"
 			(at 236.22 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24421,7 +24421,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q7305")
+					(reference "Q33")
 					(unit 1)
 				)
 			)
@@ -24536,7 +24536,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f3cda3fe-303f-49f0-b022-7eaa062870c2")
-		(property "Reference" "R7313"
+		(property "Reference" "R202"
 			(at 194.31 62.23 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24611,7 +24611,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7313")
+					(reference "R202")
 					(unit 1)
 				)
 			)
@@ -24650,7 +24650,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "931a0d83-fce4-4aa1-a466-d0dc874e9f43")
-		(property "Reference" "R7314"
+		(property "Reference" "R203"
 			(at 196.85 69.215 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24725,7 +24725,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R7314")
+					(reference "R203")
 					(unit 1)
 				)
 			)
@@ -24820,7 +24820,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ef223fb2-ad6e-4336-add4-d332cb5cf062")
-		(property "Reference" "Q7306"
+		(property "Reference" "Q34"
 			(at 218.44 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24864,7 +24864,7 @@
 				)
 			)
 		)
-		(property "Description" "VBUS lockout latch: once PWR_EN_G is on, keeps Q7305 off"
+		(property "Description" "VBUS lockout latch: once PWR_EN_G is on, keeps Q33 off"
 			(at 215.9 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -24898,7 +24898,7 @@
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q7306")
+					(reference "Q34")
 					(unit 1)
 				)
 			)
@@ -25012,7 +25012,7 @@
 		)
 		(uuid "dcb088ec-9ed5-429d-acd2-db2b448a3a74")
 	)
-	(text "VBUS lockout: the robot 5 V (TMI6240 + Q7101) can only\nturn on while VBUS is ~0 V. Q7305 holds PWR_EN_G low if a\nphone already sources VBUS; once on, Q7306 latches it."
+	(text "VBUS lockout: the robot 5 V (TMI6240 + Q27) can only\nturn on while VBUS is ~0 V. Q33 holds PWR_EN_G low if a\nphone already sources VBUS; once on, Q34 latches it."
 		(exclude_from_sim no)
 		(at 238.76 80.01 0)
 		(effects

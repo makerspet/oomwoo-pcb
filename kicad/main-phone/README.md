@@ -51,10 +51,15 @@ Changed 2026-10-29 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-b
 - R7 removed: the VL-R-INT pull-up was in parallel with R61, because both INT lines are joined on PD12
 
 Changed 2026-10-30:
-- J7301 → J1: a fitted 0.1" 2x7 vertical header (PZ254V-12-14P, C492424) with spares only: 1 3.3 V, 2 5 V, 3/4 I2C4, 5/6 UART PC10/PC11, 7 PA10, 8 PE6, 9 PA8, 10 PA9, 11 PD4, 12 PE2, 13/14 GND. The rear IR, Hall and cliff LM/RM signals are off it (they have their own connectors)
+- J7301 → J1: a fitted 0.1" 2x7 vertical header (PZ254V-12-14P, C492424) with spares only: 1 3.3 V, 2 5 V, 3/4 not connected (I2C4 kept off), 5/6 UART PC10/PC11, 7 PA10, 8 PE6, 9 PA8, 10 PA9, 11 PD4, 12 PE2, 13/14 GND. The rear IR, Hall and cliff LM/RM signals are off it (they have their own connectors)
 - IMU INT2 goes to test pad TP1 (1.5 mm, not in the BOM) instead of the spare header; FSYNC is reachable on its pull-down R211
 - IMU AP_AD0 was floating: R217 (10k) pulls it low, so the I2C address is 0x68
 - R18/R72 (unfitted IMU I2C pull-ups) removed
+
+Changed 2026-10-31:
+- R19 (0 Ω in series with the 8 MHz crystal) removed: PF1-OSC_OUT goes straight to X1
+- the LDR (R75) runs from VCC-3V3, not the switched sensor rail VCC-3V3-REG, so it works with the sensors off and reads against the ADC reference
+- power rails drawn as power symbols; the rear IR, Hall, cliff LM/RM, DC_IN_SENSE, PWR-SW-G and WD_OK signals are hierarchical labels joined on the top sheet (were global labels)
 
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 

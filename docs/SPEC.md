@@ -543,7 +543,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x7 vertical, fitted (XFCN PZ254V-12-14P, C492424). Spares only: 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 I2C4 SCL/SDA (shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7 PA10, 8 PE6, 9 PA8, 10 PA9 (10k pull-up), 11 PD4, 12 PE2, 13/14 GND
+- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x7 vertical, fitted (XFCN PZ254V-12-14P, C492424). Spares only: 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 not connected (I2C4 kept off the header, 2026-10-30: it runs at 1 MHz and is shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7 PA10, 8 PE6, 9 PA8, 10 PA9 (10k pull-up), 11 PD4, 12 PE2, 13/14 GND
 - PB10 (3.3V_EN) drives the sensor-rail switch through R195 (1k), so C64 (10 µF gate-drain soft start) doesn't load the pin directly
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before

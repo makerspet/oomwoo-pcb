@@ -350,14 +350,55 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "oomwoo-kicad-altium-import:GND_POWER_GROUND"
-			(power global)
+		(symbol "JLCImport:IRM-V838M3-C"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
+			(property "Reference" "U"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "IRM-V838M3-C/TR1"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:IRM-V838M3-C"
+				(at 0 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.everlighteurope.com/custom/files/datasheets/DMO-0000605.pdf"
+				(at 0 -13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "38 kHz IR receiver, side-looking SMD (lenses face away from the pins), +-45 deg, 2.7-5.5 V, 40k internal pull-up"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -368,17 +409,40 @@
 					)
 				)
 			)
-			(property "Value" "GND"
-				(at 0 -6.35 0)
+			(property "Manufacturer" "EVERLIGHT(亿光)"
+				(at 0 -16.51 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "MPN" "IRM-V838M3-C/TR1"
+				(at 0 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C3291489"
+				(at 0 -21.59 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Infrared remote receiver"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -389,104 +453,21 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name 'GND'"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "power-flag"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "GND_POWER_GROUND_0_0"
-				(polyline
-					(pts
-						(xy -2.54 -2.54) (xy 2.54 -2.54)
-					)
+			(symbol "IRM-V838M3-C_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
 					(stroke
-						(width 0.254)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.778 -3.302) (xy 1.778 -3.302)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -4.064) (xy 1.016 -4.064)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 -4.826) (xy 0.254 -4.826)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 0 0 0)
-					(length 0)
-					(hide yes)
+				(pin passive line
+					(at -2.54 -7.62 90)
+					(length 2.54)
 					(name "GND"
 						(effects
 							(font
@@ -494,7 +475,61 @@
 							)
 						)
 					)
-					(number ""
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -7.62 1.27 0)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -806,55 +841,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:IRM-V838M3-C"
+		(symbol "oomwoo-kicad-altium-import:GND_POWER_GROUND"
+			(power global)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "IRM-V838M3-C/TR1"
-				(at 0 -8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:IRM-V838M3-C"
-				(at 0 -11.43 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.everlighteurope.com/custom/files/datasheets/DMO-0000605.pdf"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "38 kHz IR receiver, side-looking SMD (lenses face away from the pins), +-45 deg, 2.7-5.5 V, 40k internal pull-up"
+			(property "Reference" "#PWR"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -865,40 +859,17 @@
 					)
 				)
 			)
-			(property "Manufacturer" "EVERLIGHT(亿光)"
-				(at 0 -16.51 0)
+			(property "Value" "GND"
+				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
-				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "MPN" "IRM-V838M3-C/TR1"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part" "C3291489"
-				(at 0 -21.59 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Infrared remote receiver"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -909,58 +880,244 @@
 					)
 				)
 			)
-			(symbol "IRM-V838M3-C_0_1"
-				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name 'GND'"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "power-flag"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_POWER_GROUND_0_0"
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -3.302) (xy 1.778 -3.302)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 -4.064) (xy 1.016 -4.064)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 -4.826) (xy 0.254 -4.826)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 0 0)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:VPP"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VPP"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VPP\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VPP_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
-				(pin passive line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
-				(pin output line
-					(at -7.62 1.27 0)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
 					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
-				(pin passive line
-					(at -2.54 -7.62 90)
-					(length 2.54)
-					(name "GND"
+			)
+			(symbol "VPP_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -968,24 +1125,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1111,6 +1250,17 @@
 		)
 		(uuid "91fd5506-8c42-4927-8f01-517610b81850")
 	)
+	(text "U24 left, U25 right (robot view). Side-looking: put both at the board front edge,\nlenses facing forward, ~10 mm apart, with a baffle between them in the bumper window."
+		(exclude_from_sim no)
+		(at 154.94 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9d0293a6-787c-499f-a93d-86b1e66bb7d8")
+	)
 	(text "GND"
 		(exclude_from_sim no)
 		(at 93.98 106.045 0)
@@ -1186,10 +1336,22 @@
 		(uuid "fee78ab6-1e06-441a-b18a-f7cf92357e36")
 	)
 	(junction
+		(at 205.74 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1949b5ed-3dab-4a5f-a9b8-bb4e6ade108b")
+	)
+	(junction
 		(at 102.235 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "273a23cb-b9ba-4bba-ab15-aa963fc6cf91")
+	)
+	(junction
+		(at 57.15 99.695)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "336f3ac2-f385-4158-8809-c79a3b2024b9")
 	)
 	(junction
 		(at 90.805 133.35)
@@ -1202,6 +1364,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4a6f30e5-420d-498f-af6b-a863042343ac")
+	)
+	(junction
+		(at 220.98 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "54d50b7d-7ffb-40cb-bb28-d113c29bc9fa")
 	)
 	(junction
 		(at 90.805 106.68)
@@ -1246,6 +1414,12 @@
 		(uuid "b35c8c4e-e663-4cce-b107-dc58f3af6cc6")
 	)
 	(junction
+		(at 52.07 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b6ab481c-3fe4-446b-81a8-c83e864320e0")
+	)
+	(junction
 		(at 85.725 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1264,6 +1438,12 @@
 		(uuid "d59b1bd6-5e1a-451c-b398-54698d209c41")
 	)
 	(junction
+		(at 220.98 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc49fe22-17cf-4ded-83f8-906badd4de31")
+	)
+	(junction
 		(at 71.12 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1276,10 +1456,26 @@
 		(uuid "e75bc75a-fa76-407c-ab9a-042d0afb6165")
 	)
 	(junction
+		(at 205.74 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed36c150-98bd-423d-bd90-9d822df597e0")
+	)
+	(junction
 		(at 71.12 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f39f0cb5-bed8-4da7-bd4f-e4d7b83366ac")
+	)
+	(wire
+		(pts
+			(xy 220.98 142.24) (xy 220.98 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0159f443-2409-4870-8ada-8fb92c8dcb6c")
 	)
 	(wire
 		(pts
@@ -1313,6 +1509,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 66.04) (xy 220.98 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bf0d763-4358-4c02-95ae-cbd5315991bc")
+	)
+	(wire
+		(pts
 			(xy 67.945 74.295) (xy 67.945 81.28)
 		)
 		(stroke
@@ -1320,6 +1526,16 @@
 			(type default)
 		)
 		(uuid "0c8a2539-7f0d-48fd-80ce-f8e7c7942144")
+	)
+	(wire
+		(pts
+			(xy 223.52 83.82) (xy 223.52 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0db722a9-6e67-4ff3-82ff-fcc0e761dd06")
 	)
 	(wire
 		(pts
@@ -1333,6 +1549,16 @@
 	)
 	(wire
 		(pts
+			(xy 210.82 88.9) (xy 185.42 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f5c2ba5-15cc-49b9-9d23-ca152e1007c0")
+	)
+	(wire
+		(pts
 			(xy 95.885 81.28) (xy 67.945 81.28)
 		)
 		(stroke
@@ -1340,6 +1566,16 @@
 			(type default)
 		)
 		(uuid "15aa395d-31c0-4c02-93ff-5bfb90ec954f")
+	)
+	(wire
+		(pts
+			(xy 185.42 66.04) (xy 190.5 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "163ea8d2-c816-4552-99c0-1207e412db6c")
 	)
 	(wire
 		(pts
@@ -1363,6 +1599,26 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 96.52) (xy 57.15 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c50e2b6-aadd-4a74-b258-ce97dc3cb84d")
+	)
+	(wire
+		(pts
+			(xy 210.82 130.81) (xy 210.82 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c7ff17c-6779-483d-8e6c-701fd6db9c2a")
+	)
+	(wire
+		(pts
 			(xy 76.2 133.35) (xy 90.805 133.35)
 		)
 		(stroke
@@ -1383,13 +1639,43 @@
 	)
 	(wire
 		(pts
-			(xy 60.325 86.36) (xy 95.885 86.36)
+			(xy 218.44 142.24) (xy 220.98 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "32e063f3-3828-462c-a568-36181f412828")
+		(uuid "2b547d91-253b-4527-9662-54a8d33138d9")
+	)
+	(wire
+		(pts
+			(xy 198.12 66.04) (xy 205.74 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c19fc27-c77b-49a2-b3d3-1d4501f29d1e")
+	)
+	(wire
+		(pts
+			(xy 220.98 121.92) (xy 220.98 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d7e4ce6-f903-4141-85a3-09d3c9ac2ef5")
+	)
+	(wire
+		(pts
+			(xy 46.355 88.9) (xy 52.07 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30ecff41-de0b-4d14-8836-6b616eae4d05")
 	)
 	(wire
 		(pts
@@ -1423,6 +1709,26 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 121.92) (xy 190.5 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38f61e42-0f79-40ac-a55d-12e514469186")
+	)
+	(wire
+		(pts
+			(xy 218.44 83.82) (xy 218.44 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39e60ef5-c429-41d2-932b-e8ec75ca411a")
+	)
+	(wire
+		(pts
 			(xy 76.2 73.66) (xy 85.725 73.66)
 		)
 		(stroke
@@ -1453,6 +1759,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 86.36) (xy 223.52 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "445476d9-7dc2-4e2b-ab2d-f760e9f8038e")
+	)
+	(wire
+		(pts
 			(xy 46.355 116.84) (xy 57.15 116.84)
 		)
 		(stroke
@@ -1473,6 +1789,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 66.04) (xy 205.74 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5de4258e-1f14-4a2e-bb9f-ab59bdc7bfa7")
+	)
+	(wire
+		(pts
 			(xy 57.15 116.84) (xy 95.885 116.84)
 		)
 		(stroke
@@ -1483,13 +1809,43 @@
 	)
 	(wire
 		(pts
-			(xy 46.355 86.36) (xy 60.325 86.36)
+			(xy 46.355 86.36) (xy 95.885 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6239f7e1-a1e5-43ca-ac47-5a964996fd5d")
+	)
+	(wire
+		(pts
+			(xy 205.74 66.04) (xy 220.98 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63878e20-5a5a-41d8-bb36-d6f638d52f1a")
+	)
+	(wire
+		(pts
+			(xy 223.52 139.7) (xy 223.52 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68275bb3-5da7-4601-b5b1-527954668775")
+	)
+	(wire
+		(pts
+			(xy 213.36 130.81) (xy 210.82 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6962a6f6-40b2-442c-b961-f8664ab8245f")
 	)
 	(wire
 		(pts
@@ -1540,6 +1896,16 @@
 			(type default)
 		)
 		(uuid "7286d07b-9221-45ad-9a5b-ea07f52e8d41")
+	)
+	(wire
+		(pts
+			(xy 218.44 86.36) (xy 220.98 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "785eae52-3bd7-4c53-b157-bd3a9b1d2655")
 	)
 	(wire
 		(pts
@@ -1603,6 +1969,16 @@
 	)
 	(wire
 		(pts
+			(xy 210.82 144.78) (xy 185.42 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "893f378c-cbe2-4061-97c9-e02962aa33c9")
+	)
+	(wire
+		(pts
 			(xy 90.805 93.98) (xy 90.805 106.68)
 		)
 		(stroke
@@ -1630,6 +2006,16 @@
 			(type default)
 		)
 		(uuid "94211fdd-224a-4328-b5c1-5412196434e5")
+	)
+	(wire
+		(pts
+			(xy 57.15 96.52) (xy 57.15 99.695)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94ffa289-3f31-4e6b-9d1b-fbd11f321394")
 	)
 	(wire
 		(pts
@@ -1693,6 +2079,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 74.93) (xy 210.82 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a937ddc2-7931-4bd7-97c2-ce9981585f3b")
+	)
+	(wire
+		(pts
 			(xy 67.945 60.325) (xy 67.945 66.675)
 		)
 		(stroke
@@ -1700,6 +2096,36 @@
 			(type default)
 		)
 		(uuid "aa3273ed-72c1-4ba4-acaf-a8495563cb17")
+	)
+	(wire
+		(pts
+			(xy 220.98 142.24) (xy 223.52 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aea9716d-5ffa-48e2-a309-b91095710907")
+	)
+	(wire
+		(pts
+			(xy 210.82 74.93) (xy 210.82 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0908901-319f-4618-a993-28b705fe4b23")
+	)
+	(wire
+		(pts
+			(xy 198.12 121.92) (xy 205.74 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0a797cc-438f-473e-b1a4-1836de83cf44")
 	)
 	(wire
 		(pts
@@ -1723,6 +2149,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 121.92) (xy 220.98 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0511d01-c78d-463a-8f6f-9e3cb65687f3")
+	)
+	(wire
+		(pts
 			(xy 76.2 73.66) (xy 76.2 92.075)
 		)
 		(stroke
@@ -1743,6 +2179,36 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 86.36) (xy 220.98 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbf216bc-14d4-4783-b599-b3449307ed60")
+	)
+	(wire
+		(pts
+			(xy 218.44 139.7) (xy 218.44 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc6a3a68-ca27-4f59-8d52-b1fd13ff2f6f")
+	)
+	(wire
+		(pts
+			(xy 205.74 121.92) (xy 205.74 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd46c765-0274-4dbf-913c-fb2896583958")
+	)
+	(wire
+		(pts
 			(xy 102.235 68.58) (xy 90.805 68.58)
 		)
 		(stroke
@@ -1750,6 +2216,16 @@
 			(type default)
 		)
 		(uuid "ce2539cc-cc5b-4439-82df-67a5dd0ae7b9")
+	)
+	(wire
+		(pts
+			(xy 205.74 73.66) (xy 205.74 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce577e84-28d3-4128-8493-116a7f4aa401")
 	)
 	(wire
 		(pts
@@ -1793,6 +2269,26 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 129.54) (xy 205.74 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e356ceca-2b4f-41a7-a6b0-8e01293f5cd4")
+	)
+	(wire
+		(pts
+			(xy 52.07 88.9) (xy 95.885 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e78a60c3-416a-4510-aed1-b6fdc7cffc76")
+	)
+	(wire
+		(pts
 			(xy 65.405 83.82) (xy 65.405 114.3)
 		)
 		(stroke
@@ -1831,53 +2327,15 @@
 		)
 		(uuid "f85f4f78-1b42-47eb-8447-604ed13da0f8")
 	)
-	(global_label "VCC-3V3-REG"
-		(shape input)
-		(at 57.15 99.695 180)
-		(fields_autoplaced yes)
+	(label "VL-R-LPn"
+		(at 46.355 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "37cfc47e-cf84-40aa-82f1-d26940064f74")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 40.1948 99.695 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "VCC-3V3-REG"
-		(shape input)
-		(at 76.2 60.325 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "762ee5e0-d119-46d2-ac04-2f2b9cc077b6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.2 43.3698 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
+		(uuid "438afcc7-2b2d-4134-bda9-31a89cf2a8df")
 	)
 	(hierarchical_label "VL-L-LPn"
 		(shape input)
@@ -1945,15 +2403,27 @@
 		)
 		(uuid "7aadb942-28f3-4354-9c8b-8500a5668992")
 	)
-	(label "VL-R-LPn"
-		(at 46.355 88.9 180)
+	(hierarchical_label "IR-F-RX1"
+		(shape output)
+		(at 185.42 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "438afcc7-2b2d-4134-bda9-31a89cf2a8df")
+		(uuid "d37da0ac-3a65-4eb3-bd7a-cf27601e7203")
+	)
+	(hierarchical_label "IR-F-RX2"
+		(shape output)
+		(at 185.42 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f489af16-7554-483a-b8f0-51316ba4147d")
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-7PWT")
@@ -2438,6 +2908,104 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
 					(reference "VL-R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:IRM-V838M3-C")
+		(at 220.98 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0b1521bf-f3b1-485a-8b35-e316d92ae721")
+		(property "Reference" "U25"
+			(at 227.33 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRM-V838M3-C/TR1"
+			(at 227.33 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:IRM-V838M3-C"
+			(at 220.98 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.everlighteurope.com/custom/files/datasheets/DMO-0000605.pdf"
+			(at 220.98 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "38 kHz IR receiver, side-looking SMD: lenses face away from the pins, toward the front edge"
+			(at 220.98 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3291489"
+			(at 220.98 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "451cc142-e86d-49ca-b237-b47d92312286")
+		)
+		(pin "2"
+			(uuid "1960dfad-7002-40fe-807c-58e1772070de")
+		)
+		(pin "3"
+			(uuid "c1fe348d-c0fb-4d5b-afdf-6906c02a6b6b")
+		)
+		(pin "4"
+			(uuid "f479e075-0390-413d-919c-c69243c826ed")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "U25")
 					(unit 1)
 				)
 			)
@@ -3376,6 +3944,84 @@
 		)
 	)
 	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 220.98 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "686a1098-bb0e-4e2b-90ad-fac24ef9f36b")
+		(property "Reference" "#PWR07504"
+			(at 220.98 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 220.98 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.98 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 220.98 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "2da73fba-c64a-4416-ab04-1171517594df")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "#PWR07504")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 76.2 94.615 0)
 		(unit 1)
@@ -4266,6 +4912,268 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 205.74 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "91fa48f5-34ba-4c9f-b572-ae8aee7d8a32")
+		(property "Reference" "#PWR07501"
+			(at 205.74 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 205.74 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "6f63c865-1bd5-4504-9f7d-7f5c05bc6c94")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "#PWR07501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 194.31 66.04 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "987a68d0-8ce2-41d6-b49c-756e6798f080")
+		(property "Reference" "R209"
+			(at 196.85 63.5 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100"
+			(at 196.85 69.215 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d45e1f8-bf7b-4e14-bef7-074d774e5f70")
+		)
+		(pin "2"
+			(uuid "31fcd22a-9b58-4830-9600-c7f81d9ea29f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "R209")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 205.74 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "98c9744c-19e0-470f-b0d8-8753865945fe")
+		(property "Reference" "C90"
+			(at 197.485 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF/10V"
+			(at 193.675 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 205.74 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF)"
+			(at 205.74 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 205.74 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0520fc14-3e76-4f90-a5ad-17a558f695dd")
+		)
+		(pin "2"
+			(uuid "dfff505f-5960-41c1-8008-b805d69facb0")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "C90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 90.805 135.89 0)
 		(unit 1)
 		(body_style 1)
@@ -4333,6 +5241,98 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
 					(reference "#PWR090")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 194.31 121.92 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a518bd6-15ee-49a9-ae2a-ed66a64ee3a1")
+		(property "Reference" "R210"
+			(at 196.85 119.38 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100"
+			(at 196.85 125.095 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 194.31 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
+			(at 194.31 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 194.31 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c07fd522-790a-40f7-9da8-ce7a07722114")
+		)
+		(pin "2"
+			(uuid "3c453239-872f-4e63-993c-737c20e50eef")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "R210")
 					(unit 1)
 				)
 			)
@@ -5301,6 +6301,190 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 205.74 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6b5b239-f3c8-497a-a4e2-3edb890d5d0c")
+		(property "Reference" "C91"
+			(at 197.485 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF/10V"
+			(at 193.675 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 205.74 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF)"
+			(at 205.74 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 205.74 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d77d1f73-a754-4876-847e-d20e82994e89")
+		)
+		(pin "2"
+			(uuid "e76d5119-5201-455e-9528-fec54033223f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "C91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 52.07 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c7d64d18-dd9e-4524-8c26-5455e207fb9d")
+		(property "Reference" "R196"
+			(at 53.975 92.075 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 53.975 94.615 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 52.07 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "VL-R-LPn pull-up (matches R62 on the left sensor)"
+			(at 52.07 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 52.07 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6abcd2b6-720c-49a4-a632-ac05514179e1")
+		)
+		(pin "2"
+			(uuid "fa7124a7-fc6a-4eae-b250-46ccbbafc28d")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "R196")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 57.15 107.315 0)
 		(unit 1)
@@ -6189,502 +7373,6 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 46.355 88.9) (xy 52.07 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30ecff41-de0b-4d14-8836-6b616eae4d05")
-	)
-	(wire
-		(pts
-			(xy 52.07 88.9) (xy 95.885 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e78a60c3-416a-4510-aed1-b6fdc7cffc76")
-	)
-	(junction
-		(at 52.07 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b6ab481c-3fe4-446b-81a8-c83e864320e0")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 52.07 92.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c7d64d18-dd9e-4524-8c26-5455e207fb9d")
-		(property "Reference" "R196"
-			(at 53.975 92.075 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47k"
-			(at 53.975 94.615 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 52.07 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "VL-R-LPn pull-up (matches R62 on the left sensor)"
-			(at 52.07 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 52.07 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6abcd2b6-720c-49a4-a632-ac05514179e1")
-		)
-		(pin "2"
-			(uuid "fa7124a7-fc6a-4eae-b250-46ccbbafc28d")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "R196")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 52.07 96.52) (xy 57.15 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c50e2b6-aadd-4a74-b258-ce97dc3cb84d")
-	)
-	(wire
-		(pts
-			(xy 57.15 96.52) (xy 57.15 99.695)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94ffa289-3f31-4e6b-9d1b-fbd11f321394")
-	)
-	(junction
-		(at 57.15 99.695)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "336f3ac2-f385-4158-8809-c79a3b2024b9")
-	)
-	(global_label "VCC-3V3-REG"
-		(shape input)
-		(at 185.42 66.04 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a1fd8c5b-fb50-45ab-a05e-c5120979fe01")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 185.42 66.04 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 185.42 66.04) (xy 190.5 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "163ea8d2-c816-4552-99c0-1207e412db6c")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 194.31 66.04 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "987a68d0-8ce2-41d6-b49c-756e6798f080")
-		(property "Reference" "R209"
-			(at 196.85 63.5 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100"
-			(at 196.85 69.215 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2906981"
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4d45e1f8-bf7b-4e14-bef7-074d774e5f70")
-		)
-		(pin "2"
-			(uuid "31fcd22a-9b58-4830-9600-c7f81d9ea29f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "R209")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 198.12 66.04) (xy 205.74 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c19fc27-c77b-49a2-b3d3-1d4501f29d1e")
-	)
-	(wire
-		(pts
-			(xy 205.74 66.04) (xy 220.98 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63878e20-5a5a-41d8-bb36-d6f638d52f1a")
-	)
-	(junction
-		(at 205.74 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1949b5ed-3dab-4a5f-a9b8-bb4e6ade108b")
-	)
-	(wire
-		(pts
-			(xy 220.98 66.04) (xy 220.98 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0bf0d763-4358-4c02-95ae-cbd5315991bc")
-	)
-	(wire
-		(pts
-			(xy 205.74 66.04) (xy 205.74 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5de4258e-1f14-4a2e-bb9f-ab59bdc7bfa7")
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 205.74 71.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c6b5b239-f3c8-497a-a4e2-3edb890d5d0c")
-		(property "Reference" "C91"
-			(at 197.485 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF/10V"
-			(at 193.675 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 205.74 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.74 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF)"
-			(at 205.74 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C19702"
-			(at 205.74 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d77d1f73-a754-4876-847e-d20e82994e89")
-		)
-		(pin "2"
-			(uuid "e76d5119-5201-455e-9528-fec54033223f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "C91")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 205.74 73.66) (xy 205.74 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce577e84-28d3-4128-8493-116a7f4aa401")
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 205.74 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "91fa48f5-34ba-4c9f-b572-ae8aee7d8a32")
-		(property "Reference" "#PWR07501"
-			(at 205.74 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 205.74 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 205.74 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.74 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 205.74 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "6f63c865-1bd5-4504-9f7d-7f5c05bc6c94")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "#PWR07501")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "JLCImport:IRM-V838M3-C")
 		(at 220.98 76.2 0)
@@ -6783,62 +7471,6 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 218.44 83.82) (xy 218.44 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39e60ef5-c429-41d2-932b-e8ec75ca411a")
-	)
-	(wire
-		(pts
-			(xy 223.52 83.82) (xy 223.52 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0db722a9-6e67-4ff3-82ff-fcc0e761dd06")
-	)
-	(wire
-		(pts
-			(xy 218.44 86.36) (xy 220.98 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "785eae52-3bd7-4c53-b157-bd3a9b1d2655")
-	)
-	(wire
-		(pts
-			(xy 220.98 86.36) (xy 223.52 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "445476d9-7dc2-4e2b-ab2d-f760e9f8038e")
-	)
-	(junction
-		(at 220.98 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dc49fe22-17cf-4ded-83f8-906badd4de31")
-	)
-	(wire
-		(pts
-			(xy 220.98 86.36) (xy 220.98 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbf216bc-14d4-4783-b599-b3449307ed60")
-	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 220.98 87.63 0)
@@ -6916,321 +7548,6 @@
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 213.36 74.93) (xy 210.82 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a937ddc2-7931-4bd7-97c2-ce9981585f3b")
-	)
-	(wire
-		(pts
-			(xy 210.82 74.93) (xy 210.82 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0908901-319f-4618-a993-28b705fe4b23")
-	)
-	(wire
-		(pts
-			(xy 210.82 88.9) (xy 185.42 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f5c2ba5-15cc-49b9-9d23-ca152e1007c0")
-	)
-	(hierarchical_label "IR-F-RX1"
-		(shape output)
-		(at 185.42 88.9 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d37da0ac-3a65-4eb3-bd7a-cf27601e7203")
-	)
-	(global_label "VCC-3V3-REG"
-		(shape input)
-		(at 185.42 121.92 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ce43f8bb-923c-45b3-92a5-ac6349ff72e7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 185.42 121.92 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 185.42 121.92) (xy 190.5 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38f61e42-0f79-40ac-a55d-12e514469186")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 194.31 121.92 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9a518bd6-15ee-49a9-ae2a-ed66a64ee3a1")
-		(property "Reference" "R210"
-			(at 196.85 119.38 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100"
-			(at 196.85 125.095 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 194.31 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
-			(at 194.31 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2906981"
-			(at 194.31 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c07fd522-790a-40f7-9da8-ce7a07722114")
-		)
-		(pin "2"
-			(uuid "3c453239-872f-4e63-993c-737c20e50eef")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "R210")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 198.12 121.92) (xy 205.74 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0a797cc-438f-473e-b1a4-1836de83cf44")
-	)
-	(wire
-		(pts
-			(xy 205.74 121.92) (xy 220.98 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0511d01-c78d-463a-8f6f-9e3cb65687f3")
-	)
-	(junction
-		(at 205.74 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ed36c150-98bd-423d-bd90-9d822df597e0")
-	)
-	(wire
-		(pts
-			(xy 220.98 121.92) (xy 220.98 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d7e4ce6-f903-4141-85a3-09d3c9ac2ef5")
-	)
-	(wire
-		(pts
-			(xy 205.74 121.92) (xy 205.74 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd46c765-0274-4dbf-913c-fb2896583958")
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 205.74 127 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "98c9744c-19e0-470f-b0d8-8753865945fe")
-		(property "Reference" "C90"
-			(at 197.485 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF/10V"
-			(at 193.675 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 205.74 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.74 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF)"
-			(at 205.74 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C19702"
-			(at 205.74 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0520fc14-3e76-4f90-a5ad-17a558f695dd")
-		)
-		(pin "2"
-			(uuid "dfff505f-5960-41c1-8008-b805d69facb0")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "C90")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 205.74 129.54) (xy 205.74 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e356ceca-2b4f-41a7-a6b0-8e01293f5cd4")
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
@@ -7311,8 +7628,8 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:IRM-V838M3-C")
-		(at 220.98 132.08 0)
+		(lib_id "power:VPP")
+		(at 57.15 99.695 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7320,31 +7637,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0b1521bf-f3b1-485a-8b35-e316d92ae721")
-		(property "Reference" "U25"
-			(at 227.33 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRM-V838M3-C/TR1"
-			(at 227.33 133.35 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:IRM-V838M3-C"
-			(at 220.98 132.08 0)
+		(uuid "51e2c7a2-61ad-4176-8712-7b9227761c99")
+		(property "Reference" "#PWR0914"
+			(at 57.15 103.505 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7354,141 +7649,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.everlighteurope.com/custom/files/datasheets/DMO-0000605.pdf"
-			(at 220.98 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "38 kHz IR receiver, side-looking SMD: lenses face away from the pins, toward the front edge"
-			(at 220.98 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C3291489"
-			(at 220.98 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "451cc142-e86d-49ca-b237-b47d92312286")
-		)
-		(pin "2"
-			(uuid "1960dfad-7002-40fe-807c-58e1772070de")
-		)
-		(pin "3"
-			(uuid "c1fe348d-c0fb-4d5b-afdf-6906c02a6b6b")
-		)
-		(pin "4"
-			(uuid "f479e075-0390-413d-919c-c69243c826ed")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "U25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 218.44 139.7) (xy 218.44 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc6a3a68-ca27-4f59-8d52-b1fd13ff2f6f")
-	)
-	(wire
-		(pts
-			(xy 223.52 139.7) (xy 223.52 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68275bb3-5da7-4601-b5b1-527954668775")
-	)
-	(wire
-		(pts
-			(xy 218.44 142.24) (xy 220.98 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b547d91-253b-4527-9662-54a8d33138d9")
-	)
-	(wire
-		(pts
-			(xy 220.98 142.24) (xy 223.52 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aea9716d-5ffa-48e2-a309-b91095710907")
-	)
-	(junction
-		(at 220.98 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "54d50b7d-7ffb-40cb-bb28-d113c29bc9fa")
-	)
-	(wire
-		(pts
-			(xy 220.98 142.24) (xy 220.98 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0159f443-2409-4870-8ada-8fb92c8dcb6c")
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 220.98 143.51 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "686a1098-bb0e-4e2b-90ad-fac24ef9f36b")
-		(property "Reference" "#PWR07504"
-			(at 220.98 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 220.98 149.86 0)
-			(hide yes)
+		(property "Value" "VCC-3V3-REG"
+			(at 57.15 94.615 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7498,7 +7660,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 143.51 0)
+			(at 57.15 99.695 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7509,7 +7671,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 143.51 0)
+			(at 57.15 99.695 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7519,8 +7681,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 220.98 143.51 0)
+		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
+			(at 57.15 99.695 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7530,68 +7692,247 @@
 				)
 			)
 		)
-		(pin ""
-			(uuid "2da73fba-c64a-4416-ab04-1171517594df")
+		(pin "1"
+			(uuid "9fefd6c2-ef6e-4d08-b37b-cd9bad0ee505")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
-					(reference "#PWR07504")
+					(reference "#PWR0914")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 213.36 130.81) (xy 210.82 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6962a6f6-40b2-442c-b961-f8664ab8245f")
-	)
-	(wire
-		(pts
-			(xy 210.82 130.81) (xy 210.82 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c7ff17c-6779-483d-8e6c-701fd6db9c2a")
-	)
-	(wire
-		(pts
-			(xy 210.82 144.78) (xy 185.42 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "893f378c-cbe2-4061-97c9-e02962aa33c9")
-	)
-	(hierarchical_label "IR-F-RX2"
-		(shape output)
-		(at 185.42 144.78 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f489af16-7554-483a-b8f0-51316ba4147d")
-	)
-	(text "U24 left, U25 right (robot view). Side-looking: put both at the board front edge,\nlenses facing forward, ~10 mm apart, with a baffle between them in the bumper window."
+	(symbol
+		(lib_id "power:VPP")
+		(at 76.2 60.325 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(at 154.94 54.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "91738f75-46f7-45e3-9085-39128d0c3136")
+		(property "Reference" "#PWR0915"
+			(at 76.2 64.135 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "9d0293a6-787c-499f-a93d-86b1e66bb7d8")
+		(property "Value" "VCC-3V3-REG"
+			(at 76.2 55.245 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 60.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 60.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
+			(at 76.2 60.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b3290d13-6722-4ec6-a08c-732808b7dce1")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "#PWR0915")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 185.42 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4b378758-4bff-4dc5-b098-e7a4fec9056f")
+		(property "Reference" "#PWR0916"
+			(at 185.42 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC-3V3-REG"
+			(at 185.42 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
+			(at 185.42 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7d80ac69-0a4a-4572-8765-47568e11dd59")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "#PWR0916")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 185.42 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8dfa5d67-b8b0-473d-a089-f78d0b8f10df")
+		(property "Reference" "#PWR0917"
+			(at 185.42 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC-3V3-REG"
+			(at 185.42 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
+			(at 185.42 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c302010a-d4ef-4d71-976c-b34881cce2ab")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/bbba09df-157d-4294-b403-7dc3ed0c5481"
+					(reference "#PWR0917")
+					(unit 1)
+				)
+			)
+		)
 	)
 )

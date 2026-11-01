@@ -3007,6 +3007,176 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:SMAJ18A_C148219"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SMAJ18A_C148219"
+				(at 0 -2 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:SMAJ18A_C148219"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Littelfuse-SMAJ18A_C148219.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-65℃~+150℃ 13.7A@10/1000us 18V 1uA 22.1V 29.2V 400W@10/1000us IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional DO-214AC(SMA) ESD and Surge Protection (TVS/ESD) ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C148219"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Littelfuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Part" "SMAJ18A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "C148219 Littelfuse SMAJ18A SMA_L4.4-W2.6-LS5.0-RD"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SMAJ18A_C148219_0_1"
+				(polyline
+					(pts
+						(xy -2.286 2.286) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.254 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.524) (xy -1.27 0) (xy 1.27 1.778) (xy 1.27 -1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:SMMS0630-100M"
 			(pin_names
 				(offset 1.016)
@@ -5055,17 +5225,33 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:SMAJ18A_C148219"
+		(symbol "power:VPP"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016)
+				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2 0)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "VPP"
+				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -5074,17 +5260,7 @@
 					)
 				)
 			)
-			(property "Value" "SMAJ18A_C148219"
-				(at 0 -2 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:SMAJ18A_C148219"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5095,7 +5271,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Littelfuse-SMAJ18A_C148219.pdf"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5106,7 +5282,7 @@
 					)
 				)
 			)
-			(property "Description" "-65℃~+150℃ 13.7A@10/1000us 18V 1uA 22.1V 29.2V 400W@10/1000us IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional DO-214AC(SMA) ESD and Surge Protection (TVS/ESD) ROHS"
+			(property "Description" "Power symbol creates a global label with name \"VPP\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5117,7 +5293,7 @@
 					)
 				)
 			)
-			(property "LCSC" "C148219"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5128,47 +5304,14 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Littelfuse"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "SMAJ18A"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C148219 Littelfuse SMAJ18A SMA_L4.4-W2.6-LS5.0-RD"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SMAJ18A_C148219_0_1"
+			(symbol "VPP_0_1"
 				(polyline
 					(pts
-						(xy -2.286 2.286) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.254 -2.286)
+						(xy -0.762 1.27) (xy 0 2.54)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -5176,20 +5319,34 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.524) (xy -1.27 0) (xy 1.27 1.778) (xy 1.27 -1.524)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(pin unspecified line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VPP_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5197,24 +5354,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5309,6 +5448,17 @@
 		)
 		(uuid "7c0edb60-bd92-48fd-8e9e-024b6e1bf152")
 	)
+	(text "DC_IN: 20 V brick or dock. With the battery disconnected (Q14 off) BAT-VCC = DC_IN - 0.4 V,\nso the SLM6900 (95% max duty) needs >= ~18.5 V to finish a 4S charge. Keep DC_IN <= 22 V (D41, Q13 Vgs)."
+		(exclude_from_sim no)
+		(at 63.5 276.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8494b442-f1ad-41c3-9a09-dc5873f8ea93")
+	)
 	(text "2.2 - 2.6 Amp"
 		(exclude_from_sim no)
 		(at 248.285 336.55 0)
@@ -5318,6 +5468,28 @@
 			)
 		)
 		(uuid "a1179408-1fcf-408a-a9e5-977a37fd7d53")
+	)
+	(text "VBUS lockout: the robot 5 V (TMI6240 + Q27) can only\nturn on while VBUS is ~0 V. Q33 holds PWR_EN_G low if a\nphone already sources VBUS; once on, Q34 latches it."
+		(exclude_from_sim no)
+		(at 238.76 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a7ddd8fb-973e-488c-81fe-76ad309b1897")
+	)
+	(text "Rail-hold: charger power (dock or barrel jack)\nturns the MCU rail on and keeps it on.\nDC_IN to GND ~130k (R175+R194 || R199+R200)\n= dock presence signature."
+		(exclude_from_sim no)
+		(at 311.15 332.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dd738412-9117-408a-a98e-e78b2e3b8eb1")
 	)
 	(text "USB-C"
 		(exclude_from_sim no)
@@ -5393,6 +5565,12 @@
 		(uuid "1b39878b-a7e3-4661-893b-f2021d763102")
 	)
 	(junction
+		(at 76.2 308.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27b4c5fb-ab16-45cc-8ed5-fadd39f38b18")
+	)
+	(junction
 		(at 198.755 94.615)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5429,6 +5607,18 @@
 		(uuid "4551246b-8094-4d31-8a76-a4d78a70e10d")
 	)
 	(junction
+		(at 233.68 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "463a1e62-41a6-475a-8df6-f7ef75d97ad9")
+	)
+	(junction
+		(at 128.27 283.845)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47629525-1fa0-4df6-8869-7661ca327398")
+	)
+	(junction
 		(at 246.38 343.535)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5457,6 +5647,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "72383a87-33d3-459f-8d27-3d5099ed9181")
+	)
+	(junction
+		(at 83.82 308.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "740609a0-e0fa-40e5-baab-e76c30ee4f4a")
 	)
 	(junction
 		(at 186.69 340.995)
@@ -5555,6 +5751,12 @@
 		(uuid "bf15ddae-6e20-436c-8ead-89a6e0ad0b9e")
 	)
 	(junction
+		(at 326.39 314.325)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c103fea5-b2c7-4381-92b2-c8d358c38738")
+	)
+	(junction
 		(at 299.085 94.615)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5597,10 +5799,22 @@
 		(uuid "e4c08e09-d808-4106-aa0a-7758cfe1b452")
 	)
 	(junction
+		(at 215.9 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ecb00766-b5eb-4b4c-ab52-964963588b2a")
+	)
+	(junction
 		(at 418.465 243.205)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f0a052a6-61e7-4f5b-9e7f-c86fdec463dc")
+	)
+	(junction
+		(at 203.2 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f3b11897-cad4-42ac-9157-635b0ed2a276")
 	)
 	(junction
 		(at 177.165 283.845)
@@ -5755,6 +5969,16 @@
 			(type default)
 		)
 		(uuid "12a0cfaa-a02b-4345-9ce3-b7d674eabc22")
+	)
+	(wire
+		(pts
+			(xy 215.9 76.2) (xy 215.9 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12da172b-5bf7-4801-b3ce-0f12715911e7")
 	)
 	(wire
 		(pts
@@ -5915,6 +6139,16 @@
 			(type default)
 		)
 		(uuid "26f8c38a-704c-4924-8aa8-da1274f38514")
+	)
+	(wire
+		(pts
+			(xy 336.55 309.245) (xy 336.55 306.705)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "275dc6c6-6134-4784-ad92-dc0c8a447e32")
 	)
 	(wire
 		(pts
@@ -6148,6 +6382,16 @@
 	)
 	(wire
 		(pts
+			(xy 336.55 319.405) (xy 336.55 321.945)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ad5916b-f33b-49b1-9f4f-0e99a48d0620")
+	)
+	(wire
+		(pts
 			(xy 229.87 97.155) (xy 229.87 125.73)
 		)
 		(stroke
@@ -6168,6 +6412,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 283.845) (xy 113.03 283.845)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d36f637-aabe-4fab-a16b-850cd3b3eb75")
+	)
+	(wire
+		(pts
 			(xy 226.06 323.85) (xy 226.06 326.39)
 		)
 		(stroke
@@ -6185,6 +6439,16 @@
 			(type default)
 		)
 		(uuid "51958d5c-a1e0-4950-805b-8048f80573ca")
+	)
+	(wire
+		(pts
+			(xy 198.12 66.04) (xy 228.6 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54f362f7-1719-4612-81c8-ba833733313b")
 	)
 	(wire
 		(pts
@@ -6358,6 +6622,16 @@
 	)
 	(wire
 		(pts
+			(xy 320.675 314.325) (xy 326.39 314.325)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "647aaabd-9577-45b0-aff8-67af87b872c4")
+	)
+	(wire
+		(pts
 			(xy 149.86 304.8) (xy 149.86 307.975)
 		)
 		(stroke
@@ -6415,6 +6689,16 @@
 			(type default)
 		)
 		(uuid "6ede7a99-a3ce-46e5-b192-d265592c2e97")
+	)
+	(wire
+		(pts
+			(xy 200.66 58.42) (xy 204.47 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70cb4f36-dddd-40c7-bd55-48daec48ca4a")
 	)
 	(wire
 		(pts
@@ -6575,6 +6859,16 @@
 			(type default)
 		)
 		(uuid "81e249a1-f212-4fe6-b9db-13e313f720f7")
+	)
+	(wire
+		(pts
+			(xy 233.68 71.12) (xy 233.68 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85da6830-d866-456a-9691-fc4189613196")
 	)
 	(wire
 		(pts
@@ -6978,6 +7272,16 @@
 	)
 	(wire
 		(pts
+			(xy 326.39 314.325) (xy 331.47 314.325)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abab0584-e349-46cf-af27-88b5ebadd4aa")
+	)
+	(wire
+		(pts
 			(xy 418.465 245.745) (xy 418.465 243.205)
 		)
 		(stroke
@@ -6985,6 +7289,16 @@
 			(type default)
 		)
 		(uuid "ac7fec34-7eb2-47a3-836a-4515c1c4eac1")
+	)
+	(wire
+		(pts
+			(xy 212.09 58.42) (xy 241.3 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aebd2346-da9c-4428-bafa-72ff6f22adcf")
 	)
 	(wire
 		(pts
@@ -7078,6 +7392,16 @@
 	)
 	(wire
 		(pts
+			(xy 83.82 308.61) (xy 91.44 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfedf42e-5119-4ea4-ab70-a6113cf5ad8f")
+	)
+	(wire
+		(pts
 			(xy 128.27 283.845) (xy 128.27 291.465)
 		)
 		(stroke
@@ -7168,6 +7492,16 @@
 	)
 	(wire
 		(pts
+			(xy 233.68 58.42) (xy 233.68 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8a396da-1e23-4076-941b-43c3b59e1d01")
+	)
+	(wire
+		(pts
 			(xy 354.33 113.03) (xy 361.95 113.03)
 		)
 		(stroke
@@ -7225,6 +7559,16 @@
 			(type default)
 		)
 		(uuid "dcdf3da4-4638-430c-a719-a79764df9c90")
+	)
+	(wire
+		(pts
+			(xy 210.82 71.12) (xy 210.82 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd089669-6e1b-4cb6-a9e7-3a2555478f5b")
 	)
 	(wire
 		(pts
@@ -7418,6 +7762,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 308.61) (xy 83.82 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1a3af82-ca3b-4550-a292-64ff2295ad6b")
+	)
+	(wire
+		(pts
 			(xy 149.86 283.845) (xy 149.86 294.64)
 		)
 		(stroke
@@ -7486,6 +7840,26 @@
 		)
 		(uuid "fa750625-3be1-4f91-9433-3d6aab30c4d0")
 	)
+	(label "VBUS"
+		(at 190.5 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1345a4a4-6d21-4311-82ef-79e3efa67bb3")
+	)
+	(label "DC_IN"
+		(at 76.2 300.99 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2059dce3-de1f-4776-942a-2dc8786c643a")
+	)
 	(label "D-"
 		(at 438.15 108.585 180)
 		(effects
@@ -7516,6 +7890,16 @@
 		)
 		(uuid "322f7385-9c63-4165-b1e8-3a624b1e9eee")
 	)
+	(label "PWR_EN_G"
+		(at 252.095 99.695 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "40cbbed5-f8b0-4727-ae2f-df15c62d9802")
+	)
 	(label "NTC"
 		(at 168.275 351.155 180)
 		(effects
@@ -7545,6 +7929,16 @@
 			(justify left bottom)
 		)
 		(uuid "5bc5982e-c844-44aa-9e12-89c5655a6ca1")
+	)
+	(label "PWR_EN_G"
+		(at 320.04 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5c3b6529-354a-4a4d-8e48-3949ccc4ce4d")
 	)
 	(label "DC_IN"
 		(at 309.245 314.325 270)
@@ -7586,6 +7980,16 @@
 		)
 		(uuid "9b824cbd-3753-4928-afa6-11670563d6e8")
 	)
+	(label "PWR_EN_G"
+		(at 241.3 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4a75489-701f-4d8d-bc86-0b192653725d")
+	)
 	(label "P+{slash}C+"
 		(at 459.74 258.445 0)
 		(effects
@@ -7615,6 +8019,16 @@
 			(justify left bottom)
 		)
 		(uuid "cf908327-fe64-4b14-8b07-e608210f307f")
+	)
+	(label "PWR_EN_G"
+		(at 210.82 76.2 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dcb088ec-9ed5-429d-acd2-db2b448a3a74")
 	)
 	(label "DC_IN"
 		(at 226.06 323.85 90)
@@ -7666,73 +8080,16 @@
 		)
 		(uuid "f6be8397-7d75-4740-a356-f193f9a35702")
 	)
-	(global_label "VCC-5V-REG"
+	(hierarchical_label "PWR_EN"
 		(shape input)
-		(at 187.96 94.615 180)
-		(fields_autoplaced yes)
+		(at 200.66 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "37adc0f5-56c6-42b5-bd19-604904c1fcb3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 187.96 94.615 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "BAT-VCC"
-		(shape input)
-		(at 300.355 290.83 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9bc56094-24c4-48fd-97c5-121e2973b4c7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 300.355 279.3176 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(label "PWR_EN_G"
-		(at 320.04 87.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5c3b6529-354a-4a4d-8e48-3949ccc4ce4d")
-	)
-	(label "PWR_EN_G"
-		(at 252.095 99.695 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "40cbbed5-f8b0-4727-ae2f-df15c62d9802")
+		(uuid "18c0e933-db2f-47fb-8d1d-bb732b863f77")
 	)
 	(hierarchical_label "D+"
 		(shape bidirectional)
@@ -8617,6 +8974,101 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:AO3400")
+		(at 336.55 314.325 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "13e0b886-6549-4a5a-bc36-a09fbbd9f122")
+		(property "Reference" "Q31"
+			(at 339.09 313.055 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400"
+			(at 339.09 315.595 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:AO3400"
+			(at 336.55 314.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 336.55 314.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rail-hold: DC_IN present pulls the Q13 gate low, MCU rail on"
+			(at 336.55 314.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C20628874"
+			(at 336.55 314.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9dc8f70e-7a67-4aed-9f45-9a8cbb2e3a5b")
+		)
+		(pin "2"
+			(uuid "30396bd5-787a-4da0-8c3c-c5bcb6515320")
+		)
+		(pin "3"
+			(uuid "3e7d7621-4fea-4014-8a34-c5221c44b1d2")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "Q31")
 					(unit 1)
 				)
 			)
@@ -11575,6 +12027,254 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "#PWR07102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 233.68 73.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "450f9f1c-c15a-4fac-a627-37307e2ca51b")
+		(property "Reference" "#PWR07331"
+			(at 233.68 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.68 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 233.68 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "fd29cfb6-de99-42ba-aad9-ecf176579cf0")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07331")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:C_0603")
+		(at 83.82 312.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ad5934d-5149-4d1d-a7cd-0cdae27258dc")
+		(property "Reference" "C175"
+			(at 85.725 313.055 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF/50V"
+			(at 85.725 315.595 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 83.82 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC_IN sense filter / ADC charge reservoir"
+			(at 83.82 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1591"
+			(at 83.82 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c67597d9-4be1-414a-a50b-a0febdf4ce4a")
+		)
+		(pin "2"
+			(uuid "6a68515e-2221-4be0-be8b-2038033a3504")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "C175")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 83.82 316.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ca06879-2609-4124-9bb2-29b4e11966c0")
+		(property "Reference" "#PWR07322"
+			(at 83.82 322.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 322.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "253b2cd9-9cfc-4da7-956f-910742971779")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07322")
 					(unit 1)
 				)
 			)
@@ -14795,6 +15495,84 @@
 		)
 	)
 	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 326.39 321.945 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "726d7f3b-b348-49cb-a136-783b5fd2243a")
+		(property "Reference" "#PWR07307"
+			(at 326.39 328.295 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 326.39 328.295 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 326.39 321.945 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 326.39 321.945 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 326.39 321.945 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "483410b9-c750-450a-b32e-0d9624148e2f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07307")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:FRC0805J1R0TS")
 		(at 128.27 311.15 270)
 		(unit 1)
@@ -15770,6 +16548,101 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:AO3400")
+		(at 233.68 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "83c1227e-d199-4217-b554-7bc552109716")
+		(property "Reference" "Q33"
+			(at 236.22 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400"
+			(at 236.22 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:AO3400"
+			(at 233.68 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "VBUS lockout: VBUS present before enable holds PWR_EN_G low"
+			(at 233.68 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C20628874"
+			(at 233.68 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2b769f4b-c564-47cb-b37b-d297fa85dfca")
+		)
+		(pin "2"
+			(uuid "017a63d8-b57b-436b-bf1f-6e82fbb0edde")
+		)
+		(pin "3"
+			(uuid "fd960b1e-0607-4a59-bae1-71f763acc855")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "Q33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:USBLC6-2SC6_C2687116")
 		(at 374.65 152.4 270)
 		(mirror x)
@@ -15967,6 +16840,176 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "#FLG023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 113.03 294.005 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8f53d3a9-d31b-437e-b0e7-19656b20321e")
+		(property "Reference" "#PWR07309"
+			(at 113.03 300.355 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 300.355 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 294.005 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 294.005 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 294.005 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "be20388c-e4ef-4c4f-be71-0a9a18aa712b")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07309")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 203.2 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "931a0d83-fce4-4aa1-a466-d0dc874e9f43")
+		(property "Reference" "R203"
+			(at 196.85 69.215 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 196.85 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 203.2 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "VBUS lockout divider bottom"
+			(at 203.2 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 203.2 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e8808ae0-c76e-477f-8049-a658dc7a9913")
+		)
+		(pin "2"
+			(uuid "a96abb5f-61d1-4c46-9e6b-20ddca20540a")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "R203")
 					(unit 1)
 				)
 			)
@@ -17763,6 +18806,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 208.28 58.42 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "acc1854f-e892-451f-af7a-37c6418655ef")
+		(property "Reference" "R201"
+			(at 208.28 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 208.28 56.515 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 208.28 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "PWR_EN series: Q33 can hold PWR_EN_G low against the MCU"
+			(at 208.28 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98220"
+			(at 208.28 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "12c46ef9-1ba1-45c4-a7aa-24d0a128a136")
+		)
+		(pin "2"
+			(uuid "612edb48-34ff-4594-8f4e-f0112a896020")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "R201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:TMI6240")
 		(at 267.97 97.155 0)
 		(unit 1)
@@ -19431,6 +20566,162 @@
 		)
 	)
 	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 336.55 321.945 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bd8e503a-b6a1-47f2-9287-2a626837a602")
+		(property "Reference" "#PWR07308"
+			(at 336.55 328.295 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 336.55 328.295 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 336.55 321.945 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 336.55 321.945 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 336.55 321.945 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "f470bc12-adef-408e-9d7e-aa119e1eb58f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07308")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 215.9 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c4fb6ada-53f4-483e-a692-9d4377df72fa")
+		(property "Reference" "#PWR07333"
+			(at 215.9 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 215.9 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 215.9 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "66603a88-3bab-4e54-ae19-8a0b1e4fea55")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07333")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:DC-005-5A-2_0")
 		(at 118.745 254 0)
 		(mirror y)
@@ -19620,6 +20911,98 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "DC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 76.2 304.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c69e0643-a539-4843-b113-01aec44197f7")
+		(property "Reference" "R199"
+			(at 69.85 304.165 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1M"
+			(at 69.85 306.705 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 76.2 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC_IN sense divider top (/11: 20 V -> 1.82 V, 36 V -> 3.3 V)"
+			(at 76.2 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22935"
+			(at 76.2 304.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fab3b606-8d80-4817-8265-95ca6fa85614")
+		)
+		(pin "2"
+			(uuid "2a6d3a0a-df77-40d0-97df-629b8cbc22f4")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "R199")
 					(unit 1)
 				)
 			)
@@ -20183,6 +21566,84 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "C159")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 76.2 316.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cbfa7360-d900-4419-9a67-a8170069e70f")
+		(property "Reference" "#PWR07321"
+			(at 76.2 322.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 76.2 322.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 316.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "6dae320c-9412-4fb2-b0ab-a98f73370727")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07321")
 					(unit 1)
 				)
 			)
@@ -21017,6 +22478,98 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:SMAJ18A_C148219")
+		(at 113.03 288.925 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d4df08cb-8bee-4d51-a257-269b2dae30b8")
+		(property "Reference" "D41"
+			(at 111.125 287.655 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SMAJ22A"
+			(at 111.125 290.195 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:SMAJ18A_C148219"
+			(at 113.03 288.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 288.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC_IN TVS: 22 V standoff for the 20 V brick"
+			(at 113.03 288.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C353464"
+			(at 113.03 288.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "09876583-d60e-4a4c-ba4a-37970154764c")
+		)
+		(pin "2"
+			(uuid "07c71aff-644f-4af8-bfc2-c97cf95f509e")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "D41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 330.2 92.71 0)
 		(unit 1)
@@ -21089,6 +22642,176 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "#PWR07101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 203.2 73.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "de2098ae-05cd-4c7f-90e7-2a1173ef4cbc")
+		(property "Reference" "#PWR07332"
+			(at 203.2 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 203.2 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "66d3c258-d824-4c86-a145-c6ececd490b1")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR07332")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 76.2 312.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "df88b0d7-5a14-4e82-838d-9c61922cde42")
+		(property "Reference" "R200"
+			(at 68.58 311.785 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 68.58 314.325 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 76.2 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC_IN sense divider bottom"
+			(at 76.2 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 76.2 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "616e4867-289a-45b0-8110-cc762750d12e")
+		)
+		(pin "2"
+			(uuid "ff70fc26-d18d-4eb4-9a3a-89da3b15db67")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "R200")
 					(unit 1)
 				)
 			)
@@ -21839,6 +23562,193 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 326.39 318.135 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e9f96e99-5e92-4ac3-9aca-67bbe10ae5ca")
+		(property "Reference" "R194"
+			(at 328.93 316.865 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 328.93 319.405 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 326.39 318.135 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 326.39 318.135 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rail-hold divider bottom: 20 V DC_IN -> ~6.4 V gate"
+			(at 326.39 318.135 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 326.39 318.135 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8151c981-4956-4bc5-9803-7e789d820adb")
+		)
+		(pin "2"
+			(uuid "0eea5a6b-e64a-4a42-9758-5f07cb969ca5")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "R194")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:AO3400")
+		(at 215.9 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ef223fb2-ad6e-4336-add4-d332cb5cf062")
+		(property "Reference" "Q34"
+			(at 218.44 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400"
+			(at 218.44 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:AO3400"
+			(at 215.9 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "VBUS lockout latch: once PWR_EN_G is on, keeps Q33 off"
+			(at 215.9 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C20628874"
+			(at 215.9 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3dcec772-bccf-484d-9acb-c49d4f9c7b9b")
+		)
+		(pin "2"
+			(uuid "596a29c3-63ec-4893-8567-681079888fb4")
+		)
+		(pin "3"
+			(uuid "df68a139-c1ec-48e5-ab19-c8a3fd1c210f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "Q34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:SS56")
 		(at 312.42 108.585 270)
 		(unit 1)
@@ -21948,6 +23858,98 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 194.31 66.04 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f3cda3fe-303f-49f0-b022-7eaa062870c2")
+		(property "Reference" "R202"
+			(at 194.31 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 194.31 64.135 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "VBUS lockout divider top (VBUS/2: present above ~1.3-2.9 V)"
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 194.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a97a674c-be19-4412-9eec-cc1193033d40")
+		)
+		(pin "2"
+			(uuid "620584e7-4e59-4e3a-a970-55c64f434d50")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "R202")
 					(unit 1)
 				)
 			)
@@ -23064,35 +25066,9 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 320.675 314.325) (xy 326.39 314.325)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "647aaabd-9577-45b0-aff8-67af87b872c4")
-	)
-	(junction
-		(at 326.39 314.325)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c103fea5-b2c7-4381-92b2-c8d358c38738")
-	)
-	(wire
-		(pts
-			(xy 326.39 314.325) (xy 331.47 314.325)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abab0584-e349-46cf-af27-88b5ebadd4aa")
-	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 326.39 318.135 0)
+		(lib_id "power:VPP")
+		(at 187.96 94.615 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23100,31 +25076,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e9f96e99-5e92-4ac3-9aca-67bbe10ae5ca")
-		(property "Reference" "R194"
-			(at 328.93 316.865 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47k"
-			(at 328.93 319.405 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 326.39 318.135 0)
+		(uuid "b634a35e-982b-4127-b6d1-4e83d56efc59")
+		(property "Reference" "#PWR0902"
+			(at 187.96 98.425 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23134,79 +25088,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 326.39 318.135 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Rail-hold divider bottom: 20 V DC_IN -> ~6.4 V gate"
-			(at 326.39 318.135 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 326.39 318.135 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8151c981-4956-4bc5-9803-7e789d820adb")
-		)
-		(pin "2"
-			(uuid "0eea5a6b-e64a-4a42-9758-5f07cb969ca5")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R194")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 326.39 321.945 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "726d7f3b-b348-49cb-a136-783b5fd2243a")
-		(property "Reference" "#PWR07307"
-			(at 326.39 328.295 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 326.39 328.295 0)
-			(hide yes)
+		(property "Value" "VCC-5V-REG"
+			(at 187.96 89.535 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23216,7 +25099,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 326.39 321.945 0)
+			(at 187.96 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23227,7 +25110,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 326.39 321.945 0)
+			(at 187.96 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23237,97 +25120,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 326.39 321.945 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "483410b9-c750-450a-b32e-0d9624148e2f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07307")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:AO3400")
-		(at 336.55 314.325 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "13e0b886-6549-4a5a-bc36-a09fbbd9f122")
-		(property "Reference" "Q31"
-			(at 339.09 313.055 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AO3400"
-			(at 339.09 315.595 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:AO3400"
-			(at 336.55 314.325 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 336.55 314.325 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Rail-hold: DC_IN present pulls the Q13 gate low, MCU rail on"
-			(at 336.55 314.325 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C20628874"
-			(at 336.55 314.325 0)
+		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
+			(at 187.96 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23338,36 +25132,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "9dc8f70e-7a67-4aed-9f45-9a8cbb2e3a5b")
-		)
-		(pin "2"
-			(uuid "30396bd5-787a-4da0-8c3c-c5bcb6515320")
-		)
-		(pin "3"
-			(uuid "3e7d7621-4fea-4014-8a34-c5221c44b1d2")
+			(uuid "081889be-61b4-4ccf-be70-9237e779760a")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q31")
+					(reference "#PWR0902")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 336.55 319.405) (xy 336.55 321.945)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ad5916b-f33b-49b1-9f4f-0e99a48d0620")
-	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 336.55 321.945 0)
+		(lib_id "power:VPP")
+		(at 300.355 290.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23375,9 +25153,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "bd8e503a-b6a1-47f2-9287-2a626837a602")
-		(property "Reference" "#PWR07308"
-			(at 336.55 328.295 0)
+		(uuid "b3216647-6cfd-4fef-8580-3b14caccdea6")
+		(property "Reference" "#PWR0903"
+			(at 300.355 294.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23387,9 +25165,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 336.55 328.295 0)
-			(hide yes)
+		(property "Value" "BAT-VCC"
+			(at 300.355 285.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23399,7 +25176,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 336.55 321.945 0)
+			(at 300.355 290.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23410,7 +25187,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 336.55 321.945 0)
+			(at 300.355 290.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23420,158 +25197,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 336.55 321.945 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "f470bc12-adef-408e-9d7e-aa119e1eb58f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07308")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 336.55 309.245) (xy 336.55 306.705)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "275dc6c6-6134-4784-ad92-dc0c8a447e32")
-	)
-	(global_label "PWR-SW-G"
-		(shape bidirectional)
-		(at 336.55 306.705 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f5c0bc58-9c7d-4b29-a0c8-828e7f13b8f2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 336.55 306.705 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(text "Rail-hold: charger power (dock or barrel jack)\nturns the MCU rail on and keeps it on.\nDC_IN to GND ~130k (R175+R194 || R199+R200)\n= dock presence signature."
-		(exclude_from_sim no)
-		(at 311.15 332.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "dd738412-9117-408a-a98e-e78b2e3b8eb1")
-	)
-	(wire
-		(pts
-			(xy 128.27 283.845) (xy 113.03 283.845)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d36f637-aabe-4fab-a16b-850cd3b3eb75")
-	)
-	(junction
-		(at 128.27 283.845)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "47629525-1fa0-4df6-8869-7661ca327398")
-	)
-	(symbol
-		(lib_id "JLCImport:SMAJ18A_C148219")
-		(at 113.03 288.925 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d4df08cb-8bee-4d51-a257-269b2dae30b8")
-		(property "Reference" "D41"
-			(at 111.125 287.655 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SMAJ22A"
-			(at 111.125 290.195 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:SMAJ18A_C148219"
-			(at 113.03 288.925 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 288.925 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC_IN TVS: 22 V standoff for the 20 V brick"
-			(at 113.03 288.925 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C353464"
-			(at 113.03 288.925 0)
+		(property "Description" "Power symbol creates a global label with name \"BAT-VCC\""
+			(at 300.355 290.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23582,1445 +25209,37 @@
 			)
 		)
 		(pin "1"
-			(uuid "09876583-d60e-4a4c-ba4a-37970154764c")
-		)
-		(pin "2"
-			(uuid "07c71aff-644f-4af8-bfc2-c97cf95f509e")
+			(uuid "145ca94f-9011-48c9-a78b-6bfe2472e208")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "D41")
+					(reference "#PWR0903")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 113.03 294.005 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8f53d3a9-d31b-437e-b0e7-19656b20321e")
-		(property "Reference" "#PWR07309"
-			(at 113.03 300.355 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 113.03 300.355 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 294.005 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 294.005 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 113.03 294.005 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "be20388c-e4ef-4c4f-be71-0a9a18aa712b")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07309")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "DC_IN: 20 V brick or dock. With the battery disconnected (Q14 off) BAT-VCC = DC_IN - 0.4 V,\nso the SLM6900 (95% max duty) needs >= ~18.5 V to finish a 4S charge. Keep DC_IN <= 22 V (D41, Q13 Vgs)."
-		(exclude_from_sim no)
-		(at 63.5 276.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8494b442-f1ad-41c3-9a09-dc5873f8ea93")
-	)
-	(label "DC_IN"
-		(at 76.2 300.99 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2059dce3-de1f-4776-942a-2dc8786c643a")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 76.2 304.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c69e0643-a539-4843-b113-01aec44197f7")
-		(property "Reference" "R199"
-			(at 69.85 304.165 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1M"
-			(at 69.85 306.705 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 76.2 304.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 304.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC_IN sense divider top (/11: 20 V -> 1.82 V, 36 V -> 3.3 V)"
-			(at 76.2 304.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22935"
-			(at 76.2 304.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fab3b606-8d80-4817-8265-95ca6fa85614")
-		)
-		(pin "2"
-			(uuid "2a6d3a0a-df77-40d0-97df-629b8cbc22f4")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R199")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(junction
-		(at 76.2 308.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "27b4c5fb-ab16-45cc-8ed5-fadd39f38b18")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 76.2 312.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "df88b0d7-5a14-4e82-838d-9c61922cde42")
-		(property "Reference" "R200"
-			(at 68.58 311.785 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 68.58 314.325 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 76.2 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC_IN sense divider bottom"
-			(at 76.2 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 76.2 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "616e4867-289a-45b0-8110-cc762750d12e")
-		)
-		(pin "2"
-			(uuid "ff70fc26-d18d-4eb4-9a3a-89da3b15db67")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R200")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 76.2 316.23 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "cbfa7360-d900-4419-9a67-a8170069e70f")
-		(property "Reference" "#PWR07321"
-			(at 76.2 322.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 76.2 322.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 76.2 316.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 76.2 316.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 76.2 316.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "6dae320c-9412-4fb2-b0ab-a98f73370727")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07321")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 76.2 308.61) (xy 83.82 308.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1a3af82-ca3b-4550-a292-64ff2295ad6b")
-	)
-	(junction
-		(at 83.82 308.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "740609a0-e0fa-40e5-baab-e76c30ee4f4a")
-	)
-	(symbol
-		(lib_id "Library:C_0603")
-		(at 83.82 312.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4ad5934d-5149-4d1d-a7cd-0cdae27258dc")
-		(property "Reference" "C175"
-			(at 85.725 313.055 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF/50V"
-			(at 85.725 315.595 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 83.82 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC_IN sense filter / ADC charge reservoir"
-			(at 83.82 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1591"
-			(at 83.82 312.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c67597d9-4be1-414a-a50b-a0febdf4ce4a")
-		)
-		(pin "2"
-			(uuid "6a68515e-2221-4be0-be8b-2038033a3504")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "C175")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 83.82 316.23 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4ca06879-2609-4124-9bb2-29b4e11966c0")
-		(property "Reference" "#PWR07322"
-			(at 83.82 322.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 83.82 322.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 83.82 316.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 316.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 83.82 316.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "253b2cd9-9cfc-4da7-956f-910742971779")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07322")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 83.82 308.61) (xy 91.44 308.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfedf42e-5119-4ea4-ab70-a6113cf5ad8f")
-	)
-	(global_label "DC_IN_SENSE"
+	(hierarchical_label "DC_IN_SENSE"
 		(shape output)
 		(at 91.44 308.61 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "b56efa43-16d7-4d08-b05a-31588b801f90")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.44 308.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
+		(uuid "4213bf96-65ff-403a-9329-9defc7f87221")
 	)
-	(hierarchical_label "PWR_EN"
-		(shape input)
-		(at 200.66 58.42 180)
+	(hierarchical_label "PWR-SW-G"
+		(shape bidirectional)
+		(at 336.55 306.705 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "18c0e933-db2f-47fb-8d1d-bb732b863f77")
-	)
-	(wire
-		(pts
-			(xy 200.66 58.42) (xy 204.47 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70cb4f36-dddd-40c7-bd55-48daec48ca4a")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 208.28 58.42 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "acc1854f-e892-451f-af7a-37c6418655ef")
-		(property "Reference" "R201"
-			(at 208.28 54.61 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 208.28 56.515 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 208.28 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "PWR_EN series: Q33 can hold PWR_EN_G low against the MCU"
-			(at 208.28 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C98220"
-			(at 208.28 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "12c46ef9-1ba1-45c4-a7aa-24d0a128a136")
-		)
-		(pin "2"
-			(uuid "612edb48-34ff-4594-8f4e-f0112a896020")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 212.09 58.42) (xy 241.3 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aebd2346-da9c-4428-bafa-72ff6f22adcf")
-	)
-	(label "PWR_EN_G"
-		(at 241.3 58.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a4a75489-701f-4d8d-bc86-0b192653725d")
-	)
-	(junction
-		(at 233.68 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "463a1e62-41a6-475a-8df6-f7ef75d97ad9")
-	)
-	(wire
-		(pts
-			(xy 233.68 58.42) (xy 233.68 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8a396da-1e23-4076-941b-43c3b59e1d01")
-	)
-	(symbol
-		(lib_id "JLCImport:AO3400")
-		(at 233.68 66.04 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "83c1227e-d199-4217-b554-7bc552109716")
-		(property "Reference" "Q33"
-			(at 236.22 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AO3400"
-			(at 236.22 67.31 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:AO3400"
-			(at 233.68 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "VBUS lockout: VBUS present before enable holds PWR_EN_G low"
-			(at 233.68 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C20628874"
-			(at 233.68 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2b769f4b-c564-47cb-b37b-d297fa85dfca")
-		)
-		(pin "2"
-			(uuid "017a63d8-b57b-436b-bf1f-6e82fbb0edde")
-		)
-		(pin "3"
-			(uuid "fd960b1e-0607-4a59-bae1-71f763acc855")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q33")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 233.68 71.12) (xy 233.68 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85da6830-d866-456a-9691-fc4189613196")
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 233.68 73.66 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "450f9f1c-c15a-4fac-a627-37307e2ca51b")
-		(property "Reference" "#PWR07331"
-			(at 233.68 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 233.68 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 233.68 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 233.68 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "fd29cfb6-de99-42ba-aad9-ecf176579cf0")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07331")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "VBUS"
-		(at 190.5 66.04 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1345a4a4-6d21-4311-82ef-79e3efa67bb3")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 194.31 66.04 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f3cda3fe-303f-49f0-b022-7eaa062870c2")
-		(property "Reference" "R202"
-			(at 194.31 62.23 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100k"
-			(at 194.31 64.135 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "VBUS lockout divider top (VBUS/2: present above ~1.3-2.9 V)"
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 194.31 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a97a674c-be19-4412-9eec-cc1193033d40")
-		)
-		(pin "2"
-			(uuid "620584e7-4e59-4e3a-a970-55c64f434d50")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R202")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 198.12 66.04) (xy 228.6 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54f362f7-1719-4612-81c8-ba833733313b")
-	)
-	(junction
-		(at 203.2 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f3b11897-cad4-42ac-9157-635b0ed2a276")
-	)
-	(junction
-		(at 215.9 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ecb00766-b5eb-4b4c-ab52-964963588b2a")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 203.2 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "931a0d83-fce4-4aa1-a466-d0dc874e9f43")
-		(property "Reference" "R203"
-			(at 196.85 69.215 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 196.85 71.755 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 203.2 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "VBUS lockout divider bottom"
-			(at 203.2 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 203.2 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e8808ae0-c76e-477f-8049-a658dc7a9913")
-		)
-		(pin "2"
-			(uuid "a96abb5f-61d1-4c46-9e6b-20ddca20540a")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "R203")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 203.2 73.66 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "de2098ae-05cd-4c7f-90e7-2a1173ef4cbc")
-		(property "Reference" "#PWR07332"
-			(at 203.2 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 203.2 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 203.2 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "66d3c258-d824-4c86-a145-c6ececd490b1")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07332")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:AO3400")
-		(at 215.9 71.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ef223fb2-ad6e-4336-add4-d332cb5cf062")
-		(property "Reference" "Q34"
-			(at 218.44 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AO3400"
-			(at 218.44 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:AO3400"
-			(at 215.9 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "VBUS lockout latch: once PWR_EN_G is on, keeps Q33 off"
-			(at 215.9 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C20628874"
-			(at 215.9 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3dcec772-bccf-484d-9acb-c49d4f9c7b9b")
-		)
-		(pin "2"
-			(uuid "596a29c3-63ec-4893-8567-681079888fb4")
-		)
-		(pin "3"
-			(uuid "df68a139-c1ec-48e5-ab19-c8a3fd1c210f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 215.9 76.2) (xy 215.9 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12da172b-5bf7-4801-b3ce-0f12715911e7")
-	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 215.9 78.74 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c4fb6ada-53f4-483e-a692-9d4377df72fa")
-		(property "Reference" "#PWR07333"
-			(at 215.9 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 215.9 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 215.9 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "66603a88-3bab-4e54-ae19-8a0b1e4fea55")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR07333")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 210.82 71.12) (xy 210.82 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd089669-6e1b-4cb6-a9e7-3a2555478f5b")
-	)
-	(label "PWR_EN_G"
-		(at 210.82 76.2 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "dcb088ec-9ed5-429d-acd2-db2b448a3a74")
-	)
-	(text "VBUS lockout: the robot 5 V (TMI6240 + Q27) can only\nturn on while VBUS is ~0 V. Q33 holds PWR_EN_G low if a\nphone already sources VBUS; once on, Q34 latches it."
-		(exclude_from_sim no)
-		(at 238.76 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a7ddd8fb-973e-488c-81fe-76ad309b1897")
+		(uuid "97c27aa8-846f-40c3-a09d-05483d783801")
 	)
 )

@@ -5,6 +5,280 @@
 	(uuid "88dd8015-053d-48ba-ab6d-63b7cf5f2795")
 	(paper "USLetter")
 	(lib_symbols
+		(symbol "Connector_Generic:Conn_02x03_Odd_Even"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 1.27 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x03_Odd_Even"
+				(at 1.27 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_02x03_Odd_Even_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 3.81 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 2.667)
+					(end 2.54 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "DesignLibrary:LiDAR_0_N-MOS-SOT23_DesignLibrary.SchLib"
 			(pin_numbers
 				(hide yes)
@@ -2073,9 +2347,13 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_02x03_Odd_Even"
+		(symbol "power:VPP"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016)
+				(offset 0)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -2083,18 +2361,19 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 1.27 5.08 0)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_02x03_Odd_Even"
-				(at 1.27 -5.08 0)
+			(property "Value" "VPP"
+				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2125,7 +2404,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Power symbol creates a global label with name \"VPP\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2136,7 +2415,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "connector"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2147,99 +2426,49 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "VPP_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
-			(symbol "Conn_02x03_Odd_Even_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 3.81 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 0.127)
-					(end 2.54 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
+			(symbol "VPP_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2247,96 +2476,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2397,6 +2536,12 @@
 		(uuid "127ad42d-7357-4cc6-8874-a2eefc18cee8")
 	)
 	(junction
+		(at 196.215 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56c19db8-ad1e-4245-9fd4-6798a4e8eb68")
+	)
+	(junction
 		(at 128.27 64.135)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2413,6 +2558,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2944beb-2c78-4fb9-a040-a86170bbca7f")
+	)
+	(junction
+		(at 160.655 69.215)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d32bff45-e7aa-43b5-8098-cbc2d8547444")
 	)
 	(junction
 		(at 99.06 140.97)
@@ -2494,6 +2645,16 @@
 	)
 	(wire
 		(pts
+			(xy 180.975 140.97) (xy 177.8 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e0e2bc8-e9c5-42db-acd3-21d7101b1589")
+	)
+	(wire
+		(pts
 			(xy 99.06 106.68) (xy 99.06 110.49)
 		)
 		(stroke
@@ -2514,13 +2675,23 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 125.73) (xy 167.64 143.51)
+			(xy 177.8 140.97) (xy 177.8 146.05)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "44c6fd8e-5fab-4440-a34c-f08c97a56602")
+		(uuid "3fdff2df-2079-44ff-945e-e2a761a07bcf")
+	)
+	(wire
+		(pts
+			(xy 156.21 69.215) (xy 160.655 69.215)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43f0b7cb-3a1b-43cb-bb9b-66ccdc5399d6")
 	)
 	(wire
 		(pts
@@ -2604,6 +2775,16 @@
 	)
 	(wire
 		(pts
+			(xy 196.215 140.97) (xy 196.215 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69c53652-02c0-4e8d-9d4d-0349882ca313")
+	)
+	(wire
+		(pts
 			(xy 53.34 153.67) (xy 91.44 153.67)
 		)
 		(stroke
@@ -2634,6 +2815,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.675 140.97) (xy 196.215 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ba10e3c-039d-4e94-befe-c74beaeed9bf")
+	)
+	(wire
+		(pts
 			(xy 86.36 123.19) (xy 86.36 125.73)
 		)
 		(stroke
@@ -2654,7 +2845,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 143.51) (xy 167.64 146.685)
+			(xy 167.64 125.73) (xy 167.64 146.685)
 		)
 		(stroke
 			(width 0)
@@ -2671,6 +2862,16 @@
 			(type default)
 		)
 		(uuid "89ea2271-c07c-4b83-b9cf-d4b95652adde")
+	)
+	(wire
+		(pts
+			(xy 175.26 140.97) (xy 175.26 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b549bc1-6dc8-424d-86e2-775e33bac609")
 	)
 	(wire
 		(pts
@@ -2691,6 +2892,26 @@
 			(type default)
 		)
 		(uuid "a531436f-e599-40f8-9da0-9ad13d1f0f2f")
+	)
+	(wire
+		(pts
+			(xy 193.675 135.89) (xy 200.66 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afa472f9-9116-4b68-bfba-7eb14ffd03f4")
+	)
+	(wire
+		(pts
+			(xy 175.26 138.43) (xy 180.975 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcbd3791-fb5b-48e7-b67a-a032c2c69167")
 	)
 	(wire
 		(pts
@@ -2724,6 +2945,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.655 69.215) (xy 168.275 69.215)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf1784ac-a3d0-4d80-9704-da7d5b9bd16b")
+	)
+	(wire
+		(pts
 			(xy 145.415 64.135) (xy 168.275 64.135)
 		)
 		(stroke
@@ -2731,6 +2962,16 @@
 			(type default)
 		)
 		(uuid "d048f1ea-cd64-42ac-9409-f4bf3c5e5aed")
+	)
+	(wire
+		(pts
+			(xy 160.655 69.215) (xy 160.655 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2e7aa28-e1a0-464d-b237-d1e5042153c8")
 	)
 	(wire
 		(pts
@@ -2754,6 +2995,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.675 138.43) (xy 196.215 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e395459b-70a8-41b9-84b5-b100c9925f75")
+	)
+	(wire
+		(pts
 			(xy 53.34 64.135) (xy 53.34 153.67)
 		)
 		(stroke
@@ -2761,6 +3012,16 @@
 			(type default)
 		)
 		(uuid "e85dc9ca-1b3d-449b-85bd-e19fd44aa7c0")
+	)
+	(wire
+		(pts
+			(xy 196.215 138.43) (xy 196.215 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eab61398-c7c7-45d6-9e55-4c2e5405d54b")
 	)
 	(wire
 		(pts
@@ -2802,6 +3063,26 @@
 		)
 		(uuid "f9bb6b04-d04c-44c8-b0af-c0c1b1df1974")
 	)
+	(wire
+		(pts
+			(xy 146.685 69.215) (xy 148.59 69.215)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd6d5f75-dc56-465e-ac1e-f726b28bdff3")
+	)
+	(label "VM-5V-LIDAR"
+		(at 196.215 146.05 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0b07402d-7134-4a64-942b-f5704586742f")
+	)
 	(label "VM-5V-LIDAR"
 		(at 167.64 125.73 90)
 		(effects
@@ -2811,6 +3092,16 @@
 			(justify left bottom)
 		)
 		(uuid "673b258c-3792-4c25-8cf6-9a50bc5b7ba3")
+	)
+	(label "LiDAR-TX-J"
+		(at 177.8 146.05 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "722231df-98a0-43cf-a50d-d2c7f7b8e243")
 	)
 	(label "VM-5V-LIDAR"
 		(at 99.06 119.38 0)
@@ -2842,77 +3133,15 @@
 		)
 		(uuid "89648824-9b64-4d8e-8fa0-7a760150846d")
 	)
-	(global_label "WD_OK"
-		(shape input)
-		(at 76.2 118.11 180)
-		(fields_autoplaced yes)
+	(label "LiDAR-TX-J"
+		(at 160.655 76.2 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "1d027dfb-7c96-4ada-a150-b5e26b2ccd00")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.2 118.11 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "VCC-5V-REG"
-		(shape input)
-		(at 99.06 88.9 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9892ba1d-15ea-4e5d-83de-a8e6ef620038")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 99.06 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "VCC-3V3"
-		(shape input)
-		(at 80.01 133.35 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f02bba50-efe3-4774-8ca9-8700fa3ac798")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 80.01 133.35 270)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
+		(uuid "91d12140-a453-4ea2-bb30-c1436e2a2451")
 	)
 	(hierarchical_label "LiDAR-TXD"
 		(shape input)
@@ -3798,6 +4027,99 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
 					(reference "#PWR0605")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 186.055 138.43 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "2ea9f3df-0445-4c19-9c2e-ac9350696a18")
+		(property "Reference" "LIDAR2"
+			(at 187.325 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LIDAR-ALT (DNP)"
+			(at 187.325 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical"
+			(at 186.055 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.055 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Other 2D LiDARs, 2x3 0.1in through-hole, not fitted: 1 LiDAR RX, 2 GND, 3 MOT- (Q20), 4 VM-5V-LIDAR, 5 LiDAR TX, 6 VM-5V-LIDAR (motor +)"
+			(at 186.055 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "633aa614-60c0-462d-a813-dd000459a715")
+		)
+		(pin "2"
+			(uuid "fdeb89f8-3d49-42ad-b0cc-bb8374db2665")
+		)
+		(pin "3"
+			(uuid "c5867617-e31c-4b2e-9ecf-1b46c82db46a")
+		)
+		(pin "4"
+			(uuid "6e666dce-4556-4dda-93b7-fbb0e941ed8a")
+		)
+		(pin "5"
+			(uuid "963edf6b-0cce-4b23-9688-53d8715a92d4")
+		)
+		(pin "6"
+			(uuid "c189f143-4a9f-4bed-bfc5-ba361d2fbefe")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
+					(reference "LIDAR2")
 					(unit 1)
 				)
 			)
@@ -4888,6 +5210,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 152.4 69.215 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7e999fb2-2181-4150-ad85-c00e400841c9")
+		(property "Reference" "R113"
+			(at 152.4 65.405 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100"
+			(at 152.4 72.517 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Series R on the LiDAR TX (to PD2, UART5 RX)"
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 152.4 69.215 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44c1cf04-a140-4005-ac94-9de39a2c1658")
+		)
+		(pin "2"
+			(uuid "f202622d-e97f-424e-87d0-c19124e3bd63")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
+					(reference "R113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 95.25 110.49 90)
 		(unit 1)
@@ -4974,6 +5388,84 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
 					(reference "C171")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 200.66 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ab31c014-336f-4a0a-978e-7d1b5d51fcd0")
+		(property "Reference" "#PWR07099"
+			(at 200.66 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 200.66 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "ab94d591-e8e2-4c90-8ba4-0ec50f310569")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
+					(reference "#PWR07099")
 					(unit 1)
 				)
 			)
@@ -7235,162 +7727,20 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
-		(at 186.055 138.43 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "2ea9f3df-0445-4c19-9c2e-ac9350696a18")
-		(property "Reference" "LIDAR2"
-			(at 187.325 132.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "LIDAR-ALT (DNP)"
-			(at 187.325 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical"
-			(at 186.055 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.055 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Other 2D LiDARs, 2x3 0.1in through-hole, not fitted: 1 LiDAR RX, 2 GND, 3 MOT- (Q20), 4 VM-5V-LIDAR, 5 LiDAR TX, 6 VM-5V-LIDAR (motor +)"
-			(at 186.055 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "633aa614-60c0-462d-a813-dd000459a715")
-		)
-		(pin "2"
-			(uuid "fdeb89f8-3d49-42ad-b0cc-bb8374db2665")
-		)
-		(pin "3"
-			(uuid "c5867617-e31c-4b2e-9ecf-1b46c82db46a")
-		)
-		(pin "4"
-			(uuid "6e666dce-4556-4dda-93b7-fbb0e941ed8a")
-		)
-		(pin "5"
-			(uuid "963edf6b-0cce-4b23-9688-53d8715a92d4")
-		)
-		(pin "6"
-			(uuid "c189f143-4a9f-4bed-bfc5-ba361d2fbefe")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "LIDAR2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 175.26 140.97) (xy 175.26 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b549bc1-6dc8-424d-86e2-775e33bac609")
-	)
-	(wire
-		(pts
-			(xy 175.26 138.43) (xy 180.975 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bcbd3791-fb5b-48e7-b67a-a032c2c69167")
-	)
-	(wire
-		(pts
-			(xy 180.975 140.97) (xy 177.8 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e0e2bc8-e9c5-42db-acd3-21d7101b1589")
-	)
-	(wire
-		(pts
-			(xy 177.8 140.97) (xy 177.8 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fdff2df-2079-44ff-945e-e2a761a07bcf")
-	)
-	(label "LiDAR-TX-J"
-		(at 177.8 146.05 270)
+	(hierarchical_label "WD_OK"
+		(shape input)
+		(at 76.2 118.11 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify right)
 		)
-		(uuid "722231df-98a0-43cf-a50d-d2c7f7b8e243")
-	)
-	(wire
-		(pts
-			(xy 193.675 135.89) (xy 200.66 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "afa472f9-9116-4b68-bfba-7eb14ffd03f4")
+		(uuid "6d1aa11b-993c-4d68-ab68-b00ff3d12942")
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 200.66 135.89 0)
+		(lib_id "power:VPP")
+		(at 99.06 88.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7398,9 +7748,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ab31c014-336f-4a0a-978e-7d1b5d51fcd0")
-		(property "Reference" "#PWR07099"
-			(at 200.66 142.24 0)
+		(uuid "d5e34d69-ab39-4fa5-84f7-273cdf975e48")
+		(property "Reference" "#PWR0920"
+			(at 99.06 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7410,9 +7760,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 200.66 142.24 0)
-			(hide yes)
+		(property "Value" "VCC-5V-REG"
+			(at 99.06 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7422,7 +7771,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 200.66 135.89 0)
+			(at 99.06 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7433,7 +7782,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 200.66 135.89 0)
+			(at 99.06 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7443,153 +7792,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 200.66 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "ab94d591-e8e2-4c90-8ba4-0ec50f310569")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "#PWR07099")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 193.675 138.43) (xy 196.215 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e395459b-70a8-41b9-84b5-b100c9925f75")
-	)
-	(wire
-		(pts
-			(xy 193.675 140.97) (xy 196.215 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ba10e3c-039d-4e94-befe-c74beaeed9bf")
-	)
-	(wire
-		(pts
-			(xy 196.215 138.43) (xy 196.215 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eab61398-c7c7-45d6-9e55-4c2e5405d54b")
-	)
-	(wire
-		(pts
-			(xy 196.215 140.97) (xy 196.215 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69c53652-02c0-4e8d-9d4d-0349882ca313")
-	)
-	(junction
-		(at 196.215 140.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "56c19db8-ad1e-4245-9fd4-6798a4e8eb68")
-	)
-	(label "VM-5V-LIDAR"
-		(at 196.215 146.05 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0b07402d-7134-4a64-942b-f5704586742f")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 152.4 69.215 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7e999fb2-2181-4150-ad85-c00e400841c9")
-		(property "Reference" "R113"
-			(at 152.4 65.405 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100"
-			(at 152.4 72.517 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 152.4 69.215 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 152.4 69.215 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Series R on the LiDAR TX (to PD2, UART5 RX)"
-			(at 152.4 69.215 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2906981"
-			(at 152.4 69.215 0)
+		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
+			(at 99.06 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7600,74 +7804,92 @@
 			)
 		)
 		(pin "1"
-			(uuid "44c1cf04-a140-4005-ac94-9de39a2c1658")
-		)
-		(pin "2"
-			(uuid "f202622d-e97f-424e-87d0-c19124e3bd63")
+			(uuid "111009d6-4e7d-4be9-8bec-55e2d25a0c77")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
-					(reference "R113")
+					(reference "#PWR0920")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 146.685 69.215) (xy 148.59 69.215)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd6d5f75-dc56-465e-ac1e-f726b28bdff3")
-	)
-	(wire
-		(pts
-			(xy 156.21 69.215) (xy 160.655 69.215)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43f0b7cb-3a1b-43cb-bb9b-66ccdc5399d6")
-	)
-	(wire
-		(pts
-			(xy 160.655 69.215) (xy 168.275 69.215)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf1784ac-a3d0-4d80-9704-da7d5b9bd16b")
-	)
-	(wire
-		(pts
-			(xy 160.655 69.215) (xy 160.655 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2e7aa28-e1a0-464d-b237-d1e5042153c8")
-	)
-	(junction
-		(at 160.655 69.215)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d32bff45-e7aa-43b5-8098-cbc2d8547444")
-	)
-	(label "LiDAR-TX-J"
-		(at 160.655 76.2 270)
-		(effects
-			(font
-				(size 1.27 1.27)
+	(symbol
+		(lib_id "power:VPP")
+		(at 80.01 133.35 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bdb231f7-edac-4610-afe3-590d5233e8d2")
+		(property "Reference" "#PWR0921"
+			(at 80.01 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right bottom)
 		)
-		(uuid "91d12140-a453-4ea2-bb30-c1436e2a2451")
+		(property "Value" "VCC-3V3"
+			(at 80.01 138.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-3V3\""
+			(at 80.01 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bb52d4c5-4903-4076-b089-33efaaa75d9c")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/994d55da-8e8c-4fe8-9877-f2e4533982e7"
+					(reference "#PWR0921")
+					(unit 1)
+				)
+			)
+		)
 	)
 )

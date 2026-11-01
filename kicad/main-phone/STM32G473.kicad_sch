@@ -2721,6 +2721,7 @@
 			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5093,12 +5094,20 @@
 		(uuid "46c45cda-e8dd-4a2c-924f-0a803eff738d")
 	)
 	(no_connect
+		(at 269.24 212.09)
+		(uuid "4ea3e998-6e80-4d95-87a2-bad5f239aef5")
+	)
+	(no_connect
 		(at 129.54 222.25)
 		(uuid "58bcb0b6-d6cf-4b57-9f9f-672bea76856f")
 	)
 	(no_connect
 		(at 144.78 222.25)
 		(uuid "59d0814b-df94-4b2e-b4c9-2eb227fae203")
+	)
+	(no_connect
+		(at 256.54 212.09)
+		(uuid "80414395-aa46-44ef-b376-92e82a86fe23")
 	)
 	(no_connect
 		(at 63.5 217.17)
@@ -6184,6 +6193,16 @@
 	)
 	(wire
 		(pts
+			(xy 363.22 41.91) (xy 401.32 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b2eeb3f-abd1-47ad-85f4-9146a9feb71b")
+	)
+	(wire
+		(pts
 			(xy 104.14 52.07) (xy 111.76 52.07)
 		)
 		(stroke
@@ -7214,6 +7233,16 @@
 	)
 	(wire
 		(pts
+			(xy 374.65 38.1) (xy 374.65 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe3c96d7-f0a3-432c-a68b-af77d9472aa7")
+	)
+	(wire
+		(pts
 			(xy 384.81 39.37) (xy 384.81 72.39)
 		)
 		(stroke
@@ -7573,6 +7602,17 @@
 		)
 		(uuid "00c36e6f-ba04-47b3-bfb0-65c3ec6c8f56")
 	)
+	(hierarchical_label "HALL-TOWER"
+		(shape input)
+		(at 295.91 52.07 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0679f953-a2b5-40d6-9de4-f8ef0f832b8b")
+	)
 	(hierarchical_label "MAIN-BRUSH-IN2"
 		(shape output)
 		(at 198.12 130.81 0)
@@ -7638,6 +7678,17 @@
 			(justify right)
 		)
 		(uuid "1e0b6b42-4a65-4753-a561-426ef07c9399")
+	)
+	(hierarchical_label "HALL-BIN"
+		(shape input)
+		(at 295.91 49.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "220988bc-1653-44ca-8b95-db48da441e8d")
 	)
 	(hierarchical_label "CLEAN-BTN"
 		(shape input)
@@ -7781,6 +7832,17 @@
 			(justify left)
 		)
 		(uuid "4bc9360c-4cc3-497f-b861-cfcea0295c13")
+	)
+	(hierarchical_label "DC_IN_SENSE"
+		(shape input)
+		(at 104.14 130.81 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4d501566-2fbd-43a9-bb1b-38f9ee1deebf")
 	)
 	(hierarchical_label "BAT_ID"
 		(shape input)
@@ -8024,6 +8086,28 @@
 		)
 		(uuid "c2bbeb18-f580-4961-96e2-e143141e8eb3")
 	)
+	(hierarchical_label "CLIFF-LM-Q+"
+		(shape input)
+		(at 198.12 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c3005ab3-89f1-4002-be00-83149db00c0f")
+	)
+	(hierarchical_label "REAR-IR-L"
+		(shape input)
+		(at 198.12 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c4e28435-ba8c-4f5f-93ae-6adf18559381")
+	)
 	(hierarchical_label "LF-Q+"
 		(shape input)
 		(at 104.14 57.15 180)
@@ -8101,6 +8185,17 @@
 		)
 		(uuid "e0bb8626-202e-4c6e-8846-deac07b813f8")
 	)
+	(hierarchical_label "REAR-IR-R"
+		(shape input)
+		(at 198.12 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e12414bb-ba37-4130-834c-b6169f6e5a12")
+	)
 	(hierarchical_label "SIDE-BRUSH-IN2"
 		(shape output)
 		(at 368.3 49.53 0)
@@ -8133,6 +8228,17 @@
 			(justify right)
 		)
 		(uuid "e3d7c5d1-1820-4d89-9e5b-cde20e1e7ba4")
+	)
+	(hierarchical_label "CLIFF-RM-Q+"
+		(shape input)
+		(at 295.91 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "edcde10c-1f1b-46b6-b994-904121fac807")
 	)
 	(hierarchical_label "I2C4_SDA"
 		(shape input)
@@ -8224,6 +8330,7 @@
 		)
 		(property "Value" "GND"
 			(at 326.39 224.79 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8367,6 +8474,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VPP")
+		(at 274.32 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "10e2a763-0552-41cf-a929-a96beb8b8933")
+		(property "Reference" "#PWR0934"
+			(at 274.32 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC-5V-REG"
+			(at 274.32 204.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 274.32 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 274.32 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
+			(at 274.32 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "150f2498-a328-4642-a764-3262da25902d")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
+					(reference "#PWR0934")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 50.8 113.03 0)
 		(unit 1)
@@ -8390,6 +8574,7 @@
 		)
 		(property "Value" "GND"
 			(at 50.8 119.38 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10739,6 +10924,7 @@
 		)
 		(property "Value" "GND"
 			(at 149.86 231.14 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10862,6 +11048,83 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 50.8 80.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "46671b50-1801-4147-86fb-102cf771a8a8")
+		(property "Reference" "#PWR0935"
+			(at 50.8 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC-3V3"
+			(at 50.8 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-3V3\""
+			(at 50.8 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2da94fe0-390a-4f1c-a16d-a5b650f33d4a")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
+					(reference "#PWR0935")
 					(unit 1)
 				)
 			)
@@ -11630,6 +11893,7 @@
 		)
 		(property "Value" "GND"
 			(at 378.46 224.79 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13192,6 +13456,7 @@
 		)
 		(property "Value" "GND"
 			(at 384.81 86.36 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16748,6 +17013,7 @@
 		)
 		(property "Value" "GND"
 			(at 57.15 233.68 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17710,6 +17976,7 @@
 		)
 		(property "Value" "GND"
 			(at 232.41 105.41 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18921,6 +19188,7 @@
 		)
 		(property "Value" "GND"
 			(at 255.27 105.41 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23489,264 +23757,5 @@
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 374.65 38.1) (xy 374.65 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe3c96d7-f0a3-432c-a68b-af77d9472aa7")
-	)
-	(no_connect
-		(at 256.54 212.09)
-		(uuid "80414395-aa46-44ef-b376-92e82a86fe23")
-	)
-	(no_connect
-		(at 269.24 212.09)
-		(uuid "4ea3e998-6e80-4d95-87a2-bad5f239aef5")
-	)
-	(hierarchical_label "REAR-IR-L"
-		(shape input)
-		(at 198.12 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c4e28435-ba8c-4f5f-93ae-6adf18559381")
-	)
-	(hierarchical_label "CLIFF-LM-Q+"
-		(shape input)
-		(at 198.12 115.57 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c3005ab3-89f1-4002-be00-83149db00c0f")
-	)
-	(symbol
-		(lib_id "power:VPP")
-		(at 274.32 209.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "10e2a763-0552-41cf-a929-a96beb8b8933")
-		(property "Reference" "#PWR0934"
-			(at 274.32 213.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-5V-REG"
-			(at 274.32 204.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 274.32 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 274.32 209.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "150f2498-a328-4642-a764-3262da25902d")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR0934")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(hierarchical_label "HALL-TOWER"
-		(shape input)
-		(at 295.91 52.07 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0679f953-a2b5-40d6-9de4-f8ef0f832b8b")
-	)
-	(hierarchical_label "HALL-BIN"
-		(shape input)
-		(at 295.91 49.53 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "220988bc-1653-44ca-8b95-db48da441e8d")
-	)
-	(hierarchical_label "CLIFF-RM-Q+"
-		(shape input)
-		(at 295.91 59.69 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "edcde10c-1f1b-46b6-b994-904121fac807")
-	)
-	(symbol
-		(lib_id "power:VPP")
-		(at 50.8 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "46671b50-1801-4147-86fb-102cf771a8a8")
-		(property "Reference" "#PWR0935"
-			(at 50.8 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-3V3"
-			(at 50.8 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 50.8 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 50.8 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC-3V3\""
-			(at 50.8 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2da94fe0-390a-4f1c-a16d-a5b650f33d4a")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR0935")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(hierarchical_label "DC_IN_SENSE"
-		(shape input)
-		(at 104.14 130.81 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4d501566-2fbd-43a9-bb1b-38f9ee1deebf")
-	)
-	(hierarchical_label "REAR-IR-R"
-		(shape input)
-		(at 198.12 72.39 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e12414bb-ba37-4130-834c-b6169f6e5a12")
-	)
-	(wire
-		(pts
-			(xy 363.22 41.91) (xy 401.32 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b2eeb3f-abd1-47ad-85f4-9146a9feb71b")
 	)
 )

@@ -361,6 +361,7 @@
 			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1656,8 +1657,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:CL21A106KBYQNNE"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2109,8 +2114,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:FRC0805J1R0TS"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2266,8 +2275,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:JFC1206-2200FS"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2460,8 +2473,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:RE1206F1R050"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3008,8 +3025,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:SMAJ18A_C148219"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3178,8 +3199,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:SMMS0630-100M"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3372,8 +3397,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:SS56"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4270,6 +4299,7 @@
 			)
 			(pin_names
 				(offset 0.254)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -8091,6 +8121,17 @@
 		)
 		(uuid "18c0e933-db2f-47fb-8d1d-bb732b863f77")
 	)
+	(hierarchical_label "DC_IN_SENSE"
+		(shape output)
+		(at 91.44 308.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4213bf96-65ff-403a-9329-9defc7f87221")
+	)
 	(hierarchical_label "D+"
 		(shape bidirectional)
 		(at 334.01 108.585 180)
@@ -8123,6 +8164,17 @@
 			(justify left)
 		)
 		(uuid "61f8ab8f-b6a7-44d3-b21d-d82b3b80df25")
+	)
+	(hierarchical_label "PWR-SW-G"
+		(shape bidirectional)
+		(at 336.55 306.705 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97c27aa8-846f-40c3-a09d-05483d783801")
 	)
 	(hierarchical_label "D-"
 		(shape bidirectional)
@@ -8929,6 +8981,7 @@
 		)
 		(property "Value" "GND"
 			(at 110.49 266.065 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13703,6 +13756,7 @@
 		)
 		(property "Value" "GND"
 			(at 351.79 151.13 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14496,6 +14550,7 @@
 		)
 		(property "Value" "GND"
 			(at 57.785 270.51 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15711,6 +15766,7 @@
 		)
 		(property "Value" "GND"
 			(at 246.38 369.57 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16497,6 +16553,7 @@
 		)
 		(property "Value" "GND"
 			(at 220.345 304.8 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18755,6 +18812,7 @@
 		)
 		(property "Value" "GND"
 			(at 300.355 370.84 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19568,6 +19626,160 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "C162")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 300.355 290.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b3216647-6cfd-4fef-8580-3b14caccdea6")
+		(property "Reference" "#PWR0903"
+			(at 300.355 294.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT-VCC"
+			(at 300.355 285.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 300.355 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 300.355 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"BAT-VCC\""
+			(at 300.355 290.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "145ca94f-9011-48c9-a78b-6bfe2472e208")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR0903")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 187.96 94.615 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b634a35e-982b-4127-b6d1-4e83d56efc59")
+		(property "Reference" "#PWR0902"
+			(at 187.96 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC-5V-REG"
+			(at 187.96 89.535 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 187.96 94.615 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 94.615 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
+			(at 187.96 94.615 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "081889be-61b4-4ccf-be70-9237e779760a")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR0902")
 					(unit 1)
 				)
 			)
@@ -21033,6 +21245,7 @@
 		)
 		(property "Value" "GND"
 			(at 128.27 325.12 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21674,6 +21887,7 @@
 		)
 		(property "Value" "GND"
 			(at 408.305 273.685 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22427,6 +22641,7 @@
 		)
 		(property "Value" "GND"
 			(at 177.165 313.69 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23034,6 +23249,7 @@
 		)
 		(property "Value" "GND"
 			(at 427.99 144.145 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25065,181 +25281,5 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "power:VPP")
-		(at 187.96 94.615 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b634a35e-982b-4127-b6d1-4e83d56efc59")
-		(property "Reference" "#PWR0902"
-			(at 187.96 98.425 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC-5V-REG"
-			(at 187.96 89.535 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 94.615 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 94.615 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 187.96 94.615 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "081889be-61b4-4ccf-be70-9237e779760a")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR0902")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VPP")
-		(at 300.355 290.83 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b3216647-6cfd-4fef-8580-3b14caccdea6")
-		(property "Reference" "#PWR0903"
-			(at 300.355 294.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BAT-VCC"
-			(at 300.355 285.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 300.355 290.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 300.355 290.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"BAT-VCC\""
-			(at 300.355 290.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "145ca94f-9011-48c9-a78b-6bfe2472e208")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR0903")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(hierarchical_label "DC_IN_SENSE"
-		(shape output)
-		(at 91.44 308.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4213bf96-65ff-403a-9329-9defc7f87221")
-	)
-	(hierarchical_label "PWR-SW-G"
-		(shape bidirectional)
-		(at 336.55 306.705 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "97c27aa8-846f-40c3-a09d-05483d783801")
 	)
 )

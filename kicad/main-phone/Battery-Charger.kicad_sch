@@ -5478,7 +5478,7 @@
 		)
 		(uuid "7c0edb60-bd92-48fd-8e9e-024b6e1bf152")
 	)
-	(text "DC_IN: 20 V brick or dock. With the battery disconnected (Q14 off) BAT-VCC = DC_IN - 0.4 V,\nso the SLM6900 (95% max duty) needs >= ~18.5 V to finish a 4S charge. Keep DC_IN <= 22 V (D41, Q13 Vgs)."
+	(text "DC_IN: 20 V brick or dock. With the battery disconnected (Q14 off) VBAT-14V4 = DC_IN - 0.4 V,\nso the SLM6900 (95% max duty) needs >= ~18.5 V to finish a 4S charge. Keep DC_IN <= 22 V (D41, Q13 Vgs)."
 		(exclude_from_sim no)
 		(at 63.5 276.86 0)
 		(effects
@@ -19653,7 +19653,7 @@
 				)
 			)
 		)
-		(property "Value" "BAT-VCC"
+		(property "Value" "VBAT-14V4"
 			(at 300.355 285.75 0)
 			(show_name no)
 			(do_not_autoplace no)

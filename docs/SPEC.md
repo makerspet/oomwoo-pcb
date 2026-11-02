@@ -222,7 +222,7 @@ Undecided TODO
 
 Current schematic (2026-09):
 - charging input is 24 V DC, from the dock contacts (CONTACT_CHGR) or a DC-005 barrel jack, into an SLM6900 buck charger configured for 4S (about 2.2-2.6 A). The battery NTC goes straight to the charger, so over-temperature cut-off is in hardware
-- the system rails run from the battery (BAT-VCC), not from a power-path SYS rail
+- the system rails run from the battery (VBAT-14V4), not from a power-path SYS rail
 - USB-C is a 5 V *output* for the phone-as-compute option (AP64501 buck enabled by PWR_EN, through a TMI6240 current-limited switch), with D+/D- to the STM32 USB (PA11/PA12). **TODO:** CC1/CC2 are unconnected; a phone on a C-to-C cable will neither charge nor enumerate until CC is configured (Rp to charge, Rd for the phone-as-host data mode)
 - the USB-C PD input and power-path charger below are the original plan, not in the current schematic
 
@@ -334,7 +334,7 @@ Net spec
 - drive sensor analog I/O with one low-side N-FET (Q18, AO3400) and a 330 Ω 1206 pull-up (R185) from VUS, AC-coupled to the piezo through C18
   - the earlier P/N half-bridge was dropped: its high side turned off through a 100k pull-up, far too slow at 290 kHz, so both FETs would conduct every cycle (shoot-through)
   - one GPIO (LO) drives the gate through R60 (10 Ω); R186 (100k) pulls the gate low so the FET is off while the MCU is in reset or being flashed
-  - the freed HI GPIO now enables the motor rail (~VM-VBAT-EN)
+  - the freed HI GPIO now enables the motor rail (~VMOT-14V4-EN)
 - (firmware) drive the sensor in short bursts only: LO held high puts ~0.63 W into R185
   - v1 board: C174 (100 nF) AC-couples LO to the gate, so a stuck-high LO turns Q18 off within ~10 ms (through R186)
 - (firmware) release LO (low), then measure using ADC, calculate return amplitude
@@ -529,7 +529,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
 - the six mounting standoffs (MP1-MP6) moved from the removed M.2 sheet to the POWER sheet
 - spare STM32 pins (2026-10-28): PA8, PA9, PA10, PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
-  - the LiDAR rail enable joined ~VM-VBAT-EN (PE10): the LiDAR is on whenever the motor rail is (PD9 freed)
+  - the LiDAR rail enable joined ~VMOT-14V4-EN (PE10): the LiDAR is on whenever the motor rail is (PD9 freed)
   - IMU FSYNC and INT2 left the MCU (PD4, PD7 freed); FSYNC keeps a 100k pull-down (R211). Since 2026-10-30 INT2 ends on test pad TP1 (the IMU is leadless, so a pad is the only way to reach the pin); probe or drive FSYNC on R211. AP_AD0 is pulled low by R217 (10k), so the IMU answers at I2C address 0x68; probe AD0 on R217. Run a wire to a spare pin if INT2 or FSYNC is needed
   - one shared open-drain ToF interrupt (VL-L-INT, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
   - only the left VL53L7 LPn on the MCU; the right one is held up by R196 (PE8 freed). Addressing uses the left LPn plus the side sensor's XSHUT
@@ -544,7 +544,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
 - spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x7 vertical, fitted (XFCN PZ254V-12-14P, C492424). Spares only: 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 not connected (I2C4 kept off the header, 2026-10-30: it runs at 1 MHz and is shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7 PA10, 8 PE6, 9 PA8, 10 PA9 (10k pull-up), 11 PD4, 12 PE2, 13/14 GND
-- PB10 (3.3V_EN) drives the sensor-rail switch through R195 (1k), so C64 (10 µF gate-drain soft start) doesn't load the pin directly
+- sensor rail switch (2026-11-01): one AO3401 (Q16) from VCC-3V3 to VCC-3V3-REG. PB10 (~3.3V_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VCC-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VCC-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
@@ -560,8 +560,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### DC input (v1)
 
-- 20 V brick, through the dock contacts or the barrel jack. While charging, Q14 disconnects the battery from BAT-VCC and D14 feeds BAT-VCC from DC_IN (DC_IN - 0.4 V); the SLM6900's 95% maximum duty needs ≥ ~18.5 V to finish a 4S charge.
-- Keep DC_IN ≤ 22 V: SMAJ22A TVS (D41), and the rail-hold puts the full BAT-VCC across Q13's gate (AO4407C, Vgs ±25 V). DC_IN capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
+- 20 V brick, through the dock contacts or the barrel jack. While charging, Q14 disconnects the battery from VBAT-14V4 and D14 feeds VBAT-14V4 from DC_IN (DC_IN - 0.4 V); the SLM6900's 95% maximum duty needs ≥ ~18.5 V to finish a 4S charge.
+- Keep DC_IN ≤ 22 V: SMAJ22A TVS (D41), and the rail-hold puts the full VBAT-14V4 across Q13's gate (AO4407C, Vgs ±25 V). DC_IN capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
 - Barrel jack: DC-044A-20A (C129006), 5.5/2.0 mm, 30 V 5 A, 7.2 mm tall (the DC-005 was 11 mm). Its switch pin disconnects the dock contacts' GND while a plug is in, so the two sources never fight.
 - DC_IN sense: R199 (1M) / R200 (100k) + C175 (100 nF) to PB15 (ADC4_IN5), DC_IN = V_adc x 11 (20 V reads ~1.82 V; 3.3 V full scale is 36 V). The MCU sees charger power on either input.
 - Dock presence signature: ~130k from DC_IN to GND (R175 + R194 = 147k in parallel with the 1.1M sense divider), plus ~30 µF of DC_IN capacitance. The [charging dock](../kicad/charging-dock/README.md) measures both with a ~1.5 V probe (too low to turn Q31 on), then ramps 20 V onto its contact through a soft-start switch. Changing R175, R194, R199, R200 or the DC_IN capacitors changes the signature: update the dock firmware window too.
@@ -622,8 +622,8 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - Non-synchronous: SS56 catch diodes D42/D43 (SW to GND, same part as D12-D15). Keep the SW node, the diode and the input capacitors in a tight loop.
 - fsw 418 kHz: RT R205/R206 = 232k (same part as R160), where the AP64501 soft-start caps were. Soft start is internal.
 - Compensation, the same on both rails: R143/R147 4.7k + C112/C120 47 nF (crossover ~20 kHz with ~40 µF effective output capacitance). No high-frequency pole capacitor: the output capacitors are all ceramic, so there is no ESR zero to cancel.
-- U21 EN: POWER-EN is the full BAT-VCC (up to ~20 V while charging), and EN is rated 8.4 V. R207 (100k) / R208 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on 5V_EN (3.3 V logic, R168 100k pull-down).
-- BAT-VCC input capacitors C95, C106, C115, C116: 10 µF/50 V 1206 (C13585). The 10 µF/25 V 0603 parts kept only ~1 µF at 20 V.
+- U21 EN: POWER-EN is the full VBAT-14V4 (up to ~20 V while charging), and EN is rated 8.4 V. R207 (100k) / R208 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on 5V_EN (3.3 V logic, R168 100k pull-down).
+- VBAT-14V4 input capacitors C95, C106, C115, C116: 10 µF/50 V 1206 (C13585). The 10 µF/25 V 0603 parts kept only ~1 µF at 20 V.
 - Cost of the diode: ~1 W at 5 V / 3 A. If efficiency matters later, the synchronous AP64500 (40 V, 5 A, ~$1.04) is the alternative.
 - PCB engineer: new footprint (TI DDA, 2.95 x 4.9 mm thermal pad with vias).
 
@@ -635,16 +635,16 @@ Power rails (current schematic):
 
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
-| BAT-VCC (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
+| VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
 | VCC-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | POWER-EN |
-| VCC-3V3-REG | from VCC-3V3 via Q16/Q17 | sensors, IMU, driver logic | STM32 (3.3V_EN) |
+| VCC-3V3-REG | from VCC-3V3 via Q16 | sensors, IMU, driver logic | STM32 (~3.3V_EN, low = on) |
 | 3.3VBAT | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
 | VCC-5V-REG | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUS boost | STM32 (5V_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
 | USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
 | VUS ≈ 14.5 V | MT3608 boost | carpet sensor | with VCC-5V-REG |
-| VM-VBAT | BAT-VCC via Q1 AO4407C | wheels, brushes, fan | WD_OK AND ~VM-VBAT-EN |
-| VM-5V-LIDAR | VCC-5V-REG via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VM-VBAT-EN (low = on; the same pin as the motor rail since 2026-10-28) |
+| VMOT-14V4 | VBAT-14V4 via Q1 AO4407C | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
+| VM-5V-LIDAR | VCC-5V-REG via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |
 | VM-5V-WATER-PUMP | VCC-5V-REG via Q8 AO3401 | water pump | WD_OK AND WATER-PUMPU-CTRL (low = on) |
 
 RC charge-pump watchdog (WATCHDOG sheet):
@@ -657,7 +657,7 @@ RC charge-pump watchdog (WATCHDOG sheet):
 Each gated rail is WD_OK AND an MCU enable, without logic ICs:
 - an AO3400 N-FET has its gate on WD_OK and its source on the MCU GPIO; it pulls the rail P-FET's gate low only when WD_OK is high and the GPIO is low
 - a 100k pull-up to 3V3 on each GPIO keeps the rail off while the MCU pins float (reset, flashing)
-- VM-VBAT: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). Q1 dissipates ~0.3-0.4 W at the ~5 A normal load; short ~13 A stall peaks are fine with copper under the drain. TODO measure the fan controller's input capacitance (inrush)
+- VMOT-14V4: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). Q1 dissipates ~0.3-0.4 W at the ~5 A normal load; short ~13 A stall peaks are fine with copper under the drain. TODO measure the fan controller's input capacitance (inrush)
 - VM-5V-LIDAR: soft start R181 10k + C171 100 nF (≈1.5 ms on, ≈30 ms off) so the CM's 5 V doesn't dip
 - VM-5V-WATER-PUMP: no soft start, so the pump can be PWM-driven
 - PWM on an enable can only slow a gate-RC soft start; it can't soft-start a hard-switched FET
@@ -671,7 +671,7 @@ MOSFET line-up (consolidated 2026-09, 8 part numbers → 4):
 | battery-side high-side switches (Q1, Q13) | AO4407C (AOS) | C469397 | -30 V, Vgs ±25 V, 11.5 mΩ, SOIC-8 |
 | charger, 24 V DC_IN (Q12, Q14) | AOD407 | C6396162 | -60 V for hot-plug margin |
 
-Any gate or drain that can see BAT-VCC (up to 16.8 V) needs Vds ≥ 30 V, and a gate swing that large needs Vgs ≥ 20 V.
+Any gate or drain that can see VBAT-14V4 (up to 16.8 V) needs Vds ≥ 30 V, and a gate swing that large needs Vgs ≥ 20 V.
 
 ## TODO
 

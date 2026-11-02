@@ -1689,7 +1689,7 @@
 		)
 		(uuid "59942155-486a-4e57-adac-d2ac3d8dc708")
 	)
-	(label "~{VM-VBAT-EN}"
+	(label "~{VMOT-14V4-EN}"
 		(at 436.88 165.1 180)
 		(effects
 			(font
@@ -1909,7 +1909,7 @@
 		)
 		(uuid "dee71632-0f61-46a3-9c5a-bad36b8e606e")
 	)
-	(label "~{VM-VBAT-EN}"
+	(label "~{VMOT-14V4-EN}"
 		(at 269.24 228.6 0)
 		(effects
 			(font
@@ -1919,7 +1919,7 @@
 		)
 		(uuid "e66d24ac-82e0-43e1-b654-6423d6174025")
 	)
-	(label "~{VM-VBAT-EN}"
+	(label "~{VMOT-14V4-EN}"
 		(at 274.955 270.51 90)
 		(effects
 			(font
@@ -2009,7 +2009,7 @@
 				(justify left)
 			)
 		)
-		(pin "~{VM-VBAT-EN}" input
+		(pin "~{VMOT-14V4-EN}" input
 			(at 274.955 275.59 90)
 			(uuid "dffed11f-e15f-4636-abb1-969f2078f2a0")
 			(effects
@@ -2019,7 +2019,7 @@
 				(justify right)
 			)
 		)
-		(pin "3.3V_EN" input
+		(pin "~{3.3V_EN}" input
 			(at 240.03 285.115 180)
 			(uuid "938cd7ba-8c5b-45ac-b3e7-00435c369d4c")
 			(effects
@@ -2107,7 +2107,7 @@
 				(justify left top)
 			)
 		)
-		(pin "MAIN-FAN-S-CTRL" input
+		(pin "MAIN-FAN-PWM" input
 			(at 100.33 189.23 0)
 			(uuid "0b4cc0a1-c37d-435f-8ce2-55a17fee20cf")
 			(effects
@@ -2117,7 +2117,7 @@
 				(justify right)
 			)
 		)
-		(pin "MAIN-FAN-S-SENSE" output
+		(pin "MAIN-FAN-FB" output
 			(at 100.33 187.325 0)
 			(uuid "d0a93ed7-451d-4ff7-826a-61178f533b6b")
 			(effects
@@ -2563,7 +2563,7 @@
 				(justify left)
 			)
 		)
-		(pin "MAIN-FAN-S-CTRL" output
+		(pin "MAIN-FAN-PWM" output
 			(at 148.59 189.23 180)
 			(uuid "bb36cb02-faa0-4239-86e3-badb63797479")
 			(effects
@@ -2573,7 +2573,7 @@
 				(justify left)
 			)
 		)
-		(pin "MAIN-FAN-S-SENSE" input
+		(pin "MAIN-FAN-FB" input
 			(at 148.59 187.325 180)
 			(uuid "c21938ba-15b1-49b3-96cb-3063708f72c9")
 			(effects
@@ -2743,7 +2743,7 @@
 				(justify right)
 			)
 		)
-		(pin "~{VM-VBAT-EN}" output
+		(pin "~{VMOT-14V4-EN}" output
 			(at 266.7 228.6 0)
 			(uuid "d31174f3-f07b-41b3-b581-a8ecaa26fbf9")
 			(effects
@@ -2853,7 +2853,7 @@
 				(justify left)
 			)
 		)
-		(pin "3.3V_EN" output
+		(pin "~{3.3V_EN}" output
 			(at 233.045 234.315 270)
 			(uuid "5144d34f-7f7c-4b15-8c18-86d934e658d7")
 			(effects

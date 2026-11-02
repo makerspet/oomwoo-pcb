@@ -61,6 +61,11 @@ Changed 2026-10-31:
 - the LDR (R75) runs from VCC-3V3, not the switched sensor rail VCC-3V3-REG, so it works with the sensors off and reads against the ADC reference
 - power rails drawn as power symbols; the rear IR, Hall, cliff LM/RM, DC_IN_SENSE, PWR-SW-G and WD_OK signals are hierarchical labels joined on the top sheet (were global labels)
 
+Changed 2026-11-01:
+- renamed: VM-VBAT → VMOT-14V4, BAT-VCC → VBAT-14V4, MAIN-FAN-S-CTRL → MAIN-FAN-PWM, MAIN-FAN-S-SENSE → MAIN-FAN-FB, 3.3V_STM1 → D44, 3.3V_SENSORS1 → D45; 3.3V_EN drawn active low (~{3.3V_EN})
+- sensor rail switch: one AO3401 (Q16); Q17, R91, R96, R97 and D39 removed (D39 back-fed the "off" rail). R195 10k, R90 100k, C64 100 nF gate-drain (soft start), new C176 1 µF gate-source (stays off at power-on). Details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1)
+- C7/C101 (unfitted 150 pF on the fan PWM/FB lines) removed; R195 moved to the power sheet
+
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 
 Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).

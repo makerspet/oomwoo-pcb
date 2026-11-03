@@ -1572,7 +1572,7 @@
 	)
 	(text "MAIN FAN"
 		(exclude_from_sim no)
-		(at 29.21 134.62 0)
+		(at 29.21 128.27 0)
 		(effects
 			(font
 				(size 3.048 3.048)
@@ -1670,7 +1670,7 @@
 	)
 	(text "SIDE BRUSH MOTORs"
 		(exclude_from_sim no)
-		(at 26.67 146.05 0)
+		(at 26.67 139.7 0)
 		(effects
 			(font
 				(size 3.048 3.048)
@@ -2540,7 +2540,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 151.13) (xy 135.89 151.13)
+			(xy 87.63 144.78) (xy 135.89 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3220,7 +3220,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 153.67) (xy 135.89 153.67)
+			(xy 87.63 147.32) (xy 135.89 147.32)
 		)
 		(stroke
 			(width 0)
@@ -3250,7 +3250,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 134.62) (xy 135.89 134.62)
+			(xy 87.63 128.27) (xy 135.89 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3490,7 +3490,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 132.08) (xy 135.89 132.08)
+			(xy 87.63 125.73) (xy 135.89 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3520,7 +3520,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 148.59) (xy 135.89 148.59)
+			(xy 87.63 142.24) (xy 135.89 142.24)
 		)
 		(stroke
 			(width 0)
@@ -6644,7 +6644,7 @@
 		)
 	)
 	(sheet
-		(at 26.67 128.27)
+		(at 26.67 121.92)
 		(size 60.96 8.89)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6661,7 +6661,7 @@
 		)
 		(uuid "43bddca0-8e54-471a-b352-8abb91be7702")
 		(property "Sheetname" "MAIN-FAN"
-			(at 26.67 127.5584 0)
+			(at 26.67 121.2084 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6673,7 +6673,7 @@
 			)
 		)
 		(property "Sheetfile" "MAIN-FAN .kicad_sch"
-			(at 26.67 138.3796 0)
+			(at 26.67 132.0296 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6684,7 +6684,7 @@
 			)
 		)
 		(pin "MAIN-FAN-PWM" input
-			(at 87.63 134.62 0)
+			(at 87.63 128.27 0)
 			(uuid "0b4cc0a1-c37d-435f-8ce2-55a17fee20cf")
 			(effects
 				(font
@@ -6694,7 +6694,7 @@
 			)
 		)
 		(pin "MAIN-FAN-FB" output
-			(at 87.63 132.08 0)
+			(at 87.63 125.73 0)
 			(uuid "d0a93ed7-451d-4ff7-826a-61178f533b6b")
 			(effects
 				(font
@@ -6971,7 +6971,7 @@
 			)
 		)
 		(pin "SIDE-BRUSH-CURRENT-ADC" input
-			(at 135.89 153.67 180)
+			(at 135.89 147.32 180)
 			(uuid "c080e31f-ca1b-4af9-a57e-cf1d60c0f5f5")
 			(effects
 				(font
@@ -6981,7 +6981,7 @@
 			)
 		)
 		(pin "SIDE-BRUSH-IN1" output
-			(at 135.89 148.59 180)
+			(at 135.89 142.24 180)
 			(uuid "22e544a0-49fc-4ee1-88c1-03cf133ef30f")
 			(effects
 				(font
@@ -6991,7 +6991,7 @@
 			)
 		)
 		(pin "SIDE-BRUSH-IN2" output
-			(at 135.89 151.13 180)
+			(at 135.89 144.78 180)
 			(uuid "0a466344-d3eb-4144-b336-c2f3a2c84eff")
 			(effects
 				(font
@@ -7001,7 +7001,7 @@
 			)
 		)
 		(pin "MAIN-FAN-PWM" output
-			(at 135.89 134.62 180)
+			(at 135.89 128.27 180)
 			(uuid "bb36cb02-faa0-4239-86e3-badb63797479")
 			(effects
 				(font
@@ -7011,7 +7011,7 @@
 			)
 		)
 		(pin "MAIN-FAN-FB" input
-			(at 135.89 132.08 180)
+			(at 135.89 125.73 180)
 			(uuid "c21938ba-15b1-49b3-96cb-3063708f72c9")
 			(effects
 				(font
@@ -7400,6 +7400,16 @@
 				(justify left)
 			)
 		)
+		(pin "BAT_SENSE" input
+			(at 213.36 179.07 270)
+			(uuid "4e19945f-68ff-40d1-bf28-dc47ae4da4b0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
@@ -7554,7 +7564,7 @@
 		)
 	)
 	(sheet
-		(at 26.67 140.97)
+		(at 26.67 134.62)
 		(size 60.96 15.24)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7564,14 +7574,14 @@
 		(stroke
 			(width 0)
 			(type solid)
-			(color 255 0 0 1)
+			(color 0 255 0 1)
 		)
 		(fill
 			(color 0 0 0 0)
 		)
 		(uuid "92cc07b9-f65d-4f49-9297-7807acee5c86")
 		(property "Sheetname" "SIDE-BRUSH"
-			(at 26.67 140.2584 0)
+			(at 26.67 133.9084 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7583,7 +7593,7 @@
 			)
 		)
 		(property "Sheetfile" "SIDE-BRUSH-MOTORs .kicad_sch"
-			(at 26.67 157.4296 0)
+			(at 26.67 151.0796 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7594,7 +7604,7 @@
 			)
 		)
 		(pin "SIDE-BRUSH-CURRENT-ADC" output
-			(at 87.63 153.67 0)
+			(at 87.63 147.32 0)
 			(uuid "3e888044-0585-41f1-aa7c-fa9ade366412")
 			(effects
 				(font
@@ -7604,7 +7614,7 @@
 			)
 		)
 		(pin "SIDE-BRUSH-IN1" input
-			(at 87.63 148.59 0)
+			(at 87.63 142.24 0)
 			(uuid "1ce99055-d296-4c31-b62f-82b44747bd34")
 			(effects
 				(font
@@ -7614,7 +7624,7 @@
 			)
 		)
 		(pin "SIDE-BRUSH-IN2" input
-			(at 87.63 151.13 0)
+			(at 87.63 144.78 0)
 			(uuid "2c0dd7ae-1c9e-42db-abdb-03edb4793a87")
 			(effects
 				(font
@@ -8513,6 +8523,16 @@
 				(justify left)
 			)
 		)
+		(pin "BAT_SENSE" output
+			(at 228.6 271.78 180)
+			(uuid "6aa07fdb-cf26-4a01-ab3e-e59e116d4a9b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
@@ -8527,4 +8547,44 @@
 		)
 	)
 	(embedded_fonts no)
+	(wire
+		(pts
+			(xy 213.36 179.07) (xy 213.36 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78711afc-88cf-46d8-b48d-faad6983ac84")
+	)
+	(label "BAT_SENSE"
+		(at 213.36 184.15 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2032a93c-530e-4f47-9e9e-c79a1f1bed02")
+	)
+	(wire
+		(pts
+			(xy 228.6 271.78) (xy 223.52 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "791299e5-2e99-4d63-b2d1-98dbfe4dadf7")
+	)
+	(label "BAT_SENSE"
+		(at 223.52 271.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cc828f5d-1993-436e-bda9-2d38192254a3")
+	)
 )

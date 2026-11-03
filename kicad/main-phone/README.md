@@ -70,13 +70,13 @@ Changed 2026-11-02:
 - renamed: VCC-3V3 → VMCU-3V3, VCC-3V3-REG → VSENS-3V3, VCC-5V-REG → VSENS-5V-USB, 3.3VBAT → VMCU-BAT-3V3, ~{3.3V_EN} → ~{VSENS_3V3_EN}, 5V_EN → VSENS_5V_USB_EN, VL-L-INT → VL-INT (the two ToF INT lines now join inside the front sensors sheet)
 - J1 pin 1 and R204 (PA9 pull-up) on VMCU-3V3, the MCU rail
 - STM32_DEBUG1: 1x6 (PZ254V-11-06P, C492405) instead of 1x5, so the TTL-234X-3V3 socket seats fully; pin 6 (RTS#) not connected
-
-Changed 2026-11-03:
-- J1: 2x6 (PZ254V-12-12P, C492423) instead of 2x7; the unused 3/4 pair is gone: 1 VMCU-3V3, 2 VSENS-5V-USB, 3/4 UART PC10/PC11, 5 PA10, 6 PE6, 7 PA8, 8 PA9, 9 PD4, 10 PE2, 11/12 GND
+- J1: 2x6 (PZ254V-12-12P, C492423) instead of 2x7; the unused 3/4 pair is gone: 1 VMCU-3V3, 2 VSENS-5V-USB, 3/4 UART PC10/PC11, 5 PA10, 6 PE6, 7 not connected, 8 PA9, 9 PD4, 10 PE2, 11/12 GND
 - R120/R121 (1k button pull-ups to the sensor rail) removed: firmware uses the internal pull-ups on PD0/PD5. On VSENS-3V3 the buttons read as pressed while the sensor rail was off
 - TP1 removed: probe IMU INT2 on R92
 - I2C4 pull-ups R5/R6 on the top sheet; the small hierarchical sheets merged into the top sheet
 - renamed: VUS → VUSONIC-14V4, VL-INT → INT-SENSORS (not only the VL53 sensors), U12 → L4 (inductor), 5V1 → D46
+- battery voltage sense: R218 (1M) / R219 (100k) + C177 (100 nF) from P+/C+ (battery side of Q14) to PA8 (ADC5_IN1); J1 pin 7 (was PA8) not connected
+- bumper pull-ups R44/R48 47k → 1k, so PA4/PA5 (ADC2) see the slot opening and closing instead of a switch
 
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 

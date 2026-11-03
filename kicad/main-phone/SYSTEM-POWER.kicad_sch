@@ -32376,7 +32376,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 309.245 70.485 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32409,7 +32409,7 @@
 				)
 			)
 		)
-		(property "Description" "Pull-up: VM-VBAT stays off while the MCU is in reset or being flashed"
+		(property "Description" "Pull-up on ~{VMOT-14V4-EN} (PA9): motor rail and LiDAR off in reset or while flashing; also UCPD DBCC1 high, so the dead-battery Rd on CC1 is on"
 			(at 311.15 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -32420,7 +32420,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907088"
+		(property "LCSC" "C98220"
 			(at 311.15 72.39 0)
 			(hide yes)
 			(show_name no)

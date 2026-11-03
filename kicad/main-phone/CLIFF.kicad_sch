@@ -2066,7 +2066,7 @@
 	)
 	(text "Bumpers: 2x ITR9606 slotted photo-interrupters on the main board (~11 mm tall, set by the bumper\nmechanism). Emitters in series from VSENS-5V-USB, switched by BUMPER_LED_EN (high = on, 100k pull-down).\nBUMP-x-Q+ reads low when light passes the slot (R44/R48 47k pull-ups)."
 		(exclude_from_sim no)
-		(at 25.4 200.66 0)
+		(at 27.94 168.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2077,7 +2077,7 @@
 	)
 	(text "Cliff sensors: 6 boards (kicad/cliff-sensor), SH 4-pin vertical: 1 VSENS-5V-USB (LED, 150R on the board),\n2 CLIFF-LED-K (Q35 sinks all 6 LEDs), 3 phototransistor collector (47k pull-up), 4 GND.\nModulate CLIFF_LED_EN and read each channel LED-on minus LED-off to cancel ambient light.\nADC: LF PA3, RF PA1, LR PA2, RR PA0, LM PD9, RM PE8 (LM/RM via global labels)."
 		(exclude_from_sim no)
-		(at 25.4 182.88 0)
+		(at 27.94 151.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2088,7 +2088,7 @@
 	)
 	(text "ANTI FALL SENSORs"
 		(exclude_from_sim no)
-		(at 86.36 66.04 0)
+		(at 88.9 34.29 0)
 		(effects
 			(font
 				(size 3.048 3.048)
@@ -2101,86 +2101,86 @@
 		(uuid "b98b61a9-919a-4465-9788-2121ef3a93d9")
 	)
 	(junction
-		(at 242.57 146.05)
+		(at 245.11 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "07204c5e-f790-4f66-a2c7-094174f2d444")
 	)
 	(junction
-		(at 129.54 88.9)
+		(at 132.08 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0b370034-56b9-49df-a8c2-3d2f12a9881c")
 	)
 	(junction
-		(at 161.29 88.9)
+		(at 163.83 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1a6e102a-79aa-4fd5-a366-fa0f02126230")
 	)
 	(junction
-		(at 142.24 88.9)
+		(at 144.78 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "31c2928a-26a6-41e6-a3df-6238027bd7e1")
 	)
 	(junction
-		(at 220.98 130.81)
+		(at 223.52 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "68b9f516-dae1-4c24-846c-f3027142f237")
 	)
 	(junction
-		(at 181.61 146.05)
+		(at 184.15 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aed2bb5f-2f68-4f88-9595-3f950e9629ac")
 	)
 	(junction
-		(at 154.94 88.9)
+		(at 157.48 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d8be73f0-edb8-4fec-b915-9386b74e9d6f")
 	)
 	(junction
-		(at 190.5 138.43)
+		(at 193.04 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e016b2f6-d984-4339-bc3b-b502f224aa93")
 	)
 	(junction
-		(at 220.98 110.49)
+		(at 223.52 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e6bc0175-e350-45af-8817-7ce246dc062c")
 	)
 	(junction
-		(at 135.89 88.9)
+		(at 138.43 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e700d18c-b4c3-4e89-929b-70d606dbb497")
 	)
 	(junction
-		(at 167.64 88.9)
+		(at 170.18 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f04dbe09-1a2d-4a2e-aed6-c5661380f28a")
 	)
 	(junction
-		(at 148.59 88.9)
+		(at 151.13 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f6dea40a-0337-447b-986f-39f1d3d41f3a")
 	)
 	(junction
-		(at 142.24 157.48)
+		(at 144.78 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fa4e3467-e7fd-4515-9c95-74c27ca23a80")
 	)
 	(wire
 		(pts
-			(xy 242.57 146.05) (xy 246.38 146.05)
+			(xy 245.11 114.3) (xy 248.92 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2190,7 +2190,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 106.68) (xy 190.5 110.49)
+			(xy 193.04 74.93) (xy 193.04 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2200,7 +2200,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 138.43) (xy 251.46 140.97)
+			(xy 254 106.68) (xy 254 109.22)
 		)
 		(stroke
 			(width 0)
@@ -2210,7 +2210,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 120.65) (xy 185.42 120.65)
+			(xy 193.04 88.9) (xy 187.96 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2220,7 +2220,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 148.59) (xy 95.25 148.59)
+			(xy 95.25 116.84) (xy 97.79 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2230,7 +2230,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 115.57) (xy 46.99 115.57)
+			(xy 44.45 83.82) (xy 49.53 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2240,7 +2240,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 146.05) (xy 97.79 146.05)
+			(xy 95.25 114.3) (xy 100.33 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2250,7 +2250,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 92.71) (xy 161.29 88.9)
+			(xy 163.83 60.96) (xy 163.83 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2260,7 +2260,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 92.71) (xy 154.94 88.9)
+			(xy 157.48 60.96) (xy 157.48 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2270,7 +2270,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 148.59) (xy 44.45 151.13)
+			(xy 46.99 116.84) (xy 46.99 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2280,7 +2280,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 92.71) (xy 44.45 92.71)
+			(xy 44.45 60.96) (xy 46.99 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2290,7 +2290,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 92.71) (xy 167.64 88.9)
+			(xy 170.18 60.96) (xy 170.18 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2300,7 +2300,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 85.09) (xy 110.49 85.09)
+			(xy 95.25 53.34) (xy 113.03 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2310,7 +2310,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 113.03) (xy 59.69 113.03)
+			(xy 44.45 81.28) (xy 62.23 81.28)
 		)
 		(stroke
 			(width 0)
@@ -2320,7 +2320,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 100.33) (xy 135.89 105.41)
+			(xy 138.43 68.58) (xy 138.43 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2330,7 +2330,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 140.97) (xy 110.49 140.97)
+			(xy 95.25 109.22) (xy 113.03 109.22)
 		)
 		(stroke
 			(width 0)
@@ -2340,7 +2340,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 151.13) (xy 251.46 153.67)
+			(xy 254 119.38) (xy 254 121.92)
 		)
 		(stroke
 			(width 0)
@@ -2350,7 +2350,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 130.81) (xy 190.5 130.81)
+			(xy 190.5 99.06) (xy 193.04 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2360,7 +2360,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 157.48) (xy 134.62 157.48)
+			(xy 144.78 125.73) (xy 137.16 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2370,7 +2370,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 120.65) (xy 44.45 123.19)
+			(xy 46.99 88.9) (xy 46.99 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2380,7 +2380,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 138.43) (xy 245.11 138.43)
+			(xy 254 106.68) (xy 247.65 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2390,7 +2390,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 148.59) (xy 95.25 151.13)
+			(xy 97.79 116.84) (xy 97.79 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2400,7 +2400,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 118.11) (xy 97.79 118.11)
+			(xy 95.25 86.36) (xy 100.33 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2410,7 +2410,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 120.65) (xy 95.25 120.65)
+			(xy 95.25 88.9) (xy 97.79 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2420,7 +2420,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 92.71) (xy 95.25 92.71)
+			(xy 95.25 60.96) (xy 97.79 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2430,7 +2430,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 100.33) (xy 142.24 105.41)
+			(xy 144.78 68.58) (xy 144.78 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2440,7 +2440,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 110.49) (xy 220.98 110.49)
+			(xy 218.44 78.74) (xy 223.52 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2450,7 +2450,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 100.33) (xy 161.29 105.41)
+			(xy 163.83 68.58) (xy 163.83 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2460,7 +2460,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 110.49) (xy 223.52 110.49)
+			(xy 223.52 78.74) (xy 226.06 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2470,7 +2470,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 143.51) (xy 97.79 143.51)
+			(xy 95.25 111.76) (xy 100.33 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2480,7 +2480,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 152.4) (xy 152.4 147.32)
+			(xy 154.94 120.65) (xy 154.94 115.57)
 		)
 		(stroke
 			(width 0)
@@ -2490,7 +2490,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 115.57) (xy 97.79 115.57)
+			(xy 95.25 83.82) (xy 100.33 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2500,7 +2500,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 92.71) (xy 95.25 95.25)
+			(xy 97.79 60.96) (xy 97.79 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2510,7 +2510,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 146.05) (xy 181.61 146.05)
+			(xy 180.34 114.3) (xy 184.15 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2520,7 +2520,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 88.9) (xy 129.54 83.82)
+			(xy 132.08 57.15) (xy 132.08 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2530,7 +2530,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 90.17) (xy 46.99 90.17)
+			(xy 44.45 58.42) (xy 49.53 58.42)
 		)
 		(stroke
 			(width 0)
@@ -2540,7 +2540,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 90.17) (xy 97.79 90.17)
+			(xy 95.25 58.42) (xy 100.33 58.42)
 		)
 		(stroke
 			(width 0)
@@ -2550,7 +2550,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 148.59) (xy 44.45 148.59)
+			(xy 44.45 116.84) (xy 46.99 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2560,7 +2560,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 100.33) (xy 154.94 105.41)
+			(xy 157.48 68.58) (xy 157.48 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2570,7 +2570,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 85.09) (xy 59.69 85.09)
+			(xy 44.45 53.34) (xy 62.23 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2580,7 +2580,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 113.03) (xy 110.49 113.03)
+			(xy 95.25 81.28) (xy 113.03 81.28)
 		)
 		(stroke
 			(width 0)
@@ -2590,7 +2590,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 100.33) (xy 167.64 105.41)
+			(xy 170.18 68.58) (xy 170.18 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2600,7 +2600,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 100.33) (xy 173.99 105.41)
+			(xy 176.53 68.58) (xy 176.53 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2610,7 +2610,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 135.89) (xy 190.5 138.43)
+			(xy 193.04 104.14) (xy 193.04 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2620,7 +2620,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 157.48) (xy 142.24 158.75)
+			(xy 144.78 125.73) (xy 144.78 127)
 		)
 		(stroke
 			(width 0)
@@ -2630,7 +2630,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 135.89) (xy 215.9 138.43)
+			(xy 218.44 104.14) (xy 218.44 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2640,7 +2640,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 120.65) (xy 95.25 123.19)
+			(xy 97.79 88.9) (xy 97.79 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2650,7 +2650,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 92.71) (xy 135.89 88.9)
+			(xy 138.43 60.96) (xy 138.43 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2660,7 +2660,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 92.71) (xy 44.45 95.25)
+			(xy 46.99 60.96) (xy 46.99 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2670,7 +2670,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 146.05) (xy 242.57 146.05)
+			(xy 241.3 114.3) (xy 245.11 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2680,7 +2680,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 151.13) (xy 190.5 153.67)
+			(xy 193.04 119.38) (xy 193.04 121.92)
 		)
 		(stroke
 			(width 0)
@@ -2690,7 +2690,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 130.81) (xy 177.8 130.81)
+			(xy 182.88 99.06) (xy 180.34 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2700,7 +2700,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 92.71) (xy 129.54 88.9)
+			(xy 132.08 60.96) (xy 132.08 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2710,7 +2710,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 138.43) (xy 184.15 138.43)
+			(xy 193.04 106.68) (xy 186.69 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2720,7 +2720,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 115.57) (xy 215.9 118.11)
+			(xy 218.44 83.82) (xy 218.44 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2730,7 +2730,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 140.97) (xy 59.69 140.97)
+			(xy 44.45 109.22) (xy 62.23 109.22)
 		)
 		(stroke
 			(width 0)
@@ -2740,7 +2740,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 146.05) (xy 185.42 146.05)
+			(xy 184.15 114.3) (xy 187.96 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2750,7 +2750,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 162.56) (xy 152.4 166.37)
+			(xy 154.94 130.81) (xy 154.94 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2760,7 +2760,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 88.9) (xy 173.99 88.9)
+			(xy 132.08 57.15) (xy 176.53 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2770,7 +2770,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 157.48) (xy 142.24 157.48)
+			(xy 149.86 125.73) (xy 144.78 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2780,7 +2780,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 92.71) (xy 142.24 88.9)
+			(xy 144.78 60.96) (xy 144.78 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2790,7 +2790,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 138.43) (xy 190.5 140.97)
+			(xy 193.04 106.68) (xy 193.04 109.22)
 		)
 		(stroke
 			(width 0)
@@ -2800,7 +2800,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 100.33) (xy 129.54 105.41)
+			(xy 132.08 68.58) (xy 132.08 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2810,7 +2810,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 87.63) (xy 97.79 87.63)
+			(xy 95.25 55.88) (xy 100.33 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2820,7 +2820,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 130.81) (xy 223.52 130.81)
+			(xy 223.52 99.06) (xy 226.06 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2830,7 +2830,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 143.51) (xy 46.99 143.51)
+			(xy 44.45 111.76) (xy 49.53 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2840,7 +2840,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 120.65) (xy 44.45 120.65)
+			(xy 44.45 88.9) (xy 46.99 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2850,7 +2850,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 96.52) (xy 190.5 99.06)
+			(xy 193.04 64.77) (xy 193.04 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2860,7 +2860,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 92.71) (xy 148.59 88.9)
+			(xy 151.13 60.96) (xy 151.13 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2870,7 +2870,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 115.57) (xy 190.5 120.65)
+			(xy 193.04 83.82) (xy 193.04 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2880,7 +2880,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 87.63) (xy 46.99 87.63)
+			(xy 44.45 55.88) (xy 49.53 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2890,7 +2890,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 118.11) (xy 46.99 118.11)
+			(xy 44.45 86.36) (xy 49.53 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2900,7 +2900,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 166.37) (xy 142.24 167.64)
+			(xy 144.78 134.62) (xy 144.78 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2910,7 +2910,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 130.81) (xy 220.98 130.81)
+			(xy 218.44 99.06) (xy 223.52 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2920,7 +2920,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 92.71) (xy 173.99 88.9)
+			(xy 176.53 60.96) (xy 176.53 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2930,7 +2930,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 100.33) (xy 148.59 105.41)
+			(xy 151.13 68.58) (xy 151.13 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2940,7 +2940,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 146.05) (xy 46.99 146.05)
+			(xy 44.45 114.3) (xy 49.53 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2949,7 +2949,7 @@
 		(uuid "fe2cb21c-4ddd-4eb1-a38f-c88858bbb5f4")
 	)
 	(label "CLIFF-LED-K"
-		(at 46.99 115.57 0)
+		(at 49.53 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2959,7 +2959,7 @@
 		(uuid "278754f4-b868-45f4-934e-b3ec17a16b40")
 	)
 	(label "BUMP-L-LED-K"
-		(at 184.15 138.43 180)
+		(at 186.69 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2969,7 +2969,7 @@
 		(uuid "2aae00ab-9d1c-4448-adb5-4aae47e2ff2d")
 	)
 	(label "CLIFF-LED-K"
-		(at 152.4 147.32 90)
+		(at 154.94 115.57 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2979,7 +2979,7 @@
 		(uuid "51a9f21d-bb24-425c-acfb-02d5715f3bb9")
 	)
 	(label "BUMP-R-LED-K"
-		(at 245.11 138.43 180)
+		(at 247.65 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2989,7 +2989,7 @@
 		(uuid "53a40057-7487-4aaf-8f70-192cefbdbe67")
 	)
 	(label "BUMP-R-LED-K"
-		(at 185.42 120.65 180)
+		(at 187.96 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2999,7 +2999,7 @@
 		(uuid "5643f376-7506-4a2d-924a-786353e4ba52")
 	)
 	(label "CLIFF-LED-K"
-		(at 97.79 115.57 0)
+		(at 100.33 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3009,7 +3009,7 @@
 		(uuid "632cf8f0-9ce3-4947-abe4-d5af186c0eb0")
 	)
 	(label "CLIFF-LED-K"
-		(at 97.79 87.63 0)
+		(at 100.33 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3019,7 +3019,7 @@
 		(uuid "9c67c1e1-0321-4dcb-abea-23830f925f9d")
 	)
 	(label "CLIFF-LED-K"
-		(at 46.99 87.63 0)
+		(at 49.53 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3029,7 +3029,7 @@
 		(uuid "bed06e68-2856-480d-b181-8609e8755851")
 	)
 	(label "CLIFF-LED-K"
-		(at 46.99 143.51 0)
+		(at 49.53 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3039,7 +3039,7 @@
 		(uuid "c973822d-417a-47a2-82c6-411b248f3a56")
 	)
 	(label "CLIFF-LED-K"
-		(at 97.79 143.51 0)
+		(at 100.33 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3050,7 +3050,7 @@
 	)
 	(hierarchical_label "BUMP-L-Q+"
 		(shape output)
-		(at 223.52 130.81 0)
+		(at 226.06 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3061,7 +3061,7 @@
 	)
 	(hierarchical_label "BUMP_L_LED_EN"
 		(shape input)
-		(at 177.8 146.05 180)
+		(at 180.34 114.3 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3072,7 +3072,7 @@
 	)
 	(hierarchical_label "LF-Q+"
 		(shape output)
-		(at 129.54 105.41 270)
+		(at 132.08 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3083,7 +3083,7 @@
 	)
 	(hierarchical_label "CLIFF_LED_EN"
 		(shape input)
-		(at 134.62 157.48 180)
+		(at 137.16 125.73 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3094,7 +3094,7 @@
 	)
 	(hierarchical_label "BUMP-R-Q+"
 		(shape output)
-		(at 223.52 110.49 0)
+		(at 226.06 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3105,7 +3105,7 @@
 	)
 	(hierarchical_label "RF-Q+"
 		(shape output)
-		(at 135.89 105.41 270)
+		(at 138.43 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3116,7 +3116,7 @@
 	)
 	(hierarchical_label "BUMP_R_LED_EN"
 		(shape input)
-		(at 238.76 146.05 180)
+		(at 241.3 114.3 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3127,7 +3127,7 @@
 	)
 	(hierarchical_label "RF-Q+"
 		(shape output)
-		(at 97.79 90.17 0)
+		(at 100.33 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3138,7 +3138,7 @@
 	)
 	(hierarchical_label "CLIFF-LM-Q+"
 		(shape output)
-		(at 46.99 118.11 0)
+		(at 49.53 86.36 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3149,7 +3149,7 @@
 	)
 	(hierarchical_label "RR-Q+"
 		(shape output)
-		(at 97.79 146.05 0)
+		(at 100.33 114.3 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3160,7 +3160,7 @@
 	)
 	(hierarchical_label "CLIFF-LM-Q+"
 		(shape output)
-		(at 154.94 105.41 270)
+		(at 157.48 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3171,7 +3171,7 @@
 	)
 	(hierarchical_label "BUMP-L-Q+"
 		(shape output)
-		(at 173.99 105.41 270)
+		(at 176.53 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3182,7 +3182,7 @@
 	)
 	(hierarchical_label "CLIFF-RM-Q+"
 		(shape output)
-		(at 161.29 105.41 270)
+		(at 163.83 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3193,7 +3193,7 @@
 	)
 	(hierarchical_label "LF-Q+"
 		(shape output)
-		(at 46.99 90.17 0)
+		(at 49.53 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3204,7 +3204,7 @@
 	)
 	(hierarchical_label "LR-Q+"
 		(shape output)
-		(at 46.99 146.05 0)
+		(at 49.53 114.3 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3215,7 +3215,7 @@
 	)
 	(hierarchical_label "BUMP-R-Q+"
 		(shape output)
-		(at 167.64 105.41 270)
+		(at 170.18 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3226,7 +3226,7 @@
 	)
 	(hierarchical_label "RR-Q+"
 		(shape output)
-		(at 148.59 105.41 270)
+		(at 151.13 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3237,7 +3237,7 @@
 	)
 	(hierarchical_label "LR-Q+"
 		(shape output)
-		(at 142.24 105.41 270)
+		(at 144.78 73.66 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3248,7 +3248,7 @@
 	)
 	(hierarchical_label "CLIFF-RM-Q+"
 		(shape output)
-		(at 97.79 118.11 0)
+		(at 100.33 86.36 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3259,7 +3259,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 88.9 144.78 0)
+		(at 91.44 113.03 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3270,7 +3270,7 @@
 		(dnp no)
 		(uuid "08a42fae-ac84-40a9-9d08-a0ff1c7025dd")
 		(property "Reference" "CLIFF-RR1"
-			(at 81.28 133.35 0)
+			(at 83.82 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3281,7 +3281,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-4PLT"
-			(at 81.28 157.48 0)
+			(at 83.82 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3292,7 +3292,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 88.9 144.78 0)
+			(at 91.44 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3303,7 +3303,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 144.78 0)
+			(at 91.44 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3314,7 +3314,7 @@
 			)
 		)
 		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to a cliff sensor board (J4001)"
-			(at 88.9 144.78 0)
+			(at 91.44 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3325,7 +3325,7 @@
 			)
 		)
 		(property "LCSC" "C7430453"
-			(at 88.9 144.78 0)
+			(at 91.44 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3364,7 +3364,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 38.1 88.9 0)
+		(at 40.64 57.15 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3375,7 +3375,7 @@
 		(dnp no)
 		(uuid "0aed8468-821c-42f8-8888-b1a5310dbacb")
 		(property "Reference" "CLIFF-LF1"
-			(at 30.48 77.47 0)
+			(at 33.02 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3386,7 +3386,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-4PLT"
-			(at 30.48 101.6 0)
+			(at 33.02 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3397,7 +3397,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 38.1 88.9 0)
+			(at 40.64 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3408,7 +3408,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 88.9 0)
+			(at 40.64 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3419,7 +3419,7 @@
 			)
 		)
 		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to a cliff sensor board (J4001)"
-			(at 38.1 88.9 0)
+			(at 40.64 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3430,7 +3430,7 @@
 			)
 		)
 		(property "LCSC" "C7430453"
-			(at 38.1 88.9 0)
+			(at 40.64 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3469,7 +3469,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 135.89 96.52 0)
+		(at 138.43 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3479,7 +3479,7 @@
 		(dnp no)
 		(uuid "0b1a2ce1-fe23-4602-8af1-657a3fde0f2c")
 		(property "Reference" "R73"
-			(at 133.985 99.695 90)
+			(at 136.525 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3490,7 +3490,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 137.795 98.425 90)
+			(at 140.335 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3501,7 +3501,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 135.89 96.52 0)
+			(at 138.43 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3512,7 +3512,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 96.52 0)
+			(at 138.43 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3523,7 +3523,7 @@
 			)
 		)
 		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 135.89 96.52 0)
+			(at 138.43 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3534,7 +3534,7 @@
 			)
 		)
 		(property "LCSC" "C2907042"
-			(at 135.89 96.52 0)
+			(at 138.43 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3561,7 +3561,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 35.56 153.67 0)
+		(at 38.1 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3571,7 +3571,7 @@
 		(dnp no)
 		(uuid "0f77c476-a95b-40d4-9474-f990c29c26be")
 		(property "Reference" "#PWR07718"
-			(at 35.56 160.02 0)
+			(at 38.1 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3582,7 +3582,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 160.02 0)
+			(at 38.1 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3593,7 +3593,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 153.67 0)
+			(at 38.1 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3604,7 +3604,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 153.67 0)
+			(at 38.1 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3615,7 +3615,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 153.67 0)
+			(at 38.1 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3639,7 +3639,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 110.49 140.97 0)
+		(at 113.03 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3649,7 +3649,7 @@
 		(dnp no)
 		(uuid "115f5993-67d4-49ed-b26c-a78ad2fb0742")
 		(property "Reference" "#PWR0907"
-			(at 110.49 144.78 0)
+			(at 113.03 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3660,7 +3660,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 110.49 135.89 0)
+			(at 113.03 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3670,7 +3670,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 110.49 140.97 0)
+			(at 113.03 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3681,7 +3681,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 140.97 0)
+			(at 113.03 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3692,7 +3692,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 110.49 140.97 0)
+			(at 113.03 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3716,7 +3716,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 86.36 97.79 0)
+		(at 88.9 66.04 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3726,7 +3726,7 @@
 		(dnp no)
 		(uuid "12a9dc28-7746-486f-bf1f-5bfddbbf4026")
 		(property "Reference" "#PWR07712"
-			(at 86.36 104.14 0)
+			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3737,7 +3737,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 104.14 0)
+			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3748,7 +3748,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 97.79 0)
+			(at 88.9 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3759,7 +3759,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 97.79 0)
+			(at 88.9 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3770,7 +3770,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 97.79 0)
+			(at 88.9 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3794,7 +3794,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 86.36 153.67 0)
+		(at 88.9 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3804,7 +3804,7 @@
 		(dnp no)
 		(uuid "1375227c-2f07-4347-8614-89aacbf52fd5")
 		(property "Reference" "#PWR07720"
-			(at 86.36 160.02 0)
+			(at 88.9 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3815,7 +3815,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 160.02 0)
+			(at 88.9 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3826,7 +3826,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 153.67 0)
+			(at 88.9 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3837,7 +3837,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 153.67 0)
+			(at 88.9 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3848,7 +3848,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 153.67 0)
+			(at 88.9 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3872,7 +3872,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 173.99 96.52 0)
+		(at 176.53 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3882,7 +3882,7 @@
 		(dnp no)
 		(uuid "17c80c7b-b540-4d08-b3db-e9d763af03a7")
 		(property "Reference" "R48"
-			(at 172.085 99.695 90)
+			(at 174.625 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3893,7 +3893,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 175.895 98.425 90)
+			(at 178.435 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3904,7 +3904,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 173.99 96.52 0)
+			(at 176.53 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3915,7 +3915,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 96.52 0)
+			(at 176.53 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3926,7 +3926,7 @@
 			)
 		)
 		(property "Description" "Bumper phototransistor pull-up: 1k keeps the output out of saturation so PA4/PA5 (ADC2) see the transition (ITR9606 IC(ON) 0.5-10 mA)"
-			(at 173.99 96.52 0)
+			(at 176.53 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3937,7 +3937,7 @@
 			)
 		)
 		(property "LCSC" "C2907113"
-			(at 173.99 96.52 0)
+			(at 176.53 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3964,7 +3964,7 @@
 	)
 	(symbol
 		(lib_id "Library:C_0603")
-		(at 220.98 134.62 0)
+		(at 223.52 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3974,7 +3974,7 @@
 		(dnp no)
 		(uuid "229aa320-9c89-4018-aa15-90f3a53f0549")
 		(property "Reference" "C179"
-			(at 223.52 133.35 0)
+			(at 226.06 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3985,7 +3985,7 @@
 			)
 		)
 		(property "Value" "47nF/50V"
-			(at 223.52 135.89 0)
+			(at 226.06 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3996,7 +3996,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 220.98 134.62 0)
+			(at 223.52 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4007,7 +4007,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 134.62 0)
+			(at 223.52 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4018,7 +4018,7 @@
 			)
 		)
 		(property "Description" "BUMP-L-Q+ filter: 47 us with the 1k pull-up; smooths LED PWM (100+ kHz), keeps ms bumper transitions"
-			(at 220.98 134.62 0)
+			(at 223.52 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4029,7 +4029,7 @@
 			)
 		)
 		(property "LCSC" "C1622"
-			(at 220.98 134.62 0)
+			(at 223.52 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4056,7 +4056,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 215.9 118.11 0)
+		(at 218.44 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4066,7 +4066,7 @@
 		(dnp no)
 		(uuid "22e4b637-6d82-416b-964c-33d3ea5d1ecb")
 		(property "Reference" "#PWR07314"
-			(at 215.9 124.46 0)
+			(at 218.44 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4077,7 +4077,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 215.9 124.46 0)
+			(at 218.44 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4088,7 +4088,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 118.11 0)
+			(at 218.44 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4099,7 +4099,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 118.11 0)
+			(at 218.44 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4110,7 +4110,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 118.11 0)
+			(at 218.44 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4134,7 +4134,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 35.56 135.89 180)
+		(at 38.1 104.14 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4144,7 +4144,7 @@
 		(dnp no)
 		(uuid "266c9dd8-b275-44a6-b969-22bdd1b52838")
 		(property "Reference" "#PWR07719"
-			(at 35.56 142.24 0)
+			(at 38.1 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4155,7 +4155,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 142.24 0)
+			(at 38.1 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4166,7 +4166,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 135.89 0)
+			(at 38.1 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4177,7 +4177,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 135.89 0)
+			(at 38.1 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4188,7 +4188,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 135.89 0)
+			(at 38.1 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4212,7 +4212,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 142.24 167.64 0)
+		(at 144.78 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4222,7 +4222,7 @@
 		(dnp no)
 		(uuid "2c75c1dd-de33-4e0e-80d9-9967113408b3")
 		(property "Reference" "#PWR07708"
-			(at 142.24 173.99 0)
+			(at 144.78 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4233,7 +4233,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 142.24 173.99 0)
+			(at 144.78 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4244,7 +4244,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 167.64 0)
+			(at 144.78 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4255,7 +4255,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 167.64 0)
+			(at 144.78 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4266,7 +4266,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 142.24 167.64 0)
+			(at 144.78 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4290,7 +4290,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 190.5 153.67 0)
+		(at 193.04 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4300,7 +4300,7 @@
 		(dnp no)
 		(uuid "2da11a88-4fc0-461b-b1b9-a6cd11fcb195")
 		(property "Reference" "#PWR07312"
-			(at 190.5 160.02 0)
+			(at 193.04 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4311,7 +4311,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.5 160.02 0)
+			(at 193.04 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4322,7 +4322,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 153.67 0)
+			(at 193.04 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4333,7 +4333,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 153.67 0)
+			(at 193.04 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4344,7 +4344,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 190.5 153.67 0)
+			(at 193.04 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4368,7 +4368,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 35.56 107.95 180)
+		(at 38.1 76.2 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4378,7 +4378,7 @@
 		(dnp no)
 		(uuid "2daf1480-d14f-4c2f-9316-7660acbf20d4")
 		(property "Reference" "#PWR07715"
-			(at 35.56 114.3 0)
+			(at 38.1 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4389,7 +4389,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 114.3 0)
+			(at 38.1 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4400,7 +4400,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 107.95 0)
+			(at 38.1 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4411,7 +4411,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 107.95 0)
+			(at 38.1 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4422,7 +4422,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 107.95 0)
+			(at 38.1 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4446,7 +4446,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 181.61 149.86 0)
+		(at 184.15 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4456,7 +4456,7 @@
 		(dnp no)
 		(uuid "2efe0c7f-04a5-46e4-adf3-1f54b73e96a7")
 		(property "Reference" "R198"
-			(at 174.752 149.098 0)
+			(at 177.292 117.348 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4467,7 +4467,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 174.752 151.638 0)
+			(at 177.292 119.888 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4478,7 +4478,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 181.61 149.86 0)
+			(at 184.15 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4489,7 +4489,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 149.86 0)
+			(at 184.15 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4500,7 +4500,7 @@
 			)
 		)
 		(property "Description" "Emitters off while the MCU is in reset"
-			(at 181.61 149.86 0)
+			(at 184.15 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4511,7 +4511,7 @@
 			)
 		)
 		(property "LCSC" "C2907088"
-			(at 181.61 149.86 0)
+			(at 184.15 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4538,7 +4538,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 59.69 85.09 0)
+		(at 62.23 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4548,7 +4548,7 @@
 		(dnp no)
 		(uuid "30b885ff-d9b6-49bb-9560-44f64b88965d")
 		(property "Reference" "#PWR0911"
-			(at 59.69 88.9 0)
+			(at 62.23 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4559,7 +4559,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 59.69 80.01 0)
+			(at 62.23 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4569,7 +4569,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 85.09 0)
+			(at 62.23 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4580,7 +4580,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 85.09 0)
+			(at 62.23 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4591,7 +4591,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 59.69 85.09 0)
+			(at 62.23 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4615,7 +4615,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 88.9 88.9 0)
+		(at 91.44 57.15 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -4626,7 +4626,7 @@
 		(dnp no)
 		(uuid "31763ca0-e8ae-44d4-9042-c4fa37e747c5")
 		(property "Reference" "CLIFF-RF1"
-			(at 81.28 77.47 0)
+			(at 83.82 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4637,7 +4637,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-4PLT"
-			(at 81.28 101.6 0)
+			(at 83.82 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4648,7 +4648,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 88.9 88.9 0)
+			(at 91.44 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4659,7 +4659,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 88.9 0)
+			(at 91.44 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4670,7 +4670,7 @@
 			)
 		)
 		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to a cliff sensor board (J4001)"
-			(at 88.9 88.9 0)
+			(at 91.44 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4681,7 +4681,7 @@
 			)
 		)
 		(property "LCSC" "C7430453"
-			(at 88.9 88.9 0)
+			(at 91.44 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4720,7 +4720,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 95.25 95.25 0)
+		(at 97.79 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4730,7 +4730,7 @@
 		(dnp no)
 		(uuid "340e7bed-d822-44bb-9926-b3d42870e609")
 		(property "Reference" "#PWR07704"
-			(at 95.25 101.6 0)
+			(at 97.79 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4741,7 +4741,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 95.25 101.6 0)
+			(at 97.79 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4752,7 +4752,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 95.25 0)
+			(at 97.79 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4763,7 +4763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 95.25 0)
+			(at 97.79 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4774,7 +4774,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 95.25 0)
+			(at 97.79 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4798,7 +4798,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 110.49 85.09 0)
+		(at 113.03 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4808,7 +4808,7 @@
 		(dnp no)
 		(uuid "37612766-001d-487e-9a07-c1bb5d166ff3")
 		(property "Reference" "#PWR0904"
-			(at 110.49 88.9 0)
+			(at 113.03 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4819,7 +4819,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 110.49 80.01 0)
+			(at 113.03 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4829,7 +4829,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 110.49 85.09 0)
+			(at 113.03 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4840,7 +4840,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 85.09 0)
+			(at 113.03 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4851,7 +4851,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 110.49 85.09 0)
+			(at 113.03 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4875,7 +4875,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 95.25 123.19 0)
+		(at 97.79 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4885,7 +4885,7 @@
 		(dnp no)
 		(uuid "3f93c1b4-5b2a-446c-bc26-54c3bdafa4dd")
 		(property "Reference" "#PWR07705"
-			(at 95.25 129.54 0)
+			(at 97.79 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4896,7 +4896,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 95.25 129.54 0)
+			(at 97.79 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4907,7 +4907,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 123.19 0)
+			(at 97.79 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4918,7 +4918,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 123.19 0)
+			(at 97.79 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4929,7 +4929,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 123.19 0)
+			(at 97.79 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4953,7 +4953,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 88.9 116.84 0)
+		(at 91.44 85.09 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -4964,7 +4964,7 @@
 		(dnp no)
 		(uuid "45a7bd3c-6982-49da-84b9-6e831ef90ea4")
 		(property "Reference" "CLIFF-RM1"
-			(at 81.28 105.41 0)
+			(at 83.82 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4975,7 +4975,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-4PLT"
-			(at 81.28 129.54 0)
+			(at 83.82 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4986,7 +4986,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 88.9 116.84 0)
+			(at 91.44 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4997,7 +4997,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 116.84 0)
+			(at 91.44 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5008,7 +5008,7 @@
 			)
 		)
 		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to a cliff sensor board (J4001)"
-			(at 88.9 116.84 0)
+			(at 91.44 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5019,7 +5019,7 @@
 			)
 		)
 		(property "LCSC" "C7430453"
-			(at 88.9 116.84 0)
+			(at 91.44 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5058,7 +5058,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 38.1 144.78 0)
+		(at 40.64 113.03 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -5069,7 +5069,7 @@
 		(dnp no)
 		(uuid "4951e8f6-b072-40d1-ba0b-e526ce79fe3a")
 		(property "Reference" "CLIFF-LR1"
-			(at 30.48 133.35 0)
+			(at 33.02 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5080,7 +5080,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-4PLT"
-			(at 30.48 157.48 0)
+			(at 33.02 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5091,7 +5091,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 38.1 144.78 0)
+			(at 40.64 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5102,7 +5102,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 144.78 0)
+			(at 40.64 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5113,7 +5113,7 @@
 			)
 		)
 		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to a cliff sensor board (J4001)"
-			(at 38.1 144.78 0)
+			(at 40.64 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5124,7 +5124,7 @@
 			)
 		)
 		(property "LCSC" "C7430453"
-			(at 38.1 144.78 0)
+			(at 40.64 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5163,7 +5163,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 44.45 95.25 0)
+		(at 46.99 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5173,7 +5173,7 @@
 		(dnp no)
 		(uuid "4dc7437a-26f7-41bc-a87d-c8a34ce4704a")
 		(property "Reference" "#PWR07701"
-			(at 44.45 101.6 0)
+			(at 46.99 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5184,7 +5184,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.45 101.6 0)
+			(at 46.99 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5195,7 +5195,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 95.25 0)
+			(at 46.99 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5206,7 +5206,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 95.25 0)
+			(at 46.99 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5217,7 +5217,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 44.45 95.25 0)
+			(at 46.99 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5241,7 +5241,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 154.94 96.52 0)
+		(at 157.48 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5251,7 +5251,7 @@
 		(dnp no)
 		(uuid "520189b8-29dc-4b17-af5b-6d63121c30cb")
 		(property "Reference" "R212"
-			(at 153.035 99.695 90)
+			(at 155.575 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5262,7 +5262,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 156.845 98.425 90)
+			(at 159.385 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5273,7 +5273,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 154.94 96.52 0)
+			(at 157.48 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5284,7 +5284,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 96.52 0)
+			(at 157.48 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5295,7 +5295,7 @@
 			)
 		)
 		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 154.94 96.52 0)
+			(at 157.48 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5306,7 +5306,7 @@
 			)
 		)
 		(property "LCSC" "C2907042"
-			(at 154.94 96.52 0)
+			(at 157.48 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5333,7 +5333,7 @@
 	)
 	(symbol
 		(lib_id "Library:C_0603")
-		(at 220.98 114.3 0)
+		(at 223.52 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5343,7 +5343,7 @@
 		(dnp no)
 		(uuid "54e06153-54f5-4055-bc73-4e540584ceeb")
 		(property "Reference" "C178"
-			(at 223.52 113.03 0)
+			(at 226.06 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5354,7 +5354,7 @@
 			)
 		)
 		(property "Value" "47nF/50V"
-			(at 223.52 115.57 0)
+			(at 226.06 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5365,7 +5365,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 220.98 114.3 0)
+			(at 223.52 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5376,7 +5376,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 114.3 0)
+			(at 223.52 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5387,7 +5387,7 @@
 			)
 		)
 		(property "Description" "BUMP-R-Q+ filter: 47 us with the 1k pull-up; smooths LED PWM (100+ kHz), keeps ms bumper transitions"
-			(at 220.98 114.3 0)
+			(at 223.52 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5398,7 +5398,7 @@
 			)
 		)
 		(property "LCSC" "C1622"
-			(at 220.98 114.3 0)
+			(at 223.52 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5425,7 +5425,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 86.36 125.73 0)
+		(at 88.9 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5435,7 +5435,7 @@
 		(dnp no)
 		(uuid "5a394a67-60d8-470d-92b4-8c082988dffb")
 		(property "Reference" "#PWR07716"
-			(at 86.36 132.08 0)
+			(at 88.9 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5446,7 +5446,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 132.08 0)
+			(at 88.9 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5457,7 +5457,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 125.73 0)
+			(at 88.9 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5468,7 +5468,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 125.73 0)
+			(at 88.9 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5479,7 +5479,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 125.73 0)
+			(at 88.9 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5503,7 +5503,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 152.4 166.37 0)
+		(at 154.94 134.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5513,7 +5513,7 @@
 		(dnp no)
 		(uuid "5aee652e-7d84-4d7a-b7bb-eb8706396982")
 		(property "Reference" "#PWR07707"
-			(at 152.4 172.72 0)
+			(at 154.94 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5524,7 +5524,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 152.4 172.72 0)
+			(at 154.94 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5535,7 +5535,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 152.4 166.37 0)
+			(at 154.94 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5546,7 +5546,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 166.37 0)
+			(at 154.94 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5557,7 +5557,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 152.4 166.37 0)
+			(at 154.94 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5581,7 +5581,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 251.46 153.67 0)
+		(at 254 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5591,7 +5591,7 @@
 		(dnp no)
 		(uuid "5f21f819-e215-4f83-9880-9b7a2aecfdce")
 		(property "Reference" "#PWR07807"
-			(at 251.46 160.02 0)
+			(at 254 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5602,7 +5602,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 251.46 160.02 0)
+			(at 254 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5613,7 +5613,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 251.46 153.67 0)
+			(at 254 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5624,7 +5624,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 251.46 153.67 0)
+			(at 254 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5635,7 +5635,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 251.46 153.67 0)
+			(at 254 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5659,7 +5659,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 86.36 80.01 180)
+		(at 88.9 48.26 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5669,7 +5669,7 @@
 		(dnp no)
 		(uuid "631b9298-1cfe-4c9a-9195-12738efa284a")
 		(property "Reference" "#PWR07713"
-			(at 86.36 86.36 0)
+			(at 88.9 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5680,7 +5680,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 86.36 0)
+			(at 88.9 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5691,7 +5691,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 80.01 0)
+			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5702,7 +5702,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 80.01 0)
+			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5713,7 +5713,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 80.01 0)
+			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5738,7 +5738,7 @@
 	(symbol
 		(lib_name "AO3400_2")
 		(lib_id "JLCImport:AO3400")
-		(at 251.46 146.05 0)
+		(at 254 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5748,7 +5748,7 @@
 		(dnp no)
 		(uuid "77ec1002-bda7-4356-a2a6-d6593bbbc99e")
 		(property "Reference" "Q36"
-			(at 255.016 144.526 0)
+			(at 257.556 112.776 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5759,7 +5759,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 255.016 147.066 0)
+			(at 257.556 115.316 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5770,7 +5770,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3400"
-			(at 251.46 146.05 0)
+			(at 254 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5781,7 +5781,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 251.46 146.05 0)
+			(at 254 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5792,7 +5792,7 @@
 			)
 		)
 		(property "Description" "Bumper emitter switch, BUMPER_LED_EN high = on"
-			(at 251.46 146.05 0)
+			(at 254 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5803,7 +5803,7 @@
 			)
 		)
 		(property "LCSC" "C20628874"
-			(at 251.46 146.05 0)
+			(at 254 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5833,7 +5833,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 86.36 135.89 180)
+		(at 88.9 104.14 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5843,7 +5843,7 @@
 		(dnp no)
 		(uuid "792a5169-cd75-4b60-8262-eb95ff7e15cf")
 		(property "Reference" "#PWR07721"
-			(at 86.36 142.24 0)
+			(at 88.9 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5854,7 +5854,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 142.24 0)
+			(at 88.9 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5865,7 +5865,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 135.89 0)
+			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5876,7 +5876,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 135.89 0)
+			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5887,7 +5887,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 135.89 0)
+			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5911,7 +5911,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 167.64 96.52 0)
+		(at 170.18 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5921,7 +5921,7 @@
 		(dnp no)
 		(uuid "89e12071-9674-464d-8bf0-84541ebd5c7d")
 		(property "Reference" "R44"
-			(at 165.735 99.695 90)
+			(at 168.275 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5932,7 +5932,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 169.545 98.425 90)
+			(at 172.085 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5943,7 +5943,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 167.64 96.52 0)
+			(at 170.18 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5954,7 +5954,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 96.52 0)
+			(at 170.18 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5965,7 +5965,7 @@
 			)
 		)
 		(property "Description" "Bumper phototransistor pull-up: 1k keeps the output out of saturation so PA4/PA5 (ADC2) see the transition (ITR9606 IC(ON) 0.5-10 mA)"
-			(at 167.64 96.52 0)
+			(at 170.18 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5976,7 +5976,7 @@
 			)
 		)
 		(property "LCSC" "C2907113"
-			(at 167.64 96.52 0)
+			(at 170.18 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6003,7 +6003,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 95.25 151.13 0)
+		(at 97.79 119.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6013,7 +6013,7 @@
 		(dnp no)
 		(uuid "8d377cd0-da76-4782-bdbf-a9fcdd5b3f13")
 		(property "Reference" "#PWR07706"
-			(at 95.25 157.48 0)
+			(at 97.79 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6024,7 +6024,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 95.25 157.48 0)
+			(at 97.79 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6035,7 +6035,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 151.13 0)
+			(at 97.79 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6046,7 +6046,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 151.13 0)
+			(at 97.79 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6057,7 +6057,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 151.13 0)
+			(at 97.79 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6081,7 +6081,7 @@
 	)
 	(symbol
 		(lib_id "DesignLibrary:DOCKING-BUMBER_0_OPTO-IR-SW_DesignLibrary.SchLib")
-		(at 195.58 107.95 90)
+		(at 198.12 76.2 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6091,7 +6091,7 @@
 		(dnp no)
 		(uuid "8e8b9656-9938-43b9-87af-2b05538d2431")
 		(property "Reference" "BUMP-R1"
-			(at 207.01 104.14 90)
+			(at 209.55 72.39 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6102,7 +6102,7 @@
 			)
 		)
 		(property "Value" "ITR9606-F"
-			(at 207.01 106.045 90)
+			(at 209.55 74.295 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6113,7 +6113,7 @@
 			)
 		)
 		(property "Footprint" "oomwoo_altium:OPTO-TH_4P_ITR9606"
-			(at 195.58 107.95 0)
+			(at 198.12 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6124,7 +6124,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 107.95 0)
+			(at 198.12 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6135,7 +6135,7 @@
 			)
 		)
 		(property "Description" "Right bumper slotted photo-interrupter (1 A, 2 K, 3 C, 4 E)"
-			(at 195.58 107.95 0)
+			(at 198.12 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6146,7 +6146,7 @@
 			)
 		)
 		(property "LCSC" "C3008416"
-			(at 195.58 107.95 0)
+			(at 198.12 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6157,7 +6157,7 @@
 			)
 		)
 		(property "Manufacturer" "Everlight Elec"
-			(at 195.58 107.95 0)
+			(at 198.12 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6168,7 +6168,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ITR9606-F"
-			(at 195.58 107.95 0)
+			(at 198.12 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6201,7 +6201,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 161.29 96.52 0)
+		(at 163.83 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6211,7 +6211,7 @@
 		(dnp no)
 		(uuid "8f1eb73b-4178-4be9-8729-10aa51c44a6f")
 		(property "Reference" "R213"
-			(at 159.385 99.695 90)
+			(at 161.925 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6222,7 +6222,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 163.195 98.425 90)
+			(at 165.735 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6233,7 +6233,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 161.29 96.52 0)
+			(at 163.83 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6244,7 +6244,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 96.52 0)
+			(at 163.83 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6255,7 +6255,7 @@
 			)
 		)
 		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 161.29 96.52 0)
+			(at 163.83 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6266,7 +6266,7 @@
 			)
 		)
 		(property "LCSC" "C2907042"
-			(at 161.29 96.52 0)
+			(at 163.83 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6293,7 +6293,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 142.24 162.56 0)
+		(at 144.78 130.81 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6303,7 +6303,7 @@
 		(dnp no)
 		(uuid "9d41ed4b-8f34-4cc6-90a1-129ebda9e167")
 		(property "Reference" "R214"
-			(at 135.89 161.29 0)
+			(at 138.43 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6314,7 +6314,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 135.89 163.83 0)
+			(at 138.43 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6325,7 +6325,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 142.24 162.56 0)
+			(at 144.78 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6336,7 +6336,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 162.56 0)
+			(at 144.78 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6347,7 +6347,7 @@
 			)
 		)
 		(property "Description" "Cliff LEDs off while the MCU is in reset"
-			(at 142.24 162.56 0)
+			(at 144.78 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6358,7 +6358,7 @@
 			)
 		)
 		(property "LCSC" "C2907088"
-			(at 142.24 162.56 0)
+			(at 144.78 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6385,7 +6385,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 220.98 138.43 0)
+		(at 223.52 106.68 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6395,7 +6395,7 @@
 		(dnp no)
 		(uuid "9ecf250e-3801-4eee-8ed2-9ea0883c4dbc")
 		(property "Reference" "#PWR07810"
-			(at 220.98 144.78 0)
+			(at 223.52 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6406,7 +6406,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 220.98 144.78 0)
+			(at 223.52 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6417,7 +6417,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 138.43 0)
+			(at 223.52 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6428,7 +6428,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 138.43 0)
+			(at 223.52 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6439,7 +6439,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 220.98 138.43 0)
+			(at 223.52 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6463,7 +6463,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 181.61 153.67 0)
+		(at 184.15 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6473,7 +6473,7 @@
 		(dnp no)
 		(uuid "9f2614cc-35a4-4a77-b4e9-a890f7461520")
 		(property "Reference" "#PWR07313"
-			(at 181.61 160.02 0)
+			(at 184.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6484,7 +6484,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 160.02 0)
+			(at 184.15 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6495,7 +6495,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 153.67 0)
+			(at 184.15 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6506,7 +6506,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 153.67 0)
+			(at 184.15 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6517,7 +6517,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 153.67 0)
+			(at 184.15 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6541,7 +6541,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 129.54 83.82 0)
+		(at 132.08 52.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6551,7 +6551,7 @@
 		(dnp no)
 		(uuid "9fadd9ba-3425-4ad3-807e-aae7e24700f6")
 		(property "Reference" "#PWR0909"
-			(at 129.54 87.63 0)
+			(at 132.08 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6562,7 +6562,7 @@
 			)
 		)
 		(property "Value" "VSENS-3V3"
-			(at 129.54 78.74 0)
+			(at 132.08 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6572,7 +6572,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 83.82 0)
+			(at 132.08 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6583,7 +6583,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 83.82 0)
+			(at 132.08 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6594,7 +6594,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
-			(at 129.54 83.82 0)
+			(at 132.08 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6619,7 +6619,7 @@
 	(symbol
 		(lib_name "AO3400_1")
 		(lib_id "JLCImport:AO3400")
-		(at 190.5 146.05 0)
+		(at 193.04 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6629,7 +6629,7 @@
 		(dnp no)
 		(uuid "a25f7065-f69f-4278-99dd-20b6e0fe1bcc")
 		(property "Reference" "Q32"
-			(at 194.056 145.034 0)
+			(at 196.596 113.284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6640,7 +6640,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 194.056 147.574 0)
+			(at 196.596 115.824 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6651,7 +6651,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3400"
-			(at 190.5 146.05 0)
+			(at 193.04 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6662,7 +6662,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 146.05 0)
+			(at 193.04 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6673,7 +6673,7 @@
 			)
 		)
 		(property "Description" "Bumper emitter switch, BUMPER_LED_EN high = on"
-			(at 190.5 146.05 0)
+			(at 193.04 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6684,7 +6684,7 @@
 			)
 		)
 		(property "LCSC" "C20628874"
-			(at 190.5 146.05 0)
+			(at 193.04 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6714,7 +6714,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 242.57 153.67 0)
+		(at 245.11 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6724,7 +6724,7 @@
 		(dnp no)
 		(uuid "a2bcb6d4-46ab-4f14-addb-192bd6e62548")
 		(property "Reference" "#PWR07808"
-			(at 242.57 160.02 0)
+			(at 245.11 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6735,7 +6735,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 242.57 160.02 0)
+			(at 245.11 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6746,7 +6746,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 153.67 0)
+			(at 245.11 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6757,7 +6757,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 153.67 0)
+			(at 245.11 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6768,7 +6768,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 242.57 153.67 0)
+			(at 245.11 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6792,7 +6792,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:AO3400")
-		(at 152.4 157.48 0)
+		(at 154.94 125.73 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6802,7 +6802,7 @@
 		(dnp no)
 		(uuid "ac4c68c8-39a2-4b21-9b69-609d44f0a274")
 		(property "Reference" "Q35"
-			(at 156.21 156.21 0)
+			(at 158.75 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6813,7 +6813,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 156.21 158.75 0)
+			(at 158.75 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6824,7 +6824,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3400"
-			(at 152.4 157.48 0)
+			(at 154.94 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6835,7 +6835,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 157.48 0)
+			(at 154.94 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6846,7 +6846,7 @@
 			)
 		)
 		(property "Description" "Cliff LED switch: sinks all 6 cliff LED cathodes, CLIFF_LED_EN high = on (~150 mA)"
-			(at 152.4 157.48 0)
+			(at 154.94 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6857,7 +6857,7 @@
 			)
 		)
 		(property "LCSC" "C20628874"
-			(at 152.4 157.48 0)
+			(at 154.94 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6887,7 +6887,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 184.15 130.81 90)
+		(at 186.69 99.06 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6897,7 +6897,7 @@
 		(dnp no)
 		(uuid "ad7a1ba8-0287-4e06-9aad-6afa224fba2d")
 		(property "Reference" "R220"
-			(at 184.15 127 90)
+			(at 186.69 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6907,7 +6907,7 @@
 			)
 		)
 		(property "Value" "180"
-			(at 184.15 134.62 90)
+			(at 186.69 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6917,7 +6917,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 184.15 130.81 0)
+			(at 186.69 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6928,7 +6928,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 130.81 0)
+			(at 186.69 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6939,7 +6939,7 @@
 			)
 		)
 		(property "Description" "Left bumper LED (BUMP-L1): (5 V - 1.2 V) / 180 = ~21 mA"
-			(at 184.15 130.81 0)
+			(at 186.69 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6950,7 +6950,7 @@
 			)
 		)
 		(property "LCSC" "C22828"
-			(at 184.15 130.81 0)
+			(at 186.69 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6977,7 +6977,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 177.8 130.81 0)
+		(at 180.34 99.06 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6987,7 +6987,7 @@
 		(dnp no)
 		(uuid "b426bca8-7f9d-443c-89a8-bf178012470d")
 		(property "Reference" "#PWR07806"
-			(at 177.8 134.62 0)
+			(at 180.34 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6998,7 +6998,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 177.8 125.73 0)
+			(at 180.34 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7008,7 +7008,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 130.81 0)
+			(at 180.34 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7019,7 +7019,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 130.81 0)
+			(at 180.34 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7030,7 +7030,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 177.8 130.81 0)
+			(at 180.34 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7054,7 +7054,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 215.9 138.43 0)
+		(at 218.44 106.68 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7064,7 +7064,7 @@
 		(dnp no)
 		(uuid "b661bce2-3737-4ac1-9c5f-d7d23623d21e")
 		(property "Reference" "#PWR07315"
-			(at 215.9 144.78 0)
+			(at 218.44 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7075,7 +7075,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 215.9 144.78 0)
+			(at 218.44 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7086,7 +7086,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 138.43 0)
+			(at 218.44 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7097,7 +7097,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 138.43 0)
+			(at 218.44 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7108,7 +7108,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 138.43 0)
+			(at 218.44 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7132,7 +7132,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 190.5 96.52 0)
+		(at 193.04 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7142,7 +7142,7 @@
 		(dnp no)
 		(uuid "bcc3f48b-1b29-47cb-bb11-98c3a5228a30")
 		(property "Reference" "#PWR0905"
-			(at 190.5 100.33 0)
+			(at 193.04 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7153,7 +7153,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 190.5 91.44 0)
+			(at 193.04 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7163,7 +7163,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 96.52 0)
+			(at 193.04 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7174,7 +7174,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 96.52 0)
+			(at 193.04 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7185,7 +7185,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 190.5 96.52 0)
+			(at 193.04 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7209,7 +7209,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 35.56 80.01 180)
+		(at 38.1 48.26 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7219,7 +7219,7 @@
 		(dnp no)
 		(uuid "c059e6ed-2d58-49f9-a286-3e94d2fdb677")
 		(property "Reference" "#PWR07711"
-			(at 35.56 86.36 0)
+			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7230,7 +7230,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 86.36 0)
+			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7241,7 +7241,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 80.01 0)
+			(at 38.1 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7252,7 +7252,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 80.01 0)
+			(at 38.1 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7263,7 +7263,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 80.01 0)
+			(at 38.1 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7287,7 +7287,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 129.54 96.52 0)
+		(at 132.08 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7297,7 +7297,7 @@
 		(dnp no)
 		(uuid "c1dc275f-4272-47f0-952d-b6512947c9b8")
 		(property "Reference" "R64"
-			(at 127.635 99.695 90)
+			(at 130.175 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7308,7 +7308,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 131.445 98.425 90)
+			(at 133.985 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7319,7 +7319,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 129.54 96.52 0)
+			(at 132.08 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7330,7 +7330,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 96.52 0)
+			(at 132.08 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7341,7 +7341,7 @@
 			)
 		)
 		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 129.54 96.52 0)
+			(at 132.08 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7352,7 +7352,7 @@
 			)
 		)
 		(property "LCSC" "C2907042"
-			(at 129.54 96.52 0)
+			(at 132.08 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7379,7 +7379,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 86.36 107.95 180)
+		(at 88.9 76.2 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7389,7 +7389,7 @@
 		(dnp no)
 		(uuid "c348e019-f590-451e-bfff-3f1c8105e1fb")
 		(property "Reference" "#PWR07717"
-			(at 86.36 114.3 0)
+			(at 88.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7400,7 +7400,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 114.3 0)
+			(at 88.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7411,7 +7411,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 107.95 0)
+			(at 88.9 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7422,7 +7422,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 107.95 0)
+			(at 88.9 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7433,7 +7433,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 86.36 107.95 0)
+			(at 88.9 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7457,7 +7457,7 @@
 	)
 	(symbol
 		(lib_id "DesignLibrary:DOCKING-BUMBER_0_OPTO-IR-SW_DesignLibrary.SchLib")
-		(at 195.58 128.27 90)
+		(at 198.12 96.52 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7467,7 +7467,7 @@
 		(dnp no)
 		(uuid "c4785d50-6a24-4352-b7b0-43372bf855db")
 		(property "Reference" "BUMP-L1"
-			(at 207.01 124.46 90)
+			(at 209.55 92.71 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7478,7 +7478,7 @@
 			)
 		)
 		(property "Value" "ITR9606-F"
-			(at 207.01 126.365 90)
+			(at 209.55 94.615 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7489,7 +7489,7 @@
 			)
 		)
 		(property "Footprint" "oomwoo_altium:OPTO-TH_4P_ITR9606"
-			(at 195.58 128.27 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7500,7 +7500,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 128.27 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7511,7 +7511,7 @@
 			)
 		)
 		(property "Description" "Left bumper slotted photo-interrupter (1 A, 2 K, 3 C, 4 E)"
-			(at 195.58 128.27 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7522,7 +7522,7 @@
 			)
 		)
 		(property "LCSC" "C3008416"
-			(at 195.58 128.27 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7533,7 +7533,7 @@
 			)
 		)
 		(property "Manufacturer" "Everlight Elec"
-			(at 195.58 128.27 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7544,7 +7544,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ITR9606-F"
-			(at 195.58 128.27 0)
+			(at 198.12 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7577,7 +7577,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 148.59 96.52 0)
+		(at 151.13 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7587,7 +7587,7 @@
 		(dnp no)
 		(uuid "c7f689c8-c364-4306-ad6f-3c162677cacf")
 		(property "Reference" "R39"
-			(at 146.685 99.695 90)
+			(at 149.225 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7598,7 +7598,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 150.495 98.425 90)
+			(at 153.035 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7609,7 +7609,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 148.59 96.52 0)
+			(at 151.13 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7620,7 +7620,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 96.52 0)
+			(at 151.13 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7631,7 +7631,7 @@
 			)
 		)
 		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 148.59 96.52 0)
+			(at 151.13 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7642,7 +7642,7 @@
 			)
 		)
 		(property "LCSC" "C2907042"
-			(at 148.59 96.52 0)
+			(at 151.13 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7669,7 +7669,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 38.1 116.84 0)
+		(at 40.64 85.09 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -7680,7 +7680,7 @@
 		(dnp no)
 		(uuid "c8bb7add-f70d-4bcb-aa11-4f274951eb4f")
 		(property "Reference" "CLIFF-LM1"
-			(at 30.48 105.41 0)
+			(at 33.02 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7691,7 +7691,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-4PLT"
-			(at 30.48 129.54 0)
+			(at 33.02 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7702,7 +7702,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 38.1 116.84 0)
+			(at 40.64 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7713,7 +7713,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 116.84 0)
+			(at 40.64 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7724,7 +7724,7 @@
 			)
 		)
 		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to a cliff sensor board (J4001)"
-			(at 38.1 116.84 0)
+			(at 40.64 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7735,7 +7735,7 @@
 			)
 		)
 		(property "LCSC" "C7430453"
-			(at 38.1 116.84 0)
+			(at 40.64 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7774,7 +7774,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 220.98 118.11 0)
+		(at 223.52 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7784,7 +7784,7 @@
 		(dnp no)
 		(uuid "d096ae3e-752f-4279-9b64-a6989e2cf034")
 		(property "Reference" "#PWR07809"
-			(at 220.98 124.46 0)
+			(at 223.52 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7795,7 +7795,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 220.98 124.46 0)
+			(at 223.52 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7806,7 +7806,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 118.11 0)
+			(at 223.52 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7817,7 +7817,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 118.11 0)
+			(at 223.52 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7828,7 +7828,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 220.98 118.11 0)
+			(at 223.52 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7852,7 +7852,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 110.49 113.03 0)
+		(at 113.03 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7862,7 +7862,7 @@
 		(dnp no)
 		(uuid "d0c725f0-8c4c-4f4c-8272-036969451cdc")
 		(property "Reference" "#PWR0908"
-			(at 110.49 116.84 0)
+			(at 113.03 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7873,7 +7873,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 110.49 107.95 0)
+			(at 113.03 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7883,7 +7883,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 110.49 113.03 0)
+			(at 113.03 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7894,7 +7894,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 113.03 0)
+			(at 113.03 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7905,7 +7905,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 110.49 113.03 0)
+			(at 113.03 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7929,7 +7929,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 59.69 140.97 0)
+		(at 62.23 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7939,7 +7939,7 @@
 		(dnp no)
 		(uuid "db2c946e-a165-49f3-828e-59044ffe4bb2")
 		(property "Reference" "#PWR0910"
-			(at 59.69 144.78 0)
+			(at 62.23 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7950,7 +7950,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 59.69 135.89 0)
+			(at 62.23 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7960,7 +7960,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 140.97 0)
+			(at 62.23 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7971,7 +7971,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 140.97 0)
+			(at 62.23 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7982,7 +7982,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 59.69 140.97 0)
+			(at 62.23 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8006,7 +8006,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 35.56 97.79 0)
+		(at 38.1 66.04 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8016,7 +8016,7 @@
 		(dnp no)
 		(uuid "e11ff994-207f-42f5-b69a-566cfa794db6")
 		(property "Reference" "#PWR07710"
-			(at 35.56 104.14 0)
+			(at 38.1 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8027,7 +8027,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 104.14 0)
+			(at 38.1 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8038,7 +8038,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 97.79 0)
+			(at 38.1 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8049,7 +8049,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 97.79 0)
+			(at 38.1 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8060,7 +8060,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 97.79 0)
+			(at 38.1 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8084,7 +8084,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 44.45 123.19 0)
+		(at 46.99 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8094,7 +8094,7 @@
 		(dnp no)
 		(uuid "e42814e4-4dee-4fc7-84a7-f92df19a472e")
 		(property "Reference" "#PWR07702"
-			(at 44.45 129.54 0)
+			(at 46.99 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8105,7 +8105,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.45 129.54 0)
+			(at 46.99 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8116,7 +8116,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 123.19 0)
+			(at 46.99 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8127,7 +8127,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 123.19 0)
+			(at 46.99 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8138,7 +8138,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 44.45 123.19 0)
+			(at 46.99 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8162,7 +8162,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 242.57 149.86 0)
+		(at 245.11 118.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8172,7 +8172,7 @@
 		(dnp no)
 		(uuid "eb43e08c-f10c-4e48-bf0f-8f51efb787b8")
 		(property "Reference" "R221"
-			(at 235.712 149.098 0)
+			(at 238.252 117.348 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8183,7 +8183,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 235.712 151.638 0)
+			(at 238.252 119.888 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8194,7 +8194,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 242.57 149.86 0)
+			(at 245.11 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8205,7 +8205,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 149.86 0)
+			(at 245.11 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8216,7 +8216,7 @@
 			)
 		)
 		(property "Description" "Emitters off while the MCU is in reset"
-			(at 242.57 149.86 0)
+			(at 245.11 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8227,7 +8227,7 @@
 			)
 		)
 		(property "LCSC" "C2907088"
-			(at 242.57 149.86 0)
+			(at 245.11 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8254,7 +8254,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 142.24 96.52 0)
+		(at 144.78 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8264,7 +8264,7 @@
 		(dnp no)
 		(uuid "ec988ce2-2ec0-475e-9631-846896a3049c")
 		(property "Reference" "R53"
-			(at 140.335 99.695 90)
+			(at 142.875 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8275,7 +8275,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 144.145 98.425 90)
+			(at 146.685 66.675 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8286,7 +8286,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 142.24 96.52 0)
+			(at 144.78 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8297,7 +8297,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 96.52 0)
+			(at 144.78 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8308,7 +8308,7 @@
 			)
 		)
 		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 142.24 96.52 0)
+			(at 144.78 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8319,7 +8319,7 @@
 			)
 		)
 		(property "LCSC" "C2907042"
-			(at 142.24 96.52 0)
+			(at 144.78 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8346,7 +8346,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 190.5 102.87 0)
+		(at 193.04 71.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8356,7 +8356,7 @@
 		(dnp no)
 		(uuid "f2d0c804-fef0-4510-a6e1-6344364930ed")
 		(property "Reference" "R197"
-			(at 183.896 101.854 0)
+			(at 186.436 70.104 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8367,7 +8367,7 @@
 			)
 		)
 		(property "Value" "180"
-			(at 183.896 104.394 0)
+			(at 186.436 72.644 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8378,7 +8378,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 190.5 102.87 0)
+			(at 193.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8389,7 +8389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 102.87 0)
+			(at 193.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8400,7 +8400,7 @@
 			)
 		)
 		(property "Description" "Right bumper LED (BUMP-R1): (5 V - 1.2 V) / 180 = ~21 mA"
-			(at 190.5 102.87 0)
+			(at 193.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8411,7 +8411,7 @@
 			)
 		)
 		(property "LCSC" "C22828"
-			(at 190.5 102.87 0)
+			(at 193.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8438,7 +8438,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 59.69 113.03 0)
+		(at 62.23 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8448,7 +8448,7 @@
 		(dnp no)
 		(uuid "f37456dd-d35d-4145-87ef-39870cb3bf37")
 		(property "Reference" "#PWR0906"
-			(at 59.69 116.84 0)
+			(at 62.23 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8459,7 +8459,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 59.69 107.95 0)
+			(at 62.23 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8469,7 +8469,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 113.03 0)
+			(at 62.23 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8480,7 +8480,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 113.03 0)
+			(at 62.23 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8491,7 +8491,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 59.69 113.03 0)
+			(at 62.23 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8515,7 +8515,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 44.45 151.13 0)
+		(at 46.99 119.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8525,7 +8525,7 @@
 		(dnp no)
 		(uuid "f3a922ea-54a6-4d7d-9c3d-acbeacfef8a2")
 		(property "Reference" "#PWR07703"
-			(at 44.45 157.48 0)
+			(at 46.99 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8536,7 +8536,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.45 157.48 0)
+			(at 46.99 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8547,7 +8547,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 151.13 0)
+			(at 46.99 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8558,7 +8558,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 151.13 0)
+			(at 46.99 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8569,7 +8569,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 44.45 151.13 0)
+			(at 46.99 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8593,7 +8593,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 35.56 125.73 0)
+		(at 38.1 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8603,7 +8603,7 @@
 		(dnp no)
 		(uuid "f90f7bb9-194c-4523-8281-eb085cb967c2")
 		(property "Reference" "#PWR07714"
-			(at 35.56 132.08 0)
+			(at 38.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8614,7 +8614,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 132.08 0)
+			(at 38.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8625,7 +8625,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 125.73 0)
+			(at 38.1 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8636,7 +8636,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 125.73 0)
+			(at 38.1 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8647,7 +8647,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 125.73 0)
+			(at 38.1 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

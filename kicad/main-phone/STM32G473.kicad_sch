@@ -4715,7 +4715,7 @@
 		)
 		(uuid "7e37740c-9b46-4fe7-bea5-515dde47faca")
 	)
-	(text "R204: PA9 = UCPD DBCC1. High during reset\nturns on the dead-battery Rd on CC1 (PB6)."
+	(text "PA9 = ~{VMOT-14V4-EN} and UCPD DBCC1. R184 (10k, power sheet) holds it high in reset:\nmotors and LiDAR off, and the dead-battery Rd on CC1 (PB6) on."
 		(exclude_from_sim no)
 		(at 141.986 142.494 0)
 		(effects
@@ -4726,7 +4726,7 @@
 		)
 		(uuid "d81821d6-ed32-40c1-ab59-178d428fad6f")
 	)
-	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 not connected (PA10 drives the right bumper LED), 6 PE6, 7 not connected (PA8 is the battery sense), 8 PA9 (10k pull-up), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
+	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 not connected (PA10 drives the right bumper LED), 6 PE6, 7 not connected (PA8 is the battery sense), 8 PE10 (ADC capable), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
 		(exclude_from_sim no)
 		(at 148.59 129.54 0)
 		(effects
@@ -4736,12 +4736,6 @@
 			(justify left bottom)
 		)
 		(uuid "f5b81c75-7d3f-441f-b8ec-2ae2a6b0783d")
-	)
-	(junction
-		(at 165.1 151.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "073ab729-b7b3-4ba2-b8fd-58e80157d983")
 	)
 	(junction
 		(at 243.84 165.1)
@@ -4784,12 +4778,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "38d05936-7033-43f4-8a98-37d88100fc83")
-	)
-	(junction
-		(at 179.07 168.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3c2d677d-fcf9-47b2-b73c-c5bc2b473cf2")
 	)
 	(junction
 		(at 250.19 165.1)
@@ -5041,7 +5029,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 168.91) (xy 179.07 168.91)
+			(xy 177.8 168.91) (xy 194.31 168.91)
 		)
 		(stroke
 			(width 0)
@@ -5291,16 +5279,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 168.91) (xy 194.31 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b3664f8-b14e-493d-a883-ad0feb249015")
-	)
-	(wire
-		(pts
 			(xy 82.55 161.29) (xy 67.31 161.29)
 		)
 		(stroke
@@ -5308,16 +5286,6 @@
 			(type default)
 		)
 		(uuid "2f3de1bd-cc77-47a2-bb00-17897bcef9f8")
-	)
-	(wire
-		(pts
-			(xy 179.07 151.13) (xy 165.1 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fe2d7e0-4c21-4930-b6b1-b002d8c386d1")
 	)
 	(wire
 		(pts
@@ -6961,16 +6929,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 158.75) (xy 179.07 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f601cad6-3c47-4d5d-8775-f54f0baa791b")
-	)
-	(wire
-		(pts
 			(xy 288.29 104.14) (xy 288.29 111.76)
 		)
 		(stroke
@@ -7089,16 +7047,6 @@
 		)
 		(uuid "4214b3a1-4288-4e79-9f16-0447d53719ca")
 	)
-	(label "SPARE-PA9"
-		(at 194.31 168.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4cb8e78f-d592-429e-898e-a88105c77da1")
-	)
 	(label "STM32-RX"
 		(at 168.91 39.37 180)
 		(effects
@@ -7209,6 +7157,16 @@
 		)
 		(uuid "af3c05eb-5d45-40ce-8c46-55e191f3360b")
 	)
+	(label "SPARE-PE10"
+		(at 237.49 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bb22e9ea-1e22-4a82-982a-b114314d9c45")
+	)
 	(label "STM32-SWCLK"
 		(at 71.12 62.23 0)
 		(effects
@@ -7219,6 +7177,16 @@
 		)
 		(uuid "bbf39fd1-5436-45f9-adf9-21b20030109e")
 	)
+	(label "SPARE-PE10"
+		(at 194.31 168.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c181a33d-584a-40b9-9981-5e0780a074cf")
+	)
 	(label "SPARE-PE2"
 		(at 229.87 36.83 0)
 		(effects
@@ -7228,16 +7196,6 @@
 			(justify left bottom)
 		)
 		(uuid "c1962f0a-f926-4fd6-a3c0-84b503eab5f4")
-	)
-	(label "SPARE-PA9"
-		(at 71.12 49.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c412d801-5b62-43bd-a64c-622056a73d9c")
 	)
 	(label "SPARE-PE6"
 		(at 194.31 166.37 180)
@@ -7527,17 +7485,6 @@
 			(justify left)
 		)
 		(uuid "395763f9-424c-48f2-b41e-aab50ed6e476")
-	)
-	(hierarchical_label "~{VMOT-14V4-EN}"
-		(shape output)
-		(at 237.49 57.15 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3b647bd9-be62-44ed-afe5-ff9bae81f583")
 	)
 	(hierarchical_label "BUMP-R-Q+"
 		(shape input)
@@ -7978,6 +7925,17 @@
 			(justify left)
 		)
 		(uuid "e23c5dac-39c3-4ab5-8fb7-bf239bc31c17")
+	)
+	(hierarchical_label "~{VMOT-14V4-EN}"
+		(shape output)
+		(at 71.12 49.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e7954c05-d341-4d3b-806b-20d30750b6f8")
 	)
 	(hierarchical_label "CLIFF-RM-Q+"
 		(shape input)
@@ -22565,98 +22523,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
 					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 179.07 154.94 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ee9559d4-bc2b-4a3d-ac48-d1c97e3432e9")
-		(property "Reference" "R204"
-			(at 181.61 153.67 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 181.61 156.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 179.07 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 179.07 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "PA9 pull-up: keeps the UCPD dead-battery Rd on CC1 active during reset (PA9 = DBCC1); was the IMU SCL pull-up"
-			(at 179.07 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C98220"
-			(at 179.07 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c9128cc8-32d1-4933-8bc4-096d5c197fae")
-		)
-		(pin "2"
-			(uuid "7c58261a-a83b-459f-98fb-654f3b9665a1")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "R204")
 					(unit 1)
 				)
 			)

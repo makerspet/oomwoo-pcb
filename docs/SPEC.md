@@ -528,7 +528,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - dropped: CM4/CM5, SD card, M.2 + its buck, MIPI cameras, speaker amp (no buzzer; LEDs for debug), water pump, front illumination, the phone's dedicated 5 V buck, the board fan (the phone stays cool), the left side-proximity sensor (OOMWOO One has a right one only)
 - kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
 - the six mounting standoffs (MP1-MP6) moved from the removed M.2 sheet to the POWER sheet
-- spare STM32 pins (2026-10-28): PA8 (battery sense since 2026-11-02), PA9, PA10, PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
+- spare STM32 pins (2026-10-28): PA8 (battery sense since 2026-11-02), PA9, PA10 (right bumper LED since 2026-11-03), PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
   - the LiDAR rail enable joined ~VMOT-14V4-EN (PE10): the LiDAR is on whenever the motor rail is (PD9 freed)
   - IMU FSYNC and INT2 left the MCU (PD4, PD7 freed); FSYNC keeps a 100k pull-down (R211). The IMU is leadless: probe INT2 on its 10k pull-up R92 (test pad TP1 removed 2026-11-02) and FSYNC on R211. AP_AD0 is pulled low by R217 (10k), so the IMU answers at I2C address 0x68; probe AD0 on R217. Run a wire to a spare pin if INT2 or FSYNC is needed
   - one shared open-drain sensor interrupt (INT-SENSORS, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
@@ -543,7 +543,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-02). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 PA10, 6 PE6, 7 not connected (PA8 is the battery sense since 2026-11-02), 8 PA9 (10k pull-up), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
+- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-02). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 not connected (PA10 drives the right bumper LED since 2026-11-03), 6 PE6, 7 not connected (PA8 is the battery sense since 2026-11-02), 8 PA9 (10k pull-up), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
 - sensor rail switch (2026-11-01): one AO3401 (Q16) from VMCU-3V3 to VSENS-3V3. PB10 (~VSENS_3V3_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VMCU-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VMCU-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
@@ -570,7 +570,10 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 ### Bumpers (v1)
 
 - 2x ITR9606 slotted photo-interrupters on the main board (BUMP-R1, BUMP-L1). The Roomba harness (BUMP_CLIFF1) and its backup bumpers are gone since 2026-10-28.
-- ITR9606 emitters in series from VSENS-5V-USB through R197 (120 Ω, ~20 mA). Q32 low-side switches them (BUMP-LED-K) from BUMPER_LED_EN (PC3, high = on, R198 100k pull-down).
+- ITR9606 emitters, each on its own switch since 2026-11-03 (they were in series on Q32 with R197 at 120 Ω). High = on, and both are pulled low in reset:
+  - BUMP-R1: R197 (180 Ω, ~21 mA) from VSENS-5V-USB; Q36 (AO3400) switches BUMP-R-LED-K from BUMP_R_LED_EN (PA10, TIM1_CH3, R221 100k pull-down)
+  - BUMP-L1: R220 (180 Ω) from VSENS-5V-USB; Q32 switches BUMP-L-LED-K from BUMP_L_LED_EN (PC3, TIM1_CH4, R198 100k pull-down)
+  - why: firmware can PWM each emitter (~100-250 kHz, well above the detector's ~15 µs response) to bring each detector's clear-slot level into range, since IC(ON) varies 0.5-10 mA between parts. C178/C179 (47 nF) on BUMP-R/L-Q+ filter the PWM ripple (47 µs with the 1k pull-ups); bumper transitions take milliseconds
 - Detectors pull BUMP-L-Q+ (PA4, ADC2_IN17) / BUMP-R-Q+ (PA5, ADC2_IN13) low when light passes the slot. R48/R44 are 1k (47k until 2026-11-02) so firmware can sample them as analog and see how fast the flag opens or closes the slot: IC(ON) is 0.5-10 mA (IF 20 mA, VCE 5 V), and at 47k any part bottomed out at 0 V with ~70 µA, i.e. it acted as a switch. At 1k a 0.5 mA part still swings ~0.5 V and a 10 mA part saturates only once the slot is ~1/3 open; calibrate the clear-slot level per unit (LED on vs off through BUMPER_LED_EN)
 
 ### Rear docking IR and Hall sensors (v1)

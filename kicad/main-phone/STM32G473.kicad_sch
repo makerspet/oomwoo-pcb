@@ -4726,7 +4726,7 @@
 		)
 		(uuid "d81821d6-ed32-40c1-ab59-178d428fad6f")
 	)
-	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 PA10, 6 PE6, 7 not connected (PA8 is the battery sense), 8 PA9 (10k pull-up), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
+	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 not connected (PA10 drives the right bumper LED), 6 PE6, 7 not connected (PA8 is the battery sense), 8 PA9 (10k pull-up), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
 		(exclude_from_sim no)
 		(at 148.59 129.54 0)
 		(effects
@@ -4962,6 +4962,14 @@
 	(no_connect
 		(at 97.79 163.83)
 		(uuid "1aa19bbb-73f6-4eb0-81a0-6a7ce9ba75e2")
+	)
+	(no_connect
+		(at 165.1 168.91)
+		(uuid "26c55014-4fc1-4622-a61f-fdeb9179f9ec")
+	)
+	(no_connect
+		(at 165.1 166.37)
+		(uuid "2cbb74c5-be83-42a5-b75f-f63ebb9c3d15")
 	)
 	(no_connect
 		(at 45.72 168.91)
@@ -5460,16 +5468,6 @@
 			(type default)
 		)
 		(uuid "430e04b9-6a9d-45d3-8236-8b6bbd5df490")
-	)
-	(wire
-		(pts
-			(xy 165.1 166.37) (xy 148.59 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4553b608-dfff-49ba-ae84-422ab57b1d8e")
 	)
 	(wire
 		(pts
@@ -7131,17 +7129,6 @@
 		)
 		(uuid "5463312d-41a6-4ff1-848a-7571b0663b5d")
 	)
-	(hierarchical_label "BAT_SENSE"
-		(shape input)
-		(at 71.12 46.99 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1ec52db2-7112-4c5f-b664-d098da804c66")
-	)
 	(label "SPARE-PD4"
 		(at 168.91 80.01 180)
 		(effects
@@ -7222,16 +7209,6 @@
 		)
 		(uuid "af3c05eb-5d45-40ce-8c46-55e191f3360b")
 	)
-	(label "SPARE-PA10"
-		(at 148.59 166.37 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bb2742c7-5af2-4e54-a658-adc8de3a159f")
-	)
 	(label "STM32-SWCLK"
 		(at 71.12 62.23 0)
 		(effects
@@ -7241,16 +7218,6 @@
 			(justify left bottom)
 		)
 		(uuid "bbf39fd1-5436-45f9-adf9-21b20030109e")
-	)
-	(label "SPARE-PA10"
-		(at 71.12 52.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c1732f3a-3d7e-4c22-99c7-2ac0b692cb1a")
 	)
 	(label "SPARE-PE2"
 		(at 229.87 36.83 0)
@@ -7374,6 +7341,17 @@
 		)
 		(uuid "0679f953-a2b5-40d6-9de4-f8ef0f832b8b")
 	)
+	(hierarchical_label "BUMP_R_LED_EN"
+		(shape output)
+		(at 71.12 52.07 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "06a891ed-4ff2-4c45-8ba2-6eaa05041a61")
+	)
 	(hierarchical_label "MAIN-BRUSH-IN2"
 		(shape output)
 		(at 168.91 107.95 0)
@@ -7439,6 +7417,17 @@
 			(justify right)
 		)
 		(uuid "1e0b6b42-4a65-4753-a561-426ef07c9399")
+	)
+	(hierarchical_label "BAT_SENSE"
+		(shape input)
+		(at 71.12 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1ec52db2-7112-4c5f-b664-d098da804c66")
 	)
 	(hierarchical_label "HALL-BIN"
 		(shape input)
@@ -7517,7 +7506,7 @@
 		)
 		(uuid "3347e3da-20b9-4671-99cf-66ea0383e075")
 	)
-	(hierarchical_label "BUMPER_LED_EN"
+	(hierarchical_label "BUMP_L_LED_EN"
 		(shape output)
 		(at 168.91 34.29 0)
 		(effects
@@ -23270,9 +23259,5 @@
 				)
 			)
 		)
-	)
-	(no_connect
-		(at 165.1 168.91)
-		(uuid "26c55014-4fc1-4622-a61f-fdeb9179f9ec")
 	)
 )

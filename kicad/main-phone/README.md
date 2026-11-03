@@ -80,9 +80,10 @@ Changed 2026-11-02:
 
 Changed 2026-11-03:
 - bumper emitters split: BUMP-R1 on new Q36 (PA10, BUMP_R_LED_EN, R221 pull-down), BUMP-L1 stays on Q32 (PC3, BUMPER_LED_EN → BUMP_L_LED_EN); each LED has its own 180 Ω (R197, new R220), so firmware can PWM-dim each one
-- C178/C179 (47 nF) on BUMP-R/L-Q+ to filter the LED PWM
+- C178/C179 (47 nF) on BUMP-R/L to filter the LED PWM
 - J1 pin 5 (was PA10) not connected
 - PA9 and PE10 swapped: ~{VMOT-14V4-EN} on PA9 (also UCPD DBCC1), the J1 pin 8 spare on PE10 (no pull-up, ADC capable). One 10k pull-up (R184, was 100k) serves both; R204 and R182 removed
+- bumper circuit (BUMP-L1/R1, emitter switches, pull-ups R44/R48, C178/C179) on its own sheet (bumper_sensors), moved off CLIFF; nets BUMP-L-Q+/BUMP-R-Q+ renamed BUMP-L/BUMP-R
 
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 

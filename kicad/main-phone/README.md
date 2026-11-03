@@ -71,6 +71,13 @@ Changed 2026-11-02:
 - J1 pin 1 and R204 (PA9 pull-up) on VMCU-3V3, the MCU rail
 - STM32_DEBUG1: 1x6 (PZ254V-11-06P, C492405) instead of 1x5, so the TTL-234X-3V3 socket seats fully; pin 6 (RTS#) not connected
 
+Changed 2026-11-03:
+- J1: 2x6 (PZ254V-12-12P, C492423) instead of 2x7; the unused 3/4 pair is gone: 1 VMCU-3V3, 2 VSENS-5V-USB, 3/4 UART PC10/PC11, 5 PA10, 6 PE6, 7 PA8, 8 PA9, 9 PD4, 10 PE2, 11/12 GND
+- R120/R121 (1k button pull-ups to the sensor rail) removed: firmware uses the internal pull-ups on PD0/PD5. On VSENS-3V3 the buttons read as pressed while the sensor rail was off
+- TP1 removed: probe IMU INT2 on R92
+- I2C4 pull-ups R5/R6 on the top sheet; the small hierarchical sheets merged into the top sheet
+- renamed: VUS → VUSONIC-14V4, VL-INT → INT-SENSORS (not only the VL53 sensors), U12 → L4 (inductor), 5V1 → D46
+
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 
 Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).

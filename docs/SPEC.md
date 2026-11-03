@@ -189,7 +189,7 @@ Drive, brush and fan motors draw power directly from the 4S battery (not via a D
   </tr>
 
   <tr>
-    <td>Carpet sensor</td><td>14.4V (VUS boost rail)</td>
+    <td>Carpet sensor</td><td>14.4V (VUSONIC-14V4 boost rail)</td>
     <td>290KHz piezo ultrasonic, <a href="https://htwsensor.en.made-in-china.com/product/HfMYgjwoZxVh/China-300kHz-Carpet-Material-Recognition-Sensor-for-Robotic-Vacuum-Cleaner-Ultraosinc-Sensor.html">likely this one</a>,
       JST ZH 2-pin housing; <a href="https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/#carpet-sensor">sourcing notes</a>
       pin 1 white, 2 black (driven by AC, polarity doesn't matter?)
@@ -320,8 +320,8 @@ Net spec
 ## How to drive carpet sensor
 
 - 290KHz ultrasonic piezoelectric analog
-- 14.4 V DC stabilized (VUS, MT3608 boost from 5 V; not the 4S battery directly)
-  - DC voltage set by the MT3608 feedback divider: VUS = 0.6 V x (1 + R160/R159) = 0.6 x (1 + 232k/10k) ≈ 14.5 V
+- 14.4 V DC stabilized (VUSONIC-14V4, MT3608 boost from 5 V; not the 4S battery directly)
+  - DC voltage set by the MT3608 feedback divider: VUSONIC-14V4 = 0.6 V x (1 + R160/R159) = 0.6 x (1 + 232k/10k) ≈ 14.5 V
   - current consumption - calculate 300KHz driving 1300±20% pF per sensor spec
   - make it withstand shorts
 - connect sensor analog I/O to MCU ADC input
@@ -331,7 +331,7 @@ Net spec
 - (firmware) bias the MCU internal op-amp to Vref/2 using MCU internal DAC
 - (firmware) configure ADC pre-amp gain, PGA mode (op-amp bandwidth is 10MHz)
 - (firmware) configure op-amp to output signal to internal ADC channel
-- drive sensor analog I/O with one low-side N-FET (Q18, AO3400) and a 330 Ω 1206 pull-up (R185) from VUS, AC-coupled to the piezo through C18
+- drive sensor analog I/O with one low-side N-FET (Q18, AO3400) and a 330 Ω 1206 pull-up (R185) from VUSONIC-14V4, AC-coupled to the piezo through C18
   - the earlier P/N half-bridge was dropped: its high side turned off through a 100k pull-up, far too slow at 290 kHz, so both FETs would conduct every cycle (shoot-through)
   - one GPIO (LO) drives the gate through R60 (10 Ω); R186 (100k) pulls the gate low so the FET is off while the MCU is in reset or being flashed
   - the freed HI GPIO now enables the motor rail (~VMOT-14V4-EN)
@@ -530,8 +530,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - the six mounting standoffs (MP1-MP6) moved from the removed M.2 sheet to the POWER sheet
 - spare STM32 pins (2026-10-28): PA8, PA9, PA10, PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
   - the LiDAR rail enable joined ~VMOT-14V4-EN (PE10): the LiDAR is on whenever the motor rail is (PD9 freed)
-  - IMU FSYNC and INT2 left the MCU (PD4, PD7 freed); FSYNC keeps a 100k pull-down (R211). Since 2026-10-30 INT2 ends on test pad TP1 (the IMU is leadless, so a pad is the only way to reach the pin); probe or drive FSYNC on R211. AP_AD0 is pulled low by R217 (10k), so the IMU answers at I2C address 0x68; probe AD0 on R217. Run a wire to a spare pin if INT2 or FSYNC is needed
-  - one shared open-drain ToF interrupt (VL-INT, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
+  - IMU FSYNC and INT2 left the MCU (PD4, PD7 freed); FSYNC keeps a 100k pull-down (R211). The IMU is leadless: probe INT2 on its 10k pull-up R92 (test pad TP1 removed 2026-11-03) and FSYNC on R211. AP_AD0 is pulled low by R217 (10k), so the IMU answers at I2C address 0x68; probe AD0 on R217. Run a wire to a spare pin if INT2 or FSYNC is needed
+  - one shared open-drain sensor interrupt (INT-SENSORS, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
   - only the left VL53L7 LPn on the MCU; the right one is held up by R196 (PE8 freed). Addressing uses the left LPn plus the side sensor's XSHUT
   - the IMU moved from I2C2 to I2C4; its own pull-ups R18/R72 are not fitted (PA8, PA9 freed). PA9 keeps a 10k pull-up (R204): it is the UCPD dead-battery control for CC1
   - PWR_EN moved from PC10 to PD7, freeing the PC10/PC11 UART pair
@@ -543,7 +543,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x7 vertical, fitted (XFCN PZ254V-12-14P, C492424). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 not connected (I2C4 kept off the header, 2026-10-30: it runs at 1 MHz and is shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7 PA10, 8 PE6, 9 PA8, 10 PA9 (10k pull-up), 11 PD4, 12 PE2, 13/14 GND
+- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-03). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 PA10, 6 PE6, 7 PA8, 8 PA9 (10k pull-up), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
 - sensor rail switch (2026-11-01): one AO3401 (Q16) from VMCU-3V3 to VSENS-3V3. PB10 (~VSENS_3V3_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VMCU-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VMCU-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
@@ -604,7 +604,7 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - battery connector: Molex Micro-Fit 3.0 right-angle 43650-0412, 5.57 mm
 - barrel jack: DC-044A-20A, 7.2 mm
 - LIDAR2 (2x3) is through-hole pads only, not fitted
-- J1 spare I/O: vertical 2x7 0.1" header (PZ254V-12-14P, ~8.5 mm above the board), like STM32_DEBUG1
+- J1 spare I/O: vertical 2x6 0.1" header (PZ254V-12-12P, ~8.5 mm above the board), like STM32_DEBUG1
 - exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x6 0.1" (XFCN PZ254V-11-06P, C492405, ~8.5 mm above the board; 1x6 since 2026-11-02 so the cable socket seats fully) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
 - exception: the ITR9606 bumper sensors (~11 mm), set by the bumper mechanism
@@ -639,10 +639,10 @@ Power rails (current schematic):
 | VMCU-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | POWER-EN |
 | VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic | STM32 (~VSENS_3V3_EN, low = on) |
 | VMCU-BAT-3V3 | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
-| VSENS-5V-USB | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUS boost | STM32 (VSENS_5V_USB_EN) |
+| VSENS-5V-USB | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUSONIC-14V4 boost | STM32 (VSENS_5V_USB_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
 | USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
-| VUS ≈ 14.5 V | MT3608 boost | carpet sensor | with VSENS-5V-USB |
+| VUSONIC-14V4 (≈ 14.5 V) | MT3608 boost | carpet sensor | with VSENS-5V-USB |
 | VMOT-14V4 | VBAT-14V4 via Q1 AO4407C | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
 | VM-5V-LIDAR | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |
 | VM-5V-WATER-PUMP | VCC-5V-REG via Q8 AO3401 | water pump | WD_OK AND WATER-PUMPU-CTRL (low = on) |

@@ -492,8 +492,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:AO3400"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -778,6 +782,7 @@
 		(symbol "JLCImport:S2B-ZR-SM4A-TF_LF_SN"
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1597,9 +1602,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Carpet driver: one low-side AO3400 + 330R pull-up from VUS (14.4 V). The P-FET half-bridge was removed:\nits 100k gate pull-up could not turn it off at 290 kHz (shoot-through). R186 holds LO low in reset/flash.\nDrive LO in short bursts only: LO stuck high puts 0.63 W into R185."
+	(text "Carpet sensor driver: one low-side AO3400 + 330R pull-up from VUSONIC-14V4 (14.4 V). The P-FET half-bridge was removed:\nits 100k gate pull-up could not turn it off at 290 kHz (shoot-through). R186 holds LO low in reset/flash.\nDrive LO in short bursts only: LO stuck high puts 0.63 W into R185.\n\nC174 AC-couples LO to the Q18 gate: if LO sticks high, the gate decays through R186 (~10 ms)\nand Q18 turns off, so R185 is never stressed by firmware holding LO high."
 		(exclude_from_sim no)
-		(at 98.425 40.005 0)
+		(at 99.822 66.548 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1608,56 +1613,51 @@
 		)
 		(uuid "6c119fe5-c150-41dd-abf9-e5cafcd2ec25")
 	)
-	(text "C174 AC-couples LO to the Q18 gate: if LO sticks high, the gate decays through R186 (~10 ms)\nand Q18 turns off, so R185 is never stressed by firmware holding LO high."
-		(exclude_from_sim no)
-		(at 209.55 75.057 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 255 1)
-			)
-		)
-		(uuid "b1e49baa-e657-4a9c-918a-fbe9f877f5b0")
-	)
 	(junction
-		(at 92.075 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0a9bd6b7-a552-4f92-8738-afb500ebf470")
-	)
-	(junction
-		(at 127 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "15ed7019-4788-463d-b7e9-66f71514269f")
-	)
-	(junction
-		(at 56.515 154.305)
+		(at 187.96 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "18db3623-926b-4d9a-84e8-e2b8f9073751")
 	)
 	(junction
-		(at 76.835 77.47)
+		(at 92.71 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4bbe0f5e-b440-4f5e-b377-4a7018670a0e")
+	)
+	(junction
+		(at 77.47 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "86ded25b-1683-475e-bcf1-64fbc6e08544")
 	)
 	(junction
-		(at 127 82.55)
+		(at 127 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9ef921dc-752a-46b5-998f-77497b15fdf1")
+		(uuid "97a73077-a578-46bf-acb8-3027003a7f6e")
 	)
 	(junction
-		(at 81.28 154.305)
+		(at 198.12 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b1c16670-ba9e-4b90-8a60-d80f80563b76")
 	)
+	(junction
+		(at 187.96 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dd0b7e6e-0f24-462e-ae6a-a64b0cb92ad6")
+	)
+	(junction
+		(at 118.11 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eec8819a-6ddc-49a3-80f2-706090586c37")
+	)
 	(wire
 		(pts
-			(xy 56.515 127) (xy 56.515 136.525)
+			(xy 187.96 95.25) (xy 187.96 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1667,7 +1667,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 154.305) (xy 87.63 154.305)
+			(xy 198.12 113.03) (xy 210.82 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1677,7 +1677,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.075 71.12) (xy 107.315 71.12)
+			(xy 92.71 99.06) (xy 107.95 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1687,7 +1687,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 127) (xy 56.515 127)
+			(xy 198.12 95.25) (xy 187.96 95.25)
 		)
 		(stroke
 			(width 0)
@@ -1697,7 +1697,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 171.45) (xy 81.28 185.42)
+			(xy 198.12 125.73) (xy 198.12 129.54)
 		)
 		(stroke
 			(width 0)
@@ -1707,7 +1707,7 @@
 	)
 	(wire
 		(pts
-			(xy 112.395 71.12) (xy 127 71.12)
+			(xy 113.03 99.06) (xy 118.11 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1717,7 +1717,17 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 144.145) (xy 81.28 154.305)
+			(xy 118.11 113.03) (xy 173.99 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28d1d2d1-bbdd-4c0f-a14f-41de64b597e0")
+	)
+	(wire
+		(pts
+			(xy 198.12 107.95) (xy 198.12 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1727,7 +1737,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.075 29.845) (xy 92.075 43.18)
+			(xy 92.71 83.82) (xy 92.71 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1737,7 +1747,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.835 77.47) (xy 86.995 77.47)
+			(xy 77.47 105.41) (xy 87.63 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1747,7 +1757,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.075 71.12) (xy 92.075 72.39)
+			(xy 92.71 99.06) (xy 92.71 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1757,7 +1767,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.075 50.8) (xy 92.075 71.12)
+			(xy 92.71 96.52) (xy 92.71 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1767,7 +1777,7 @@
 	)
 	(wire
 		(pts
-			(xy 56.515 144.145) (xy 56.515 154.305)
+			(xy 187.96 107.95) (xy 187.96 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1777,7 +1787,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 82.55) (xy 144.78 82.55)
+			(xy 127 105.41) (xy 137.16 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1787,27 +1797,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 82.55) (xy 127 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7269546b-b2b7-4346-bca7-3cbe74cc80b5")
-	)
-	(wire
-		(pts
-			(xy 144.78 73.66) (xy 140.97 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77e2dc6c-8107-4efe-ac20-d5d41dfdaeb7")
-	)
-	(wire
-		(pts
-			(xy 56.515 170.18) (xy 56.515 185.42)
+			(xy 187.96 124.46) (xy 187.96 129.54)
 		)
 		(stroke
 			(width 0)
@@ -1817,7 +1807,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 73.66) (xy 127 82.55)
+			(xy 127 101.6) (xy 127 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1827,7 +1817,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 154.305) (xy 81.28 163.83)
+			(xy 198.12 113.03) (xy 198.12 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1837,7 +1827,7 @@
 	)
 	(wire
 		(pts
-			(xy 56.515 154.305) (xy 56.515 162.56)
+			(xy 187.96 113.03) (xy 187.96 116.84)
 		)
 		(stroke
 			(width 0)
@@ -1847,7 +1837,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 154.305) (xy 56.515 154.305)
+			(xy 179.07 113.03) (xy 187.96 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1857,17 +1847,17 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 73.66) (xy 127 73.66)
+			(xy 118.11 99.06) (xy 127 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a01bd330-8f8d-4d1f-99ce-038a1beb584c")
+		(uuid "9f76743c-bead-453b-a9e9-a715a1ff954b")
 	)
 	(wire
 		(pts
-			(xy 92.075 82.55) (xy 92.075 85.725)
+			(xy 92.71 110.49) (xy 92.71 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1877,17 +1867,17 @@
 	)
 	(wire
 		(pts
-			(xy 127 60.325) (xy 127 71.12)
+			(xy 77.47 114.3) (xy 77.47 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "beb9d068-f27c-4529-866f-8bb9f410d24c")
+		(uuid "c5466155-ff8c-46a3-a409-ba0827d20437")
 	)
 	(wire
 		(pts
-			(xy 144.78 82.55) (xy 144.78 73.66)
+			(xy 137.16 105.41) (xy 137.16 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1897,7 +1887,17 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 127) (xy 81.28 136.525)
+			(xy 118.11 113.03) (xy 118.11 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8a3a071-4964-4ab8-adbe-267c244da07d")
+	)
+	(wire
+		(pts
+			(xy 198.12 95.25) (xy 198.12 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1907,17 +1907,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 71.12) (xy 130.81 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0fdaded-faf5-431c-a1fb-a51b3e7e1095")
-	)
-	(wire
-		(pts
-			(xy 56.515 154.305) (xy 81.28 154.305)
+			(xy 187.96 113.03) (xy 198.12 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1927,7 +1917,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.785 77.47) (xy 61.595 77.47)
+			(xy 58.42 105.41) (xy 62.23 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1935,28 +1925,8 @@
 		)
 		(uuid "e6f6bd84-448d-4628-85d9-683f070eff2c")
 	)
-	(wire
-		(pts
-			(xy 36.83 154.305) (xy 43.18 154.305)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed45ef4b-ef6e-409b-b8e9-f6b475229c10")
-	)
 	(label "ECHO"
-		(at 127 60.325 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a8924a03-5a1e-4c8c-b098-c6ab5cada36c")
-	)
-	(label "ECHO"
-		(at 36.83 154.305 180)
+		(at 167.64 113.03 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1967,7 +1937,7 @@
 	)
 	(hierarchical_label "ECHO_ADC"
 		(shape output)
-		(at 87.63 154.305 0)
+		(at 210.82 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1978,7 +1948,7 @@
 	)
 	(hierarchical_label "LO"
 		(shape input)
-		(at 57.785 77.47 180)
+		(at 58.42 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1990,7 +1960,7 @@
 	(symbol
 		(lib_name "R_US_2")
 		(lib_id "Device:R_US")
-		(at 65.405 77.47 270)
+		(at 66.04 105.41 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2000,7 +1970,7 @@
 		(dnp no)
 		(uuid "12a1e1f1-9eb6-4aaa-a8a5-32df0f812eb3")
 		(property "Reference" "R60"
-			(at 65.405 80.01 90)
+			(at 66.04 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2010,7 +1980,7 @@
 			)
 		)
 		(property "Value" "10"
-			(at 64.77 74.93 90)
+			(at 65.405 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2020,7 +1990,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 65.151 78.486 90)
+			(at 65.786 106.426 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2031,7 +2001,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 65.405 77.47 0)
+			(at 66.04 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2042,7 +2012,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 65.405 77.47 0)
+			(at 66.04 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2053,7 +2023,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2064,7 +2034,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2075,7 +2045,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2086,7 +2056,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2097,7 +2067,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2108,7 +2078,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2119,7 +2089,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2130,7 +2100,7 @@
 			)
 		)
 		(property "LCSC" "C2907091"
-			(at 65.405 77.47 90)
+			(at 66.04 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2157,7 +2127,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:S2B-ZR-SM4A-TF_LF_SN")
-		(at 133.35 73.66 0)
+		(at 129.54 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2168,7 +2138,7 @@
 		(fields_autoplaced yes)
 		(uuid "197a6bf8-a648-4a1a-aad9-03acd3afc1a3")
 		(property "Reference" "US1"
-			(at 135.89 64.135 0)
+			(at 132.08 92.075 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2178,7 +2148,7 @@
 			)
 		)
 		(property "Value" "S2B-ZR-SM4A-TF_LF_SN"
-			(at 135.89 66.675 0)
+			(at 132.08 94.615 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2188,7 +2158,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:S2B-ZR-SM4A-TF_LF_SN"
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2199,7 +2169,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_JST-S2B-ZR-SM4A-TF-LF-SN_C265329.pdf"
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2210,7 +2180,7 @@
 			)
 		)
 		(property "Description" "-25℃~+85℃ 1 1.5mm 1A 1x2P 2 2P 3.7mm 50V 6.5mm 6mm Auxiliary Solder Pin Brass PA6T Surface Mount, Right Angle Tin UL94V-0 White ZH SMD,P=1.5mm,卧贴 Wire To Board Connector ROHS"
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2221,7 +2191,7 @@
 			)
 		)
 		(property "LCSC" "C265329"
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2232,7 +2202,7 @@
 			)
 		)
 		(property "Manufacturer" "JST"
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2243,7 +2213,7 @@
 			)
 		)
 		(property "Manufacturer Part" "S2B-ZR-SM4A-TF(LF)(SN)"
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2254,7 +2224,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2265,7 +2235,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2276,7 +2246,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2287,7 +2257,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2298,7 +2268,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2309,7 +2279,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2320,7 +2290,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 133.35 73.66 0)
+			(at 129.54 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2350,7 +2320,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 56.515 166.37 0)
+		(at 187.96 120.65 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2361,7 +2331,7 @@
 		(fields_autoplaced yes)
 		(uuid "202a4a65-3e0e-4356-b4e2-99adcd1fa6f5")
 		(property "Reference" "R63"
-			(at 58.547 165.0999 0)
+			(at 189.992 119.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2372,7 +2342,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 58.547 167.6399 0)
+			(at 189.992 121.9199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2383,7 +2353,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 57.531 166.624 90)
+			(at 188.976 120.904 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2394,7 +2364,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2405,7 +2375,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2416,7 +2386,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2427,7 +2397,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2438,7 +2408,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2449,7 +2419,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2460,7 +2430,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2471,7 +2441,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2482,7 +2452,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2493,7 +2463,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2504,7 +2474,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2515,7 +2485,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2526,7 +2496,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2537,7 +2507,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2548,7 +2518,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2559,7 +2529,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2570,7 +2540,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2581,7 +2551,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2592,7 +2562,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2603,7 +2573,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2614,7 +2584,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2625,7 +2595,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2636,7 +2606,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2647,7 +2617,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2658,7 +2628,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2669,7 +2639,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2680,7 +2650,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2691,7 +2661,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2702,7 +2672,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2713,7 +2683,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2724,7 +2694,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2735,7 +2705,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2746,7 +2716,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2757,7 +2727,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2768,7 +2738,7 @@
 			)
 		)
 		(property "LCSC" "C2907088"
-			(at 56.515 166.37 0)
+			(at 187.96 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2795,7 +2765,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 127 90.17 0)
+		(at 127 105.41 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -2806,7 +2776,7 @@
 		(dnp no)
 		(uuid "245c6f51-3119-43ad-9c4b-c9a3fbe48858")
 		(property "Reference" "#PWR0675"
-			(at 127 90.17 0)
+			(at 127 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2817,7 +2787,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 127 96.52 0)
+			(at 127 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2828,7 +2798,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 90.17 0)
+			(at 127 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2838,7 +2808,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 90.17 0)
+			(at 127 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2848,7 +2818,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 90.17 0)
+			(at 127 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2871,7 +2841,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 81.28 185.42 0)
+		(at 198.12 129.54 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -2882,7 +2852,7 @@
 		(dnp no)
 		(uuid "2708f512-6945-421f-ba24-7f17e8d9f19e")
 		(property "Reference" "#PWR0684"
-			(at 81.28 185.42 0)
+			(at 198.12 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2893,7 +2863,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 81.28 191.77 0)
+			(at 198.12 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2904,7 +2874,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 81.28 185.42 0)
+			(at 198.12 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2914,7 +2884,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 185.42 0)
+			(at 198.12 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2924,7 +2894,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 81.28 185.42 0)
+			(at 198.12 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2947,7 +2917,7 @@
 	)
 	(symbol
 		(lib_id "DesignLibrary:POWER_2_DIODE-1_DesignLibrary.SchLib")
-		(at 78.74 144.145 180)
+		(at 195.58 107.95 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2957,7 +2927,7 @@
 		(dnp no)
 		(uuid "2c2d4244-c12a-4883-8d0e-2bf3b5d03bcb")
 		(property "Reference" "D27"
-			(at 88.265 138.43 0)
+			(at 205.105 102.235 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2968,7 +2938,7 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 93.345 142.24 0)
+			(at 210.185 106.045 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2979,7 +2949,7 @@
 			)
 		)
 		(property "Footprint" "oomwoo_altium:SOD123"
-			(at 78.74 144.145 0)
+			(at 195.58 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2990,7 +2960,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 144.145 0)
+			(at 195.58 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3001,7 +2971,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 78.74 144.145 0)
+			(at 195.58 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3012,7 +2982,7 @@
 			)
 		)
 		(property "MANUFACTURINGPARTNUMBER" "*"
-			(at 84.074 136.017 90)
+			(at 200.914 99.822 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3024,7 +2994,7 @@
 			)
 		)
 		(property "Manufacturer" "*"
-			(at 84.074 136.017 90)
+			(at 200.914 99.822 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3036,7 +3006,7 @@
 			)
 		)
 		(property "SUPPLIERPARTNUMBER" "*"
-			(at 84.074 136.017 90)
+			(at 200.914 99.822 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3048,7 +3018,7 @@
 			)
 		)
 		(property "SUPPLIER" "*"
-			(at 84.074 136.017 90)
+			(at 200.914 99.822 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3060,7 +3030,7 @@
 			)
 		)
 		(property "VOLTAGERATE" "*"
-			(at 84.074 136.017 90)
+			(at 200.914 99.822 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3072,7 +3042,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3083,7 +3053,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3094,7 +3064,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3105,7 +3075,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3116,7 +3086,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3127,7 +3097,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3138,7 +3108,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3149,7 +3119,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3160,7 +3130,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3171,7 +3141,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3182,7 +3152,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3193,7 +3163,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3204,7 +3174,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3215,7 +3185,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3226,7 +3196,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3237,7 +3207,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3248,7 +3218,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3259,7 +3229,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3270,7 +3240,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3281,7 +3251,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3292,7 +3262,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3303,7 +3273,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3314,7 +3284,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3325,7 +3295,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3336,7 +3306,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3347,7 +3317,7 @@
 			)
 		)
 		(property "LCSC" "C917030"
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3358,7 +3328,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3369,7 +3339,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3380,7 +3350,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3391,7 +3361,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3402,7 +3372,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3413,7 +3383,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3424,7 +3394,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 78.74 144.145 90)
+			(at 195.58 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3451,7 +3421,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 56.515 140.335 0)
+		(at 187.96 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3462,7 +3432,7 @@
 		(fields_autoplaced yes)
 		(uuid "48d9f9ad-e1b4-4b98-9a59-f249f45da757")
 		(property "Reference" "R56"
-			(at 58.547 139.0649 0)
+			(at 189.992 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3473,7 +3443,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 58.547 141.6049 0)
+			(at 189.992 105.4099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3484,7 +3454,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 57.531 140.589 90)
+			(at 188.976 104.394 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3495,7 +3465,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3506,7 +3476,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3517,7 +3487,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3528,7 +3498,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3539,7 +3509,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3550,7 +3520,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3561,7 +3531,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3572,7 +3542,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3583,7 +3553,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3594,7 +3564,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3605,7 +3575,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3616,7 +3586,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3627,7 +3597,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3638,7 +3608,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3649,7 +3619,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3660,7 +3630,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3671,7 +3641,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3682,7 +3652,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3693,7 +3663,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3704,7 +3674,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3715,7 +3685,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3726,7 +3696,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3737,7 +3707,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3748,7 +3718,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3759,7 +3729,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3770,7 +3740,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3781,7 +3751,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3792,7 +3762,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3803,7 +3773,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3814,7 +3784,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3825,7 +3795,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3836,7 +3806,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3847,7 +3817,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3858,7 +3828,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3869,7 +3839,7 @@
 			)
 		)
 		(property "LCSC" "C2907088"
-			(at 56.515 140.335 0)
+			(at 187.96 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3896,7 +3866,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 92.075 85.725 0)
+		(at 92.71 114.3 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3907,7 +3877,7 @@
 		(dnp no)
 		(uuid "4b7b73d3-eab1-415a-b504-a0c775090ca6")
 		(property "Reference" "#PWR0676"
-			(at 92.075 85.725 0)
+			(at 92.71 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3918,7 +3888,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.075 92.075 0)
+			(at 92.71 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3929,7 +3899,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.075 85.725 0)
+			(at 92.71 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3939,7 +3909,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.075 85.725 0)
+			(at 92.71 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3949,7 +3919,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 92.075 85.725 0)
+			(at 92.71 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3972,7 +3942,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 92.075 46.99 0)
+		(at 92.71 92.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3982,7 +3952,7 @@
 		(dnp no)
 		(uuid "5a72f0f6-5052-4a05-8fb4-c2dd8fdcd71c")
 		(property "Reference" "R185"
-			(at 93.98 45.72 0)
+			(at 94.615 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3993,7 +3963,7 @@
 			)
 		)
 		(property "Value" "330"
-			(at 93.98 48.26 0)
+			(at 94.615 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4004,7 +3974,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 92.075 46.99 0)
+			(at 92.71 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4015,7 +3985,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.075 46.99 0)
+			(at 92.71 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4026,7 +3996,7 @@
 			)
 		)
 		(property "Description" "330R 1% 0.25W 1206. Piezo pull-up: 0.63 W if LO is ever held high, so drive LO in short bursts only"
-			(at 92.075 46.99 0)
+			(at 92.71 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4037,7 +4007,7 @@
 			)
 		)
 		(property "LCSC" "C17930"
-			(at 92.075 46.99 0)
+			(at 92.71 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4064,7 +4034,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 92.075 29.845 0)
+		(at 92.71 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4074,7 +4044,7 @@
 		(dnp no)
 		(uuid "92274544-193c-4595-8df4-f356518e2e87")
 		(property "Reference" "#PWR0913"
-			(at 92.075 33.655 0)
+			(at 92.71 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4084,8 +4054,8 @@
 				)
 			)
 		)
-		(property "Value" "VUS"
-			(at 92.075 24.765 0)
+		(property "Value" "VUSONIC-14V4"
+			(at 92.71 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4095,7 +4065,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.075 29.845 0)
+			(at 92.71 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4106,7 +4076,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.075 29.845 0)
+			(at 92.71 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4117,7 +4087,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VUS\""
-			(at 92.075 29.845 0)
+			(at 92.71 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4141,7 +4111,7 @@
 	)
 	(symbol
 		(lib_id "DesignLibrary:POWER_2_DIODE-1_DesignLibrary.SchLib")
-		(at 78.74 171.45 180)
+		(at 195.58 125.73 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4151,7 +4121,7 @@
 		(dnp no)
 		(uuid "b2ab3113-3122-4eb7-912c-0c0d143ab17f")
 		(property "Reference" "D28"
-			(at 88.265 165.735 0)
+			(at 205.105 120.015 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4162,7 +4132,7 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 93.345 169.545 0)
+			(at 210.185 123.825 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4173,7 +4143,7 @@
 			)
 		)
 		(property "Footprint" "oomwoo_altium:SOD123"
-			(at 78.74 171.45 0)
+			(at 195.58 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4184,7 +4154,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 171.45 0)
+			(at 195.58 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4195,7 +4165,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 78.74 171.45 0)
+			(at 195.58 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4206,7 +4176,7 @@
 			)
 		)
 		(property "MANUFACTURINGPARTNUMBER" "*"
-			(at 84.074 163.322 90)
+			(at 200.914 117.602 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4218,7 +4188,7 @@
 			)
 		)
 		(property "Manufacturer" "*"
-			(at 84.074 163.322 90)
+			(at 200.914 117.602 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4230,7 +4200,7 @@
 			)
 		)
 		(property "SUPPLIERPARTNUMBER" "*"
-			(at 84.074 163.322 90)
+			(at 200.914 117.602 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4242,7 +4212,7 @@
 			)
 		)
 		(property "SUPPLIER" "*"
-			(at 84.074 163.322 90)
+			(at 200.914 117.602 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4254,7 +4224,7 @@
 			)
 		)
 		(property "VOLTAGERATE" "*"
-			(at 84.074 163.322 90)
+			(at 200.914 117.602 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4266,7 +4236,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4277,7 +4247,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4288,7 +4258,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4299,7 +4269,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4310,7 +4280,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4321,7 +4291,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4332,7 +4302,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4343,7 +4313,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4354,7 +4324,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4365,7 +4335,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4376,7 +4346,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4387,7 +4357,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4398,7 +4368,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4409,7 +4379,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4420,7 +4390,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4431,7 +4401,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4442,7 +4412,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4453,7 +4423,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4464,7 +4434,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4475,7 +4445,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4486,7 +4456,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4497,7 +4467,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4508,7 +4478,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4519,7 +4489,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4530,7 +4500,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4541,7 +4511,7 @@
 			)
 		)
 		(property "LCSC" "C917030"
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4552,7 +4522,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4563,7 +4533,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4574,7 +4544,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4585,7 +4555,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4596,7 +4566,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4607,7 +4577,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4618,7 +4588,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 78.74 171.45 90)
+			(at 195.58 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4645,7 +4615,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 56.515 185.42 0)
+		(at 187.96 129.54 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -4656,7 +4626,7 @@
 		(dnp no)
 		(uuid "b8ce6709-b66a-48b2-be22-3429c929f2dc")
 		(property "Reference" "#PWR0677"
-			(at 56.515 185.42 0)
+			(at 187.96 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4667,7 +4637,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 56.515 191.77 0)
+			(at 187.96 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4678,7 +4648,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 56.515 185.42 0)
+			(at 187.96 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4688,7 +4658,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 56.515 185.42 0)
+			(at 187.96 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4698,7 +4668,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 56.515 185.42 0)
+			(at 187.96 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4721,7 +4691,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 76.835 85.09 0)
+		(at 77.47 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4731,7 +4701,7 @@
 		(dnp no)
 		(uuid "c4343214-c159-487b-9b15-fbd915f83d08")
 		(property "Reference" "#PWR07004"
-			(at 76.835 91.44 0)
+			(at 77.47 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4742,7 +4712,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 76.835 91.44 0)
+			(at 77.47 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4753,7 +4723,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.835 85.09 0)
+			(at 77.47 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4764,7 +4734,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.835 85.09 0)
+			(at 77.47 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4775,7 +4745,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.835 85.09 0)
+			(at 77.47 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4799,7 +4769,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 45.72 154.305 270)
+		(at 176.53 113.03 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4810,7 +4780,7 @@
 		(fields_autoplaced yes)
 		(uuid "e7556bf2-33b4-44bf-97b7-6e9455a1c8f6")
 		(property "Reference" "C21"
-			(at 45.7136 147.955 90)
+			(at 176.5236 106.68 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4820,7 +4790,7 @@
 			)
 		)
 		(property "Value" "100nF/50V"
-			(at 45.7136 150.495 90)
+			(at 176.5236 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4830,7 +4800,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4841,7 +4811,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4852,7 +4822,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4863,7 +4833,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4874,7 +4844,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4885,7 +4855,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4896,7 +4866,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4907,7 +4877,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4918,7 +4888,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4929,7 +4899,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4940,7 +4910,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4951,7 +4921,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4962,7 +4932,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4973,7 +4943,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4984,7 +4954,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4995,7 +4965,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5006,7 +4976,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5017,7 +4987,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5028,7 +4998,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5039,7 +5009,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5050,7 +5020,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5061,7 +5031,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5072,7 +5042,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5083,7 +5053,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5094,7 +5064,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5105,7 +5075,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5116,7 +5086,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5127,7 +5097,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5138,7 +5108,7 @@
 			)
 		)
 		(property "LCSC" "C1591"
-			(at 45.72 154.305 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5149,7 +5119,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 45.72 154.305 90)
+			(at 176.53 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5160,7 +5130,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 45.72 154.305 90)
+			(at 176.53 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5171,7 +5141,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 45.72 154.305 90)
+			(at 176.53 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5182,7 +5152,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 45.72 154.305 90)
+			(at 176.53 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5193,7 +5163,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 45.72 154.305 90)
+			(at 176.53 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5204,7 +5174,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 45.72 154.305 90)
+			(at 176.53 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5215,7 +5185,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 45.72 154.305 90)
+			(at 176.53 113.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5242,7 +5212,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 76.835 81.28 0)
+		(at 77.47 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5252,7 +5222,7 @@
 		(dnp no)
 		(uuid "eb14d6ce-56b3-48e4-81b2-62fe79fa77f5")
 		(property "Reference" "R186"
-			(at 78.74 80.645 0)
+			(at 79.375 108.585 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5263,7 +5233,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 78.74 83.185 0)
+			(at 79.375 111.125 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5274,7 +5244,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 76.835 81.28 0)
+			(at 77.47 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5285,7 +5255,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.835 81.28 0)
+			(at 77.47 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5296,7 +5266,7 @@
 			)
 		)
 		(property "Description" "LO pull-down: Q18 stays off while the MCU is in reset or being flashed"
-			(at 76.835 81.28 0)
+			(at 77.47 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5307,7 +5277,7 @@
 			)
 		)
 		(property "LCSC" "C2907088"
-			(at 76.835 81.28 0)
+			(at 77.47 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5334,7 +5304,7 @@
 	)
 	(symbol
 		(lib_id "Library:C_0603")
-		(at 73.025 77.47 90)
+		(at 73.66 105.41 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5344,7 +5314,7 @@
 		(dnp no)
 		(uuid "f19e40b0-6256-4b03-9a67-e3a164c36d5f")
 		(property "Reference" "C174"
-			(at 76.2 72.39 90)
+			(at 76.835 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5355,7 +5325,7 @@
 			)
 		)
 		(property "Value" "100nF/50V"
-			(at 76.2 74.295 90)
+			(at 76.835 102.235 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5366,7 +5336,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 73.025 77.47 0)
+			(at 73.66 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5377,7 +5347,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.025 77.47 0)
+			(at 73.66 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5388,7 +5358,7 @@
 			)
 		)
 		(property "Description" "AC coupling: Q18 cannot stay on if LO is stuck high"
-			(at 73.025 77.47 0)
+			(at 73.66 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5399,7 +5369,7 @@
 			)
 		)
 		(property "LCSC" "C1591"
-			(at 73.025 77.47 0)
+			(at 73.66 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5426,7 +5396,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 56.515 127 0)
+		(at 187.96 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5436,7 +5406,7 @@
 		(dnp no)
 		(uuid "f4459f3d-f5b5-41f3-afc0-fcf268c87f02")
 		(property "Reference" "#PWR0912"
-			(at 56.515 130.81 0)
+			(at 187.96 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5447,7 +5417,7 @@
 			)
 		)
 		(property "Value" "VSENS-3V3"
-			(at 56.515 121.92 0)
+			(at 187.96 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5457,7 +5427,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 56.515 127 0)
+			(at 187.96 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5468,7 +5438,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 56.515 127 0)
+			(at 187.96 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5479,7 +5449,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
-			(at 56.515 127 0)
+			(at 187.96 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5503,7 +5473,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 109.855 71.12 90)
+		(at 110.49 99.06 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5514,7 +5484,7 @@
 		(fields_autoplaced yes)
 		(uuid "f7c647c0-4d3a-4c6d-a014-211877f311ee")
 		(property "Reference" "C18"
-			(at 109.8613 64.77 90)
+			(at 110.4963 92.71 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5524,7 +5494,7 @@
 			)
 		)
 		(property "Value" "100nF/50V"
-			(at 109.8613 67.31 90)
+			(at 110.4963 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5534,7 +5504,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5545,7 +5515,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5556,7 +5526,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5567,7 +5537,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5578,7 +5548,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5589,7 +5559,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5600,7 +5570,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5611,7 +5581,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5622,7 +5592,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5633,7 +5603,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5644,7 +5614,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5655,7 +5625,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5666,7 +5636,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5677,7 +5647,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5688,7 +5658,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5699,7 +5669,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5710,7 +5680,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5721,7 +5691,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5732,7 +5702,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5743,7 +5713,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5754,7 +5724,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5765,7 +5735,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5776,7 +5746,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5787,7 +5757,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5798,7 +5768,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5809,7 +5779,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5820,7 +5790,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5831,7 +5801,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5842,7 +5812,7 @@
 			)
 		)
 		(property "LCSC" "C1591"
-			(at 109.855 71.12 0)
+			(at 110.49 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5853,7 +5823,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 109.855 71.12 90)
+			(at 110.49 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5864,7 +5834,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 109.855 71.12 90)
+			(at 110.49 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5875,7 +5845,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 109.855 71.12 90)
+			(at 110.49 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5886,7 +5856,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 109.855 71.12 90)
+			(at 110.49 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5897,7 +5867,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 109.855 71.12 90)
+			(at 110.49 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5908,7 +5878,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 109.855 71.12 90)
+			(at 110.49 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5919,7 +5889,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 109.855 71.12 90)
+			(at 110.49 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5946,7 +5916,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:AO3400")
-		(at 92.075 77.47 0)
+		(at 92.71 105.41 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5957,7 +5927,7 @@
 		(fields_autoplaced yes)
 		(uuid "f8c21f1f-1fa8-4cab-8867-e8f42b49d5d7")
 		(property "Reference" "Q18"
-			(at 96.52 76.1999 0)
+			(at 97.155 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5968,7 +5938,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 96.52 78.7399 0)
+			(at 97.155 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5979,7 +5949,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3400"
-			(at 92.075 77.47 0)
+			(at 92.71 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5990,7 +5960,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3400_C20628874.pdf"
-			(at 92.075 77.47 0)
+			(at 92.71 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6001,7 +5971,7 @@
 			)
 		)
 		(property "Description" "30V 5.8A N-channel MOSFET, 25mOhm@4.5V, Vgs +/-12V, Vth 0.65-1.5V, SOT-23"
-			(at 92.075 77.47 0)
+			(at 92.71 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6012,7 +5982,7 @@
 			)
 		)
 		(property "LCSC" "C20628874"
-			(at 92.075 77.47 0)
+			(at 92.71 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6023,7 +5993,7 @@
 			)
 		)
 		(property "Manufacturer" "FOSAN"
-			(at 92.075 77.47 0)
+			(at 92.71 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6034,7 +6004,7 @@
 			)
 		)
 		(property "Manufacturer Part" "AO3400"
-			(at 92.075 77.47 0)
+			(at 92.71 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -66,6 +66,11 @@ Changed 2026-11-01:
 - sensor rail switch: one AO3401 (Q16); Q17, R91, R96, R97 and D39 removed (D39 back-fed the "off" rail). R195 10k, R90 100k, C64 100 nF gate-drain (soft start), new C176 1 µF gate-source (stays off at power-on). Details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1)
 - C7/C101 (unfitted 150 pF on the fan PWM/FB lines) removed; R195 moved to the power sheet
 
+Changed 2026-11-02:
+- renamed: VCC-3V3 → VMCU-3V3, VCC-3V3-REG → VSENS-3V3, VCC-5V-REG → VSENS-5V-USB, 3.3VBAT → VMCU-BAT-3V3, ~{3.3V_EN} → ~{VSENS_3V3_EN}, 5V_EN → VSENS_5V_USB_EN, VL-L-INT → VL-INT (the two ToF INT lines now join inside the front sensors sheet)
+- J1 pin 1 and R204 (PA9 pull-up) on VMCU-3V3, the MCU rail
+- STM32_DEBUG1: 1x6 (PZ254V-11-06P, C492405) instead of 1x5, so the TTL-234X-3V3 socket seats fully; pin 6 (RTS#) not connected
+
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 
 Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).

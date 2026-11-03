@@ -1332,7 +1332,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Bumpers: 2x ITR9606 slotted photo-interrupters on the main board (~11 mm tall, set by the bumper\nmechanism). Emitters in series from VCC-5V-REG, switched by BUMPER_LED_EN (high = on, 100k pull-down).\nBUMP-x-Q+ reads low when light passes the slot (R44/R48 47k pull-ups)."
+	(text "Bumpers: 2x ITR9606 slotted photo-interrupters on the main board (~11 mm tall, set by the bumper\nmechanism). Emitters in series from VSENS-5V-USB, switched by BUMPER_LED_EN (high = on, 100k pull-down).\nBUMP-x-Q+ reads low when light passes the slot (R44/R48 47k pull-ups)."
 		(exclude_from_sim no)
 		(at 25.4 200.66 0)
 		(effects
@@ -1343,7 +1343,7 @@
 		)
 		(uuid "0c66b067-8b43-44df-824a-83eeaadf8f92")
 	)
-	(text "Cliff sensors: 6 boards (kicad/cliff-sensor), SH 4-pin vertical: 1 VCC-5V-REG (LED, 150R on the board),\n2 CLIFF-LED-K (Q35 sinks all 6 LEDs), 3 phototransistor collector (47k pull-up), 4 GND.\nModulate CLIFF_LED_EN and read each channel LED-on minus LED-off to cancel ambient light.\nADC: LF PA3, RF PA1, LR PA2, RR PA0, LM PD9, RM PE8 (LM/RM via global labels)."
+	(text "Cliff sensors: 6 boards (kicad/cliff-sensor), SH 4-pin vertical: 1 VSENS-5V-USB (LED, 150R on the board),\n2 CLIFF-LED-K (Q35 sinks all 6 LEDs), 3 phototransistor collector (47k pull-up), 4 GND.\nModulate CLIFF_LED_EN and read each channel LED-on minus LED-off to cancel ambient light.\nADC: LF PA3, RF PA1, LR PA2, RR PA0, LM PD9, RM PE8 (LM/RM via global labels)."
 		(exclude_from_sim no)
 		(at 25.4 182.88 0)
 		(effects
@@ -2778,7 +2778,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 110.49 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3585,7 +3585,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 59.69 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3845,7 +3845,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 110.49 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5244,7 +5244,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-3V3-REG"
+		(property "Value" "VSENS-3V3"
 			(at 129.54 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5589,7 +5589,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 190.5 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6231,7 +6231,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 110.49 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6308,7 +6308,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 59.69 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6725,7 +6725,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 59.69 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)

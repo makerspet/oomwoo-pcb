@@ -654,6 +654,7 @@
 		(symbol "JLCImport:ZX-SH1_0-7PWT"
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1284,13 +1285,13 @@
 		(uuid "c825f268-3ec9-4779-8e77-5dae53de34de")
 	)
 	(junction
-		(at 135.89 94.615)
+		(at 135.89 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "90d4f6fc-5025-4f2f-9a6a-a56270d4b060")
+		(uuid "19749fef-72a5-4041-93af-1cf33a301ba9")
 	)
 	(junction
-		(at 125.73 94.615)
+		(at 125.73 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dde9e640-98c5-4195-99c8-0c780516c3d6")
@@ -1337,7 +1338,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 66.04) (xy 144.78 66.04)
+			(xy 135.89 66.04) (xy 139.7 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1357,7 +1358,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 94.615) (xy 125.73 94.615)
+			(xy 135.89 93.98) (xy 125.73 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1407,7 +1408,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 66.04) (xy 144.78 94.615)
+			(xy 139.7 66.04) (xy 139.7 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1417,7 +1418,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 94.615) (xy 135.89 94.615)
+			(xy 139.7 93.98) (xy 135.89 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1467,7 +1468,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 65.405) (xy 125.73 72.39)
+			(xy 125.73 66.04) (xy 125.73 72.39)
 		)
 		(stroke
 			(width 0)
@@ -1577,7 +1578,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 92.71) (xy 135.89 94.615)
+			(xy 135.89 92.71) (xy 135.89 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1617,7 +1618,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 74.93) (xy 125.73 94.615)
+			(xy 125.73 74.93) (xy 125.73 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1637,7 +1638,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 94.615) (xy 125.73 98.425)
+			(xy 125.73 93.98) (xy 125.73 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1788,7 +1789,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-3V3-REG"
+		(property "Value" "VSENS-3V3"
 			(at 130.81 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2093,7 +2094,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 125.73 98.425 0)
+		(at 125.73 97.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2103,7 +2104,7 @@
 		(dnp no)
 		(uuid "3aa1a87d-d6f7-4366-8a6a-6b8473977399")
 		(property "Reference" "#PWR0115"
-			(at 125.73 98.425 0)
+			(at 125.73 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2114,7 +2115,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 125.73 104.775 0)
+			(at 125.73 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2125,7 +2126,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 125.73 98.425 0)
+			(at 125.73 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2135,7 +2136,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 98.425 0)
+			(at 125.73 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2145,7 +2146,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 125.73 98.425 0)
+			(at 125.73 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2188,7 +2189,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-3V3-REG"
+		(property "Value" "VSENS-3V3"
 			(at 127 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2995,7 +2996,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-3V3-REG"
+		(property "Value" "VSENS-3V3"
 			(at 114.3 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3157,7 +3158,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 125.73 65.405 0)
+		(at 125.73 66.04 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3167,7 +3168,7 @@
 		(dnp no)
 		(uuid "92084a91-dc8a-43c3-b813-ee41b0b71cf4")
 		(property "Reference" "#PWR0929"
-			(at 125.73 69.215 0)
+			(at 125.73 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3177,8 +3178,8 @@
 				)
 			)
 		)
-		(property "Value" "VCC-3V3-REG"
-			(at 125.73 60.325 0)
+		(property "Value" "VSENS-3V3"
+			(at 125.73 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3188,7 +3189,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 125.73 65.405 0)
+			(at 125.73 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3199,7 +3200,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 65.405 0)
+			(at 125.73 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3210,7 +3211,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
-			(at 125.73 65.405 0)
+			(at 125.73 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3254,7 +3255,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-3V3-REG"
+		(property "Value" "VSENS-3V3"
 			(at 72.39 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3331,7 +3332,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-3V3-REG"
+		(property "Value" "VSENS-3V3"
 			(at 72.39 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3552,10 +3553,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "de969be1-1dd7-41cf-b50c-65d4a3ed65cc")
 		(property "Reference" "SIDE-R1"
-			(at 139.065 78.7399 0)
+			(at 141.732 78.994 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3566,7 +3566,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-7PWT"
-			(at 139.065 81.2799 0)
+			(at 141.732 81.534 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

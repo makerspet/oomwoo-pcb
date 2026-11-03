@@ -5444,7 +5444,7 @@
 		)
 		(uuid "0b290522-3710-4bfe-bc5a-834d20efccec")
 	)
-	(text "USB-C (phone): phone is the USB host. CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default,\nPD power-role swap lets the robot charge the phone while it stays host. Q27 blocks the phone's\nVBUS from back-feeding the robot 5 V (the TMI6240 body diode conducts VOUT->VIN); PWR_EN turns\non TMI6240 and Q27 together. TMI6240 now runs from VCC-5V-REG (U25 buck removed)."
+	(text "USB-C (phone): phone is the USB host. CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default,\nPD power-role swap lets the robot charge the phone while it stays host. Q27 blocks the phone's\nVBUS from back-feeding the robot 5 V (the TMI6240 body diode conducts VOUT->VIN); PWR_EN turns\non TMI6240 and Q27 together. TMI6240 now runs from VSENS-5V-USB (U25 buck removed)."
 		(exclude_from_sim no)
 		(at 300.99 60.96 0)
 		(effects
@@ -19730,7 +19730,7 @@
 				)
 			)
 		)
-		(property "Value" "VCC-5V-REG"
+		(property "Value" "VSENS-5V-USB"
 			(at 187.96 89.535 0)
 			(show_name no)
 			(do_not_autoplace no)

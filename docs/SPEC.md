@@ -511,7 +511,7 @@ Put the Linux console to a UART (not USB). Then the single USB port can serve th
 Design (current schematic)
 - CM console: 0.1" 1x5 header (CM_CONSOLE1), TTL-234X-3V3 cable compatible. (A 3-pin JST-SH like the Pi 5 debug connector was considered and not used.)
   - The STM32 link uses a separate UART; the CM4 has UART2–5 available through device-tree overlays.
-- STM32 debug: 0.1" 1x5 UART header (STM32_DEBUG1) and a 1.27 mm 2x7 STDC14 header (JTAG1) for an STLINK-V3MINIE. STDC14 pin 3 (T_VCC) is a sense input; pin 11 (GNDDetect) is not connected.
+- STM32 debug: 0.1" 1x6 UART header (STM32_DEBUG1; TTL-234X-3V3 cable pinout: 1 GND, 4 cable TXD → STM32-RX, 5 cable RXD ← STM32-TX; 2 CTS#, 3 VCC, 6 RTS# not connected) and a 1.27 mm 2x7 STDC14 header (JTAG1) for an STLINK-V3MINIE. STDC14 pin 3 (T_VCC) is a sense input; pin 11 (GNDDetect) is not connected.
 - The CM reflashes the STM32 itself (STM32 UART bootloader via BOOT0/NRST from CM GPIOs, or SWD over CM GPIOs), so normal firmware updates need no probe.
 - One internal USB header, for example a 4-pin JST-GH, wired to the CM4's USB 2.0 pins.
   - Normal use: the mic board plugs in here. Or makers can plug in a USB hub, a USB stick, or a USB-audio or ReSpeaker-style array; it's their choice.
@@ -531,7 +531,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - spare STM32 pins (2026-10-28): PA8, PA9, PA10, PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
   - the LiDAR rail enable joined ~VMOT-14V4-EN (PE10): the LiDAR is on whenever the motor rail is (PD9 freed)
   - IMU FSYNC and INT2 left the MCU (PD4, PD7 freed); FSYNC keeps a 100k pull-down (R211). Since 2026-10-30 INT2 ends on test pad TP1 (the IMU is leadless, so a pad is the only way to reach the pin); probe or drive FSYNC on R211. AP_AD0 is pulled low by R217 (10k), so the IMU answers at I2C address 0x68; probe AD0 on R217. Run a wire to a spare pin if INT2 or FSYNC is needed
-  - one shared open-drain ToF interrupt (VL-L-INT, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
+  - one shared open-drain ToF interrupt (VL-INT, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
   - only the left VL53L7 LPn on the MCU; the right one is held up by R196 (PE8 freed). Addressing uses the left LPn plus the side sensor's XSHUT
   - the IMU moved from I2C2 to I2C4; its own pull-ups R18/R72 are not fitted (PA8, PA9 freed). PA9 keeps a 10k pull-up (R204): it is the UCPD dead-battery control for CC1
   - PWR_EN moved from PC10 to PD7, freeing the PC10/PC11 UART pair
@@ -543,8 +543,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x7 vertical, fitted (XFCN PZ254V-12-14P, C492424). Spares only: 1 VCC-3V3-REG, 2 VCC-5V-REG, 3/4 not connected (I2C4 kept off the header, 2026-10-30: it runs at 1 MHz and is shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7 PA10, 8 PE6, 9 PA8, 10 PA9 (10k pull-up), 11 PD4, 12 PE2, 13/14 GND
-- sensor rail switch (2026-11-01): one AO3401 (Q16) from VCC-3V3 to VCC-3V3-REG. PB10 (~3.3V_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VCC-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VCC-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
+- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x7 vertical, fitted (XFCN PZ254V-12-14P, C492424). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 not connected (I2C4 kept off the header, 2026-10-30: it runs at 1 MHz and is shared with the ToF, side sensor and IMU), 5/6 UART PC10 TX / PC11 RX, 7 PA10, 8 PE6, 9 PA8, 10 PA9 (10k pull-up), 11 PD4, 12 PE2, 13/14 GND
+- sensor rail switch (2026-11-01): one AO3401 (Q16) from VMCU-3V3 to VSENS-3V3. PB10 (~VSENS_3V3_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VMCU-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VMCU-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
@@ -569,7 +569,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 ### Bumpers (v1)
 
 - 2x ITR9606 slotted photo-interrupters on the main board (BUMP-R1, BUMP-L1). The Roomba harness (BUMP_CLIFF1) and its backup bumpers are gone since 2026-10-28.
-- ITR9606 emitters in series from VCC-5V-REG through R197 (120 Ω, ~20 mA). Q32 low-side switches them (BUMP-LED-K) from BUMPER_LED_EN (PC3, high = on, R198 100k pull-down).
+- ITR9606 emitters in series from VSENS-5V-USB through R197 (120 Ω, ~20 mA). Q32 low-side switches them (BUMP-LED-K) from BUMPER_LED_EN (PC3, high = on, R198 100k pull-down).
 - Detectors pull BUMP-L-Q+ (PA4) / BUMP-R-Q+ (PA5) low when light passes the slot (R48/R44 47k pull-ups).
 
 ### Rear docking IR and Hall sensors (v1)
@@ -581,7 +581,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### Cliff sensors (v1)
 
-- Six [cliff sensor boards](../kicad/cliff-sensor/README.md) on CLIFF-LF1, -RF1, -LR1, -RR1, -LM1, -RM1 (ZX-SH1.0-4PLT, SMD vertical): 1 VCC-5V-REG, 2 CLIFF-LED-K, 3 phototransistor collector, 4 GND.
+- Six [cliff sensor boards](../kicad/cliff-sensor/README.md) on CLIFF-LF1, -RF1, -LR1, -RR1, -LM1, -RM1 (ZX-SH1.0-4PLT, SMD vertical): 1 VSENS-5V-USB, 2 CLIFF-LED-K, 3 phototransistor collector, 4 GND.
 - Q35 (AO3400) sinks all six LED cathodes from CLIFF_LED_EN (PC1, high = on, R214 100k pull-down); ~25 mA per LED (150 Ω on each board), ~150 mA total.
 - 47k pull-ups to 3.3 V: R64 LF (PA3), R73 RF (PA1), R53 LR (PA2), R39 RR (PA0), R212 LM (PD9), R213 RM (PE8). LM/RM reach the MCU sheet through global labels.
 - The cliff and bumper LED enables stay separate: modulate the cliff LEDs (LED-on minus LED-off cancels ambient light) while the bumper emitters stay on.
@@ -605,7 +605,7 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - barrel jack: DC-044A-20A, 7.2 mm
 - LIDAR2 (2x3) is through-hole pads only, not fitted
 - J1 spare I/O: vertical 2x7 0.1" header (PZ254V-12-14P, ~8.5 mm above the board), like STM32_DEBUG1
-- exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x5 0.1" (XFCN PZ254V-11-05P, C492404, ~8.5 mm above the board) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
+- exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x6 0.1" (XFCN PZ254V-11-06P, C492405, ~8.5 mm above the board; 1x6 since 2026-11-02 so the cable socket seats fully) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
 - exception: the ITR9606 bumper sensors (~11 mm), set by the bumper mechanism
 - PCB engineer: flag any other part taller than ~7 mm
@@ -618,11 +618,11 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 
 ### 3.3 V and 5 V bucks (v1, 2026-10-27)
 
-- U21 (VCC-3V3) and U22 (VCC-5V-REG) are TPS54560BDDAR (C1850354: 4.5-60 V, 5 A, SO-8 PowerPAD, ~$0.61). The AP64501SP-13 they replace was out of stock (1 left at LCSC). Same 0.8 V reference, so the FB dividers are unchanged.
+- U21 (VMCU-3V3) and U22 (VSENS-5V-USB) are TPS54560BDDAR (C1850354: 4.5-60 V, 5 A, SO-8 PowerPAD, ~$0.61). The AP64501SP-13 they replace was out of stock (1 left at LCSC). Same 0.8 V reference, so the FB dividers are unchanged.
 - Non-synchronous: SS56 catch diodes D42/D43 (SW to GND, same part as D12-D15). Keep the SW node, the diode and the input capacitors in a tight loop.
 - fsw 418 kHz: RT R205/R206 = 232k (same part as R160), where the AP64501 soft-start caps were. Soft start is internal.
 - Compensation, the same on both rails: R143/R147 4.7k + C112/C120 47 nF (crossover ~20 kHz with ~40 µF effective output capacitance). No high-frequency pole capacitor: the output capacitors are all ceramic, so there is no ESR zero to cancel.
-- U21 EN: POWER-EN is the full VBAT-14V4 (up to ~20 V while charging), and EN is rated 8.4 V. R207 (100k) / R208 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on 5V_EN (3.3 V logic, R168 100k pull-down).
+- U21 EN: POWER-EN is the full VBAT-14V4 (up to ~20 V while charging), and EN is rated 8.4 V. R207 (100k) / R208 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on VSENS_5V_USB_EN (3.3 V logic, R168 100k pull-down).
 - VBAT-14V4 input capacitors C95, C106, C115, C116: 10 µF/50 V 1206 (C13585). The 10 µF/25 V 0603 parts kept only ~1 µF at 20 V.
 - Cost of the diode: ~1 W at 5 V / 3 A. If efficiency matters later, the synchronous AP64500 (40 V, 5 A, ~$1.04) is the alternative.
 - PCB engineer: new footprint (TI DDA, 2.95 x 4.9 mm thermal pad with vias).
@@ -636,15 +636,15 @@ Power rails (current schematic):
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
 | VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
-| VCC-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | POWER-EN |
-| VCC-3V3-REG | from VCC-3V3 via Q16 | sensors, IMU, driver logic | STM32 (~3.3V_EN, low = on) |
-| 3.3VBAT | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
-| VCC-5V-REG | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUS boost | STM32 (5V_EN) |
+| VMCU-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | POWER-EN |
+| VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic | STM32 (~VSENS_3V3_EN, low = on) |
+| VMCU-BAT-3V3 | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
+| VSENS-5V-USB | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUS boost | STM32 (VSENS_5V_USB_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
 | USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
-| VUS ≈ 14.5 V | MT3608 boost | carpet sensor | with VCC-5V-REG |
+| VUS ≈ 14.5 V | MT3608 boost | carpet sensor | with VSENS-5V-USB |
 | VMOT-14V4 | VBAT-14V4 via Q1 AO4407C | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
-| VM-5V-LIDAR | VCC-5V-REG via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |
+| VM-5V-LIDAR | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |
 | VM-5V-WATER-PUMP | VCC-5V-REG via Q8 AO3401 | water pump | WD_OK AND WATER-PUMPU-CTRL (low = on) |
 
 RC charge-pump watchdog (WATCHDOG sheet):

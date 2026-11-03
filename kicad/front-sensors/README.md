@@ -7,7 +7,7 @@ Until rev 2, this project also held the two dock-homing IR receivers. They are n
 ## Circuit
 
 - U2001: VL53L7CH (LCSC C19183986). The VL53L7CX (C5270520) and the VL53L5CX (C3178303, narrower 63° diagonal field of view) use the same footprint and pinout. Pin handling follows the datasheet (DS13865, table 3): RSVD1-4 to GND, RSVD5 not connected, RSVD6 47k pull-up (R2001), thermal pad to GND.
-- AVDD (the analog and laser supply) gets its 3.3 V through L2001 (BLM18PG121SN1D ferrite), so the laser current pulses stay off the shared 3.3 V. Each supply pin has 10 µF + 100 nF: C2001/C2002 on AVDD, C2003/C2004 on IOVDD. Place each pair right at its pins.
+- AVDD (the analog and laser supply, rail VAA-3V3) gets its 3.3 V from VDD-3V3 through L2001 (BLM18PG121SN1D ferrite), so the laser current pulses stay off the shared 3.3 V. Each supply pin has 10 µF + 100 nF: C2001/C2002 on AVDD, C2003/C2004 on IOVDD. Place each pair right at its pins.
 - No pull-ups on this board. The main board holds all of them: I2C 2.2k, INT and LPn 47k, and the I2C_RST 47k pull-down. With pull-ups on every board, the shared I2C bus would be pulled up three times over (~730 Ω).
 - Both sensors start at I2C address 0x52. At start-up the firmware holds one sensor's LPn low and moves the other to a new address. The new address is lost on power-off, so this runs every boot.
 

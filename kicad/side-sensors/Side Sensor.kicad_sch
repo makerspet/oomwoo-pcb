@@ -1732,6 +1732,19 @@
 		)
 		(uuid "54cf5719-45dd-4b00-bf4a-dab0ba215f5b")
 	)
+	(rectangle
+		(start 36.83 52.07)
+		(end 248.92 167.64)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 0 255 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "7022cc71-fb4d-4421-9293-6a765378bc3c")
+	)
 	(text "Mounting: 2x M2 (pads to GND)"
 		(exclude_from_sim no)
 		(at 189.23 135.89 0)
@@ -1776,7 +1789,7 @@
 		)
 		(uuid "a0d76809-5bd3-473b-afd4-b055b656a523")
 	)
-	(text "OOMWOO side sensor board (rev 2, 2026-10-27), right side of the robot. U3001 and U3002 both look out\nof the board face (top-looking parts). The main board holds the I2C pull-ups (2.2k); this board has the\nXSHUT and GPIO1 pull-ups. Firmware: the I/Os run at 3.3 V = AVDD, so set the VL53L0X API to 2V8 I/O mode.\nRefs in the 3000s: each board has its own range."
+	(text "OOMWOO side sensor board (rev 2, 2026-10-27), right side of the robot. U3001 and U3002 both look out\nof the board face (top-looking parts). The main board holds the I2C pull-ups (2.2k) and\nthe GPIO1 (INT) pull-up; the MCU (PE3) drives XSHUT, no pull-up. Firmware: the I/Os run at 3.3 V = AVDD, so set the VL53L0X API to 2V8 I/O mode.\nRefs in the 3000s: each board has its own range."
 		(exclude_from_sim no)
 		(at 39.624 42.164 0)
 		(effects
@@ -1821,12 +1834,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5c497c1b-4143-4a82-baec-df6e54fd764f")
-	)
-	(junction
-		(at 81.28 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6616cc95-ee34-418f-a090-3c9e299c192b")
 	)
 	(junction
 		(at 138.43 146.05)
@@ -1911,16 +1918,6 @@
 			(type default)
 		)
 		(uuid "11a9dcb0-0eb5-4375-b13d-c814699f69d3")
-	)
-	(wire
-		(pts
-			(xy 81.28 88.9) (xy 81.28 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "196a557d-76a4-449a-abdb-0699156c37f4")
 	)
 	(wire
 		(pts
@@ -2747,83 +2744,6 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 81.28 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "22b11636-2249-437d-81c1-43303023040c")
-		(property "Reference" "#PWR3009"
-			(at 81.28 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 81.28 76.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 81.28 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dee3ce23-4449-45dd-b034-f574fbe32c56")
-		)
-		(instances
-			(project "Side Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR3009")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
 		(at 107.95 130.81 0)
 		(unit 1)
 		(body_style 1)
@@ -3376,98 +3296,6 @@
 			(project "Side Sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR3011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 81.28 85.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5dffd2c7-7814-453b-ad63-b840163c05ee")
-		(property "Reference" "R3001"
-			(at 83.82 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 83.82 86.36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 81.28 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 81.28 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C98220"
-			(at 81.28 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e49b94c9-7424-430a-923a-f3aa594bbff6")
-		)
-		(pin "2"
-			(uuid "c4e111ac-30cb-4d32-9dbb-7c322a10ead2")
-		)
-		(instances
-			(project "Side Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "R3001")
 					(unit 1)
 				)
 			)

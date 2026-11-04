@@ -590,6 +590,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - 47k pull-ups to 3.3 V: R64 LF (PA3), R73 RF (PA1), R53 LR (PA2), R39 RR (PA0), R212 LM (PD9), R213 RM (PE8). LM/RM reach the MCU sheet through global labels.
 - The cliff and bumper LED enables stay separate: modulate the cliff LEDs (LED-on minus LED-off cancels ambient light) while the bumper emitters stay on.
 
+DRV8870 inputs: no external pull-downs (R3, R4, R11, R17, R20, R27, R55, R57 removed 2026-11-04). Each IN pin has an internal ~100 kΩ pull-down, and the motor rail is off whenever the MCU pins float (reset, flashing) or the watchdog stops (WD_OK).
+
 ### Motor current shunts (v1, 2026-10-29)
 
 The DRV8870s limit current at I = VREF / (10 × R_ISEN), with VREF tied to 3.3 V. At that limit the old 0.5 W shunts ran at 73-99 % of their rating, so they moved up a size:

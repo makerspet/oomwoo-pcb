@@ -1,11 +1,11 @@
-(footprint "MicroFit3.0_2x02_P3.00mm_Horizontal_Holes1.1"
+(footprint "MicroFit3.0_1x04_P3.00mm_Horizontal_Holes1.1"
 	(version 20260206)
 	(generator "kicad-footprint-generator")
 	(layer "F.Cu")
-	(descr "Micro-Fit 3.0 compatible 2x2 right-angle header: Molex 43045-0400 or clones (Lian Xin XDWF-C3030WR-2*2P, CJT C3030WR, HCTL HC-MX3.0-2*2AW). KiCad's 43045-0400 footprint with 1.1 mm pin holes, 1.9 mm pads and a 3.1 mm peg hole (the clones want 1.1-1.2 mm and a peg 0.08 mm further out)")
+	(descr "Micro-Fit 3.0 compatible 1x4 right-angle header: Molex 43650-0400 or clones (Lian Xin XDWF-C3030WR-1*4P, CJT C3030WR-4P, HCTL HC-MX3.0-4AW). KiCad's 43650-0400 footprint with 1.1 mm pin holes, 1.9 x 2.3 mm pads and 3.1 mm peg holes (the clones want 1.0-1.2 mm pin holes)")
 	(tags "connector Molex Micro-Fit_3.0 horizontal")
 	(property "Reference" "REF**"
-		(at 1.5 -10.12 0)
+		(at 4.5 -10.12 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -14,8 +14,8 @@
 			)
 		)
 	)
-	(property "Value" "MicroFit3.0_2x02_P3.00mm_Horizontal_Holes1.1"
-		(at 1.5 5.7 0)
+	(property "Value" "MicroFit3.0_1x04_P3.00mm_Horizontal_Holes1.1"
+		(at 4.5 3.22 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -38,8 +38,8 @@
 	(attr through_hole)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
-		(start -3.685 -8.03)
-		(end -2.685 -9.03)
+		(start -3.435 -8.03)
+		(end -2.435 -9.03)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -47,8 +47,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -3.685 1.1)
-		(end -3.685 -8.03)
+		(start -3.435 1.09)
+		(end -3.435 -8.03)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -56,8 +56,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -2.685 -9.03)
-		(end 5.685 -9.03)
+		(start -3.435 1.09)
+		(end -1.01 1.09)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -65,8 +65,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start 5.685 -9.03)
-		(end 6.685 -8.03)
+		(start -2.435 -9.03)
+		(end 11.435 -9.03)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -74,8 +74,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start 6.685 -8.03)
-		(end 6.685 1.1)
+		(start 1.01 1.09)
+		(end 2.348233 1.09)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -83,8 +83,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start 6.685 1.1)
-		(end -3.685 1.1)
+		(start 3.651767 1.09)
+		(end 5.348233 1.09)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -92,8 +92,44 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -4.08 -9.42)
-		(end 7.08 -9.42)
+		(start 6.651767 1.09)
+		(end 8.348233 1.09)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 11.435 -9.03)
+		(end 12.435 -8.03)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 12.435 -8.03)
+		(end 12.435 1.09)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 12.435 1.09)
+		(end 9.651767 1.09)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -3.83 -9.42)
+		(end 12.83 -9.42)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -101,8 +137,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -4.08 1.5)
-		(end -4.08 -9.42)
+		(start -3.83 1.49)
+		(end -3.83 -9.42)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -110,8 +146,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -1.25 1.5)
-		(end -4.08 1.5)
+		(start 12.83 -9.42)
+		(end 12.83 1.49)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -119,8 +155,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -1.25 4.25)
-		(end -1.25 1.5)
+		(start 12.83 1.49)
+		(end -3.83 1.49)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -128,44 +164,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 4.25 1.5)
-		(end 4.25 4.25)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-	)
-	(fp_line
-		(start 4.25 4.25)
-		(end -1.25 4.25)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-	)
-	(fp_line
-		(start 7.08 -9.42)
-		(end 7.08 1.5)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-	)
-	(fp_line
-		(start 7.08 1.5)
-		(end 4.25 1.5)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-	)
-	(fp_line
-		(start -3.575 -7.92)
-		(end -2.575 -8.92)
+		(start -3.325 -7.92)
+		(end -2.325 -8.92)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -173,8 +173,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -3.575 0.99)
-		(end -3.575 -7.92)
+		(start -3.325 0.98)
+		(end -3.325 -7.92)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -182,8 +182,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -2.575 -8.92)
-		(end 5.575 -8.92)
+		(start -2.325 -8.92)
+		(end 11.325 -8.92)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -191,7 +191,7 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -0.75 0.99)
+		(start -0.75 0.98)
 		(end 0 0)
 		(stroke
 			(width 0.1)
@@ -201,7 +201,7 @@
 	)
 	(fp_line
 		(start 0 0)
-		(end 0.75 0.99)
+		(end 0.75 0.98)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -209,8 +209,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 5.575 -8.92)
-		(end 6.575 -7.92)
+		(start 11.325 -8.92)
+		(end 12.325 -7.92)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -218,8 +218,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 6.575 -7.92)
-		(end 6.575 0.99)
+		(start 12.325 -7.92)
+		(end 12.325 0.98)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -227,8 +227,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 6.575 0.99)
-		(end -3.575 0.99)
+		(start 12.325 0.98)
+		(end -3.325 0.98)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -236,7 +236,7 @@
 		(layer "F.Fab")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 1.5 -8.22 0)
+		(at 4.5 -8.22 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -246,42 +246,48 @@
 		)
 	)
 	(pad "" np_thru_hole circle
-		(at 1.5 -4.32)
+		(at 2.15 -4.32)
+		(size 3.1 3.1)
+		(drill 3.1)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "" np_thru_hole circle
+		(at 6.85 -4.32)
 		(size 3.1 3.1)
 		(drill 3.1)
 		(layers "*.Cu" "*.Mask")
 	)
 	(pad "1" thru_hole roundrect
 		(at 0 0)
-		(size 1.9 1.9)
+		(size 1.9 2.3)
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(roundrect_rratio 0.166667)
 	)
-	(pad "2" thru_hole circle
+	(pad "2" thru_hole oval
 		(at 3 0)
-		(size 1.9 1.9)
+		(size 1.9 2.3)
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 	)
-	(pad "3" thru_hole circle
-		(at 0 3)
-		(size 1.9 1.9)
+	(pad "3" thru_hole oval
+		(at 6 0)
+		(size 1.9 2.3)
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 	)
-	(pad "4" thru_hole circle
-		(at 3 3)
-		(size 1.9 1.9)
+	(pad "4" thru_hole oval
+		(at 9 0)
+		(size 1.9 2.3)
 		(drill 1.1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal.step"
+	(model "${KICAD10_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_Micro-Fit_3.0_43650-0400_1x04_P3.00mm_Horizontal.step"
 		(offset
 			(xyz 0 0 0)
 		)

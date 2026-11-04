@@ -84,7 +84,7 @@ Changed 2026-11-03:
 - J1 pin 5 (was PA10) not connected
 - PA9 and PE10 swapped: ~{VMOT-14V4-EN} on PA9 (also UCPD DBCC1), the J1 pin 8 spare on PE10 (no pull-up, ADC capable). One 10k pull-up (R184, was 100k) serves both; R204 and R182 removed
 - bumper circuit (BUMP-L1/R1, emitter switches, pull-ups R44/R48, C178/C179) on its own sheet (bumper_sensors), moved off CLIFF; nets BUMP-L-Q+/BUMP-R-Q+ renamed BUMP-L/BUMP-R
-- main fan: MAIN_FAN1 is a Micro-Fit 3.0 compatible 2x2 right angle (Lian Xin XDWF-C3030WR-2*2P, C18202172, 7.36 mm tall, fitted; Molex 43045-0400 also fits) for high-power fans; MAIN_FAN2 (one 5-position 2.0 mm footprint for a JST PA 5, PH 5 or PH 4-pin header) and MAIN_FAN3 (JST PA 6) are not fitted. The old PH 4-pin SMD header is gone. Fan ID (MAIN_FAN2 pin 1): R223 10k pull-up + C180 to PE10; J1 pin 8 (was PE10) not connected. Details in [docs/SPEC.md](../../docs/SPEC.md#main-fan-connectors-v1-2026-11-03)
+- main fan: MAIN_FAN1 is a Micro-Fit 3.0 compatible 1x4 right angle (Lian Xin XDWF-C3030WR-1*4P, C50399536, fitted; Molex 43650-0400 also fits), so the Dreame 2x2-to-1x4 fan cables can be reused for high-power fans; MAIN_FAN2 (one 5-position 2.0 mm footprint for a JST PA 5, PH 5 or PH 4-pin header) and MAIN_FAN3 (JST PA 6) are not fitted. The old PH 4-pin SMD header is gone. Fan ID (MAIN_FAN2 pin 1): R223 10k pull-up + C180 to PE10; J1 pin 8 (was PE10) not connected. Details in [docs/SPEC.md](../../docs/SPEC.md#main-fan-connectors-v1-2026-11-03)
 - Q37 (AO4407C) in parallel with Q1 on the motor rail, with its own 10 Ω gate resistor R222
 - Q14 (battery disconnect while charging, in series with all battery current): AOD407 (68 mΩ) → AO4407C, plus Q38 AO4407C in parallel. Q12 stays AOD407
 

@@ -5,6 +5,222 @@
 	(uuid "88890bfb-e0cf-4d37-adc0-5c7dd05120c5")
 	(paper "USLetter")
 	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Generic:Conn_01x05"
 			(pin_names
 				(offset 1.016)
@@ -514,222 +730,6 @@
 						)
 					)
 					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_02x02_Odd_Even"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 1.27 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_02x02_Odd_Even"
-				(at 1.27 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_02x02_Odd_Even_1_1"
-				(rectangle
-					(start -1.27 1.27)
-					(end 3.81 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 0.127)
-					(end 2.54 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1579,9 +1579,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "- FB feedback signal is open collector\n- set PWM LOW to turn fan OFF"
+	(text "- FB feedback signal is open collector\n- set PWM LOW to turn fan OFF\n- MAIN_FAN1 matches Dreame L60 PE Ultra PCB"
 		(exclude_from_sim no)
-		(at 87.884 92.202 0)
+		(at 76.708 89.916 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1597,12 +1597,6 @@
 		(uuid "299cf093-be64-4f56-8266-e7465f0f4efc")
 	)
 	(junction
-		(at 132.08 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2d4278d7-2a6b-4517-9f7e-c50a6b28285a")
-	)
-	(junction
 		(at 132.08 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1615,16 +1609,16 @@
 		(uuid "49898f3f-3104-4329-a297-85cd6ce7f9e6")
 	)
 	(junction
-		(at 134.62 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "71aca640-9ce1-4e01-8496-ca98137ee4a3")
-	)
-	(junction
 		(at 134.62 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "81652e43-5234-4d55-83a6-362ef0cc6d89")
+	)
+	(junction
+		(at 132.08 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a69acbf8-c970-4c87-8a9f-5e138e1e4f1b")
 	)
 	(junction
 		(at 144.78 83.82)
@@ -1637,6 +1631,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d6168fa1-3174-4c4b-907b-056e355bf6c4")
+	)
+	(junction
+		(at 134.62 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8b5353c-7b1f-4bc7-b509-2b90d7f98b46")
 	)
 	(junction
 		(at 93.98 67.31)
@@ -1656,6 +1656,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 59.69) (xy 146.05 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "142e30b9-04c7-4c24-b315-591066339301")
+	)
+	(wire
+		(pts
 			(xy 134.62 93.98) (xy 146.05 93.98)
 		)
 		(stroke
@@ -1663,16 +1673,6 @@
 			(type default)
 		)
 		(uuid "1648447e-90f9-4597-b22a-3c1f5f36e44e")
-	)
-	(wire
-		(pts
-			(xy 158.75 64.77) (xy 158.75 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "201b052b-ef73-43f8-9e3d-99f03c82e41e")
 	)
 	(wire
 		(pts
@@ -1726,7 +1726,27 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 67.31) (xy 134.62 72.39)
+			(xy 146.05 62.23) (xy 134.62 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ca83ead-8c08-4a6f-b9a9-d9173c1f3de5")
+	)
+	(wire
+		(pts
+			(xy 143.51 53.34) (xy 143.51 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e30803f-ef79-4e79-9fa3-3d5ffeaddc6a")
+	)
+	(wire
+		(pts
+			(xy 134.62 67.31) (xy 134.62 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1776,6 +1796,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 67.31) (xy 144.78 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "581e4e30-c22e-4aed-a54b-fa38af87b3b3")
+	)
+	(wire
+		(pts
 			(xy 143.51 114.3) (xy 143.51 127)
 		)
 		(stroke
@@ -1783,26 +1813,6 @@
 			(type default)
 		)
 		(uuid "5d4a2788-a1b4-4f73-9a01-97ceaede7db3")
-	)
-	(wire
-		(pts
-			(xy 163.83 67.31) (xy 163.83 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e4782ea-1c17-4834-b015-b5a12d60fa2c")
-	)
-	(wire
-		(pts
-			(xy 163.83 62.23) (xy 157.48 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6968a1d4-935c-4846-add2-4e899f1799f0")
 	)
 	(wire
 		(pts
@@ -1856,16 +1866,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 72.39) (xy 134.62 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "955be552-5500-4e3d-a23d-019ba9afcce4")
-	)
-	(wire
-		(pts
 			(xy 144.78 83.82) (xy 144.78 86.36)
 		)
 		(stroke
@@ -1883,6 +1883,26 @@
 			(type default)
 		)
 		(uuid "9ddbe7f0-430d-487f-84c8-c3ee6f366ba6")
+	)
+	(wire
+		(pts
+			(xy 134.62 62.23) (xy 134.62 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f4308bf-f67c-4339-9a45-4f2f1880bc38")
+	)
+	(wire
+		(pts
+			(xy 143.51 57.15) (xy 146.05 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3068dda-fc19-46a4-943a-388191ea3c75")
 	)
 	(wire
 		(pts
@@ -1926,6 +1946,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 64.77) (xy 146.05 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7d4d303-48d2-482d-81c6-091f41dad889")
+	)
+	(wire
+		(pts
 			(xy 93.98 64.77) (xy 132.08 64.77)
 		)
 		(stroke
@@ -1943,16 +1973,6 @@
 			(type default)
 		)
 		(uuid "c28249bf-4363-487a-8557-f2891ff007b4")
-	)
-	(wire
-		(pts
-			(xy 158.75 64.77) (xy 157.48 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd88bafc-6647-423c-8265-c087f1934615")
 	)
 	(wire
 		(pts
@@ -1976,36 +1996,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 72.39) (xy 134.62 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e21a2d2d-265f-4375-91a7-9dc9c0aa84eb")
-	)
-	(wire
-		(pts
-			(xy 144.78 58.42) (xy 144.78 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6bf72cd-6098-415d-85c7-42ac6d446578")
-	)
-	(wire
-		(pts
-			(xy 93.98 77.47) (xy 93.98 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f58ba808-0c05-4ce4-bc9b-7aa9fe1b66a9")
-	)
-	(wire
-		(pts
 			(xy 90.17 64.77) (xy 93.98 64.77)
 		)
 		(stroke
@@ -2023,16 +2013,6 @@
 			(type default)
 		)
 		(uuid "fee5b417-4f88-4f19-9d20-b38c7b0f88d3")
-	)
-	(wire
-		(pts
-			(xy 132.08 64.77) (xy 144.78 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff59c245-8fbb-4a52-8559-647718ec7908")
 	)
 	(label "MAIN-FAN-FB"
 		(at 107.95 64.77 0)
@@ -2096,6 +2076,126 @@
 			(justify right)
 		)
 		(uuid "bff86542-66ff-40e2-acd3-76d8c81a9e5d")
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 151.13 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "17049abe-b6c9-4c5c-84f9-3e514195343d")
+		(property "Reference" "MAIN_FAN1"
+			(at 148.59 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "XDWF-C3030WR-1*4P"
+			(at 148.59 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:MicroFit3.0_1x04_P3.00mm_Horizontal_Holes1.1"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C50399536.pdf"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Main fan, Micro-Fit 3.0 compatible 1x4 right angle (fitted; Molex 43650-0400 also fits): 1 VCC, 2 GND, 3 PWM, 4 FG, as on the Dreame L60 Ultra PE main board (2x2-to-1x4 fan cable). MSD-G fan (Dreame X50). 5 A per contact: 4.2 A normal, firmware stops a stalled fan (FG). Place with room for the plug and cable on the mating side; check pin 1 against the header keying on the first board"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C50399536"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lian Xin Technology"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "XDWF-C3030WR-1*4P"
+			(at 151.13 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e233539-bb27-4070-b9e9-ee531380c9e4")
+		)
+		(pin "2"
+			(uuid "dd883537-85d7-4c57-8b2b-6522fc899cb2")
+		)
+		(pin "3"
+			(uuid "7921ee35-7fec-4f0c-8b8b-a8aec6fcb45d")
+		)
+		(pin "4"
+			(uuid "c7ba8b0a-2343-4582-86fe-0dcbca914f9f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/43bddca0-8e54-471a-b352-8abb91be7702"
+					(reference "MAIN_FAN1")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
@@ -2992,83 +3092,6 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 144.78 58.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "748ca830-ad15-4e92-9004-883969168472")
-		(property "Reference" "#PWR07814"
-			(at 144.78 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VMOT-14V4"
-			(at 144.78 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 144.78 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VM-VBAT\""
-			(at 144.78 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "110a16e9-6bc2-44bb-95bc-2da5b0638cbf")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/43bddca0-8e54-471a-b352-8abb91be7702"
-					(reference "#PWR07814")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VPP")
 		(at 93.98 54.61 0)
 		(unit 1)
 		(body_style 1)
@@ -3139,6 +3162,84 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/43bddca0-8e54-471a-b352-8abb91be7702"
 					(reference "#PWR0924")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(at 144.78 67.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "88cd4549-754f-4c8b-84b2-11398c1aa3df")
+		(property "Reference" "#PWR07841"
+			(at 151.13 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 151.13 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 144.78 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "28fd2087-4596-4c79-918a-8547302f51f1")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/43bddca0-8e54-471a-b352-8abb91be7702"
+					(reference "#PWR07841")
 					(unit 1)
 				)
 			)
@@ -3803,7 +3904,7 @@
 	)
 	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 93.98 78.74 0)
+		(at 93.98 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3813,7 +3914,7 @@
 		(dnp no)
 		(uuid "cb3e4709-efda-4c71-b15b-4cd4d9f7613e")
 		(property "Reference" "#PWR0642"
-			(at 93.98 78.74 0)
+			(at 93.98 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3824,7 +3925,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 93.98 85.09 0)
+			(at 93.98 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3835,7 +3936,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 78.74 0)
+			(at 93.98 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3845,7 +3946,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 78.74 0)
+			(at 93.98 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3855,7 +3956,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 93.98 78.74 0)
+			(at 93.98 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3952,8 +4053,8 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 163.83 67.31 0)
+		(lib_id "power:VPP")
+		(at 143.51 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3961,9 +4062,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "dc40aaf5-93b5-4155-8d30-c925d271641c")
-		(property "Reference" "#PWR07815"
-			(at 163.83 73.66 0)
+		(uuid "dbaf14f7-ec50-4890-8710-1ac4f7544fef")
+		(property "Reference" "#PWR07840"
+			(at 143.51 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3973,9 +4074,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 163.83 73.66 0)
-			(hide yes)
+		(property "Value" "VMOT-14V4"
+			(at 143.51 49.022 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3985,7 +4085,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 67.31 0)
+			(at 143.51 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3996,7 +4096,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 67.31 0)
+			(at 143.51 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4006,8 +4106,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 163.83 67.31 0)
+		(property "Description" "Power symbol creates a global label with name \"VM-VBAT\""
+			(at 143.51 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4017,13 +4117,13 @@
 				)
 			)
 		)
-		(pin ""
-			(uuid "f7b667d4-9485-4bc9-9fcc-175c5aa09611")
+		(pin "1"
+			(uuid "12c95c6d-4aa7-4f48-840e-e03a71feda1f")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/43bddca0-8e54-471a-b352-8abb91be7702"
-					(reference "#PWR07815")
+					(reference "#PWR07840")
 					(unit 1)
 				)
 			)
@@ -4827,126 +4927,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/43bddca0-8e54-471a-b352-8abb91be7702"
 					(reference "#PWR07816")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
-		(at 149.86 62.23 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ff4299b8-b8e5-4f2d-bff2-1b7cb0f8e377")
-		(property "Reference" "MAIN_FAN1"
-			(at 146.812 57.912 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "XDWF-C3030WR-2*2P"
-			(at 136.398 68.072 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:MicroFit3.0_2x02_P3.00mm_Horizontal_Holes1.1"
-			(at 149.86 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C18202172.pdf"
-			(at 149.86 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Main fan, Micro-Fit 3.0 compatible 2x2 right angle (fitted; Molex 43045-0400 also fits): 1 VCC, 2 GND, 3 FG, 4 PWM. MSD-G fan (Dreame X50). 5 A per contact: 4.2 A normal, firmware stops a stalled fan (FG). Place with room for the plug and cable on the mating side"
-			(at 149.86 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C18202172"
-			(at 149.86 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Lian Xin Technology"
-			(at 149.86 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "XDWF-C3030WR-2*2P"
-			(at 149.86 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "68b3cc55-c53c-4cda-b9fa-6436a2a89492")
-		)
-		(pin "2"
-			(uuid "afdf1d84-3f3b-4e61-a947-17319a55a3c9")
-		)
-		(pin "3"
-			(uuid "4bd14117-84cf-4cd6-a393-6a7e8151449b")
-		)
-		(pin "4"
-			(uuid "09bb8cd3-16aa-48f1-85f7-0f89408604f4")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/43bddca0-8e54-471a-b352-8abb91be7702"
-					(reference "MAIN_FAN1")
 					(unit 1)
 				)
 			)

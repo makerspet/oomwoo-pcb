@@ -8,7 +8,7 @@ A separate board keeps the mechanics flexible: the bin sits between the blower a
 
 - U6001: Cross Chip CC6201ST (C285995, ~$0.06): an omnipolar micropower Hall switch, so either magnet pole works. OUT goes low while the magnet is near.
   - It samples at roughly 20-45 Hz, so it reacts within ~25-50 ms. That's fine for the bin, and for the tower about as quick as a microswitch's travel.
-  - The output stage isn't confirmed (push-pull or open drain), so the main board pulls OUT up (R215/R216, 47k). Either type works.
+  - The output stage isn't confirmed (push-pull or open drain). The main board has no pull-up since 2026-11-04: firmware enables the MCU's internal pull-ups (PE4/PE5), so either type works.
   - Drop-in alternative with the same pinout (1 VDD, 2 OUT, 3 GND): TI DRV5032FADBZR (C140921, ~$0.10, push-pull).
 - C6001: 100 nF bypass at U6001.
 

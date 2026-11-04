@@ -90,6 +90,7 @@ Changed 2026-11-03:
 - LIDAR2: 1x6 0.1" right-angle header (PZ254R-11-06P, C492414), not fitted: 1/2 VLIDAR-5V, 3 GND, 4 MOT-, 5 LiDAR TX, 6 LiDAR RX; renamed VM-5V-LIDAR → VLIDAR-5V, LiDAR-M-CTRL → LIDAR-MOTOR-CTRL; PWR_FLAG on VLIDAR-5V
 - R61 (47k INT-SENSORS pull-up) moved to the top sheet, since the ToF boards and the side sensor share it; the side sensor board's own GPIO1 pull-up (R3002) is removed
 - side sensor board: R3001 (XSHUT pull-up) removed too (2026-11-04); PE3 drives XSHUT, firmware holds it low before the sensor rail comes up
+- R2 (VL-I2C-RESET pull-down), R62 (~{VL-L-LPn} pull-up), R93 (IMU INT1 pull-up) and R215/R216 (Hall pull-ups) removed (2026-11-04): the MCU drives PC0/PB13, IMU INT1 runs push-pull, the Hall inputs use the MCU pull-ups; VL-L-LPn renamed ~{VL-L-LPn}. The cliff and wheel-drop pull-ups stay
 - cliff nets renamed LF-Q+ ... RM-Q+ → CLIFF-LF ... CLIFF-RM (cliff sensor board: VLED → VLED-5V)
 
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.

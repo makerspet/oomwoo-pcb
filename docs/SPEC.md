@@ -545,7 +545,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
 - spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-02). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 not connected (PA10 drives the right bumper LED since 2026-11-03), 6 PE6, 7 not connected (PA8 is the battery sense since 2026-11-02), 8 PE10 (ADC capable; was PA9 until 2026-11-03), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
 - sensor rail switch (2026-11-01): one AO3401 (Q16) from VMCU-3V3 to VSENS-3V3. PB10 (~VSENS_3V3_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VMCU-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VMCU-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
-- VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
+- VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, the shared INT 47k R61, the right LPn 47k R196); the MCU drives the left LPn (PB13) and I2C_RST (PC0) with no resistors (R62/R2 removed 2026-11-04: the sensor rail is off whenever those pins float); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
 
@@ -579,7 +579,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 ### Rear docking IR and Hall sensors (v1)
 
 - [Rear docking IR board](../kicad/rear-ir/README.md) on REAR-IR1: two top-looking IRM-H638T, left PC8 (TIM3_CH3), right PC9 (TIM3_CH4). The robot backs into the dock (like a mop or auto-empty dock): LiDAR for the approach, the two receivers for the final alignment.
-- Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on HALL-BIN1 (PE4), LiDAR tower bumper on HALL-TOWER1 (PE5). Low = magnet near; 47k pull-ups R215/R216 on the main board.
+- Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on HALL-BIN1 (PE4), LiDAR tower bumper on HALL-TOWER1 (PE5). Low = magnet near; the MCU's internal pull-ups on PE4/PE5 (R215/R216 removed 2026-11-04; either Hall output type works).
 - REAR-IR1 uses the same 4-pin SH vertical connector as the cliff sensors (ZX-SH1.0-4PLT). The Hall boards use the 3-pin one (ZX-SH1.0-3PLT, C7430452; 1 3.3 V, 2 OUT, 3 GND), so a Hall cable can't be plugged into a cliff or rear IR socket (changed 2026-10-29). All three sit on the SIDE-PROXI sheet.
 - The mounting pads of every SH socket on the main board go to GND (2026-10-29), as they already did on the sensor boards.
 

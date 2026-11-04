@@ -1730,12 +1730,6 @@
 		(uuid "0c573e7e-d9b9-4787-b72a-77dc714c603b")
 	)
 	(junction
-		(at 85.09 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0cb468ce-2b48-4afd-9d66-e13b60090c6d")
-	)
-	(junction
 		(at 269.24 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1796,18 +1790,6 @@
 		(uuid "5ed7af2e-bce9-4d01-af10-3a7c8bc2cc7e")
 	)
 	(junction
-		(at 45.72 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7b2f0b68-46fa-40d3-a0b3-32c45f0bf50d")
-	)
-	(junction
-		(at 45.72 177.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7f61b1ff-e2db-4be2-a7e9-ad4adffe2214")
-	)
-	(junction
 		(at 34.29 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1836,12 +1818,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cdaec28c-6ab1-4bc2-be3d-db6964037f1c")
-	)
-	(junction
-		(at 85.09 177.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d2b81ec5-ba01-4447-b110-b518e9305316")
 	)
 	(junction
 		(at 275.59 196.85)
@@ -3931,7 +3907,7 @@
 		)
 		(uuid "7b297547-a834-48c6-959e-79b0f8a71e33")
 	)
-	(label "VL-L-LPn"
+	(label "~{VL-L-LPn}"
 		(at 255.27 139.7 0)
 		(effects
 			(font
@@ -5171,190 +5147,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
 					(reference "R61")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 45.72 173.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "720c8393-ea15-4af5-8298-5e6945f75583")
-		(property "Reference" "R215"
-			(at 47.625 172.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47k"
-			(at 47.625 175.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Hall output pull-up (works with open-drain or push-pull Hall switches)"
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2740afaf-bbf8-4237-a37b-85d79b3aa634")
-		)
-		(pin "2"
-			(uuid "5fde0fe4-441d-4c61-b5ba-c45b246cbc03")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
-					(reference "R215")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 85.09 173.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "730552e3-2fb3-499a-85a5-16589d8cb87b")
-		(property "Reference" "R216"
-			(at 86.995 172.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47k"
-			(at 86.995 175.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Hall output pull-up (works with open-drain or push-pull Hall switches)"
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "21c0ad55-8529-4fb1-810f-e3de7db0714b")
-		)
-		(pin "2"
-			(uuid "19ea9634-8ce5-4e23-bd64-4bdbb8edabe9")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
-					(reference "R216")
 					(unit 1)
 				)
 			)
@@ -7584,7 +7376,7 @@
 				(justify left)
 			)
 		)
-		(pin "VL-L-LPn" output
+		(pin "~{VL-L-LPn}" output
 			(at 254 139.7 0)
 			(uuid "a4bc5ef3-f6ff-4be0-95c6-017e2f43628b")
 			(effects
@@ -8322,7 +8114,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "994d55da-8e8c-4fe8-9877-f2e4533982e7")
-		(property "Sheetname" "LiDAR"
+		(property "Sheetname" "LIDAR"
 			(at 322.58 95.8084 0)
 			(hide yes)
 			(show_name no)
@@ -8334,7 +8126,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "LiDAR.kicad_sch"
+		(property "Sheetfile" "LIDAR.kicad_sch"
 			(at 322.58 112.3446 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8636,7 +8428,7 @@
 				(justify left)
 			)
 		)
-		(pin "VL-L-LPn" input
+		(pin "~{VL-L-LPn}" input
 			(at 322.58 139.7 180)
 			(uuid "5299adf0-2462-4098-8fc4-dc683bdb511f")
 			(effects

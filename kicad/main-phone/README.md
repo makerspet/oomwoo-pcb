@@ -61,6 +61,37 @@ Changed 2026-10-31:
 - the LDR (R75) runs from VCC-3V3, not the switched sensor rail VCC-3V3-REG, so it works with the sensors off and reads against the ADC reference
 - power rails drawn as power symbols; the rear IR, Hall, cliff LM/RM, DC_IN_SENSE, PWR-SW-G and WD_OK signals are hierarchical labels joined on the top sheet (were global labels)
 
+Changed 2026-11-01:
+- renamed: VM-VBAT → VMOT-14V4, BAT-VCC → VBAT-14V4, MAIN-FAN-S-CTRL → MAIN-FAN-PWM, MAIN-FAN-S-SENSE → MAIN-FAN-FB, 3.3V_STM1 → D44, 3.3V_SENSORS1 → D45; 3.3V_EN drawn active low (~{3.3V_EN})
+- sensor rail switch: one AO3401 (Q16); Q17, R91, R96, R97 and D39 removed (D39 back-fed the "off" rail). R195 10k, R90 100k, C64 100 nF gate-drain (soft start), new C176 1 µF gate-source (stays off at power-on). Details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1)
+- C7/C101 (unfitted 150 pF on the fan PWM/FB lines) removed; R195 moved to the power sheet
+
+Changed 2026-11-02:
+- renamed: VCC-3V3 → VMCU-3V3, VCC-3V3-REG → VSENS-3V3, VCC-5V-REG → VSENS-5V-USB, 3.3VBAT → VMCU-BAT-3V3, ~{3.3V_EN} → ~{VSENS_3V3_EN}, 5V_EN → VSENS_5V_USB_EN, VL-L-INT → VL-INT (the two ToF INT lines now join inside the front sensors sheet)
+- J1 pin 1 and R204 (PA9 pull-up) on VMCU-3V3, the MCU rail
+- STM32_DEBUG1: 1x6 (PZ254V-11-06P, C492405) instead of 1x5, so the TTL-234X-3V3 socket seats fully; pin 6 (RTS#) not connected
+- J1: 2x6 (PZ254V-12-12P, C492423) instead of 2x7; the unused 3/4 pair is gone: 1 VMCU-3V3, 2 VSENS-5V-USB, 3/4 UART PC10/PC11, 5 PA10, 6 PE6, 7 not connected, 8 PA9, 9 PD4, 10 PE2, 11/12 GND
+- R120/R121 (1k button pull-ups to the sensor rail) removed: firmware uses the internal pull-ups on PD0/PD5. On VSENS-3V3 the buttons read as pressed while the sensor rail was off
+- TP1 removed: probe IMU INT2 on R92
+- I2C4 pull-ups R5/R6 on the top sheet; the small hierarchical sheets merged into the top sheet
+- renamed: VUS → VUSONIC-14V4, VL-INT → INT-SENSORS (not only the VL53 sensors), U12 → L4 (inductor), 5V1 → D46
+- battery voltage sense: R218 (1M) / R219 (100k) + C177 (100 nF) from P+/C+ (battery side of Q14) to PA8 (ADC5_IN1); J1 pin 7 (was PA8) not connected
+- bumper pull-ups R44/R48 47k → 1k, so PA4/PA5 (ADC2) see the slot opening and closing instead of a switch
+
+Changed 2026-11-03:
+- bumper emitters split: BUMP-R1 on new Q36 (PA10, BUMP_R_LED_EN, R221 pull-down), BUMP-L1 stays on Q32 (PC3, BUMPER_LED_EN → BUMP_L_LED_EN); each LED has its own 180 Ω (R197, new R220), so firmware can PWM-dim each one
+- C178/C179 (47 nF) on BUMP-R/L to filter the LED PWM
+- J1 pin 5 (was PA10) not connected
+- PA9 and PE10 swapped: ~{VMOT-14V4-EN} on PA9 (also UCPD DBCC1), the J1 pin 8 spare on PE10 (no pull-up, ADC capable). One 10k pull-up (R184, was 100k) serves both; R204 and R182 removed
+- bumper circuit (BUMP-L1/R1, emitter switches, pull-ups R44/R48, C178/C179) on its own sheet (bumper_sensors), moved off CLIFF; nets BUMP-L-Q+/BUMP-R-Q+ renamed BUMP-L/BUMP-R
+- main fan: MAIN_FAN1 is a Micro-Fit 3.0 compatible 1x4 right angle (Lian Xin XDWF-C3030WR-1*4P, C50399536, fitted; Molex 43650-0400 also fits), so the Dreame 2x2-to-1x4 fan cables can be reused for high-power fans; pinout 1 VCC, 2 GND, 3 PWM, 4 FG (Dreame L60 Ultra PE). The old PH 4-pin SMD header is gone. MAIN_FAN2/MAIN_FAN3 (PA/PH alternatives) and the fan ID on PE10 were added and removed again the same day; PE10 is the J1 pin 8 spare. Details in [docs/SPEC.md](../../docs/SPEC.md#main-fan-connectors-v1-2026-11-03)
+- Q37 (AO4407C) in parallel with Q1 on the motor rail, with its own 10 Ω gate resistor R222
+- Q14 (battery disconnect while charging, in series with all battery current): AOD407 (68 mΩ) → AO4407C, plus Q38 AO4407C in parallel. Q12 stays AOD407
+- LIDAR2: 1x6 0.1" right-angle header (PZ254R-11-06P, C492414), not fitted: 1/2 VLIDAR-5V, 3 GND, 4 MOT-, 5 LiDAR TX, 6 LiDAR RX; renamed VM-5V-LIDAR → VLIDAR-5V, LiDAR-M-CTRL → LIDAR-MOTOR-CTRL; PWR_FLAG on VLIDAR-5V
+- R61 (47k INT-SENSORS pull-up) moved to the top sheet, since the ToF boards and the side sensor share it; the side sensor board's own GPIO1 pull-up (R3002) is removed
+- side sensor board: R3001 (XSHUT pull-up) removed too (2026-11-04); PE3 drives XSHUT, firmware holds it low before the sensor rail comes up
+- cliff nets renamed LF-Q+ ... RM-Q+ → CLIFF-LF ... CLIFF-RM (cliff sensor board: VLED → VLED-5V)
+
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 
 Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).

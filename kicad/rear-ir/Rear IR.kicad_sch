@@ -558,6 +558,9 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:ZX-SH1_0-4PLT"
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1287,150 +1290,161 @@
 			(embedded_fonts no)
 		)
 	)
-	(symbol
-		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 50.8 101.6 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
+	(text "J5001 to the main board REAR-IR1, pin 1 to pin 1:\n1 3.3 V, 2 IR_L, 3 IR_R, 4 GND"
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1f8975f3-2abf-45d6-8f4a-45f52e36ceff")
-		(property "Reference" "J5001"
-			(at 46.99 88.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ZX-SH1_0-4PLT"
-			(at 46.99 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to the main board REAR-IR1"
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C7430453"
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9a93b117-f575-4862-92db-53dcbdfb5b2c")
-		)
-		(pin "2"
-			(uuid "61fe7d3f-5fb2-49f3-a9d0-24ba10debc2e")
-		)
-		(pin "3"
-			(uuid "a0d20598-137f-4eda-a39d-8c1b803915dd")
-		)
-		(pin "4"
-			(uuid "433bc608-7b00-48bd-8b14-c30115b8d285")
-		)
-		(pin "5"
-			(uuid "cab44830-b001-480d-b23e-eadcb3a16dfa")
-		)
-		(pin "6"
-			(uuid "f4d9bc35-b667-4f37-b89b-08f300b2d00a")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "J5001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 54.61 100.33) (xy 59.69 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9541c751-0a32-40ea-98d5-90f1c8a1028a")
-	)
-	(label "IR_L"
-		(at 59.69 100.33 0)
+		(at 38.1 127 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "2f70383a-12fc-4cc4-9a5c-2cd0a2bb716a")
+		(uuid "2a00e9d8-fc3f-4fb4-a269-7e751fd7c013")
 	)
-	(wire
-		(pts
-			(xy 54.61 102.87) (xy 59.69 102.87)
+	(text "OOMWOO rear docking IR board (rev 1, 2026-10-28). Two top-looking 38 kHz receivers (the same part as the side board\nand the dock's U1202) look out of the board face, which faces backward. Put them ~10 mm apart with a baffle between\nthem: both see the dock = it is straight behind, one = steer that way. The outputs have internal pull-ups.\nRefs in the 5000s: each board has its own range."
+		(exclude_from_sim no)
+		(at 30.48 39.624 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9cd60a9-4778-4dfe-9e41-40dea52c05c0")
+		(uuid "867c334c-f4f6-405e-8968-ab0ca26ba581")
 	)
-	(label "IR_R"
-		(at 59.69 102.87 0)
+	(text "Mounting: 2x M2 (pads to GND)"
+		(exclude_from_sim no)
+		(at 73.66 144.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "2dbbabc8-6eec-4eb1-82c1-a1df890cf986")
+		(uuid "8d096893-a4b9-40ee-93d9-337aaaa24d60")
+	)
+	(text "U5001 = left, U5002 = right, seen from behind the robot\n(looking at the board face)."
+		(exclude_from_sim no)
+		(at 127 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed8c73c3-f345-4ed1-907e-5244ac2ce849")
+	)
+	(junction
+		(at 59.69 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11293757-a215-4160-8675-72103b2614e0")
+	)
+	(junction
+		(at 129.54 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a8cb150-2829-44c3-9640-4a12557f6cb2")
+	)
+	(junction
+		(at 129.54 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "419bb66c-c446-44c9-b01d-285081a2f9d3")
+	)
+	(junction
+		(at 143.51 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "68508810-574c-4a78-9088-1caa96be0913")
+	)
+	(junction
+		(at 143.51 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6fa13fbe-9541-46b5-b507-1c8478e6cfd4")
+	)
+	(junction
+		(at 48.26 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec01714c-1e8a-47f4-811c-96f14b02a0fe")
+	)
+	(junction
+		(at 59.69 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ee61b4c2-bf01-455e-9457-ee3d5e384419")
+	)
+	(wire
+		(pts
+			(xy 59.69 106.68) (xy 59.69 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "004eb383-7beb-483d-9f73-931da8460f36")
+	)
+	(wire
+		(pts
+			(xy 91.44 154.94) (xy 91.44 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05f998de-4951-4d6c-89bc-801784474ecd")
+	)
+	(wire
+		(pts
+			(xy 129.54 127) (xy 129.54 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ee76de8-e2ed-4876-9212-f763ccdfe7ac")
+	)
+	(wire
+		(pts
+			(xy 129.54 105.41) (xy 129.54 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12e4484d-e248-43bf-91d4-78d50d9d8ec1")
+	)
+	(wire
+		(pts
+			(xy 144.78 132.08) (xy 137.16 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16f35997-2805-4604-8f91-e720dbc1f58a")
+	)
+	(wire
+		(pts
+			(xy 144.78 91.44) (xy 137.16 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28ff379f-3317-48f0-a26d-b79e0d6836a1")
+	)
+	(wire
+		(pts
+			(xy 44.45 92.71) (xy 44.45 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d762616-28cd-474d-a475-db252cc7ba1b")
 	)
 	(wire
 		(pts
@@ -1442,88 +1456,109 @@
 		)
 		(uuid "327f64bd-f2a1-4acf-9681-5f59f85e4be1")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 59.69 105.41 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "02aaa0f4-c340-4b6c-a452-747a711efd00")
-		(property "Reference" "#PWR5001"
-			(at 59.69 105.41 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+	(wire
+		(pts
+			(xy 129.54 93.98) (xy 129.54 97.79)
 		)
-		(property "Value" "GND"
-			(at 64.77 105.41 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Footprint" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2faf72fb-08a3-4022-b989-a451b0c65639")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5001")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "36bd8240-b9b6-497b-9a0f-99db031a12ed")
 	)
 	(wire
 		(pts
-			(xy 48.26 110.49) (xy 48.26 115.57)
+			(xy 144.78 134.62) (xy 129.54 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f5d11b1-ba6a-47b9-9dfc-802f59d0962e")
+	)
+	(wire
+		(pts
+			(xy 144.78 93.98) (xy 129.54 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd1cba8-bdec-4360-99df-9e78a2ab47d9")
+	)
+	(wire
+		(pts
+			(xy 143.51 137.16) (xy 143.51 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d62052a-b582-4ced-803e-633f53a73981")
+	)
+	(wire
+		(pts
+			(xy 59.69 97.79) (xy 62.23 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e63a915-fbbd-43f5-afea-6e93277e9c71")
+	)
+	(wire
+		(pts
+			(xy 143.51 129.54) (xy 143.51 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a760789-0b49-4462-88f2-9d1867eaf20e")
+	)
+	(wire
+		(pts
+			(xy 129.54 134.62) (xy 129.54 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71303379-5e33-4d6c-abe7-4ff21ed91307")
+	)
+	(wire
+		(pts
+			(xy 44.45 110.49) (xy 48.26 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e5d7ba8-6555-41a6-ad95-5e046ba3a214")
+	)
+	(wire
+		(pts
+			(xy 144.78 88.9) (xy 143.51 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84bf5702-ab78-4f70-86ee-65dd8e745c82")
+	)
+	(wire
+		(pts
+			(xy 54.61 100.33) (xy 59.69 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9541c751-0a32-40ea-98d5-90f1c8a1028a")
+	)
+	(wire
+		(pts
+			(xy 48.26 110.49) (xy 48.26 111.76)
 		)
 		(stroke
 			(width 0)
@@ -1531,249 +1566,95 @@
 		)
 		(uuid "96276626-623e-47ae-b9af-fa20c05cfa1b")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 48.26 115.57 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4ae0ed95-c90b-4b23-8b24-4d2e49629671")
-		(property "Reference" "#PWR5002"
-			(at 48.26 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 48.26 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 48.26 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 48.26 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "771c40ec-bd4c-446f-adbe-982149496ffa")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5002")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(wire
 		(pts
-			(xy 48.26 92.71) (xy 48.26 87.63)
+			(xy 59.69 97.79) (xy 59.69 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f019a2c2-c244-4278-9941-fa3837435941")
+		(uuid "a4ddf6ef-0908-4b49-8e21-d15a40646cf8")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 48.26 87.63 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dbe24af8-613d-4192-b8f9-9b3a06a785b8")
-		(property "Reference" "#PWR5003"
-			(at 48.26 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+	(wire
+		(pts
+			(xy 54.61 102.87) (xy 59.69 102.87)
 		)
-		(property "Value" "GND"
-			(at 48.26 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Footprint" ""
-			(at 48.26 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 48.26 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b38dfd6c-1e80-42ce-99c1-e47ba8be9f5a")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5003")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "a9cd60a9-4778-4dfe-9e41-40dea52c05c0")
 	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 59.69 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2c2af3dc-601d-46d6-b13a-b6fe9f96fbbe")
-		(property "Reference" "#FLG5004"
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+	(wire
+		(pts
+			(xy 129.54 86.36) (xy 129.54 85.09)
 		)
-		(property "Value" "PWR_FLAG"
-			(at 59.69 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Footprint" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(uuid "b65a5879-383b-42c4-bfd0-68236e5ea2e8")
+	)
+	(wire
+		(pts
+			(xy 144.78 129.54) (xy 143.51 129.54)
 		)
-		(property "Datasheet" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Description" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(uuid "bbf54cc3-fc4b-4874-8153-a584cefe91e7")
+	)
+	(wire
+		(pts
+			(xy 76.2 154.94) (xy 76.2 157.48)
 		)
-		(pin "1"
-			(uuid "2769e45b-2a96-49b1-8ae2-2a8845ef5dd4")
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#FLG5004")
-					(unit 1)
-				)
-			)
+		(uuid "c06e4ef5-4bf8-4854-b97f-8c5070f72597")
+	)
+	(wire
+		(pts
+			(xy 129.54 146.05) (xy 129.54 148.59)
 		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cee1f183-375d-43d7-8984-124a8b0a9d7a")
+	)
+	(wire
+		(pts
+			(xy 143.51 96.52) (xy 143.51 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddb89c37-c4c1-48ff-bbc0-66e2c95cb3d0")
+	)
+	(wire
+		(pts
+			(xy 143.51 88.9) (xy 143.51 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8e4dc68-56d8-4154-bbea-baf2665528c5")
+	)
+	(wire
+		(pts
+			(xy 48.26 92.71) (xy 44.45 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea4ad1e5-618a-47ce-962a-c2a1af632882")
 	)
 	(wire
 		(pts
@@ -1787,317 +1668,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 97.79) (xy 59.69 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a4ddf6ef-0908-4b49-8e21-d15a40646cf8")
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 59.69 92.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "408d8fed-5b0c-45f7-b272-da521d955af8")
-		(property "Reference" "#PWR5005"
-			(at 59.69 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 59.69 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "de7e27c1-2f08-428d-8509-853f4cb8673c")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5005")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 59.69 97.79) (xy 67.31 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e63a915-fbbd-43f5-afea-6e93277e9c71")
-	)
-	(junction
-		(at 59.69 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f0357a8b-beee-4e8a-aca7-7d589bfa11f5")
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 67.31 97.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "72d6c394-ac7c-4623-9569-403687f7bc4e")
-		(property "Reference" "#FLG5006"
-			(at 67.31 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 67.31 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 67.31 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 67.31 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 67.31 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "82f67773-cfd2-4943-9dbe-1abaad3b1d90")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#FLG5006")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "J5001 to the main board REAR-IR1, pin 1 to pin 1:\n1 3.3 V, 2 IR_L, 3 IR_R, 4 GND"
-		(exclude_from_sim no)
-		(at 38.1 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2a00e9d8-fc3f-4fb4-a269-7e751fd7c013")
-	)
-	(symbol
-		(lib_id "JLCImport:IRM-H638T")
-		(at 152.4 88.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7c5fbe08-13e2-4092-b27c-18e296714655")
-		(property "Reference" "U5001"
-			(at 154.94 82.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRM-H638T/TR2"
-			(at 154.94 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:IRM-H638T"
-			(at 152.4 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://en.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/DMO-0000004-IRM-H6XX-TR2_Series_Datasheet_V4.pdf"
-			(at 152.4 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "38 kHz IR receiver, top-looking SMD (lens on the top face); output has an internal pull-up"
-			(at 152.4 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C91447"
-			(at 152.4 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "09080073-8421-41d7-a6a1-a46b4cc6405a")
-		)
-		(pin "2"
-			(uuid "87012ed1-708d-464e-b4d6-a79bc44155be")
-		)
-		(pin "3"
-			(uuid "960f26b8-66eb-41f2-ab06-ced850f5fe25")
-		)
-		(pin "4"
-			(uuid "aed5f422-c636-4e18-bfe6-f159954c3ff5")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "U5001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 144.78 88.9) (xy 142.24 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84bf5702-ab78-4f70-86ee-65dd8e745c82")
-	)
-	(wire
-		(pts
-			(xy 142.24 88.9) (xy 142.24 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8e4dc68-56d8-4154-bbea-baf2665528c5")
-	)
-	(wire
-		(pts
-			(xy 144.78 86.36) (xy 142.24 86.36)
+			(xy 144.78 86.36) (xy 143.51 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2107,523 +1678,53 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 86.36) (xy 139.7 86.36)
+			(xy 144.78 127) (xy 143.51 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2308a4fa-1369-4796-a4dc-303c5d205541")
+		(uuid "f1242748-0a94-4e50-a7a4-2f32d5a7881f")
 	)
-	(junction
-		(at 142.24 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "910ef6ad-9a9a-4aa0-9339-e475f1a17016")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 139.7 86.36 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "97b4cd01-9fe5-4cc6-bc81-ac2627ab620a")
-		(property "Reference" "#PWR5007"
-			(at 139.7 86.36 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 134.62 86.36 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 139.7 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1b451ba4-dfee-4aac-b252-b8265bd7c761")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5007")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 144.78 91.44) (xy 137.16 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28ff379f-3317-48f0-a26d-b79e0d6836a1")
-	)
-	(label "IR_L"
-		(at 137.16 91.44 180)
+	(label "IR_R"
+		(at 59.69 102.87 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
+		(uuid "2dbbabc8-6eec-4eb1-82c1-a1df890cf986")
+	)
+	(label "IR_L"
+		(at 59.69 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2f70383a-12fc-4cc4-9a5c-2cd0a2bb716a")
+	)
+	(label "IR_R"
+		(at 137.16 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d548d7bf-a988-4892-9bc4-fb9af804ee97")
+	)
+	(label "IR_L"
+		(at 137.16 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
 		(uuid "f4d13d48-3a35-4dfe-9653-a2b7a061fe44")
-	)
-	(wire
-		(pts
-			(xy 144.78 93.98) (xy 129.54 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4dd1cba8-bdec-4360-99df-9e78a2ab47d9")
-	)
-	(junction
-		(at 129.54 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "419bb66c-c446-44c9-b01d-285081a2f9d3")
-	)
-	(wire
-		(pts
-			(xy 129.54 93.98) (xy 129.54 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36bd8240-b9b6-497b-9a0f-99db031a12ed")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 129.54 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "96fd1738-41a1-4151-a664-85062bd9dc73")
-		(property "Reference" "C5001"
-			(at 132.08 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF/10V"
-			(at 132.08 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF, close to the pins)"
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C19702"
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dceb30ac-58e4-4fad-a052-e05141d1715d")
-		)
-		(pin "2"
-			(uuid "bc97cc83-3c7d-49f7-b5e7-947d7e5da3f5")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "C5001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 129.54 105.41) (xy 129.54 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12e4484d-e248-43bf-91d4-78d50d9d8ec1")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 129.54 107.95 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "33560557-8a12-4ebf-bfbb-8f2be0050fa8")
-		(property "Reference" "#PWR5008"
-			(at 129.54 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 129.54 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "90bc2deb-97b4-49df-845d-fa5b7cd146c6")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5008")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 121.92 93.98 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "89f51241-e72b-4ff3-bb6e-71a6c0bf0ccd")
-		(property "Reference" "R5001"
-			(at 119.38 91.44 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100"
-			(at 119.38 97.79 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 121.92 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
-			(at 121.92 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2906981"
-			(at 121.92 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9e34cd28-129f-4d92-8b4c-50bb08327d61")
-		)
-		(pin "2"
-			(uuid "9685b11b-415b-4b7c-8055-a90e5518ac56")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "R5001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 125.73 93.98) (xy 129.54 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e89faf9-58a1-449a-8589-6476e3359b5d")
-	)
-	(wire
-		(pts
-			(xy 118.11 93.98) (xy 115.57 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e355445-710f-4917-b00a-25dd937f13a1")
-	)
-	(wire
-		(pts
-			(xy 115.57 93.98) (xy 115.57 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f504593-0e66-4032-8c55-d61ead3e48ee")
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 115.57 88.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a00e5794-4dec-4267-91f8-12e0f808284b")
-		(property "Reference" "#PWR5009"
-			(at 115.57 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 115.57 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 115.57 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 115.57 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 115.57 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "178317cd-2ee5-4172-aa96-a9a4fc696430")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5009")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "JLCImport:IRM-H638T")
@@ -2716,62 +1817,16 @@
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "U5002")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 144.78 129.54) (xy 142.24 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bbf54cc3-fc4b-4874-8153-a584cefe91e7")
-	)
-	(wire
-		(pts
-			(xy 142.24 129.54) (xy 142.24 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a760789-0b49-4462-88f2-9d1867eaf20e")
-	)
-	(wire
-		(pts
-			(xy 144.78 127) (xy 142.24 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1242748-0a94-4e50-a7a4-2f32d5a7881f")
-	)
-	(wire
-		(pts
-			(xy 142.24 127) (xy 139.7 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb681372-e546-496b-9362-7591c91edae3")
-	)
-	(junction
-		(at 142.24 127)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0c9670a1-5217-4e6e-b63f-0578622b759b")
-	)
 	(symbol
 		(lib_id "power:GND")
-		(at 139.7 127 270)
+		(at 59.69 106.68 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2779,9 +1834,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "943f1248-b2d9-4c1e-b1ff-4a7750f32b46")
-		(property "Reference" "#PWR5010"
-			(at 139.7 127 90)
+		(uuid "02aaa0f4-c340-4b6c-a452-747a711efd00")
+		(property "Reference" "#PWR5001"
+			(at 59.69 106.68 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2792,7 +1847,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 134.62 127 90)
+			(at 59.69 111.76 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2800,11 +1855,11 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 127 0)
+			(at 59.69 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2815,7 +1870,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 127 0)
+			(at 59.69 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2826,7 +1881,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 127 0)
+			(at 59.69 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2837,62 +1892,94 @@
 			)
 		)
 		(pin "1"
-			(uuid "433b85d6-4b0a-4ca6-b6f9-a29458602b85")
+			(uuid "2faf72fb-08a3-4022-b989-a451b0c65639")
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5010")
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR5001")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 144.78 132.08) (xy 137.16 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16f35997-2805-4604-8f91-e720dbc1f58a")
-	)
-	(label "IR_R"
-		(at 137.16 132.08 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "06478c7d-6837-488f-a753-2c4b982005c0")
+		(property "Reference" "#PWR5014"
+			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right bottom)
 		)
-		(uuid "d548d7bf-a988-4892-9bc4-fb9af804ee97")
-	)
-	(wire
-		(pts
-			(xy 144.78 134.62) (xy 129.54 134.62)
+		(property "Value" "GND"
+			(at 91.44 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Footprint" ""
+			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(uuid "3f5d11b1-ba6a-47b9-9dfc-802f59d0962e")
-	)
-	(junction
-		(at 129.54 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2a8cb150-2829-44c3-9640-4a12557f6cb2")
-	)
-	(wire
-		(pts
-			(xy 129.54 134.62) (xy 129.54 138.43)
+		(property "Datasheet" ""
+			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Description" ""
+			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(uuid "71303379-5e33-4d6c-abe7-4ff21ed91307")
+		(pin "1"
+			(uuid "3c0a2632-ba72-44c6-bc72-f6995dacf3e1")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR5014")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -2979,22 +2066,505 @@
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "C5002")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 129.54 146.05) (xy 129.54 148.59)
+	(symbol
+		(lib_id "JLCImport:ZX-SH1_0-4PLT")
+		(at 50.8 101.6 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1f8975f3-2abf-45d6-8f4a-45f52e36ceff")
+		(property "Reference" "J5001"
+			(at 46.99 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Value" "ZX-SH1_0-4PLT"
+			(at 54.356 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(uuid "cee1f183-375d-43d7-8984-124a8b0a9d7a")
+		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to the main board REAR-IR1"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7430453"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9a93b117-f575-4862-92db-53dcbdfb5b2c")
+		)
+		(pin "2"
+			(uuid "61fe7d3f-5fb2-49f3-a9d0-24ba10debc2e")
+		)
+		(pin "3"
+			(uuid "a0d20598-137f-4eda-a39d-8c1b803915dd")
+		)
+		(pin "4"
+			(uuid "433bc608-7b00-48bd-8b14-c30115b8d285")
+		)
+		(pin "5"
+			(uuid "cab44830-b001-480d-b23e-eadcb3a16dfa")
+		)
+		(pin "6"
+			(uuid "f4d9bc35-b667-4f37-b89b-08f300b2d00a")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "J5001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 59.69 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2c2af3dc-601d-46d6-b13a-b6fe9f96fbbe")
+		(property "Reference" "#FLG5004"
+			(at 59.69 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 59.69 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2769e45b-2a96-49b1-8ae2-2a8845ef5dd4")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#FLG5004")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 129.54 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "33560557-8a12-4ebf-bfbb-8f2be0050fa8")
+		(property "Reference" "#PWR5008"
+			(at 129.54 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "90bc2deb-97b4-49df-845d-fa5b7cd146c6")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR5008")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 59.69 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "408d8fed-5b0c-45f7-b272-da521d955af8")
+		(property "Reference" "#PWR5005"
+			(at 59.69 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 59.69 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "de7e27c1-2f08-428d-8509-853f4cb8673c")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR5005")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ae0ed95-c90b-4b23-8b24-4d2e49629671")
+		(property "Reference" "#PWR5002"
+			(at 48.26 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "771c40ec-bd4c-446f-adbe-982149496ffa")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR5002")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 129.54 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4f0a6fb3-863a-4727-a467-816c5ca99955")
+		(property "Reference" "#PWR05009"
+			(at 129.54 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 129.54 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "08eba3f9-d9ce-4125-a117-96d91968c822")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR05009")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3067,7 +2637,7 @@
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR5011")
 					(unit 1)
 				)
@@ -3075,8 +2645,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 121.92 134.62 90)
+		(lib_id "power:PWR_FLAG")
+		(at 62.23 97.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3084,31 +2654,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ccffee83-78a5-4496-97bd-d511a5a32d18")
-		(property "Reference" "R5002"
-			(at 119.38 132.08 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100"
-			(at 119.38 138.43 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 121.92 134.62 0)
+		(uuid "72d6c394-ac7c-4623-9569-403687f7bc4e")
+		(property "Reference" "#FLG5006"
+			(at 62.23 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3118,108 +2666,9 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 121.92 134.62 0)
+		(property "Value" "PWR_FLAG"
+			(at 62.23 93.98 0)
 			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
-			(at 121.92 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2906981"
-			(at 121.92 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ab94c5f6-e9bd-4af9-b810-6276794aa74c")
-		)
-		(pin "2"
-			(uuid "313547e4-1428-4203-b6eb-89d855326a30")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "R5002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 125.73 134.62) (xy 129.54 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32f02a01-56d6-42c8-a4c8-0ca2047e25bc")
-	)
-	(wire
-		(pts
-			(xy 118.11 134.62) (xy 115.57 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2cffd57-78f6-4adb-8ed9-1076e4c06e65")
-	)
-	(wire
-		(pts
-			(xy 115.57 134.62) (xy 115.57 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "106e2b40-1270-4919-b0dc-fef35db6c71a")
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 115.57 129.54 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1ee141ce-91cf-47bc-9388-b49210f80522")
-		(property "Reference" "#PWR5012"
-			(at 115.57 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 115.57 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3229,7 +2678,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 115.57 129.54 0)
+			(at 62.23 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3240,7 +2689,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 129.54 0)
+			(at 62.23 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3251,7 +2700,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 115.57 129.54 0)
+			(at 62.23 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3262,38 +2711,191 @@
 			)
 		)
 		(pin "1"
-			(uuid "3018f8a3-6eb9-4e15-95c9-2f47cc400851")
+			(uuid "82f67773-cfd2-4943-9dbe-1abaad3b1d90")
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5012")
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#FLG5006")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(text "OOMWOO rear docking IR board (rev 1, 2026-10-28). Two top-looking 38 kHz receivers (the same part as the side board\nand the dock's U1202) look out of the board face, which faces backward. Put them ~10 mm apart with a baffle between\nthem: both see the dock = it is straight behind, one = steer that way. The outputs have internal pull-ups.\nRefs in the 5000s: each board has its own range."
+	(symbol
+		(lib_id "power:+3V3")
+		(at 129.54 125.73 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(at 30.48 25.4 0)
-		(effects
-			(font
-				(size 1.524 1.524)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "768b2459-e8fe-41a3-be01-277341a39aa5")
+		(property "Reference" "#PWR05012"
+			(at 129.54 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "867c334c-f4f6-405e-8968-ab0ca26ba581")
+		(property "Value" "+3V3"
+			(at 129.54 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8483dea0-94bb-46c0-a28b-5f3937a73bfe")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR05012")
+					(unit 1)
+				)
+			)
+		)
 	)
-	(text "U5001 = left, U5002 = right, seen from behind the robot\n(looking at the board face)."
+	(symbol
+		(lib_id "JLCImport:IRM-H638T")
+		(at 152.4 88.9 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(at 127 160.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7c5fbe08-13e2-4092-b27c-18e296714655")
+		(property "Reference" "U5001"
+			(at 154.94 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
-			(justify left bottom)
 		)
-		(uuid "ed8c73c3-f345-4ed1-907e-5244ac2ce849")
+		(property "Value" "IRM-H638T/TR2"
+			(at 154.94 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:IRM-H638T"
+			(at 152.4 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://en.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/DMO-0000004-IRM-H6XX-TR2_Series_Datasheet_V4.pdf"
+			(at 152.4 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "38 kHz IR receiver, top-looking SMD (lens on the top face); output has an internal pull-up"
+			(at 152.4 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C91447"
+			(at 152.4 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "09080073-8421-41d7-a6a1-a46b4cc6405a")
+		)
+		(pin "2"
+			(uuid "87012ed1-708d-464e-b4d6-a79bc44155be")
+		)
+		(pin "3"
+			(uuid "960f26b8-66eb-41f2-ab06-ced850f5fe25")
+		)
+		(pin "4"
+			(uuid "aed5f422-c636-4e18-bfe6-f159954c3ff5")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "U5001")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
@@ -3366,22 +2968,12 @@
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "H5001")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 76.2 154.94) (xy 76.2 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c06e4ef5-4bf8-4854-b97f-8c5070f72597")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3454,8 +3046,444 @@
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR5013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 143.51 137.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "943f1248-b2d9-4c1e-b1ff-4a7750f32b46")
+		(property "Reference" "#PWR5010"
+			(at 143.51 137.16 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 143.51 142.24 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "433b85d6-4b0a-4ca6-b6f9-a29458602b85")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR5010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 129.54 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "96fd1738-41a1-4151-a664-85062bd9dc73")
+		(property "Reference" "C5001"
+			(at 132.08 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF/10V"
+			(at 132.08 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 129.54 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF, close to the pins)"
+			(at 129.54 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 129.54 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dceb30ac-58e4-4fad-a052-e05141d1715d")
+		)
+		(pin "2"
+			(uuid "bc97cc83-3c7d-49f7-b5e7-947d7e5da3f5")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "C5001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 143.51 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "97b4cd01-9fe5-4cc6-bc81-ac2627ab620a")
+		(property "Reference" "#PWR5007"
+			(at 143.51 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 143.51 101.6 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1b451ba4-dfee-4aac-b252-b8265bd7c761")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR5007")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 129.54 90.17 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9c033a9e-b9b9-4fe4-ba86-30804c4d87f3")
+		(property "Reference" "R5001"
+			(at 127.508 91.694 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 126.746 89.154 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 129.54 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
+			(at 129.54 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 129.54 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "adbe695e-eeb4-4ab8-b220-ec354f9dac24")
+		)
+		(pin "2"
+			(uuid "1b6623d9-f803-444f-ab67-f5509d3699d9")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "R5001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 129.54 130.81 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c9aafe51-08a4-4cb6-bf3e-49fdf1642c71")
+		(property "Reference" "R5002"
+			(at 127.508 132.588 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 126.746 130.048 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 129.54 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
+			(at 129.54 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 129.54 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2674a1cf-829a-40cd-a8eb-1d1042a22e5a")
+		)
+		(pin "2"
+			(uuid "64b10272-6dde-45f3-8ee7-089a4033917d")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "R5002")
 					(unit 1)
 				)
 			)
@@ -3532,111 +3560,12 @@
 		)
 		(instances
 			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "H5002")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 91.44 154.94) (xy 91.44 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05f998de-4951-4d6c-89bc-801784474ecd")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 91.44 157.48 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "06478c7d-6837-488f-a753-2c4b982005c0")
-		(property "Reference" "#PWR5014"
-			(at 91.44 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 91.44 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 91.44 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 91.44 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3c0a2632-ba72-44c6-bc72-f6995dacf3e1")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/8c2f6e1a-4d7b-4f3e-a9c5-1b2d3e4f5a61"
-					(reference "#PWR5014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "Mounting: 2x M2 (pads to GND)"
-		(exclude_from_sim no)
-		(at 73.66 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8d096893-a4b9-40ee-93d9-337aaaa24d60")
 	)
 	(sheet_instances
 		(path "/"

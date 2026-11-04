@@ -4726,7 +4726,7 @@
 		)
 		(uuid "d81821d6-ed32-40c1-ab59-178d428fad6f")
 	)
-	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 not connected (PA10 drives the right bumper LED), 6 PE6, 7 not connected (PA8 is the battery sense), 8 PE10 (ADC capable), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
+	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 not connected (PA10 drives the right bumper LED), 6 PE6, 7 not connected (PA8 is the battery sense), 8 not connected (PE10 is the main fan ID), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
 		(exclude_from_sim no)
 		(at 148.59 129.54 0)
 		(effects
@@ -4976,6 +4976,10 @@
 		(uuid "59d0814b-df94-4b2e-b4c9-2eb227fae203")
 	)
 	(no_connect
+		(at 177.8 168.91)
+		(uuid "73204cdd-c580-452f-86cf-89a294c488fc")
+	)
+	(no_connect
 		(at 45.72 161.29)
 		(uuid "8b906948-a0f3-428f-b3c5-fecbf5876c10")
 	)
@@ -5026,16 +5030,6 @@
 			(type default)
 		)
 		(uuid "0a8ebefa-17f5-45fd-8ef0-d6951d7acbff")
-	)
-	(wire
-		(pts
-			(xy 177.8 168.91) (xy 194.31 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c24fdb3-e3e6-409e-bebe-2cf80735f638")
 	)
 	(wire
 		(pts
@@ -7157,16 +7151,6 @@
 		)
 		(uuid "af3c05eb-5d45-40ce-8c46-55e191f3360b")
 	)
-	(label "SPARE-PE10"
-		(at 237.49 57.15 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "bb22e9ea-1e22-4a82-982a-b114314d9c45")
-	)
 	(label "STM32-SWCLK"
 		(at 71.12 62.23 0)
 		(effects
@@ -7176,16 +7160,6 @@
 			(justify left bottom)
 		)
 		(uuid "bbf39fd1-5436-45f9-adf9-21b20030109e")
-	)
-	(label "SPARE-PE10"
-		(at 194.31 168.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c181a33d-584a-40b9-9981-5e0780a074cf")
 	)
 	(label "SPARE-PE2"
 		(at 229.87 36.83 0)
@@ -7584,6 +7558,17 @@
 			(justify right)
 		)
 		(uuid "57531c5e-00df-4895-932f-8011a432dd6a")
+	)
+	(hierarchical_label "MAIN-FAN-ID"
+		(shape input)
+		(at 237.49 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5d73622a-d691-44c6-82cb-dcc87bff1830")
 	)
 	(hierarchical_label "SIDE-BRUSH-CURRENT-ADC"
 		(shape input)

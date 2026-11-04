@@ -528,7 +528,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - dropped: CM4/CM5, SD card, M.2 + its buck, MIPI cameras, speaker amp (no buzzer; LEDs for debug), water pump, front illumination, the phone's dedicated 5 V buck, the board fan (the phone stays cool), the left side-proximity sensor (OOMWOO One has a right one only)
 - kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
 - the six mounting standoffs (MP1-MP6) moved from the removed M.2 sheet to the POWER sheet
-- spare STM32 pins (2026-10-28): PA8 (battery sense since 2026-11-02), PA9 (swapped with PE10 on 2026-11-03: PE10 is the spare now), PA10 (right bumper LED since 2026-11-03), PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
+- spare STM32 pins (2026-10-28): PA8 (battery sense since 2026-11-02), PA9 (swapped with PE10 on 2026-11-03: PE10 was the spare, then became the main fan ID), PA10 (right bumper LED since 2026-11-03), PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
   - the LiDAR rail enable joined ~VMOT-14V4-EN (PE10, PA9 since 2026-11-03): the LiDAR is on whenever the motor rail is (PD9 freed)
   - IMU FSYNC and INT2 left the MCU (PD4, PD7 freed); FSYNC keeps a 100k pull-down (R211). The IMU is leadless: probe INT2 on its 10k pull-up R92 (test pad TP1 removed 2026-11-02) and FSYNC on R211. AP_AD0 is pulled low by R217 (10k), so the IMU answers at I2C address 0x68; probe AD0 on R217. Run a wire to a spare pin if INT2 or FSYNC is needed
   - one shared open-drain sensor interrupt (INT-SENSORS, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
@@ -543,7 +543,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-02). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 not connected (PA10 drives the right bumper LED since 2026-11-03), 6 PE6, 7 not connected (PA8 is the battery sense since 2026-11-02), 8 PE10 (ADC capable; was PA9 until 2026-11-03), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
+- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-02). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 not connected (PA10 drives the right bumper LED since 2026-11-03), 6 PE6, 7 not connected (PA8 is the battery sense since 2026-11-02), 8 not connected (PE10 is the main fan ID since 2026-11-03; was PA9 until then), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
 - sensor rail switch (2026-11-01): one AO3401 (Q16) from VMCU-3V3 to VSENS-3V3. PB10 (~VSENS_3V3_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VMCU-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VMCU-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
@@ -602,6 +602,18 @@ The DRV8870s limit current at I = VREF / (10 × R_ISEN), with VREF tied to 3.3 V
 
 The shunt only carries current while the driver drives, not while it chops, so a stalled motor heats it less than the table shows. Firmware still stops a motor on sustained overcurrent (ADC on each shunt).
 
+### Main fan connectors (v1, 2026-11-03)
+
+Three footprints on the same nets (VMOT-14V4, GND, MAIN-FAN-FB on PE9, MAIN-FAN-PWM on PD1); fit one:
+- MAIN_FAN1, fitted: Molex Micro-Fit 3.0 2x2 vertical 43045-0412 (C277721, 8.5 A): 1 VCC, 2 GND, 3 FG, 4 PWM. MSD-G fan (Dreame X50 Ultra / Master, 20 kPa, 4.2 A at 14.4 V, 6 A blocked at 16.8 V). The fan harness uses LHE MX3.0 numbering: check it against Molex's before the first power-up
+- MAIN_FAN2, not fitted: one 2.0 mm 5-position footprint (JLCImport:FAN_PA-PH_1x05_P2.00mm_Vertical, PA pads with 1.0 mm holes) for a JST PA B05B-PASK-1 (C160282), PH B5B-PH-K, or PH B4B-PH-K in pins 2-5: 1 ID, 2 FG, 3 PWM, 4 GND, 5 VCC. The 4-pin PH pinout (FG, PWM, GND, VCC) is the 5-pin one without ID. Roborock BL24131616 / 22N704V160 (PA), BL24131607 (PH 5), and the PH 4-pin fans (Roborock S7/S8, Dreame L10/L20 ...)
+- MAIN_FAN3, not fitted: JST PA B06B-PASK-1 (C160281): 1 VCC, 2 VCC, 3 GND, 4 GND, 5 PWM, 6 FG. Roborock Saros 20 BL27302101
+- Fan ID (MAIN_FAN2 pin 1): R223 10k 1% pull-up to VMCU-3V3 + C180 100 nF, to PE10 (ADC): 22k reads ~2.27 V, 20k ~2.20 V, 5 Ω ~0 V, no ID (4-pin fan, or Micro-Fit/PA6 fan) 3.3 V. Firmware can pick the fan's PWM curve and current limits from it. PE10 was the J1 pin 8 spare
+- the motor rail switch has two AO4407C in parallel (Q1, Q37, 10 Ω gate resistors R36/R222 from VMOT-SW-G) for the higher fan current: ~7.5 A normal is ~0.25 W in each
+- the PCB engineer sizes the fan traces for ~6 A
+- Q14 is in series with all battery current when off the dock. It was an AOD407 (68 mΩ: ~2 W at 5 A, ~4-5 W at 7.5 A); since 2026-11-03 it is two AO4407C in parallel (Q14, Q38), ~0.22 W each at 7.5 A. Gate = DC_IN, S = VBAT-14V4, D = P+/C+ as before. Vds: about -10 V while charging, up to ~-24 V in a TVS-clamped plug-in surge; Vgs: up to ~+24 V in that surge (AO4407C: -30 V, ±25 V). Q12 stays AOD407: it is the SLM6900 buck switch, where gate charge matters more than on-resistance
+- on the dock Q14/Q38 are off and the whole load runs through D14 (SS56, 5 A): firmware keeps the fan and motors off until DC_IN is gone
+
 ### Component height (v1)
 
 Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
@@ -647,7 +659,7 @@ Power rails (current schematic):
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
 | USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
 | VUSONIC-14V4 (≈ 14.5 V) | MT3608 boost | carpet sensor | with VSENS-5V-USB |
-| VMOT-14V4 | VBAT-14V4 via Q1 AO4407C | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
+| VMOT-14V4 | VBAT-14V4 via Q1 + Q37 AO4407C (parallel) | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
 | VM-5V-LIDAR | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |
 | VM-5V-WATER-PUMP | VCC-5V-REG via Q8 AO3401 | water pump | WD_OK AND WATER-PUMPU-CTRL (low = on) |
 
@@ -661,7 +673,7 @@ RC charge-pump watchdog (WATCHDOG sheet):
 Each gated rail is WD_OK AND an MCU enable, without logic ICs:
 - an AO3400 N-FET has its gate on WD_OK and its source on the MCU GPIO; it pulls the rail P-FET's gate low only when WD_OK is high and the GPIO is low
 - a 100k pull-up to 3V3 on each GPIO keeps the rail off while the MCU pins float (reset, flashing)
-- VMOT-14V4: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). Q1 dissipates ~0.3-0.4 W at the ~5 A normal load; short ~13 A stall peaks are fine with copper under the drain. TODO measure the fan controller's input capacitance (inrush)
+- VMOT-14V4: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). Q1 and Q37 (parallel since 2026-11-03) dissipate ~0.25 W each at ~7.5 A normal (with the MSD-G fan); short ~13 A stall peaks are fine with copper under the drains. TODO measure the fan controller's input capacitance (inrush)
 - VM-5V-LIDAR: soft start R181 10k + C171 100 nF (≈1.5 ms on, ≈30 ms off) so the CM's 5 V doesn't dip
 - VM-5V-WATER-PUMP: no soft start, so the pump can be PWM-driven
 - PWM on an enable can only slow a gate-RC soft start; it can't soft-start a hard-switched FET
@@ -672,8 +684,8 @@ MOSFET line-up (consolidated 2026-09, 8 part numbers → 4):
 | --- | --- | --- | --- |
 | all N-FETs | AO3400 (FOSAN) | C20628874 | 30 V, Vgs ±12 V, Vth 0.65-1.5 V, SOT-23 |
 | P-FETs whose gate sees ≤ 5 V | AO3401 (FOSAN) | C20628875 | -30 V, Vgs ±12 V, SOT-23 |
-| battery-side high-side switches (Q1, Q13) | AO4407C (AOS) | C469397 | -30 V, Vgs ±25 V, 11.5 mΩ, SOIC-8 |
-| charger, 24 V DC_IN (Q12, Q14) | AOD407 | C6396162 | -60 V for hot-plug margin |
+| battery-side high-side switches (Q1, Q37, Q13, Q14, Q38) | AO4407C (AOS) | C469397 | -30 V, Vgs ±25 V, 11.5 mΩ, SOIC-8 |
+| charger buck switch, DC_IN (Q12) | AOD407 | C6396162 | -60 V for hot-plug margin, low gate charge |
 
 Any gate or drain that can see VBAT-14V4 (up to 16.8 V) needs Vds ≥ 30 V, and a gate swing that large needs Vgs ≥ 20 V.
 

@@ -3154,6 +3154,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 123.19) (xy 135.89 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b59cc189-47f3-4cb0-aacb-5e4923b11679")
+	)
+	(wire
+		(pts
 			(xy 254 66.04) (xy 320.04 66.04)
 		)
 		(stroke
@@ -6817,6 +6827,16 @@
 				(justify right)
 			)
 		)
+		(pin "MAIN-FAN-ID" output
+			(at 87.63 123.19 0)
+			(uuid "9972f4ec-c97c-4cc9-949e-3bfa23967d47")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
@@ -7127,6 +7147,16 @@
 		(pin "MAIN-FAN-FB" input
 			(at 135.89 125.73 180)
 			(uuid "c21938ba-15b1-49b3-96cb-3063708f72c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MAIN-FAN-ID" input
+			(at 135.89 123.19 180)
+			(uuid "29f68adf-af7d-476d-a417-26cf3a1d22b2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7631,7 +7661,7 @@
 		(stroke
 			(width 0.1524)
 			(type solid)
-			(color 255 0 0 1)
+			(color 0 255 0 1)
 		)
 		(fill
 			(color 0 0 0 0)

@@ -8052,7 +8052,7 @@
 		)
 		(uuid "ab7dece4-24de-4f54-83d7-cbf99fa6a482")
 	)
-	(text "MOTOR POWER RAIL 14.4V\n\n- on/off motor power, no soft ramp\n- set VMOT-14V4-EN LOW to enable power\n  - floating (MCU flash/reset) disables power\n- WD_OK LOW shuts power off\n\nVMOT-14V4 AO4407C\n- ~5 A normal load is ~0.3-0.4 W\n- short stall peaks (~13 A) fine with copper under the drain\n- Vgs +/-25 V, no gate divider needed\n"
+	(text "MOTOR POWER RAIL 14.4V\n\n- on/off motor power, no soft ramp\n- set VMOT-14V4-EN LOW to enable power\n  - floating (MCU flash/reset) disables power\n- WD_OK LOW shuts power off\n\nVMOT-14V4: Q1 + Q37 AO4407C in parallel\n- ~7.5 A normal (with the MSD-G fan) is ~0.25 W each\n- short stall peaks (~13 A) fine with copper under the drain\n- Vgs +/-25 V, no gate divider needed\n"
 		(exclude_from_sim no)
 		(at 334.01 69.85 0)
 		(effects
@@ -8964,6 +8964,16 @@
 	)
 	(wire
 		(pts
+			(xy 391.16 43.18) (xy 391.16 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b5027cf-d877-4c51-b0df-777b31bac6f8")
+	)
+	(wire
+		(pts
 			(xy 304.8 177.8) (xy 304.8 180.34)
 		)
 		(stroke
@@ -9281,6 +9291,16 @@
 			(type default)
 		)
 		(uuid "48e639f2-774f-4e57-937b-1e0f83047ce9")
+	)
+	(wire
+		(pts
+			(xy 370.84 43.18) (xy 370.84 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "492ffa1c-0f47-47e6-aa9d-2c1afb72001c")
 	)
 	(wire
 		(pts
@@ -9701,6 +9721,16 @@
 			(type default)
 		)
 		(uuid "742df657-d522-42bc-acd6-75d16c074476")
+	)
+	(wire
+		(pts
+			(xy 386.08 44.45) (xy 391.16 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7464e493-8188-4da5-8fb8-11816138be4c")
 	)
 	(wire
 		(pts
@@ -10474,6 +10504,16 @@
 	)
 	(wire
 		(pts
+			(xy 381 59.69) (xy 386.08 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c977862b-e2ae-4a9d-b03b-9d5c1fcd6415")
+	)
+	(wire
+		(pts
 			(xy 306.07 55.88) (xy 306.07 59.69)
 		)
 		(stroke
@@ -10701,6 +10741,16 @@
 			(type default)
 		)
 		(uuid "eb970e05-23df-49d6-a40a-3c25ea9ab0d8")
+	)
+	(wire
+		(pts
+			(xy 370.84 44.45) (xy 375.92 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecbece43-4b70-4891-8966-a6f0a83aad04")
 	)
 	(wire
 		(pts
@@ -11011,6 +11061,26 @@
 			(justify right bottom)
 		)
 		(uuid "013943d3-47d4-4070-9299-342b4fd4e6d9")
+	)
+	(label "VMOT-SW-G"
+		(at 386.08 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "65b8002c-d62b-4815-8dda-b3ef63f9daea")
+	)
+	(label "VMOT-SW-G"
+		(at 306.07 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c4f43587-6d93-4ffd-8b11-accdcd435477")
 	)
 	(label "PWR-LATCH"
 		(at 130.81 190.5 0)
@@ -15666,6 +15736,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VPP")
+		(at 391.16 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "226da6ac-8d1f-474b-b5d2-a6f8a3b261e1")
+		(property "Reference" "#PWR07831"
+			(at 391.16 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VMOT-14V4"
+			(at 391.16 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 391.16 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 391.16 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VM-VBAT\""
+			(at 391.16 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "46ab7904-f39f-4e1c-b075-9c5698303537")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
+					(reference "#PWR07831")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
 		(at 88.9 151.13 0)
 		(unit 1)
@@ -17758,6 +17905,174 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_US_2")
+		(lib_id "Device:R_US")
+		(at 381 55.88 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2ca1c650-e403-4f93-b674-a42472d14775")
+		(property "Reference" "R222"
+			(at 378.46 55.88 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10"
+			(at 383.54 55.245 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 379.984 55.626 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 381 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 381 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907091"
+			(at 381 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3ee96c3f-b1bb-4b09-8fbb-fa4cb2c2c5e2")
+		)
+		(pin "1"
+			(uuid "a2cde651-1b01-4949-b219-a68c1c195d37")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
+					(reference "R222")
 					(unit 1)
 				)
 			)
@@ -31091,6 +31406,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VPP")
+		(at 370.84 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "82abf623-724b-4f17-86eb-c1b9ae9fbb1c")
+		(property "Reference" "#PWR07830"
+			(at 370.84 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VBAT-14V4"
+			(at 370.84 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 370.84 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 370.84 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"BAT-VCC\""
+			(at 370.84 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d290147-961c-4bac-b9a0-26a5ae7cd817")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
+					(reference "#PWR07830")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Library:C_0603")
 		(at 71.12 77.47 0)
 		(unit 1)
@@ -42503,6 +42895,214 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "#PWR0650")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:AO4407C")
+		(at 381 46.99 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ca6051dd-773a-4349-a2fe-bfbd4d92bea0")
+		(property "Reference" "Q37"
+			(at 380.746 38.608 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AO4407C"
+			(at 380.746 40.894 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 381 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Alpha---Omega-Semicon-AO4407C_C469397.pdf"
+			(at 381 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-30V -14A P-channel MOSFET, 11.5mOhm@-10V, Vgs +/-25V, SOIC-8 (S=1-3, G=4, D=5-8)"
+			(at 381 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C469397"
+			(at 381 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Alpha & Omega Semicon"
+			(at 381 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "AO4407C"
+			(at 381 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 381 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 381 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 381 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 381 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 381 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 381 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 381 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "89d7d761-5d75-4405-a513-0d5d28fbd2a1")
+		)
+		(pin "2"
+			(uuid "d464d1dd-64c2-4083-9156-4be14bcd8f15")
+		)
+		(pin "3"
+			(uuid "a0981990-ec44-4cc6-9c88-d7bddc230b55")
+		)
+		(pin "4"
+			(uuid "5ba54087-71b6-4ed4-b84d-227203888f82")
+		)
+		(pin "5"
+			(uuid "8341c6e5-1390-4d78-88b0-c92a1c05554f")
+		)
+		(pin "6"
+			(uuid "3b21f964-4924-43b7-b772-3652aa1ff2f8")
+		)
+		(pin "7"
+			(uuid "274e0d9c-c37d-4693-ae2d-6aeb37e6c865")
+		)
+		(pin "8"
+			(uuid "16b12bd6-9f8a-4bb2-b1fd-5842873f5ec5")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
+					(reference "Q37")
 					(unit 1)
 				)
 			)

@@ -512,18 +512,6 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy -1.524 0.508) (xy -1.524 -0.508) (xy 0 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
 						(xy -2.54 0) (xy 0 0) (xy 0 -2.54) (xy 2.54 -2.54) (xy 2.54 -0.762)
 					)
 					(stroke
@@ -556,6 +544,18 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy -1.524 0.508) (xy -1.524 -0.508) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
@@ -946,7 +946,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "RC CHARGE-PUMP WATCHDOG\n\nFirmware toggles WDI in software (50-1000 Hz, ~50% duty) only while the control loop is healthy.\nNever drive WDI from a timer/PWM: a timer keeps running after the CPU hangs.\nEach falling edge on WDI pulls the Q24 gate low through C169 and tops up C170 via R178.\nWD_OK ~2.7 V while toggling. WDI stuck high, low or floating: <1 V in ~100 ms, <0.4 V in ~190 ms\n(10 uF nominal; DC-bias derating shortens this). WD_OK starts at 0 V at power-up (fail-safe).\nWD_OK drives N-FET gates only (14.4 V rail switch, LiDAR incl. laser): no resistive loads.\nWDI pin: high-Z at reset, no pull-down."
+	(text "RC CHARGE-PUMP WATCHDOG\n\n- WD_OK active HIGH\n- WDI HIGH->LOW transition pets the dog\n\nFirmware toggles WDI in software (50-1000 Hz, ~50% duty) only while the control loop is healthy.\nNever drive WDI from a timer/PWM: a timer keeps running after the CPU hangs.\nEach falling edge on WDI pulls the Q24 gate low through C169 and tops up C170 via R178.\nWD_OK ~2.7 V while toggling. WDI stuck high, low or floating: <1 V in ~100 ms, <0.4 V in ~190 ms\n(10 uF nominal; DC-bias derating shortens this). WD_OK starts at 0 V at power-up (fail-safe).\nWD_OK drives N-FET gates only (14.4 V rail switch, LiDAR incl. laser): no resistive loads.\nWDI pin: high-Z at reset, no pull-down."
 		(exclude_from_sim no)
 		(at 70.104 126.746 0)
 		(effects

@@ -4705,13 +4705,14 @@
 		)
 		(uuid "684d6a7d-c5ed-4b75-b45d-a544822f7292")
 	)
-	(text "TTL-234X-3V3 cable: 1 GND, 4 TXD -> STM32-RX, 5 RXD <- STM32-TX\n2 CTS#, 3 VCC, 6 RTS# not connected"
+	(text "TTL-234X-3V3 cable: 1 GND, 4 TXD -> STM32-RX, 5 RXD <- STM32-TX\n2 CTS#, 3 VCC, 6 RTS# not connected\n\nAll debug, spare headers are vertical, not right angle"
 		(exclude_from_sim no)
-		(at 62.484 183.134 0)
+		(at 24.638 179.832 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left top)
 		)
 		(uuid "7e37740c-9b46-4fe7-bea5-515dde47faca")
 	)
@@ -4726,7 +4727,7 @@
 		)
 		(uuid "d81821d6-ed32-40c1-ab59-178d428fad6f")
 	)
-	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 not connected (PA10 drives the right bumper LED), 6 PE6, 7 not connected (PA8 is the battery sense), 8 not connected (PE10 is the main fan ID), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
+	(text "J1 spare I/O: 0.1in 2x6 header (fitted).\n1 VMCU-3V3 (MCU rail), 2 VSENS-5V-USB, 11/12 GND. No I2C (I2C4 runs at 1 MHz, shared with the ToF, side sensor and IMU).\n3/4 UART PC10 TX / PC11 RX (UART4 or USART3). 5 not connected (PA10 drives the right bumper LED), 6 PE6, 7 not connected (PA8 is the battery sense), 8 PE10 (ADC capable), 9 PD4, 10 PE2.\nIMU AD0/INT2/FSYNC: probe on R217/R92/R211 (IMU sheet). SWO (PB3) on JTAG1 is a spare when not tracing."
 		(exclude_from_sim no)
 		(at 148.59 129.54 0)
 		(effects
@@ -4976,10 +4977,6 @@
 		(uuid "59d0814b-df94-4b2e-b4c9-2eb227fae203")
 	)
 	(no_connect
-		(at 177.8 168.91)
-		(uuid "73204cdd-c580-452f-86cf-89a294c488fc")
-	)
-	(no_connect
 		(at 45.72 161.29)
 		(uuid "8b906948-a0f3-428f-b3c5-fecbf5876c10")
 	)
@@ -5190,6 +5187,16 @@
 			(type default)
 		)
 		(uuid "218c1002-2f40-4de7-bb4e-89ceddaa9e42")
+	)
+	(wire
+		(pts
+			(xy 177.8 168.91) (xy 194.31 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "222de236-1e7b-450c-bd76-58e6afc3cb03")
 	)
 	(wire
 		(pts
@@ -6981,6 +6988,16 @@
 		)
 		(uuid "ffebd015-015a-4f01-ab2c-1f21327d07e3")
 	)
+	(label "SPARE-PE10"
+		(at 194.31 168.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "00121b64-509d-42a7-b7e6-e1f5327224fd")
+	)
 	(label "STM32-SWCLK"
 		(at 67.31 168.91 0)
 		(effects
@@ -7000,6 +7017,16 @@
 			(justify right bottom)
 		)
 		(uuid "1ef6820d-3552-4ac0-92e8-72f1b52ab035")
+	)
+	(label "SPARE-PE10"
+		(at 237.49 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2c589fad-2cee-4cf3-bd1b-5de9de3e5c75")
 	)
 	(label "LDR"
 		(at 73.5813 100.33 0)
@@ -7559,17 +7586,6 @@
 		)
 		(uuid "57531c5e-00df-4895-932f-8011a432dd6a")
 	)
-	(hierarchical_label "MAIN-FAN-ID"
-		(shape input)
-		(at 237.49 57.15 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5d73622a-d691-44c6-82cb-dcc87bff1830")
-	)
 	(hierarchical_label "SIDE-BRUSH-CURRENT-ADC"
 		(shape input)
 		(at 168.91 102.87 0)
@@ -7625,7 +7641,7 @@
 		)
 		(uuid "78869c50-0144-45fc-9f89-56fa28df47bd")
 	)
-	(hierarchical_label "LiDAR-M-CTRL"
+	(hierarchical_label "LIDAR-MOTOR-CTRL"
 		(shape output)
 		(at 168.91 31.75 0)
 		(effects

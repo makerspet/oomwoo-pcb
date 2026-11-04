@@ -25,7 +25,7 @@ ZX-SH1.0-4PLT (C7430453): JST SH compatible, 1.0 mm pitch, SMD, vertical (top en
 
 | Pin | Signal |
 | --- | --- |
-| 1 | VLED: 5 V from the main board (VCC-5V-REG) |
+| 1 | VLED-5V: 5 V from the main board (VSENS-5V-USB) |
 | 2 | LED cathode, switched on the main board |
 | 3 | OUT: phototransistor collector, to an ADC pin |
 | 4 | GND: phototransistor emitter |

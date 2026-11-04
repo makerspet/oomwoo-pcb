@@ -9,7 +9,7 @@ Rev 1 had a VL6180 with a 2.8 V regulator and a TSOP38238. The VL6180 is NRND at
 - U3001: VL53L0X (VL53L0CXV0DH/1, LCSC C91199, ~$1.63): single-zone time-of-flight distance sensor, runs from 3.3 V directly.
   - It reads poorly below ~3 cm, so the board sits a little recessed in the robot's side.
   - 10 µF + 100 nF (C3001/C3002) at its supply pins.
-  - R3001 (10k) pulls XSHUT up and R3002 (10k) pulls up GPIO1 (open drain, the interrupt); the datasheet asks for both, and the main board has none on these lines. The I2C pull-ups (2.2k) are on the main board.
+  - R3001 (10k) pulls XSHUT up; the main board has none on that line. GPIO1 (open drain, the interrupt) has no pull-up here since 2026-11-03: it joins the shared INT-SENSORS line on the main board, pulled up there by R61 (47k), so R3002 was in parallel with it and is removed. The I2C pull-ups (2.2k) are on the main board too.
   - Firmware: the I/Os run at 3.3 V (= AVDD), so set the ST API to 2V8 I/O mode (the API default is 1V8).
 - U3002: Everlight IRM-H638T/TR2 (C91447, ~$0.13), a 38 kHz top-looking IR receiver (the lens is on its top face), the same part as the dock's U1202. It sees the dock's beacon when the robot passes alongside it. Supply filter per the datasheet: R3003 100 Ω + C3003 10 µF. The output has an internal pull-up.
 

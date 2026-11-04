@@ -6308,161 +6308,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "oomwoo-kicad-altium-import:GND_POWER_GROUND"
-			(power global)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "GND"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name 'GND'"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "power-flag"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "GND_POWER_GROUND_0_0"
-				(polyline
-					(pts
-						(xy -2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -3.302) (xy 1.778 -3.302)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -4.064) (xy 1.016 -4.064)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 -4.826) (xy 0.254 -4.826)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 0 0 0)
-					(length 0)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:PWR_FLAG"
 			(power global)
 			(pin_numbers
@@ -6698,6 +6543,121 @@
 			(symbol "VPP_1_1"
 				(pin power_in line
 					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
 					(length 0)
 					(name ""
 						(effects
@@ -9604,7 +9564,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 48.26 102.87 0)
 		(unit 1)
 		(body_style 1)
@@ -9658,7 +9618,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 48.26 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -9669,7 +9629,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "d6ac799c-78e3-4d92-807e-5de3dd3a313b")
 		)
 		(instances
@@ -10294,7 +10254,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 64.77 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -10346,8 +10306,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 64.77 158.75 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10356,7 +10317,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "1c7ebfd2-2d52-4ab7-97ad-b9215180930a")
 		)
 		(instances
@@ -12741,7 +12702,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 143.51 161.29 0)
 		(unit 1)
 		(body_style 1)
@@ -12795,7 +12756,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 143.51 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -12806,7 +12767,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "cd886e7f-7252-4989-9275-4316ba9eacb7")
 		)
 		(instances
@@ -13422,7 +13383,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 185.42 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -13476,7 +13437,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 185.42 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -13487,7 +13448,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "21c786dd-71ec-43b7-b32d-61528041e70d")
 		)
 		(instances
@@ -13500,7 +13461,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 85.09 46.99 0)
 		(unit 1)
 		(body_style 1)
@@ -13554,7 +13515,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 85.09 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -13565,7 +13526,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "fd29cfb6-de99-42ba-aad9-ecf176579cf0")
 		)
 		(instances
@@ -13670,7 +13631,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 109.22 161.29 0)
 		(unit 1)
 		(body_style 1)
@@ -13724,7 +13685,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 109.22 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -13735,7 +13696,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "253b2cd9-9cfc-4da7-956f-910742971779")
 		)
 		(instances
@@ -15146,7 +15107,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 191.77 113.03 0)
 		(mirror y)
 		(unit 1)
@@ -15199,8 +15160,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 191.77 113.03 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15209,7 +15171,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "c97940a4-e600-4742-8e17-8202e85c315a")
 		)
 		(instances
@@ -15940,7 +15902,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 35.56 161.29 0)
 		(unit 1)
 		(body_style 1)
@@ -15992,8 +15954,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 35.56 161.29 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16002,7 +15965,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "739174d2-92b5-4d50-bfb2-bad759b91b13")
 		)
 		(instances
@@ -17055,7 +17018,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 198.12 210.82 0)
 		(unit 1)
 		(body_style 1)
@@ -17109,7 +17072,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 198.12 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -17120,7 +17083,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "483410b9-c750-450a-b32e-0d9624148e2f")
 		)
 		(instances
@@ -17247,7 +17210,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 144.78 236.22 0)
 		(mirror y)
 		(unit 1)
@@ -17300,8 +17263,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 144.78 236.22 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17310,7 +17274,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "ce729e71-6ebe-4ec3-a070-01b57370bc07")
 		)
 		(instances
@@ -18167,7 +18131,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 123.19 191.77 0)
 		(mirror y)
 		(unit 1)
@@ -18220,8 +18184,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 123.19 191.77 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18230,7 +18195,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "bb1e1a48-e99d-4b9c-9655-8c52d987f568")
 		)
 		(instances
@@ -18542,7 +18507,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 35.56 187.96 0)
 		(unit 1)
 		(body_style 1)
@@ -18596,7 +18561,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 35.56 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -18607,7 +18572,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "be20388c-e4ef-4c4f-be71-0a9a18aa712b")
 		)
 		(instances
@@ -20610,7 +20575,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 168.91 236.22 0)
 		(mirror y)
 		(unit 1)
@@ -20663,8 +20628,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 168.91 236.22 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20673,7 +20639,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "d530262d-3e47-4d1e-8440-7d6068b130df")
 		)
 		(instances
@@ -22600,7 +22566,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 204.47 210.82 0)
 		(unit 1)
 		(body_style 1)
@@ -22654,7 +22620,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 204.47 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -22665,7 +22631,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "f470bc12-adef-408e-9d7e-aa119e1eb58f")
 		)
 		(instances
@@ -22810,7 +22776,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 67.31 54.61 0)
 		(unit 1)
 		(body_style 1)
@@ -22864,7 +22830,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 67.31 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -22875,7 +22841,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "66603a88-3bab-4e54-ae19-8a0b1e4fea55")
 		)
 		(instances
@@ -23175,7 +23141,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 43.18 207.01 0)
 		(mirror y)
 		(unit 1)
@@ -23228,8 +23194,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 43.18 207.01 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23238,7 +23205,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "faf11018-68f9-42c8-a476-3b37e94d0ae4")
 		)
 		(instances
@@ -23739,7 +23706,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 101.6 161.29 0)
 		(unit 1)
 		(body_style 1)
@@ -23793,7 +23760,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 101.6 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -23804,7 +23771,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "6dae320c-9412-4fb2-b0ab-a98f73370727")
 		)
 		(instances
@@ -23817,7 +23784,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 317.5 68.58 0)
 		(mirror y)
 		(unit 1)
@@ -23870,8 +23837,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 317.5 68.58 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23880,7 +23848,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "bb86cd26-afb9-4218-82d5-4e5c66614ce7")
 		)
 		(instances
@@ -24570,7 +24538,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 77.47 200.66 0)
 		(mirror y)
 		(unit 1)
@@ -24623,8 +24591,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 77.47 200.66 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24633,7 +24602,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "6876753e-5ea1-462a-bf7b-3c78feeb92c1")
 		)
 		(instances
@@ -24738,7 +24707,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 170.18 62.23 0)
 		(unit 1)
 		(body_style 1)
@@ -24792,7 +24761,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 170.18 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -24803,7 +24772,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "8730fdf1-bf77-402a-9171-2a0827dd98d7")
 		)
 		(instances
@@ -24816,7 +24785,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 54.61 49.53 0)
 		(unit 1)
 		(body_style 1)
@@ -24870,7 +24839,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 54.61 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -24881,7 +24850,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "66d3c258-d824-4c86-a145-c6ececd490b1")
 		)
 		(instances
@@ -24986,7 +24955,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 135.89 161.29 0)
 		(unit 1)
 		(body_style 1)
@@ -25040,7 +25009,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 135.89 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -25051,7 +25020,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "a5b4c53b-fe8a-4f4d-8706-cb3601495ffc")
 		)
 		(instances
@@ -25064,7 +25033,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 264.16 107.95 0)
 		(mirror y)
 		(unit 1)
@@ -25117,8 +25086,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 264.16 107.95 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25127,7 +25097,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "57bf8e92-421c-42d7-8518-1d7f752b06aa")
 		)
 		(instances
@@ -26569,7 +26539,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 160.02 106.68 0)
 		(unit 1)
 		(body_style 1)
@@ -26623,7 +26593,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 160.02 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -26634,7 +26604,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "568c4653-5e0e-429e-a817-162943c386e8")
 		)
 		(instances

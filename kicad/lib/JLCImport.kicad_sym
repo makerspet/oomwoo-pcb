@@ -5952,8 +5952,12 @@
 		(embedded_fonts no)
 	)
 	(symbol "AO3401"
+		(pin_numbers
+			(hide yes)
+		)
 		(pin_names
 			(offset 1.016)
+			(hide yes)
 		)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6190,7 +6194,7 @@
 					(type outline)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -7.62 0 0)
 				(length 2.54)
 				(name "G"
@@ -6208,7 +6212,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
 				(name "S"
@@ -6226,7 +6230,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
 				(name "D"
@@ -10580,6 +10584,197 @@
 				(stroke
 					(width 0.254)
 					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin unspecified line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "CL10A106KP8NNNC"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CL10A106KP8NNNC"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JLCImport:C0603"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A106KP8NNNC"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C19702"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Multilayer Ceramic Capacitors MLCC - SMD/SMT"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "CL10A106KP8NNNC_0_1"
+			(polyline
+				(pts
+					(xy -0.51 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.51 -2.03) (xy -0.51 2.03)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.51 2.03) (xy 0.51 -2.03)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 0.51 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
 				)
 				(fill
 					(type none)
@@ -19101,7 +19296,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 0 12.16 0)
+			(at 0 12.192 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19111,7 +19306,7 @@
 			)
 		)
 		(property "Value" "ICM-42607-P"
-			(at 0 -12.16 0)
+			(at 0 -12.192 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19200,13 +19395,13 @@
 		(symbol "ICM-42607-P_0_1"
 			(polyline
 				(pts
-					(xy 27.4321 -10.16) (xy 27.5312 -10.1503) (xy 27.6265 -10.1214) (xy 27.7143 -10.0744) (xy 27.7913 -10.0112)
-					(xy 27.8544 -9.9343) (xy 27.9014 -9.8464) (xy 27.9303 -9.7511) (xy 27.9401 -9.652) (xy 27.9303 9.7511)
-					(xy 27.9014 9.8464) (xy 27.8544 9.9343) (xy 27.7913 10.0112) (xy 27.7143 10.0744) (xy 27.6265 10.1214)
-					(xy 27.5312 10.1503) (xy 27.4321 10.16) (xy -27.5312 10.1503) (xy -27.6265 10.1214) (xy -27.7143 10.0744)
-					(xy -27.7913 10.0112) (xy -27.8544 9.9343) (xy -27.9014 9.8464) (xy -27.9303 9.7511) (xy -27.9401 9.652)
-					(xy -27.9303 -9.7511) (xy -27.9014 -9.8464) (xy -27.8544 -9.9343) (xy -27.7913 -10.0112) (xy -27.7143 -10.0744)
-					(xy -27.6265 -10.1214) (xy -27.5312 -10.1503) (xy -27.4321 -10.16) (xy 27.4321 -10.16)
+					(xy 27.432 -10.16) (xy 27.5311 -10.1503) (xy 27.6264 -10.1214) (xy 27.7142 -10.0744) (xy 27.7912 -10.0112)
+					(xy 27.8543 -9.9343) (xy 27.9013 -9.8464) (xy 27.9302 -9.7511) (xy 27.94 -9.652) (xy 27.9302 9.7511)
+					(xy 27.9013 9.8464) (xy 27.8543 9.9343) (xy 27.7912 10.0112) (xy 27.7142 10.0744) (xy 27.6264 10.1214)
+					(xy 27.5311 10.1503) (xy 27.432 10.16) (xy -27.5313 10.1503) (xy -27.6266 10.1214) (xy -27.7144 10.0744)
+					(xy -27.7914 10.0112) (xy -27.8545 9.9343) (xy -27.9015 9.8464) (xy -27.9304 9.7511) (xy -27.9402 9.652)
+					(xy -27.9304 -9.7511) (xy -27.9015 -9.8464) (xy -27.8545 -9.9343) (xy -27.7914 -10.0112) (xy -27.7144 -10.0744)
+					(xy -27.6266 -10.1214) (xy -27.5313 -10.1503) (xy -27.4322 -10.16) (xy 27.432 -10.16)
 				)
 				(stroke
 					(width 0.254)
@@ -19216,8 +19411,8 @@
 					(type background)
 				)
 			)
-			(pin unspecified line
-				(at -30.4801 7.62 0)
+			(pin passive line
+				(at -30.48 7.62 0)
 				(length 2.54)
 				(name "AP_SDO/AP_AD0"
 					(effects
@@ -19234,8 +19429,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at -30.4801 5.08 0)
+			(pin passive line
+				(at -30.48 5.08 0)
 				(length 2.54)
 				(name "RESV"
 					(effects
@@ -19252,8 +19447,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at -30.4801 2.54 0)
+			(pin passive line
+				(at -30.48 2.54 0)
 				(length 2.54)
 				(name "RESV"
 					(effects
@@ -19270,8 +19465,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at -30.4801 0 0)
+			(pin passive line
+				(at -30.48 0 0)
 				(length 2.54)
 				(name "INT1/INT"
 					(effects
@@ -19288,8 +19483,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at -30.4801 -2.54 0)
+			(pin power_in line
+				(at -30.48 -2.54 0)
 				(length 2.54)
 				(name "VDDIO"
 					(effects
@@ -19306,8 +19501,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at -30.4801 -5.08 0)
+			(pin power_in line
+				(at -30.48 -5.08 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -19324,8 +19519,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at -30.4801 -7.62 0)
+			(pin passive line
+				(at -30.48 -7.62 0)
 				(length 2.54)
 				(name "FSYNC"
 					(effects
@@ -19342,8 +19537,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 30.4801 -7.62 180)
+			(pin power_in line
+				(at 30.48 -7.62 180)
 				(length 2.54)
 				(name "VDD"
 					(effects
@@ -19360,8 +19555,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 30.4801 -5.08 180)
+			(pin passive line
+				(at 30.48 -5.08 180)
 				(length 2.54)
 				(name "INT2"
 					(effects
@@ -19378,8 +19573,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 30.4801 -2.54 180)
+			(pin passive line
+				(at 30.48 -2.54 180)
 				(length 2.54)
 				(name "RESV"
 					(effects
@@ -19396,8 +19591,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 30.4801 0 180)
+			(pin passive line
+				(at 30.48 0 180)
 				(length 2.54)
 				(name "RESV"
 					(effects
@@ -19414,8 +19609,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 30.4801 2.54 180)
+			(pin passive line
+				(at 30.48 2.54 180)
 				(length 2.54)
 				(name "AP_CS"
 					(effects
@@ -19432,8 +19627,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 30.4801 5.08 180)
+			(pin passive line
+				(at 30.48 5.08 180)
 				(length 2.54)
 				(name "AP_SCL/AP_SCLK"
 					(effects
@@ -19450,8 +19645,8 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 30.4801 7.62 180)
+			(pin passive line
+				(at 30.48 7.62 180)
 				(length 2.54)
 				(name "AP_SDA/AP_SDIO/AP_SDI"
 					(effects
@@ -21082,6 +21277,345 @@
 				(at 2.54 -7.62 90)
 				(length 2.54)
 				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "ITR9606-F_C3008416"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ITR9606-F_C3008416"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JLCImport:OPTO-TH_ITR9606-F"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C3008416.pdf"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "EVERLIGHT(亿光)"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ITR9606-F"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C3008416"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Photo Interrupter"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "ITR9606-F_C3008416_0_1"
+			(rectangle
+				(start -7.62 4.06)
+				(end 0.76 -4.32)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -7.62 2.54) (xy -4.32 2.54) (xy -4.32 -2.54) (xy -7.62 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -5.84 1.27) (xy -4.32 -1.27) (xy -2.54 1.27) (xy -5.84 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.29 -0.25) (xy -0.51 -2.03)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.29 -1.27) (xy -6.35 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.52 0.76) (xy 0.25 -1.02)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.51 -2.03) (xy -1.02 -1.02) (xy -1.52 -1.52) (xy -0.51 -2.03)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.25 -1.02) (xy -0.25 0) (xy -0.76 -0.51) (xy 0.25 -1.02)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start 1.78 4.066)
+				(end 7.62 -4.314)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 2.29) (xy 5.08 -2.29)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 -0.76) (xy 7.62 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 2.54) (xy 5.08 0.76)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 -2.54) (xy 6.86 -1.27) (xy 6.1 -2.29) (xy 7.62 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at -12.7 2.54 0)
+				(length 5.08)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 -2.54 0)
+				(length 5.08)
+				(name "C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 2.54 180)
+				(length 5.08)
+				(name "C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 -2.54 180)
+				(length 5.08)
+				(name "E"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -38526,6 +39060,7 @@
 	(symbol "WAFER-GH1_25-4PWB"
 		(pin_names
 			(offset 1.016)
+			(hide yes)
 		)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -38659,7 +39194,7 @@
 					(type background)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -5.08 5.08 0)
 				(length 2.54)
 				(name "1"
@@ -38677,7 +39212,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -5.08 2.54 0)
 				(length 2.54)
 				(name "2"
@@ -38695,7 +39230,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -5.08 0 0)
 				(length 2.54)
 				(name "3"
@@ -38713,7 +39248,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -5.08 -2.54 0)
 				(length 2.54)
 				(name "4"
@@ -38731,7 +39266,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 2.54 -7.62 90)
 				(length 2.54)
 				(name "5"
@@ -38749,7 +39284,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 2.54 10.16 270)
 				(length 2.54)
 				(name "6"

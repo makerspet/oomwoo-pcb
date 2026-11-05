@@ -1249,12 +1249,6 @@
 		(uuid "0ea0be09-0ff9-471c-a3c1-addd8a78ab2d")
 	)
 	(junction
-		(at 83.82 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2274e839-fb4e-4fa9-8425-926d31f6bd9f")
-	)
-	(junction
 		(at 204.47 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1477,12 +1471,12 @@
 		(uuid "6d45827e-9123-4978-9752-c331e5431f3b")
 	)
 	(label "BUMP-R-LED-K"
-		(at 173.99 97.79 180)
+		(at 173.99 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "f8ba5994-352c-446d-80f1-179b15e172d4")
 	)
@@ -2327,84 +2321,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 165.1 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4e2b0cdb-f5fa-41ba-9c30-9a7586a20c2d")
-		(property "Reference" "#PWR07808"
-			(at 165.1 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5c46270b-2b27-497d-af26-a726041bbfe2")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "#PWR07808")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VPP")
 		(at 92.71 77.47 0)
 		(unit 1)
@@ -2822,98 +2738,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 83.82 106.68 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a57d4c85-51ec-4353-9f06-7605c2486920")
-		(property "Reference" "R198"
-			(at 76.962 105.918 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 76.962 108.458 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 83.82 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Emitters off while the MCU is in reset"
-			(at 83.82 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 83.82 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d2138b9a-5690-4e1a-9adf-8b143c5f71f6")
-		)
-		(pin "2"
-			(uuid "c9f91580-6863-4f02-8618-08437d27dc71")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "R198")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:ITR9606-F_C3008416")
 		(at 186.69 91.44 0)
 		(unit 1)
@@ -3207,7 +3031,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 165.1 106.68 0)
+		(at 165.1 99.06 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3217,7 +3041,7 @@
 		(dnp no)
 		(uuid "bfcc8aa7-595f-4370-9640-02cedf11fccf")
 		(property "Reference" "R221"
-			(at 158.242 105.918 0)
+			(at 158.242 98.298 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3228,7 +3052,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 158.242 108.458 0)
+			(at 158.242 100.838 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3239,7 +3063,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 165.1 106.68 0)
+			(at 165.1 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3250,7 +3074,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 106.68 0)
+			(at 165.1 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3260,8 +3084,8 @@
 				)
 			)
 		)
-		(property "Description" "Emitters off while the MCU is in reset"
-			(at 165.1 106.68 0)
+		(property "Description" "PA10 = UCPD DBCC2: high in reset, so dead-battery Rd is on CC2 as well as CC1"
+			(at 165.1 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3272,7 +3096,7 @@
 			)
 		)
 		(property "LCSC" "C2907088"
-			(at 165.1 106.68 0)
+			(at 165.1 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3472,84 +3296,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 83.82 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e9cff1eb-1070-4304-b7f3-d4812d8462a0")
-		(property "Reference" "#PWR07313"
-			(at 83.82 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 83.82 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 83.82 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 83.82 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5e0be346-6d43-4167-b636-bbe58de6a401")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "#PWR07313")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 173.99 110.49 0)
 		(unit 1)
 		(body_style 1)
@@ -3621,6 +3367,83 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
 					(reference "#PWR07807")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 165.1 95.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1c623680-6956-436b-be28-62fc0aac3fc5")
+		(property "Reference" "#PWR07808"
+			(at 165.1 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VMCU-3V3"
+			(at 165.1 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VMCU-3V3\""
+			(at 165.1 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dd98a09f-0157-4e5a-9274-e605b5ecd6c8")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
+					(reference "#PWR07808")
 					(unit 1)
 				)
 			)

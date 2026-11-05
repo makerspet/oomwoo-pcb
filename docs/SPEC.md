@@ -572,8 +572,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 - 2x ITR9606 slotted photo-interrupters on the main board (BUMP-R1, BUMP-L1). The Roomba harness (BUMP_CLIFF1) and its backup bumpers are gone since 2026-10-28.
 - ITR9606 emitters, each on its own switch since 2026-11-03 (they were in series on Q32 with R197 at 120 Ω). High = on, and both are pulled low in reset:
-  - BUMP-R1: R197 (180 Ω, ~21 mA) from VSENS-5V-USB; Q36 (AO3400) switches BUMP-R-LED-K from BUMP_R_LED_EN (PA10, TIM1_CH3, R221 100k pull-down)
-  - BUMP-L1: R220 (180 Ω) from VSENS-5V-USB; Q32 switches BUMP-L-LED-K from BUMP_L_LED_EN (PC3, TIM1_CH4, R198 100k pull-down)
+  - BUMP-R1: R197 (180 Ω, ~21 mA) from VSENS-5V-USB; Q36 (AO3400) switches BUMP-R-LED-K from BUMP_R_LED_EN (PA10, TIM1_CH3, R221 100k pull-up to VMCU-3V3 since 2026-11-05: PA10 is also UCPD DBCC2, so the dead-battery Rd sits on both CC1 and CC2 in reset and the phone attaches in either plug orientation; the LED stays dark because VSENS-5V-USB is off whenever the MCU pins float)
+  - BUMP-L1: R220 (180 Ω) from VSENS-5V-USB; Q32 switches BUMP-L-LED-K from BUMP_L_LED_EN (PC3, TIM1_CH4; no pull-down since 2026-11-05, same reason)
   - why: firmware can PWM each emitter (~100-250 kHz, well above the detector's ~15 µs response) to bring each detector's clear-slot level into range, since IC(ON) varies 0.5-10 mA between parts. C178/C179 (47 nF) on BUMP-R/L filter the PWM ripple (47 µs with the 1k pull-ups); bumper transitions take milliseconds
 - Detectors pull BUMP-L (PA4, ADC2_IN17) / BUMP-R (PA5, ADC2_IN13) low when light passes the slot. R48/R44 are 1k (47k until 2026-11-02) so firmware can sample them as analog and see how fast the flag opens or closes the slot: IC(ON) is 0.5-10 mA (IF 20 mA, VCE 5 V), and at 47k any part bottomed out at 0 V with ~70 µA, i.e. it acted as a switch. At 1k a 0.5 mA part still swings ~0.5 V and a 10 mA part saturates only once the slot is ~1/3 open; calibrate the clear-slot level per unit (LED on vs off through BUMPER_LED_EN)
 

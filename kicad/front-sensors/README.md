@@ -10,6 +10,7 @@ Until rev 2, this project also held the two dock-homing IR receivers. They are n
 - AVDD (the analog and laser supply, rail VAA-3V3) gets its 3.3 V from VDD-3V3 through L2001 (BLM18PG121SN1D ferrite), so the laser current pulses stay off the shared 3.3 V. Each supply pin has 10 µF + 100 nF: C2001/C2002 on AVDD, C2003/C2004 on IOVDD. Place each pair right at its pins.
 - No pull-ups on this board. The main board holds them: I2C 2.2k, the shared INT 47k (R61) and the right LPn 47k (R196). The MCU drives the left LPn and I2C_RST directly (no resistors since 2026-11-04). With pull-ups on every board, the shared I2C bus would be pulled up three times over (~730 Ω).
 - Both sensors start at I2C address 0x52. At start-up the firmware holds one sensor's LPn low and moves the other to a new address. The new address is lost on power-off, so this runs every boot.
+- Parts use the JLC library symbols and footprints (JLCImport:C0603/R0603, 2026-11-05); LPn is named ~{LPn} (active low); a PWR_FLAG on VAA-3V3 clears the ERC error behind the ferrite.
 
 ## Connector J2001
 
@@ -23,7 +24,7 @@ ZX-SH1.0-7PWT (C7430449): JST SH compatible, 1.0 mm pitch, SMD, right angle. The
 | 4 | SDA |
 | 5 | SCL |
 | 6 | INT |
-| 7 | LPn |
+| 7 | ~LPn (active low) |
 | 8, 9 | mounting pads, GND |
 
 Use a pin 1 to pin 1 cable (pre-made SH cables are sold both ways; Qwiic cables are pin 1 to pin 1). Mark pin 1 on the silkscreen of both boards.

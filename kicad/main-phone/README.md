@@ -34,7 +34,7 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
   - IMU on I2C4 (R18/R72 not fitted, removed 2026-10-30); its FSYNC (100k pull-down R211) and INT2 go to J7301
   - PWR_EN on PD7, so PC10/PC11 are a spare UART on J7301; R204 pulls PA9 up (UCPD dead-battery Rd on CC1)
 - BOM: all 100 nF → 100nF/50V (C1591), 10uF/6.3V → 10uF/10V (C19702)
-- new DC-044A-20A footprint and 3D model in `../main/JLCImport.pretty` / `JLCImport.3dshapes`
+- new DC-044A-20A footprint and 3D model in `JLCImport.pretty` / `JLCImport.3dshapes` (now in `../lib`)
 - 3.3 V and 5 V bucks (U21, U22): TPS54560B replaces the out-of-stock AP64501, with SS56 catch diodes (D42/D43), RT resistors (R205/R206), a U21 EN divider (R207/R208) and new compensation; BAT-VCC input caps are now 10 µF/50 V 1206
 - front IR receivers moved onto the board: U24 (left) and U25 (right), IRM-V838M3-C side-looking SMD, each with 100 Ω (R209/R210) + 10 µF (C91/C90). The IR-F1/IR-F2 connectors are gone. Place both at the board's front edge, lenses facing forward, ~10 mm apart, with a baffle between them
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT) to the [front ToF boards](../front-sensors/README.md)
@@ -90,10 +90,17 @@ Changed 2026-11-03:
 - LIDAR2: 1x6 0.1" right-angle header (PZ254R-11-06P, C492414), not fitted: 1/2 VLIDAR-5V, 3 GND, 4 MOT-, 5 LiDAR TX, 6 LiDAR RX; renamed VM-5V-LIDAR → VLIDAR-5V, LiDAR-M-CTRL → LIDAR-MOTOR-CTRL; PWR_FLAG on VLIDAR-5V
 - R61 (47k INT-SENSORS pull-up) moved to the top sheet, since the ToF boards and the side sensor share it; the side sensor board's own GPIO1 pull-up (R3002) is removed
 - side sensor board: R3001 (XSHUT pull-up) removed too (2026-11-04); PE3 drives XSHUT, firmware holds it low before the sensor rail comes up
+- R2 (VL-I2C-RESET pull-down), R62 (~{VL-L-LPn} pull-up), R93 (IMU INT1 pull-up) and R215/R216 (Hall pull-ups) removed (2026-11-04): the MCU drives PC0/PB13, IMU INT1 runs push-pull, the Hall inputs use the MCU pull-ups; VL-L-LPn renamed ~{VL-L-LPn}. The cliff and wheel-drop pull-ups stay
+- X1 (8 MHz crystal) with C34/C35 and R80 (10 Ω in IR-F-RX2) removed (2026-11-04): USB is crystal-less (HSI48 + CRS), PF0/PF1 not connected, both front IR receivers go straight to the MCU. Renamed: INT-SENSORS → ~{INT-SENSORS}, CLEAN/HOME/POWER-BTN → ~{…}, SIDE/MAIN-BRUSH-CURRENT-ADC → SIDE/MAIN-BRUSH-ADC, SPARE-PE10 → SPARE-PE10-ADC, STM32-SWO → STM32-SWO-SPARE
+- DRV8870 IN pull-downs R3, R4 (main brush), R55, R57 (side brush), R11, R17, R20, R27 (wheels) removed (2026-11-04): the driver has internal ~100k pull-downs, and the motor rail is off in reset and when the watchdog stops
 - cliff nets renamed LF-Q+ ... RM-Q+ → CLIFF-LF ... CLIFF-RM (cliff sensor board: VLED → VLED-5V)
 
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 
-Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).
+Libraries, footprints and 3D models live in [`../lib`](../lib), shared by every board (see `fp-lib-table`, `sym-lib-table`); 3D model paths are `${KIPRJMOD}/../lib/...`, so they resolve from any board folder.
+
+Footprints come from JLC (EasyEDA, imported with `easyeda2kicad`) or the KiCad standard libraries. Since 2026-11-04 no part uses the Altium-imported footprints: the LEDs (YLED0603B), Q16/Q20 (AO3401/AO3400), D26-D28 (SOD-123; their symbol now numbers the cathode pin 1, as the JLC footprint does), BUMP-L1/R1 (ITR9606-F), U13 (LQFP-100) and U21/U22 (SO-8 PowerPAD; add thermal vias in the layout) use JLC footprints. USB2 is a Korean Hroparts TYPE-C-31-M-12 (C165948, 20 V 5 A; the GCT USB4215 had 2 in stock) on its JLC symbol and footprint. MAIN_FAN1 (Lian Xin XDWF-C3030WR-1*4P, C50399536) uses JLC's Molex 43650-0400 footprint: JLC's own XDWF footprint numbers the pins mirrored, against the datasheet; the Molex part (C277684) is the drop-in alternative.
+
+easyeda2kicad writes absolute 3D paths: change them to `${KIPRJMOD}/../lib/JLCImport.3dshapes/...` after an import. `tools/export.py` reads the LCSC number from `LCSC`, or from `LCSC Part` (easyeda2kicad's field) when `LCSC` is empty.
 
 The PCB file is still the `main` layout: run *Update PCB from Schematic* before layout work.

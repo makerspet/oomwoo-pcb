@@ -11,7 +11,6 @@
 			)
 			(pin_names
 				(offset 0)
-				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1181,15 +1180,22 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "oomwoo-kicad-altium-import:GND_POWER_GROUND"
+		(symbol "power:GND"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
-				(at 0 0 0)
+				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1200,7 +1206,7 @@
 				)
 			)
 			(property "Value" "GND"
-				(at 0 -6.35 0)
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1231,7 +1237,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name 'GND'"
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1242,7 +1248,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1253,79 +1259,32 @@
 					)
 				)
 			)
-			(symbol "GND_POWER_GROUND_0_0"
+			(symbol "GND_0_1"
 				(polyline
 					(pts
-						(xy -2.54 -2.54) (xy 2.54 -2.54)
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.778 -3.302) (xy 1.778 -3.302)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -4.064) (xy 1.016 -4.064)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 -4.826) (xy 0.254 -4.826)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "GND_1_1"
 				(pin power_in line
-					(at 0 0 0)
+					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GND"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number ""
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1730,12 +1689,6 @@
 		(uuid "0c573e7e-d9b9-4787-b72a-77dc714c603b")
 	)
 	(junction
-		(at 85.09 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0cb468ce-2b48-4afd-9d66-e13b60090c6d")
-	)
-	(junction
 		(at 269.24 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1758,12 +1711,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "355a5612-6a80-4e10-af6d-fa7af0af5bb5")
-	)
-	(junction
-		(at 41.91 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3ad8aa3c-bf81-4658-b875-fca7e4cfdae2")
 	)
 	(junction
 		(at 274.32 137.16)
@@ -1796,18 +1743,6 @@
 		(uuid "5ed7af2e-bce9-4d01-af10-3a7c8bc2cc7e")
 	)
 	(junction
-		(at 45.72 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7b2f0b68-46fa-40d3-a0b3-32c45f0bf50d")
-	)
-	(junction
-		(at 45.72 177.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7f61b1ff-e2db-4be2-a7e9-ad4adffe2214")
-	)
-	(junction
 		(at 34.29 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1832,16 +1767,16 @@
 		(uuid "bf51df45-57ee-43b3-a4ab-888864885a09")
 	)
 	(junction
+		(at 41.91 185.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd179342-56e0-4d6f-8e4b-0b68520d2e9b")
+	)
+	(junction
 		(at 259.08 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cdaec28c-6ab1-4bc2-be3d-db6964037f1c")
-	)
-	(junction
-		(at 85.09 177.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d2b81ec5-ba01-4447-b110-b518e9305316")
 	)
 	(junction
 		(at 275.59 196.85)
@@ -1920,16 +1855,6 @@
 			(type default)
 		)
 		(uuid "091d51a1-a3df-49ee-a9b5-afaddbc25495")
-	)
-	(wire
-		(pts
-			(xy 85.09 177.8) (xy 93.98 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0951a24f-5d70-4257-aba3-b32e4632f264")
 	)
 	(wire
 		(pts
@@ -2493,7 +2418,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 177.8) (xy 45.72 177.8)
+			(xy 41.91 177.8) (xy 54.61 177.8)
 		)
 		(stroke
 			(width 0)
@@ -3003,7 +2928,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 177.8) (xy 85.09 177.8)
+			(xy 80.01 177.8) (xy 93.98 177.8)
 		)
 		(stroke
 			(width 0)
@@ -3260,16 +3185,6 @@
 			(type default)
 		)
 		(uuid "c37ea2af-64fa-456f-9e82-1746af201488")
-	)
-	(wire
-		(pts
-			(xy 45.72 177.8) (xy 54.61 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5e2350f-71cc-4006-b3dc-9638b2cf6df5")
 	)
 	(wire
 		(pts
@@ -3871,7 +3786,7 @@
 		)
 		(uuid "24c51be5-39ad-4b25-8d38-6c7fd191f3c1")
 	)
-	(label "INT-SENSORS"
+	(label "~{INT-SENSORS}"
 		(at 255.27 137.16 0)
 		(effects
 			(font
@@ -3931,7 +3846,7 @@
 		)
 		(uuid "7b297547-a834-48c6-959e-79b0f8a71e33")
 	)
-	(label "VL-L-LPn"
+	(label "~{VL-L-LPn}"
 		(at 255.27 139.7 0)
 		(effects
 			(font
@@ -4042,7 +3957,7 @@
 		(uuid "f6c5d894-5567-43e2-b297-0ccc851f5a47")
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 78.74 214.63 0)
 		(unit 1)
 		(body_style 1)
@@ -4096,7 +4011,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 78.74 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -4107,7 +4022,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "8289327b-884d-4262-b642-def1778e1ac9")
 		)
 		(instances
@@ -4503,7 +4418,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 269.24 44.45 0)
 		(unit 1)
 		(body_style 1)
@@ -4555,8 +4470,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 269.24 44.45 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4565,7 +4481,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "4074eea2-c890-4e1e-9a97-1565517481a5")
 		)
 		(instances
@@ -4655,7 +4571,7 @@
 		)
 	)
 	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
+		(lib_id "power:GND")
 		(at 80.01 185.42 0)
 		(unit 1)
 		(body_style 1)
@@ -4709,7 +4625,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 80.01 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -4720,7 +4636,7 @@
 				)
 			)
 		)
-		(pin ""
+		(pin "1"
 			(uuid "16ff0aca-682e-4d97-abeb-a3b57cab21a1")
 		)
 		(instances
@@ -5171,190 +5087,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
 					(reference "R61")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 45.72 173.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "720c8393-ea15-4af5-8298-5e6945f75583")
-		(property "Reference" "R215"
-			(at 47.625 172.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47k"
-			(at 47.625 175.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Hall output pull-up (works with open-drain or push-pull Hall switches)"
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 45.72 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2740afaf-bbf8-4237-a37b-85d79b3aa634")
-		)
-		(pin "2"
-			(uuid "5fde0fe4-441d-4c61-b5ba-c45b246cbc03")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
-					(reference "R215")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 85.09 173.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "730552e3-2fb3-499a-85a5-16589d8cb87b")
-		(property "Reference" "R216"
-			(at 86.995 172.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47k"
-			(at 86.995 175.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Hall output pull-up (works with open-drain or push-pull Hall switches)"
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 85.09 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "21c0ad55-8529-4fb1-810f-e3de7db0714b")
-		)
-		(pin "2"
-			(uuid "19ea9634-8ce5-4e23-bd64-4bdbb8edabe9")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
-					(reference "R216")
 					(unit 1)
 				)
 			)
@@ -6494,6 +6226,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 41.91 185.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a74ef134-8605-4d71-bb7e-08168e291f41")
+		(property "Reference" "#PWR07802"
+			(at 41.91 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 41.91 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a84b68b7-2f4b-44eb-bf7a-b922feeabc27")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
+					(reference "#PWR07802")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 271.78 190.5 0)
 		(unit 1)
@@ -7091,84 +6902,6 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "oomwoo-kicad-altium-import:GND_POWER_GROUND")
-		(at 41.91 185.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ff82b976-f96c-467f-b79e-06a79583681a")
-		(property "Reference" "#PWR07802"
-			(at 41.91 191.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 41.91 191.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 41.91 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.91 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 41.91 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "f7e9ff9c-458d-4bb7-aee7-7fc56b9e4f3a")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
-					(reference "#PWR07802")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(sheet
 		(at 231.14 219.71)
 		(size 54.61 22.86)
@@ -7209,7 +6942,7 @@
 				(justify left top)
 			)
 		)
-		(pin "POWER-BTN" input
+		(pin "~{POWER-BTN}" input
 			(at 231.14 240.03 180)
 			(uuid "4a09ee81-a7fb-45fe-b937-53d2ca58f58f")
 			(effects
@@ -7414,7 +7147,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-IN2" output
+		(pin "WHEEL-MOT-R-IN2" output
 			(at 135.89 86.36 180)
 			(uuid "460c1e02-9e09-4cb2-b17a-9186d2acba7a")
 			(effects
@@ -7424,7 +7157,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-IN1" output
+		(pin "WHEEL-MOT-R-IN1" output
 			(at 135.89 88.9 180)
 			(uuid "a4161e83-c19b-4980-93c2-723bf281680e")
 			(effects
@@ -7434,7 +7167,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-ENCODE-A" input
+		(pin "WHEEL-MOT-R-ENCODE" input
 			(at 135.89 91.44 180)
 			(uuid "4aca51f7-da4b-42df-bfa7-d98638f36326")
 			(effects
@@ -7444,7 +7177,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-LEFT-IN2" output
+		(pin "WHEEL-MOT-L-IN2" output
 			(at 135.89 99.06 180)
 			(uuid "65c864d0-7cc7-44b2-b276-e2cdb944139c")
 			(effects
@@ -7454,7 +7187,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-LEFT-IN1" output
+		(pin "WHEEL-MOT-L-IN1" output
 			(at 135.89 101.6 180)
 			(uuid "c49cd83f-4291-403a-b217-c155ad2a77eb")
 			(effects
@@ -7464,7 +7197,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-LEFT-ENCODE-A" input
+		(pin "WHEEL-MOT-L-ENCODE" input
 			(at 135.89 106.68 180)
 			(uuid "353cd80e-c34a-4875-bea9-b6c8b994f182")
 			(effects
@@ -7494,7 +7227,7 @@
 				(justify left)
 			)
 		)
-		(pin "HOME-BTN" input
+		(pin "~{HOME-BTN}" input
 			(at 196.85 179.07 270)
 			(uuid "2f2b2f63-9070-4bfe-b78e-fde3d19294ab")
 			(effects
@@ -7514,7 +7247,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-R-F-ADC" input
+		(pin "WHEEL-MOT-R-ADC" input
 			(at 135.89 109.22 180)
 			(uuid "30019c66-c9c2-472a-b5ab-f5cd93e33f6e")
 			(effects
@@ -7524,7 +7257,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-L-F-ADC" input
+		(pin "WHEEL-MOT-L-ADC" input
 			(at 135.89 111.76 180)
 			(uuid "b6a6adf3-a488-4bb1-bde9-e08ebd20e632")
 			(effects
@@ -7584,7 +7317,7 @@
 				(justify left)
 			)
 		)
-		(pin "VL-L-LPn" output
+		(pin "~{VL-L-LPn}" output
 			(at 254 139.7 0)
 			(uuid "a4bc5ef3-f6ff-4be0-95c6-017e2f43628b")
 			(effects
@@ -7594,7 +7327,7 @@
 				(justify right)
 			)
 		)
-		(pin "MAIN-BRUSH-CURRENT-ADC" input
+		(pin "MAIN-BRUSH-ADC" input
 			(at 135.89 72.39 180)
 			(uuid "73f65b69-5fab-45e4-88ce-36a6012ca2b6")
 			(effects
@@ -7624,7 +7357,7 @@
 				(justify left)
 			)
 		)
-		(pin "SIDE-BRUSH-CURRENT-ADC" input
+		(pin "SIDE-BRUSH-ADC" input
 			(at 135.89 147.32 180)
 			(uuid "c080e31f-ca1b-4af9-a57e-cf1d60c0f5f5")
 			(effects
@@ -7674,7 +7407,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-LEFT-DROP" input
+		(pin "WHEEL-MOT-L-DROP" input
 			(at 135.89 104.14 180)
 			(uuid "c7108ea8-efc4-4a11-98d7-30dd804757ba")
 			(effects
@@ -7684,7 +7417,7 @@
 				(justify left)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-DROP" input
+		(pin "WHEEL-MOT-R-DROP" input
 			(at 135.89 93.98 180)
 			(uuid "9883cfd0-633e-415d-b674-f213d547ec8f")
 			(effects
@@ -7764,7 +7497,7 @@
 				(justify right)
 			)
 		)
-		(pin "INT-SENSORS" input
+		(pin "~{INT-SENSORS}" input
 			(at 254 137.16 0)
 			(uuid "8050c369-4fb4-4748-9011-5a7e192e4f9a")
 			(effects
@@ -7824,7 +7557,7 @@
 				(justify right)
 			)
 		)
-		(pin "CLEAN-BTN" input
+		(pin "~{CLEAN-BTN}" input
 			(at 194.31 179.07 270)
 			(uuid "a385f6a9-1cfc-417e-b4a2-3bbba0d6389c")
 			(effects
@@ -8267,7 +8000,7 @@
 				(justify left top)
 			)
 		)
-		(pin "SIDE-BRUSH-CURRENT-ADC" output
+		(pin "SIDE-BRUSH-ADC" output
 			(at 87.63 147.32 0)
 			(uuid "3e888044-0585-41f1-aa7c-fa9ade366412")
 			(effects
@@ -8322,7 +8055,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "994d55da-8e8c-4fe8-9877-f2e4533982e7")
-		(property "Sheetname" "LiDAR"
+		(property "Sheetname" "LIDAR"
 			(at 322.58 95.8084 0)
 			(hide yes)
 			(show_name no)
@@ -8334,7 +8067,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "LiDAR.kicad_sch"
+		(property "Sheetfile" "LIDAR.kicad_sch"
 			(at 322.58 112.3446 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8626,7 +8359,7 @@
 				(justify left)
 			)
 		)
-		(pin "INT-SENSORS" output
+		(pin "~{INT-SENSORS}" output
 			(at 322.58 137.16 180)
 			(uuid "a533e020-33d7-45f5-b887-6d91b91b2354")
 			(effects
@@ -8636,7 +8369,7 @@
 				(justify left)
 			)
 		)
-		(pin "VL-L-LPn" input
+		(pin "~{VL-L-LPn}" input
 			(at 322.58 139.7 180)
 			(uuid "5299adf0-2462-4098-8fc4-dc683bdb511f")
 			(effects
@@ -8685,7 +8418,7 @@
 		(stroke
 			(width 0)
 			(type solid)
-			(color 255 0 0 1)
+			(color 0 255 0 1)
 		)
 		(fill
 			(color 0 0 0 0)
@@ -8714,7 +8447,7 @@
 				(justify left top)
 			)
 		)
-		(pin "MAIN-BRUSH-CURRENT-ADC" output
+		(pin "MAIN-BRUSH-ADC" output
 			(at 87.63 72.39 0)
 			(uuid "cec1705b-01fd-47dc-b38c-91a3f1814e11")
 			(effects
@@ -8763,7 +8496,7 @@
 		(stroke
 			(width 0)
 			(type solid)
-			(color 255 0 0 1)
+			(color 0 255 0 1)
 		)
 		(fill
 			(color 0 0 0 0)
@@ -8792,7 +8525,7 @@
 				(justify left top)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-IN2" input
+		(pin "WHEEL-MOT-R-IN2" input
 			(at 87.63 86.36 0)
 			(uuid "16203449-0e7e-463b-b207-21b4f6127b8d")
 			(effects
@@ -8802,7 +8535,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-IN1" input
+		(pin "WHEEL-MOT-R-IN1" input
 			(at 87.63 88.9 0)
 			(uuid "5c05d79b-3fb0-4aa2-915c-e0dc7a20bba3")
 			(effects
@@ -8812,7 +8545,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-ENCODE-A" output
+		(pin "WHEEL-MOT-R-ENCODE" output
 			(at 87.63 91.44 0)
 			(uuid "47272777-f673-4ef0-9912-082226842efc")
 			(effects
@@ -8822,7 +8555,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-LEFT-IN2" input
+		(pin "WHEEL-MOT-L-IN2" input
 			(at 87.63 99.06 0)
 			(uuid "b53b76d4-5b55-48ac-b8e2-47e81eff1d6e")
 			(effects
@@ -8832,7 +8565,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-LEFT-IN1" input
+		(pin "WHEEL-MOT-L-IN1" input
 			(at 87.63 101.6 0)
 			(uuid "cacfdb9b-1a9d-4b09-a099-873a8acaa651")
 			(effects
@@ -8842,7 +8575,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-LEFT-ENCODE-A" output
+		(pin "WHEEL-MOT-L-ENCODE" output
 			(at 87.63 106.68 0)
 			(uuid "41f9e8ab-b285-4a08-b948-425bc32f8301")
 			(effects
@@ -8852,7 +8585,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-R-F-ADC" output
+		(pin "WHEEL-MOT-R-ADC" output
 			(at 87.63 109.22 0)
 			(uuid "e39bff03-79bd-423e-abc6-2bc9ec4cda25")
 			(effects
@@ -8862,7 +8595,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-L-F-ADC" output
+		(pin "WHEEL-MOT-L-ADC" output
 			(at 87.63 111.76 0)
 			(uuid "8748fd28-0505-4efd-930e-1f5a959c37a2")
 			(effects
@@ -8872,7 +8605,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-LEFT-DROP" output
+		(pin "WHEEL-MOT-L-DROP" output
 			(at 87.63 104.14 0)
 			(uuid "d3b6cee7-d145-41a6-ba33-9ac99d3f2eba")
 			(effects
@@ -8882,7 +8615,7 @@
 				(justify right)
 			)
 		)
-		(pin "WHEEL-M-RIGHT-DROP" output
+		(pin "WHEEL-MOT-R-DROP" output
 			(at 87.63 93.98 0)
 			(uuid "a64346f1-ade4-4194-ae4d-b37213c59b70")
 			(effects
@@ -9078,7 +8811,7 @@
 				(justify right)
 			)
 		)
-		(pin "HOME-BTN" output
+		(pin "~{HOME-BTN}" output
 			(at 182.88 250.19 0)
 			(uuid "3703bfbc-c0ed-4715-99be-84e649da3bb3")
 			(effects
@@ -9088,7 +8821,7 @@
 				(justify right)
 			)
 		)
-		(pin "POWER-BTN" output
+		(pin "~{POWER-BTN}" output
 			(at 182.88 240.03 0)
 			(uuid "0d594d41-1bd4-441a-9e85-35460bad022d")
 			(effects
@@ -9098,7 +8831,7 @@
 				(justify right)
 			)
 		)
-		(pin "CLEAN-BTN" output
+		(pin "~{CLEAN-BTN}" output
 			(at 182.88 247.65 0)
 			(uuid "8a859413-a262-44bc-bba4-6e2ecc6528e9")
 			(effects

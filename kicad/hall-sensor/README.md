@@ -8,7 +8,7 @@ A separate board keeps the mechanics flexible: the bin sits between the blower a
 
 - U6001: Cross Chip CC6201ST (C285995, ~$0.06): an omnipolar micropower Hall switch, so either magnet pole works. OUT goes low while the magnet is near.
   - It samples at roughly 20-45 Hz, so it reacts within ~25-50 ms. That's fine for the bin, and for the tower about as quick as a microswitch's travel.
-  - The output stage isn't confirmed (push-pull or open drain), so the main board pulls OUT up (R215/R216, 47k). Either type works.
+  - The output stage isn't confirmed (push-pull or open drain). The main board has no pull-up since 2026-11-04: firmware enables the MCU's internal pull-ups (PE4/PE5), so either type works.
   - Drop-in alternative with the same pinout (1 VDD, 2 OUT, 3 GND): TI DRV5032FADBZR (C140921, ~$0.10, push-pull).
 - C6001: 100 nF bypass at U6001.
 
@@ -31,7 +31,7 @@ Use a pin 1 to pin 1 cable.
 - H6001: one M2 hole (`MountingHole_2.2mm_M2_Pad`, pad to GND, not in the BOM). One is enough for a board this small (changed 2026-10-29, was two).
 - Reference designators are in this board's 6000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has two copies; let KiKit (or the panel tool) rename references per copy.
 
-All parts are assembled at JLC. Symbols and footprints come from the shared libraries in [`../main`](../main) (`JLCImport`).
+All parts are assembled at JLC. Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`).
 
 ## Open items
 

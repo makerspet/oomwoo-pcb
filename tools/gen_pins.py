@@ -22,7 +22,7 @@ import tempfile
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-GPIO = re.compile(r'^P([A-G])(\d{1,2})(?:_\d+)?$')
+GPIO = re.compile(r'^P([A-G])(\d{1,2})(?:-OSC(?:32)?_(?:IN|OUT))?(?:_\d+)?$')  # PF0-OSC_IN etc. are GPIOs too; PG10-NRST is not
 
 
 def kicad_cli():

@@ -531,7 +531,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - spare STM32 pins (2026-10-28): PA8 (battery sense since 2026-11-02), PA9 (swapped with PE10 on 2026-11-03: PE10 is the spare now), PA10 (right bumper LED since 2026-11-03), PC10, PC11, PD4, PE2, PE6, all on J1 (J7301 until 2026-10-30) (PD9/PE8 were freed too, then went to cliff sensors 5 and 6; PC8/PC9 to the rear docking IR board; PE4/PE5 to the Hall boards); PC10/PC11 form a spare UART (UART4 or USART3). Freed by:
   - the LiDAR rail enable joined ~VMOT-14V4-EN (PE10, PA9 since 2026-11-03): the LiDAR is on whenever the motor rail is (PD9 freed)
   - IMU FSYNC and INT2 left the MCU (PD4, PD7 freed); FSYNC keeps a 100k pull-down (R211). The IMU is leadless: probe INT2 on its 10k pull-up R92 (test pad TP1 removed 2026-11-02) and FSYNC on R211. AP_AD0 is pulled low by R217 (10k), so the IMU answers at I2C address 0x68; probe AD0 on R217. Run a wire to a spare pin if INT2 or FSYNC is needed
-  - one shared open-drain sensor interrupt (INT-SENSORS, PD12) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
+  - one shared open-drain sensor interrupt (~{INT-SENSORS}, PD12, active low) for both VL53L7s and the side VL53L0X (PC8, PE2 freed)
   - only the left VL53L7 LPn on the MCU; the right one is held up by R196 (PE8 freed). Addressing uses the left LPn plus the side sensor's XSHUT
   - the IMU moved from I2C2 to I2C4; its own pull-ups R18/R72 are not fitted (PA8, PA9 freed). PA9 is also the UCPD dead-battery control for CC1. Since 2026-11-03 PA9 carries ~VMOT-14V4-EN, and one 10k pull-up (R184) holds it high in reset for both jobs: motor rail and LiDAR off, dead-battery Rd on CC1 on. R204 (the old PA9 pull-up) and R182 (a second 100k on the enable, left from the separate LiDAR enable) are removed; R184 was 100k. The spare on J1 pin 8 is PE10 instead, with no pull-up, and it has an ADC input (ADC3/4/5_IN14)
   - PWR_EN moved from PC10 to PD7, freeing the PC10/PC11 UART pair
@@ -543,10 +543,11 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
-- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-02). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 not connected (PA10 drives the right bumper LED since 2026-11-03), 6 PE6, 7 not connected (PA8 is the battery sense since 2026-11-02), 8 PE10 (ADC capable; was PA9 until 2026-11-03), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
+- spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 vertical, fitted (XFCN PZ254V-12-12P, C492423; 2x7 until 2026-11-02). Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 PF0 (ADC1_IN10; free since the HSE crystal went, 2026-11-04), 6 PE6, 7 PF1 (ADC2_IN10), 8 PE10 (ADC capable; was PA9 until 2026-11-03), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU
 - sensor rail switch (2026-11-01): one AO3401 (Q16) from VMCU-3V3 to VSENS-3V3. PB10 (~VSENS_3V3_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VMCU-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VMCU-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
-- VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, INT and LPn 47k, I2C_RST 47k pull-down); the ToF boards carry none, so the bus isn't pulled up twice
-- front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11 (through R80) as before
+- VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, the shared INT 47k R61, the right LPn 47k R196); the MCU drives the left LPn (PB13) and I2C_RST (PC0) with no resistors (R62/R2 removed 2026-11-04: the sensor rail is off whenever those pins float); the ToF boards carry none, so the bus isn't pulled up twice
+- front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11, both direct (R80 removed 2026-11-04)
+- no HSE crystal (X1, C34, C35 removed 2026-11-04): USB runs crystal-less on HSI48 trimmed by the CRS to the phone's USB SOF, the system clock comes from HSI16 through the PLL; PF0/PF1 are unconnected. The RTC keeps its 32.768 kHz crystal (X3)
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
 
 ### Power control (v1)
@@ -579,7 +580,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 ### Rear docking IR and Hall sensors (v1)
 
 - [Rear docking IR board](../kicad/rear-ir/README.md) on REAR-IR1: two top-looking IRM-H638T, left PC8 (TIM3_CH3), right PC9 (TIM3_CH4). The robot backs into the dock (like a mop or auto-empty dock): LiDAR for the approach, the two receivers for the final alignment.
-- Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on HALL-BIN1 (PE4), LiDAR tower bumper on HALL-TOWER1 (PE5). Low = magnet near; 47k pull-ups R215/R216 on the main board.
+- Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on HALL-BIN1 (PE4), LiDAR tower bumper on HALL-TOWER1 (PE5). Low = magnet near; the MCU's internal pull-ups on PE4/PE5 (R215/R216 removed 2026-11-04; either Hall output type works).
 - REAR-IR1 uses the same 4-pin SH vertical connector as the cliff sensors (ZX-SH1.0-4PLT). The Hall boards use the 3-pin one (ZX-SH1.0-3PLT, C7430452; 1 3.3 V, 2 OUT, 3 GND), so a Hall cable can't be plugged into a cliff or rear IR socket (changed 2026-10-29). All three sit on the SIDE-PROXI sheet.
 - The mounting pads of every SH socket on the main board go to GND (2026-10-29), as they already did on the sensor boards.
 
@@ -589,6 +590,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - Q35 (AO3400) sinks all six LED cathodes from CLIFF_LED_EN (PC1, high = on, R214 100k pull-down); ~25 mA per LED (150 Ω on each board), ~150 mA total.
 - 47k pull-ups to 3.3 V: R64 LF (PA3), R73 RF (PA1), R53 LR (PA2), R39 RR (PA0), R212 LM (PD9), R213 RM (PE8). LM/RM reach the MCU sheet through global labels.
 - The cliff and bumper LED enables stay separate: modulate the cliff LEDs (LED-on minus LED-off cancels ambient light) while the bumper emitters stay on.
+
+DRV8870 inputs: no external pull-downs (R3, R4, R11, R17, R20, R27, R55, R57 removed 2026-11-04). Each IN pin has an internal ~100 kΩ pull-down, and the motor rail is off whenever the MCU pins float (reset, flashing) or the watchdog stops (WD_OK).
 
 ### Motor current shunts (v1, 2026-10-29)
 

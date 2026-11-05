@@ -51,14 +51,14 @@ def refkey(ref):
 def bom(sch, out):
     """One row per LCSC part (or per value + footprint when there is none). Returns refs with no LCSC number."""
     tmp = out.with_suffix('.tmp')
-    run('sch', 'export', 'bom', '-o', tmp, '--exclude-dnp', '--fields', 'Reference,Value,Footprint,LCSC',
-        '--labels', 'Reference,Value,Footprint,LCSC', '--ref-range-delimiter', '', sch)
+    run('sch', 'export', 'bom', '-o', tmp, '--exclude-dnp', '--fields', 'Reference,Value,Footprint,LCSC,LCSC Part',
+        '--labels', 'Reference,Value,Footprint,LCSC,LCSC Part', '--ref-range-delimiter', '', sch)
     with open(tmp, encoding='utf-8', newline='') as f:
         parts = list(csv.DictReader(f))
     tmp.unlink()
     groups = {}
     for p in parts:
-        lcsc = p['LCSC'].strip()
+        lcsc = (p['LCSC'] or p['LCSC Part']).strip()  # easyeda2kicad symbols carry 'LCSC Part'
         key = (lcsc,) if lcsc else ('', p['Value'], p['Footprint'])
         groups.setdefault(key, []).append(p)
     rows = []

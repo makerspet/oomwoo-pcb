@@ -98,6 +98,8 @@ Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python 
 
 Libraries, footprints and 3D models live in [`../lib`](../lib), shared by every board (see `fp-lib-table`, `sym-lib-table`); 3D model paths are `${KIPRJMOD}/../lib/...`, so they resolve from any board folder.
 
-Footprints come from JLC (EasyEDA, imported with `easyeda2kicad`) or the KiCad standard libraries. Since 2026-11-04 no part uses the Altium-imported footprints: the LEDs (YLED0603B), Q16/Q20 (AO3401/AO3400), D26-D28 (SOD-123; their symbol now numbers the cathode pin 1, as the JLC footprint does), BUMP-L1/R1 (ITR9606-F), U13 (LQFP-100) and U21/U22 (SO-8 PowerPAD; add thermal vias in the layout) use JLC footprints. USB2 keeps the GCT USB4215 footprint (JLC's uses different pad names), now with its 3D model.
+Footprints come from JLC (EasyEDA, imported with `easyeda2kicad`) or the KiCad standard libraries. Since 2026-11-04 no part uses the Altium-imported footprints: the LEDs (YLED0603B), Q16/Q20 (AO3401/AO3400), D26-D28 (SOD-123; their symbol now numbers the cathode pin 1, as the JLC footprint does), BUMP-L1/R1 (ITR9606-F), U13 (LQFP-100) and U21/U22 (SO-8 PowerPAD; add thermal vias in the layout) use JLC footprints. USB2 is a Korean Hroparts TYPE-C-31-M-12 (C165948, 20 V 5 A; the GCT USB4215 had 2 in stock) on its JLC symbol and footprint. MAIN_FAN1 (Lian Xin XDWF-C3030WR-1*4P, C50399536) uses JLC's Molex 43650-0400 footprint: JLC's own XDWF footprint numbers the pins mirrored, against the datasheet; the Molex part (C277684) is the drop-in alternative.
+
+easyeda2kicad writes absolute 3D paths: change them to `${KIPRJMOD}/../lib/JLCImport.3dshapes/...` after an import. `tools/export.py` reads the LCSC number from `LCSC`, or from `LCSC Part` (easyeda2kicad's field) when `LCSC` is empty.
 
 The PCB file is still the `main` layout: run *Update PCB from Schematic* before layout work.

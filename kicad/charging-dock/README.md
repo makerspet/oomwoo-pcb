@@ -72,7 +72,7 @@ Firmware:
 
 DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, PZ254R-11-05P, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120, 100) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, INA180A1, TSAL6200, YZP0670 pogo pin, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
 
-Symbols and footprints come from the shared libraries in [`../libs`](../libs) (`JLCImport`) and the KiCad standard libraries.
+Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`) and the KiCad standard libraries.
 
 ## Open items
 

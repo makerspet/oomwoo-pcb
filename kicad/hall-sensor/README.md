@@ -31,7 +31,7 @@ Use a pin 1 to pin 1 cable.
 - H6001: one M2 hole (`MountingHole_2.2mm_M2_Pad`, pad to GND, not in the BOM). One is enough for a board this small (changed 2026-10-29, was two).
 - Reference designators are in this board's 6000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has two copies; let KiKit (or the panel tool) rename references per copy.
 
-All parts are assembled at JLC. Symbols and footprints come from the shared libraries in [`../libs`](../libs) (`JLCImport`).
+All parts are assembled at JLC. Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`).
 
 ## Open items
 

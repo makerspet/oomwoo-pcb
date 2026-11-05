@@ -43,4 +43,4 @@ The VL53L0X starts at I2C address 0x52, the same as the two front VL53L7s on the
 
 All parts are assembled at JLC.
 
-Symbols and footprints come from the shared libraries in [`../libs`](../libs) (`JLCImport`) and the KiCad standard libraries.
+Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`) and the KiCad standard libraries.

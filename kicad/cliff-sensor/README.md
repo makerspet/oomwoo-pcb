@@ -57,7 +57,7 @@ The names (front, middle, rear) are placeholders; put the six sensors wherever t
 - About 8 × 27 mm: D4001 and Q4001 18 mm apart centre to centre, J4001 between them, R4001 next to the LED. No mounting holes; the housing holds the board.
 - Reference designators are in this board's 4000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has six copies; let KiKit (or the panel tool) rename references per copy.
 
-Symbols and footprints come from the shared libraries in [`../libs`](../libs) (`JLCImport`).
+Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`).
 
 ## Open items
 

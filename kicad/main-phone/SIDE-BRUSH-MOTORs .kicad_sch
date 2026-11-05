@@ -357,11 +357,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DesignLibrary:WHEEL MOTOR_1_Capacitor-1_DesignLibrary.SchLib"
+		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
+				(offset 0.254)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -369,24 +370,26 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" ""
-				(at 0 0 0)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -411,7 +414,7 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Unpolarized capacitor, small symbol"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -422,7 +425,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "*CAP-0402*"
+			(property "ki_keywords" "capacitor cap"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -433,14 +436,25 @@
 					)
 				)
 			)
-			(symbol "WHEEL MOTOR_1_Capacitor-1_DesignLibrary.SchLib_1_0"
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -2.032) (xy 1.27 -2.032)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0)
-						(type solid)
+						(width 0.3048)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -448,44 +462,22 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -1.27) (xy 0 -2.032)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0)
-						(type solid)
+						(width 0.3302)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0 -3.81) (xy 0 -3.048)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -3.048) (xy -1.27 -3.048)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "C_Small_1_1"
 				(pin passive line
-					(at 0 0 270)
-					(length 1.27)
-					(name "1"
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -501,9 +493,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -5.08 90)
-					(length 1.27)
-					(name "2"
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1476,16 +1468,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 102.87) (xy 165.1 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c77771f-23c4-42d9-be9b-123522bbfa99")
-	)
-	(wire
-		(pts
 			(xy 151.13 95.25) (xy 151.13 110.49)
 		)
 		(stroke
@@ -1533,6 +1515,16 @@
 			(type default)
 		)
 		(uuid "9ad88655-a982-4f43-b1e5-65ec5fdd8457")
+	)
+	(wire
+		(pts
+			(xy 165.1 102.87) (xy 165.1 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e31fd85-72aa-4ab2-acf6-274c631dda53")
 	)
 	(wire
 		(pts
@@ -2099,8 +2091,8 @@
 		)
 	)
 	(symbol
-		(lib_id "DesignLibrary:WHEEL MOTOR_1_Capacitor-1_DesignLibrary.SchLib")
-		(at 165.1 102.87 0)
+		(lib_id "Device:C_Small")
+		(at 165.1 100.33 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -2111,7 +2103,7 @@
 		(dnp no)
 		(uuid "3fc7d55e-1916-4396-abe8-8865fe89908e")
 		(property "Reference" "C92"
-			(at 162.56 100.33 0)
+			(at 164.084 97.536 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2122,7 +2114,7 @@
 			)
 		)
 		(property "Value" "100nF/50V"
-			(at 164.084 102.87 0)
+			(at 164.338 102.362 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2133,7 +2125,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2144,7 +2136,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2155,7 +2147,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2166,7 +2158,7 @@
 			)
 		)
 		(property "MANUFACTURINGPARTNUMBER" "*"
-			(at 166.624 97.282 0)
+			(at 166.624 94.742 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2178,7 +2170,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 166.624 97.282 0)
+			(at 166.624 94.742 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2190,7 +2182,7 @@
 			)
 		)
 		(property "SUPPLIERPARTNUMBER" "*"
-			(at 166.624 97.282 0)
+			(at 166.624 94.742 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2202,7 +2194,7 @@
 			)
 		)
 		(property "SUPPLIER" "*"
-			(at 166.624 97.282 0)
+			(at 166.624 94.742 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2214,7 +2206,7 @@
 			)
 		)
 		(property "VOLTAGERATE" ""
-			(at 162.56 105.41 0)
+			(at 162.56 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2225,7 +2217,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2236,7 +2228,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2247,7 +2239,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2258,7 +2250,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2269,7 +2261,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2280,7 +2272,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2291,7 +2283,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2302,7 +2294,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2313,7 +2305,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2324,7 +2316,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2335,7 +2327,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2346,7 +2338,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2357,7 +2349,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2368,7 +2360,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2379,7 +2371,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2390,7 +2382,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2401,7 +2393,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2412,7 +2404,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2423,7 +2415,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2434,7 +2426,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2445,7 +2437,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2456,7 +2448,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2467,7 +2459,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2478,7 +2470,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2489,7 +2481,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2500,7 +2492,7 @@
 			)
 		)
 		(property "LCSC" "C1591"
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2511,7 +2503,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2522,7 +2514,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2533,7 +2525,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2544,7 +2536,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2555,7 +2547,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2566,7 +2558,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2577,7 +2569,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 165.1 102.87 0)
+			(at 165.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

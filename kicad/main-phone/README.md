@@ -34,7 +34,7 @@ Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-boa
   - IMU on I2C4 (R18/R72 not fitted, removed 2026-10-30); its FSYNC (100k pull-down R211) and INT2 go to J7301
   - PWR_EN on PD7, so PC10/PC11 are a spare UART on J7301; R204 pulls PA9 up (UCPD dead-battery Rd on CC1)
 - BOM: all 100 nF → 100nF/50V (C1591), 10uF/6.3V → 10uF/10V (C19702)
-- new DC-044A-20A footprint and 3D model in `../main/JLCImport.pretty` / `JLCImport.3dshapes`
+- new DC-044A-20A footprint and 3D model in `JLCImport.pretty` / `JLCImport.3dshapes` (now in `../libs`)
 - 3.3 V and 5 V bucks (U21, U22): TPS54560B replaces the out-of-stock AP64501, with SS56 catch diodes (D42/D43), RT resistors (R205/R206), a U21 EN divider (R207/R208) and new compensation; BAT-VCC input caps are now 10 µF/50 V 1206
 - front IR receivers moved onto the board: U24 (left) and U25 (right), IRM-V838M3-C side-looking SMD, each with 100 Ω (R209/R210) + 10 µF (C91/C90). The IR-F1/IR-F2 connectors are gone. Place both at the board's front edge, lenses facing forward, ~10 mm apart, with a baffle between them
 - VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT) to the [front ToF boards](../front-sensors/README.md)
@@ -96,6 +96,8 @@ Changed 2026-11-03:
 
 Outputs (schematic PDF, BOM) are in [output/](output), regenerated with `python tools/export.py` (add `--pcb` for Gerbers, placement and STEP once the layout is done). The firmware pin header comes from this schematic: `python tools/gen_pins.py -o ../oomwoo-firmware/include/oomwoo_pins.h`.
 
-Libraries, footprints and 3D models are shared with `../main` (see `fp-lib-table`, `sym-lib-table`).
+Libraries, footprints and 3D models live in [`../libs`](../libs), shared by every board (see `fp-lib-table`, `sym-lib-table`); 3D model paths are `${KIPRJMOD}/../libs/...`, so they resolve from any board folder.
+
+Footprints come from JLC (EasyEDA, imported with `easyeda2kicad`) or the KiCad standard libraries. Since 2026-11-04 no part uses the Altium-imported footprints: the LEDs (YLED0603B), Q16/Q20 (AO3401/AO3400), D26-D28 (SOD-123; their symbol now numbers the cathode pin 1, as the JLC footprint does), BUMP-L1/R1 (ITR9606-F), U13 (LQFP-100) and U21/U22 (SO-8 PowerPAD; add thermal vias in the layout) use JLC footprints. USB2 keeps the GCT USB4215 footprint (JLC's uses different pad names), now with its 3D model.
 
 The PCB file is still the `main` layout: run *Update PCB from Schematic* before layout work.

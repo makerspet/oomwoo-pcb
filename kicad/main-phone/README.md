@@ -79,7 +79,7 @@ Changed 2026-11-02:
 - bumper pull-ups R44/R48 47k → 1k, so PA4/PA5 (ADC2) see the slot opening and closing instead of a switch
 
 Changed 2026-11-03:
-- bumper emitters split: BUMP-R1 on new Q36 (PA10, BUMP_R_LED_EN, R221 pull-down), BUMP-L1 stays on Q32 (PC3, BUMPER_LED_EN → BUMP_L_LED_EN); each LED has its own 180 Ω (R197, new R220), so firmware can PWM-dim each one
+- bumper emitters split: BUMP-R1 on new Q36 (PA10, BUMP_R_LED_EN, R221 pull-down; a pull-up since 2026-11-05), BUMP-L1 stays on Q32 (PC3, BUMPER_LED_EN → BUMP_L_LED_EN); each LED has its own 180 Ω (R197, new R220), so firmware can PWM-dim each one
 - C178/C179 (47 nF) on BUMP-R/L to filter the LED PWM
 - J1 pin 5 (was PA10) not connected
 - PA9 and PE10 swapped: ~{VMOT-14V4-EN} on PA9 (also UCPD DBCC1), the J1 pin 8 spare on PE10 (no pull-up, ADC capable). One 10k pull-up (R184, was 100k) serves both; R204 and R182 removed
@@ -92,6 +92,7 @@ Changed 2026-11-03:
 - side sensor board: R3001 (XSHUT pull-up) removed too (2026-11-04); PE3 drives XSHUT, firmware holds it low before the sensor rail comes up
 - R2 (VL-I2C-RESET pull-down), R62 (~{VL-L-LPn} pull-up), R93 (IMU INT1 pull-up) and R215/R216 (Hall pull-ups) removed (2026-11-04): the MCU drives PC0/PB13, IMU INT1 runs push-pull, the Hall inputs use the MCU pull-ups; VL-L-LPn renamed ~{VL-L-LPn}. The cliff and wheel-drop pull-ups stay
 - X1 (8 MHz crystal) with C34/C35 and R80 (10 Ω in IR-F-RX2) removed (2026-11-04): USB is crystal-less (HSI48 + CRS), PF0/PF1 not connected, both front IR receivers go straight to the MCU. Renamed: INT-SENSORS → ~{INT-SENSORS}, CLEAN/HOME/POWER-BTN → ~{…}, SIDE/MAIN-BRUSH-CURRENT-ADC → SIDE/MAIN-BRUSH-ADC, SPARE-PE10 → SPARE-PE10-ADC, STM32-SWO → STM32-SWO-SPARE
+- R198 (100k BUMP_L_LED_EN pull-down) removed and R221 turned into a 100k pull-up to VMCU-3V3 (2026-11-05): the emitters run from VSENS-5V-USB, whose buck enable (PB5) R168 holds low whenever the MCU pins float, so the LEDs cannot light in reset. PA10 is also UCPD DBCC2, so the pull-up turns the dead-battery Rd on CC2 on in reset (CC1 already had it through R184): the phone attaches in either plug orientation. BUMP-R-LED-K label flipped to the right of the drain wire to make room. Front-sensors sheet parts moved to JLC symbols and footprints (JLCImport:C0603/R0603)
 - DRV8870 IN pull-downs R3, R4 (main brush), R55, R57 (side brush), R11, R17, R20, R27 (wheels) removed (2026-11-04): the driver has internal ~100k pull-downs, and the motor rail is off in reset and when the watchdog stops
 - cliff nets renamed LF-Q+ ... RM-Q+ → CLIFF-LF ... CLIFF-RM (cliff sensor board: VLED → VLED-5V)
 

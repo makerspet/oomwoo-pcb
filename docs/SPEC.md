@@ -390,7 +390,7 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
   - two receivers, not one: when both see the dock it is straight ahead, when one does, steer to that side. With the dock's left and right codes, the robot knows both which way the dock is and which side of the dock it's on. One receiver only sees the dock or not, so it would have to turn and sweep to find the bearing
 - the ToF sensors are on small boards, one design fitted twice: [`kicad/front-sensors`](../kicad/front-sensors/README.md)
   - left board aimed 30° left, right board 30° right
-  - each board has a JST SH 7-pin connector (ZX-SH1.0-7PWT); main board VL-L1 / VL-R1 use the same part
+  - board-to-board since 2026-11-06, no cable: each ToF board hangs upright under the main board, sensor on its front face, a 2.0 mm 2x4 right-angle header (HanElectricity 2005WR-2x4P, C6837622) on its back, plugged into a 2x4 vertical socket (2005FV-2x4P, C18723066) on the main board's underside (VL-L1 / VL-R1); a mount screwed to the main board holds it. The mating swaps the rows, so header pin n meets socket pin n+1 / n-1: see the [front ToF README](../kicad/front-sensors/README.md#connector-j2001)
 - RGB camera with white torchlight LEDs: not in v1, no board yet
 
 ## Side sensors module board
@@ -548,7 +548,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, the shared INT 47k R61, the right LPn 47k R196); the MCU drives the left LPn (PB13) and I2C_RST (PC0) with no resistors (R62/R2 removed 2026-11-04: the sensor rail is off whenever those pins float); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11, both direct (R80 removed 2026-11-04)
 - no HSE crystal (X1, C34, C35 removed 2026-11-04): USB runs crystal-less on HSI48 trimmed by the CRS to the phone's USB SOF, the system clock comes from HSI16 through the PLL; PF0/PF1 are unconnected. The RTC keeps its 32.768 kHz crystal (X3)
-- VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
+- VL-L1 / VL-R1: 2.0 mm 2x4 vertical sockets (HanElectricity 2005FV-2x4P, C18723066) on the underside since 2026-11-06 (JST SH 7-pin ZX-SH1.0-7PWT before, ZH 1.5 mm before that): 1 GND, 2 VSENS-3V3, 3 SCL, 4 SDA, 5 VL-I2C-RESET, 6 ~INT-SENSORS, 7 GND, 8 LPn
 
 ### Power control (v1)
 

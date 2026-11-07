@@ -11,195 +11,6 @@
 		(company "OOMWOO cliff sensor")
 	)
 	(lib_symbols
-		(symbol "Device:R_US"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 2.54 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R_US"
-				(at -2.54 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 1.016 -0.254 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Resistor, US symbol"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_US_0_1"
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.286) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_US_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "JLCImport:IR333-A"
 			(pin_numbers
 				(hide yes)
@@ -717,7 +528,7 @@
 					)
 				)
 			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
+			(property "Description" "-40℃~+85℃ 1 1A 1mm 1x4P 3.05mm 4 4.4mm 4P 50V 6.35mm Auxiliary Solder Pin Beige Brass LCP SH Surface Mount,Vertical Tin SMD,P=1mm Wire To Board Connector ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1184,6 +995,12 @@
 		(color 0 0 0 0)
 		(uuid "9d25f00b-4e2f-4e1f-bc60-5e1c6cdc56a4")
 	)
+	(junction
+		(at 114.3 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bae78336-100b-4af3-8686-9d3c1eb3648a")
+	)
 	(wire
 		(pts
 			(xy 91.44 105.41) (xy 91.44 87.63)
@@ -1196,13 +1013,13 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 76.2) (xy 118.11 76.2)
+			(xy 118.11 73.66) (xy 124.46 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "31ef0b27-b34b-408d-b5b7-80f50b455e47")
+		(uuid "3463ac2c-4739-4777-8e42-108f24a3a7ee")
 	)
 	(wire
 		(pts
@@ -1246,6 +1063,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 92.71) (xy 118.11 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7d72b1d-0457-42d3-bbf3-022b7c78beb0")
+	)
+	(wire
+		(pts
 			(xy 95.25 105.41) (xy 101.6 105.41)
 		)
 		(stroke
@@ -1286,17 +1113,17 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 76.2) (xy 118.11 92.71)
+			(xy 118.11 73.66) (xy 118.11 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e7b021d5-7071-4384-8b42-aa49196b3038")
+		(uuid "e90eda74-25d5-4ed3-8b38-14ce31fd4daa")
 	)
 	(wire
 		(pts
-			(xy 101.6 92.71) (xy 118.11 92.71)
+			(xy 101.6 92.71) (xy 114.3 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1305,16 +1132,6 @@
 		(uuid "fde8e0d7-17b8-404c-848f-9e18aa6a8958")
 	)
 	(label "LED_A"
-		(at 124.46 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1122f014-a1b8-4f41-ba55-2c1c3d2aa8b6")
-	)
-	(label "VLED-5V"
 		(at 102.87 92.71 0)
 		(effects
 			(font
@@ -1343,98 +1160,6 @@
 			(justify left bottom)
 		)
 		(uuid "b139cc36-a9b7-46e2-8f6a-e7ac2e2c0a3a")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 124.46 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "11a77c85-9f8e-468e-b0c3-e5d4be7f9b79")
-		(property "Reference" "R4001"
-			(at 127 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "150"
-			(at 127 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 124.46 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR LED current: (5 V - 1.25 V) / 150 = 25 mA (94 mW if left on; modulate it)"
-			(at 124.46 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22808"
-			(at 124.46 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42af4615-c197-4091-9102-15e916f30885")
-		)
-		(pin "2"
-			(uuid "c80df036-3bdd-4e5c-86e8-e60b72e94653")
-		)
-		(instances
-			(project "Cliff Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "R4001")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "JLCImport:IR333-A")
@@ -1573,7 +1298,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8804070909818478592-C7430453.pdf?response-content-disposition=attachment%3B%20filename%3DC7430453.pdf%3B%20filename%2A%3DUTF-8%27%27C7430453.pdf&x-oss-date=20261106T222210Z&x-oss-expires=3600&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5vFEdvtqbts4vXTM0DmsUIgW%2Bxut6HdsDz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZAy63gy557b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgpg19h0TJSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIrGNOf6KWD5sagAGDWdXpJgboz71iCPCwcLCm%2BpLTUtuPnOjF4wjnGCI0rTjPXbJxraDVjvJyA3cozqX1sr7Qzz1FBuixuIENEG%2BIwiz7K0%2BbvxcbXNicFdiHC0z9iLg1AOxkjsAlvLFS5s9z2AurRF%2Bofvv8MYf8Q86ZjZpO1Xnc0pZQFEt%2FrxYihyAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NXpZaYDdMU781fWUBuWcBXdvR%2F20261106%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=53dd58a445a9bf749be23cbe76710b37c2e94c35e15677d3023a95fc6c3d1b9c"
 			(at 97.79 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -1584,7 +1309,7 @@
 				)
 			)
 		)
-		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to a main-board CLIFF-xx connector"
+		(property "Description" "-40℃~+85℃ 1 1A 1mm 1x4P 3.05mm 4 4.4mm 4P 50V 6.35mm Auxiliary Solder Pin Beige Brass LCP SH Surface Mount,Vertical Tin SMD,P=1mm Wire To Board Connector ROHS"
 			(at 97.79 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -1597,6 +1322,28 @@
 		)
 		(property "LCSC" "C7430453"
 			(at 97.79 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Megastar"
+			(at 97.79 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 97.79 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1720,6 +1467,84 @@
 			(project "Cliff Sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "Q4001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 114.3 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "361feeaf-5958-4087-9b4b-aaa7a6f73061")
+		(property "Reference" "#FLG04005"
+			(at 114.3 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 114.3 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 114.3 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dffb3012-1b3f-4171-9334-18d025c8427c")
+		)
+		(instances
+			(project "Cliff Sensor"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#FLG04005")
 					(unit 1)
 				)
 			)
@@ -1966,4 +1791,14 @@
 		)
 	)
 	(embedded_fonts no)
+	(wire
+		(pts
+			(xy 124.46 73.66) (xy 124.46 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "841e7c09-a2f5-4739-917e-28608d5de763")
+	)
 )

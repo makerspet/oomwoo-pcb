@@ -2176,6 +2176,166 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:0603WAF1500T5E"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "0603WAF1500T5E"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "150Ω (1500) ±1%"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(厚声)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "0603WAF1500T5E"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C22808"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Resistors"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "0603WAF1500T5E_0_1"
+				(rectangle
+					(start -2.54 1.02)
+					(end 2.54 -1.02)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "- kicad/cliff-sensor mating boards\n- SH 4-pin vertical; use same (pin 1 to pin 1) cable\n- set CLIFF_LED_EN LOW to disable\n- modulate CLIFF_LED_EN, read each channel LED-on minus LED-off to cancel ambient light"
 		(exclude_from_sim no)
@@ -2308,12 +2468,6 @@
 		(color 0 0 0 0)
 		(uuid "f88b4ee8-bbfe-4e71-99e1-a6978d9474ef")
 	)
-	(junction
-		(at 93.98 132.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fa4e3467-e7fd-4515-9c95-74c27ca23a80")
-	)
 	(wire
 		(pts
 			(xy 133.35 40.64) (xy 137.16 40.64)
@@ -2406,7 +2560,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 45.72) (xy 120.65 45.72)
+			(xy 127 45.72) (xy 115.57 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2446,7 +2600,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 101.6) (xy 120.65 101.6)
+			(xy 127 101.6) (xy 115.57 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2686,7 +2840,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 45.72) (xy 87.63 45.72)
+			(xy 81.28 45.72) (xy 92.71 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2726,7 +2880,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 73.66) (xy 120.65 73.66)
+			(xy 127 73.66) (xy 115.57 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2746,7 +2900,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 73.66) (xy 81.28 73.66)
+			(xy 92.71 73.66) (xy 81.28 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2763,16 +2917,6 @@
 			(type default)
 		)
 		(uuid "92187fbf-a916-45b0-99fd-cfa3ec3c9420")
-	)
-	(wire
-		(pts
-			(xy 93.98 132.08) (xy 93.98 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9714070d-0141-47e1-b570-051a302a6f2d")
 	)
 	(wire
 		(pts
@@ -2806,16 +2950,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 72.39) (xy 87.63 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "add1c0d4-75dd-4de9-ae93-3efd577dcf74")
-	)
-	(wire
-		(pts
 			(xy 71.12 114.3) (xy 74.93 114.3)
 		)
 		(stroke
@@ -2836,7 +2970,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 101.6) (xy 87.63 101.6)
+			(xy 81.28 101.6) (xy 92.71 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3511,7 +3645,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 120.65 101.6 0)
+		(at 115.57 91.44 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3522,7 +3656,7 @@
 		(dnp no)
 		(uuid "115f5993-67d4-49ed-b26c-a78ad2fb0742")
 		(property "Reference" "#PWR0907"
-			(at 120.65 105.41 0)
+			(at 115.57 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3533,7 +3667,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 120.65 96.52 0)
+			(at 115.57 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3543,7 +3677,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 101.6 0)
+			(at 115.57 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3554,7 +3688,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 101.6 0)
+			(at 115.57 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3565,7 +3699,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 120.65 101.6 0)
+			(at 115.57 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3588,86 +3722,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 93.98 140.97 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2c75c1dd-de33-4e0e-80d9-9967113408b3")
-		(property "Reference" "#PWR07708"
-			(at 93.98 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 93.98 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 93.98 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 93.98 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8d7b489b-089e-403d-b364-6e6c00b9a30f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "#PWR07708")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VPP")
-		(at 87.63 45.72 0)
+		(at 92.71 35.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3677,7 +3733,7 @@
 		(dnp no)
 		(uuid "30b885ff-d9b6-49bb-9560-44f64b88965d")
 		(property "Reference" "#PWR0911"
-			(at 87.63 49.53 0)
+			(at 92.71 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3688,7 +3744,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 87.63 40.64 0)
+			(at 92.71 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3698,7 +3754,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 45.72 0)
+			(at 92.71 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3709,7 +3765,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 45.72 0)
+			(at 92.71 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3720,7 +3776,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 87.63 45.72 0)
+			(at 92.71 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3928,7 +3984,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 120.65 45.72 0)
+		(at 115.57 35.56 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3939,7 +3995,7 @@
 		(dnp no)
 		(uuid "37612766-001d-487e-9a07-c1bb5d166ff3")
 		(property "Reference" "#PWR0904"
-			(at 120.65 49.53 0)
+			(at 115.57 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3950,7 +4006,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 120.65 40.64 0)
+			(at 115.57 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3960,7 +4016,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 45.72 0)
+			(at 115.57 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3971,7 +4027,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 45.72 0)
+			(at 115.57 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3982,7 +4038,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 120.65 45.72 0)
+			(at 115.57 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4792,98 +4848,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 93.98 137.16 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9d41ed4b-8f34-4cc6-90a1-129ebda9e167")
-		(property "Reference" "R214"
-			(at 87.63 135.89 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 87.63 138.43 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Cliff LEDs off while the MCU is in reset"
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "95bb44ae-f729-48fa-9742-ee720e5e2128")
-		)
-		(pin "2"
-			(uuid "e8d02c20-272a-4f59-a565-c4c50bb139f0")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "R214")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VPP")
 		(at 168.91 46.99 0)
 		(unit 1)
@@ -5347,7 +5311,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 120.65 73.66 0)
+		(at 115.57 63.5 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -5358,7 +5322,7 @@
 		(dnp no)
 		(uuid "d0c725f0-8c4c-4f4c-8272-036969451cdc")
 		(property "Reference" "#PWR0908"
-			(at 120.65 77.47 0)
+			(at 115.57 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5369,7 +5333,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 120.65 68.58 0)
+			(at 115.57 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5379,7 +5343,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 73.66 0)
+			(at 115.57 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5390,7 +5354,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 73.66 0)
+			(at 115.57 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5401,7 +5365,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 120.65 73.66 0)
+			(at 115.57 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5425,7 +5389,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 87.63 101.6 0)
+		(at 92.71 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5435,7 +5399,7 @@
 		(dnp no)
 		(uuid "db2c946e-a165-49f3-828e-59044ffe4bb2")
 		(property "Reference" "#PWR0910"
-			(at 87.63 105.41 0)
+			(at 92.71 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5446,7 +5410,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 87.63 96.52 0)
+			(at 92.71 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5456,7 +5420,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 101.6 0)
+			(at 92.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5467,7 +5431,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 101.6 0)
+			(at 92.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5478,7 +5442,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 87.63 101.6 0)
+			(at 92.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5672,7 +5636,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 87.63 72.39 0)
+		(at 92.71 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5682,7 +5646,7 @@
 		(dnp no)
 		(uuid "f37456dd-d35d-4145-87ef-39870cb3bf37")
 		(property "Reference" "#PWR0906"
-			(at 87.63 76.2 0)
+			(at 92.71 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5693,7 +5657,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 87.63 67.31 0)
+			(at 92.71 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5703,7 +5667,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 72.39 0)
+			(at 92.71 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5714,7 +5678,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 72.39 0)
+			(at 92.71 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5725,7 +5689,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 87.63 72.39 0)
+			(at 92.71 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5742,6 +5706,690 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
 					(reference "#PWR0906")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 92.71 40.64 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8b8d0b88-9639-4fec-a51d-d16f74294559")
+		(property "Reference" "R224"
+			(at 95.25 39.37 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "150"
+			(at 95.25 41.91 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C22808"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8b0122b6-c11e-4f7a-ad14-5eef75252062")
+		)
+		(pin "2"
+			(uuid "003aa7be-8218-40a6-8a18-cb4d89a96094")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R224")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 92.71 68.58 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "183aba0d-1d2a-4f0d-be20-6ff1dd1fdf3c")
+		(property "Reference" "R225"
+			(at 95.25 67.31 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "150"
+			(at 95.25 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 92.71 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 92.71 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 92.71 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 92.71 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 92.71 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C22808"
+			(at 92.71 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e6d76369-d846-4ade-b8a6-59a082fbc6a5")
+		)
+		(pin "2"
+			(uuid "cf8a41a1-610e-4adf-b37d-0acda4781491")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R225")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 92.71 96.52 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bb492108-cc44-499b-89a2-c8171029a4ba")
+		(property "Reference" "R226"
+			(at 95.25 95.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "150"
+			(at 95.25 97.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C22808"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3a0f1c6-9e74-4457-804c-cf00acb9979f")
+		)
+		(pin "2"
+			(uuid "f1c7fc84-0f0c-4c36-9874-cbfa6f37fccb")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R226")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 115.57 40.64 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9b456513-cf1c-45ef-a46d-db4d6d7fbbfd")
+		(property "Reference" "R227"
+			(at 113.03 39.37 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "150"
+			(at 113.03 41.91 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C22808"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5b1ef628-3905-4b50-8960-7882c17904b9")
+		)
+		(pin "2"
+			(uuid "9b38d703-c55b-4174-8a0e-96f70f3f2536")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R227")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 115.57 68.58 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "103225fe-9892-450a-94e8-f131601e53ef")
+		(property "Reference" "R228"
+			(at 113.03 67.31 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "150"
+			(at 113.03 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C22808"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "768a931a-ad66-4125-a4e6-7825454bce42")
+		)
+		(pin "2"
+			(uuid "9b33949f-e473-42aa-b1ea-fb14e2ed7303")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R228")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 115.57 96.52 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c5c4ab6f-5584-4050-b0c3-ad8f64515796")
+		(property "Reference" "R229"
+			(at 113.03 95.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "150"
+			(at 113.03 97.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C22808"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aea6cfe0-acf0-4081-99a1-66c5ae737bf3")
+		)
+		(pin "2"
+			(uuid "3d8eba31-08ac-4b05-966d-8c6543d3a15a")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R229")
 					(unit 1)
 				)
 			)

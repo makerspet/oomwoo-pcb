@@ -2268,6 +2268,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 175.26) (xy 41.91 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45f4dd85-d69b-492c-ba71-401ee58089d1")
+	)
+	(wire
+		(pts
 			(xy 87.63 104.14) (xy 135.89 104.14)
 		)
 		(stroke
@@ -2338,7 +2348,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 170.18) (xy 41.91 175.26)
+			(xy 45.72 172.72) (xy 45.72 175.26)
 		)
 		(stroke
 			(width 0)
@@ -2395,16 +2405,6 @@
 			(type default)
 		)
 		(uuid "5629ab99-9a27-4ded-98c3-63ab609b95ce")
-	)
-	(wire
-		(pts
-			(xy 41.91 170.18) (xy 45.72 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "564ab391-692f-48ee-948a-4f495cc16942")
 	)
 	(wire
 		(pts
@@ -2695,6 +2695,16 @@
 			(type default)
 		)
 		(uuid "7d815a89-70ed-476d-a568-51a8f9888a6a")
+	)
+	(wire
+		(pts
+			(xy 85.09 175.26) (xy 80.01 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7db4948f-faf6-4dde-b997-746960c94da4")
 	)
 	(wire
 		(pts
@@ -3338,16 +3348,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 170.18) (xy 80.01 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d87bbc40-2655-4102-ba72-6e17d28634a4")
-	)
-	(wire
-		(pts
 			(xy 265.43 31.75) (xy 270.51 31.75)
 		)
 		(stroke
@@ -3408,7 +3408,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 170.18) (xy 80.01 175.26)
+			(xy 85.09 172.72) (xy 85.09 175.26)
 		)
 		(stroke
 			(width 0)
@@ -6025,7 +6025,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 85.09 170.18 0)
+		(at 85.09 172.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6035,7 +6035,7 @@
 		(dnp no)
 		(uuid "9332391b-0ea6-4e9c-a547-63863d5fba56")
 		(property "Reference" "#PWR0930"
-			(at 85.09 173.99 0)
+			(at 85.09 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6046,7 +6046,7 @@
 			)
 		)
 		(property "Value" "VSENS-3V3"
-			(at 84.836 165.608 0)
+			(at 84.836 168.148 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6056,7 +6056,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 170.18 0)
+			(at 85.09 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6067,7 +6067,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 170.18 0)
+			(at 85.09 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6078,7 +6078,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
-			(at 85.09 170.18 0)
+			(at 85.09 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6750,7 +6750,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 45.72 170.18 0)
+		(at 45.72 172.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6760,7 +6760,7 @@
 		(dnp no)
 		(uuid "eaa8b9a1-6599-45a5-9740-92d047ad25c0")
 		(property "Reference" "#PWR0931"
-			(at 45.72 173.99 0)
+			(at 45.72 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6771,7 +6771,7 @@
 			)
 		)
 		(property "Value" "VSENS-3V3"
-			(at 45.72 165.1 0)
+			(at 45.72 167.64 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6781,7 +6781,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 170.18 0)
+			(at 45.72 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6792,7 +6792,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 170.18 0)
+			(at 45.72 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6803,7 +6803,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
-			(at 45.72 170.18 0)
+			(at 45.72 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

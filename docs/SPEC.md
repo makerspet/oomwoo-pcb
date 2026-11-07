@@ -586,8 +586,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### Cliff sensors (v1)
 
-- Six [cliff sensor boards](../kicad/cliff-sensor/README.md) on CLIFF-LF1, -RF1, -LR1, -RR1, -LM1, -RM1 (ZX-SH1.0-4PLT, SMD vertical): 1 VSENS-5V-USB, 2 CLIFF-LED-K, 3 phototransistor collector, 4 GND.
-- Q35 (AO3400) sinks all six LED cathodes from CLIFF_LED_EN (PC1, high = on, R214 100k pull-down); ~25 mA per LED (150 Ω on each board), ~150 mA total.
+- Six [cliff sensor boards](../kicad/cliff-sensor/README.md) on CLIFF-LF1, -RF1, -LR1, -RR1, -LM1, -RM1 (ZX-SH1.0-4PLT, SMD vertical): 1 LED anode (VSENS-5V-USB through 150 Ω on the main board), 2 CLIFF-LED-K, 3 phototransistor collector, 4 GND.
+- Q35 (AO3400) sinks all six LED cathodes from CLIFF_LED_EN (PC1, high = on; R214 pull-down removed 2026-11-06: the LEDs run from VSENS-5V-USB, which is off whenever PC1 floats); ~25 mA per LED (150 Ω each, R224-R229 on the main board since 2026-11-06; was R4001 on each cliff board), ~150 mA total.
 - 47k pull-ups to 3.3 V: R64 LF (PA3), R73 RF (PA1), R53 LR (PA2), R39 RR (PA0), R212 LM (PD9), R213 RM (PE8). LM/RM reach the MCU sheet through global labels.
 - The cliff and bumper LED enables stay separate: modulate the cliff LEDs (LED-on minus LED-off cancels ambient light) while the bumper emitters stay on.
 

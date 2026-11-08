@@ -1108,9 +1108,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "- kicad/cliff-sensor mating boards\n- SH 4-pin vertical; use same (pin 1 to pin 1) cable\n- set CLIFF_LED_EN LOW to disable\n- modulate CLIFF_LED_EN, read each channel LED-on minus LED-off to cancel ambient light"
+	(text "- kicad/cliff-sensor mating boards\n- SH 4-pin vertical; use same (pin 1 to pin 1) cable\n- set CLIFF_LED_EN LOW to disable\n- modulate CLIFF_LED_EN, read each channel LED-on minus LED-off to cancel ambient light\n- possible TODO - cliff LEDs 2x or 3x in series, save resistors\n  - worsens power rail noise rejection\n  - ADC fw could reject noise by correlating the 6 readings\n- 0.76W power consumption when enabled continuously\n  - drive at ~10% duty cycle to save power\n- tweak output pullup\n  - a low resistor value can saturating the photo transistor\n  - 47K pullup makes for 1ms output settling time\n  - can use 10k for faster settling, to reduce duty cycle further\n- combine low duty with fast duty LED cycling\n  - fast (~10x photo transistor settling time) reduces LED average radiance\n  to avoid photo transistor saturation\n- check sensor faults - is output 3.3V or floating?\n  - normal no-cliff condition - photo transisstor gets LED light\n  Vary LED current and check photo-transistor voltage."
 		(exclude_from_sim no)
-		(at 28.702 165.862 0)
+		(at 30.226 151.384 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1701,7 +1701,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 137.16) (xy 104.14 140.97)
+			(xy 104.14 137.16) (xy 104.14 138.43)
 		)
 		(stroke
 			(width 0)
@@ -3506,7 +3506,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 104.14 140.97 0)
+		(at 104.14 138.43 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3516,7 +3516,7 @@
 		(dnp no)
 		(uuid "5aee652e-7d84-4d7a-b7bb-eb8706396982")
 		(property "Reference" "#PWR07707"
-			(at 104.14 147.32 0)
+			(at 104.14 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3527,7 +3527,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 104.14 147.32 0)
+			(at 104.14 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3538,7 +3538,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 140.97 0)
+			(at 104.14 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3549,7 +3549,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 140.97 0)
+			(at 104.14 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3560,7 +3560,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 140.97 0)
+			(at 104.14 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

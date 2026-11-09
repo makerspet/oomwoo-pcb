@@ -538,8 +538,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
   - SWO (PB3) on JTAG1 counts as a spare when not tracing; the cliff and bumper LED enables stay separate (cliff LEDs may be modulated, bumper LEDs stay on)
 - firmware pin map and rules: [firmware spec](https://github.com/makerspet/oomwoo-firmware/blob/main/docs/SPEC.md)
 - USB-C: the phone is the USB host (the STM32G4 USB is device-only). CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default, so the phone becomes host and source; a PD power-role swap lets the robot charge the phone while it stays host (phone support varies; phones without it alternate charging and data)
-- the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q27 (AO3401) + Q28 (AO3400) disconnect the robot 5 V from VBUS unless PWR_EN is high
-- VBUS lockout: PWR_EN (PD7) reaches the TMI6240 and Q28 only through R201 (10k) as PWR_EN_G. Q33 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R202/R203 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q34 keeps Q33 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.
+- the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q27 (AO3401) + Q28 (AO3400) disconnect the robot 5 V from VBUS_5V unless USB_PWR_EN is high
+- VBUS lockout: USB_PWR_EN (PD7; PWR_EN until 2026-11-08) reaches the TMI6240 and Q28 only through R201 (10k) as PWR_EN_G. Q33 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R202/R203 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q34 keeps Q33 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
@@ -658,7 +658,7 @@ Power rails (current schematic):
 | VMCU-BAT-3V3 | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
 | VSENS-5V-USB | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUSONIC-14V4 boost | STM32 (VSENS_5V_USB_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
-| USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
+| USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (USB_PWR_EN) |
 | VUSONIC-14V4 (≈ 14.5 V) | MT3608 boost | carpet sensor | with VSENS-5V-USB |
 | VMOT-14V4 | VBAT-14V4 via Q1 + Q37 AO4407C (parallel) | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
 | VLIDAR-5V | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |

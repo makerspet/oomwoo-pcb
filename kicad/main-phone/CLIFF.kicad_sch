@@ -5,12 +5,12 @@
 	(uuid "398dcce6-d5bc-4da6-8949-63bd90e3a3e5")
 	(paper "USLetter")
 	(lib_symbols
-		(symbol "Device:R_US"
+		(symbol "JLCImport:0603WAF1500T5E"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -18,7 +18,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 2.54 0 90)
+				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -27,8 +27,8 @@
 					)
 				)
 			)
-			(property "Value" "R_US"
-				(at -2.54 0 90)
+			(property "Value" "0603WAF1500T5E"
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -37,8 +37,8 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 1.016 -0.254 90)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -48,7 +48,62 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "150Ω (1500) ±1%"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(厚声)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "0603WAF1500T5E"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C22808"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Resistors"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -59,106 +114,22 @@
 					)
 				)
 			)
-			(property "Description" "Resistor, US symbol"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_US_0_1"
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 0 2.54)
-					)
+			(symbol "0603WAF1500T5E_0_1"
+				(rectangle
+					(start -2.54 1.02)
+					(end 2.54 -1.02)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.286) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_US_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -174,9 +145,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -482,6 +453,166 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:FRC0603F4702TS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "FRC0603F4702TS"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C2907042.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "FOJAN(富捷)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "FRC0603F4702TS"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C2907042"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Chip Resistor - Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FRC0603F4702TS_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:ZX-SH1_0-4PLT"
 			(pin_names
 				(hide yes)
@@ -533,7 +664,7 @@
 					)
 				)
 			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
+			(property "Description" "-40℃~+85℃ 1 1A 1mm 1x4P 3.05mm 4 4.4mm 4P 50V 6.35mm Auxiliary Solder Pin Beige Brass LCP SH Surface Mount,Vertical Tin SMD,P=1mm Wire To Board Connector ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -589,1206 +720,6 @@
 				)
 			)
 			(symbol "ZX-SH1_0-4PLT_0_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 5.08)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 3.81 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 1.27 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -1.27 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -3.81 0)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -8.89 90)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 8.89 270)
-					(length 2.54)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ZX-SH1_0-4PLT_1"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ZX-SH1_0-4PLT"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430453.pdf"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Megastar"
-				(at 0 -21.59 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "ZX-SH1.0-4PLT"
-				(at 0 -24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C7430453"
-				(at 0 -26.67 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C7430453 ZX-SH1.0-4PLT SH1.0 4P vertical Megastar"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ZX-SH1_0-4PLT_1_0_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 5.08)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 3.81 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 1.27 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -1.27 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -3.81 0)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -8.89 90)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 8.89 270)
-					(length 2.54)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ZX-SH1_0-4PLT_2"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ZX-SH1_0-4PLT"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430453.pdf"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Megastar"
-				(at 0 -21.59 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "ZX-SH1.0-4PLT"
-				(at 0 -24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C7430453"
-				(at 0 -26.67 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C7430453 ZX-SH1.0-4PLT SH1.0 4P vertical Megastar"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ZX-SH1_0-4PLT_2_0_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 5.08)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 3.81 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 1.27 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -1.27 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -3.81 0)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -8.89 90)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 8.89 270)
-					(length 2.54)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ZX-SH1_0-4PLT_3"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ZX-SH1_0-4PLT"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430453.pdf"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Megastar"
-				(at 0 -21.59 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "ZX-SH1.0-4PLT"
-				(at 0 -24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C7430453"
-				(at 0 -26.67 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C7430453 ZX-SH1.0-4PLT SH1.0 4P vertical Megastar"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ZX-SH1_0-4PLT_3_0_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 5.08)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 3.81 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 1.27 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -1.27 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -3.81 0)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -8.89 90)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 8.89 270)
-					(length 2.54)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ZX-SH1_0-4PLT_4"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ZX-SH1_0-4PLT"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430453.pdf"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Megastar"
-				(at 0 -21.59 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "ZX-SH1.0-4PLT"
-				(at 0 -24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C7430453"
-				(at 0 -26.67 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C7430453 ZX-SH1.0-4PLT SH1.0 4P vertical Megastar"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ZX-SH1_0-4PLT_4_0_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 5.08)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 3.81 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 1.27 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -1.27 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -3.81 0)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -8.89 90)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 8.89 270)
-					(length 2.54)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ZX-SH1_0-4PLT_5"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ZX-SH1_0-4PLT"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430453.pdf"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Megastar"
-				(at 0 -21.59 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "ZX-SH1.0-4PLT"
-				(at 0 -24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C7430453"
-				(at 0 -26.67 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C7430453 ZX-SH1.0-4PLT SH1.0 4P vertical Megastar"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ZX-SH1_0-4PLT_5_0_1"
 				(rectangle
 					(start -1.27 6.35)
 					(end 3.81 -6.35)
@@ -2177,9 +1108,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "- kicad/cliff-sensor mating boards\n- SH 4-pin vertical; use same (pin 1 to pin 1) cable\n- set CLIFF_LED_EN LOW to disable\n- modulate CLIFF_LED_EN, read each channel LED-on minus LED-off to cancel ambient light"
+	(text "- kicad/cliff-sensor mating boards\n- SH 4-pin vertical; use same (pin 1 to pin 1) cable\n- set CLIFF_LED_EN LOW to disable\n- modulate CLIFF_LED_EN, read each channel LED-on minus LED-off to cancel ambient light\n- possible TODO - cliff LEDs 2x or 3x in series, save resistors\n  - worsens power rail noise rejection\n  - ADC fw could reject noise by correlating the 6 readings\n- 0.76W power consumption when enabled continuously\n  - drive at ~10% duty cycle to save power\n- tweak output pullup\n  - a low resistor value can saturating the photo transistor\n  - 47K pullup makes for 1ms output settling time\n  - can use 10k for faster settling, to reduce duty cycle further\n- combine low duty with fast duty LED cycling\n  - fast (~10x photo transistor settling time) reduces LED average radiance\n  to avoid photo transistor saturation\n- check sensor faults - is output 3.3V or floating?\n  - normal no-cliff condition - photo transisstor gets LED light\n  Vary LED current and check photo-transistor voltage."
 		(exclude_from_sim no)
-		(at 28.702 165.862 0)
+		(at 30.226 151.384 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2195,16 +1126,16 @@
 		(uuid "08db5476-958c-4636-b19a-4330ec3bc6fd")
 	)
 	(junction
-		(at 194.31 49.53)
+		(at 195.58 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "205b1eb9-f6aa-4d8f-9ebf-4e3e04febc1f")
+		(uuid "1297adad-3189-475f-9db9-fb586c4bdc2e")
 	)
 	(junction
-		(at 175.26 49.53)
+		(at 186.69 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "22188116-ea7d-4988-a8f7-44dd4306e14c")
+		(uuid "15643a48-29d1-4ac4-a69f-c99182e7fb91")
 	)
 	(junction
 		(at 133.35 58.42)
@@ -2213,10 +1144,10 @@
 		(uuid "2cab1a6a-ff65-4177-ac82-33dc970f93ac")
 	)
 	(junction
-		(at 187.96 49.53)
+		(at 177.8 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3956bdfc-ffd2-4d0a-81d0-8428c5044585")
+		(uuid "37fdaab8-06fc-47ce-b482-7a3e11d3d6c2")
 	)
 	(junction
 		(at 127 86.36)
@@ -2235,12 +1166,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4c6653c5-b3ed-4e82-9d54-66440feceebf")
-	)
-	(junction
-		(at 168.91 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "65b6201d-8136-43e3-a8c3-cb5c3be231dc")
 	)
 	(junction
 		(at 81.28 114.3)
@@ -2273,22 +1198,28 @@
 		(uuid "ab860b6d-44be-4cf1-9115-216b9bcffd39")
 	)
 	(junction
+		(at 168.91 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b46e88f0-7f81-4c77-aac4-60c08ab589f6")
+	)
+	(junction
 		(at 81.28 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "be54f683-cc12-463a-a022-3d81fb58c1a9")
 	)
 	(junction
-		(at 181.61 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bf2588b2-b69f-413e-9a14-06f82fe13cc3")
-	)
-	(junction
 		(at 133.35 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cb249082-eee0-42b3-a162-dc5fdbf67894")
+	)
+	(junction
+		(at 205.74 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce506525-1b10-4510-89c0-77d0e2d92048")
 	)
 	(junction
 		(at 74.93 114.3)
@@ -2307,12 +1238,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f88b4ee8-bbfe-4e71-99e1-a6978d9474ef")
-	)
-	(junction
-		(at 93.98 132.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fa4e3467-e7fd-4515-9c95-74c27ca23a80")
 	)
 	(wire
 		(pts
@@ -2356,33 +1281,13 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 53.34) (xy 200.66 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1712d6fd-d41f-44e2-b8d4-b50de3744d84")
-	)
-	(wire
-		(pts
-			(xy 194.31 49.53) (xy 200.66 49.53)
+			(xy 195.58 49.53) (xy 205.74 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "19010e0d-52bf-4485-a201-b5cea8e0ae06")
-	)
-	(wire
-		(pts
-			(xy 194.31 53.34) (xy 194.31 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b934dfa-d4f9-4bfd-a7bb-d43c2c637501")
 	)
 	(wire
 		(pts
@@ -2396,7 +1301,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 49.53) (xy 194.31 49.53)
+			(xy 186.69 49.53) (xy 195.58 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2406,7 +1311,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 45.72) (xy 120.65 45.72)
+			(xy 127 45.72) (xy 115.57 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2416,7 +1321,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 49.53) (xy 181.61 49.53)
+			(xy 168.91 49.53) (xy 177.8 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2436,23 +1341,23 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 60.96) (xy 175.26 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2dbbfc84-cd3b-4c0c-b1a0-52a6f3fddcd1")
-	)
-	(wire
-		(pts
-			(xy 127 101.6) (xy 120.65 101.6)
+			(xy 127 101.6) (xy 115.57 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "32b1c2d2-344a-4e18-8c60-f1ac19ae5206")
+	)
+	(wire
+		(pts
+			(xy 177.8 49.53) (xy 186.69 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "381eda3f-0a8e-4904-ad14-ec0e01f5d3c1")
 	)
 	(wire
 		(pts
@@ -2466,7 +1371,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 132.08) (xy 86.36 132.08)
+			(xy 86.36 132.08) (xy 99.06 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2546,16 +1451,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 60.96) (xy 181.61 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63890956-eb76-440b-b2da-6c18a69f37c5")
-	)
-	(wire
-		(pts
 			(xy 74.93 96.52) (xy 71.12 96.52)
 		)
 		(stroke
@@ -2563,16 +1458,6 @@
 			(type default)
 		)
 		(uuid "66d5cc3b-3820-4ffa-939f-128fd3d0b66b")
-	)
-	(wire
-		(pts
-			(xy 200.66 60.96) (xy 200.66 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "691ef064-6b20-477e-9bf9-bbf85e982d0c")
 	)
 	(wire
 		(pts
@@ -2666,16 +1551,6 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 60.96) (xy 194.31 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82243814-40b2-4ab4-a30c-10dad7497261")
-	)
-	(wire
-		(pts
 			(xy 71.12 40.64) (xy 71.12 58.42)
 		)
 		(stroke
@@ -2686,7 +1561,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 45.72) (xy 87.63 45.72)
+			(xy 81.28 45.72) (xy 92.71 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2726,7 +1601,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 73.66) (xy 120.65 73.66)
+			(xy 127 73.66) (xy 115.57 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2746,7 +1621,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 73.66) (xy 81.28 73.66)
+			(xy 92.71 73.66) (xy 81.28 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2763,16 +1638,6 @@
 			(type default)
 		)
 		(uuid "92187fbf-a916-45b0-99fd-cfa3ec3c9420")
-	)
-	(wire
-		(pts
-			(xy 93.98 132.08) (xy 93.98 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9714070d-0141-47e1-b570-051a302a6f2d")
 	)
 	(wire
 		(pts
@@ -2796,23 +1661,13 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 53.34) (xy 175.26 49.53)
+			(xy 205.74 49.53) (xy 215.9 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aa9f09be-5411-46a1-b08e-f24651ae1847")
-	)
-	(wire
-		(pts
-			(xy 87.63 72.39) (xy 87.63 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "add1c0d4-75dd-4de9-ae93-3efd577dcf74")
+		(uuid "a90ebaa8-f411-4464-a4b2-ef02075228cf")
 	)
 	(wire
 		(pts
@@ -2826,17 +1681,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 53.34) (xy 168.91 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba03f6e7-4fa5-48e0-9b93-3b43591c2872")
-	)
-	(wire
-		(pts
-			(xy 81.28 101.6) (xy 87.63 101.6)
+			(xy 81.28 101.6) (xy 92.71 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2856,43 +1701,13 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 137.16) (xy 104.14 140.97)
+			(xy 104.14 137.16) (xy 104.14 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c1571576-1846-4270-a80c-15d1f0cd7c87")
-	)
-	(wire
-		(pts
-			(xy 168.91 49.53) (xy 175.26 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1648a5c-a164-41e5-ae13-2486e52d408f")
-	)
-	(wire
-		(pts
-			(xy 99.06 132.08) (xy 93.98 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c18f0fa7-b446-423d-8af2-8e0801ebd2d3")
-	)
-	(wire
-		(pts
-			(xy 181.61 53.34) (xy 181.61 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2658c70-0f92-414f-abaa-bb7a17b3655e")
 	)
 	(wire
 		(pts
@@ -2903,16 +1718,6 @@
 			(type default)
 		)
 		(uuid "c62eda7e-7bf6-4e1c-bd50-20d4e824162f")
-	)
-	(wire
-		(pts
-			(xy 168.91 60.96) (xy 168.91 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7f6b721-6bdb-43a8-8339-ab27a25d43ba")
 	)
 	(wire
 		(pts
@@ -2946,16 +1751,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 49.53) (xy 187.96 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2c2a796-23e8-47a1-84b3-a2ba1ac4cea9")
-	)
-	(wire
-		(pts
 			(xy 137.16 68.58) (xy 137.16 86.36)
 		)
 		(stroke
@@ -2963,16 +1758,6 @@
 			(type default)
 		)
 		(uuid "e5779a51-628f-41d9-81ac-b1f92eedf09d")
-	)
-	(wire
-		(pts
-			(xy 187.96 53.34) (xy 187.96 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e63465a3-afc1-4cab-918e-27daccd89be4")
 	)
 	(wire
 		(pts
@@ -3026,16 +1811,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 60.96) (xy 187.96 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc76945b-187f-4d68-a83d-66a29f4e9645")
-	)
-	(wire
-		(pts
 			(xy 81.28 106.68) (xy 86.36 106.68)
 		)
 		(stroke
@@ -3066,7 +1841,7 @@
 	)
 	(hierarchical_label "CLIFF-LF"
 		(shape output)
-		(at 168.91 66.04 270)
+		(at 168.91 59.69 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3088,7 +1863,7 @@
 	)
 	(hierarchical_label "CLIFF-RF"
 		(shape output)
-		(at 175.26 66.04 270)
+		(at 177.8 59.69 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3132,7 +1907,7 @@
 	)
 	(hierarchical_label "CLIFF-LM"
 		(shape output)
-		(at 194.31 66.04 270)
+		(at 205.74 59.69 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3143,7 +1918,7 @@
 	)
 	(hierarchical_label "CLIFF-RM"
 		(shape output)
-		(at 200.66 66.04 270)
+		(at 215.9 59.69 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3176,7 +1951,7 @@
 	)
 	(hierarchical_label "CLIFF-RR"
 		(shape output)
-		(at 187.96 66.04 270)
+		(at 195.58 59.69 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3187,7 +1962,7 @@
 	)
 	(hierarchical_label "CLIFF-LR"
 		(shape output)
-		(at 181.61 66.04 270)
+		(at 186.69 59.69 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3284,6 +2059,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Megastar"
+			(at 130.81 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 130.81 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e82a1de1-b41f-4552-9748-f8d7884b721a")
 		)
@@ -3312,7 +2109,6 @@
 		)
 	)
 	(symbol
-		(lib_name "ZX-SH1_0-4PLT_1")
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
 		(at 77.47 49.53 0)
 		(mirror y)
@@ -3390,6 +2186,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Megastar"
+			(at 77.47 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 77.47 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1992dd55-9166-4e6b-98fe-9c5e30d41307")
 		)
@@ -3418,8 +2236,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 175.26 57.15 0)
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 115.57 68.58 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3427,9 +2245,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0b1a2ce1-fe23-4602-8af1-657a3fde0f2c")
-		(property "Reference" "R73"
-			(at 173.736 60.198 90)
+		(uuid "103225fe-9892-450a-94e8-f131601e53ef")
+		(property "Reference" "R228"
+			(at 113.03 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3439,8 +2257,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47k"
-			(at 173.736 50.8 90)
+		(property "Value" "150"
+			(at 113.03 69.85 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3450,8 +2268,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 175.26 57.15 0)
+		(property "Footprint" "JLCImport:R0603"
+			(at 115.57 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3461,8 +2279,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 175.26 57.15 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 115.57 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3472,8 +2290,8 @@
 				)
 			)
 		)
-		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 175.26 57.15 0)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 115.57 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3483,8 +2301,30 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907042"
-			(at 175.26 57.15 0)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 115.57 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22808"
+			(at 115.57 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3495,15 +2335,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c2d9a945-706b-410b-9119-35a12498de50")
+			(uuid "768a931a-ad66-4125-a4e6-7825454bce42")
 		)
 		(pin "2"
-			(uuid "48771d65-4394-432f-8867-f57b384adcfb")
+			(uuid "9b33949f-e473-42aa-b1ea-fb14e2ed7303")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "R73")
+					(reference "R228")
 					(unit 1)
 				)
 			)
@@ -3511,7 +2351,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 120.65 101.6 0)
+		(at 115.57 91.44 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3522,7 +2362,7 @@
 		(dnp no)
 		(uuid "115f5993-67d4-49ed-b26c-a78ad2fb0742")
 		(property "Reference" "#PWR0907"
-			(at 120.65 105.41 0)
+			(at 115.57 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3533,7 +2373,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 120.65 96.52 0)
+			(at 115.57 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3543,7 +2383,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 101.6 0)
+			(at 115.57 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3554,7 +2394,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 101.6 0)
+			(at 115.57 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3565,7 +2405,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 120.65 101.6 0)
+			(at 115.57 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3588,8 +2428,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 93.98 140.97 0)
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 92.71 68.58 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3597,9 +2437,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "2c75c1dd-de33-4e0e-80d9-9967113408b3")
-		(property "Reference" "#PWR07708"
-			(at 93.98 147.32 0)
+		(uuid "183aba0d-1d2a-4f0d-be20-6ff1dd1fdf3c")
+		(property "Reference" "R225"
+			(at 95.25 67.31 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "150"
+			(at 95.25 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 92.71 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3609,8 +2471,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 93.98 147.32 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 92.71 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3620,8 +2482,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 93.98 140.97 0)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 92.71 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3631,8 +2493,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 93.98 140.97 0)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 92.71 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3642,8 +2504,19 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 140.97 0)
+		(property "MPN" "0603WAF1500T5E"
+			(at 92.71 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22808"
+			(at 92.71 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3654,12 +2527,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "8d7b489b-089e-403d-b364-6e6c00b9a30f")
+			(uuid "e6d76369-d846-4ade-b8a6-59a082fbc6a5")
+		)
+		(pin "2"
+			(uuid "cf8a41a1-610e-4adf-b37d-0acda4781491")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "#PWR07708")
+					(reference "R225")
 					(unit 1)
 				)
 			)
@@ -3667,7 +2543,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 87.63 45.72 0)
+		(at 92.71 35.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3677,7 +2553,7 @@
 		(dnp no)
 		(uuid "30b885ff-d9b6-49bb-9560-44f64b88965d")
 		(property "Reference" "#PWR0911"
-			(at 87.63 49.53 0)
+			(at 92.71 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3688,7 +2564,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 87.63 40.64 0)
+			(at 92.71 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3698,7 +2574,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 45.72 0)
+			(at 92.71 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3709,7 +2585,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 45.72 0)
+			(at 92.71 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3720,7 +2596,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 87.63 45.72 0)
+			(at 92.71 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3743,7 +2619,6 @@
 		)
 	)
 	(symbol
-		(lib_name "ZX-SH1_0-4PLT_2")
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
 		(at 130.81 49.53 0)
 		(unit 1)
@@ -3811,6 +2686,28 @@
 		)
 		(property "LCSC" "C7430453"
 			(at 130.81 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Megastar"
+			(at 130.81 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 130.81 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3928,7 +2825,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 120.65 45.72 0)
+		(at 115.57 35.56 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -3939,7 +2836,7 @@
 		(dnp no)
 		(uuid "37612766-001d-487e-9a07-c1bb5d166ff3")
 		(property "Reference" "#PWR0904"
-			(at 120.65 49.53 0)
+			(at 115.57 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3950,7 +2847,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 120.65 40.64 0)
+			(at 115.57 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3960,7 +2857,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 45.72 0)
+			(at 115.57 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3971,7 +2868,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 45.72 0)
+			(at 115.57 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3982,7 +2879,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 120.65 45.72 0)
+			(at 115.57 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4162,7 +3059,6 @@
 		)
 	)
 	(symbol
-		(lib_name "ZX-SH1_0-4PLT_3")
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
 		(at 130.81 77.47 0)
 		(unit 1)
@@ -4239,6 +3135,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Megastar"
+			(at 130.81 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 130.81 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ca48fc60-a520-414e-928d-719b354ed700")
 		)
@@ -4267,7 +3185,6 @@
 		)
 	)
 	(symbol
-		(lib_name "ZX-SH1_0-4PLT_5")
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
 		(at 77.47 105.41 0)
 		(mirror y)
@@ -4345,6 +3262,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Megastar"
+			(at 77.47 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 77.47 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "41787a1e-c3a2-437a-a23d-f4689e3fe23c")
 		)
@@ -4367,6 +3306,121 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
 					(reference "CLIFF-LR1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:FRC0603F4702TS")
+		(at 215.9 54.61 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4a6b40b6-1f6a-4784-a1ec-cc4686a57fb8")
+		(property "Reference" "R213"
+			(at 213.36 53.3399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 213.36 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 223.52 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907042.pdf"
+			(at 226.06 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 215.9 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 228.6 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F4702TS"
+			(at 231.14 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 233.68 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3e442dc4-d4dd-4855-b947-0896d1e1804c")
+		)
+		(pin "1"
+			(uuid "512ea899-21f2-4387-9ecc-dd060693ed5f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R213")
 					(unit 1)
 				)
 			)
@@ -4451,100 +3505,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 194.31 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "520189b8-29dc-4b17-af5b-6d63121c30cb")
-		(property "Reference" "R212"
-			(at 192.786 60.198 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "47k"
-			(at 192.786 50.8 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 194.31 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 194.31 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 194.31 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9dc09f7c-4cea-487d-991f-a076868ab438")
-		)
-		(pin "2"
-			(uuid "2911d09c-1bbc-4dc8-b833-bb0c6aebc959")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "R212")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 104.14 140.97 0)
+		(at 104.14 138.43 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4554,7 +3516,7 @@
 		(dnp no)
 		(uuid "5aee652e-7d84-4d7a-b7bb-eb8706396982")
 		(property "Reference" "#PWR07707"
-			(at 104.14 147.32 0)
+			(at 104.14 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4565,7 +3527,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 104.14 147.32 0)
+			(at 104.14 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4576,7 +3538,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 140.97 0)
+			(at 104.14 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4587,7 +3549,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 140.97 0)
+			(at 104.14 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4598,7 +3560,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 140.97 0)
+			(at 104.14 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4615,6 +3577,350 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
 					(reference "#PWR07707")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:FRC0603F4702TS")
+		(at 195.58 54.61 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62e53053-a400-496f-b50d-2402741dd0ca")
+		(property "Reference" "R39"
+			(at 193.04 53.3399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 193.04 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 203.2 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907042.pdf"
+			(at 205.74 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 195.58 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 208.28 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F4702TS"
+			(at 210.82 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 213.36 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "16996eb2-4d75-483d-b5b3-bff3897a74e0")
+		)
+		(pin "1"
+			(uuid "a9184db9-df2c-4c5f-bb3f-a90525f6aa1f")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:FRC0603F4702TS")
+		(at 177.8 54.61 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "86da20f7-5afd-41f9-9958-b992f2de6645")
+		(property "Reference" "R73"
+			(at 175.26 53.3399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 175.26 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 185.42 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907042.pdf"
+			(at 187.96 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 177.8 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 190.5 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F4702TS"
+			(at 193.04 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 195.58 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "90e06f65-15e8-488b-aecc-0595bb0f0214")
+		)
+		(pin "1"
+			(uuid "0165253e-9cf2-43a7-bb89-12f281fc0422")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R73")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 92.71 40.64 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8b8d0b88-9639-4fec-a51d-d16f74294559")
+		(property "Reference" "R224"
+			(at 95.25 39.37 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "150"
+			(at 95.25 41.91 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22808"
+			(at 92.71 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8b0122b6-c11e-4f7a-ad14-5eef75252062")
+		)
+		(pin "2"
+			(uuid "003aa7be-8218-40a6-8a18-cb4d89a96094")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R224")
 					(unit 1)
 				)
 			)
@@ -4700,8 +4006,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 200.66 57.15 0)
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 115.57 40.64 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4709,9 +4015,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "8f1eb73b-4178-4be9-8729-10aa51c44a6f")
-		(property "Reference" "R213"
-			(at 199.136 60.198 90)
+		(uuid "9b456513-cf1c-45ef-a46d-db4d6d7fbbfd")
+		(property "Reference" "R227"
+			(at 113.03 39.37 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4721,8 +4027,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47k"
-			(at 199.136 50.8 90)
+		(property "Value" "150"
+			(at 113.03 41.91 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4732,8 +4038,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 200.66 57.15 0)
+		(property "Footprint" "JLCImport:R0603"
+			(at 115.57 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4743,8 +4049,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 200.66 57.15 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 115.57 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4754,8 +4060,8 @@
 				)
 			)
 		)
-		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 200.66 57.15 0)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 115.57 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4765,8 +4071,30 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907042"
-			(at 200.66 57.15 0)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 115.57 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22808"
+			(at 115.57 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4777,107 +4105,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "b30f1739-42b1-4627-b60d-f0055f329f2c")
+			(uuid "5b1ef628-3905-4b50-8960-7882c17904b9")
 		)
 		(pin "2"
-			(uuid "2c33796c-ff4b-47fc-b012-6782de733ec9")
+			(uuid "9b38d703-c55b-4174-8a0e-96f70f3f2536")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "R213")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 93.98 137.16 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9d41ed4b-8f34-4cc6-90a1-129ebda9e167")
-		(property "Reference" "R214"
-			(at 87.63 135.89 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 87.63 138.43 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Cliff LEDs off while the MCU is in reset"
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 93.98 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "95bb44ae-f729-48fa-9742-ee720e5e2128")
-		)
-		(pin "2"
-			(uuid "e8d02c20-272a-4f59-a565-c4c50bb139f0")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "R214")
+					(reference "R227")
 					(unit 1)
 				)
 			)
@@ -5056,8 +4292,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 168.91 57.15 0)
+		(lib_id "JLCImport:FRC0603F4702TS")
+		(at 168.91 54.61 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5065,31 +4302,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c1dc275f-4272-47f0-952d-b6512947c9b8")
+		(uuid "b1b3b733-0dc0-4789-8e28-5c5a776d32cc")
 		(property "Reference" "R64"
-			(at 167.386 60.198 90)
+			(at 166.37 53.3399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "47k"
-			(at 167.386 50.8 90)
+			(at 166.37 55.8799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 168.91 57.15 0)
+		(property "Footprint" "JLCImport:R0603"
+			(at 176.53 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5099,8 +4336,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 168.91 57.15 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907042.pdf"
+			(at 179.07 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5110,8 +4347,30 @@
 				)
 			)
 		)
-		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 168.91 57.15 0)
+		(property "Description" "-55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 168.91 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 181.61 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F4702TS"
+			(at 184.15 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5122,7 +4381,7 @@
 			)
 		)
 		(property "LCSC" "C2907042"
-			(at 168.91 57.15 0)
+			(at 186.69 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5132,11 +4391,11 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "18165336-deb2-4e8f-bf2b-96dabab22090")
-		)
 		(pin "2"
-			(uuid "2567c873-1d2e-4434-ac7c-43da6f2a4e30")
+			(uuid "54b10465-fa8c-4829-869f-cd249b7ae624")
+		)
+		(pin "1"
+			(uuid "dd4caff5-d170-4a31-b73e-a6be10f735d3")
 		)
 		(instances
 			(project "Main"
@@ -5148,8 +4407,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 187.96 57.15 0)
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 92.71 96.52 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5157,31 +4416,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c7f689c8-c364-4306-ad6f-3c162677cacf")
-		(property "Reference" "R39"
-			(at 186.436 60.198 90)
+		(uuid "bb492108-cc44-499b-89a2-c8171029a4ba")
+		(property "Reference" "R226"
+			(at 95.25 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "47k"
-			(at 186.436 50.8 90)
+		(property "Value" "150"
+			(at 95.25 97.79 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 187.96 57.15 0)
+		(property "Footprint" "JLCImport:R0603"
+			(at 92.71 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5191,8 +4450,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 187.96 57.15 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 92.71 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5202,8 +4461,8 @@
 				)
 			)
 		)
-		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 187.96 57.15 0)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 92.71 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5213,8 +4472,30 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907042"
-			(at 187.96 57.15 0)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 92.71 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22808"
+			(at 92.71 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5225,22 +4506,135 @@
 			)
 		)
 		(pin "1"
-			(uuid "d1756e81-73a2-44d0-9f46-a8e3077fc630")
+			(uuid "a3a0f1c6-9e74-4457-804c-cf00acb9979f")
 		)
 		(pin "2"
-			(uuid "2a7fa941-f254-4541-a749-02f730314e07")
+			(uuid "f1c7fc84-0f0c-4c36-9874-cbfa6f37fccb")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "R39")
+					(reference "R226")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_name "ZX-SH1_0-4PLT_4")
+		(lib_id "JLCImport:0603WAF1500T5E")
+		(at 115.57 96.52 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c5c4ab6f-5584-4050-b0c3-ad8f64515796")
+		(property "Reference" "R229"
+			(at 113.03 95.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "150"
+			(at 113.03 97.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-1500-1_C22808.html"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "150Ω (1500) ±1%"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1500T5E"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22808"
+			(at 115.57 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aea6cfe0-acf0-4081-99a1-66c5ae737bf3")
+		)
+		(pin "2"
+			(uuid "3d8eba31-08ac-4b05-966d-8c6543d3a15a")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R229")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
 		(at 77.47 77.47 0)
 		(mirror y)
@@ -5318,6 +4712,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Megastar"
+			(at 77.47 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 77.47 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ba428059-871d-4184-b58e-b644b8d741fa")
 		)
@@ -5346,8 +4762,123 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:FRC0603F4702TS")
+		(at 186.69 54.61 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cd7fbb5f-8a19-49e2-a4f2-d84a1df62688")
+		(property "Reference" "R53"
+			(at 184.15 53.3399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 184.15 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 194.31 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907042.pdf"
+			(at 196.85 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 186.69 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 199.39 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F4702TS"
+			(at 201.93 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 204.47 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "33ecd49f-f2f2-4dca-839c-40dddab018fa")
+		)
+		(pin "1"
+			(uuid "cb740ddf-de0b-4377-8f22-3a4f55676c1c")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VPP")
-		(at 120.65 73.66 0)
+		(at 115.57 63.5 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -5358,7 +4889,7 @@
 		(dnp no)
 		(uuid "d0c725f0-8c4c-4f4c-8272-036969451cdc")
 		(property "Reference" "#PWR0908"
-			(at 120.65 77.47 0)
+			(at 115.57 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5369,7 +4900,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 120.65 68.58 0)
+			(at 115.57 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5379,7 +4910,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 73.66 0)
+			(at 115.57 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5390,7 +4921,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 73.66 0)
+			(at 115.57 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5401,7 +4932,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 120.65 73.66 0)
+			(at 115.57 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5424,8 +4955,123 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:FRC0603F4702TS")
+		(at 205.74 54.61 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d3716ddb-3ef4-4a29-9ff4-d7209195e3c6")
+		(property "Reference" "R212"
+			(at 203.2 53.3399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 203.2 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 213.36 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907042.pdf"
+			(at 215.9 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 205.74 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 218.44 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F4702TS"
+			(at 220.98 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907042"
+			(at 223.52 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "32b60b88-c483-4626-abe9-bafc746c3dac")
+		)
+		(pin "1"
+			(uuid "7b923d30-0a97-425b-9939-08e73bc7b491")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
+					(reference "R212")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VPP")
-		(at 87.63 101.6 0)
+		(at 92.71 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5435,7 +5081,7 @@
 		(dnp no)
 		(uuid "db2c946e-a165-49f3-828e-59044ffe4bb2")
 		(property "Reference" "#PWR0910"
-			(at 87.63 105.41 0)
+			(at 92.71 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5446,7 +5092,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 87.63 96.52 0)
+			(at 92.71 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5456,7 +5102,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 101.6 0)
+			(at 92.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5467,7 +5113,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 101.6 0)
+			(at 92.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5478,7 +5124,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 87.63 101.6 0)
+			(at 92.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5579,100 +5225,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 181.61 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ec988ce2-2ec0-475e-9631-846896a3049c")
-		(property "Reference" "R53"
-			(at 180.086 60.198 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "47k"
-			(at 180.086 50.8 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 181.61 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 181.61 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Pull-up: phototransistor collector to 3.3 V"
-			(at 181.61 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907042"
-			(at 181.61 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c96e8f48-6675-45a4-a4f5-8502be33f5e3")
-		)
-		(pin "2"
-			(uuid "18ceb901-e358-4a4f-b624-2d59b44fccbd")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/eb65cbe8-a43a-448e-bb05-c96139672d5e"
-					(reference "R53")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VPP")
-		(at 87.63 72.39 0)
+		(at 92.71 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5682,7 +5236,7 @@
 		(dnp no)
 		(uuid "f37456dd-d35d-4145-87ef-39870cb3bf37")
 		(property "Reference" "#PWR0906"
-			(at 87.63 76.2 0)
+			(at 92.71 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5693,7 +5247,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 87.63 67.31 0)
+			(at 92.71 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5703,7 +5257,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 72.39 0)
+			(at 92.71 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5714,7 +5268,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 72.39 0)
+			(at 92.71 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5725,7 +5279,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 87.63 72.39 0)
+			(at 92.71 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

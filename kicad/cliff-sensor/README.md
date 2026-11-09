@@ -16,7 +16,7 @@ A small board with an IR LED and a phototransistor that looks down at the floor.
   | 35° | 12.9 mm |
 
   Aim the crossing at the normal floor distance. Past the crossing point the beams diverge, so a far floor returns little light even when it is white. This is what lets the sensor tell a dark floor (close, weak) from a cliff (far).
-- R4001 (150 Ω) sets the LED current: (5 V − 1.25 V) / 150 Ω ≈ 25 mA, 94 mW in the resistor if the LED is left on.
+- The LED current is set on the main board (150 Ω per connector, R224-R229): (5 V − 1.25 V) / 150 Ω ≈ 25 mA, 94 mW in the resistor if the LED is left on. Until 2026-11-06 this board had its own resistor (R4001); moving it keeps this board smaller and lets the current be changed in one place.
 - The main board switches all six LED cathodes at once (Q35, `CLIFF_LED_EN` on PC1) and pulls each phototransistor collector up to 3.3 V (47k). Firmware should modulate the LEDs and use LED-on minus LED-off, so sunlight and lamps cancel out.
 
 ## Connector J4001
@@ -25,7 +25,7 @@ ZX-SH1.0-4PLT (C7430453): JST SH compatible, 1.0 mm pitch, SMD, vertical (top en
 
 | Pin | Signal |
 | --- | --- |
-| 1 | VLED-5V: 5 V from the main board (VSENS-5V-USB) |
+| 1 | LED_A: LED anode, fed from VSENS-5V-USB through 150 Ω on the main board |
 | 2 | LED cathode, switched on the main board |
 | 3 | OUT: phototransistor collector, to an ADC pin |
 | 4 | GND: phototransistor emitter |
@@ -54,11 +54,11 @@ The names (front, middle, rear) are placeholders; put the six sensors wherever t
 
 ## PCB notes (for layout)
 
-- About 8 × 27 mm: D4001 and Q4001 18 mm apart centre to centre, J4001 between them, R4001 next to the LED. No mounting holes; the housing holds the board.
+- About 8 × 27 mm: D4001 and Q4001 18 mm apart centre to centre, J4001 between them. No mounting holes; the housing holds the board.
 - Reference designators are in this board's 4000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has six copies; let KiKit (or the panel tool) rename references per copy.
 
 Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`).
 
 ## Open items
 
-- Pick the tilt and the LED current on the first boards: measure OUT over a white floor, a black floor and a 20 mm drop, and set the firmware threshold from that.
+- Pick the tilt and the LED current (the main-board resistors) on the first boards: measure OUT over a white floor, a black floor and a 20 mm drop, and set the firmware threshold from that.

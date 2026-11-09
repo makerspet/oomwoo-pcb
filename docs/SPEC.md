@@ -390,7 +390,7 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
   - two receivers, not one: when both see the dock it is straight ahead, when one does, steer to that side. With the dock's left and right codes, the robot knows both which way the dock is and which side of the dock it's on. One receiver only sees the dock or not, so it would have to turn and sweep to find the bearing
 - the ToF sensors are on small boards, one design fitted twice: [`kicad/front-sensors`](../kicad/front-sensors/README.md)
   - left board aimed 30° left, right board 30° right
-  - each board has a JST SH 7-pin connector (ZX-SH1.0-7PWT); main board VL-L1 / VL-R1 use the same part
+  - board-to-board since 2026-11-06, no cable: each ToF board hangs upright under the main board, sensor on its front face, a 2.0 mm 2x4 right-angle header (HanElectricity 2005WR-2x4P, C6837622) on its back, plugged into a 2x4 vertical socket (2005FV-2x4P, C18723066) on the main board's underside (VL-L1 / VL-R1); a mount screwed to the main board holds it. The mating swaps the rows, so header pin n meets socket pin n+1 / n-1: see the [front ToF README](../kicad/front-sensors/README.md#connector-j2001)
 - RGB camera with white torchlight LEDs: not in v1, no board yet
 
 ## Side sensors module board
@@ -538,8 +538,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
   - SWO (PB3) on JTAG1 counts as a spare when not tracing; the cliff and bumper LED enables stay separate (cliff LEDs may be modulated, bumper LEDs stay on)
 - firmware pin map and rules: [firmware spec](https://github.com/makerspet/oomwoo-firmware/blob/main/docs/SPEC.md)
 - USB-C: the phone is the USB host (the STM32G4 USB is device-only). CC1/CC2 go to the STM32 UCPD (PB6/PB4): Rd by default, so the phone becomes host and source; a PD power-role swap lets the robot charge the phone while it stays host (phone support varies; phones without it alternate charging and data)
-- the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q27 (AO3401) + Q28 (AO3400) disconnect the robot 5 V from VBUS unless PWR_EN is high
-- VBUS lockout: PWR_EN (PD7) reaches the TMI6240 and Q28 only through R201 (10k) as PWR_EN_G. Q33 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R202/R203 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q34 keeps Q33 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.
+- the TMI6240 has no reverse-current blocking (body diode VOUT→VIN), so Q27 (AO3401) + Q28 (AO3400) disconnect the robot 5 V from VBUS_5V unless USB_PWR_EN is high
+- VBUS lockout: USB_PWR_EN (PD7; PWR_EN until 2026-11-08) reaches the TMI6240 and Q28 only through R201 (10k) as PWR_EN_G. Q33 holds PWR_EN_G low while VBUS is above ~1.3-2.9 V (R202/R203 halve VBUS), so the robot can't drive VBUS against a phone that is already sourcing it (the TMI6240 would otherwise push up to 4 A into it). Once PWR_EN_G is high, Q34 keeps Q33 off, so the robot's own 5 V on VBUS doesn't lock it out. PD power-role swaps still work: the phone drops VBUS first, then the robot's 5 V comes on.
 - VBUS sense: 100k/47k divider to PA7
 - front ToF moved from the Pi to the STM32 (I2C4 + 5 GPIOs); STM32 firmware forwards ToF, LiDAR and sensor data to the phone over USB
 - STM32 firmware updates from the phone: jump to the built-in USB DFU bootloader
@@ -548,7 +548,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, the shared INT 47k R61, the right LPn 47k R196); the MCU drives the left LPn (PB13) and I2C_RST (PC0) with no resistors (R62/R2 removed 2026-11-04: the sensor rail is off whenever those pins float); the ToF boards carry none, so the bus isn't pulled up twice
 - front IR receivers on the board (U24 left, U25 right, IRM-V838M3-C, side-looking) replace the IR-F1/IR-F2 connectors; IR-F-RX1 → PE15, IR-F-RX2 → PB11, both direct (R80 removed 2026-11-04)
 - no HSE crystal (X1, C34, C35 removed 2026-11-04): USB runs crystal-less on HSI48 trimmed by the CRS to the phone's USB SOF, the system clock comes from HSI16 through the PLL; PF0/PF1 are unconnected. The RTC keeps its 32.768 kHz crystal (X3)
-- VL-L1 / VL-R1: JST SH 7-pin (ZX-SH1.0-7PWT, C7430449) instead of ZH 1.5 mm; same pinout, same part on the ToF boards
+- VL-L1 / VL-R1: 2.0 mm 2x4 vertical sockets (HanElectricity 2005FV-2x4P, C18723066) on the underside since 2026-11-06 (JST SH 7-pin ZX-SH1.0-7PWT before, ZH 1.5 mm before that): 1 GND, 2 VSENS-3V3, 3 SCL, 4 SDA, 5 VL-I2C-RESET, 6 ~INT-SENSORS, 7 GND, 8 LPn
 
 ### Power control (v1)
 
@@ -586,8 +586,8 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### Cliff sensors (v1)
 
-- Six [cliff sensor boards](../kicad/cliff-sensor/README.md) on CLIFF-LF1, -RF1, -LR1, -RR1, -LM1, -RM1 (ZX-SH1.0-4PLT, SMD vertical): 1 VSENS-5V-USB, 2 CLIFF-LED-K, 3 phototransistor collector, 4 GND.
-- Q35 (AO3400) sinks all six LED cathodes from CLIFF_LED_EN (PC1, high = on, R214 100k pull-down); ~25 mA per LED (150 Ω on each board), ~150 mA total.
+- Six [cliff sensor boards](../kicad/cliff-sensor/README.md) on CLIFF-LF1, -RF1, -LR1, -RR1, -LM1, -RM1 (ZX-SH1.0-4PLT, SMD vertical): 1 LED anode (VSENS-5V-USB through 150 Ω on the main board), 2 CLIFF-LED-K, 3 phototransistor collector, 4 GND.
+- Q35 (AO3400) sinks all six LED cathodes from CLIFF_LED_EN (PC1, high = on; R214 pull-down removed 2026-11-06: the LEDs run from VSENS-5V-USB, which is off whenever PC1 floats); ~25 mA per LED (150 Ω each, R224-R229 on the main board since 2026-11-06; was R4001 on each cliff board), ~150 mA total.
 - 47k pull-ups to 3.3 V: R64 LF (PA3), R73 RF (PA1), R53 LR (PA2), R39 RR (PA0), R212 LM (PD9), R213 RM (PE8). LM/RM reach the MCU sheet through global labels.
 - The cliff and bumper LED enables stay separate: modulate the cliff LEDs (LED-on minus LED-off cancels ambient light) while the bumper emitters stay on.
 
@@ -608,16 +608,17 @@ The shunt only carries current while the driver drives, not while it chops, so a
 ### Main fan connectors (v1, 2026-11-03)
 
 One connector (VMOT-14V4, GND, MAIN-FAN-FB on PE9, MAIN-FAN-PWM on PD1). Fans with other connectors get an adapter cable (some Dreame MX fans are sold without a cable anyway). MAIN_FAN2 (PA 5 / PH 5 / PH 4 footprint), MAIN_FAN3 (PA 6) and the fan ID input (PE10) were tried on 2026-11-03 and removed the same day to keep the board simple:
-- MAIN_FAN1, fitted: Micro-Fit 3.0 compatible 1x4 right angle, Lian Xin XDWF-C3030WR-1*4P (C50399536, ~$0.09, 5 A per contact, ~5.5 mm tall; the Molex 43650-0400, C277684, 8.5 A, ~$0.30, also fits): 1 VCC, 2 GND, 3 PWM, 4 FG, matching the Dreame L60 Ultra PE main board. A 1x4 because Dreame fans with a 2x2 MX plug often come with a 2x2-to-1x4 cable for a right-angle 1x4 board header, so those cables can be reused (the fan's 2x2 end is 1 VCC, 2 GND, 3 FG, 4 PWM; the cable maps it to the 1x4 order). History, 2026-11-03: vertical 2x2 (9.9 mm plus the plug and cable on top, too tall), then right-angle 2x2, then this 1x4. Place it with room for the plug and cable on the mating side. Stock is low for the clones (~600 Lian Xin, ~1.5k Molex at JLC); check before a production order. MSD-G fan (Dreame X50 Ultra / Master, 20 kPa, 4.2 A at 14.4 V, 6 A blocked at 16.8 V: over the clone's 5 A, so firmware stops a stalled fan by FG). Footprint JLCImport:MicroFit3.0_1x04_P3.00mm_Horizontal_Holes1.1 is KiCad's 43650-0400 with 1.1 mm pin holes, 1.9 x 2.3 mm pads and 3.1 mm peg holes (the clones want 1.0-1.2 mm pin holes). Vendor drawings disagree on which end is pin 1, so check the silkscreen pin 1 against the header's cavity keying on the first board
+- MAIN_FAN1, fitted: Micro-Fit 3.0 compatible 1x4 right angle, Lian Xin XDWF-C3030WR-1*4P (C50399536, ~$0.09, 5 A per contact, ~5.5 mm tall; the Molex 43650-0400, C277684, 8.5 A, ~$0.30, also fits): 1 VCC, 2 GND, 3 PWM, 4 FG, matching the Dreame L60 Ultra PE main board. A 1x4 because Dreame fans with a 2x2 MX plug often come with a 2x2-to-1x4 cable for a right-angle 1x4 board header, so those cables can be reused (the fan's 2x2 end is 1 VCC, 2 GND, 3 FG, 4 PWM; the cable maps it to the 1x4 order). History, 2026-11-03: vertical 2x2 (9.9 mm plus the plug and cable on top, too tall), then right-angle 2x2, then this 1x4. Place it with room for the plug and cable on the mating side. Stock is low for the clones (~600 Lian Xin, ~1.5k Molex at JLC); check before a production order. MSD-G fan (Dreame X50 Ultra / Master, 20 kPa, 4.2 A at 14.4 V, 6 A blocked at 16.8 V: over the clone's 5 A, so firmware stops a stalled fan by FG). Footprint JLCImport:CONN-TH_4P-P3.00_L8.9-W15.7-EH4.7, JLC's own for the Molex 43650-0400 (since 2026-11-04; the Lian Xin's JLC footprint is mirrored, so it isn't used). Vendor drawings disagree on which end is pin 1, so check the silkscreen pin 1 against the header's cavity keying on the first board
 - the motor rail switch has two AO4407C in parallel (Q1, Q37, 10 Ω gate resistors R36/R222 from VMOT-SW-G) for the higher fan current: ~7.5 A normal is ~0.25 W in each
 - the PCB engineer sizes the fan traces for ~6 A
+- blowers are limited to the 20 kPa class (decided 2026-11-07): Dreame MSD-G or MSD-J, both with Micro-Fit plugs. The whole robot current (~7.5 A normal with the MSD-G) runs through BAT2's single P+ and GND contacts (8.5 A rated; the Roborock pack has one of each). A stronger blower would need a battery connector with doubled power pins
 - Q14 is in series with all battery current when off the dock. It was an AOD407 (68 mΩ: ~2 W at 5 A, ~4-5 W at 7.5 A); since 2026-11-03 it is two AO4407C in parallel (Q14, Q38), ~0.22 W each at 7.5 A. Gate = DC_IN, S = VBAT-14V4, D = P+/C+ as before. Vds: about -10 V while charging, up to ~-24 V in a TVS-clamped plug-in surge; Vgs: up to ~+24 V in that surge (AO4407C: -30 V, ±25 V). Q12 stays AOD407: it is the SLM6900 buck switch, where gate charge matters more than on-resistance
 - on the dock Q14/Q38 are off and the whole load runs through D14 (SS56, 5 A): firmware keeps the fan and motors off until DC_IN is gone
 
 ### Component height (v1)
 
 Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
-- battery connector: Molex Micro-Fit 3.0 right-angle 43650-0412, 5.57 mm
+- battery connector (BAT2): not on the top side since 2026-11-07. It is a vertical Micro-Fit 3.0 compatible 1x4, CJT C3030WV-4P (C239441, ~$0.26, 8.5 A, ~10 mm; Molex 43650-0415, C293547, uses the same footprint), fitted on the underside and facing down into the battery compartment, as on older Roborocks. Pinout unchanged: 1 P+ (through F1), 2 NTC, 3 ID, 4 GND. It was a Molex 43650-0412 right angle, SMD, 5.57 mm ($0.55)
 - barrel jack: DC-044A-20A, 7.2 mm
 - LIDAR2 is a 1x6 0.1" right-angle header (PZ254R-11-06P), not fitted
 - J1 spare I/O: vertical 2x6 0.1" header (PZ254V-12-12P, ~8.5 mm above the board), like STM32_DEBUG1
@@ -657,7 +658,7 @@ Power rails (current schematic):
 | VMCU-BAT-3V3 | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
 | VSENS-5V-USB | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUSONIC-14V4 boost | STM32 (VSENS_5V_USB_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
-| USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (PWR_EN) |
+| USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (USB_PWR_EN) |
 | VUSONIC-14V4 (≈ 14.5 V) | MT3608 boost | carpet sensor | with VSENS-5V-USB |
 | VMOT-14V4 | VBAT-14V4 via Q1 + Q37 AO4407C (parallel) | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
 | VLIDAR-5V | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |

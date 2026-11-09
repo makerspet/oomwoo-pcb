@@ -58,7 +58,10 @@ def bom(sch, out):
     tmp.unlink()
     groups = {}
     for p in parts:
-        lcsc = (p['LCSC'] or p['LCSC Part']).strip()  # easyeda2kicad symbols carry 'LCSC Part'
+        lcsc = (p['LCSC'] or p['LCSC Part']).strip()  # new easyeda2kicad imports carry 'LCSC Part' until renamed
+        if p['LCSC'].strip() and p['LCSC Part'].strip() and p['LCSC'].strip() != p['LCSC Part'].strip():
+            print('  WARNING %s: LCSC %s differs from LCSC Part %s (using LCSC; delete LCSC Part)' % (
+                p['Reference'], p['LCSC'].strip(), p['LCSC Part'].strip()))
         key = (lcsc,) if lcsc else ('', p['Value'], p['Footprint'])
         groups.setdefault(key, []).append(p)
     rows = []

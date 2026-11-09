@@ -5,167 +5,12 @@
 	(uuid "44455f7c-e80d-4fd8-a561-aa3b650439b9")
 	(paper "USLetter")
 	(lib_symbols
-		(symbol "Device:C"
+		(symbol "JLCImport:0603WAF1800T5E"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
 				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:R_US"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -173,7 +18,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 2.54 0 90)
+				(at 0 4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -182,8 +27,8 @@
 					)
 				)
 			)
-			(property "Value" "R_US"
-				(at -2.54 0 90)
+			(property "Value" "0603WAF1800T5E"
+				(at 0 -4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -192,8 +37,8 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 1.016 -0.254 90)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -203,7 +48,62 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_180R-1800-1_C22828.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "180Ω (1800) ±1%"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(厚声)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "0603WAF1800T5E"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C22828"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Resistors"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -214,106 +114,22 @@
 					)
 				)
 			)
-			(property "Description" "Resistor, US symbol"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_US_0_1"
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 0 2.54)
-					)
+			(symbol "0603WAF1800T5E_0_1"
+				(rectangle
+					(start -2.54 1.02)
+					(end 2.54 -1.02)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.286) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_US_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -329,9 +145,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -637,6 +453,523 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:CL10B473KB8NNNC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0 4.064 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CL10B473KB8NNNC"
+				(at 0 -4.064 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:C0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B473KB8NNNC_47nF-473-10-50V_C1622.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "47nF (473) ±10% 50V"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "SAMSUNG(三星)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CL10B473KB8NNNC"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C1622"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Multilayer Ceramic Capacitors MLCC - SMD/SMT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CL10B473KB8NNNC_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.51 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.51 2.03) (xy -0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 2.03) (xy 0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "JLCImport:FRC0603J102TS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "FRC0603J102 TS"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C2907113.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "FOJAN(富捷)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "FRC0603J102 TS"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C2907113"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Chip Resistor - Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FRC0603J102TS_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "JLCImport:FRC0603J104TS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "FRC0603J104 TS"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "FOJAN(富捷)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "FRC0603J104 TS"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C2907088"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Chip Resistor - Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FRC0603J104TS_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:ITR9606-F_C3008416"
 			(pin_numbers
 				(hide yes)
@@ -724,7 +1057,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C3008416"
+			(property "LCSC" "C3008416"
 				(at 0 -20.32 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1231,9 +1564,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "- slotted photo-interrupters\n- BUMP-X reads low when light passes the slot\n- drive BUMP_L/R_LED_EN PWM <<15 usec period to enable\n- tune R44, R48, LED PWM duty to let ADC sense full open/close range"
+	(text "- slotted photo-interrupters\n- BUMP-X reads low when light passes the slot\n- drive BUMP_L/R_LED_EN PWM <<15 usec period to enable\n- tune R44, R48, LED PWM duty to let ADC sense full open/close range\n  1k keeps photo transistor output out of saturation\n  so PA4/PA5 (ADC2) see the transition (ITR9606 IC(ON) 0.5-10 mA)\n- R221 enables MCU USB-C Rd on both CC1 and CC2 during MCU *reset*,\n  so the phone detects the robot whichever way the cable is plugged in\n"
 		(exclude_from_sim no)
-		(at 102.87 124.206 0)
+		(at 104.394 118.364 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1243,10 +1576,16 @@
 		(uuid "540208bf-7a63-4da8-98c4-eccfa3679b8c")
 	)
 	(junction
-		(at 123.19 87.63)
+		(at 123.19 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0ea0be09-0ff9-471c-a3c1-addd8a78ab2d")
+	)
+	(junction
+		(at 165.1 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a648af5-492c-405a-b044-43dd46db9bc0")
 	)
 	(junction
 		(at 204.47 88.9)
@@ -1254,35 +1593,9 @@
 		(color 0 0 0 0)
 		(uuid "a6b6e921-bb5e-49a4-b991-2047dff79d85")
 	)
-	(junction
-		(at 165.1 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b5b74fc6-408c-4054-99fc-09ac439c17ce")
-	)
 	(wire
 		(pts
-			(xy 204.47 87.63) (xy 204.47 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "163d1174-7307-4a02-a11d-3eeff4397ca4")
-	)
-	(wire
-		(pts
-			(xy 83.82 102.87) (xy 87.63 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d0b49d3-5479-4697-9d4b-0a5577c185fa")
-	)
-	(wire
-		(pts
-			(xy 118.11 92.71) (xy 118.11 95.25)
+			(xy 118.11 93.98) (xy 118.11 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1292,7 +1605,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 92.71) (xy 92.71 97.79)
+			(xy 92.71 93.98) (xy 92.71 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1302,53 +1615,23 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 102.87) (xy 168.91 102.87)
+			(xy 165.1 104.14) (xy 168.91 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4202e6b0-3ee6-4c0e-8999-a7a79be81487")
+	)
+	(wire
+		(pts
+			(xy 156.21 104.14) (xy 165.1 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "420921af-b490-4a44-b64a-4a2e1d83209a")
-	)
-	(wire
-		(pts
-			(xy 92.71 85.09) (xy 92.71 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d971924-ab13-4578-b0bb-8589b1061163")
-	)
-	(wire
-		(pts
-			(xy 161.29 102.87) (xy 165.1 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d5aa053-ff55-47de-be06-139dd50c5745")
-	)
-	(wire
-		(pts
-			(xy 123.19 78.74) (xy 123.19 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c14c03f-4dde-46c9-8f4a-55cb19bcc36a")
-	)
-	(wire
-		(pts
-			(xy 204.47 80.01) (xy 204.47 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ab770ff-443f-436c-b42b-19793821db75")
 	)
 	(wire
 		(pts
@@ -1362,7 +1645,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 87.63) (xy 127 87.63)
+			(xy 123.19 88.9) (xy 127 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1372,17 +1655,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 85.09) (xy 173.99 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "afe5eff2-526c-4bb7-8130-7bd18a593d0e")
-	)
-	(wire
-		(pts
-			(xy 92.71 107.95) (xy 92.71 110.49)
+			(xy 92.71 109.22) (xy 92.71 110.49)
 		)
 		(stroke
 			(width 0)
@@ -1392,7 +1665,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 87.63) (xy 123.19 87.63)
+			(xy 118.11 88.9) (xy 123.19 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1402,7 +1675,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 102.87) (xy 83.82 102.87)
+			(xy 80.01 104.14) (xy 87.63 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1412,17 +1685,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 86.36) (xy 123.19 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c49e1d08-05f6-40bf-bb0b-0da5fd592ff5")
-	)
-	(wire
-		(pts
-			(xy 173.99 93.98) (xy 173.99 97.79)
+			(xy 173.99 93.98) (xy 173.99 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1442,7 +1705,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 107.95) (xy 173.99 110.49)
+			(xy 173.99 109.22) (xy 173.99 110.49)
 		)
 		(stroke
 			(width 0)
@@ -1461,17 +1724,17 @@
 		(uuid "ee513e60-f684-4c14-93ad-c8f923192ca2")
 	)
 	(label "BUMP-L-LED-K"
-		(at 92.71 97.79 180)
+		(at 92.71 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "6d45827e-9123-4978-9752-c331e5431f3b")
 	)
 	(label "BUMP-R-LED-K"
-		(at 173.99 97.79 0)
+		(at 173.99 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1482,7 +1745,7 @@
 	)
 	(hierarchical_label "BUMP_R_LED_EN"
 		(shape input)
-		(at 161.29 102.87 180)
+		(at 156.21 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1493,7 +1756,7 @@
 	)
 	(hierarchical_label "BUMP_L_LED_EN"
 		(shape input)
-		(at 80.01 102.87 180)
+		(at 80.01 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1515,7 +1778,7 @@
 	)
 	(hierarchical_label "BUMP-L"
 		(shape output)
-		(at 127 87.63 0)
+		(at 127 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1604,7 +1867,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 204.47 77.47 0)
+		(at 204.47 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1614,7 +1877,7 @@
 		(dnp no)
 		(uuid "09c5b5a2-17b2-4cce-aa9d-4df51714978e")
 		(property "Reference" "#PWR0921"
-			(at 204.47 81.28 0)
+			(at 204.47 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1625,7 +1888,7 @@
 			)
 		)
 		(property "Value" "VSENS-3V3"
-			(at 204.47 72.39 0)
+			(at 204.47 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1635,7 +1898,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 77.47 0)
+			(at 204.47 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1646,7 +1909,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 77.47 0)
+			(at 204.47 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1657,7 +1920,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
-			(at 204.47 77.47 0)
+			(at 204.47 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1680,98 +1943,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 173.99 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0b70013e-35b7-48d8-9849-55c22fc2438d")
-		(property "Reference" "R197"
-			(at 167.386 80.264 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "180"
-			(at 167.386 82.804 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 173.99 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Right bumper LED (BUMP-R1): (5 V - 1.2 V) / 180 = ~21 mA"
-			(at 173.99 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22828"
-			(at 173.99 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1dadd6db-ad1f-45de-b9f8-944e8701cc68")
-		)
-		(pin "2"
-			(uuid "75d9adaf-21a4-4ebc-9915-d4a6a073b937")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "R197")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 204.47 96.52 0)
 		(unit 1)
@@ -1781,7 +1952,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "14bbd248-3b62-4468-8d76-a4444e0ee9c4")
+		(uuid "0c9a549b-81fb-40a6-8bf4-c2e6a23c33c0")
 		(property "Reference" "#PWR07809"
 			(at 204.47 102.87 0)
 			(hide yes)
@@ -1838,7 +2009,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8c3e44e3-d67f-4e43-8b20-e01f639c34e2")
+			(uuid "8500568d-8186-43a7-aa36-1934dbdd8636")
 		)
 		(instances
 			(project "Main"
@@ -1850,8 +2021,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 123.19 82.55 0)
+		(lib_id "power:VPP")
+		(at 165.1 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1859,31 +2030,30 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3882caf5-383c-4124-98b3-e647f1890ea8")
-		(property "Reference" "R48"
-			(at 121.412 81.28 0)
+		(uuid "1c623680-6956-436b-be28-62fc0aac3fc5")
+		(property "Reference" "#PWR07808"
+			(at 165.1 97.79 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "1k"
-			(at 120.904 83.82 0)
+		(property "Value" "VMCU-3V3"
+			(at 165.1 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 123.19 82.55 0)
+		(property "Footprint" ""
+			(at 165.1 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1894,7 +2064,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 82.55 0)
+			(at 165.1 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1904,19 +2074,8 @@
 				)
 			)
 		)
-		(property "Description" "Bumper phototransistor pull-up: 1k keeps the output out of saturation so PA4/PA5 (ADC2) see the transition (ITR9606 IC(ON) 0.5-10 mA)"
-			(at 123.19 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907113"
-			(at 123.19 82.55 0)
+		(property "Description" "Power symbol creates a global label with name \"VMCU-3V3\""
+			(at 165.1 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1927,105 +2086,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f9af537d-c131-40d5-89c4-936930f6a1f6")
-		)
-		(pin "2"
-			(uuid "22d500d8-3da9-4798-8075-07f2a345bce6")
+			(uuid "dd98a09f-0157-4e5a-9274-e605b5ecd6c8")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "R48")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 92.71 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3acb23ea-b05b-4ce7-b8de-87279cacc937")
-		(property "Reference" "R220"
-			(at 88.646 82.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "180"
-			(at 88.9 79.502 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 92.71 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 92.71 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Left bumper LED (BUMP-L1): (5 V - 1.2 V) / 180 = ~21 mA"
-			(at 92.71 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22828"
-			(at 92.71 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "62cfc041-76a9-45cf-bb1c-9a8579049f4c")
-		)
-		(pin "2"
-			(uuid "2fd4e94e-321e-45a0-bf8a-b10d5e74a0e6")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "R220")
+					(reference "#PWR07808")
 					(unit 1)
 				)
 			)
@@ -2033,7 +2099,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 173.99 77.47 0)
+		(at 173.99 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2043,7 +2109,7 @@
 		(dnp no)
 		(uuid "3b8253df-edd4-4852-8d45-473a4a52267d")
 		(property "Reference" "#PWR0905"
-			(at 173.99 81.28 0)
+			(at 173.99 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2054,7 +2120,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 173.99 72.39 0)
+			(at 173.99 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2064,7 +2130,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 77.47 0)
+			(at 173.99 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2075,7 +2141,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 77.47 0)
+			(at 173.99 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2086,7 +2152,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 173.99 77.47 0)
+			(at 173.99 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2110,7 +2176,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ITR9606-F_C3008416")
-		(at 105.41 90.17 0)
+		(at 105.41 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2120,7 +2186,7 @@
 		(dnp no)
 		(uuid "3da2a371-434a-46be-8375-43101582f916")
 		(property "Reference" "BUMP-L1"
-			(at 109.22 84.455 0)
+			(at 109.22 85.725 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2131,7 +2197,7 @@
 			)
 		)
 		(property "Value" "ITR9606-F"
-			(at 109.22 82.55 0)
+			(at 109.22 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2142,7 +2208,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:OPTO-TH_ITR9606-F"
-			(at 105.41 90.17 0)
+			(at 105.41 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2153,7 +2219,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 90.17 0)
+			(at 105.41 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2164,7 +2230,7 @@
 			)
 		)
 		(property "Description" "Left bumper slotted photo-interrupter (1 A, 2 K, 3 C, 4 E)"
-			(at 105.41 90.17 0)
+			(at 105.41 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2175,7 +2241,7 @@
 			)
 		)
 		(property "LCSC" "C3008416"
-			(at 105.41 90.17 0)
+			(at 105.41 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2186,7 +2252,7 @@
 			)
 		)
 		(property "Manufacturer" "Everlight Elec"
-			(at 105.41 90.17 0)
+			(at 105.41 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2197,7 +2263,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ITR9606-F"
-			(at 105.41 90.17 0)
+			(at 105.41 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2229,8 +2295,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 204.47 92.71 0)
+		(lib_id "JLCImport:FRC0603J104TS")
+		(at 165.1 99.06 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2238,9 +2305,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3f664411-708a-4fcb-a958-6e95405d245a")
-		(property "Reference" "C178"
-			(at 207.01 91.44 0)
+		(uuid "3e2e50c5-643e-4da6-a9fe-5a2f4791e229")
+		(property "Reference" "R221"
+			(at 162.56 97.7899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2250,8 +2317,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47nF/50V"
-			(at 207.01 93.98 0)
+		(property "Value" "100k"
+			(at 162.56 100.3299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2261,8 +2328,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 204.47 92.71 0)
+		(property "Footprint" "JLCImport:R0603"
+			(at 172.72 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2272,8 +2339,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 204.47 92.71 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
+			(at 175.26 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2283,8 +2350,8 @@
 				)
 			)
 		)
-		(property "Description" "BUMP-R-Q+ filter: 47 us with the 1k pull-up; smooths LED PWM (100+ kHz), keeps ms bumper transitions"
-			(at 204.47 92.71 0)
+		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+			(at 165.1 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2294,8 +2361,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C1622"
-			(at 204.47 92.71 0)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 177.8 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2305,16 +2372,38 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "27139d82-0f3b-4e85-ae8b-0b80448b941d")
+		(property "MPN" "FRC0603J104 TS"
+			(at 180.34 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 182.88 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "9fa9ca26-9191-426a-9da2-1662838301db")
+			(uuid "f5864b17-3c08-4c9f-af80-09680a08a4c2")
+		)
+		(pin "1"
+			(uuid "e14bb209-a48c-48e3-89c5-6393dc31ea53")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "C178")
+					(reference "R221")
 					(unit 1)
 				)
 			)
@@ -2322,7 +2411,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 92.71 77.47 0)
+		(at 92.71 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2332,7 +2421,7 @@
 		(dnp no)
 		(uuid "5f29c1b6-30ef-4a17-857d-ee7322b0d844")
 		(property "Reference" "#PWR07806"
-			(at 92.71 81.28 0)
+			(at 92.71 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2343,7 +2432,7 @@
 			)
 		)
 		(property "Value" "VSENS-5V-USB"
-			(at 92.71 72.39 0)
+			(at 92.71 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2353,7 +2442,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 77.47 0)
+			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2364,7 +2453,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 77.47 0)
+			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2375,7 +2464,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 92.71 77.47 0)
+			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2398,8 +2487,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 123.19 95.25 0)
+		(lib_id "JLCImport:FRC0603J102TS")
+		(at 123.19 83.82 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2407,87 +2496,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "79bdf695-436e-418d-ae4b-77ed325dd3b0")
-		(property "Reference" "#PWR07810"
-			(at 123.19 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 123.19 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 123.19 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 123.19 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e7394c5c-5f12-49f0-902a-29acf2d66818")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "#PWR07810")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 123.19 91.44 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7fa0d629-4763-4ef1-9179-5895ba7ea74c")
-		(property "Reference" "C179"
-			(at 125.73 90.17 0)
+		(fields_autoplaced yes)
+		(uuid "8a1de9a7-43dd-4038-bfa8-63b889962c80")
+		(property "Reference" "R48"
+			(at 125.73 82.5499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2495,113 +2507,21 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(property "Value" "47nF/50V"
-			(at 125.73 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 123.19 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "BUMP-L-Q+ filter: 47 us with the 1k pull-up; smooths LED PWM (100+ kHz), keeps ms bumper transitions"
-			(at 123.19 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1622"
-			(at 123.19 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3cfbcc9f-f137-40b0-9837-016b0fd9e188")
-		)
-		(pin "2"
-			(uuid "d5070ac5-d3d3-4fad-b8c8-e0862e49c04d")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "C179")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 204.47 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8eada29b-3ded-44bb-970d-dda0a92e10fb")
-		(property "Reference" "R44"
-			(at 202.438 82.804 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(property "Value" "1k"
-			(at 201.676 85.09 0)
+			(at 125.73 85.0899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 204.47 83.82 0)
+		(property "Footprint" "JLCImport:R0603"
+			(at 115.57 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2611,8 +2531,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 204.47 83.82 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907113.pdf"
+			(at 113.03 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2622,8 +2542,30 @@
 				)
 			)
 		)
-		(property "Description" "Bumper phototransistor pull-up: 1k keeps the output out of saturation so PA4/PA5 (ADC2) see the transition (ITR9606 IC(ON) 0.5-10 mA)"
-			(at 204.47 83.82 0)
+		(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+			(at 123.19 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 110.49 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603J102 TS"
+			(at 107.95 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2634,7 +2576,7 @@
 			)
 		)
 		(property "LCSC" "C2907113"
-			(at 204.47 83.82 0)
+			(at 105.41 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2645,15 +2587,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "22e08cd1-569c-4751-a669-3b054471ee2a")
+			(uuid "c6f8558e-7caa-4f1e-bc53-5f63e4e0cfba")
 		)
 		(pin "2"
-			(uuid "6c6e9beb-cdac-4967-a760-d877afc3f8b6")
+			(uuid "725e03cd-1c10-40e9-b80f-5bcb5f06fb7d")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "R44")
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -2661,7 +2603,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 118.11 95.25 0)
+		(at 118.11 96.52 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2671,7 +2613,7 @@
 		(dnp no)
 		(uuid "943254e0-10b4-4b5d-bfab-81088188c5ba")
 		(property "Reference" "#PWR07315"
-			(at 118.11 101.6 0)
+			(at 118.11 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2682,7 +2624,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 118.11 101.6 0)
+			(at 118.11 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2693,7 +2635,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 95.25 0)
+			(at 118.11 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2704,7 +2646,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 95.25 0)
+			(at 118.11 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2715,7 +2657,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 118.11 95.25 0)
+			(at 118.11 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2732,6 +2674,120 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
 					(reference "#PWR07315")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:CL10B473KB8NNNC")
+		(at 123.19 92.71 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "95254110-b0b2-43cc-9137-1a59fe7699b0")
+		(property "Reference" "C179"
+			(at 125.73 91.44 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47nF/50V"
+			(at 125.73 93.98 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:C0603"
+			(at 115.57 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B473KB8NNNC_47nF-473-10-50V_C1622.html"
+			(at 113.03 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "47nF (473) ±10% 50V"
+			(at 100.33 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 110.49 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B473KB8NNNC"
+			(at 107.95 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1622"
+			(at 105.41 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f9c07a0f-f64e-4eca-9c73-bb3da50ebd60")
+		)
+		(pin "2"
+			(uuid "bb42eb41-dc38-48dc-9a35-973a99c65ad8")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
+					(reference "C179")
 					(unit 1)
 				)
 			)
@@ -2859,7 +2915,7 @@
 	)
 	(symbol
 		(lib_id "power:VPP")
-		(at 123.19 77.47 0)
+		(at 123.19 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2869,7 +2925,7 @@
 		(dnp no)
 		(uuid "b85533bd-acc9-409b-9d7f-8f228afd02ee")
 		(property "Reference" "#PWR0928"
-			(at 123.19 81.28 0)
+			(at 123.19 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2880,7 +2936,7 @@
 			)
 		)
 		(property "Value" "VSENS-3V3"
-			(at 123.19 72.39 0)
+			(at 123.19 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2890,7 +2946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 123.19 77.47 0)
+			(at 123.19 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2901,7 +2957,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 77.47 0)
+			(at 123.19 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2912,7 +2968,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC-3V3-REG\""
-			(at 123.19 77.47 0)
+			(at 123.19 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2935,8 +2991,123 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:0603WAF1800T5E")
+		(at 92.71 83.82 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b9c33311-45a8-4b1e-81df-cea6f12fdb8a")
+		(property "Reference" "R220"
+			(at 90.17 82.5499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "180"
+			(at 90.17 85.0899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 100.33 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_180R-1800-1_C22828.html"
+			(at 102.87 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "180Ω (1800) ±1%"
+			(at 115.57 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 105.41 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1800T5E"
+			(at 107.95 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22828"
+			(at 110.49 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6083ae42-29b6-40e8-9a29-7f9f07a52d54")
+		)
+		(pin "2"
+			(uuid "9dbaa5e4-207d-4c25-a870-f62ff95aa5e2")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
+					(reference "R220")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:AO3400")
-		(at 173.99 102.87 0)
+		(at 173.99 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2946,7 +3117,7 @@
 		(dnp no)
 		(uuid "bb4f0a94-35f2-4433-ab7a-bad6c21f479d")
 		(property "Reference" "Q36"
-			(at 177.546 101.346 0)
+			(at 177.546 102.616 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2957,7 +3128,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 177.546 103.886 0)
+			(at 177.546 105.156 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2968,7 +3139,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3400"
-			(at 173.99 102.87 0)
+			(at 173.99 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2978,8 +3149,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 173.99 102.87 0)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3400_C20628874.pdf"
+			(at 173.99 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2989,8 +3160,8 @@
 				)
 			)
 		)
-		(property "Description" "Bumper emitter switch, BUMPER_LED_EN high = on"
-			(at 173.99 102.87 0)
+		(property "Description" "30V 5.8A N-channel MOSFET, 25mOhm@4.5V, Vgs +/-12V, Vth 0.65-1.5V, SOT-23"
+			(at 173.99 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3001,7 +3172,29 @@
 			)
 		)
 		(property "LCSC" "C20628874"
-			(at 173.99 102.87 0)
+			(at 173.99 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOSAN"
+			(at 173.99 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "AO3400"
+			(at 173.99 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3030,100 +3223,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 165.1 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bfcc8aa7-595f-4370-9640-02cedf11fccf")
-		(property "Reference" "R221"
-			(at 158.242 98.298 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 158.242 100.838 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 165.1 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "PA10 = UCPD DBCC2: high in reset, so dead-battery Rd is on CC2 as well as CC1"
-			(at 165.1 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 165.1 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a5a6b5b9-8bc0-4ab7-9fb4-caf64c88369e")
-		)
-		(pin "2"
-			(uuid "5447dfa9-31e8-4509-8b6a-28bef454573a")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "R221")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:AO3400")
-		(at 92.71 102.87 0)
+		(at 92.71 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3133,7 +3234,7 @@
 		(dnp no)
 		(uuid "d30c3e62-a7f2-400d-87b7-35effdb3d4f9")
 		(property "Reference" "Q32"
-			(at 96.266 101.854 0)
+			(at 96.266 103.124 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3144,7 +3245,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 96.266 104.394 0)
+			(at 96.266 105.664 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3155,7 +3256,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3400"
-			(at 92.71 102.87 0)
+			(at 92.71 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3165,8 +3266,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 92.71 102.87 0)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3400_C20628874.pdf"
+			(at 92.71 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3176,8 +3277,8 @@
 				)
 			)
 		)
-		(property "Description" "Bumper emitter switch, BUMPER_LED_EN high = on"
-			(at 92.71 102.87 0)
+		(property "Description" "30V 5.8A N-channel MOSFET, 25mOhm@4.5V, Vgs +/-12V, Vth 0.65-1.5V, SOT-23"
+			(at 92.71 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3188,7 +3289,29 @@
 			)
 		)
 		(property "LCSC" "C20628874"
-			(at 92.71 102.87 0)
+			(at 92.71 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOSAN"
+			(at 92.71 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "AO3400"
+			(at 92.71 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3295,6 +3418,121 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:FRC0603J102TS")
+		(at 204.47 83.82 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec870687-d525-4c32-9a3a-6eba48d14258")
+		(property "Reference" "R44"
+			(at 207.01 82.5499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 207.01 85.0899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 196.85 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907113.pdf"
+			(at 194.31 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+			(at 204.47 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 191.77 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603J102 TS"
+			(at 189.23 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907113"
+			(at 186.69 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5cfd3397-0da2-4669-bb12-5908c567e5ec")
+		)
+		(pin "2"
+			(uuid "eb60934d-c696-42fa-b269-4d95ce002f98")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
+					(reference "R44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 173.99 110.49 0)
 		(unit 1)
@@ -3373,8 +3611,9 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VPP")
-		(at 165.1 95.25 0)
+		(lib_id "JLCImport:0603WAF1800T5E")
+		(at 173.99 83.82 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3382,9 +3621,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1c623680-6956-436b-be28-62fc0aac3fc5")
-		(property "Reference" "#PWR07808"
-			(at 165.1 99.06 0)
+		(uuid "f73a3905-72fe-460e-bcc5-bd9f4f11a2d5")
+		(property "Reference" "R197"
+			(at 171.45 82.5499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "180"
+			(at 171.45 85.0899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 181.61 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3394,18 +3655,8 @@
 				)
 			)
 		)
-		(property "Value" "VMCU-3V3"
-			(at 165.1 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 95.25 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_180R-1800-1_C22828.html"
+			(at 184.15 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3415,8 +3666,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 165.1 95.25 0)
+		(property "Description" "180Ω (1800) ±1%"
+			(at 196.85 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3426,8 +3677,30 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VMCU-3V3\""
-			(at 165.1 95.25 0)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 186.69 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1800T5E"
+			(at 189.23 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22828"
+			(at 191.77 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3438,12 +3711,207 @@
 			)
 		)
 		(pin "1"
-			(uuid "dd98a09f-0157-4e5a-9274-e605b5ecd6c8")
+			(uuid "732ae0c1-e278-4138-9871-5e19b2bfdcb6")
+		)
+		(pin "2"
+			(uuid "3e8c9bfc-33a7-4e03-b02d-d8fc10655a97")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
-					(reference "#PWR07808")
+					(reference "R197")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:CL10B473KB8NNNC")
+		(at 204.47 92.71 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fa1f6c83-f2bc-4cb4-8c6c-fe0db3662713")
+		(property "Reference" "C178"
+			(at 207.01 91.44 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47nF/50V"
+			(at 207.01 93.98 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:C0603"
+			(at 196.85 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B473KB8NNNC_47nF-473-10-50V_C1622.html"
+			(at 194.31 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "47nF (473) ±10% 50V"
+			(at 181.61 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 191.77 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B473KB8NNNC"
+			(at 189.23 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1622"
+			(at 186.69 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ae15eb8-8241-419c-949a-a081f59e5628")
+		)
+		(pin "2"
+			(uuid "85124a49-8b7f-4fe4-ab56-0097bb2a2d87")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
+					(reference "C178")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 123.19 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fa9f265d-bbae-43be-a553-b1a34db33215")
+		(property "Reference" "#PWR07810"
+			(at 123.19 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 123.19 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 123.19 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ba04bf20-8b9c-4eea-aa17-f842c0967f90")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/a2a662f9-4b79-4c4f-8ad0-03b01f9dcc91"
+					(reference "#PWR07810")
 					(unit 1)
 				)
 			)

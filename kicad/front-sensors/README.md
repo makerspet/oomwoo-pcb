@@ -1,6 +1,6 @@
 # OOMWOO front ToF board
 
-A small breakout for one VL53L7 8x8-zone time-of-flight sensor. The robot fits two of them, from the same design: the left board aims 30° left and the right board 30° right, which together cover ~126° in front of the robot. Each board plugs into the [main board](../main-phone/README.md) (VL-L1 or VL-R1) with a 7-pin cable. Rev 2, 2026-10-27.
+A small breakout for one VL53L7 8x8-zone time-of-flight sensor. The robot fits two of them, from the same design: the left board aims 30° left and the right board 30° right, which together cover ~126° in front of the robot. Each board plugs into the [main board](../main-phone/README.md) (VL-L1 or VL-R1) through a 2x4 board-to-board connector, no cable (a 7-pin cable until 2026-11-06). Rev 2, 2026-10-27.
 
 Until rev 2, this project also held the two dock-homing IR receivers. They are now on the main board (U24, U25), since the main board sits at the very front of the robot anyway.
 
@@ -14,25 +14,34 @@ Until rev 2, this project also held the two dock-homing IR receivers. They are n
 
 ## Connector J2001
 
-ZX-SH1.0-7PWT (C7430449): JST SH compatible, 1.0 mm pitch, SMD, right angle. The main board uses the same part.
+Board-to-board, no cable (since 2026-11-06). The board hangs under the main board, upright, and plugs straight into it:
 
-| Pin | Signal |
-| --- | --- |
-| 1 | 3.3 V |
-| 2 | GND |
-| 3 | I2C_RST |
-| 4 | SDA |
-| 5 | SCL |
-| 6 | INT |
-| 7 | ~LPn (active low) |
-| 8, 9 | mounting pads, GND |
+- J2001 (this board): HanElectricity 2005WR-2x4P (C6837622), 2.0 mm 2x4 right-angle pin header, through hole, on the **back** of the board. The sensor is on the front, so the board can sit right at the main board's front edge and the main board stays out of the sensor's 60° x 60° field of view.
+- VL-L1 / VL-R1 (main board): HanElectricity 2005FV-2x4P (C18723066), 2.0 mm 2x4 vertical socket, 4.3 mm tall, through hole, fitted on the main board's **underside**.
+- A small mount screwed to the main board holds the ToF board upright and takes the load; the header only makes the contact.
 
-Use a pin 1 to pin 1 cable (pre-made SH cables are sold both ways; Qwiic cables are pin 1 to pin 1). Mark pin 1 on the silkscreen of both boards.
+| J2001 pin | Signal | Mates with socket pin |
+| --- | --- | --- |
+| 1 | 3.3 V | 2 |
+| 2 | GND | 1 |
+| 3 | SDA | 4 |
+| 4 | SCL | 3 |
+| 5 | INT | 6 |
+| 6 | I2C_RST | 5 |
+| 7 | ~LPn (active low) | 8 |
+| 8 | GND | 7 |
+
+**Pin numbers don't match across the mating, on purpose.** On the right-angle header the odd row (1, 3, 5, 7) is the upper row, farther from the board face; mated with a socket on the main board's underside, the rows swap. The schematics already account for this, so this only holds if the socket is placed this way round:
+
+- the socket's pin 1-2 end on the same side as the header's pin 1-2 end
+- the socket's odd row (1, 3, 5, 7) toward the ToF board, the even row away from it
+
+Rotated 180°, 3.3 V would meet GND. Check both boards together in the 3D CAD before ordering, and mark pin 1 on both silkscreens.
 
 ## PCB notes (for layout)
 
 - The PCB file in this folder is the old combined layout. Run *Update PCB from Schematic* before layout work.
-- Keep the board small. No mounting holes (removed 2026-10-29): the board slides into a holder by its two long edges. Keep about 1 mm along both long edges free of parts and copper. The sensor looks out of the board face; the connector exits behind it.
+- Keep the board small. No mounting holes (removed 2026-10-29): a mount screwed to the main board holds it upright, under the main board (designed with the 3D CAD; until 2026-11-06 the board slid into a holder by its long edges). The sensor looks out of the front face; J2001 sits on the back, at the edge that meets the main board.
 - The sensor needs a clear view through the bumper window: no copper, silkscreen or part above it, and a cover window from a material on ST's cover-glass list.
 - Reference designators are in this board's 2000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has two copies of this board; let KiKit (or the panel tool) rename references per copy so the assembly files stay unique.
 

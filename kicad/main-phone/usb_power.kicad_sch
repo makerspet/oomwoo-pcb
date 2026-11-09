@@ -680,7 +680,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C107073"
+			(property "LCSC" "C107073"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -877,7 +877,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C1591"
+			(property "LCSC" "C1591"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1074,7 +1074,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C2932476"
+			(property "LCSC" "C2932476"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1271,7 +1271,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C2907042"
+			(property "LCSC" "C2907042"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1431,7 +1431,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C2907088"
+			(property "LCSC" "C2907088"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1591,7 +1591,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C98220"
+			(property "LCSC" "C98220"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2115,7 +2115,7 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "-30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2148,7 +2148,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C165948"
+			(property "LCSC" "C165948"
 				(at 0 -31.75 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2609,7 +2609,7 @@
 						(type background)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at -11.43 2.54 0)
 					(length 2.54)
 					(name "I/O1"
@@ -2627,7 +2627,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at -11.43 0 0)
 					(length 2.54)
 					(name "GND"
@@ -2645,7 +2645,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at -11.43 -2.54 0)
 					(length 2.54)
 					(name "I/O2"
@@ -2663,7 +2663,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 11.43 -2.54 180)
 					(length 2.54)
 					(name "I/O2"
@@ -2681,7 +2681,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 11.43 0 180)
 					(length 2.54)
 					(name "VBUS"
@@ -2699,7 +2699,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 11.43 2.54 180)
 					(length 2.54)
 					(name "I/O1"
@@ -3247,7 +3247,6 @@
 		(stroke
 			(width 0)
 			(type solid)
-			(color 0 255 0 1)
 		)
 		(fill
 			(type none)
@@ -3319,6 +3318,12 @@
 		(uuid "0d537ec8-bae9-4a7b-9471-dfd8e44309c9")
 	)
 	(junction
+		(at 172.72 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "13dd3245-4a7a-447a-9d33-525b13faff93")
+	)
+	(junction
 		(at 123.19 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3331,16 +3336,16 @@
 		(uuid "3d16090b-80c7-4e7f-a67c-8ae2e988ad2a")
 	)
 	(junction
+		(at 187.96 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48d4643f-4131-44b8-993c-de9bcadc0cca")
+	)
+	(junction
 		(at 81.28 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "53189046-2a2e-4121-b2ef-55ef0df5d2b1")
-	)
-	(junction
-		(at 190.5 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6aa0562f-a49a-4566-a3ae-6af67a4b884d")
 	)
 	(junction
 		(at 250.19 86.36)
@@ -3367,6 +3372,12 @@
 		(uuid "73437769-9613-4f56-b500-eb90246e4e7d")
 	)
 	(junction
+		(at 187.96 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "74e44551-f3b8-4b53-ade5-addfaf52b9f7")
+	)
+	(junction
 		(at 110.49 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3383,12 +3394,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8470a01e-0f66-4d55-bfc2-7b38404281ba")
-	)
-	(junction
-		(at 190.5 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "85a5085d-55b6-460c-8906-70e2442ef3dd")
 	)
 	(junction
 		(at 204.47 81.28)
@@ -3433,10 +3438,10 @@
 		(uuid "a02b19d8-e425-48e3-b379-baf175362242")
 	)
 	(junction
-		(at 170.18 71.12)
+		(at 172.72 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a44c446f-96b5-41ad-86d3-0fc8f9fd5f61")
+		(uuid "a34af513-ab56-4539-af81-b8624def92f7")
 	)
 	(junction
 		(at 62.23 87.63)
@@ -3461,12 +3466,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c61d4237-c402-4dd0-95da-36ed137618b2")
-	)
-	(junction
-		(at 170.18 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cc430541-aef2-4680-9ebe-7d0e72cb884b")
 	)
 	(junction
 		(at 219.71 68.58)
@@ -3499,6 +3498,12 @@
 		(uuid "dd2d162d-0913-450c-933d-f5aad291242e")
 	)
 	(junction
+		(at 209.55 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1aeff55-752f-4965-88ac-579832945027")
+	)
+	(junction
 		(at 68.58 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3516,6 +3521,12 @@
 		(color 0 0 0 0)
 		(uuid "e4532f13-b995-47e6-9137-c2bedc018965")
 	)
+	(junction
+		(at 204.47 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec33f4ba-cac4-402d-b1dd-6097ad3b1a9a")
+	)
 	(no_connect
 		(at 227.33 78.74)
 		(uuid "6d443287-d3a4-48ae-96c5-2a5eb7711890")
@@ -3523,14 +3534,6 @@
 	(no_connect
 		(at 227.33 63.5)
 		(uuid "802a623d-2166-4f8e-a3fc-9d2fcae4018f")
-	)
-	(no_connect
-		(at 204.47 106.68)
-		(uuid "cefce9a7-b20d-4d15-9f18-57f128938d3a")
-	)
-	(no_connect
-		(at 209.55 106.68)
-		(uuid "e0aaa809-bcce-43c0-bb91-14dd120dce6d")
 	)
 	(wire
 		(pts
@@ -3614,7 +3617,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 96.52) (xy 170.18 96.52)
+			(xy 177.8 96.52) (xy 172.72 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3694,7 +3697,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 96.52) (xy 190.5 96.52)
+			(xy 182.88 96.52) (xy 187.96 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3754,7 +3757,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 96.52) (xy 170.18 73.66)
+			(xy 172.72 96.52) (xy 172.72 73.66)
 		)
 		(stroke
 			(width 0)
@@ -3814,7 +3817,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 73.66) (xy 190.5 73.66)
+			(xy 182.88 73.66) (xy 187.96 73.66)
 		)
 		(stroke
 			(width 0)
@@ -3894,6 +3897,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 71.12) (xy 222.25 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e30b815-3d7b-451c-8a22-815b3dc9459b")
+	)
+	(wire
+		(pts
 			(xy 227.33 90.17) (xy 250.19 90.17)
 		)
 		(stroke
@@ -3924,16 +3937,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 73.66) (xy 177.8 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47cfa994-7bad-4b74-8f11-4665ffb42eaa")
-	)
-	(wire
-		(pts
 			(xy 105.41 109.22) (xy 110.49 109.22)
 		)
 		(stroke
@@ -3954,6 +3957,26 @@
 	)
 	(wire
 		(pts
+			(xy 214.63 106.68) (xy 214.63 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5169dff0-fcac-49a1-86ef-84ad25185102")
+	)
+	(wire
+		(pts
+			(xy 199.39 83.82) (xy 204.47 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "538a85b7-ef79-4076-813b-3ad4effd7f00")
+	)
+	(wire
+		(pts
 			(xy 68.58 105.41) (xy 68.58 109.22)
 		)
 		(stroke
@@ -3961,6 +3984,16 @@
 			(type default)
 		)
 		(uuid "606b04c6-9456-4da4-9b7b-d2e612f6daee")
+	)
+	(wire
+		(pts
+			(xy 209.55 106.68) (xy 214.63 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "610892bc-0071-4a91-8591-79f35b24299e")
 	)
 	(wire
 		(pts
@@ -4044,7 +4077,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 71.12) (xy 170.18 71.12)
+			(xy 167.64 71.12) (xy 172.72 71.12)
 		)
 		(stroke
 			(width 0)
@@ -4074,7 +4107,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 73.66) (xy 170.18 71.12)
+			(xy 172.72 73.66) (xy 172.72 71.12)
 		)
 		(stroke
 			(width 0)
@@ -4134,7 +4167,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 73.66) (xy 190.5 68.58)
+			(xy 187.96 73.66) (xy 187.96 68.58)
 		)
 		(stroke
 			(width 0)
@@ -4164,13 +4197,13 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 71.12) (xy 222.25 71.12)
+			(xy 172.72 73.66) (xy 177.8 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "976ebe55-5b0f-4546-85fd-386fca2d440c")
+		(uuid "94f41044-1828-4742-a2a9-769c2d8212ee")
 	)
 	(wire
 		(pts
@@ -4194,6 +4227,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 68.58) (xy 219.71 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9eeb17c4-af38-4ee4-bdec-213c4495143e")
+	)
+	(wire
+		(pts
 			(xy 83.82 90.17) (xy 83.82 109.22)
 		)
 		(stroke
@@ -4204,7 +4247,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 68.58) (xy 190.5 68.58)
+			(xy 167.64 68.58) (xy 187.96 68.58)
 		)
 		(stroke
 			(width 0)
@@ -4281,6 +4324,16 @@
 			(type default)
 		)
 		(uuid "c08818d8-20a4-4159-8282-aa7071aaa792")
+	)
+	(wire
+		(pts
+			(xy 204.47 106.68) (xy 199.39 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca5b6e30-0033-4e39-82b9-c7a7950d1e09")
 	)
 	(wire
 		(pts
@@ -4394,13 +4447,13 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 68.58) (xy 219.71 68.58)
+			(xy 214.63 83.82) (xy 209.55 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f16298d2-ce51-40d7-8ad2-2d1db25558d3")
+		(uuid "f2884c9a-a65a-4fa8-8b05-43bd9a0f121e")
 	)
 	(wire
 		(pts
@@ -4424,13 +4477,23 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 96.52) (xy 190.5 73.66)
+			(xy 187.96 96.52) (xy 187.96 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "fcc4be39-b8cc-48f1-bbf0-34d9d025d3f9")
+	)
+	(wire
+		(pts
+			(xy 199.39 106.68) (xy 199.39 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe2ed302-c0b4-49d6-87f9-792e1daefde1")
 	)
 	(label "PWR_EN_G"
 		(at 68.58 57.15 0)
@@ -4991,17 +5054,6 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2932476"
-			(at 50.8 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "ba0a8f8b-95f7-46d1-b6b1-075dbd91b5a2")
 		)
@@ -5184,7 +5236,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C1591"
+		(property "LCSC" "C1591"
 			(at 128.27 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -5374,7 +5426,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2907088"
+		(property "LCSC" "C2907088"
 			(at 121.92 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -6123,17 +6175,6 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2932476"
-			(at 44.45 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "cab81058-82ab-4858-bf40-60c6dc9325fe")
 		)
@@ -6203,7 +6244,7 @@
 				)
 			)
 		)
-		(property "Description" "ESD for USB-C CC1/CC2"
+		(property "Description" "0.35pF、0.8pF 100nA 150W@8/20us 15V 2 5V 6A@8/20us 6V ESD SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS"
 			(at 207.01 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -6360,7 +6401,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C98220"
+		(property "LCSC" "C98220"
 			(at 44.45 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -6518,7 +6559,7 @@
 				)
 			)
 		)
-		(property "Description" "USB-C 2.0 receptacle, 16P + shell, SMD right angle, 20 V 5 A"
+		(property "Description" "-30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS"
 			(at 238.76 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -6552,17 +6593,6 @@
 			)
 		)
 		(property "LCSC" "C165948"
-			(at 238.76 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C165948"
 			(at 238.76 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -6717,7 +6747,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2907088"
+		(property "LCSC" "C2907088"
 			(at 63.5 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -6945,7 +6975,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2907088"
+		(property "LCSC" "C2907088"
 			(at 99.06 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -7135,7 +7165,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2907088"
+		(property "LCSC" "C2907088"
 			(at 36.83 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -7325,7 +7355,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2907088"
+		(property "LCSC" "C2907088"
 			(at 248.92 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -7519,7 +7549,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2907042"
+		(property "LCSC" "C2907042"
 			(at 248.92 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8134,17 +8164,6 @@
 		)
 		(property "Mouser Price/Stock" ""
 			(at 55.88 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C2932476"
-			(at 38.1 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9159,7 +9178,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C107073"
+		(property "LCSC" "C107073"
 			(at 123.19 102.87 0)
 			(hide yes)
 			(show_name no)

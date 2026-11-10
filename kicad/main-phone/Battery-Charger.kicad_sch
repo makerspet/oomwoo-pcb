@@ -2121,6 +2121,7 @@
 		(symbol "JLCImport:DC-005-5A-2_0"
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2320,7 +2321,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 5.08 2.54 180)
 					(length 5.08)
 					(name "1"
@@ -2338,7 +2339,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 5.08 -2.54 180)
 					(length 5.08)
 					(name "2"
@@ -2356,7 +2357,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 5.08 0 180)
 					(length 5.08)
 					(name "3"
@@ -2717,167 +2718,6 @@
 				)
 				(pin unspecified line
 					(at 7.62 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "JLCImport:RE1206F1R050"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 0 3.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "RE1206F1R050"
-				(at 0 -3.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:RE1206F1R050"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_jieerrui-RE1206F1R050_C46961736.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "1W 50mΩ Alloy Resistor、Current Sense Resistor SMD ±1% ±50ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C46961736"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "jieerrui"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "RE1206F1R050"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C46961736 R1206 RE1206F1R050 jieerrui"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RE1206F1R050_0_1"
-				(rectangle
-					(start -2.54 1.27)
-					(end 2.54 -1.27)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin unspecified line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 5.08 0 180)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -4451,10 +4291,153 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:RE1206F1R100"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RE1206F1R100"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R1206"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C46961734.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "JIERR(捷而瑞)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "RE1206F1R100"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C46961734"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RE1206F1R100_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(rectangle
-		(start 26.67 25.4)
-		(end 166.37 62.23)
+		(start 26.67 20.32)
+		(end 264.16 62.23)
 		(stroke
 			(width 0)
 			(type solid)
@@ -4511,7 +4494,7 @@
 	)
 	(text "Vertical Micro-Fit 3.0mm"
 		(exclude_from_sim no)
-		(at 212.09 71.12 0)
+		(at 205.74 57.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4815,7 +4798,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 58.42) (xy 224.79 58.42)
+			(xy 213.36 44.45) (xy 218.44 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4945,7 +4928,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 53.34) (xy 219.71 53.34)
+			(xy 214.63 39.37) (xy 213.36 39.37)
 		)
 		(stroke
 			(width 0)
@@ -5285,7 +5268,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 60.96) (xy 251.46 60.96)
+			(xy 238.76 46.99) (xy 245.11 46.99)
 		)
 		(stroke
 			(width 0)
@@ -5305,7 +5288,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 60.96) (xy 229.87 60.96)
+			(xy 213.36 46.99) (xy 223.52 46.99)
 		)
 		(stroke
 			(width 0)
@@ -5645,7 +5628,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 55.88) (xy 227.33 55.88)
+			(xy 213.36 41.91) (xy 220.98 41.91)
 		)
 		(stroke
 			(width 0)
@@ -5715,7 +5698,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 53.34) (xy 220.98 66.04)
+			(xy 214.63 39.37) (xy 214.63 52.07)
 		)
 		(stroke
 			(width 0)
@@ -5754,7 +5737,7 @@
 		(uuid "4fd73ce2-5865-4513-9932-0a7b06b4d3eb")
 	)
 	(label "NTC"
-		(at 224.79 58.42 180)
+		(at 218.44 44.45 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5814,7 +5797,7 @@
 		(uuid "9b824cbd-3753-4928-afa6-11670563d6e8")
 	)
 	(label "P+{slash}C+"
-		(at 251.46 60.96 0)
+		(at 245.11 46.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5857,7 +5840,7 @@
 	)
 	(hierarchical_label "ID"
 		(shape output)
-		(at 227.33 55.88 0)
+		(at 220.98 41.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8852,7 +8835,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:C3030WV-4P")
-		(at 215.9 57.15 180)
+		(at 209.55 43.18 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8862,7 +8845,7 @@
 		(dnp no)
 		(uuid "592904b1-7781-477f-bb6a-d3b176f70d64")
 		(property "Reference" "BAT2"
-			(at 216.662 48.514 0)
+			(at 210.312 34.544 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8873,7 +8856,7 @@
 			)
 		)
 		(property "Value" "BATTERY"
-			(at 217.17 65.278 0)
+			(at 210.82 51.308 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8884,7 +8867,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:CONN-TH_4P-P3.00_CTJ_C3030WV-P3.00-4P"
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8895,7 +8878,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C239441.pdf"
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8906,7 +8889,7 @@
 			)
 		)
 		(property "Description" "Battery connector, Micro-Fit 3.0 compatible 1x4 vertical, through hole, 8.5 A; fitted on the underside, facing down into the battery compartment. Alternative: Molex 43650-0415 (C293547), same footprint"
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8917,7 +8900,7 @@
 			)
 		)
 		(property "LCSC" "C239441"
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8928,7 +8911,7 @@
 			)
 		)
 		(property "Manufacturer" "CJT(Changjiang Connectors)"
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8939,7 +8922,7 @@
 			)
 		)
 		(property "Manufacturer Part" "C3030WV-4P"
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8950,7 +8933,7 @@
 			)
 		)
 		(property "CLASSNAME" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8961,7 +8944,7 @@
 			)
 		)
 		(property "C_VOLTAGE" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8972,7 +8955,7 @@
 			)
 		)
 		(property "DC RESISTOR" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8983,7 +8966,7 @@
 			)
 		)
 		(property "DIELECTRIC" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8994,7 +8977,7 @@
 			)
 		)
 		(property "IC" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9005,7 +8988,7 @@
 			)
 		)
 		(property "ID" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9016,7 +8999,7 @@
 			)
 		)
 		(property "ID_MAX" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9027,7 +9010,7 @@
 			)
 		)
 		(property "IRMS" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9038,7 +9021,7 @@
 			)
 		)
 		(property "ISAT" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9049,7 +9032,7 @@
 			)
 		)
 		(property "MANUFACTURER PART NUMBER" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9060,7 +9043,7 @@
 			)
 		)
 		(property "NUMBER" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9071,7 +9054,7 @@
 			)
 		)
 		(property "OPTION" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9082,7 +9065,7 @@
 			)
 		)
 		(property "OPTIONAL" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9093,7 +9076,7 @@
 			)
 		)
 		(property "PC" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9104,7 +9087,7 @@
 			)
 		)
 		(property "PD" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9115,7 +9098,7 @@
 			)
 		)
 		(property "RESONACE FREQUENCY" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9126,7 +9109,7 @@
 			)
 		)
 		(property "SPLIT_INST" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9137,7 +9120,7 @@
 			)
 		)
 		(property "SWAP_INFO" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9148,7 +9131,7 @@
 			)
 		)
 		(property "TOLERANCE" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9159,7 +9142,7 @@
 			)
 		)
 		(property "VCEO" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9170,7 +9153,7 @@
 			)
 		)
 		(property "VDS" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9181,7 +9164,7 @@
 			)
 		)
 		(property "VGS" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9192,7 +9175,7 @@
 			)
 		)
 		(property "VGSTH" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9203,7 +9186,7 @@
 			)
 		)
 		(property "VOLTAGE" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9214,7 +9197,7 @@
 			)
 		)
 		(property "WATTAGE" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9225,7 +9208,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9236,7 +9219,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9247,7 +9230,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9258,7 +9241,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9269,7 +9252,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9280,7 +9263,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9291,7 +9274,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 214.63 57.15 0)
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12409,7 +12392,7 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:RE1206F1R050")
+		(lib_id "JLCImport:RE1206F1R100")
 		(at 158.75 114.3 0)
 		(unit 1)
 		(body_style 1)
@@ -12430,7 +12413,7 @@
 				)
 			)
 		)
-		(property "Value" "RE1206F1R050"
+		(property "Value" "RE1206F1R100"
 			(at 158.75 111.125 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12440,7 +12423,7 @@
 				)
 			)
 		)
-		(property "Footprint" "JLCImport:RE1206F1R050"
+		(property "Footprint" "JLCImport:R1206"
 			(at 158.75 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12451,7 +12434,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_jieerrui-RE1206F1R050_C46961736.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C46961734.pdf"
 			(at 158.75 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12462,7 +12445,7 @@
 				)
 			)
 		)
-		(property "Description" "1W 50mΩ Alloy Resistor、Current Sense Resistor SMD ±1% ±50ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
+		(property "Description" "100 mOhm 1 W 1% 1206 alloy current sense; sets the charge current: I = 0.12 V / R = 1.2 A"
 			(at 158.75 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12473,7 +12456,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C46961736"
+		(property "LCSC" "C46961734"
 			(at 158.75 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12495,7 +12478,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part" "RE1206F1R050"
+		(property "Manufacturer Part" "RE1206F1R100"
 			(at 158.75 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -13968,7 +13951,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "DC-044A-20A"
+		(property "Value" "DC-005-5A-2_0"
 			(at 80.645 44.9581 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13979,7 +13962,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "JLCImport:DC-044A-20A"
+		(property "Footprint" "JLCImport:DC-005-5A-2_0"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -13990,7 +13973,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2108131530_Korean-Hroparts-Elec-DC-044A-20A_C129006.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2110151630_XKB-Connection-DC-005-5A-2-0_C381116.pdf"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -14001,7 +13984,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-profile DC jack, 5.5/2.0 mm, 30 V 5 A, 7.2 mm body height. Pin 1 centre, 2 sleeve, 3 switch"
+		(property "Description" "-20℃~+70℃ 24V 2mm 5A 6.2mm DC Power Jack Right Angle 插件 DC Power Connectors ROHS"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -14012,7 +13995,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C129006"
+		(property "LCSC" "C381116"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -14023,7 +14006,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Korean Hroparts Elec"
+		(property "Manufacturer" "XKB Connection"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -14034,7 +14017,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part" "DC-044A-20A"
+		(property "Manufacturer Part" "DC-005-5A-2.0"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -14389,7 +14372,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 220.98 66.04 0)
+		(at 214.63 52.07 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -14400,7 +14383,7 @@
 		(dnp no)
 		(uuid "cc1c19cd-9510-4193-8875-8e50d359b469")
 		(property "Reference" "#PWR0694"
-			(at 220.98 66.04 0)
+			(at 214.63 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14411,7 +14394,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 220.98 72.39 0)
+			(at 214.63 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14422,7 +14405,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 66.04 0)
+			(at 214.63 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14432,7 +14415,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 66.04 0)
+			(at 214.63 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14442,7 +14425,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 220.98 66.04 0)
+			(at 214.63 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14466,7 +14449,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:JFC1206-2200FS")
-		(at 237.49 60.96 180)
+		(at 231.14 46.99 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14476,7 +14459,7 @@
 		(dnp no)
 		(uuid "ce99bdb7-c56c-409c-b5ff-166b55d631e4")
 		(property "Reference" "F1"
-			(at 237.49 58.42 0)
+			(at 231.14 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14486,7 +14469,7 @@
 			)
 		)
 		(property "Value" "JFC1206-2200FS"
-			(at 237.998 64.008 0)
+			(at 231.648 50.038 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14496,7 +14479,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:JFC1206-2200FS"
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14507,7 +14490,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2305151206_Shenzhen-JDT-Fuse-JFC1206-2200FS_C136357.pdf"
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14518,7 +14501,7 @@
 			)
 		)
 		(property "Description" "-55℃~+125℃ 1.6mm 150A 20A 3.2mm 32V 32V 47.17 Surface Mount Fuse 1206 Disposable fuses ROHS"
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14529,7 +14512,7 @@
 			)
 		)
 		(property "LCSC" "C136357"
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14540,7 +14523,7 @@
 			)
 		)
 		(property "Manufacturer" "Shenzhen JDT Fuse"
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14551,7 +14534,7 @@
 			)
 		)
 		(property "Manufacturer Part" "JFC1206-2200FS"
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14562,7 +14545,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14573,7 +14556,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14584,7 +14567,7 @@
 			)
 		)
 		(property "Comment" ""
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14595,7 +14578,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14606,7 +14589,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14617,7 +14600,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14628,7 +14611,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 237.49 60.96 0)
+			(at 231.14 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

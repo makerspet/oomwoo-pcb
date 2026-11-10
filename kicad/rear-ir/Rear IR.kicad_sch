@@ -11,12 +11,12 @@
 		(company "OOMWOO rear docking IR")
 	)
 	(lib_symbols
-		(symbol "Device:C"
+		(symbol "JLCImport:CL10A106KP8NNNC"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.254)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -24,29 +24,27 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
-				(at 0.635 2.54 0)
+				(at 0 4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
+			(property "Value" "CL10A106KP8NNNC"
+				(at 0 -4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
+			(property "Footprint" "JLCImport:C0603"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -56,7 +54,18 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "10V 10uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -67,7 +76,40 @@
 					)
 				)
 			)
-			(property "Description" "Unpolarized capacitor"
+			(property "Manufacturer" "SAMSUNG(三星)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CL10A106KP8NNNC"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C19702"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Multilayer Ceramic Capacitors MLCC - SMD/SMT"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -78,35 +120,13 @@
 					)
 				)
 			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_0_1"
+			(symbol "CL10A106KP8NNNC_0_1"
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -0.51 0) (xy -2.54 0)
 					)
 					(stroke
-						(width 0.508)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -115,22 +135,44 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -0.51 -2.03) (xy -0.51 2.03)
 					)
 					(stroke
-						(width 0.508)
+						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-			)
-			(symbol "C_1_1"
+				(polyline
+					(pts
+						(xy 0.51 2.03) (xy 0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 0.51 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -146,9 +188,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -166,12 +208,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R_US"
+		(symbol "JLCImport:FRC0603F1000TS"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -179,7 +221,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 2.54 0 90)
+				(at 0 4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -188,8 +230,8 @@
 					)
 				)
 			)
-			(property "Value" "R_US"
-				(at -2.54 0 90)
+			(property "Value" "FRC0603F1000TS"
+				(at 0 -4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -198,8 +240,8 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 1.016 -0.254 90)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -209,7 +251,18 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C2906981.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -220,7 +273,40 @@
 					)
 				)
 			)
-			(property "Description" "Resistor, US symbol"
+			(property "Manufacturer" "FOJAN(富捷)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "FRC0603F1000TS"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C2906981"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Chip Resistor - Surface Mount"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -231,95 +317,22 @@
 					)
 				)
 			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_US_0_1"
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 0 2.54)
-					)
+			(symbol "FRC0603F1000TS_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.286) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_US_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -335,9 +348,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -608,7 +621,7 @@
 					)
 				)
 			)
-			(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical (top entry), 2 mounting pads (5, 6)"
+			(property "Description" "-40℃~+85℃ 1 1A 1mm 1x4P 3.05mm 4 4.4mm 4P 50V 6.35mm Auxiliary Solder Pin Beige Brass LCP SH Surface Mount,Vertical Tin SMD,P=1mm Wire To Board Connector ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1341,16 +1354,10 @@
 		(uuid "11293757-a215-4160-8675-72103b2614e0")
 	)
 	(junction
-		(at 129.54 134.62)
+		(at 133.35 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2a8cb150-2829-44c3-9640-4a12557f6cb2")
-	)
-	(junction
-		(at 129.54 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "419bb66c-c446-44c9-b01d-285081a2f9d3")
+		(uuid "2bf1581d-d671-4a3e-81f5-0a015bea8db0")
 	)
 	(junction
 		(at 143.51 129.54)
@@ -1363,6 +1370,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6fa13fbe-9541-46b5-b507-1c8478e6cfd4")
+	)
+	(junction
+		(at 133.35 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "caf0ba66-ef8d-4c01-a87a-78c17a341aeb")
 	)
 	(junction
 		(at 48.26 110.49)
@@ -1395,26 +1408,6 @@
 			(type default)
 		)
 		(uuid "05f998de-4951-4d6c-89bc-801784474ecd")
-	)
-	(wire
-		(pts
-			(xy 129.54 127) (xy 129.54 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ee76de8-e2ed-4876-9212-f763ccdfe7ac")
-	)
-	(wire
-		(pts
-			(xy 129.54 105.41) (xy 129.54 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12e4484d-e248-43bf-91d4-78d50d9d8ec1")
 	)
 	(wire
 		(pts
@@ -1458,17 +1451,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 93.98) (xy 129.54 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36bd8240-b9b6-497b-9a0f-99db031a12ed")
-	)
-	(wire
-		(pts
-			(xy 144.78 134.62) (xy 129.54 134.62)
+			(xy 144.78 134.62) (xy 133.35 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1478,7 +1461,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 93.98) (xy 129.54 93.98)
+			(xy 144.78 93.98) (xy 133.35 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1515,16 +1498,6 @@
 			(type default)
 		)
 		(uuid "6a760789-0b49-4462-88f2-9d1867eaf20e")
-	)
-	(wire
-		(pts
-			(xy 129.54 134.62) (xy 129.54 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "71303379-5e33-4d6c-abe7-4ff21ed91307")
 	)
 	(wire
 		(pts
@@ -1588,16 +1561,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 86.36) (xy 129.54 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b65a5879-383b-42c4-bfd0-68236e5ea2e8")
-	)
-	(wire
-		(pts
 			(xy 144.78 129.54) (xy 143.51 129.54)
 		)
 		(stroke
@@ -1615,16 +1578,6 @@
 			(type default)
 		)
 		(uuid "c06e4ef5-4bf8-4854-b97f-8c5070f72597")
-	)
-	(wire
-		(pts
-			(xy 129.54 146.05) (xy 129.54 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cee1f183-375d-43d7-8984-124a8b0a9d7a")
 	)
 	(wire
 		(pts
@@ -1982,98 +1935,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 129.54 142.24 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1e6df34a-696e-448a-833e-87f9dbdb7478")
-		(property "Reference" "C5002"
-			(at 132.08 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF/10V"
-			(at 132.08 143.51 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 129.54 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF, close to the pins)"
-			(at 129.54 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C19702"
-			(at 129.54 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "762f7350-44e1-4148-bc62-25986cdf7c8a")
-		)
-		(pin "2"
-			(uuid "201cdb2c-4627-4875-97bf-6747e9ca1c3c")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "C5002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
 		(at 50.8 101.6 0)
 		(mirror y)
@@ -2118,7 +1979,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430453.pdf"
 			(at 50.8 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2129,7 +1990,7 @@
 				)
 			)
 		)
-		(property "Description" "JST SH compatible 1.0 mm 1x4P, SMD vertical; to the main board REAR-IR1"
+		(property "Description" "-40℃~+85℃ 1 1A 1mm 1x4P 3.05mm 4 4.4mm 4P 50V 6.35mm Auxiliary Solder Pin Beige Brass LCP SH Surface Mount,Vertical Tin SMD,P=1mm Wire To Board Connector ROHS"
 			(at 50.8 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2142,6 +2003,28 @@
 		)
 		(property "LCSC" "C7430453"
 			(at 50.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Megastar"
+			(at 50.8 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
+			(at 50.8 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2258,7 +2141,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 129.54 107.95 0)
+		(at 133.35 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2268,7 +2151,7 @@
 		(dnp no)
 		(uuid "33560557-8a12-4ebf-bfbb-8f2be0050fa8")
 		(property "Reference" "#PWR5008"
-			(at 129.54 107.95 0)
+			(at 133.35 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2279,7 +2162,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 129.54 113.03 0)
+			(at 133.35 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2290,7 +2173,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 107.95 0)
+			(at 133.35 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2301,7 +2184,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 107.95 0)
+			(at 133.35 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2312,7 +2195,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 107.95 0)
+			(at 133.35 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2491,7 +2374,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 129.54 85.09 0)
+		(at 133.35 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2501,7 +2384,7 @@
 		(dnp no)
 		(uuid "4f0a6fb3-863a-4727-a467-816c5ca99955")
 		(property "Reference" "#PWR05009"
-			(at 129.54 85.09 0)
+			(at 133.35 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2512,7 +2395,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 129.54 80.01 0)
+			(at 133.35 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2522,7 +2405,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 85.09 0)
+			(at 133.35 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2533,7 +2416,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 85.09 0)
+			(at 133.35 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2544,7 +2427,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 85.09 0)
+			(at 133.35 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2568,7 +2451,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 129.54 148.59 0)
+		(at 133.35 144.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2578,7 +2461,7 @@
 		(dnp no)
 		(uuid "577d02d9-8810-465c-8301-e89c966c91df")
 		(property "Reference" "#PWR5011"
-			(at 129.54 148.59 0)
+			(at 133.35 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2589,7 +2472,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 129.54 153.67 0)
+			(at 133.35 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2600,7 +2483,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 148.59 0)
+			(at 133.35 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2611,7 +2494,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 148.59 0)
+			(at 133.35 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2622,7 +2505,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 148.59 0)
+			(at 133.35 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2724,7 +2607,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 129.54 125.73 0)
+		(at 133.35 124.46 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2734,7 +2617,7 @@
 		(dnp no)
 		(uuid "768b2459-e8fe-41a3-be01-277341a39aa5")
 		(property "Reference" "#PWR05012"
-			(at 129.54 125.73 0)
+			(at 133.35 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2745,7 +2628,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 129.54 120.65 0)
+			(at 133.35 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2755,7 +2638,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 125.73 0)
+			(at 133.35 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2766,7 +2649,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 125.73 0)
+			(at 133.35 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2777,7 +2660,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 125.73 0)
+			(at 133.35 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2892,6 +2775,121 @@
 			(project "Rear IR"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "U5001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:FRC0603F1000TS")
+		(at 133.35 88.9 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7ccac98a-fb09-41e2-8485-f095c8f59244")
+		(property "Reference" "R5001"
+			(at 130.81 87.6299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 130.81 90.1699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 140.97 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2906981.pdf"
+			(at 143.51 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 133.35 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 146.05 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F1000TS"
+			(at 148.59 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 151.13 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2fb2c802-4a7f-4ed7-b592-42df654c0bba")
+		)
+		(pin "1"
+			(uuid "02d74595-018e-4fd9-a4b4-09abb6947876")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "R5001")
 					(unit 1)
 				)
 			)
@@ -3133,98 +3131,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 129.54 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "96fd1738-41a1-4151-a664-85062bd9dc73")
-		(property "Reference" "C5001"
-			(at 132.08 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF/10V"
-			(at 132.08 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IR receiver supply filter (datasheet: >= 2.2 uF, close to the pins)"
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C19702"
-			(at 129.54 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dceb30ac-58e4-4fad-a052-e05141d1715d")
-		)
-		(pin "2"
-			(uuid "bc97cc83-3c7d-49f7-b5e7-947d7e5da3f5")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "C5001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 143.51 96.52 0)
 		(unit 1)
@@ -3304,9 +3210,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 129.54 90.17 0)
-		(mirror y)
+		(lib_id "JLCImport:CL10A106KP8NNNC")
+		(at 133.35 139.7 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3314,9 +3220,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "9c033a9e-b9b9-4fe4-ba86-30804c4d87f3")
-		(property "Reference" "R5001"
-			(at 127.508 91.694 0)
+		(uuid "a24015eb-00a4-40ef-8261-bc19b8d003c8")
+		(property "Reference" "C5002"
+			(at 129.54 138.4299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3326,8 +3232,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100"
-			(at 126.746 89.154 0)
+		(property "Value" "10uF/10V"
+			(at 129.54 140.9699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3337,8 +3243,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 129.54 90.17 0)
+		(property "Footprint" "JLCImport:C0603"
+			(at 140.97 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3348,8 +3254,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 129.54 90.17 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html"
+			(at 143.51 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3359,8 +3265,8 @@
 				)
 			)
 		)
-		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
-			(at 129.54 90.17 0)
+		(property "Description" "10V 10uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 133.35 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3370,8 +3276,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C2906981"
-			(at 129.54 90.17 0)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 146.05 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3381,25 +3287,47 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "adbe695e-eeb4-4ab8-b220-ec354f9dac24")
+		(property "MPN" "CL10A106KP8NNNC"
+			(at 148.59 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 151.13 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "1b6623d9-f803-444f-ab67-f5509d3699d9")
+			(uuid "c29d8bb3-e178-4f55-904a-5553948f1e9c")
+		)
+		(pin "1"
+			(uuid "24738003-ed49-409e-a46b-28f563bd9e50")
 		)
 		(instances
 			(project "Rear IR"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "R5001")
+					(reference "C5002")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 129.54 130.81 0)
-		(mirror y)
+		(lib_id "JLCImport:CL10A106KP8NNNC")
+		(at 133.35 99.06 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3407,9 +3335,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c9aafe51-08a4-4cb6-bf3e-49fdf1642c71")
-		(property "Reference" "R5002"
-			(at 127.508 132.588 0)
+		(uuid "d1966fd7-7bb9-4feb-bb33-09a2de4f3b18")
+		(property "Reference" "C5001"
+			(at 129.54 97.7899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3419,8 +3347,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100"
-			(at 126.746 130.048 0)
+		(property "Value" "10uF/10V"
+			(at 129.54 100.3299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3430,8 +3358,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 129.54 130.81 0)
+		(property "Footprint" "JLCImport:C0603"
+			(at 140.97 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3441,8 +3369,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 129.54 130.81 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html"
+			(at 143.51 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3452,8 +3380,8 @@
 				)
 			)
 		)
-		(property "Description" "IR receiver supply filter (datasheet: 47-220 R)"
-			(at 129.54 130.81 0)
+		(property "Description" "10V 10uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 133.35 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3463,8 +3391,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C2906981"
-			(at 129.54 130.81 0)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 146.05 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3474,16 +3402,38 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "2674a1cf-829a-40cd-a8eb-1d1042a22e5a")
+		(property "MPN" "CL10A106KP8NNNC"
+			(at 148.59 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 151.13 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "64b10272-6dde-45f3-8ee7-089a4033917d")
+			(uuid "32e54c60-f2e7-43f7-828c-ed1a4a6c0c23")
+		)
+		(pin "1"
+			(uuid "7b192cc0-3984-439e-8531-440d0f0373be")
 		)
 		(instances
 			(project "Rear IR"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "R5002")
+					(reference "C5001")
 					(unit 1)
 				)
 			)
@@ -3562,6 +3512,121 @@
 			(project "Rear IR"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "H5002")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:FRC0603F1000TS")
+		(at 133.35 129.54 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f7cedb2a-10c2-486b-8b5a-9b8b667dbff6")
+		(property "Reference" "R5002"
+			(at 130.81 128.2699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 130.81 130.8099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 140.97 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2906981.pdf"
+			(at 143.51 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 133.35 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 146.05 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F1000TS"
+			(at 148.59 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2906981"
+			(at 151.13 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "96f38ead-39e5-4822-8555-993853cae611")
+		)
+		(pin "1"
+			(uuid "928c1fb0-90f7-43bd-b954-77329e6ca3aa")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "R5002")
 					(unit 1)
 				)
 			)

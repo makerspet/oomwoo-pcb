@@ -558,6 +558,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - Charger rail-hold: DC_IN (dock or barrel jack) turns Q31 on through the R175/R194 divider, which pulls the Q13 gate (PWR-SW-G) low. Charger power alone turns the MCU rail on, and nothing turns it off while charging (the off timer can't either).
 - MCU rail off → every MCU pin floats → every other rail is held off by its enable pull resistor.
 - Charging is in hardware (SLM6900 + battery NTC) and continues while the MCU is in reset.
+- Charge current: 1.2 A since 2026-11-09, set by R106 (I = 0.12 V / R106, now 100 mΩ, RE1206F1R100, C46961734; was 50 mΩ, 2.4 A). It is low on purpose, because the first packs are no-name ones; about 5 h for a 5.2 Ah pack. Packs from a legitimate manufacturer could take more (1.8 A = 67 mΩ). Expected dock current at 20 V: ~1.1 A charging, ~2 A with the MCU on and the phone charging at 10-15 W
 
 ### DC input (v1)
 

@@ -19,9 +19,9 @@ Moved or added:
 
 Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1)):
 - power control: charger rail-hold (Q31, R194) and a ~4-9 s hardware off timer (U23, Q29, Q30); PA15 goes through R190 (1k)
-- 20 V input: SMAJ22A TVS (D41), 10 µF/50 V 1206 DC_IN capacitors, low-profile DC-044A-20A barrel jack (7.2 mm tall)
+- 20 V input: SMAJ22A TVS (D41), 10 µF/50 V 1206 DC-IN-20V capacitors, low-profile DC-044A-20A barrel jack (7.2 mm tall)
 - bumpers: 2x ITR9606 photo-interrupters on the board (BUMP-R1, BUMP-L1); Q32 switches both emitters
-- DC_IN sense: R199/R200 (/11) + C175 to PB15
+- DC-IN-20V sense: R199/R200 (/11) + C175 to PB15
 - VBUS lockout (Q33, Q34, R201-R203): the robot 5 V can't turn on while the phone sources VBUS
 - the unused sheet files copied from `main` (CM5, M.2, MIPI camera, speaker, water pump) are deleted
 - carpet: LO AC-coupled to the Q18 gate (C174)
@@ -75,7 +75,7 @@ Changed 2026-11-02:
 - TP1 removed: probe IMU INT2 on R92
 - I2C4 pull-ups R5/R6 on the top sheet; the small hierarchical sheets merged into the top sheet
 - renamed: VUS → VUSONIC-14V4, VL-INT → INT-SENSORS (not only the VL53 sensors), U12 → L4 (inductor), 5V1 → D46
-- battery voltage sense: R218 (1M) / R219 (100k) + C177 (100 nF) from P+/C+ (battery side of Q14) to PA8 (ADC5_IN1); J1 pin 7 (was PA8) not connected
+- battery voltage sense: R218 (1M) / R219 (100k) + C177 (100 nF) from P+/C+14V4 (battery side of Q14) to PA8 (ADC5_IN1); J1 pin 7 (was PA8) not connected
 - bumper pull-ups R44/R48 47k → 1k, so PA4/PA5 (ADC2) see the slot opening and closing instead of a switch
 
 Changed 2026-11-03:
@@ -94,9 +94,10 @@ Changed 2026-11-03:
 - X1 (8 MHz crystal) with C34/C35 and R80 (10 Ω in IR-F-RX2) removed (2026-11-04): USB is crystal-less (HSI48 + CRS), PF0/PF1 not connected, both front IR receivers go straight to the MCU. Renamed: INT-SENSORS → ~{INT-SENSORS}, CLEAN/HOME/POWER-BTN → ~{…}, SIDE/MAIN-BRUSH-CURRENT-ADC → SIDE/MAIN-BRUSH-ADC, SPARE-PE10 → SPARE-PE10-ADC, STM32-SWO → STM32-SWO-SPARE
 - R198 (100k BUMP_L_LED_EN pull-down) removed and R221 turned into a 100k pull-up to VMCU-3V3 (2026-11-05): the emitters run from VSENS-5V-USB, whose buck enable (PB5) R168 holds low whenever the MCU pins float, so the LEDs cannot light in reset. PA10 is also UCPD DBCC2, so the pull-up turns the dead-battery Rd on CC2 on in reset (CC1 already had it through R184): the phone attaches in either plug orientation. BUMP-R-LED-K label flipped to the right of the drain wire to make room. Front-sensors sheet parts moved to JLC symbols and footprints (JLCImport:C0603/R0603)
 - DRV8870 IN pull-downs R3, R4 (main brush), R55, R57 (side brush), R11, R17, R20, R27 (wheels) removed (2026-11-04): the driver has internal ~100k pull-downs, and the motor rail is off in reset and when the watchdog stops
+- renamed (2026-11-09): BAT2 → J2, US1 → CN1, DC_IN → DC-IN-20V, P+/C+ → P+/C+14V4; more parts on JLC symbols and footprints
 - R106 100 mΩ (RE1206F1R100, C46961734; was 50 mΩ): charge current 1.2 A instead of 2.4 A (2026-11-09)
 - USB power moved out of the Battery-Charger sheet into its own sheet, usb_power (2026-11-08); renamed USB2 → USBC2, PWR_EN → USB_PWR_EN, VBUS → VBUS_5V, VBUS_SRC → VBUS_5V_SRC, D+/D- → DP/DN
-- BAT2: CJT C3030WV-4P vertical through-hole Micro-Fit 3.0 compatible 1x4 (C239441, 8.5 A; Molex 43650-0415 fits the same footprint) instead of the Molex 43650-0412 SMD right angle (2026-11-07). Fit it on the underside, facing down into the battery compartment. Pins 1-4 unchanged; the SMD solder tabs (pins 5, 6 on GND) are gone
+- J2 (BAT2 until 2026-11-09): CJT C3030WV-4P vertical through-hole Micro-Fit 3.0 compatible 1x4 (C239441, 8.5 A; Molex 43650-0415 fits the same footprint) instead of the Molex 43650-0412 SMD right angle (2026-11-07). Fit it on the underside, facing down into the battery compartment. Pins 1-4 unchanged; the SMD solder tabs (pins 5, 6 on GND) are gone
 - cliff LED resistors moved from the cliff boards (R4001) to the main board (2026-11-06): R224-R229 (150 Ω, C22808) in series with pin 1 of CLIFF-LF1, -LM1, -LR1, -RF1, -RM1, -RR1, so each cable carries a current-limited LED anode, not bare 5 V; cliff board net VLED-5V → LED_A. R214 (100k CLIFF_LED_EN pull-down) removed too: the cliff LEDs run from VSENS-5V-USB, which is off whenever PC1 floats
 - cliff nets renamed LF-Q+ ... RM-Q+ → CLIFF-LF ... CLIFF-RM (cliff sensor board: VLED → VLED-5V)
 

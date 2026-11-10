@@ -555,19 +555,19 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - Power-on: the button pulls the Q13 (AO4407C) gate low through C14, Q13 feeds POWER-EN and the U21 3.3 V buck turns on the MCU rail. Firmware then holds the latch with STM-PWR-CTRL (PA15 → R190 1k → Q23). Power-on starts only the MCU rail; firmware enables the other rails.
 - Off: firmware turns everything off after a 3 s press (all rails first, then PA15 low). 3 s while holding Home = factory reset, and the robot stays on.
 - Hardware off timer: holding the button ~4-9 s turns the MCU rail off even if the firmware hangs. Q29 releases C172 (10 µF, charged through R193 1M), U23 (74LVC1G17 Schmitt buffer) trips and Q30 pulls the latch gate (PWR-LATCH) low. R190 lets Q30 win against PA15 driven high.
-- Charger rail-hold: DC_IN (dock or barrel jack) turns Q31 on through the R175/R194 divider, which pulls the Q13 gate (PWR-SW-G) low. Charger power alone turns the MCU rail on, and nothing turns it off while charging (the off timer can't either).
+- Charger rail-hold: DC-IN-20V (dock or barrel jack) turns Q31 on through the R175/R194 divider, which pulls the Q13 gate (PWR-SW-G) low. Charger power alone turns the MCU rail on, and nothing turns it off while charging (the off timer can't either).
 - MCU rail off → every MCU pin floats → every other rail is held off by its enable pull resistor.
 - Charging is in hardware (SLM6900 + battery NTC) and continues while the MCU is in reset.
 - Charge current: 1.2 A since 2026-11-09, set by R106 (I = 0.12 V / R106, now 100 mΩ, RE1206F1R100, C46961734; was 50 mΩ, 2.4 A). It is low on purpose, because the first packs are no-name ones; about 5 h for a 5.2 Ah pack. Packs from a legitimate manufacturer could take more (1.8 A = 67 mΩ). Expected dock current at 20 V: ~1.1 A charging, ~2 A with the MCU on and the phone charging at 10-15 W
 
 ### DC input (v1)
 
-- 20 V brick, through the dock contacts or the barrel jack. While charging, Q14 disconnects the battery from VBAT-14V4 and D14 feeds VBAT-14V4 from DC_IN (DC_IN - 0.4 V); the SLM6900's 95% maximum duty needs ≥ ~18.5 V to finish a 4S charge.
-- Keep DC_IN ≤ 22 V: SMAJ22A TVS (D41), and the rail-hold puts the full VBAT-14V4 across Q13's gate (AO4407C, Vgs ±25 V). DC_IN capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
+- 20 V brick, through the dock contacts or the barrel jack. While charging, Q14 disconnects the battery from VBAT-14V4 and D14 feeds VBAT-14V4 from DC-IN-20V (DC-IN-20V - 0.4 V); the SLM6900's 95% maximum duty needs ≥ ~18.5 V to finish a 4S charge.
+- Keep DC-IN-20V ≤ 22 V: SMAJ22A TVS (D41), and the rail-hold puts the full VBAT-14V4 across Q13's gate (AO4407C, Vgs ±25 V). DC-IN-20V capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
 - Barrel jack: DC-044A-20A (C129006), 5.5/2.0 mm, 30 V 5 A, 7.2 mm tall (the DC-005 was 11 mm). Its switch pin disconnects the dock contacts' GND while a plug is in, so the two sources never fight.
-- battery sense (2026-11-02): R218 (1M) / R219 (100k) + C177 (100 nF) from P+/C+ (the battery side of Q14, after F1) to PA8 (ADC5_IN1), V_bat = V_adc x 11 (16.8 V reads 1.53 V). Not VBAT-14V4: while charging, Q14 disconnects the battery and D14 feeds VBAT-14V4 from DC_IN. Always connected: ~15 µA from the battery, and ~16 µA into PA8 through its clamp diode while the MCU is off (far below the injection limit)
-- DC_IN sense: R199 (1M) / R200 (100k) + C175 (100 nF) to PB15 (ADC4_IN5), DC_IN = V_adc x 11 (20 V reads ~1.82 V; 3.3 V full scale is 36 V). The MCU sees charger power on either input.
-- Dock presence signature: ~130k from DC_IN to GND (R175 + R194 = 147k in parallel with the 1.1M sense divider), plus ~30 µF of DC_IN capacitance. The [charging dock](../kicad/charging-dock/README.md) measures both with a ~1.5 V probe (too low to turn Q31 on), then ramps 20 V onto its contact through a soft-start switch. Changing R175, R194, R199, R200 or the DC_IN capacitors changes the signature: update the dock firmware window too.
+- battery sense (2026-11-02): R218 (1M) / R219 (100k) + C177 (100 nF) from P+/C+14V4 (the battery side of Q14, after F1) to PA8 (ADC5_IN1), V_bat = V_adc x 11 (16.8 V reads 1.53 V). Not VBAT-14V4: while charging, Q14 disconnects the battery and D14 feeds VBAT-14V4 from DC-IN-20V. Always connected: ~15 µA from the battery, and ~16 µA into PA8 through its clamp diode while the MCU is off (far below the injection limit)
+- DC-IN-20V sense: R199 (1M) / R200 (100k) + C175 (100 nF) to PB15 (ADC4_IN5), DC-IN-20V = V_adc x 11 (20 V reads ~1.82 V; 3.3 V full scale is 36 V). The MCU sees charger power on either input.
+- Dock presence signature: ~130k from DC-IN-20V to GND (R175 + R194 = 147k in parallel with the 1.1M sense divider), plus ~30 µF of DC-IN-20V capacitance. The [charging dock](../kicad/charging-dock/README.md) measures both with a ~1.5 V probe (too low to turn Q31 on), then ramps 20 V onto its contact through a soft-start switch. Changing R175, R194, R199, R200 or the DC-IN-20V capacitors changes the signature: update the dock firmware window too.
 
 ### Bumpers (v1)
 
@@ -612,14 +612,14 @@ One connector (VMOT-14V4, GND, MAIN-FAN-FB on PE9, MAIN-FAN-PWM on PD1). Fans wi
 - MAIN_FAN1, fitted: Micro-Fit 3.0 compatible 1x4 right angle, Lian Xin XDWF-C3030WR-1*4P (C50399536, ~$0.09, 5 A per contact, ~5.5 mm tall; the Molex 43650-0400, C277684, 8.5 A, ~$0.30, also fits): 1 VCC, 2 GND, 3 PWM, 4 FG, matching the Dreame L60 Ultra PE main board. A 1x4 because Dreame fans with a 2x2 MX plug often come with a 2x2-to-1x4 cable for a right-angle 1x4 board header, so those cables can be reused (the fan's 2x2 end is 1 VCC, 2 GND, 3 FG, 4 PWM; the cable maps it to the 1x4 order). History, 2026-11-03: vertical 2x2 (9.9 mm plus the plug and cable on top, too tall), then right-angle 2x2, then this 1x4. Place it with room for the plug and cable on the mating side. Stock is low for the clones (~600 Lian Xin, ~1.5k Molex at JLC); check before a production order. MSD-G fan (Dreame X50 Ultra / Master, 20 kPa, 4.2 A at 14.4 V, 6 A blocked at 16.8 V: over the clone's 5 A, so firmware stops a stalled fan by FG). Footprint JLCImport:CONN-TH_4P-P3.00_L8.9-W15.7-EH4.7, JLC's own for the Molex 43650-0400 (since 2026-11-04; the Lian Xin's JLC footprint is mirrored, so it isn't used). Vendor drawings disagree on which end is pin 1, so check the silkscreen pin 1 against the header's cavity keying on the first board
 - the motor rail switch has two AO4407C in parallel (Q1, Q37, 10 Ω gate resistors R36/R222 from VMOT-SW-G) for the higher fan current: ~7.5 A normal is ~0.25 W in each
 - the PCB engineer sizes the fan traces for ~6 A
-- blowers are limited to the 20 kPa class (decided 2026-11-07): Dreame MSD-G or MSD-J, both with Micro-Fit plugs. The whole robot current (~7.5 A normal with the MSD-G) runs through BAT2's single P+ and GND contacts (8.5 A rated; the Roborock pack has one of each). A stronger blower would need a battery connector with doubled power pins
-- Q14 is in series with all battery current when off the dock. It was an AOD407 (68 mΩ: ~2 W at 5 A, ~4-5 W at 7.5 A); since 2026-11-03 it is two AO4407C in parallel (Q14, Q38), ~0.22 W each at 7.5 A. Gate = DC_IN, S = VBAT-14V4, D = P+/C+ as before. Vds: about -10 V while charging, up to ~-24 V in a TVS-clamped plug-in surge; Vgs: up to ~+24 V in that surge (AO4407C: -30 V, ±25 V). Q12 stays AOD407: it is the SLM6900 buck switch, where gate charge matters more than on-resistance
-- on the dock Q14/Q38 are off and the whole load runs through D14 (SS56, 5 A): firmware keeps the fan and motors off until DC_IN is gone
+- blowers are limited to the 20 kPa class (decided 2026-11-07): Dreame MSD-G or MSD-J, both with Micro-Fit plugs. The whole robot current (~7.5 A normal with the MSD-G) runs through J2's single P+ and GND contacts (8.5 A rated; the Roborock pack has one of each). A stronger blower would need a battery connector with doubled power pins
+- Q14 is in series with all battery current when off the dock. It was an AOD407 (68 mΩ: ~2 W at 5 A, ~4-5 W at 7.5 A); since 2026-11-03 it is two AO4407C in parallel (Q14, Q38), ~0.22 W each at 7.5 A. Gate = DC-IN-20V, S = VBAT-14V4, D = P+/C+14V4 as before. Vds: about -10 V while charging, up to ~-24 V in a TVS-clamped plug-in surge; Vgs: up to ~+24 V in that surge (AO4407C: -30 V, ±25 V). Q12 stays AOD407: it is the SLM6900 buck switch, where gate charge matters more than on-resistance
+- on the dock Q14/Q38 are off and the whole load runs through D14 (SS56, 5 A): firmware keeps the fan and motors off until DC-IN-20V is gone
 
 ### Component height (v1)
 
 Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
-- battery connector (BAT2): not on the top side since 2026-11-07. It is a vertical Micro-Fit 3.0 compatible 1x4, CJT C3030WV-4P (C239441, ~$0.26, 8.5 A, ~10 mm; Molex 43650-0415, C293547, uses the same footprint), fitted on the underside and facing down into the battery compartment, as on older Roborocks. Pinout unchanged: 1 P+ (through F1), 2 NTC, 3 ID, 4 GND. It was a Molex 43650-0412 right angle, SMD, 5.57 mm ($0.55)
+- battery connector (J2, BAT2 until 2026-11-09): not on the top side since 2026-11-07. It is a vertical Micro-Fit 3.0 compatible 1x4, CJT C3030WV-4P (C239441, ~$0.26, 8.5 A, ~10 mm; Molex 43650-0415, C293547, uses the same footprint), fitted on the underside and facing down into the battery compartment, as on older Roborocks. Pinout unchanged: 1 P+ (through F1), 2 NTC, 3 ID, 4 GND. It was a Molex 43650-0412 right angle, SMD, 5.57 mm ($0.55)
 - barrel jack: DC-044A-20A, 7.2 mm
 - LIDAR2 is a 1x6 0.1" right-angle header (PZ254R-11-06P), not fitted
 - J1 spare I/O: vertical 2x6 0.1" header (PZ254V-12-12P, ~8.5 mm above the board), like STM32_DEBUG1
@@ -687,7 +687,7 @@ MOSFET line-up (consolidated 2026-09, 8 part numbers → 4):
 | all N-FETs | AO3400 (FOSAN) | C20628874 | 30 V, Vgs ±12 V, Vth 0.65-1.5 V, SOT-23 |
 | P-FETs whose gate sees ≤ 5 V | AO3401 (FOSAN) | C20628875 | -30 V, Vgs ±12 V, SOT-23 |
 | battery-side high-side switches (Q1, Q37, Q13, Q14, Q38) | AO4407C (AOS) | C469397 | -30 V, Vgs ±25 V, 11.5 mΩ, SOIC-8 |
-| charger buck switch, DC_IN (Q12) | AOD407 | C6396162 | -60 V for hot-plug margin, low gate charge |
+| charger buck switch, DC-IN-20V (Q12) | AOD407 | C6396162 | -60 V for hot-plug margin, low gate charge |
 
 Any gate or drain that can see VBAT-14V4 (up to 16.8 V) needs Vds ≥ 30 V, and a gate swing that large needs Vgs ≥ 20 V.
 

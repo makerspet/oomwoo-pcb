@@ -5268,7 +5268,7 @@
 		)
 		(uuid "ddbc539e-d6cb-4c7b-ae41-01c9b3e08e14")
 	)
-	(text "Hardware off timer: holding the power button for ~4-9 s turns the MCU rail off even if the firmware hangs\n(Q29 releases C172, U23 trips, Q30 pulls PWR-LATCH low). Firmware turns off at 3 s.\nWhile charging, the rail-hold (Q31 on BATTERY-CHARGER, from DC_IN) keeps the MCU rail on regardless,\nand charger power alone turns the MCU rail on (Q31 pulls PWR-SW-G low)."
+	(text "Hardware off timer: holding the power button for ~4-9 s turns the MCU rail off even if the firmware hangs\n(Q29 releases C172, U23 trips, Q30 pulls PWR-LATCH low). Firmware turns off at 3 s.\nWhile charging, the rail-hold (Q31 on BATTERY-CHARGER, from DC-IN-20V) keeps the MCU rail on regardless,\nand charger power alone turns the MCU rail on (Q31 pulls PWR-SW-G low)."
 		(exclude_from_sim no)
 		(at 24.892 236.22 0)
 		(effects

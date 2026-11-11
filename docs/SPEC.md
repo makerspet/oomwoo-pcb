@@ -347,7 +347,7 @@ Net spec
 
 On the main board (current schematic):
 - LIDAR1: JST GH 1.25 mm socket for the LDROBOT LD14P: 1 MOTOR-CTRL (PC2 through R183), 2 GND, 3 LiDAR TX (to PD2 through R113), 4 VLIDAR-5V
-- LIDAR2 (v1, since 2026-11-03): 1x6 0.1" right-angle header, not fitted (XFCN PZ254R-11-06P, C492414; a vertical header plus the cable on top would be too tall), for other 2D LiDARs: 1 VLIDAR-5V, 2 VLIDAR-5V, 3 GND, 4 MOT- (low-side switched by Q20), 5 LiDAR TX (shared with LIDAR1 pin 3), 6 LiDAR RX (from PC12 through R66). A LiDAR that doesn't drive its own motor gets it between pins 1/2 (+) and 4 (MOT-). It was 2x3 unfitted pads (2026-10-29) with a different pin order. Fit only one LiDAR: LIDAR1 or LIDAR2.
+- LIDAR2 (v1): 2x3 0.1" right-angle header, not fitted (XFCN PZ254R-12-06P-A40, C45384673, since 2026-11-11; 1x6 PZ254R-11-06P from 2026-11-03; a vertical header plus the cable on top would be too tall). The 2x3 takes 7.6 mm of board edge instead of 15.2 mm; odd pins are in one row, even pins in the other, so it takes a 2x3 Dupont housing or single Dupont leads, not a 1x6 housing. For other 2D LiDARs: 1 VLIDAR-5V, 2 VLIDAR-5V, 3 GND, 4 MOT- (low-side switched by Q20), 5 LiDAR TX (shared with LIDAR1 pin 3), 6 LiDAR RX (from PC12 through R66). A LiDAR that doesn't drive its own motor gets it between pins 1/2 (+) and 4 (MOT-). It was 2x3 unfitted pads (2026-10-29) with a different pin order. Fit only one LiDAR: LIDAR1 or LIDAR2.
 - R66, R113, R183 are 100 Ω series resistors (v1, 2026-10-29; R183/R113 were 1k, R117 is gone). At 100 Ω they no longer stop the MCU from back-powering an unpowered LiDAR through its inputs, so firmware drives PC2 and PC12 low (or makes them inputs) whenever the LiDAR rail is off.
 - both are powered from VLIDAR-5V, which cuts the whole LiDAR (laser included), not just its motor; see [Safety and power rails](#safety-and-power-rails)
 
@@ -624,7 +624,7 @@ One connector (VMOT-14V4, GND, MAIN-FAN-FB on PE9, MAIN-FAN-PWM on PD1). Fans wi
 Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
 - battery connector (J2, BAT2 until 2026-11-09): not on the top side since 2026-11-07. It is a vertical Micro-Fit 3.0 compatible 1x4, CJT C3030WV-4P (C239441, ~$0.26, 8.5 A, ~10 mm; Molex 43650-0415, C293547, uses the same footprint), fitted on the underside and facing down into the battery compartment, as on older Roborocks. Pinout unchanged: 1 P+ (through F1), 2 NTC, 3 ID, 4 GND. It was a Molex 43650-0412 right angle, SMD, 5.57 mm ($0.55)
 - barrel jack: DC-044A-20A, 7.2 mm
-- LIDAR2 is a 1x6 0.1" right-angle header (PZ254R-11-06P), not fitted
+- LIDAR2 is a 2x3 0.1" right-angle header (PZ254R-12-06P-A40), not fitted
 - J1 spare I/O: right-angle 2x6 0.1" header (PZ254R-12-12P, ~5 mm above the board; vertical, ~8.5 mm, until 2026-11-10)
 - exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x6 0.1" (XFCN PZ254V-11-06P, C492405, ~8.5 mm above the board; 1x6 since 2026-11-02 so the cable socket seats fully) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm

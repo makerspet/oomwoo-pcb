@@ -1,14 +1,16 @@
 # OOMWOO front ToF board
 
-A small breakout for one VL53L7 8x8-zone time-of-flight sensor. The robot fits two of them, from the same design: the left board aims 30° left and the right board 30° right, which together cover ~126° in front of the robot. Each board plugs into the [main board](../main-phone/README.md) (VL-L1 or VL-R1) through a 2x4 board-to-board connector, no cable (a 7-pin cable until 2026-11-06). Rev 2, 2026-10-27.
+A small breakout for one VL53L7 8x8-zone time-of-flight sensor and one dock-homing IR receiver. The robot fits two of them, from the same design: the left board aims 30° left and the right board 30° right, which together cover ~126° in front of the robot. Each board plugs into the [main board](../main-phone/README.md) (VL-L1 or VL-R1) through a 2x4 board-to-board connector, no cable (a 7-pin cable until 2026-11-06). Rev 2, 2026-10-27.
 
-Until rev 2, this project also held the two dock-homing IR receivers. They are now on the main board (U24, U25), since the main board sits at the very front of the robot anyway.
+The dock-homing IR receivers were on this project until rev 2, then on the main board (U24, U25) from 2026-10-27. Since 2026-11-11 they are back here, one per board (U2002), so the receiver and the ToF sensor share one bumper opening: a bumper printed in pigmented filament blocks NIR, so both need an opening, and one is smaller than two.
 
 ## Circuit
 
 - U2001: VL53L7CH (LCSC C19183986). The VL53L7CX (C5270520) and the VL53L5CX (C3178303, narrower 63° diagonal field of view) use the same footprint and pinout. Pin handling follows the datasheet (DS13865, table 3): RSVD1-4 to GND, RSVD5 not connected, RSVD6 47k pull-up (R2001), thermal pad to GND.
 - AVDD (the analog and laser supply, rail VAA-3V3) gets its 3.3 V from VDD-3V3 through L2001 (BLM18PG121SN1D ferrite), so the laser current pulses stay off the shared 3.3 V. Each supply pin has 10 µF + 100 nF: C2001/C2002 on AVDD, C2003/C2004 on IOVDD. Place each pair right at its pins.
-- No pull-ups on this board. The main board holds them: I2C 2.2k, the shared INT 47k (R61) and the right LPn 47k (R196). The MCU drives the left LPn and I2C_RST directly (no resistors since 2026-11-04). With pull-ups on every board, the shared I2C bus would be pulled up three times over (~730 Ω).
+- U2002: Everlight IRM-H638T/TR2 (C91447), a 38 kHz IR receiver for the dock beacon, the same part as on the side board and the dock. It is top-looking (the lens is on its top face), and this board stands upright facing forward, so it looks forward too. Supply filter per the datasheet: R2002 100 Ω + C2005 10 µF. The output has an internal pull-up and goes straight to the MCU (left board PE15, right board PB11).
+- The VL53L7 INT pin is not connected (since 2026-11-11): firmware polls the sensor for new data, and J2001 pin 5 carries the IR receiver output instead.
+- No pull-ups on this board. The main board holds them: I2C 2.2k and the right LPn 47k (R196). The MCU drives the left LPn and I2C_RST directly (no resistors since 2026-11-04). With pull-ups on every board, the shared I2C bus would be pulled up three times over (~730 Ω).
 - Both sensors start at I2C address 0x52. At start-up the firmware holds one sensor's LPn low and moves the other to a new address. The new address is lost on power-off, so this runs every boot.
 - Parts use the JLC library symbols and footprints (JLCImport:C0603/R0603, 2026-11-05); LPn is named ~{LPn} (active low); a PWR_FLAG on VAA-3V3 clears the ERC error behind the ferrite.
 
@@ -26,7 +28,7 @@ Board-to-board, no cable (since 2026-11-06). The board hangs under the main boar
 | 2 | GND | 1 |
 | 3 | SDA | 4 |
 | 4 | SCL | 3 |
-| 5 | INT | 6 |
+| 5 | IR_OUT (IR receiver; INT until 2026-11-11) | 6 |
 | 6 | I2C_RST | 5 |
 | 7 | ~LPn (active low) | 8 |
 | 8 | GND | 7 |
@@ -43,6 +45,7 @@ Rotated 180°, 3.3 V would meet GND. Check both boards together in the 3D CAD be
 - The PCB file in this folder is the old combined layout. Run *Update PCB from Schematic* before layout work.
 - Keep the board small. No mounting holes (removed 2026-10-29): a mount screwed to the main board holds it upright, under the main board (designed with the 3D CAD; until 2026-11-06 the board slid into a holder by its long edges). The sensor looks out of the front face; J2001 sits on the back, at the edge that meets the main board.
 - The sensor needs a clear view through the bumper window: no copper, silkscreen or part above it, and a cover window from a material on ST's cover-glass list.
+- Place U2002 on the front face right next to the sensor, so one bumper opening covers both, and keep it and the baffle out of the sensor's 60° x 60° field of view. An opaque baffle between them (part of the mount or bumper) keeps the ToF laser off the receiver.
 - Reference designators are in this board's 2000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has two copies of this board; let KiKit (or the panel tool) rename references per copy so the assembly files stay unique.
 
 ## Assembly: the sensor is placed by hand

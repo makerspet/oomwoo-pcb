@@ -563,7 +563,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 ### DC input (v1)
 
 - 20 V brick, through the dock contacts or the barrel jack. While charging, Q14 disconnects the battery from VBAT-14V4 and D14 feeds VBAT-14V4 from DC-IN-20V (DC-IN-20V - 0.4 V); the SLM6900's 95% maximum duty needs ≥ ~18.5 V to finish a 4S charge.
-- Keep DC-IN-20V ≤ 22 V: SMAJ22A TVS (D41), and the rail-hold puts the full VBAT-14V4 across Q13's gate (AO4407C, Vgs ±25 V). DC-IN-20V capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
+- Keep DC-IN-20V ≤ 22 V: SMAJ22A TVS (D41, C353464; not SMAJ18A, which can start conducting at 20 V. JLC has no footprint or 3D model for it yet, so its symbol borrows the SMAJ18A's SMA footprint), and the rail-hold puts the full VBAT-14V4 across Q13's gate (AO4407C, Vgs ±25 V). DC-IN-20V capacitors are 10 µF/50 V 1206 (C13585); a 10 µF/25 V 0603 keeps only ~1 µF at 20 V.
 - Barrel jack: DC-044A-20A (C129006), 5.5/2.0 mm, 30 V 5 A, 7.2 mm tall (the DC-005 was 11 mm). Its switch pin disconnects the dock contacts' GND while a plug is in, so the two sources never fight.
 - battery sense (2026-11-02): R218 (1M) / R219 (100k) + C177 (100 nF) from P+/C+14V4 (the battery side of Q14, after F1) to PA8 (ADC5_IN1), V_bat = V_adc x 11 (16.8 V reads 1.53 V). Not VBAT-14V4: while charging, Q14 disconnects the battery and D14 feeds VBAT-14V4 from DC-IN-20V. Always connected: ~15 µA from the battery, and ~16 µA into PA8 through its clamp diode while the MCU is off (far below the injection limit)
 - DC-IN-20V sense: R199 (1M) / R200 (100k) + C175 (100 nF) to PB15 (ADC4_IN5), DC-IN-20V = V_adc x 11 (20 V reads ~1.82 V; 3.3 V full scale is 36 V). The MCU sees charger power on either input.

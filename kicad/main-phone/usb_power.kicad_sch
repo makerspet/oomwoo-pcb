@@ -3324,13 +3324,19 @@
 		(uuid "13dd3245-4a7a-447a-9d33-525b13faff93")
 	)
 	(junction
+		(at 81.28 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a6b1f9d-7b0d-499d-8f77-2bdfe545c68a")
+	)
+	(junction
 		(at 123.19 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1aad9180-d561-45ee-8786-745dc2e6e125")
 	)
 	(junction
-		(at 132.08 66.04)
+		(at 129.54 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3d16090b-80c7-4e7f-a67c-8ae2e988ad2a")
@@ -3366,7 +3372,7 @@
 		(uuid "721da2da-81ee-4c68-a3f5-4be059c8d858")
 	)
 	(junction
-		(at 139.7 55.88)
+		(at 137.16 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73437769-9613-4f56-b500-eb90246e4e7d")
@@ -3460,12 +3466,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bdebd796-61d6-4bcc-b62b-27dc8cf07053")
-	)
-	(junction
-		(at 81.28 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c61d4237-c402-4dd0-95da-36ed137618b2")
 	)
 	(junction
 		(at 219.71 68.58)
@@ -3767,7 +3767,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 66.04) (xy 139.7 66.04)
+			(xy 129.54 66.04) (xy 137.16 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3847,7 +3847,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 55.88) (xy 127 55.88)
+			(xy 123.19 55.88) (xy 124.46 55.88)
 		)
 		(stroke
 			(width 0)
@@ -3877,7 +3877,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 63.5) (xy 132.08 66.04)
+			(xy 129.54 63.5) (xy 129.54 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3947,7 +3947,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 71.12) (xy 127 71.12)
+			(xy 81.28 71.12) (xy 124.46 71.12)
 		)
 		(stroke
 			(width 0)
@@ -4267,7 +4267,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 55.88) (xy 139.7 55.88)
+			(xy 134.62 55.88) (xy 137.16 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4776,7 +4776,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:FRC0603J104TS")
-		(at 139.7 60.96 270)
+		(at 137.16 60.96 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4786,7 +4786,7 @@
 		(dnp no)
 		(uuid "13d01dc8-a352-471c-b6f3-dffa84a446c8")
 		(property "Reference" "R187"
-			(at 144.018 59.944 90)
+			(at 141.478 59.944 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4796,7 +4796,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 144.018 62.23 90)
+			(at 141.478 62.23 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4806,17 +4806,6 @@
 			)
 		)
 		(property "Footprint" "JLCImport:R0603"
-			(at 132.08 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
 			(at 129.54 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4827,18 +4816,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
-			(at 139.7 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FOJAN(富捷)"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
 			(at 127 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4849,7 +4827,18 @@
 				)
 			)
 		)
-		(property "MPN" "FRC0603J104 TS"
+		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+			(at 137.16 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
 			(at 124.46 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4860,8 +4849,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907088"
+		(property "MPN" "FRC0603J104 TS"
 			(at 121.92 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 119.38 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4965,7 +4965,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 139.7 55.88 0)
+		(at 137.16 55.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4976,7 +4976,7 @@
 		(fields_autoplaced yes)
 		(uuid "1d423159-8543-43a7-9416-bdbdac673457")
 		(property "Reference" "#PWR016"
-			(at 139.7 59.69 0)
+			(at 137.16 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4987,7 +4987,7 @@
 			)
 		)
 		(property "Value" "VBUS_5V"
-			(at 139.7 50.8 0)
+			(at 137.16 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4997,7 +4997,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 55.88 0)
+			(at 137.16 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5008,7 +5008,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 55.88 0)
+			(at 137.16 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5019,7 +5019,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 139.7 55.88 0)
+			(at 137.16 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6804,7 +6804,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 132.08 76.2 0)
+		(at 129.54 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6814,7 +6814,7 @@
 		(dnp no)
 		(uuid "a2a442b5-9202-44fa-abd3-a03a985c39c2")
 		(property "Reference" "#PWR07101"
-			(at 132.08 82.55 0)
+			(at 129.54 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6825,7 +6825,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 132.08 82.55 0)
+			(at 129.54 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6836,7 +6836,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 76.2 0)
+			(at 129.54 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6847,7 +6847,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 76.2 0)
+			(at 129.54 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6858,7 +6858,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 76.2 0)
+			(at 129.54 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6882,7 +6882,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:AO3400")
-		(at 132.08 71.12 0)
+		(at 129.54 71.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6892,7 +6892,7 @@
 		(dnp no)
 		(uuid "a3c483f0-cafa-4d7d-9c99-4c8b11f9ae4d")
 		(property "Reference" "Q28"
-			(at 136.144 70.612 0)
+			(at 133.604 70.612 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6903,7 +6903,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 136.144 73.152 0)
+			(at 133.604 73.152 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6914,7 +6914,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3400"
-			(at 132.08 71.12 0)
+			(at 129.54 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6925,7 +6925,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3400_C20628874.pdf"
-			(at 132.08 71.12 0)
+			(at 129.54 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6936,7 +6936,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 132.08 71.12 0)
+			(at 129.54 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6947,7 +6947,7 @@
 			)
 		)
 		(property "LCSC" "C20628874"
-			(at 132.08 71.12 0)
+			(at 129.54 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6958,7 +6958,7 @@
 			)
 		)
 		(property "Manufacturer" "FOSAN"
-			(at 132.08 71.12 0)
+			(at 129.54 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6969,7 +6969,7 @@
 			)
 		)
 		(property "Manufacturer Part" "AO3400"
-			(at 132.08 71.12 0)
+			(at 129.54 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7191,7 +7191,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:AO3401")
-		(at 132.08 55.88 90)
+		(at 129.54 55.88 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7201,7 +7201,7 @@
 		(dnp no)
 		(uuid "b88d0aa8-3766-46e2-9131-8787eea95da4")
 		(property "Reference" "Q27"
-			(at 129.54 50.8 0)
+			(at 127 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7212,7 +7212,7 @@
 			)
 		)
 		(property "Value" "AO3401"
-			(at 132.08 52.07 0)
+			(at 129.54 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7223,7 +7223,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:AO3401"
-			(at 132.08 55.88 0)
+			(at 129.54 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7234,7 +7234,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3401_C20628875.pdf"
-			(at 132.08 55.88 0)
+			(at 129.54 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7245,7 +7245,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 132.08 55.88 0)
+			(at 129.54 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7256,7 +7256,7 @@
 			)
 		)
 		(property "LCSC" "C20628875"
-			(at 132.08 55.88 0)
+			(at 129.54 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7267,7 +7267,7 @@
 			)
 		)
 		(property "Manufacturer" "FOSAN"
-			(at 132.08 55.88 0)
+			(at 129.54 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7278,7 +7278,7 @@
 			)
 		)
 		(property "Manufacturer Part" "AO3401"
-			(at 132.08 55.88 0)
+			(at 129.54 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

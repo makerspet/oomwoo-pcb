@@ -40510,16 +40510,13 @@
 		(embedded_fonts no)
 	)
 	(symbol "TPS54560BDDAR"
-		(pin_names
-			(offset 1.016)
-		)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 0 9.62 0)
+			(at 0 12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -40529,7 +40526,7 @@
 			)
 		)
 		(property "Value" "TPS54560BDDAR"
-			(at 0 -7.08 0)
+			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -40538,7 +40535,29 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:Texas_R-PDSO-G8_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias"
+		(property "Footprint" "JLCImport:POWERPAD-SO-8_L4.9-W3.9-P1.27-LS6.0-BL-EP"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C1850354.pdf"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-40℃~+150℃@(TJ) 1 146uA 4.5V~60V 500kHz 5A 800mV~58.8V Adjustable Buck Buck Built-in No SO-8 DC-DC Converters ROHS"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40549,8 +40568,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps54560b.pdf"
-			(at 0 0 0)
+		(property "Manufacturer" "TI(德州仪器)"
+			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -40560,8 +40579,8 @@
 				)
 			)
 		)
-		(property "Description" "4.5-60 V, 5 A step-down converter, current mode, Eco-mode, internal soft start, SO-8 PowerPAD"
-			(at 0 0 0)
+		(property "MPN" "TPS54560BDDAR"
+			(at 0 -20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -40572,7 +40591,7 @@
 			)
 		)
 		(property "LCSC" "C1850354"
-			(at 0 0 0)
+			(at 0 -22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -40582,29 +40601,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "TPS54560BDDAR"
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "TPS54560BDDAR C1850354 Texas Instruments SO-8 PowerPAD"
+		(property "ki_keywords" "DC-DC Converters"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40616,37 +40613,30 @@
 			)
 		)
 		(symbol "TPS54560BDDAR_0_1"
-			(circle
-				(center -6.35 5.08)
-				(radius 0.381)
+			(rectangle
+				(start -7.62 6.604)
+				(end 7.62 -7.62)
 				(stroke
-					(width 0.254)
-					(type solid)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(polyline
-				(pts
-					(xy 7.112 -5.08) (xy 7.2111 -5.0702) (xy 7.3064 -5.0413) (xy 7.3942 -4.9944) (xy 7.4712 -4.9312)
-					(xy 7.5344 -4.8542) (xy 7.5813 -4.7664) (xy 7.6103 -4.6711) (xy 7.62 -4.572) (xy 7.6103 7.2111)
-					(xy 7.5813 7.3064) (xy 7.5344 7.3942) (xy 7.4712 7.4712) (xy 7.3942 7.5344) (xy 7.3064 7.5813)
-					(xy 7.2111 7.6103) (xy 7.112 7.62) (xy -7.2111 7.6103) (xy -7.3064 7.5813) (xy -7.3942 7.5344)
-					(xy -7.4712 7.4712) (xy -7.5344 7.3942) (xy -7.5813 7.3064) (xy -7.6103 7.2111) (xy -7.62 7.112)
-					(xy -7.6103 -4.6711) (xy -7.5813 -4.7664) (xy -7.5344 -4.8542) (xy -7.4712 -4.9312) (xy -7.3942 -4.9944)
-					(xy -7.3064 -5.0413) (xy -7.2111 -5.0702) (xy -7.112 -5.08) (xy 7.112 -5.08)
-				)
-				(stroke
-					(width 0.254)
-					(type solid)
+					(width 0)
+					(type default)
 				)
 				(fill
 					(type background)
 				)
 			)
+			(circle
+				(center -6.35 5.08)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 			(pin passive line
-				(at -10.16 3.81 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "BOOT"
 					(effects
@@ -40663,8 +40653,8 @@
 					)
 				)
 			)
-			(pin passive line
-				(at -10.16 1.27 0)
+			(pin power_in line
+				(at -10.16 0 0)
 				(length 2.54)
 				(name "VIN"
 					(effects
@@ -40682,7 +40672,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.16 -1.27 0)
+				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "EN"
 					(effects
@@ -40700,7 +40690,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.16 -3.81 0)
+				(at -10.16 -5.08 0)
 				(length 2.54)
 				(name "RT/CLK"
 					(effects
@@ -40718,7 +40708,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -3.81 180)
+				(at 10.16 -5.08 180)
 				(length 2.54)
 				(name "FB"
 					(effects
@@ -40736,7 +40726,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -1.27 180)
+				(at 10.16 -2.54 180)
 				(length 2.54)
 				(name "COMP"
 					(effects
@@ -40754,7 +40744,7 @@
 				)
 			)
 			(pin power_in line
-				(at 10.16 1.27 180)
+				(at 10.16 0 180)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -40772,7 +40762,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 3.81 180)
+				(at 10.16 2.54 180)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -40789,9 +40779,11 @@
 					)
 				)
 			)
+		)
+		(symbol "TPS54560BDDAR_1_1"
 			(pin passive line
-				(at 12.7 6.35 180)
-				(length 5.08)
+				(at 10.16 5.08 180)
+				(length 2.54)
 				(name "PAD"
 					(effects
 						(font

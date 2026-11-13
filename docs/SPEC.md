@@ -347,7 +347,7 @@ Net spec
 
 On the main board (current schematic):
 - LIDAR1: JST GH 1.25 mm socket for the LDROBOT LD14P: 1 MOTOR-CTRL (PC2 through R183), 2 GND, 3 LiDAR TX (to PD2 through R113), 4 VLIDAR-5V
-- LIDAR2 (v1): 2x3 0.1" right-angle header, not fitted (XFCN PZ254R-12-06P-A40, C45384673, since 2026-11-11; 1x6 PZ254R-11-06P from 2026-11-03; a vertical header plus the cable on top would be too tall). The 2x3 takes 7.6 mm of board edge instead of 15.2 mm; odd pins are in one row, even pins in the other, so it takes a 2x3 Dupont housing or single Dupont leads, not a 1x6 housing. For other 2D LiDARs: 1 VLIDAR-5V, 2 VLIDAR-5V, 3 GND, 4 MOT- (low-side switched by Q20), 5 LiDAR TX (shared with LIDAR1 pin 3), 6 LiDAR RX (from PC12 through R66). A LiDAR that doesn't drive its own motor gets it between pins 1/2 (+) and 4 (MOT-). It was 2x3 unfitted pads (2026-10-29) with a different pin order. Fit only one LiDAR: LIDAR1 or LIDAR2.
+- J3 (v1; LIDAR2 until 2026-11-13): 2x3 0.1" right-angle header, fitted since 2026-11-13 (not fitted before) (XFCN PZ254R-12-06P-A40, C45384673, since 2026-11-11; 1x6 PZ254R-11-06P from 2026-11-03; a vertical header plus the cable on top would be too tall). The 2x3 takes 7.6 mm of board edge instead of 15.2 mm; odd pins are in one row, even pins in the other, so it takes a 2x3 Dupont housing or single Dupont leads, not a 1x6 housing. For other 2D LiDARs: 1 VLIDAR-5V, 2 VLIDAR-5V, 3 GND, 4 MOT- (low-side switched by Q20), 5 LiDAR TX (shared with LIDAR1 pin 3), 6 LiDAR RX (from PC12 through R66). A LiDAR that doesn't drive its own motor gets it between pins 1/2 (+) and 4 (MOT-). It was 2x3 unfitted pads (2026-10-29) with a different pin order. Connect only one LiDAR: to LIDAR1 or to J3.
 - R66, R113, R183 are 100 Ω series resistors (v1, 2026-10-29; R183/R113 were 1k, R117 is gone). At 100 Ω they no longer stop the MCU from back-powering an unpowered LiDAR through its inputs, so firmware drives PC2 and PC12 low (or makes them inputs) whenever the LiDAR rail is off.
 - both are powered from VLIDAR-5V, which cuts the whole LiDAR (laser included), not just its motor; see [Safety and power rails](#safety-and-power-rails)
 
@@ -555,9 +555,11 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### Power control (v1)
 
-- Power-on: the button pulls the Q13 (AO4407C) gate low through C14, Q13 feeds POWER-EN and the U21 3.3 V buck turns on the MCU rail. Firmware then holds the latch with STM-PWR-CTRL (PA15 → R190 1k → Q23). Power-on starts only the MCU rail; firmware enables the other rails.
+- Power-on: the button pulls the Q13 (AO4407C) gate low through C14, Q13 feeds VMCU-3V3-POWER-EN and the U21 3.3 V buck turns on the MCU rail. Once the rail is up, R172 (10k from PWR-LATCH to VMCU-3V3) turns Q23 on, and Q23 holds Q13 on: the latch holds itself in hardware, so a blank or crashed MCU stays powered (useful for the first flash). Firmware only turns power off, by driving STM-PWR-CTRL (PA15 → R190 1k → PWR-LATCH) low, which puts the Q23 gate at ~0.3 V. On a blank STM32G4, PA15 comes out of reset as JTDI with its internal pull-up, so it doesn't fight R172. Power-on starts only the MCU rail; firmware enables the other rails.
+  - C2 (10 µF, PWR-LATCH to GND; 10k x 10 µF = 100 ms, since 2026-11-13) stops a firmware "off" from turning itself back on. Without it, the MCU releases PA15 when the falling rail reaches its ~1.7 V reset level, while R172 still pulls the Q23 gate up to that falling rail (above the AO3400's 0.65-1.45 V threshold), which could turn Q13 back on. With C2, PA15 holds the gate at 0 V until reset, and R172 then charges C2 too slowly for the gate to reach the threshold before the rail is gone (~50 ms below 0.65 V). Turn-on still works: firmware charges C2 through R190 in ms; a blank MCU relies on R172 alone, ~60 ms to 1.45 V, well inside the ~0.25 s a button press holds Q13 on (C14 + C22 through R171). Q30 (the off timer) discharges C2 directly
+  - to check at bring-up: scope VMCU-3V3 and PWR-SW-G during a firmware off (the rail must not come back) and a blank-MCU power-on (the rail must stay on); tune C2 if needed
 - Off: firmware turns everything off after a 3 s press (all rails first, then PA15 low). 3 s while holding Home = factory reset, and the robot stays on.
-- Hardware off timer: holding the button ~4-9 s turns the MCU rail off even if the firmware hangs. Q29 releases C172 (10 µF, charged through R193 1M), U23 (74LVC1G17 Schmitt buffer) trips and Q30 pulls the latch gate (PWR-LATCH) low. R190 lets Q30 win against PA15 driven high.
+- Hardware off timer: holding the button ~4-9 s turns the MCU rail off even if the firmware hangs. Q29 releases C172 (10 µF, charged through R193 1M), U23 (74LVC1G17 Schmitt buffer) trips and Q30 pulls the latch gate (PWR-LATCH) low. R190 lets Q30 win against PA15 driven high (or against R172 alone).
 - Charger rail-hold: DC-IN-20V (dock or barrel jack) turns Q31 on through the R175/R194 divider, which pulls the Q13 gate (PWR-SW-G) low. Charger power alone turns the MCU rail on, and nothing turns it off while charging (the off timer can't either).
 - MCU rail off → every MCU pin floats → every other rail is held off by its enable pull resistor.
 - Charging is in hardware (SLM6900 + battery NTC) and continues while the MCU is in reset.
@@ -624,7 +626,7 @@ One connector (VMOT-14V4, GND, MAIN-FAN-FB on PE9, MAIN-FAN-PWM on PD1). Fans wi
 Goal: nothing taller than the right-angle wire-to-board connectors and the buck inductors.
 - battery connector (J2, BAT2 until 2026-11-09): not on the top side since 2026-11-07. It is a vertical Micro-Fit 3.0 compatible 1x4, CJT C3030WV-4P (C239441, ~$0.26, 8.5 A, ~10 mm; Molex 43650-0415, C293547, uses the same footprint), fitted on the underside and facing down into the battery compartment, as on older Roborocks. Pinout unchanged: 1 P+ (through F1), 2 NTC, 3 ID, 4 GND. It was a Molex 43650-0412 right angle, SMD, 5.57 mm ($0.55)
 - barrel jack: DC-044A-20A, 7.2 mm
-- LIDAR2 is a 2x3 0.1" right-angle header (PZ254R-12-06P-A40), not fitted
+- J3 (the second LiDAR header, LIDAR2 until 2026-11-13) is a 2x3 0.1" right-angle header (PZ254R-12-06P-A40), fitted
 - J1 spare I/O: right-angle 2x6 0.1" header (PZ254R-12-12P, ~5 mm above the board; vertical, ~8.5 mm, until 2026-11-10)
 - exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x6 0.1" (XFCN PZ254V-11-06P, C492405, ~8.5 mm above the board; 1x6 since 2026-11-02 so the cable socket seats fully) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
@@ -643,7 +645,7 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - Non-synchronous: SS56 catch diodes D42/D43 (SW to GND, same part as D12-D15). Keep the SW node, the diode and the input capacitors in a tight loop.
 - fsw 418 kHz: RT R205/R206 = 232k (same part as R160), where the AP64501 soft-start caps were. Soft start is internal.
 - Compensation, the same on both rails: R143/R147 4.7k + C112/C120 47 nF (crossover ~20 kHz with ~40 µF effective output capacitance). No high-frequency pole capacitor: the output capacitors are all ceramic, so there is no ESR zero to cancel.
-- U21 EN: POWER-EN is the full VBAT-14V4 (up to ~20 V while charging), and EN is rated 8.4 V. R207 (100k) / R208 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on VSENS_5V_USB_EN (3.3 V logic, R168 100k pull-down).
+- U21 EN: VMCU-3V3-POWER-EN is the full VBAT-14V4 (up to ~20 V while charging), and EN is rated 8.4 V. R207 (100k) / R208 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on VSENS_5V_USB_EN (3.3 V logic, R168 100k pull-down).
 - VBAT-14V4 input capacitors C95, C106, C115, C116: 10 µF/50 V 1206 (C13585). The 10 µF/25 V 0603 parts kept only ~1 µF at 20 V.
 - Cost of the diode: ~1 W at 5 V / 3 A. If efficiency matters later, the synchronous AP64500 (40 V, 5 A, ~$1.04) is the alternative.
 - PCB engineer: new footprint (TI DDA, 2.95 x 4.9 mm thermal pad with vias).
@@ -657,7 +659,7 @@ Power rails (current schematic):
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
 | VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
-| VMCU-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | POWER-EN |
+| VMCU-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | VMCU-3V3-POWER-EN |
 | VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic | STM32 (~VSENS_3V3_EN, low = on) |
 | VMCU-BAT-3V3 | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
 | VSENS-5V-USB | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUSONIC-14V4 boost | STM32 (VSENS_5V_USB_EN) |

@@ -18,7 +18,7 @@ Moved or added:
 - the six mounting standoffs (MP1-MP6) moved to the POWER sheet
 
 Added 2026-10-27 (details in [docs/SPEC.md](../../docs/SPEC.md#phone-compute-board-v1)):
-- power control: charger rail-hold (Q31, R194) and a ~4-9 s hardware off timer (U23, Q29, Q30); PA15 goes through R190 (1k)
+- power control: charger rail-hold (Q31, R194) and a ~3.5-9.5 s hardware off timer (Q29, Q30); PA15 goes through R190 (1k)
 - 20 V input: SMAJ22A TVS (D41), 10 µF/50 V 1206 DC-IN-20V capacitors, low-profile DC-044A-20A barrel jack (7.2 mm tall)
 - bumpers: 2x ITR9606 photo-interrupters on the board (BUMP-R1, BUMP-L1); Q32 switches both emitters
 - DC-IN-20V sense: R199/R200 (/11) + C175 to PB15
@@ -104,6 +104,7 @@ Changed 2026-11-03:
 - 2026-11-12: D44, D45 renamed LED2, LED3; U21/U22 back on JLC's SO-8 PowerPAD footprint; more caps on JLC footprints; ERC clean
 - 2026-11-13: C2 (10 µF, CL10A106KP8NNNC) from PWR-LATCH (Q23 gate) to GND, so a firmware power-off can't re-latch while the MCU rail decays (see SPEC, Power control). Renamed POWER-EN → VMCU-3V3-POWER-EN, VSENS_5V_USB_EN → VSENS-5V-USB-EN, IMU-AD0/FSYNC/INT2 → AD0/FSYNC/INT2; more passives on JLC symbols and footprints
 - 2026-11-13: LIDAR2 renamed J3 (on the JLC PZ254R-12-06P-A40 symbol) and now fitted, so a second 2D LiDAR plugs in without soldering. Connect only one LiDAR, to LIDAR1 or to J3
+- 2026-11-13: removed U23 (74LVC1G17 Schmitt buffer) and its decoupling cap C173; Q30's gate now sits directly on the off-timer capacitor C172. One BOM line fewer; the hold time becomes ~3.5-9.5 s (was ~4.5-9 s).
 - renamed (2026-11-09): BAT2 → J2, US1 → CN1, DC_IN → DC-IN-20V, P+/C+ → P+/C+14V4; more parts on JLC symbols and footprints
 - R106 100 mΩ (RE1206F1R100, C46961734; was 50 mΩ): charge current 1.2 A instead of 2.4 A (2026-11-09)
 - USB power moved out of the Battery-Charger sheet into its own sheet, usb_power (2026-11-08); renamed USB2 → USBC2, PWR_EN → USB_PWR_EN, VBUS → VBUS_5V, VBUS_SRC → VBUS_5V_SRC, D+/D- → DP/DN

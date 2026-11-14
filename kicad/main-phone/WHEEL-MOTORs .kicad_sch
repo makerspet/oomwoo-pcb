@@ -871,12 +871,11 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:RL12FTNR250"
+		(symbol "JLCImport:RLH12FTCR250"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 1.016)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -885,7 +884,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 0 3.016 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -894,8 +893,8 @@
 					)
 				)
 			)
-			(property "Value" "RL12FTNR250"
-				(at 0 -3.016 0)
+			(property "Value" "250mΩ/1W"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -904,7 +903,29 @@
 					)
 				)
 			)
-			(property "Footprint" "JLCImport:RL12FTNR250"
+			(property "Footprint" "JLCImport:R1206"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C22464902.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1W 250mΩ Current Sense Resistor Surface Mount ±1% ±100ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -915,8 +936,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TA-I-Tech-RL12FTNR250_C160921.pdf"
-				(at 0 0 0)
+			(property "Manufacturer" "大毅科技"
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -926,8 +947,8 @@
 					)
 				)
 			)
-			(property "Description" "250mΩ 500mW Metal Film Resistor SMD ±1% ±200ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
-				(at 0 0 0)
+			(property "MPN" "RLH12FTCR250"
+				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -937,8 +958,8 @@
 					)
 				)
 			)
-			(property "LCSC" "C160921"
-				(at 0 0 0)
+			(property "LCSC" "C22464902"
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -948,46 +969,13 @@
 					)
 				)
 			)
-			(property "Manufacturer" "TA-I Tech"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "RL12FTNR250"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C160921 R1206 RL12FTNR250 TA-I Tech"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RL12FTNR250_0_1"
+			(symbol "RLH12FTCR250_0_1"
 				(rectangle
-					(start -2.54 1.016)
-					(end 2.54 -1.016)
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
 					(stroke
-						(width 0.254)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type background)
@@ -3418,8 +3406,8 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:RL12FTNR250")
-		(at 113.03 148.59 90)
+		(lib_id "JLCImport:RLH12FTCR250")
+		(at 110.49 62.23 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3428,31 +3416,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3cf517aa-99ff-4e84-9d37-34d6758a421a")
-		(property "Reference" "R65"
-			(at 114.935 147.3199 90)
+		(uuid "37ba8253-3dc4-4ae8-9aa0-51df9335da9a")
+		(property "Reference" "R15"
+			(at 113.03 60.9599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "RLH12FTCR250"
-			(at 114.935 149.8599 90)
+		(property "Value" "250mΩ/1W"
+			(at 113.03 63.4999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 113.03 148.59 0)
+		(property "Footprint" "JLCImport:R1206"
+			(at 102.87 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3462,8 +3450,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C22464902.html"
-			(at 113.03 148.59 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C22464902.pdf"
+			(at 100.33 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3473,8 +3461,30 @@
 				)
 			)
 		)
-		(property "Description" "250mOhm 1W current sense resistor, 1206, 1%, 100ppm/C"
-			(at 113.03 148.59 0)
+		(property "Description" "1W 250mΩ Current Sense Resistor Surface Mount ±1% ±100ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
+			(at 110.49 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "大毅科技"
+			(at 97.79 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RLH12FTCR250"
+			(at 95.25 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3485,106 +3495,7 @@
 			)
 		)
 		(property "LCSC" "C22464902"
-			(at 113.03 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TA-I Tech"
-			(at 113.03 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "RLH12FTCR250"
-			(at 113.03 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Part Number" ""
-			(at 113.03 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Price/Stock" ""
-			(at 113.03 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Comment" ""
-			(at 113.03 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 113.03 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 113.03 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 113.03 148.59 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 113.03 148.59 90)
+			(at 92.71 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3595,15 +3506,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "d05e90a7-e5da-44ba-87d4-3eb2f9b7f263")
+			(uuid "74c07034-5b27-4011-9e42-9e9dc6fa7a5e")
 		)
 		(pin "2"
-			(uuid "580cff93-ca1e-409d-8c1e-85c95bd8d56a")
+			(uuid "a01ad4bf-3f52-435f-a115-1eefae1caf03")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/dc7554d6-6a04-4f93-8cb8-7c364fc629ef"
-					(reference "R65")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -4384,8 +4295,8 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:RL12FTNR250")
-		(at 110.49 62.23 90)
+		(lib_id "JLCImport:RLH12FTCR250")
+		(at 113.03 148.59 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4394,31 +4305,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "539cb303-22b4-4397-b8e0-72b0b3b93e2d")
-		(property "Reference" "R15"
-			(at 112.395 60.9599 90)
+		(uuid "541fc20e-44e2-4d3b-8789-7298fd6cc233")
+		(property "Reference" "R65"
+			(at 115.57 147.3199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "RLH12FTCR250"
-			(at 112.395 63.4999 90)
+		(property "Value" "250mΩ/1W"
+			(at 115.57 149.8599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 110.49 62.23 0)
+		(property "Footprint" "JLCImport:R1206"
+			(at 105.41 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4428,8 +4339,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C22464902.html"
-			(at 110.49 62.23 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C22464902.pdf"
+			(at 102.87 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4439,8 +4350,30 @@
 				)
 			)
 		)
-		(property "Description" "250mOhm 1W current sense resistor, 1206, 1%, 100ppm/C"
-			(at 110.49 62.23 0)
+		(property "Description" "1W 250mΩ Current Sense Resistor Surface Mount ±1% ±100ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
+			(at 113.03 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "大毅科技"
+			(at 100.33 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RLH12FTCR250"
+			(at 97.79 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4451,106 +4384,7 @@
 			)
 		)
 		(property "LCSC" "C22464902"
-			(at 110.49 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TA-I Tech"
-			(at 110.49 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "RLH12FTCR250"
-			(at 110.49 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Part Number" ""
-			(at 110.49 62.23 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Price/Stock" ""
-			(at 110.49 62.23 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Comment" ""
-			(at 110.49 62.23 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 110.49 62.23 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 110.49 62.23 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 110.49 62.23 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 110.49 62.23 90)
+			(at 95.25 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4561,15 +4395,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "bac0aafc-073d-4a63-b7b1-3c4a9f2ca79d")
+			(uuid "dd076ce5-eb3b-4268-9d2b-4f24c01b2779")
 		)
 		(pin "2"
-			(uuid "470e7646-5861-47e4-aa68-3c99d711a9ab")
+			(uuid "4401b414-7d21-4220-83a8-c28222deb365")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/dc7554d6-6a04-4f93-8cb8-7c364fc629ef"
-					(reference "R15")
+					(reference "R65")
 					(unit 1)
 				)
 			)

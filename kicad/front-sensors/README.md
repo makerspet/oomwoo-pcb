@@ -1,6 +1,6 @@
 # OOMWOO front ToF board
 
-A small breakout for one VL53L7 8x8-zone time-of-flight sensor and one dock-homing IR receiver. The robot fits two of them, from the same design: the left board aims 30° left and the right board 30° right, which together cover ~126° in front of the robot. Each board plugs into the [main board](../main-phone/README.md) (VL-L1 or VL-R1) through a 2x4 board-to-board connector, no cable (a 7-pin cable until 2026-11-06). Rev 2, 2026-10-27.
+A small breakout for one VL53L7 8x8-zone time-of-flight sensor and one dock-homing IR receiver. The robot fits two of them, from the same design: the left board aims 30° left and the right board 30° right, which together cover ~126° in front of the robot. Each board plugs into the [main board](../main-phone/README.md) (J6 or J5) through a 2x4 board-to-board connector, no cable (a 7-pin cable until 2026-11-06). Rev 2, 2026-10-27.
 
 The dock-homing IR receivers were on this project until rev 2, then on the main board (U24, U25) from 2026-10-27. Since 2026-11-11 they are back here, one per board (U2002), so the receiver and the ToF sensor share one bumper opening: a bumper printed in pigmented filament blocks NIR, so both need an opening, and one is smaller than two.
 
@@ -19,7 +19,7 @@ The dock-homing IR receivers were on this project until rev 2, then on the main 
 Board-to-board, no cable (since 2026-11-06). The board hangs under the main board, upright, and plugs straight into it:
 
 - J2001 (this board): HanElectricity 2005WR-2x4P (C6837622), 2.0 mm 2x4 right-angle pin header, through hole, on the **back** of the board. The sensor is on the front, so the board can sit right at the main board's front edge and the main board stays out of the sensor's 60° x 60° field of view.
-- VL-L1 / VL-R1 (main board): HanElectricity 2005FV-2x4P (C18723066), 2.0 mm 2x4 vertical socket, 4.3 mm tall, through hole, fitted on the main board's **underside**.
+- J6 / J5 (main board): HanElectricity 2005FV-2x4P (C18723066), 2.0 mm 2x4 vertical socket, 4.3 mm tall, through hole, fitted on the main board's **underside**.
 - A small mount screwed to the main board holds the ToF board upright and takes the load; the header only makes the contact.
 
 | J2001 pin | Signal | Mates with socket pin |

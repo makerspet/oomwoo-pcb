@@ -614,9 +614,6 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:AO4407C"
-			(pin_numbers
-				(hide yes)
-			)
 			(pin_names
 				(hide yes)
 			)
@@ -626,42 +623,27 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Q"
-				(at 5.08 1.905 0)
+				(at 0 11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "AO4407C"
-				(at 5.08 0 0)
+				(at 0 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-				(at 5.08 -1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Alpha---Omega-Semicon-AO4407C_C469397.pdf"
-				(at 5.08 -3.81 0)
+			(property "Footprint" "JLCImport:SOP-8_L4.9-W3.9-P1.27-LS6.0-BL"
+				(at 0 -13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -669,10 +651,20 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Description" "-30V -14A P-channel MOSFET, 11.5mOhm@-10V, Vgs +/-25V, SOIC-8 (S=1-3, G=4, D=5-8)"
+			(property "Datasheet" "https://lcsc.com/product-detail/MOSFET_Alpha-Omega-Semicon-AOS-AO4407C_C469397.html"
+				(at 0 -16.51 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1 P-Channel 11.5mΩ@10V 14A 2.05nF 2.3V 3.1W 300pF 30V 330pF 40nC@10V SOIC-8 MOSFETs ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -683,8 +675,8 @@
 					)
 				)
 			)
-			(property "Manufacturer Part" "AO4407C"
-				(at 0 0 0)
+			(property "Manufacturer" "AOS"
+				(at 0 -19.05 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -694,8 +686,8 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Alpha & Omega Semicon"
-				(at 0 0 0)
+			(property "MPN" "AO4407C"
+				(at 0 -21.59 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -706,7 +698,7 @@
 				)
 			)
 			(property "LCSC" "C469397"
-				(at 0 0 0)
+				(at 0 -24.13 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -716,18 +708,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "AO4407C C469397 Alpha & Omega Semicon MOSFET"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
+			(property "ki_keywords" "MOSFETs"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -739,104 +720,20 @@
 				)
 			)
 			(symbol "AO4407C_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
+				(rectangle
+					(start -7.62 8.89)
+					(end 7.62 -8.89)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(polyline
 					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
+						(xy -7.62 1.27) (xy -5.84 1.27)
 					)
 					(stroke
 						(width 0)
@@ -847,30 +744,19 @@
 					)
 				)
 				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
+					(center -6.6 7.62)
+					(radius 0.38)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(polyline
 					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+						(xy -5.84 6.35) (xy -7.62 6.35)
 					)
 					(stroke
 						(width 0)
@@ -882,7 +768,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
+						(xy -2.79 -0.25) (xy -4.32 -0.25) (xy -4.32 -6.35) (xy -7.62 -6.35)
 					)
 					(stroke
 						(width 0)
@@ -894,7 +780,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
+						(xy -2.79 -2.29) (xy -2.79 2.29)
 					)
 					(stroke
 						(width 0)
@@ -904,10 +790,200 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "AO4407C_1_1"
+				(polyline
+					(pts
+						(xy -2.29 2.29) (xy -2.29 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.29 0.51) (xy -2.29 -0.51)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.29 0) (xy 0.25 0) (xy 0.25 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.29 -1.27) (xy -2.29 -2.29)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.25 2.54) (xy 2.79 2.54) (xy 2.79 0.51)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.25 2.54) (xy 0.25 6.35) (xy -5.84 6.35) (xy -5.84 -1.27) (xy -7.62 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.25 1.78) (xy -2.29 1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.25 0) (xy -1.27 -0.51) (xy -1.27 0.51) (xy 0.25 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.25 -1.78) (xy -2.29 -1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.25 -1.78) (xy 0.25 -2.54) (xy 2.79 -2.54) (xy 2.79 -0.76)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.25 -2.54) (xy 0.25 -6.35) (xy 7.62 -6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.79 0.51) (xy 3.56 -0.76) (xy 2.03 -0.76) (xy 2.79 0.51)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.56 0.51) (xy 3.3 0.51) (xy 2.29 0.51) (xy 2.03 0.51)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -6.35) (xy 5.08 6.35) (xy 7.62 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 1.27) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -1.27) (xy 5.08 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at -10.16 6.35 0)
 					(length 2.54)
 					(name "S"
 						(effects
@@ -925,9 +1001,8 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at -10.16 1.27 0)
 					(length 2.54)
-					(hide yes)
 					(name "S"
 						(effects
 							(font
@@ -944,9 +1019,8 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at -10.16 -1.27 0)
 					(length 2.54)
-					(hide yes)
 					(name "S"
 						(effects
 							(font
@@ -963,7 +1037,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -10.16 -6.35 0)
 					(length 2.54)
 					(name "G"
 						(effects
@@ -981,7 +1055,7 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 10.16 -6.35 180)
 					(length 2.54)
 					(name "D"
 						(effects
@@ -999,9 +1073,8 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 10.16 -1.27 180)
 					(length 2.54)
-					(hide yes)
 					(name "D"
 						(effects
 							(font
@@ -1018,9 +1091,8 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 10.16 1.27 180)
 					(length 2.54)
-					(hide yes)
 					(name "D"
 						(effects
 							(font
@@ -1037,9 +1109,8 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 10.16 6.35 180)
 					(length 2.54)
-					(hide yes)
 					(name "D"
 						(effects
 							(font
@@ -5619,28 +5690,10 @@
 		(uuid "dd738412-9117-408a-a98e-e78b2e3b8eb1")
 	)
 	(junction
-		(at 229.87 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05700013-5b0c-436c-8041-55260f520985")
-	)
-	(junction
 		(at 198.12 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0ce70b03-13af-4cd0-8c84-3936695831e0")
-	)
-	(junction
-		(at 229.87 129.54)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "117becde-c27b-4d9c-9d43-5e29f0a28fe5")
-	)
-	(junction
-		(at 250.19 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "143b519a-633c-478a-b7bb-8b5cc6fa31ed")
 	)
 	(junction
 		(at 46.99 40.64)
@@ -5649,16 +5702,52 @@
 		(uuid "1a63f992-8d17-4c1e-97e5-01585fbd2498")
 	)
 	(junction
+		(at 229.87 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "20d12385-4af3-4fd3-810d-d5a993db33a2")
+	)
+	(junction
+		(at 242.57 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21f53dc2-cfe7-4ca5-9686-855b97601981")
+	)
+	(junction
+		(at 242.57 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "23b68b39-4333-4663-ae1a-ee6a8d456375")
+	)
+	(junction
 		(at 218.44 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d27384e-6c59-4a83-ba99-2b40f78882fe")
 	)
 	(junction
+		(at 242.57 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "311716cb-2231-4244-8559-3690f459e79a")
+	)
+	(junction
+		(at 226.06 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35c2c7a7-5a16-4511-9af2-471101fadcf5")
+	)
+	(junction
 		(at 147.32 127)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3e3ac4d9-ebd8-43d3-a9a8-a415aab18514")
+	)
+	(junction
+		(at 234.95 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42ef580d-d523-4a5d-9bc9-e35215bb8d4c")
 	)
 	(junction
 		(at 198.12 127)
@@ -5673,6 +5762,12 @@
 		(uuid "5441fc6c-7d62-477a-89b8-883963833b4e")
 	)
 	(junction
+		(at 229.87 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5573bdb2-48c8-4782-a59b-081f3bbbe3a1")
+	)
+	(junction
 		(at 123.19 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5685,16 +5780,22 @@
 		(uuid "613e0004-3ae4-4843-a911-698cf5bf1824")
 	)
 	(junction
-		(at 226.06 120.65)
+		(at 226.06 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "675274a2-56ef-4cc6-9d43-2bde35f265d8")
+		(uuid "683dc44d-e0dc-4eae-b12d-d0265c091bf2")
 	)
 	(junction
 		(at 115.57 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6af73002-86e3-428d-b7f2-9e60b6eaa74f")
+	)
+	(junction
+		(at 234.95 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e35676b-1b0c-4d34-bf22-943044dd436a")
 	)
 	(junction
 		(at 68.58 129.54)
@@ -5709,10 +5810,10 @@
 		(uuid "7507202c-922d-4664-a57f-93debf1a30be")
 	)
 	(junction
-		(at 226.06 101.6)
+		(at 247.65 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "76e64cff-ffd9-4ec0-8e7a-28147be9fb17")
+		(uuid "81517ce3-80b8-4379-97a0-6fcd390085d3")
 	)
 	(junction
 		(at 129.54 93.98)
@@ -5725,6 +5826,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8660953c-491d-498a-8c10-34ec785be49a")
+	)
+	(junction
+		(at 242.57 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "98f5dc80-7e95-4a7d-8fe3-7b23ced58ae0")
 	)
 	(junction
 		(at 100.33 34.29)
@@ -5751,6 +5858,12 @@
 		(uuid "9f52ff04-0ca4-4427-95f0-634b67c19a30")
 	)
 	(junction
+		(at 254 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a48f85c2-e424-4feb-bc3a-d03305d3d794")
+	)
+	(junction
 		(at 46.99 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5775,6 +5888,12 @@
 		(uuid "b0294bb0-93c6-4a39-8e13-cb3fe90754a4")
 	)
 	(junction
+		(at 247.65 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b8115b00-482d-45a6-b263-3d362127550e")
+	)
+	(junction
 		(at 68.58 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5793,6 +5912,12 @@
 		(uuid "bf444a7c-516c-4c0b-aab8-769f2c1886ac")
 	)
 	(junction
+		(at 240.03 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bfbcfb63-5560-460c-beef-7131038d2981")
+	)
+	(junction
 		(at 179.07 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5805,10 +5930,10 @@
 		(uuid "c4f83307-3200-43d6-a5ce-72827f9594b6")
 	)
 	(junction
-		(at 250.19 101.6)
+		(at 254 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ce6e5e71-5371-4184-8ffb-64dc7fcc4933")
+		(uuid "c5792782-dfb7-40e9-bf5e-6c07016e4303")
 	)
 	(junction
 		(at 55.88 40.64)
@@ -5841,10 +5966,37 @@
 		(uuid "f1a28bcc-86dc-4d37-870d-cb96a5055b67")
 	)
 	(junction
+		(at 240.03 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f70e6b0d-72ee-4bc7-878f-7a8c9f31e4b2")
+	)
+	(junction
 		(at 135.89 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fa49804c-3332-4ab4-8f12-f9713f3ce208")
+	)
+	(text_box "Q14 + Q38 in parallel: battery\ndisconnect while charging\n(G = DC-IN-20V); ~7.5 A total,\n~0.22 W each"
+		(exclude_from_sim no)
+		(at 231.14 151.13 0)
+		(size 35.56 10.16)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width -0.0001)
+			(type solid)
+			(color 0 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "00e08077-bed7-418f-9e20-dbaa2afd0317")
 	)
 	(wire
 		(pts
@@ -5918,6 +6070,36 @@
 	)
 	(wire
 		(pts
+			(xy 242.57 124.46) (xy 247.65 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13229091-c91a-4913-a593-47bd8d3c8513")
+	)
+	(wire
+		(pts
+			(xy 226.06 115.57) (xy 226.06 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18aef790-54a9-4c3c-b76b-14d90f9326d2")
+	)
+	(wire
+		(pts
+			(xy 226.06 91.44) (xy 226.06 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b1cf74f-880d-4f70-8865-9a5d4682e426")
+	)
+	(wire
+		(pts
 			(xy 100.33 34.29) (xy 78.74 34.29)
 		)
 		(stroke
@@ -5958,6 +6140,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 91.44) (xy 226.06 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24c9b443-88f7-4b56-89e2-2b708cfbcbf1")
+	)
+	(wire
+		(pts
 			(xy 201.93 129.54) (xy 207.01 129.54)
 		)
 		(stroke
@@ -5988,7 +6180,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 101.6) (xy 226.06 101.6)
+			(xy 215.9 88.9) (xy 226.06 88.9)
 		)
 		(stroke
 			(width 0)
@@ -6015,16 +6207,6 @@
 			(type default)
 		)
 		(uuid "335b8f64-5742-47a7-829b-a1e70a9133eb")
-	)
-	(wire
-		(pts
-			(xy 250.19 113.03) (xy 250.19 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "401ad81a-6e83-4595-920f-e6c6ed000ee8")
 	)
 	(wire
 		(pts
@@ -6078,7 +6260,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 101.6) (xy 226.06 101.6)
+			(xy 236.22 91.44) (xy 226.06 91.44)
 		)
 		(stroke
 			(width 0)
@@ -6088,17 +6270,27 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 137.16) (xy 226.06 120.65)
+			(xy 254 115.57) (xy 254 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5cff9505-4a1a-43bb-9dfb-86ae6f9cfb81")
+		(uuid "57918b82-6839-4b8d-b304-8c1d8350ba30")
 	)
 	(wire
 		(pts
-			(xy 245.11 101.6) (xy 250.19 101.6)
+			(xy 229.87 95.25) (xy 234.95 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "584419dc-7e64-4661-9df6-4817bed414e2")
+	)
+	(wire
+		(pts
+			(xy 246.38 91.44) (xy 254 91.44)
 		)
 		(stroke
 			(width 0)
@@ -6188,6 +6380,26 @@
 	)
 	(wire
 		(pts
+			(xy 240.03 124.46) (xy 242.57 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6aadfd31-e90a-4c71-ab8e-7c8a59d7768e")
+	)
+	(wire
+		(pts
+			(xy 242.57 95.25) (xy 247.65 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bf4e0be-de3f-47f2-9884-ca421d7a8a24")
+	)
+	(wire
+		(pts
 			(xy 189.23 93.98) (xy 190.5 93.98)
 		)
 		(stroke
@@ -6195,6 +6407,16 @@
 			(type default)
 		)
 		(uuid "6c48392f-3753-44d1-8aef-2e596d1e8a2e")
+	)
+	(wire
+		(pts
+			(xy 234.95 124.46) (xy 240.03 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cd09f83-0b4d-44fc-874a-5e23795ec3a6")
 	)
 	(wire
 		(pts
@@ -6208,26 +6430,6 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 101.6) (xy 250.19 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "711beaca-8792-4c40-a89c-02dcfa8d4be9")
-	)
-	(wire
-		(pts
-			(xy 229.87 113.03) (xy 234.95 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "718735f0-d151-447a-a6e9-96004dcbb18f")
-	)
-	(wire
-		(pts
 			(xy 135.89 113.03) (xy 135.89 115.57)
 		)
 		(stroke
@@ -6235,6 +6437,26 @@
 			(type default)
 		)
 		(uuid "719b7c9e-f827-4038-8e40-426ca9d176e7")
+	)
+	(wire
+		(pts
+			(xy 240.03 95.25) (xy 242.57 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7272c833-db01-4b15-821e-9561fac185af")
+	)
+	(wire
+		(pts
+			(xy 242.57 115.57) (xy 247.65 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "747a1d7b-7acd-4ccd-8ab5-a640fb741476")
 	)
 	(wire
 		(pts
@@ -6268,7 +6490,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 120.65) (xy 226.06 120.65)
+			(xy 226.06 115.57) (xy 234.95 115.57)
 		)
 		(stroke
 			(width 0)
@@ -6278,13 +6500,23 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 99.06) (xy 250.19 101.6)
+			(xy 234.95 95.25) (xy 240.03 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7a8848a4-b7c4-4e7b-8893-04e3eaab659f")
+		(uuid "77005bf5-f332-4d29-a422-f17edfae31ec")
+	)
+	(wire
+		(pts
+			(xy 254 144.78) (xy 254 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77ee6717-aa3b-4223-b4a8-74ca2de5f4c3")
 	)
 	(wire
 		(pts
@@ -6305,6 +6537,16 @@
 			(type default)
 		)
 		(uuid "7b076896-b3f8-433d-91ad-a9660b725654")
+	)
+	(wire
+		(pts
+			(xy 247.65 115.57) (xy 254 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d9efdb9-548b-414f-b4df-b40f4812d6ef")
 	)
 	(wire
 		(pts
@@ -6368,23 +6610,13 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 101.6) (xy 215.9 99.06)
+			(xy 215.9 88.9) (xy 215.9 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8bc7f1e9-2513-485c-9b0d-2f26c90aa83c")
-	)
-	(wire
-		(pts
-			(xy 226.06 101.6) (xy 226.06 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bcf97df-53ac-40aa-b1f0-c703d9f4e910")
 	)
 	(wire
 		(pts
@@ -6408,7 +6640,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 113.03) (xy 229.87 129.54)
+			(xy 229.87 86.36) (xy 229.87 95.25)
 		)
 		(stroke
 			(width 0)
@@ -6425,6 +6657,16 @@
 			(type default)
 		)
 		(uuid "9f598ebe-acbc-4030-9a3f-adeb1a411002")
+	)
+	(wire
+		(pts
+			(xy 229.87 95.25) (xy 229.87 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f8a7758-077b-4eff-b0e5-5dc2bbe6aed0")
 	)
 	(wire
 		(pts
@@ -6518,13 +6760,13 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 129.54) (xy 234.95 129.54)
+			(xy 240.03 144.78) (xy 242.57 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b60ebd7a-9fd4-4c67-8a66-eda6aa47f9bc")
+		(uuid "b61bea7f-281f-4778-8142-11f0faa0950a")
 	)
 	(wire
 		(pts
@@ -6568,7 +6810,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 137.16) (xy 226.06 137.16)
+			(xy 226.06 144.78) (xy 234.95 144.78)
 		)
 		(stroke
 			(width 0)
@@ -6585,6 +6827,16 @@
 			(type default)
 		)
 		(uuid "c0fe7fc8-50e1-4919-a0a1-4a8a58b84a22")
+	)
+	(wire
+		(pts
+			(xy 247.65 144.78) (xy 254 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2cccbc5-a668-4388-9729-85b41b2d9d75")
 	)
 	(wire
 		(pts
@@ -6628,6 +6880,16 @@
 	)
 	(wire
 		(pts
+			(xy 254 91.44) (xy 254 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1fc4098-0ffa-410c-ae30-fa54b2c2590a")
+	)
+	(wire
+		(pts
 			(xy 46.99 147.32) (xy 46.99 121.92)
 		)
 		(stroke
@@ -6638,6 +6900,16 @@
 	)
 	(wire
 		(pts
+			(xy 240.03 115.57) (xy 242.57 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2d58397-7952-4af7-929a-bdf8d2db14ab")
+	)
+	(wire
+		(pts
 			(xy 177.8 127) (xy 198.12 127)
 		)
 		(stroke
@@ -6645,16 +6917,6 @@
 			(type default)
 		)
 		(uuid "d4e590d3-37c4-4207-a120-c15228770958")
-	)
-	(wire
-		(pts
-			(xy 245.11 113.03) (xy 250.19 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5c13580-f9f4-45ad-a1a1-ee8c49bc2adb")
 	)
 	(wire
 		(pts
@@ -6685,6 +6947,26 @@
 			(type default)
 		)
 		(uuid "dcbc18e9-af0a-460c-9db0-088eca8b95b2")
+	)
+	(wire
+		(pts
+			(xy 229.87 124.46) (xy 234.95 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcf7cbf0-9129-461d-9f0c-54656a2d7585")
+	)
+	(wire
+		(pts
+			(xy 229.87 124.46) (xy 229.87 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd20a4f7-57f2-4b9b-aa8c-d961468fcfdd")
 	)
 	(wire
 		(pts
@@ -6758,16 +7040,6 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 129.54) (xy 250.19 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e899f014-25b6-4236-a15c-92ca798a2e52")
-	)
-	(wire
-		(pts
 			(xy 179.07 93.98) (xy 179.07 96.52)
 		)
 		(stroke
@@ -6838,13 +7110,13 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 99.06) (xy 229.87 113.03)
+			(xy 242.57 144.78) (xy 247.65 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f5f0250b-321c-4022-8cf5-243e3d6c9e62")
+		(uuid "f58ddf8b-16a0-4d76-9b1c-79e0dae50f97")
 	)
 	(wire
 		(pts
@@ -7159,138 +7431,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:AO4407C")
-		(at 240.03 132.08 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "029965e2-d4ed-42c3-b867-796395196cc2")
-		(property "Reference" "Q14"
-			(at 237.744 125.984 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "AO4407C"
-			(at 235.458 123.698 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 240.03 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Alpha---Omega-Semicon-AO4407C_C469397.pdf"
-			(at 240.03 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Battery disconnect while charging (G = DC_IN), in parallel with Q38: ~7.5 A total, ~0.22 W each"
-			(at 240.03 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C469397"
-			(at 240.03 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Alpha & Omega Semicon"
-			(at 240.03 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "AO4407C"
-			(at 240.03 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "074b33b4-3fa0-42fc-ae58-e0b2c8aea9f4")
-		)
-		(pin "2"
-			(uuid "bb8dd0be-7f87-4c7b-9511-a953e823dcac")
-		)
-		(pin "3"
-			(uuid "b4c22caa-d868-4a43-9bc0-bd196c9c7ecd")
-		)
-		(pin "4"
-			(uuid "3326ec97-06f8-4268-bcc4-9085164062eb")
-		)
-		(pin "5"
-			(uuid "57fcd79e-baee-44d8-a17d-2f15c3a3de11")
-		)
-		(pin "6"
-			(uuid "6ab2da88-62f7-4248-b046-27d507b58f26")
-		)
-		(pin "7"
-			(uuid "683937a3-dd18-4269-94c2-a8a0a40a39a9")
-		)
-		(pin "8"
-			(uuid "c1a53f8f-7200-4d5f-b9cb-dc653647b2ff")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 80.01 119.38 0)
 		(unit 1)
@@ -7476,6 +7616,139 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:AO4407C")
+		(at 241.3 134.62 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0be3f1f0-bd87-480f-8ab4-8e9481a317e9")
+		(property "Reference" "Q14"
+			(at 233.68 146.812 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO4407C"
+			(at 239.268 146.812 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:SOP-8_L4.9-W3.9-P1.27-LS6.0-BL"
+			(at 227.33 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/MOSFET_Alpha-Omega-Semicon-AOS-AO4407C_C469397.html"
+			(at 224.79 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1 P-Channel 11.5mΩ@10V 14A 2.05nF 2.3V 3.1W 300pF 30V 330pF 40nC@10V SOIC-8 MOSFETs ROHS"
+			(at 241.3 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "AOS"
+			(at 222.25 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "AO4407C"
+			(at 219.71 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C469397"
+			(at 217.17 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "c064961f-ea02-426b-8093-d3da7e86b5a3")
+		)
+		(pin "7"
+			(uuid "fd5446f9-ff79-41e2-924d-727ae8e9758c")
+		)
+		(pin "6"
+			(uuid "4ad4cfc9-5eda-435a-bcc5-830b0f5eb4bc")
+		)
+		(pin "1"
+			(uuid "51b08671-20c1-4d73-8e0f-6181aaae3029")
+		)
+		(pin "8"
+			(uuid "5f4fade4-fce6-4b29-9fc7-17f25bfc36c8")
+		)
+		(pin "3"
+			(uuid "c65920b4-60f1-45f4-9628-c2082fee718d")
+		)
+		(pin "5"
+			(uuid "c0070157-09dd-4265-8b8c-5e30a6b46078")
+		)
+		(pin "2"
+			(uuid "af522f62-c806-4b7f-a7d3-38db869b2ce8")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "Q14")
 					(unit 1)
 				)
 			)
@@ -8540,7 +8813,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 229.87 99.06 0)
+		(at 229.87 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8551,7 +8824,7 @@
 		(fields_autoplaced yes)
 		(uuid "434c9ed1-17d6-41bd-b588-04073fb782e8")
 		(property "Reference" "#PWR019"
-			(at 229.87 102.87 0)
+			(at 229.87 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8562,7 +8835,7 @@
 			)
 		)
 		(property "Value" "P+/C+14V4"
-			(at 229.87 93.98 0)
+			(at 229.87 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8572,7 +8845,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 99.06 0)
+			(at 229.87 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8583,7 +8856,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 99.06 0)
+			(at 229.87 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8594,7 +8867,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 229.87 99.06 0)
+			(at 229.87 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8922,7 +9195,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 215.9 99.06 0)
+		(at 215.9 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8933,7 +9206,7 @@
 		(fields_autoplaced yes)
 		(uuid "51ecb83f-6361-4919-82cd-a576e23f61b5")
 		(property "Reference" "#PWR020"
-			(at 215.9 102.87 0)
+			(at 215.9 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8944,7 +9217,7 @@
 			)
 		)
 		(property "Value" "DC-IN-20V"
-			(at 215.9 93.98 0)
+			(at 215.9 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8954,7 +9227,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 99.06 0)
+			(at 215.9 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8965,7 +9238,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 99.06 0)
+			(at 215.9 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8976,7 +9249,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 215.9 99.06 0)
+			(at 215.9 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9378,6 +9651,83 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "#FLG013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 254 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "605405a0-23bf-4111-a5b5-e15314222776")
+		(property "Reference" "#PWR0914"
+			(at 254 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VBAT-14V4"
+			(at 254 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 254 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"BAT-VCC\""
+			(at 254 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7bfcd770-466a-4cbc-97a4-ebe3e20f0637")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "#PWR0914")
 					(unit 1)
 				)
 			)
@@ -10492,7 +10842,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:SS56")
-		(at 240.03 101.6 180)
+		(at 241.3 91.44 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10503,7 +10853,7 @@
 		(fields_autoplaced yes)
 		(uuid "93b61c8f-a296-4551-8bfe-190f0117ad6b")
 		(property "Reference" "D14"
-			(at 240.411 93.98 0)
+			(at 241.681 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10513,7 +10863,7 @@
 			)
 		)
 		(property "Value" "SS56"
-			(at 240.411 96.52 0)
+			(at 241.681 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10523,7 +10873,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:SS56"
-			(at 240.03 101.6 0)
+			(at 241.3 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10534,7 +10884,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2407101107_MDD-Microdiode-Semiconductor-SS56_C65009.pdf"
-			(at 240.03 101.6 0)
+			(at 241.3 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10545,7 +10895,7 @@
 			)
 		)
 		(property "Description" "-55℃~+150℃ 1mA@60V 5A 60V 700mV@5A Independent SMA(DO-214AC) Schottky Diodes ROHS"
-			(at 240.03 101.6 0)
+			(at 241.3 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10556,7 +10906,7 @@
 			)
 		)
 		(property "LCSC" "C65009"
-			(at 240.03 101.6 0)
+			(at 241.3 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10567,7 +10917,7 @@
 			)
 		)
 		(property "Manufacturer" "MDD(Microdiode Semiconductor)"
-			(at 240.03 101.6 0)
+			(at 241.3 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10578,7 +10928,7 @@
 			)
 		)
 		(property "Manufacturer Part" "SS56"
-			(at 240.03 101.6 0)
+			(at 241.3 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11850,83 +12200,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VPP")
-		(at 250.19 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b3216647-6cfd-4fef-8580-3b14caccdea6")
-		(property "Reference" "#PWR0903"
-			(at 250.19 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VBAT-14V4"
-			(at 250.19 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 250.19 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 250.19 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"BAT-VCC\""
-			(at 250.19 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "145ca94f-9011-48c9-a78b-6bfe2472e208")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "#PWR0903")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+BATT")
 		(at 115.57 93.98 0)
 		(unit 1)
@@ -12196,138 +12469,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:AO4407C")
-		(at 240.03 115.57 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c4a29903-1ca7-4258-9e1e-5645a07f7b37")
-		(property "Reference" "Q38"
-			(at 237.998 109.474 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "AO4407C"
-			(at 236.474 107.188 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 240.03 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Alpha---Omega-Semicon-AO4407C_C469397.pdf"
-			(at 240.03 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Battery disconnect while charging (G = DC_IN), in parallel with Q14: ~7.5 A total, ~0.22 W each"
-			(at 240.03 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C469397"
-			(at 240.03 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Alpha & Omega Semicon"
-			(at 240.03 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "AO4407C"
-			(at 240.03 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9b9574d7-71be-4661-87ae-e631ca1665b6")
-		)
-		(pin "2"
-			(uuid "5a563db8-1b7a-4051-b4a1-fca8498e1958")
-		)
-		(pin "3"
-			(uuid "d6393138-51b1-4add-a8ef-609369e47164")
-		)
-		(pin "4"
-			(uuid "130372d9-70ca-4e1b-8226-68630f16fd7f")
-		)
-		(pin "5"
-			(uuid "2e435c5a-671f-4a92-9802-8dd0c526fad8")
-		)
-		(pin "6"
-			(uuid "fb0aecf0-dd28-4822-8d1e-ee1712d7160b")
-		)
-		(pin "7"
-			(uuid "da0c6b7e-519b-42f2-bb3d-d5a1f4a17bd1")
-		)
-		(pin "8"
-			(uuid "df664fe8-6746-4f2b-bf5e-f289f2477756")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
-					(reference "Q38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:DC-044A-20A")
 		(at 68.58 48.26 0)
 		(mirror y)
@@ -12517,6 +12658,139 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
 					(reference "DC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:AO4407C")
+		(at 241.3 105.41 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6a01986-48c0-4e63-8ddf-85cc28eb7c77")
+		(property "Reference" "Q38"
+			(at 233.172 117.602 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO4407C"
+			(at 238.506 117.602 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:SOP-8_L4.9-W3.9-P1.27-LS6.0-BL"
+			(at 227.33 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/MOSFET_Alpha-Omega-Semicon-AOS-AO4407C_C469397.html"
+			(at 224.79 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1 P-Channel 11.5mΩ@10V 14A 2.05nF 2.3V 3.1W 300pF 30V 330pF 40nC@10V SOIC-8 MOSFETs ROHS"
+			(at 241.3 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "AOS"
+			(at 222.25 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "AO4407C"
+			(at 219.71 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C469397"
+			(at 217.17 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "b858fb7f-5103-4800-93a2-8bae72e30c8d")
+		)
+		(pin "7"
+			(uuid "517e83ad-bdb2-443e-9dad-3be05ee80265")
+		)
+		(pin "6"
+			(uuid "d1f5f48b-943a-4046-881e-977d0436962a")
+		)
+		(pin "1"
+			(uuid "3e371642-a214-4b80-87cd-22fca6727c48")
+		)
+		(pin "8"
+			(uuid "df766616-7c1e-4138-9245-4ac536b724b7")
+		)
+		(pin "3"
+			(uuid "513ec732-ce7e-461e-a45f-761aa6f0c2e5")
+		)
+		(pin "5"
+			(uuid "1b1d6c33-4cdb-462c-8fad-ee0a6cb03879")
+		)
+		(pin "2"
+			(uuid "5e243902-ff80-4f6c-89d5-3230c35d3bcd")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/ef1147df-ce85-4822-98ae-5614ce438d97"
+					(reference "Q38")
 					(unit 1)
 				)
 			)
@@ -12756,7 +13030,8 @@
 	)
 	(symbol
 		(lib_id "JLCImport:CL10A106MA8NRNC")
-		(at 218.44 139.7 270)
+		(at 218.44 139.7 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12766,7 +13041,7 @@
 		(dnp no)
 		(uuid "cd788227-4446-42fc-944a-0b9884ca73d6")
 		(property "Reference" "C168"
-			(at 221.488 139.192 90)
+			(at 215.392 139.192 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12777,7 +13052,7 @@
 			)
 		)
 		(property "Value" "10uF/25V"
-			(at 221.488 141.732 90)
+			(at 215.392 141.732 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12788,7 +13063,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:C0603"
-			(at 210.82 139.7 0)
+			(at 226.06 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12799,7 +13074,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106MA8NRNC_10uF-106-20-25V_C96446.html"
-			(at 208.28 139.7 0)
+			(at 228.6 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12821,7 +13096,7 @@
 			)
 		)
 		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 205.74 139.7 0)
+			(at 231.14 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12832,7 +13107,7 @@
 			)
 		)
 		(property "MPN" "CL10A106MA8NRNC"
-			(at 203.2 139.7 0)
+			(at 233.68 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12843,7 +13118,7 @@
 			)
 		)
 		(property "LCSC" "C96446"
-			(at 200.66 139.7 0)
+			(at 236.22 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

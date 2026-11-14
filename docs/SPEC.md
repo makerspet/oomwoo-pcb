@@ -393,7 +393,7 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
   - two receivers, not one: when both see the dock it is straight ahead, when one does, steer to that side. With the dock's left and right codes, the robot knows both which way the dock is and which side of the dock it's on. One receiver only sees the dock or not, so it would have to turn and sweep to find the bearing
 - the ToF sensors are on small boards, one design fitted twice: [`kicad/front-sensors`](../kicad/front-sensors/README.md)
   - left board aimed 30° left, right board 30° right
-  - board-to-board since 2026-11-06, no cable: each ToF board hangs upright under the main board, sensor on its front face, a 2.0 mm 2x4 right-angle header (HanElectricity 2005WR-2x4P, C6837622) on its back, plugged into a 2x4 vertical socket (2005FV-2x4P, C18723066) on the main board's underside (VL-L1 / VL-R1); a mount screwed to the main board holds it. The mating swaps the rows, so header pin n meets socket pin n+1 / n-1: see the [front ToF README](../kicad/front-sensors/README.md#connector-j2001)
+  - board-to-board since 2026-11-06, no cable: each ToF board hangs upright under the main board, sensor on its front face, a 2.0 mm 2x4 right-angle header (HanElectricity 2005WR-2x4P, C6837622) on its back, plugged into a 2x4 vertical socket (2005FV-2x4P, C18723066) on the main board's underside (J6 / J5); a mount screwed to the main board holds it. The mating swaps the rows, so header pin n meets socket pin n+1 / n-1: see the [front ToF README](../kicad/front-sensors/README.md#connector-j2001)
 - RGB camera with white torchlight LEDs: not in v1, no board yet
 
 ## Side sensors module board
@@ -514,7 +514,7 @@ Put the Linux console to a UART (not USB). Then the single USB port can serve th
 Design (current schematic)
 - CM console: 0.1" 1x5 header (CM_CONSOLE1), TTL-234X-3V3 cable compatible. (A 3-pin JST-SH like the Pi 5 debug connector was considered and not used.)
   - The STM32 link uses a separate UART; the CM4 has UART2–5 available through device-tree overlays.
-- STM32 debug: 0.1" 1x6 UART header (STM32_DEBUG1; TTL-234X-3V3 cable pinout: 1 GND, 4 cable TXD → STM32-RX, 5 cable RXD ← STM32-TX; 2 CTS#, 3 VCC, 6 RTS# not connected) and a 1.27 mm 2x7 STDC14 header (JTAG1) for an STLINK-V3MINIE. STDC14 pin 3 (T_VCC) is a sense input; pin 11 (GNDDetect) is not connected.
+- STM32 debug: 0.1" 1x6 UART header (J4, STM32_DEBUG1 until 2026-11-13; TTL-234X-3V3 cable pinout: 1 GND, 4 cable TXD → STM32-RX, 5 cable RXD ← STM32-TX; 2 CTS#, 3 VCC, 6 RTS# not connected) and a 1.27 mm 2x7 STDC14 header (JTAG1) for an STLINK-V3MINIE. STDC14 pin 3 (T_VCC) is a sense input; pin 11 (GNDDetect) is not connected.
 - The CM reflashes the STM32 itself (STM32 UART bootloader via BOOT0/NRST from CM GPIOs, or SWD over CM GPIOs), so normal firmware updates need no probe.
 - One internal USB header, for example a 4-pin JST-GH, wired to the CM4's USB 2.0 pins.
   - Normal use: the mic board plugs in here. Or makers can plug in a USB hub, a USB stick, or a USB-audio or ReSpeaker-style array; it's their choice.
@@ -549,9 +549,9 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - spare I/O header J1 (2026-10-30; was J7301, 2x11 pads): 0.1" 2x6 right-angle pin header, fitted (XFCN PZ254R-12-12P, C492434, since 2026-11-10; was the vertical PZ254V-12-12P; 2x7 until 2026-11-02). Right angle so an accessory inside the enclosure, such as a WS2812B floor-light strip, can plug in from the side. Not shrouded (a box header is ~9 mm tall and costs more), so the PCB engineer marks 3.3 V, 5 V and GND prominently on the silkscreen next to the pins. Place it at a board edge with room for the plug and cable. Spares only: 1 VMCU-3V3 (MCU rail since 2026-11-02, like the GPIOs), 2 VSENS-5V-USB, 3/4 UART PC10 TX / PC11 RX, 5 PF0 (ADC1_IN10; free since the HSE crystal went, 2026-11-04), 6 PE6, 7 PF1 (ADC2_IN10), 8 PE10 (ADC capable; was PA9 until 2026-11-03), 9 PD4, 10 PE2, 11/12 GND. No I2C: I2C4 runs at 1 MHz and is shared with the ToF, side sensor and IMU. Pin 2 is the shared 5 V sensor/USB rail, so keep accessory current low (a WS2812B draws up to ~60 mA at full white). WS2812B data wants a 3.5 V high at 5 V supply, above the 3.3 V GPIOs: put a level shifter (e.g. 74AHCT1G125) in the accessory cable
 - sensor rail switch (2026-11-01): one AO3401 (Q16) from VMCU-3V3 to VSENS-3V3. PB10 (~VSENS_3V3_EN, low = on) drives the gate through R195 (10k); R90 (100k) holds it off while the MCU is in reset. C64 (100 nF, gate-drain) gives a ~2 ms soft start, so the sensor rail's ~40 µF doesn't pull VMCU-3V3 down; C176 (1 µF, gate-source) keeps Q16 off while VMCU-3V3 ramps up at power-on. Turn-on takes ~4 ms delay + ~2 ms ramp. Removed: Q17 and R91 (the rail draws a few hundred mA at most), the gate resistors R96/R97, and D39, which back-fed the "off" rail from the gate pull-up
 - VL-R-LPn has a 47k pull-up (R196) and no MCU pin, so the right VL53L7 is always enabled. The main board holds every ToF resistor (I2C 2.2k, the INT 47k R2 (R61 until 2026-11-11), the right LPn 47k R196); the MCU drives the left LPn (PB13) and I2C_RST (PC0) with no resistors (R62 and the old R2 removed 2026-11-04: the sensor rail is off whenever those pins float); the ToF boards carry none, so the bus isn't pulled up twice
-- front IR receivers: on the main board from 2026-10-27 (U24 left, U25 right, IRM-V838M3-C, side-looking; they replaced the IR-F1/IR-F2 connectors), on the front ToF boards since 2026-11-11 (U2002, IRM-H638T). IR-F-L → PE15 (VL-L1 pin 6), IR-F-R → PB11 (VL-R1 pin 6) (IR-F-RX1/IR-F-RX2 until 2026-11-11), both direct (R80 removed 2026-11-04)
+- front IR receivers: on the main board from 2026-10-27 (U24 left, U25 right, IRM-V838M3-C, side-looking; they replaced the IR-F1/IR-F2 connectors), on the front ToF boards since 2026-11-11 (U2002, IRM-H638T). IR-F-L → PE15 (J6 pin 6), IR-F-R → PB11 (J5 pin 6) (IR-F-RX1/IR-F-RX2 until 2026-11-11), both direct (R80 removed 2026-11-04)
 - no HSE crystal (X1, C34, C35 removed 2026-11-04): USB runs crystal-less on HSI48 trimmed by the CRS to the phone's USB SOF, the system clock comes from HSI16 through the PLL; PF0/PF1 are unconnected. The RTC keeps its 32.768 kHz crystal (X3)
-- VL-L1 / VL-R1: 2.0 mm 2x4 vertical sockets (HanElectricity 2005FV-2x4P, C18723066) on the underside since 2026-11-06 (JST SH 7-pin ZX-SH1.0-7PWT before, ZH 1.5 mm before that): 1 GND, 2 VSENS-3V3, 3 SCL, 4 SDA, 5 VL-I2C-RESET, 6 IR-F-L / IR-F-R (the board's IR receiver; ~INT-SENSORS until 2026-11-11), 7 GND, 8 LPn
+- J6 / J5 (VL-L1 / VL-R1 until 2026-11-13): 2.0 mm 2x4 vertical sockets (HanElectricity 2005FV-2x4P, C18723066) on the underside since 2026-11-06 (JST SH 7-pin ZX-SH1.0-7PWT before, ZH 1.5 mm before that): 1 GND, 2 VSENS-3V3, 3 SCL, 4 SDA, 5 VL-I2C-RESET, 6 IR-F-L / IR-F-R (the board's IR receiver; ~INT-SENSORS until 2026-11-11), 7 GND, 8 LPn
 
 ### Power control (v1)
 
@@ -586,7 +586,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 ### Rear docking IR and Hall sensors (v1)
 
 - [Rear docking IR board](../kicad/rear-ir/README.md) on REAR-IR1: two top-looking IRM-H638T, left PC8 (TIM3_CH3), right PC9 (TIM3_CH4). The robot backs into the dock (like a mop or auto-empty dock): LiDAR for the approach, the two receivers for the final alignment.
-- Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on HALL-BIN1 (PE4), LiDAR tower bumper on HALL-TOWER1 (PE5). Low = magnet near; the MCU's internal pull-ups on PE4/PE5 (R215/R216 removed 2026-11-04; either Hall output type works).
+- Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on J7 (PE4), LiDAR tower bumper on J8 (PE5) (HALL-BIN1 / HALL-TOWER1 until 2026-11-13). Low = magnet near; the MCU's internal pull-ups on PE4/PE5 (R215/R216 removed 2026-11-04; either Hall output type works).
 - REAR-IR1 uses the same 4-pin SH vertical connector as the cliff sensors (ZX-SH1.0-4PLT). The Hall boards use the 3-pin one (ZX-SH1.0-3PLT, C7430452; 1 3.3 V, 2 OUT, 3 GND), so a Hall cable can't be plugged into a cliff or rear IR socket (changed 2026-10-29). All three sit on the SIDE-PROXI sheet.
 - The mounting pads of every SH socket on the main board go to GND (2026-10-29), as they already did on the sensor boards.
 
@@ -615,7 +615,7 @@ The shunt only carries current while the driver drives, not while it chops, so a
 
 One connector (VMOT-14V4, GND, MAIN-FAN-FB on PE9, MAIN-FAN-PWM on PD1). Fans with other connectors get an adapter cable (some Dreame MX fans are sold without a cable anyway). MAIN_FAN2 (PA 5 / PH 5 / PH 4 footprint), MAIN_FAN3 (PA 6) and the fan ID input (PE10) were tried on 2026-11-03 and removed the same day to keep the board simple:
 - MAIN_FAN1, fitted: Micro-Fit 3.0 compatible 1x4 right angle, Lian Xin XDWF-C3030WR-1*4P (C50399536, ~$0.09, 5 A per contact, ~5.5 mm tall; the Molex 43650-0400, C277684, 8.5 A, ~$0.30, also fits): 1 VCC, 2 GND, 3 PWM, 4 FG, matching the Dreame L60 Ultra PE main board. A 1x4 because Dreame fans with a 2x2 MX plug often come with a 2x2-to-1x4 cable for a right-angle 1x4 board header, so those cables can be reused (the fan's 2x2 end is 1 VCC, 2 GND, 3 FG, 4 PWM; the cable maps it to the 1x4 order). History, 2026-11-03: vertical 2x2 (9.9 mm plus the plug and cable on top, too tall), then right-angle 2x2, then this 1x4. Place it with room for the plug and cable on the mating side. Stock is low for the clones (~600 Lian Xin, ~1.5k Molex at JLC); check before a production order. MSD-G fan (Dreame X50 Ultra / Master, 20 kPa, 4.2 A at 14.4 V, 6 A blocked at 16.8 V: over the clone's 5 A, so firmware stops a stalled fan by FG). Footprint JLCImport:CONN-TH_4P-P3.00_L8.9-W15.7-EH4.7, JLC's own for the Molex 43650-0400 (since 2026-11-04; the Lian Xin's JLC footprint is mirrored, so it isn't used). Vendor drawings disagree on which end is pin 1, so check the silkscreen pin 1 against the header's cavity keying on the first board
-- the motor rail switch has two AO4407C in parallel (Q1, Q37, 10 Ω gate resistors R36/R222 from VMOT-SW-G) for the higher fan current: ~7.5 A normal is ~0.25 W in each
+- the motor rail switch has two AO4407C in parallel (Q1, Q2 (Q37 until 2026-11-13), 10 Ω gate resistors R36/R222 from VMOT-SW-G) for the higher fan current: ~7.5 A normal is ~0.25 W in each
 - the PCB engineer sizes the fan traces for ~6 A
 - blowers are limited to the 20 kPa class (decided 2026-11-07): Dreame MSD-G or MSD-J, both with Micro-Fit plugs. The whole robot current (~7.5 A normal with the MSD-G) runs through J2's single P+ and GND contacts (8.5 A rated; the Roborock pack has one of each). A stronger blower would need a battery connector with doubled power pins
 - Q14 is in series with all battery current when off the dock. It was an AOD407 (68 mΩ: ~2 W at 5 A, ~4-5 W at 7.5 A); since 2026-11-03 it is two AO4407C in parallel (Q14, Q38), ~0.22 W each at 7.5 A. Gate = DC-IN-20V, S = VBAT-14V4, D = P+/C+14V4 as before. Vds: about -10 V while charging, up to ~-24 V in a TVS-clamped plug-in surge; Vgs: up to ~+24 V in that surge (AO4407C: -30 V, ±25 V). Q12 stays AOD407: it is the SLM6900 buck switch, where gate charge matters more than on-resistance
@@ -628,7 +628,7 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - barrel jack: DC-044A-20A, 7.2 mm
 - J3 (the second LiDAR header, LIDAR2 until 2026-11-13) is a 2x3 0.1" right-angle header (PZ254R-12-06P-A40), fitted
 - J1 spare I/O: right-angle 2x6 0.1" header (PZ254R-12-12P, ~5 mm above the board; vertical, ~8.5 mm, until 2026-11-10)
-- exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: STM32_DEBUG1 1x6 0.1" (XFCN PZ254V-11-06P, C492405, ~8.5 mm above the board; 1x6 since 2026-11-02 so the cable socket seats fully) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
+- exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: J4 1x6 0.1" (XFCN PZ254V-11-06P, C492405, ~8.5 mm above the board; 1x6 since 2026-11-02 so the cable socket seats fully) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
 - exception: the ITR9606 bumper sensors (~11 mm), set by the bumper mechanism
 - PCB engineer: flag any other part taller than ~7 mm
@@ -666,7 +666,7 @@ Power rails (current schematic):
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
 | USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (USB_PWR_EN) |
 | VUSONIC-14V4 (≈ 14.5 V) | MT3608 boost | carpet sensor | with VSENS-5V-USB |
-| VMOT-14V4 | VBAT-14V4 via Q1 + Q37 AO4407C (parallel) | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
+| VMOT-14V4 | VBAT-14V4 via Q1 + Q2 AO4407C (parallel) | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
 | VLIDAR-5V | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |
 | VM-5V-WATER-PUMP | VCC-5V-REG via Q8 AO3401 | water pump | WD_OK AND WATER-PUMPU-CTRL (low = on) |
 
@@ -680,7 +680,7 @@ RC charge-pump watchdog (WATCHDOG sheet):
 Each gated rail is WD_OK AND an MCU enable, without logic ICs:
 - an AO3400 N-FET has its gate on WD_OK and its source on the MCU GPIO; it pulls the rail P-FET's gate low only when WD_OK is high and the GPIO is low
 - a 100k pull-up to 3V3 on each GPIO keeps the rail off while the MCU pins float (reset, flashing)
-- VMOT-14V4: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). Q1 and Q37 (parallel since 2026-11-03) dissipate ~0.25 W each at ~7.5 A normal (with the MSD-G fan); short ~13 A stall peaks are fine with copper under the drains. TODO measure the fan controller's input capacitance (inrush)
+- VMOT-14V4: R165 10k gate pull-up for a fast turn-off; no soft start (a slow turn-off under motor current would overheat Q1). Q1 and Q2 (parallel since 2026-11-03) dissipate ~0.25 W each at ~7.5 A normal (with the MSD-G fan); short ~13 A stall peaks are fine with copper under the drains. TODO measure the fan controller's input capacitance (inrush)
 - VM-5V-LIDAR: soft start R181 10k + C171 100 nF (≈1.5 ms on, ≈30 ms off) so the CM's 5 V doesn't dip
 - VM-5V-WATER-PUMP: no soft start, so the pump can be PWM-driven
 - PWM on an enable can only slow a gate-RC soft start; it can't soft-start a hard-switched FET
@@ -691,7 +691,7 @@ MOSFET line-up (consolidated 2026-09, 8 part numbers → 4):
 | --- | --- | --- | --- |
 | all N-FETs | AO3400 (FOSAN) | C20628874 | 30 V, Vgs ±12 V, Vth 0.65-1.5 V, SOT-23 |
 | P-FETs whose gate sees ≤ 5 V | AO3401 (FOSAN) | C20628875 | -30 V, Vgs ±12 V, SOT-23 |
-| battery-side high-side switches (Q1, Q37, Q13, Q14, Q38) | AO4407C (AOS) | C469397 | -30 V, Vgs ±25 V, 11.5 mΩ, SOIC-8 |
+| battery-side high-side switches (Q1, Q2, Q13, Q14, Q38) | AO4407C (AOS) | C469397 | -30 V, Vgs ±25 V, 11.5 mΩ, SOIC-8 |
 | charger buck switch, DC-IN-20V (Q12) | AOD407 | C6396162 | -60 V for hot-plug margin, low gate charge |
 
 Any gate or drain that can see VBAT-14V4 (up to 16.8 V) needs Vds ≥ 30 V, and a gate swing that large needs Vgs ≥ 20 V.

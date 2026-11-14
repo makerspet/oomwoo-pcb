@@ -1,6 +1,6 @@
 # OOMWOO Hall sensor board
 
-A tiny board with a Hall switch that detects a magnet. The robot fits two of them, from the same design: one for the dust bin (a magnet in the bin) and one for the LiDAR tower bumper (a magnet in the tower cover). Each plugs into the [main board](../main-phone/README.md) (HALL-BIN1 or HALL-TOWER1) with a 3-pin cable. Rev 1, 2026-10-28.
+A tiny board with a Hall switch that detects a magnet. The robot fits two of them, from the same design: one for the dust bin (a magnet in the bin) and one for the LiDAR tower bumper (a magnet in the tower cover). Each plugs into the [main board](../main-phone/README.md) (J7 or J8) with a 3-pin cable. Rev 1, 2026-10-28.
 
 A separate board keeps the mechanics flexible: the bin sits between the blower and the main brush, far from any other board, and the tower cover changes with the LiDAR model.
 

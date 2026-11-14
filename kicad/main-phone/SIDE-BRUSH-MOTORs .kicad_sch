@@ -711,12 +711,11 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:RL12FTNR300"
+		(symbol "JLCImport:RLH12FTCR300"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 1.016)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -725,7 +724,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 0 3.016 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -734,8 +733,8 @@
 					)
 				)
 			)
-			(property "Value" "RL12FTNR300"
-				(at 0 -3.016 0)
+			(property "Value" "300mΩ/1W"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -744,7 +743,29 @@
 					)
 				)
 			)
-			(property "Footprint" "JLCImport:RL12FTNR300"
+			(property "Footprint" "JLCImport:R1206"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C22464904.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1W 300mΩ Current Sense Resistor Surface Mount ±1% ±100ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -755,8 +776,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TA-I-Tech-RL12FTNR300_C160919.pdf"
-				(at 0 0 0)
+			(property "Manufacturer" "大毅科技"
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -766,8 +787,8 @@
 					)
 				)
 			)
-			(property "Description" "300mΩ 500mW Metal Film Resistor SMD ±1% ±200ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
-				(at 0 0 0)
+			(property "MPN" "RLH12FTCR300"
+				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -777,8 +798,8 @@
 					)
 				)
 			)
-			(property "LCSC" "C160919"
-				(at 0 0 0)
+			(property "LCSC" "C22464904"
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -788,46 +809,13 @@
 					)
 				)
 			)
-			(property "Manufacturer" "TA-I Tech"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "RL12FTNR300"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C160919 R1206 RL12FTNR300 TA-I Tech"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RL12FTNR300_0_1"
+			(symbol "RLH12FTCR300_0_1"
 				(rectangle
-					(start -2.54 1.016)
-					(end 2.54 -1.016)
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
 					(stroke
-						(width 0.254)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type background)
@@ -1766,198 +1754,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/92cc07b9-f65d-4f49-9297-7807acee5c86"
 					(reference "C138")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:RL12FTNR300")
-		(at 135.89 127 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0a5e556e-7b7d-4735-b4e4-ec81964e79aa")
-		(property "Reference" "R83"
-			(at 138.43 125.7299 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "RLH12FTCR300"
-			(at 138.43 128.2699 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 135.89 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C22464904.html"
-			(at 135.89 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "300mOhm 1W current sense resistor, 1206, 1%, 100ppm/C"
-			(at 135.89 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22464904"
-			(at 135.89 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TA-I Tech"
-			(at 135.89 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "RLH12FTCR300"
-			(at 135.89 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Part Number" ""
-			(at 135.89 127 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Arrow Price/Stock" ""
-			(at 135.89 127 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Comment" ""
-			(at 135.89 127 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 135.89 127 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer_Name" ""
-			(at 135.89 127 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 135.89 127 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 135.89 127 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fef9289f-c815-4296-9344-d88ecae56f47")
-		)
-		(pin "2"
-			(uuid "62e271c5-b1c3-4021-98ff-7d5e1eae6692")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/92cc07b9-f65d-4f49-9297-7807acee5c86"
-					(reference "R83")
 					(unit 1)
 				)
 			)
@@ -2984,6 +2780,121 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/92cc07b9-f65d-4f49-9297-7807acee5c86"
 					(reference "#PWR0593")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:RLH12FTCR300")
+		(at 135.89 127 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7da2c168-8087-41b3-830a-07a195531e25")
+		(property "Reference" "R83"
+			(at 138.43 125.7299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "300mΩ/1W"
+			(at 138.43 128.2699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R1206"
+			(at 143.51 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C22464904.pdf"
+			(at 146.05 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1W 300mΩ Current Sense Resistor Surface Mount ±1% ±100ppm/℃ 1206 Current Sense Resistors / Shunt Resistors ROHS"
+			(at 135.89 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "大毅科技"
+			(at 148.59 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RLH12FTCR300"
+			(at 151.13 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22464904"
+			(at 153.67 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c313d01a-a80d-4e9f-afd6-90b2ea59628a")
+		)
+		(pin "1"
+			(uuid "8eba928d-c518-4b82-a914-32f57db22edd")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/92cc07b9-f65d-4f49-9297-7807acee5c86"
+					(reference "R83")
 					(unit 1)
 				)
 			)

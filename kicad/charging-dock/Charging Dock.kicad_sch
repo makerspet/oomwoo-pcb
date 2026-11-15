@@ -2245,7 +2245,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "CH32V003F4P6: PA2 = VIN_SENSE (A0), PA1 = DOCK_SENSE (A1), PD2 = PROBE_A (A3), PD3 = I_SENSE (A4),\nPC1 = CHG_EN (high = DOCK+ on), PC2 = PROBE_DRV, PC3/PC4 = IR_L/IR_R (TIM1_CH3/CH4, 38 kHz),\nPC0 = status LED, PD4 = IR_RX (TIM2_CH1), PD5/PD6 = UART, PD1 = SWIO. HSI clock, no crystal.\nADC reference is VDD, and PROBE_DRV high is VDD too, so the probe math is ratiometric."
+	(text "CH32V003F4P6: PA2 = VIN-SENSE (A0), PA1 = DOCK-SENSE (A1), PD2 = PROBE-SENSE (A3),\nPD3 = I-SENSE (A4), PC1 = CHARGE-EN (high = VDOCK-20V on), PC2 = PROBE-DRV,\nPC3/PC4 = IR-L/IR-R (TIM1_CH3/CH4, 38 kHz), PC0 = status LED, PD4 = IR_RX (TIM2_CH1),\nPD5/PD6 = UART, PD1 = SWIO. HSI clock, no crystal.\nADC reference is VDD, and PROBE-DRV high is VDD too, so the probe math is ratiometric."
 		(exclude_from_sim no)
 		(at 152.654 164.846 0)
 		(effects
@@ -2256,7 +2256,7 @@
 		)
 		(uuid "903ec630-8fcc-4fd0-93ca-5603cf04db9e")
 	)
-	(text "OOMWOO charging-only dock, v2 (2026-10-27)\n20 V brick in; DOCK+ / DOCK- pogo contacts out (energized only after the robot\nis recognised by its ~130k / ~30 uF signature); 38 kHz NEC IR beacon.\nCH32V003 control (Arduino core, ch32fun, PlatformIO). Refs in the 1000s: each board has its\nown range (main board 1-999, dock 1000s, sensor boards 2000s-6000s)."
+	(text "OOMWOO charging-only dock, v2 (2026-10-27)\n20 V brick in; VDOCK-20V / DOCK- pogo contacts out (energized only after the robot\nis recognised by its ~130k / ~30 uF signature); 38 kHz NEC IR beacon.\nCH32V003 control (Arduino core, ch32fun, PlatformIO). Refs in the 1000s: each board has its\nown range (main board 1-999, dock 1000s, sensor boards 2000s-6000s)."
 		(exclude_from_sim no)
 		(at 40.64 40.64 0)
 		(effects

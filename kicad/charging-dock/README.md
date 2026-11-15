@@ -6,9 +6,9 @@ Sheets: root (MCU, status LED, debug pads, optional IR receiver, mounting holes)
 
 ## What it does
 
-1. A 20 V brick plugs into J1002 (DC-044A-20A, the same jack as the robot). F1001 (5 A fuse), D1002 (SMAJ22A) and C1011 protect the input. U1003 (HT7533-1) makes 3.3 V for the MCU.
+1. A 20 V brick plugs into J1002 (DC-044A-20A, the same jack as the robot). F1001 (5 A fuse), D1001 (SMAJ22A) and C1011 protect the input. U1003 (HT7533-1) makes 3.3 V for the MCU.
 2. With the contacts off, the MCU measures the resistance across them (see [Robot detection](#robot-detection)). It switches 20 V on only when it sees the robot.
-3. Q1003 (AO4407C P-FET) switches VDOCK-20V. R1012/R1015 set Vgs to -10 V, and C1017 (47 nF, gate to drain) ramps VDOCK-20V at ~30 V/ms, so the robot's input capacitors charge at ~0.5 A instead of sparking on the pogo pins. D1004 (SMAJ22A) protects the exposed contacts.
+3. Q1003 (AO4407C P-FET) switches VDOCK-20V. R1012/R1015 set Vgs to -10 V, and C1017 (47 nF, gate to drain) ramps VDOCK-20V at ~30 V/ms, so the robot's input capacitors charge at ~0.5 A instead of sparking on the pogo pins. D1003 (SMAJ22A) protects the exposed contacts.
 4. R1016 (50 mΩ) and U1004 (INA180A1 clone from lingxingic, C48533472, gain 20; TI's INA180A1IDBVR C122228 is the pin-compatible alternative) measure the charging current on DOCK-: I-SENSE = 1 V/A, 3.3 A full scale. The MCU switches VDOCK-20V off when the current drops to ~0 (the robot left) or on overcurrent.
 5. Two IR LED strings (3x TSAL6200 each, ~100 mA peak from 20 V) send 38 kHz NEC frames for the robot's receivers.
 
@@ -36,9 +36,9 @@ The ADC reference is VDD, and PROBE-DRV high is VDD too, so the probe readings a
 
 ## Robot detection
 
-The v1 robot presents ~130 kΩ across its dock contacts: R175 + R194 (147k, the charger rail-hold divider) in parallel with its 1.1 MΩ DC_IN sense divider. It also has ~30 µF of input capacitance.
+The v1 robot presents ~130 kΩ across its dock contacts: R175 + R194 (147k, the charger rail-hold divider) in parallel with its 1.1 MΩ DC-IN-20V sense divider. It also has ~30 µF of input capacitance.
 
-The probe: PROBE-DRV → R1014 (100k) → PROBE-SENSE → D1003 (1N4148W) → VDOCK-20V. The diode keeps the 20 V on VDOCK-20V away from the MCU. With Q1003 off and PROBE-DRV high:
+The probe: PROBE-DRV → R1014 (100k) → PROBE-SENSE → D1002 (1N4148W) → VDOCK-20V. The diode keeps the 20 V on VDOCK-20V away from the MCU. With Q1003 off and PROBE-DRV high:
 
 - I_probe = (V_DD - V(PROBE-SENSE)) / 100k
 - R_contacts = V(VDOCK-20V) / (I_probe - V(VDOCK-20V) / 1.1M), where 1.1M is the dock's own DOCK-SENSE divider

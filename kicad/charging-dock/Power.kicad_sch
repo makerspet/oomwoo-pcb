@@ -4525,7 +4525,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Probe diode: blocks DOCK+\n(20 V) from the MCU"
+	(text "Probe diode: blocks VDOCK-20V\n(20 V) from the MCU"
 		(exclude_from_sim no)
 		(at 151.638 103.124 0)
 		(effects
@@ -4536,7 +4536,7 @@
 		)
 		(uuid "31d2a904-3c85-42a3-acd2-040270465d1c")
 	)
-	(text "Q1001 soft start: R1004/R1005 set Vgs = -10 V, C1008 (Miller) ramps DOCK+ ~30 V/ms\n(~0.5 A inrush into the robot input caps); turn-off ~3 ms.\nCurrent: I_SENSE = 1 V/A (50 mOhm x 20), 3.3 A full scale. Turn off when it drops to ~0\n(robot left) or on overcurrent (ADC analog watchdog). Route INA180 IN-/IN+ Kelvin to R1007."
+	(text "Q1003 soft start: R1012/R1015 set Vgs = -10 V, C1017 (Miller) ramps VDOCK-20V ~30 V/ms\n(~0.5 A inrush into the robot input caps); turn-off ~3 ms.\nCurrent: I-SENSE = 1 V/A (50 mOhm x 20), 3.3 A full scale. Turn off when it drops to ~0\n(robot left) or on overcurrent (ADC analog watchdog). Route INA180 IN-/IN+ Kelvin to R1016."
 		(exclude_from_sim no)
 		(at 38.1 167.64 0)
 		(effects
@@ -4558,7 +4558,7 @@
 		)
 		(uuid "e96c1338-d65f-4501-aec5-1af4a58fe7f2")
 	)
-	(text "Robot detection (firmware): with Q1001 off, PROBE_DRV high drives ~13 uA into DOCK+.\nR_robot = V(DOCK+) / ((3.3 V - V(PROBE_A)) / 100k - V(DOCK+) / 1.1M); the diode drop cancels.\nv1 robot signature: ~130k (R175 + R7305 || 1.1M sense divider) and ~30 uF (settles in ~2 s).\nEnergize only after a stable reading inside the window; check VIN < 22 V first."
+	(text "Robot detection (firmware): with Q1003 off, PROBE-DRV high drives ~13 uA into VDOCK-20V.\nR_robot = V(VDOCK-20V) / ((3.3 V - V(PROBE-SENSE)) / 100k - V(VDOCK-20V) / 1.1M); the diode drop cancels.\nv1 robot signature: ~130k (R175 + R194 || 1.1M sense divider) and ~30 uF (settles in ~2 s).\nEnergize only after a stable reading inside the window; check VIN-SENSE < 22 V first."
 		(exclude_from_sim no)
 		(at 38.1 184.15 0)
 		(effects
@@ -6419,7 +6419,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "36ba0dff-6c92-496b-ba78-9ec3def28cf0")
-		(property "Reference" "D1004"
+		(property "Reference" "D1003"
 			(at 182.372 56.642 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6516,7 +6516,7 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/72c6e154-185e-4dc1-b232-13c9d403fda4"
-					(reference "D1004")
+					(reference "D1003")
 					(unit 1)
 				)
 			)
@@ -6919,7 +6919,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "41788c58-38e0-445b-bfdf-74208583d7b1")
-		(property "Reference" "R1017"
+		(property "Reference" "R1009"
 			(at 57.15 137.1599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7016,7 +7016,7 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/72c6e154-185e-4dc1-b232-13c9d403fda4"
-					(reference "R1017")
+					(reference "R1009")
 					(unit 1)
 				)
 			)
@@ -7111,7 +7111,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "45173de2-a121-4919-8c9d-bc2256cd6131")
-		(property "Reference" "D1002"
+		(property "Reference" "D1001"
 			(at 59.944 56.896 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7208,7 +7208,7 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/72c6e154-185e-4dc1-b232-13c9d403fda4"
-					(reference "D1002")
+					(reference "D1001")
 					(unit 1)
 				)
 			)
@@ -8365,7 +8365,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "756a05c2-76c0-4c95-b6f6-d878cf168a79")
-		(property "Reference" "D1003"
+		(property "Reference" "D1002"
 			(at 142.24 101.5999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8462,7 +8462,7 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/72c6e154-185e-4dc1-b232-13c9d403fda4"
-					(reference "D1003")
+					(reference "D1002")
 					(unit 1)
 				)
 			)

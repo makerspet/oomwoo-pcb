@@ -78,4 +78,5 @@ Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JL
 
 ## Open items
 
+- Charging contacts: J1003/J1004 are YZP0670 pogo pins for now (~$0.41 each, only ~130 in stock at LCSC in 2026-11). Robot vacuums use sprung metal strips with a dimple instead: more travel and sideways tolerance, self-wiping, nothing for dust to jam, and cheap. Decide in the dock CAD; the PCB then only needs two wire or screw pads (or a 2-pin ~4 A connector) to the contacts, and the robot side needs matching plates.
 - Measure the real robot signature (resistance and settling time) on the first boards, with a full battery and a flat one, and set the firmware window from that.

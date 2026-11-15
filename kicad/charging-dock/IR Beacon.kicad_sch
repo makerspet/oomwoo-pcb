@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "b2d3c1c8-4f2e-4a63-9a64-6a4a2d1b0e11")
-	(paper "A4")
+	(paper "USLetter")
 	(title_block
 		(title "IR beacon")
 		(date "2026-10-27")
@@ -11,167 +11,12 @@
 		(company "OOMWOO charging dock")
 	)
 	(lib_symbols
-		(symbol "Device:C"
+		(symbol "JLCImport:25121WJ0151T4E"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
 				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:R_US"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -179,7 +24,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 2.54 0 90)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -188,8 +33,8 @@
 					)
 				)
 			)
-			(property "Value" "R_US"
-				(at -2.54 0 90)
+			(property "Value" "150Ω/1W"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -198,8 +43,8 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 1.016 -0.254 90)
+			(property "Footprint" "JLCImport:R2512"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -209,7 +54,62 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-151-5_C25471.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+155℃ 150Ω 1W 200V Thick Film Resistor ±100ppm/℃ ±5% 2512 Chip Resistor - Surface Mount ROHS"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(厚声)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "25121WJ0151T4E"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C25471"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Resistors"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -220,106 +120,22 @@
 					)
 				)
 			)
-			(property "Description" "Resistor, US symbol"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_US_0_1"
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 0 2.54)
-					)
+			(symbol "25121WJ0151T4E_0_1"
+				(rectangle
+					(start -2.54 1.02)
+					(end 2.54 -1.02)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.286) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_US_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -335,9 +151,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -356,8 +172,12 @@
 			(embedded_fonts no)
 		)
 		(symbol "JLCImport:AO3400"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -582,7 +402,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at -5.08 0 0)
 					(length 2.032)
 					(name "G"
@@ -600,7 +420,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -5.08 90)
 					(length 2.54)
 					(name "S"
@@ -618,7 +438,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 5.08 270)
 					(length 2.54)
 					(name "D"
@@ -639,7 +459,567 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:CL10B104KB8NNNC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100nF/50V"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:C0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B104KB8NNNC_100nF-104-10-50V_C1591.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "SAMSUNG(三星)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CL10B104KB8NNNC"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C1591"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Multilayer Ceramic Capacitors MLCC - SMD/SMT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CL10B104KB8NNNC_0_1"
+				(polyline
+					(pts
+						(xy -0.51 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.51 -2.03) (xy -0.51 2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 2.03) (xy 0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 0.51 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "JLCImport:CL31A106KBHNNNE"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "10uF/50V"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:C1206"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL31A106KBHNNNE_10uF-106-10-50V_C13585.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "10uF 50V X5R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "SAMSUNG(三星)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CL31A106KBHNNNE"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C13585"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Multilayer Ceramic Capacitors MLCC - SMD/SMT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CL31A106KBHNNNE_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.51 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.51 2.03) (xy -0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 2.03) (xy 0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "JLCImport:FRC0603J104TS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100k"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "FOJAN(富捷)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "FRC0603J104 TS"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C2907088"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Chip Resistor - Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FRC0603J104TS_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:TSAL6200"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -687,7 +1067,7 @@
 					)
 				)
 			)
-			(property "Description" "TSAL6200"
+			(property "Description" "-40℃~+85℃ 1.35V、2.2V 100mA 160mW 17° 30nm 40mW/sr@IF=100mA 5V 940nm 插件,D=5mm Infrared LED Emitters ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -854,6 +1234,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -970,223 +1489,70 @@
 			(embedded_fonts no)
 		)
 	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 60.96 45.72 0)
-		(unit 1)
-		(body_style 1)
+	(text "Beacon: the MCU sends 38 kHz NEC frames (TIM1 PWM, ~1/3 duty), never a steady carrier:\nthe robot receivers (IRM-H638T) suppress continuous 38 kHz. Left and right strings can send\ndifferent codes. Gates are AC-coupled (100 nF / 100k, ~10 ms): a pin stuck high turns the LEDs off.\nMount the three LEDs of each string fanned out (TSAL6200 is +/-17 deg) to cover the room."
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2ec24479-5a59-4713-8199-8d7caa446c68")
-		(property "Reference" "R1101"
-			(at 62.865 44.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+		(at 30.48 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Value" "150R/1W"
-			(at 62.865 46.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 60.96 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "LED current ~100 mA peak from 20 V (3 x TSAL6200)"
-			(at 60.96 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25471"
-			(at 60.96 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "245e5a81-c436-44a0-8274-c73975a60a8c")
-		)
-		(pin "2"
-			(uuid "92ea4d03-6013-4758-8f2c-5e8aa3f292b4")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "R1101")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "fdeab193-7c0a-4dd3-9795-ae6fc60ed8e8")
+	)
+	(junction
+		(at 175.26 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35dedde8-6e96-4f47-9a84-39dc8a6dd6c6")
+	)
+	(junction
+		(at 50.8 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4030ec40-2a99-409b-94b1-2e67ea818dce")
+	)
+	(junction
+		(at 142.24 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "845c9f4c-d377-4462-ac4e-048c727c7d36")
+	)
+	(junction
+		(at 175.26 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "afaf8c4d-22c3-4df0-9884-9909afd6633f")
 	)
 	(wire
 		(pts
-			(xy 60.96 41.91) (xy 60.96 39.37)
+			(xy 50.8 95.25) (xy 50.8 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "82c6ac72-8dff-44aa-a6b4-542149726c5d")
+		(uuid "0603aa9c-a35f-44cf-8538-9ab085000d31")
 	)
-	(global_label "VIN"
-		(shape bidirectional)
-		(at 60.96 39.37 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 175.26 128.27) (xy 181.61 128.27)
 		)
-		(uuid "34f74c52-2c0c-45d1-b3df-1444912bf75d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 39.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
+		(uuid "1b265553-afd3-4425-b87a-d9af734f0a39")
 	)
-	(symbol
-		(lib_id "JLCImport:TSAL6200")
-		(at 62.23 57.15 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ba707fbb-3af4-474f-9039-580f3d2745bb")
-		(property "Reference" "IR1101"
-			(at 74.93 55.88 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
+	(wire
+		(pts
+			(xy 142.24 95.25) (xy 147.32 95.25)
 		)
-		(property "Value" "TSAL6200"
-			(at 74.93 58.42 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Footprint" "JLCImport:TSAL6200"
-			(at 62.23 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "940 nm IR LED, 100 mA, +/-17 deg (fan them out)"
-			(at 62.23 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C55528"
-			(at 62.23 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b4350f6-ae16-4ce5-bb11-a3c34271e634")
-		)
-		(pin "2"
-			(uuid "8f328acc-e166-4a23-acf9-b38c6a3f1e9b")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "IR1101")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "217a4574-9049-41d8-88c4-a121d585b071")
 	)
 	(wire
 		(pts
@@ -1196,99 +1562,107 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "17774b99-64c3-4538-94aa-fb16b66b6b8d")
+		(uuid "2a103e06-556b-42a5-b822-c0e226626054")
 	)
-	(symbol
-		(lib_id "JLCImport:TSAL6200")
-		(at 62.23 69.85 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "47312340-a4dc-4f2b-a663-dc5eb7b55eb9")
-		(property "Reference" "IR1102"
-			(at 74.93 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
+	(wire
+		(pts
+			(xy 142.24 95.25) (xy 142.24 97.79)
 		)
-		(property "Value" "TSAL6200"
-			(at 74.93 71.12 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Footprint" "JLCImport:TSAL6200"
-			(at 62.23 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(uuid "2b490801-2564-4f2a-a615-1fb5954fd954")
+	)
+	(wire
+		(pts
+			(xy 152.4 87.63) (xy 152.4 90.17)
 		)
-		(property "Datasheet" ""
-			(at 62.23 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Description" "940 nm IR LED, 100 mA, +/-17 deg (fan them out)"
-			(at 62.23 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(uuid "3d6a6c55-b6f1-4834-9a42-3eb0c3f6cef1")
+	)
+	(wire
+		(pts
+			(xy 60.96 74.93) (xy 60.96 77.47)
 		)
-		(property "LCSC" "C55528"
-			(at 62.23 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(pin "1"
-			(uuid "b253f379-334a-4c04-afcb-2a9ba6867665")
+		(uuid "40cd7313-9b0d-4c78-be4f-6fbe41ffcb25")
+	)
+	(wire
+		(pts
+			(xy 152.4 49.53) (xy 152.4 52.07)
 		)
-		(pin "2"
-			(uuid "2d555f29-3b66-4bf9-8989-b65b5c699554")
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "IR1102")
-					(unit 1)
-				)
-			)
+		(uuid "4f2f52ce-fc48-4b76-948e-6f7141bc70b4")
+	)
+	(wire
+		(pts
+			(xy 60.96 107.95) (xy 60.96 100.33)
 		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63eeecbd-6e1b-4bf4-b2ec-872985347910")
+	)
+	(wire
+		(pts
+			(xy 175.26 135.89) (xy 181.61 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f47850a-4e7c-4094-83c8-083227e2fc9b")
+	)
+	(wire
+		(pts
+			(xy 152.4 107.95) (xy 152.4 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1debea6-9e1c-497c-9044-1f3635285a49")
+	)
+	(wire
+		(pts
+			(xy 50.8 95.25) (xy 55.88 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a904068e-8835-4961-b00f-5fbb9abd4e03")
+	)
+	(wire
+		(pts
+			(xy 152.4 74.93) (xy 152.4 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8423e41-c223-4076-8c74-3441dfbf62b9")
+	)
+	(wire
+		(pts
+			(xy 60.96 87.63) (xy 60.96 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d03e3d37-183e-4ed5-aaaf-045f0e3677b3")
 	)
 	(wire
 		(pts
@@ -1300,9 +1674,41 @@
 		)
 		(uuid "da5aa35a-8d39-49da-82eb-a118b90e6c95")
 	)
+	(wire
+		(pts
+			(xy 152.4 62.23) (xy 152.4 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8faf2f7-a92c-4964-b9c7-2f0d3af543d9")
+	)
+	(hierarchical_label "IR-L"
+		(shape input)
+		(at 40.64 95.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "15dc5c9b-a602-4ac6-9f8d-2111c5ed5c92")
+	)
+	(hierarchical_label "IR-R"
+		(shape input)
+		(at 132.08 95.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ec5efea3-8312-43d1-9063-86ee1cd2ea60")
+	)
 	(symbol
-		(lib_id "JLCImport:TSAL6200")
-		(at 62.23 82.55 270)
+		(lib_id "JLCImport:FRC0603J104TS")
+		(at 142.24 102.87 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1310,31 +1716,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ff7cf332-2a3b-48c7-82e0-ab6e79dcef29")
-		(property "Reference" "IR1103"
-			(at 74.93 81.28 90)
+		(uuid "1291b81f-3c23-4a3e-b915-3ff9a3408789")
+		(property "Reference" "R1005"
+			(at 139.7 101.5999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "TSAL6200"
-			(at 74.93 83.82 90)
+		(property "Value" "100k"
+			(at 139.7 104.1399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:TSAL6200"
-			(at 62.23 82.55 0)
+		(property "Footprint" "JLCImport:R0603"
+			(at 149.86 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1344,8 +1750,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 62.23 82.55 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
+			(at 152.4 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1355,8 +1761,8 @@
 				)
 			)
 		)
-		(property "Description" "940 nm IR LED, 100 mA, +/-17 deg (fan them out)"
-			(at 62.23 82.55 0)
+		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+			(at 142.24 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1366,8 +1772,30 @@
 				)
 			)
 		)
-		(property "LCSC" "C55528"
-			(at 62.23 82.55 0)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 154.94 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603J104 TS"
+			(at 157.48 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 160.02 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1378,29 +1806,326 @@
 			)
 		)
 		(pin "1"
-			(uuid "966be6c3-a3ac-446e-9a90-baef09105b33")
+			(uuid "7a1aa494-9135-4d55-881c-b5987ff7792d")
 		)
 		(pin "2"
-			(uuid "26ce4876-0754-4fd4-a18d-aabfa63660b9")
+			(uuid "19c63947-eeb9-4be7-9dc1-53962b666524")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "IR1103")
+					(reference "R1005")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 60.96 74.93) (xy 60.96 77.47)
+	(symbol
+		(lib_id "JLCImport:TSAL6200")
+		(at 153.67 57.15 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1988ac42-54b5-4c11-8442-c08f361379ef")
+		(property "Reference" "IR1004"
+			(at 158.75 56.134 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Value" "TSAL6200"
+			(at 158.75 58.674 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(uuid "40cd7313-9b0d-4c78-be4f-6fbe41ffcb25")
+		(property "Footprint" "JLCImport:TSAL6200"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-IR-LEDs_VISHAY_TSAL6200_TSAL6200_C55528.html"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-40℃~+85℃ 1.35V、2.2V 100mA 160mW 17° 30nm 40mW/sr@IF=100mA 5V 940nm 插件,D=5mm Infrared LED Emitters ROHS"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C55528"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 139.7 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TSAL6200"
+			(at 137.16 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "60225992-52c5-4358-a34f-9de86a41d6f3")
+		)
+		(pin "2"
+			(uuid "152332ce-e93c-4d46-9e7c-64ab21b8a476")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "IR1004")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 50.8 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2a78b5bc-4fe1-4b39-856b-6e8af85b1fd1")
+		(property "Reference" "#PWR01017"
+			(at 50.8 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.8 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8453e2ee-7e55-4d62-892a-e973a9720f9b")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "#PWR01017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:25121WJ0151T4E")
+		(at 60.96 44.45 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ae112c2-3519-4180-969b-84c33ebf72ee")
+		(property "Reference" "R1004"
+			(at 63.5 43.1799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "150Ω/1W"
+			(at 63.5 45.7199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R2512"
+			(at 68.58 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-151-5_C25471.html"
+			(at 71.12 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 150Ω 1W 200V Thick Film Resistor ±100ppm/℃ ±5% 2512 Chip Resistor - Surface Mount ROHS"
+			(at 83.82 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 73.66 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "25121WJ0151T4E"
+			(at 76.2 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25471"
+			(at 78.74 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c4d36974-4ff4-4c72-ad1c-c776d7afdaff")
+		)
+		(pin "2"
+			(uuid "01e354af-8aa6-446c-8d7c-07ffa29ba3ee")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "R1004")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "JLCImport:AO3400")
@@ -1413,8 +2138,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "32e2612c-a79a-4c29-9ad0-2751321f7b58")
-		(property "Reference" "Q1101"
-			(at 63.5 93.98 0)
+		(property "Reference" "Q1001"
+			(at 65.278 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1425,7 +2150,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 63.5 96.52 0)
+			(at 65.278 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1446,7 +2171,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3400_C20628874.pdf"
 			(at 60.96 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -1457,7 +2182,7 @@
 				)
 			)
 		)
-		(property "Description" "IR LED switch"
+		(property "Description" "30V 5.8A N-channel MOSFET, 25mOhm@4.5V, Vgs +/-12V, Vth 0.65-1.5V, SOT-23"
 			(at 60.96 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -1469,6 +2194,28 @@
 			)
 		)
 		(property "LCSC" "C20628874"
+			(at 60.96 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOSAN"
+			(at 60.96 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "AO3400"
 			(at 60.96 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -1491,7 +2238,7 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "Q1101")
+					(reference "Q1001")
 					(unit 1)
 				)
 			)
@@ -1499,7 +2246,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 60.96 100.33 0)
+		(at 152.4 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1507,9 +2254,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5e91b6b8-2dd9-44c9-b905-1cc14dd5c0e9")
-		(property "Reference" "#PWR0828"
-			(at 60.96 100.33 0)
+		(uuid "39520539-f235-465e-bb89-e6f2e6ba32e1")
+		(property "Reference" "#PWR01021"
+			(at 152.4 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1520,7 +2267,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 60.96 105.41 0)
+			(at 152.4 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1531,7 +2278,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 60.96 100.33 0)
+			(at 152.4 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1542,7 +2289,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 100.33 0)
+			(at 152.4 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1553,7 +2300,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 60.96 100.33 0)
+			(at 152.4 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1564,30 +2311,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "ed7f11c9-b53d-418a-994c-64eaef033fc7")
+			(uuid "114ab326-0e97-4dcf-981a-0d10377f25cc")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "#PWR0828")
+					(reference "#PWR01021")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 60.96 87.63) (xy 60.96 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d03e3d37-183e-4ed5-aaaf-045f0e3677b3")
-	)
 	(symbol
-		(lib_id "Device:C")
-		(at 43.18 95.25 90)
+		(lib_id "JLCImport:CL10B104KB8NNNC")
+		(at 137.16 95.25 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1595,9 +2333,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ba9a5e80-5771-4286-a6f9-3243ce5eefd6")
-		(property "Reference" "C1101"
-			(at 40.64 91.44 90)
+		(uuid "3f52e124-c297-49db-a167-9aaa4a7b2f47")
+		(property "Reference" "C1006"
+			(at 134.874 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1608,7 +2346,7 @@
 			)
 		)
 		(property "Value" "100nF/50V"
-			(at 40.64 99.06 90)
+			(at 133.096 89.154 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1618,8 +2356,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 43.18 95.25 0)
+		(property "Footprint" "JLCImport:C0603"
+			(at 137.16 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1629,8 +2367,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 43.18 95.25 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B104KB8NNNC_100nF-104-10-50V_C1591.html"
+			(at 137.16 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1640,8 +2378,30 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 43.18 95.25 0)
+		(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 137.16 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 137.16 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 137.16 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1652,7 +2412,7 @@
 			)
 		)
 		(property "LCSC" "C1591"
-			(at 43.18 95.25 0)
+			(at 137.16 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1661,381 +2421,25 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "1"
-			(uuid "0196af5e-24cf-43be-a8c1-15fd842e993f")
 		)
 		(pin "2"
-			(uuid "cb2d8bc5-144c-4c1e-b343-4c1cfdf6b0f6")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "C1101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 39.37 95.25) (xy 36.83 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b50f017-4a91-4231-8de6-a16a2bdf6fa7")
-	)
-	(global_label "IR_L"
-		(shape bidirectional)
-		(at 36.83 95.25 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "33bfe0d2-2f8f-4bdb-bfee-7a469b726859")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 36.83 95.25 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 46.99 95.25) (xy 55.88 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a904068e-8835-4961-b00f-5fbb9abd4e03")
-	)
-	(junction
-		(at 50.8 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4030ec40-2a99-409b-94b1-2e67ea818dce")
-	)
-	(wire
-		(pts
-			(xy 50.8 95.25) (xy 50.8 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0603aa9c-a35f-44cf-8538-9ab085000d31")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 50.8 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "28b3ae5c-5050-47ec-84d3-93b84aab4303")
-		(property "Reference" "R1102"
-			(at 52.07 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 52.07 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 50.8 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+			(uuid "9b5650d1-2402-40f9-be23-c66d014ed0d4")
 		)
 		(pin "1"
-			(uuid "7aad83ed-9eef-44ea-ac12-f0c79e8c46e9")
-		)
-		(pin "2"
-			(uuid "cc88d07f-b908-40ec-a7aa-9922a2f057c4")
+			(uuid "b7d8a5b2-8649-4b5b-b9a4-12d0f6521254")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "R1102")
+					(reference "C1006")
 					(unit 1)
 				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 50.8 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1eb8e742-d5b3-409e-8199-eb81ce157c35")
-		(property "Reference" "#PWR0829"
-			(at 50.8 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 50.8 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 50.8 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 50.8 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 50.8 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "510fe751-621b-40cb-a890-89a379ed1b5d")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "#PWR0829")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 152.4 45.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a4e2e38f-e6f5-4bba-a3ce-41c2d68bbe52")
-		(property "Reference" "R1103"
-			(at 154.305 44.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "150R/1W"
-			(at 154.305 46.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 152.4 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 152.4 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "LED current ~100 mA peak from 20 V (3 x TSAL6200)"
-			(at 152.4 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25471"
-			(at 152.4 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1d70a354-d8a7-41a7-9c7f-f133e88d41e4")
-		)
-		(pin "2"
-			(uuid "7e4ed3a7-75aa-4a39-9640-4bdbbf1893d7")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "R1103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 152.4 41.91) (xy 152.4 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c24b95d5-e9e2-4018-a62f-253634c6e3f2")
-	)
-	(global_label "VIN"
-		(shape bidirectional)
-		(at 152.4 39.37 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bfbf6466-d1b8-4795-9548-c58dd5e0da92")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.4 39.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
 	(symbol
 		(lib_id "JLCImport:TSAL6200")
-		(at 153.67 57.15 270)
+		(at 62.23 69.85 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2043,31 +2447,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1988ac42-54b5-4c11-8442-c08f361379ef")
-		(property "Reference" "IR1104"
-			(at 166.37 55.88 90)
+		(uuid "47312340-a4dc-4f2b-a663-dc5eb7b55eb9")
+		(property "Reference" "IR1002"
+			(at 67.31 68.834 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "TSAL6200"
-			(at 166.37 58.42 90)
+			(at 67.31 71.374 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "JLCImport:TSAL6200"
-			(at 153.67 57.15 0)
+			(at 62.23 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2077,8 +2481,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 153.67 57.15 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-IR-LEDs_VISHAY_TSAL6200_TSAL6200_C55528.html"
+			(at 62.23 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2088,8 +2492,8 @@
 				)
 			)
 		)
-		(property "Description" "940 nm IR LED, 100 mA, +/-17 deg (fan them out)"
-			(at 153.67 57.15 0)
+		(property "Description" "-40℃~+85℃ 1.35V、2.2V 100mA 160mW 17° 30nm 40mW/sr@IF=100mA 5V 940nm 插件,D=5mm Infrared LED Emitters ROHS"
+			(at 62.23 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2100,7 +2504,29 @@
 			)
 		)
 		(property "LCSC" "C55528"
-			(at 153.67 57.15 0)
+			(at 62.23 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 48.26 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TSAL6200"
+			(at 45.72 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2111,131 +2537,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "60225992-52c5-4358-a34f-9de86a41d6f3")
+			(uuid "b253f379-334a-4c04-afcb-2a9ba6867665")
 		)
 		(pin "2"
-			(uuid "152332ce-e93c-4d46-9e7c-64ab21b8a476")
+			(uuid "2d555f29-3b66-4bf9-8989-b65b5c699554")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "IR1104")
+					(reference "IR1002")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 152.4 49.53) (xy 152.4 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f2f52ce-fc48-4b76-948e-6f7141bc70b4")
-	)
-	(symbol
-		(lib_id "JLCImport:TSAL6200")
-		(at 153.67 69.85 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6051bc7f-3412-4c03-b3da-09c509ef9d19")
-		(property "Reference" "IR1105"
-			(at 166.37 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TSAL6200"
-			(at 166.37 71.12 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:TSAL6200"
-			(at 153.67 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 153.67 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "940 nm IR LED, 100 mA, +/-17 deg (fan them out)"
-			(at 153.67 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C55528"
-			(at 153.67 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c7ecd0d9-fcbe-4415-8faf-8a7dab701ce2")
-		)
-		(pin "2"
-			(uuid "0980c6be-85bb-4e82-bd2c-8c6ad0948c0b")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "IR1105")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 152.4 62.23) (xy 152.4 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8faf2f7-a92c-4964-b9c7-2f0d3af543d9")
 	)
 	(symbol
 		(lib_id "JLCImport:TSAL6200")
@@ -2248,26 +2562,26 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "51ed4bd6-b662-464e-9605-4f9f8fcca568")
-		(property "Reference" "IR1106"
-			(at 166.37 81.28 90)
+		(property "Reference" "IR1006"
+			(at 158.75 81.534 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "TSAL6200"
-			(at 166.37 83.82 90)
+			(at 158.75 84.074 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "JLCImport:TSAL6200"
@@ -2281,7 +2595,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-IR-LEDs_VISHAY_TSAL6200_TSAL6200_C55528.html"
 			(at 153.67 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -2292,7 +2606,7 @@
 				)
 			)
 		)
-		(property "Description" "940 nm IR LED, 100 mA, +/-17 deg (fan them out)"
+		(property "Description" "-40℃~+85℃ 1.35V、2.2V 100mA 160mW 17° 30nm 40mW/sr@IF=100mA 5V 940nm 插件,D=5mm Infrared LED Emitters ROHS"
 			(at 153.67 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -2305,6 +2619,28 @@
 		)
 		(property "LCSC" "C55528"
 			(at 153.67 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 139.7 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TSAL6200"
+			(at 137.16 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2323,21 +2659,281 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "IR1106")
+					(reference "IR1006")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 152.4 74.93) (xy 152.4 77.47)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5e91b6b8-2dd9-44c9-b905-1cc14dd5c0e9")
+		(property "Reference" "#PWR01018"
+			(at 60.96 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Value" "GND"
+			(at 60.96 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(uuid "c8423e41-c223-4076-8c74-3441dfbf62b9")
+		(property "Footprint" ""
+			(at 60.96 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ed7f11c9-b53d-418a-994c-64eaef033fc7")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "#PWR01018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:TSAL6200")
+		(at 153.67 69.85 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6051bc7f-3412-4c03-b3da-09c509ef9d19")
+		(property "Reference" "IR1005"
+			(at 158.75 68.834 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TSAL6200"
+			(at 158.75 71.374 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:TSAL6200"
+			(at 153.67 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-IR-LEDs_VISHAY_TSAL6200_TSAL6200_C55528.html"
+			(at 153.67 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-40℃~+85℃ 1.35V、2.2V 100mA 160mW 17° 30nm 40mW/sr@IF=100mA 5V 940nm 插件,D=5mm Infrared LED Emitters ROHS"
+			(at 153.67 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C55528"
+			(at 153.67 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 139.7 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TSAL6200"
+			(at 137.16 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c7ecd0d9-fcbe-4415-8faf-8a7dab701ce2")
+		)
+		(pin "2"
+			(uuid "0980c6be-85bb-4e82-bd2c-8c6ad0948c0b")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "IR1005")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "71677848-e8e6-4e5d-8d3b-b2cd98bb12e8")
+		(property "Reference" "#PWR01020"
+			(at 142.24 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b88482e2-bee3-428f-aa70-9667b1bbffbc")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "#PWR01020")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "JLCImport:AO3400")
@@ -2350,8 +2946,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "928b4128-1a54-4b59-8f10-fb9ee1cc4b07")
-		(property "Reference" "Q1102"
-			(at 154.94 93.98 0)
+		(property "Reference" "Q1002"
+			(at 156.718 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2362,7 +2958,7 @@
 			)
 		)
 		(property "Value" "AO3400"
-			(at 154.94 96.52 0)
+			(at 156.718 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2383,7 +2979,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3400_C20628874.pdf"
 			(at 152.4 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -2394,7 +2990,7 @@
 				)
 			)
 		)
-		(property "Description" "IR LED switch"
+		(property "Description" "30V 5.8A N-channel MOSFET, 25mOhm@4.5V, Vgs +/-12V, Vth 0.65-1.5V, SOT-23"
 			(at 152.4 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -2406,6 +3002,28 @@
 			)
 		)
 		(property "LCSC" "C20628874"
+			(at 152.4 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOSAN"
+			(at 152.4 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "AO3400"
 			(at 152.4 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -2428,15 +3046,15 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "Q1102")
+					(reference "Q1002")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 152.4 100.33 0)
+		(lib_id "power:+5V")
+		(at 152.4 39.37 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2444,271 +3062,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "39520539-f235-465e-bb89-e6f2e6ba32e1")
-		(property "Reference" "#PWR0830"
-			(at 152.4 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 152.4 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 152.4 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 152.4 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 152.4 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "114ab326-0e97-4dcf-981a-0d10377f25cc")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "#PWR0830")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 152.4 87.63) (xy 152.4 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d6a6c55-b6f1-4834-9a42-3eb0c3f6cef1")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 134.62 95.25 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "03e9f094-0099-455d-a39c-ef0a5192a92e")
-		(property "Reference" "C1102"
-			(at 132.08 91.44 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100nF/50V"
-			(at 132.08 99.06 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 134.62 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 134.62 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1591"
-			(at 134.62 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a5316aad-4a63-4fdc-85d3-4751f47eea60")
-		)
-		(pin "2"
-			(uuid "3d8016be-27dc-4a10-9026-1371eabbe682")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "C1102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 130.81 95.25) (xy 128.27 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "315ba194-8d80-4a00-8a21-c67cc8212504")
-	)
-	(global_label "IR_R"
-		(shape bidirectional)
-		(at 128.27 95.25 180)
 		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0b745760-7945-4197-ae12-fce5a345ff45")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 128.27 95.25 180)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 138.43 95.25) (xy 147.32 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "217a4574-9049-41d8-88c4-a121d585b071")
-	)
-	(junction
-		(at 142.24 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "845c9f4c-d377-4462-ac4e-048c727c7d36")
-	)
-	(wire
-		(pts
-			(xy 142.24 95.25) (xy 142.24 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b490801-2564-4f2a-a615-1fb5954fd954")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 142.24 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "adfe7b27-398f-40ca-b591-d541a2cd7e34")
-		(property "Reference" "R1104"
-			(at 143.51 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 143.51 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 142.24 101.6 0)
+		(uuid "941a2f75-7ce4-49e3-a543-1451bbe5a626")
+		(property "Reference" "#PWR01051"
+			(at 152.4 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2718,79 +3075,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 142.24 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 142.24 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 142.24 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7ef127d4-8cd6-4341-859d-6fbc8c369fe8")
-		)
-		(pin "2"
-			(uuid "12818f51-266b-4034-9b31-250cad34eafe")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "R1104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 142.24 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a51b4892-7a32-4339-b22c-e220b94c83c9")
-		(property "Reference" "#PWR0831"
-			(at 142.24 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 142.24 110.49 0)
-			(hide yes)
+		(property "Value" "VIN-20V"
+			(at 152.4 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2800,7 +3086,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 105.41 0)
+			(at 152.4 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2811,7 +3097,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 105.41 0)
+			(at 152.4 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2821,8 +3107,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 142.24 105.41 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 152.4 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2833,20 +3119,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "4ccbad4f-dd3b-43e3-83b2-7bb0e23c4dee")
+			(uuid "d8989a3b-029f-4915-99ea-70bc2dd5bb1b")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "#PWR0831")
+					(reference "#PWR01051")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 96.52 49.53 0)
+		(lib_id "JLCImport:25121WJ0151T4E")
+		(at 152.4 44.45 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2854,31 +3140,147 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0bed25ba-fb8c-4861-847e-4fa54617c304")
-		(property "Reference" "C1103"
-			(at 97.79 48.26 0)
+		(fields_autoplaced yes)
+		(uuid "ab1cd9d5-a0fe-4af7-83a9-bdc0076c1891")
+		(property "Reference" "R1006"
+			(at 154.94 43.1799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
+			)
+		)
+		(property "Value" "150Ω/1W"
+			(at 154.94 45.7199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R2512"
+			(at 160.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-151-5_C25471.html"
+			(at 162.56 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 150Ω 1W 200V Thick Film Resistor ±100ppm/℃ ±5% 2512 Chip Resistor - Surface Mount ROHS"
+			(at 175.26 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 165.1 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "25121WJ0151T4E"
+			(at 167.64 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25471"
+			(at 170.18 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "353e17ea-4874-4bfc-bd8f-5e99fbfac037")
+		)
+		(pin "2"
+			(uuid "7f55b8d8-d5f1-457d-8b3f-dcb25260c2e3")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "R1006")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:CL31A106KBHNNNE")
+		(at 175.26 132.08 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ad7fc17e-e07e-4e09-a1c0-d487f06a3007")
+		(property "Reference" "C1005"
+			(at 171.45 130.8099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(property "Value" "10uF/50V"
-			(at 97.79 50.8 0)
+			(at 171.45 133.3499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 96.52 49.53 0)
+		(property "Footprint" "JLCImport:C1206"
+			(at 167.64 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2888,8 +3290,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 96.52 49.53 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL31A106KBHNNNE_10uF-106-10-50V_C13585.html"
+			(at 165.1 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2899,8 +3301,30 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 96.52 49.53 0)
+		(property "Description" "10uF 50V X5R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 152.4 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 162.56 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 160.02 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2911,7 +3335,7 @@
 			)
 		)
 		(property "LCSC" "C13585"
-			(at 96.52 49.53 0)
+			(at 157.48 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2922,44 +3346,33 @@
 			)
 		)
 		(pin "1"
-			(uuid "7a477e4b-036a-48e1-aadc-1dbd928ef463")
+			(uuid "7a69ecc4-cb00-4ef7-9c36-4d43d2d0cfd5")
 		)
 		(pin "2"
-			(uuid "2acf1838-c8b8-44f9-af97-b0bdd55785ce")
+			(uuid "757afc54-8271-4608-8324-b90e09b6828c")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "C1103")
+					(reference "C1005")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 96.52 45.72) (xy 96.52 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "097795f7-fb73-47fb-a877-d23023bfa1ad")
-	)
-	(global_label "VIN"
-		(shape bidirectional)
-		(at 96.52 43.18 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "cb43a841-fd0b-4b0a-8b11-d9d52c935393")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.52 43.18 90)
-			(hide yes)
+	(symbol
+		(lib_id "JLCImport:TSAL6200")
+		(at 62.23 57.15 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ba707fbb-3af4-474f-9039-580f3d2745bb")
+		(property "Reference" "IR1001"
+			(at 67.31 56.134 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2969,30 +3382,19 @@
 				(justify left)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 96.52 53.34) (xy 96.52 55.88)
+		(property "Value" "TSAL6200"
+			(at 67.31 58.674 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "495314d6-252e-4c87-8307-218ca115508d")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 96.52 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d779c8c9-8fb8-4a21-9300-d64dbc6c30e0")
-		(property "Reference" "#PWR0832"
-			(at 96.52 55.88 0)
+		(property "Footprint" "JLCImport:TSAL6200"
+			(at 62.23 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3002,9 +3404,215 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 96.52 60.96 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-IR-LEDs_VISHAY_TSAL6200_TSAL6200_C55528.html"
+			(at 62.23 57.15 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-40℃~+85℃ 1.35V、2.2V 100mA 160mW 17° 30nm 40mW/sr@IF=100mA 5V 940nm 插件,D=5mm Infrared LED Emitters ROHS"
+			(at 62.23 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C55528"
+			(at 62.23 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 48.26 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TSAL6200"
+			(at 45.72 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7b4350f6-ae16-4ce5-bb11-a3c34271e634")
+		)
+		(pin "2"
+			(uuid "8f328acc-e166-4a23-acf9-b38c6a3f1e9b")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "IR1001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:FRC0603J104TS")
+		(at 50.8 102.87 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bbd6b18c-87dc-465b-bb35-32351d132427")
+		(property "Reference" "R1003"
+			(at 48.26 101.5999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 48.26 104.1399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 58.42 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
+			(at 60.96 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+			(at 50.8 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 63.5 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603J104 TS"
+			(at 66.04 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2907088"
+			(at 68.58 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ef2a523-b871-494c-8ef1-3d124c80af53")
+		)
+		(pin "2"
+			(uuid "0ff00892-9a70-45e2-be0c-7d3f4af1f18a")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "R1003")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 175.26 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bf88abaf-3e80-43ed-9cb0-d05219521d87")
+		(property "Reference" "#PWR01052"
+			(at 175.26 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VIN-20V"
+			(at 175.26 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3014,7 +3622,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 96.52 55.88 0)
+			(at 175.26 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3025,7 +3633,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 55.88 0)
+			(at 175.26 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 175.26 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6fd26d64-6af5-4b95-a312-95b7ca3a6d22")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "#PWR01052")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 175.26 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d779c8c9-8fb8-4a21-9300-d64dbc6c30e0")
+		(property "Reference" "#PWR01019"
+			(at 175.26 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 175.26 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3036,7 +3722,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 96.52 55.88 0)
+			(at 175.26 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3052,15 +3738,16 @@
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "#PWR0832")
+					(reference "#PWR01019")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 187.96 49.53 0)
+		(lib_id "JLCImport:CL10B104KB8NNNC")
+		(at 45.72 95.25 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3068,31 +3755,145 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f4801abe-02db-48bf-bed1-fb3c357f3a3e")
-		(property "Reference" "C1104"
-			(at 189.23 48.26 0)
+		(uuid "db1982c8-0408-42ed-9b5e-e1e141796c6a")
+		(property "Reference" "C1004"
+			(at 43.434 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "10uF/50V"
-			(at 189.23 50.8 0)
+		(property "Value" "100nF/50V"
+			(at 41.656 89.154 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 187.96 49.53 0)
+		(property "Footprint" "JLCImport:C0603"
+			(at 45.72 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B104KB8NNNC_100nF-104-10-50V_C1591.html"
+			(at 45.72 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 45.72 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 45.72 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 45.72 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1591"
+			(at 45.72 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "91ed9ee2-2c17-47eb-87a4-3074ea73fe6c")
+		)
+		(pin "1"
+			(uuid "7ea4f320-29f0-42be-974c-1f5bf067a767")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "C1004")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 60.96 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ebf5b2fb-5719-4cbd-ba48-39985cf83f76")
+		(property "Reference" "#PWR01050"
+			(at 60.96 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VIN-20V"
+			(at 60.96 34.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3103,7 +3904,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 49.53 0)
+			(at 60.96 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3113,8 +3914,109 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 187.96 49.53 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 60.96 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0163f3e3-9124-4717-991b-f60a625c0c24")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "#PWR01050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:CL31A106KBHNNNE")
+		(at 181.61 132.08 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fbc803a8-cd67-4d48-bfa8-499137c22218")
+		(property "Reference" "C1007"
+			(at 185.42 130.8099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10uF/50V"
+			(at 185.42 133.3499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:C1206"
+			(at 189.23 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL31A106KBHNNNE_10uF-106-10-50V_C13585.html"
+			(at 191.77 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10uF 50V X5R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 204.47 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 194.31 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 196.85 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3125,7 +4027,7 @@
 			)
 		)
 		(property "LCSC" "C13585"
-			(at 187.96 49.53 0)
+			(at 199.39 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3136,44 +4038,33 @@
 			)
 		)
 		(pin "1"
-			(uuid "c51a35ce-1fdc-41af-9774-088955e4ee9c")
+			(uuid "0da50c23-ff8d-462d-aa3f-4b5c49842ac9")
 		)
 		(pin "2"
-			(uuid "1996297c-6472-4a29-8a02-ff50eb23a4f3")
+			(uuid "2cab2f34-0002-4e02-8571-69d04d88f44f")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "C1104")
+					(reference "C1007")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 187.96 45.72) (xy 187.96 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3920539d-eccf-400a-bdab-7219e15e6c8c")
-	)
-	(global_label "VIN"
-		(shape bidirectional)
-		(at 187.96 43.18 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ae800300-466e-47e5-b9ac-5a980ef19722")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 187.96 43.18 90)
-			(hide yes)
+	(symbol
+		(lib_id "JLCImport:TSAL6200")
+		(at 62.23 82.55 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ff7cf332-2a3b-48c7-82e0-ab6e79dcef29")
+		(property "Reference" "IR1003"
+			(at 67.31 81.534 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3183,30 +4074,19 @@
 				(justify left)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 187.96 53.34) (xy 187.96 55.88)
+		(property "Value" "TSAL6200"
+			(at 67.31 84.074 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bed76691-2bb9-44e1-9a2d-518378f8adf9")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 187.96 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "644faf1a-f42f-486d-bbe6-282383980672")
-		(property "Reference" "#PWR0833"
-			(at 187.96 55.88 0)
+		(property "Footprint" "JLCImport:TSAL6200"
+			(at 62.23 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3216,8 +4096,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 187.96 60.96 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-IR-LEDs_VISHAY_TSAL6200_TSAL6200_C55528.html"
+			(at 62.23 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3227,8 +4107,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 187.96 55.88 0)
+		(property "Description" "-40℃~+85℃ 1.35V、2.2V 100mA 160mW 17° 30nm 40mW/sr@IF=100mA 5V 940nm 插件,D=5mm Infrared LED Emitters ROHS"
+			(at 62.23 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3238,8 +4118,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 187.96 55.88 0)
+		(property "LCSC" "C55528"
+			(at 62.23 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3249,8 +4129,19 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 187.96 55.88 0)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 48.26 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TSAL6200"
+			(at 45.72 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3261,26 +4152,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "06bc042c-c4e3-41fb-b827-5e4c9e978b69")
+			(uuid "966be6c3-a3ac-446e-9a90-baef09105b33")
+		)
+		(pin "2"
+			(uuid "26ce4876-0754-4fd4-a18d-aabfa63660b9")
 		)
 		(instances
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
-					(reference "#PWR0833")
+					(reference "IR1003")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(text "Beacon: the MCU sends 38 kHz NEC frames (TIM1 PWM, ~1/3 duty), never a steady carrier:\nthe robot receivers (IRM-H638T) suppress continuous 38 kHz. Left and right strings can send\ndifferent codes. Gates are AC-coupled (100 nF / 100k, ~10 ms): a pin stuck high turns the LEDs off.\nMount the three LEDs of each string fanned out (TSAL6200 is +/-17 deg) to cover the room."
-		(exclude_from_sim no)
-		(at 30.48 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fdeab193-7c0a-4dd3-9795-ae6fc60ed8e8")
 	)
 )

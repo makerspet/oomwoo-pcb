@@ -11,161 +11,6 @@
 		(company "OOMWOO Hall sensor")
 	)
 	(lib_symbols
-		(symbol "Device:C"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "JLCImport:CC6201ST"
 			(pin_names
 				(hide yes)
@@ -352,6 +197,203 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:CL10B104KB8NNNC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100nF/50V"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:C0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B104KB8NNNC_100nF-104-10-50V_C1591.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "SAMSUNG(三星)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CL10B104KB8NNNC"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C1591"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Multilayer Ceramic Capacitors MLCC - SMD/SMT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CL10B104KB8NNNC_0_1"
+				(polyline
+					(pts
+						(xy -0.51 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.51 -2.03) (xy -0.51 2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 2.03) (xy 0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 0.51 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:ZX-SH1_0-3PLT"
 			(pin_names
 				(hide yes)
@@ -361,7 +403,7 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
+			(property "Reference" "J"
 				(at 0 12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1078,9 +1120,9 @@
 		)
 		(uuid "0fccef13-4077-4b3f-8dbb-bdec7a43bdc9")
 	)
-	(text "J6001 to the main board HALL-BIN1 or\nHALL-TOWER1, pin 1 to pin 1:\n1 3.3 V, 2 OUT, 3 GND"
+	(text "Use \"same\" cable (pin 1 to pin 1) to main-phone board"
 		(exclude_from_sim no)
-		(at 127.254 76.2 0)
+		(at 127.762 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1089,48 +1131,27 @@
 		)
 		(uuid "6def22f5-ca27-4728-9cd1-1ddce8fdc7fd")
 	)
-	(text "Mounting: 1x M2 (pad to GND)"
-		(exclude_from_sim no)
-		(at 124.46 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e044c953-71a4-4cf4-a5af-ecab69590544")
-	)
 	(junction
-		(at 173.355 93.98)
+		(at 173.99 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0bac2a1e-52e8-4365-8f79-e963cbedc22d")
 	)
 	(junction
-		(at 173.355 110.49)
+		(at 173.99 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "91addc6c-de4f-47f4-b0b2-6eef865fdb10")
 	)
 	(junction
-		(at 160.655 93.98)
+		(at 161.29 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bbdc6ffe-adbb-4b49-932d-cd69bd09a4c8")
 	)
 	(wire
 		(pts
-			(xy 101.6 105.41) (xy 101.6 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09afcf61-7503-45fe-834f-79a307c58309")
-	)
-	(wire
-		(pts
-			(xy 165.735 99.06) (xy 160.655 99.06)
+			(xy 166.37 99.06) (xy 161.29 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1140,17 +1161,17 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 97.79) (xy 101.6 95.25)
+			(xy 101.6 106.68) (xy 101.6 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2964327e-0500-482a-af82-0d9067ab7565")
+		(uuid "1e6931a1-240a-4b1f-9ffb-4a92c12cd20f")
 	)
 	(wire
 		(pts
-			(xy 175.895 110.49) (xy 173.355 110.49)
+			(xy 176.53 109.22) (xy 173.99 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1160,17 +1181,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 133.35) (xy 127 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32e72d4d-6cb9-4710-835c-d5cd45c7e857")
-	)
-	(wire
-		(pts
-			(xy 173.355 93.98) (xy 173.355 92.71)
+			(xy 173.99 93.98) (xy 173.99 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1180,7 +1191,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.895 93.98) (xy 175.895 110.49)
+			(xy 176.53 93.98) (xy 176.53 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1220,7 +1231,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.355 93.98) (xy 175.895 93.98)
+			(xy 173.99 93.98) (xy 176.53 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1230,7 +1241,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.735 110.49) (xy 173.355 110.49)
+			(xy 166.37 109.22) (xy 173.99 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1240,7 +1251,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.735 104.14) (xy 165.735 110.49)
+			(xy 166.37 104.14) (xy 166.37 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1250,7 +1261,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.655 93.98) (xy 160.655 99.06)
+			(xy 161.29 93.98) (xy 161.29 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1260,17 +1271,17 @@
 	)
 	(wire
 		(pts
-			(xy 173.355 109.22) (xy 173.355 110.49)
+			(xy 101.6 96.52) (xy 101.6 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ad83857d-b853-47f5-b569-8c30dc317c1b")
+		(uuid "a010186b-ec54-475b-b5f5-62962d25244a")
 	)
 	(wire
 		(pts
-			(xy 160.655 93.98) (xy 157.48 93.98)
+			(xy 161.29 93.98) (xy 157.48 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1290,7 +1301,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 101.6) (xy 165.735 101.6)
+			(xy 133.35 101.6) (xy 166.37 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1310,7 +1321,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 160.655 93.98 0)
+		(at 161.29 93.98 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -1321,7 +1332,7 @@
 		(dnp no)
 		(uuid "0570a25e-4218-4db6-993f-05f9381c3f45")
 		(property "Reference" "#PWR6005"
-			(at 160.655 93.98 0)
+			(at 161.29 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1332,7 +1343,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 160.655 88.9 0)
+			(at 161.29 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1342,7 +1353,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.655 93.98 0)
+			(at 161.29 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1353,7 +1364,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.655 93.98 0)
+			(at 161.29 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1364,7 +1375,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 160.655 93.98 0)
+			(at 161.29 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1388,7 +1399,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 173.355 92.71 0)
+		(at 173.99 92.71 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -1399,7 +1410,7 @@
 		(dnp no)
 		(uuid "1e731601-e133-4a01-8630-e368f9da41bd")
 		(property "Reference" "#FLG6004"
-			(at 173.355 92.71 0)
+			(at 173.99 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1410,7 +1421,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 173.355 88.9 0)
+			(at 173.99 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1421,7 +1432,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.355 92.71 0)
+			(at 173.99 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1432,7 +1443,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.355 92.71 0)
+			(at 173.99 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1443,7 +1454,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 173.355 92.71 0)
+			(at 173.99 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1466,100 +1477,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 101.6 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "25c3aea2-aca9-4343-ba23-a3ed326657c6")
-		(property "Reference" "C6001"
-			(at 104.14 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF/50V"
-			(at 104.14 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 101.6 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Hall switch bypass, at U6001"
-			(at 101.6 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1591"
-			(at 101.6 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cd4b1b64-3f97-462a-81c0-10f061c551b5")
-		)
-		(pin "2"
-			(uuid "a3bdc3b8-ff6b-43a4-83d0-ea956d379cd1")
-		)
-		(instances
-			(project "Hall Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "C6001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 173.355 110.49 0)
+		(at 173.99 109.22 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -1570,7 +1489,7 @@
 		(dnp no)
 		(uuid "2b21189b-3e25-4c72-af95-dc36267def85")
 		(property "Reference" "#PWR6002"
-			(at 173.355 110.49 0)
+			(at 173.99 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1581,7 +1500,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 173.355 115.57 0)
+			(at 173.99 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1592,7 +1511,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.355 110.49 0)
+			(at 173.99 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1603,7 +1522,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.355 110.49 0)
+			(at 173.99 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1614,7 +1533,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 173.355 110.49 0)
+			(at 173.99 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1872,7 +1791,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-3PLT")
-		(at 169.545 101.6 0)
+		(at 170.18 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1882,7 +1801,7 @@
 		(dnp no)
 		(uuid "863fc3a4-06e9-4630-855a-f9ffc8b74874")
 		(property "Reference" "J6001"
-			(at 164.846 94.742 0)
+			(at 165.481 94.742 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1893,7 +1812,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-3PLT"
-			(at 164.846 115.316 0)
+			(at 165.481 115.316 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1904,7 +1823,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-3PLT"
-			(at 169.545 101.6 0)
+			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1915,7 +1834,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430452.pdf"
-			(at 169.545 101.6 0)
+			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1925,8 +1844,8 @@
 				)
 			)
 		)
-		(property "Description" "JST SH compatible 1.0 mm 1x3P, SMD vertical, to the main board"
-			(at 169.545 101.6 0)
+		(property "Description" "JST SH compatible 1.0 mm 1x3P, SMD vertical (top entry), 2 mounting pads (4, 5)"
+			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1937,7 +1856,7 @@
 			)
 		)
 		(property "LCSC" "C7430452"
-			(at 169.545 101.6 0)
+			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1948,7 +1867,7 @@
 			)
 		)
 		(property "Manufacturer" "Megastar"
-			(at 169.545 101.6 0)
+			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1959,7 +1878,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ZX-SH1.0-3PLT"
-			(at 169.545 101.6 0)
+			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1995,7 +1914,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 127 135.89 0)
+		(at 127 133.35 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2005,7 +1924,7 @@
 		(dnp no)
 		(uuid "a5a201ca-1840-4c68-bfc2-c79716467e53")
 		(property "Reference" "#PWR6011"
-			(at 127 135.89 0)
+			(at 127 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2016,7 +1935,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 127 140.97 0)
+			(at 127 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2027,7 +1946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 135.89 0)
+			(at 127 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2038,7 +1957,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 135.89 0)
+			(at 127 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2049,7 +1968,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 135.89 0)
+			(at 127 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2066,6 +1985,121 @@
 			(project "Hall Sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:CL10B104KB8NNNC")
+		(at 101.6 101.6 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aeeccab4-17ab-43cc-9fc6-d9c981a9e257")
+		(property "Reference" "C6001"
+			(at 105.41 100.3299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF/50V"
+			(at 105.41 102.8699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:C0603"
+			(at 93.98 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B104KB8NNNC_100nF-104-10-50V_C1591.html"
+			(at 91.44 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 78.74 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 88.9 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 86.36 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1591"
+			(at 83.82 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4014bc1f-b3a6-45df-902d-ab182a337072")
+		)
+		(pin "1"
+			(uuid "9a1a1acc-0fa1-40e0-9be4-a209541c5094")
+		)
+		(instances
+			(project "Hall Sensor"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "C6001")
 					(unit 1)
 				)
 			)

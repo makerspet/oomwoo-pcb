@@ -590,6 +590,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 - Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on J7 (PE4), LiDAR tower bumper on J8 (PE5) (HALL-BIN1 / HALL-TOWER1 until 2026-11-13). Low = magnet near; the MCU's internal pull-ups on PE4/PE5 (R215/R216 removed 2026-11-04; either Hall output type works).
 - REAR-IR1 uses the same 4-pin SH vertical connector as the cliff sensors (ZX-SH1.0-4PLT). The Hall boards use the 3-pin one (ZX-SH1.0-3PLT, C7430452; 1 3.3 V, 2 OUT, 3 GND), so a Hall cable can't be plugged into a cliff or rear IR socket (changed 2026-10-29). All three sit on the SIDE-PROXI sheet.
 - The mounting pads of every SH socket on the main board go to GND (2026-10-29), as they already did on the sensor boards.
+- [Wake-up sensor board](../kicad/wake-sensor/README.md) on J9 (since 2026-11-15; R75 on the main board before): a GL5537 LDR from VMCU-3V3 to PB12 (ADC), with R103 (10k) to GND and C1 (100 nF) on the main board. J9 is the 2-pin SH socket (ZX-SH1.0-2PLT, C7430451; 1 VMCU-3V3, 2 LDR), so no other sensor cable fits it. More light reads higher; unplugged reads ~0 V.
 
 ### Cliff sensors (v1)
 

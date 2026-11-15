@@ -29,6 +29,6 @@ Use a pin 1 to pin 1 cable.
 
 - Put U5001 and U5002 about 10 mm apart with a baffle between them (3D-printed, in the rear window). When both see the dock it is straight behind; when one does, steer toward that side. U5001 is the left one seen from behind the robot.
 - H5001/H5002: two M2 holes (`MountingHole_2.2mm_M2_Pad`, pads to GND, not in the BOM).
-- Reference designators are in this board's 5000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s.
+- Reference designators are in this board's 5000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s, wake-up sensor 7000s.
 
 All parts are assembled at JLC. Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`).

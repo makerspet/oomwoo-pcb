@@ -39,7 +39,7 @@ The VL53L0X starts at I2C address 0x52, the same as the two front VL53L7s on the
 - The PCB file in this folder is the old layout. Run *Update PCB from Schematic* before layout work.
 - H3001/H3002: two M2 holes (`MountingHole_2.2mm_M2_Pad`, pads to GND, not in the BOM), to keep the board small.
 - Keep copper, silkscreen and parts out of the sensor's field of view, and give it a cover window (ST's cover-glass guidance applies).
-- Reference designators are in this board's 3000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s.
+- Reference designators are in this board's 3000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s, wake-up sensor 7000s.
 
 All parts are assembled at JLC.
 

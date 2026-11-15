@@ -68,7 +68,7 @@ Firmware:
 - Route the INA180 inputs (IN+ on DOCK-, IN- on GND) as a Kelvin pair to R1016's pads.
 - J1003/J1004: F22-20-0.8-2.4UU coil springs (C20626123, since 2026-11-15; YZP0670-20143-01 pogo pins before): Ø22 mm, 20 mm tall, 0.8 mm nickel-plated steel wire, two slotted legs 21.6 mm apart, both on the contact's net. They stand out of the vertical board's front face, rear-vertical for the robot, above the water line; keep their centres ≥ ~30 mm apart. VDOCK-20V / DOCK- traces sized for 4 A.
 - H1001-H1004: four M3 holes (`MountingHole_3.2mm_M3_Pad`, pads to GND, not in the BOM), on the root sheet.
-- Reference designators are in the dock's 1000s range (all sheets in 10xx since 2026-11-14; POWER 10xx, IR BEACON 11xx, CONTROL 12xx before); every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s.
+- Reference designators are in the dock's 1000s range (all sheets in 10xx since 2026-11-14; POWER 10xx, IR BEACON 11xx, CONTROL 12xx before); every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s, wake-up sensor 7000s.
 
 ## Parts shared with the robot
 

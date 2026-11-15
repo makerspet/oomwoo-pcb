@@ -47,7 +47,7 @@ Rotated 180°, 3.3 V would meet GND. Check both boards together in the 3D CAD be
 - The sensor needs a clear view through the bumper window: no copper, silkscreen or part above it, and a cover window from a material on ST's cover-glass list.
 - Put TP2001 on the back, away from the sensor's view. It has no paste and stays off the BOM.
 - Place U2002 on the front face right next to the sensor, so one bumper opening covers both, and keep it and the baffle out of the sensor's 60° x 60° field of view. An opaque baffle between them (part of the mount or bumper) keeps the ToF laser off the receiver.
-- Reference designators are in this board's 2000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s. The panel has two copies of this board; let KiKit (or the panel tool) rename references per copy so the assembly files stay unique.
+- Reference designators are in this board's 2000s range: every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s, wake-up sensor 7000s. The panel has two copies of this board; let KiKit (or the panel tool) rename references per copy so the assembly files stay unique.
 
 ## Assembly: the sensor is placed by hand
 

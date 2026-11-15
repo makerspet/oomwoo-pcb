@@ -16,7 +16,7 @@ Sheets: root (MCU, status LED, debug pads, optional IR receiver, mounting holes)
 
 - WCH CH32V003F4P6, TSSOP-20 (LCSC C5187096, ~$0.17): 48 MHz RISC-V, 16 KB flash, 10-bit ADC, internal oscillator (no crystal).
 - Toolchains: WCH's official Arduino core, [ch32fun](https://github.com/cnlohr/ch32fun) and PlatformIO.
-- Programming and debug: a WCH-LinkE on the single-wire SWIO pin (PD1). J1001 (1x5, not fitted) pinout: 1 3V3, 2 SWIO, 3 TX, 4 RX, 5 GND.
+- Programming and debug: a WCH-LinkE on the single-wire SWIO pin (PD1). J1001 (1x5, not fitted) pinout: 1 3V3, 2 SWIO, 3 TX, 4 RX, 5 GND. J1005 (same 1x5 part, not fitted) brings out the spare GPIO: 1 3V3, 2 PC5, 3 PC6, 4 PC7, 5 GND.
 
 | Pin | Function | Notes |
 | --- | --- | --- |
@@ -31,6 +31,8 @@ Sheets: root (MCU, status LED, debug pads, optional IR receiver, mounting holes)
 | PD4 | IR_RX | TIM2_CH1 capture, optional receiver U1002 |
 | PD5, PD6 | UART TX, RX | debug |
 | PD1 | SWIO | programming |
+| PC5, PC6, PC7 | spare | on J1005 (not fitted); SPI SCK/MOSI/MISO, or I2C SCL/SDA on PC5/PC6 with the pin remap |
+| PD0, PD7 | unused | PD7 is NRST by default |
 
 The ADC reference is VDD, and PROBE-DRV high is VDD too, so the probe readings are ratiometric.
 
@@ -54,7 +56,7 @@ Firmware:
 
 ## IR beacon
 
-- The robot's receivers (IRM-V838M3-C, AGC type) suppress a steady 38 kHz carrier, so the beacon must send bursts: NEC frames, with the TIM1 PWM at ~1/3 duty and the frame envelope gated in firmware.
+- The robot's receivers (IRM-H638T, AGC type) suppress a steady 38 kHz carrier, so the beacon must send bursts: NEC frames, with the TIM1 PWM at ~1/3 duty and the frame envelope gated in firmware.
 - IR-L and IR-R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C1004/C1006 100 nF, R1003/R1005 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
 - R1004/R1006 are 150 Ω 2512 (1 W): 1.7 W peak, ~0.3 W average at NEC duty.

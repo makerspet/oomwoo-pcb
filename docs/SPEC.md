@@ -249,7 +249,7 @@ Original plan:
 - the dock has only 2 contacts: DOCK+ and GND
   - DOCK+ is the 20 V brick voltage (the robot needs 18.5-22 V)
   - the dock measures the resistance across the contacts and energizes DOCK+ only when it sees the robot's signature (after a couple of seconds); it switches off when the charging current stops
-  - dock contacts are spring loaded, gold-coated pogo pins ≥4 A, placed rear-vertical, above water line
+  - dock contacts are two Ø22 mm coil springs (C20626123, nickel-plated steel, since 2026-11-15; gold-coated pogo pins before), placed rear-vertical, above water line; ~0.15 Ω each (estimate), so test them at 2-3 A
 - full dock (later):
   - powered from an external certified DC brick (~200–350 W); use an external brick for safety, so the dock enclosure only ever sees low-voltage DC
   - reuse a 25.2 V stick-vac motor for auto-empty, e.g. Dreame M10-E-4 25.2 V/310 W; with a 24/25.2 V brick, the dock must still make 20 V for the contacts

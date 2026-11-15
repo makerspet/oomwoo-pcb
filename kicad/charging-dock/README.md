@@ -1,6 +1,6 @@
 # OOMWOO charging dock (charging only)
 
-The dock the v1 robot ([`../main-phone`](../main-phone/README.md)) charges from. It has two pogo contacts (VDOCK-20V and DOCK-), an IR beacon so the robot can find it, and a small MCU. Rev 2, 2026-10-27: a full redesign of the first draft. The first draft had a 555 beacon, a third "detector" contact and a 24 V input, and its 5 V buck had no input connection.
+The dock the v1 robot ([`../main-phone`](../main-phone/README.md)) charges from. It has two spring charging contacts (VDOCK-20V and DOCK-), an IR beacon so the robot can find it, and a small MCU. Rev 2, 2026-10-27: a full redesign of the first draft. The first draft had a 555 beacon, a third "detector" contact and a 24 V input, and its 5 V buck had no input connection.
 
 Sheets: root (MCU, status LED, debug pads, optional IR receiver, mounting holes), **POWER** (input, 3.3 V, output switch, current sense, robot probe), **IR BEACON**.
 
@@ -8,7 +8,7 @@ Sheets: root (MCU, status LED, debug pads, optional IR receiver, mounting holes)
 
 1. A 20 V brick plugs into J1002 (DC-044A-20A, the same jack as the robot). F1001 (5 A fuse), D1001 (SMAJ22A) and C1011 protect the input. U1003 (HT7533-1) makes 3.3 V for the MCU.
 2. With the contacts off, the MCU measures the resistance across them (see [Robot detection](#robot-detection)). It switches 20 V on only when it sees the robot.
-3. Q1003 (AO4407C P-FET) switches VDOCK-20V. R1012/R1015 set Vgs to -10 V, and C1017 (47 nF, gate to drain) ramps VDOCK-20V at ~30 V/ms, so the robot's input capacitors charge at ~0.5 A instead of sparking on the pogo pins. D1003 (SMAJ22A) protects the exposed contacts.
+3. Q1003 (AO4407C P-FET) switches VDOCK-20V. R1012/R1015 set Vgs to -10 V, and C1017 (47 nF, gate to drain) ramps VDOCK-20V at ~30 V/ms, so the robot's input capacitors charge at ~0.5 A instead of sparking on the contacts. D1003 (SMAJ22A) protects the exposed contacts.
 4. R1016 (50 mΩ) and U1004 (INA180A1 clone from lingxingic, C48533472, gain 20; TI's INA180A1IDBVR C122228 is the pin-compatible alternative) measure the charging current on DOCK-: I-SENSE = 1 V/A, 3.3 A full scale. The MCU switches VDOCK-20V off when the current drops to ~0 (the robot left) or on overcurrent.
 5. Two IR LED strings (3x TSAL6200 each, ~100 mA peak from 20 V) send 38 kHz NEC frames for the robot's receivers.
 
@@ -66,20 +66,23 @@ Firmware:
 
 - Mount the three TSAL6200 of each string fanned out horizontally (they are ±17°), left string and right string to each side, overlapping in the middle.
 - Route the INA180 inputs (IN+ on DOCK-, IN- on GND) as a Kelvin pair to R1016's pads.
-- J1003/J1004: YZP0670-20143-01 pogo pins (4 A), rear-vertical, above the water line. VDOCK-20V / DOCK- traces sized for 4 A.
+- J1003/J1004: F22-20-0.8-2.4UU coil springs (C20626123, since 2026-11-15; YZP0670-20143-01 pogo pins before): Ø22 mm, 20 mm tall, 0.8 mm nickel-plated steel wire, two slotted legs 21.6 mm apart, both on the contact's net. They stand out of the vertical board's front face, rear-vertical for the robot, above the water line; keep their centres ≥ ~30 mm apart. VDOCK-20V / DOCK- traces sized for 4 A.
 - H1001-H1004: four M3 holes (`MountingHole_3.2mm_M3_Pad`, pads to GND, not in the BOM), on the root sheet.
 - Reference designators are in the dock's 1000s range (all sheets in 10xx since 2026-11-14; POWER 10xx, IR BEACON 11xx, CONTROL 12xx before); every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s.
 
 ## Parts shared with the robot
 
-DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, PZ254R-11-05P, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120, 100) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, YZP0670 pogo pin, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
+DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, PZ254R-11-05P, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120, 100) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
 
 Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`) and the KiCad standard libraries.
 
 ## Open items
 
-- Charging contacts (checked 2026-11-14). Plan: the dock PCB stands vertically right behind the contact window, so the contacts point out of the front face and a robot backing into the dock presses its rear plates against them (the layout a future mop-wash robot needs; contacts underneath, slid over head-on, only suit robots without a mop). J1003/J1004 are YZP0670-20143-01 pogo pins (C7471744): already vertical through-hole (Ø2.0 mm barrel, Ø0.9 mm tail, Ø1.2 mm plunger), 2.7 mm stroke, 70 gf, 4 A, 50 mΩ, gold over brass, ~$0.41 each at 1k, but only ~130 in stock. Alternatives:
-  - Coil springs (Sam&wing "Spring", ~$0.02-0.07, well stocked): F10-10-6.5-0.4Z (C3015092, Ø10 mm flared end, Ø6.5 mm body, 10 mm tall, one 3.3 mm centre pin), F8-8-5-0.4Z (C3015091, Ø8/Ø5 mm, 8 mm tall, 3 mm pin), F8-10-0.4-1.3 (C3015096, Ø8 mm straight, 10 mm tall, two 3.5 mm U-legs), all 0.4 mm nickel-plated carbon steel wire, per their drawings. The part number reads outer Ø - height (- small-end Ø) - wire Ø (- leg width), so F15-14-0.6-1.5uu (C5143830) and F22-20-0.8-2.4UU (C20626123) are 0.6 and 0.8 mm wire (no drawings on LCSC). Not as the current path: ~200 mm of 0.4 mm steel wire is ~0.3 Ω (0.6-0.8 mm wire: ~0.15-0.2 Ω), so ~1.2 W per spring at the ~2 A the dock carries with the phone charging, against ~0.2 W for the pogo pin. Usable as the spring behind a brass or nickel-plated contact plate that is itself wired to the PCB.
-  - Other Xinyangze through-hole pogo pins, 3-10 A, ~$0.2-0.8, but each in stock in the hundreds (e.g. C5157294, 5 A, 15 mm), and most with less travel; check the stroke on the drawing before switching.
-  - Sprung metal strips with a dimple (most robot vacuums): more travel and sideways tolerance, self-wiping, nothing for dust to jam. Then the PCB only needs two wire or screw pads (or a 2-pin ~4 A connector), and the robot side needs matching plates.
+- Charging contacts: coil springs since 2026-11-15 (J1003/J1004 above). The dock PCB stands vertically right behind the contact window, and a robot backing into the dock presses its rear plates against the springs (the layout a future mop-wash robot needs). Why: the YZP0670 pogo pins (C7471744, gold over brass, 4 A, 50 mΩ, 2.7 mm stroke) cost ~$0.41 with only ~130 in stock; the cheaper pogo pins are rated 12 V or travel too little; the 0.4 mm-wire springs are ~0.3 Ω and the "Z" ones (C3015092, C3015091) have a sharp centre pin. C20626123 costs ~$0.07 at 1k. There is no drawing on LCSC, so check on the first units:
+  - resistance and temperature rise at 2-3 A: estimate ~0.15 Ω per spring, so ~0.2 W at 1.1 A charging and ~0.6 W at 2 A (phone charging too), against ~0.1 W for a pogo pin; nickel-plated steel conducts far worse than brass
+  - force and travel against the robot's plates: estimate ~1 N per spring at 10 mm compression (pogo pin: 0.7 N)
+  - the signature probe still reads the robot correctly through the springs
+  - rust once the plating wears, near a future mop wash, and hair caught in the open coils
+  - the robot's plates cover the Ø22 mm coil end plus the docking tolerance
+  Fallbacks: pogo pins (the YZP0670 footprint), or sprung metal strips with a dimple.
 - Measure the real robot signature (resistance and settling time) on the first boards, with a full battery and a flat one, and set the firmware window from that.

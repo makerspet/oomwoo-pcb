@@ -641,16 +641,20 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - every 0603 10 µF rated ≤ 10 V is 10uF/10V (C19702): 2 lines → 1; the 25 V parts stay on ≥ 12 V nets
 - 1uF/25V (C14, C22): C380328
 
-### 3.3 V and 5 V bucks (v1, 2026-10-27)
+### 3.3 V and 5 V bucks (v1, RY9430 since 2026-11-15)
 
-- U21 (VMCU-3V3) and U22 (VSENS-5V-USB) are TPS54560BDDAR (C1850354: 4.5-60 V, 5 A, SO-8 PowerPAD, ~$0.61). The AP64501SP-13 they replace was out of stock (1 left at LCSC). Same 0.8 V reference, so the FB dividers are unchanged.
-- Non-synchronous: SS56 catch diodes D42/D43 (SW to GND, same part as D12-D15). Keep the SW node, the diode and the input capacitors in a tight loop.
-- fsw 418 kHz: RT R205/R206 = 232k (same part as R160), where the AP64501 soft-start caps were. Soft start is internal.
-- Compensation, the same on both rails: R143/R147 4.7k + C112/C120 47 nF (crossover ~20 kHz with ~40 µF effective output capacitance). No high-frequency pole capacitor: the output capacitors are all ceramic, so there is no ESR zero to cancel.
-- U21 EN: VMCU-3V3-POWER-EN is the full VBAT-14V4 (up to ~20 V while charging), and EN is rated 8.4 V. R207 (100k) / R208 (22.1k) give 3.6 V at 20 V and an input UVLO of ~6.5 V. U22 EN stays on VSENS_5V_USB_EN (3.3 V logic, R168 100k pull-down).
-- VBAT-14V4 input capacitors C95, C106, C115, C116: 10 µF/50 V 1206 (C13585). The 10 µF/25 V 0603 parts kept only ~1 µF at 20 V.
-- Cost of the diode: ~1 W at 5 V / 3 A. If efficiency matters later, the synchronous AP64500 (40 V, 5 A, ~$1.04) is the alternative.
-- PCB engineer: new footprint (TI DDA, 2.95 x 4.9 mm thermal pad with vias).
+- U21 (VMCU-3V3) and U22 (VSENS-5V-USB) are RYCHIP RY9430DP8 (C2879809: 4.5-38 V, 3 A, 500 kHz, synchronous, ESOP-8, ~$0.13; 42 V absolute maximum on VIN and EN). Chosen on price for the prototype; if it gives trouble, fall back to a well-known part for the product (TI LMR33630ADDAR, Silergy SY8303AIC, or the pin-compatible TPS54360BDDAR for the old TPS54560B layout).
+- Input: VBAT-14V4 reaches ~22 V while charging, and D41 (SMAJ22A) clamps surges at ~35 V, inside the 38 V rating.
+- Synchronous with internal compensation and soft start (1.2 ms): no catch diode, RT resistor or compensation network. D42/D43, R205/R206, R143/R147 and C112/C120 are gone.
+- Feedback: VFB is 0.923 V on the DP8 (the only variant JLC stocks; the BP8 is 0.8 V). VMCU-3V3: R144 12k / R145 4.7k = 3.28 V. VSENS-5V-USB: R148 12k / R149 2.7k = 5.03 V. Both rails are ±2.5 % from the reference tolerance. (Until 2026-11-15 R148 was labelled 12k but carried the LCSC number of a 17.4k part, C2930069, which would have made ~7.1 V.)
+- 5 V budget: about 1.5 A for the robot's own loads (LiDAR, LEDs, carpet-sensor boost, J1 mods), which leaves about 1.5 A for charging the phone over USB-C. If the robot sources VBUS, advertise at most 1.5 A (Rp 1.5 A) on CC.
+- Inductors L2/L3 stay 3.3 µH (CYA0630, 9.5 A saturation). The datasheet suggests 4.7 µH for 5 V; 3.3 µH gives ~2.3 A peak-to-peak ripple at 22 V in: ~4.2 A peak and ~1.8 A valley at a 3 A load, under the 4 A valley current limit and the inductor's saturation. 4.7 µH on L3 would lower the 5 V ripple if needed.
+- Output capacitors: 3 x 10 µF/10 V 0603 per rail (the datasheet example uses 2 x 22 µF). Check ripple and load steps on the first boards; add capacitance if needed.
+- Boot: C111/C119 100 nF with R141/R146 (10 Ω) in series, kept to slow the SW edges.
+- U21 EN: VMCU-3V3-POWER-EN is the full VBAT-14V4. EN is rated 42 V, so R207 (100k) / R208 (22.1k) now only set the turn-on: EN rises past 1.1 V at ~6 V input. U22 EN stays on VSENS-5V-USB-EN (3.3 V logic, R168 100k pull-down).
+- VBAT-14V4 input capacitors C95, C106, C115, C116: 10 µF/50 V 1206 (C13585), plus 100 nF (C102, C117) at each VIN pin.
+- Layout: keep the input capacitors, VIN, GND and SW in a tight loop; the exposed pad (pin 9) is GND, with copper and vias under it. FB divider next to the chip, away from SW.
+- History: AP64501SP-13 until 2026-10-27 (out of stock), then TPS54560BDDAR (C1850354, 60 V, non-synchronous) until 2026-11-15.
 
 ## Safety and power rails
 
@@ -661,12 +665,12 @@ Power rails (current schematic):
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
 | VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
-| VMCU-3V3 | AP64501 buck (U21; TPS54560B on v1) | STM32 | VMCU-3V3-POWER-EN |
+| VMCU-3V3 | RY9430 buck (U21) | STM32 | VMCU-3V3-POWER-EN |
 | VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic | STM32 (~VSENS_3V3_EN, low = on) |
 | VMCU-BAT-3V3 | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
-| VSENS-5V-USB | AP64501 buck (U22; TPS54560B on v1) | CM5, speaker amp, USB header, LiDAR and pump switches, VUSONIC-14V4 boost | STM32 (VSENS_5V_USB_EN) |
+| VSENS-5V-USB | RY9430 buck (U22, 3 A max) | LiDAR, cliff and bumper LEDs, VUSONIC-14V4 boost, spare header J1 (pin 12), USB-C VBUS to the phone | STM32 (VSENS_5V_USB_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
-| USB-C VBUS 5 V | AP64501 buck (U25) + TMI6240 | phone (phone-as-compute option) | STM32 (USB_PWR_EN) |
+| USB-C VBUS 5 V | VSENS-5V-USB through U2 TMI6240 + Q27 | phone (phone-as-compute option) | STM32 (USB_PWR_EN) |
 | VUSONIC-14V4 (≈ 14.5 V) | MT3608 boost | carpet sensor | with VSENS-5V-USB |
 | VMOT-14V4 | VBAT-14V4 via Q1 + Q2 AO4407C (parallel) | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
 | VLIDAR-5V | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |

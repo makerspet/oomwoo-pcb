@@ -5384,7 +5384,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:TPS54560BDDAR"
+		(symbol "JLCImport:RY9430DP8"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -5400,7 +5400,7 @@
 					)
 				)
 			)
-			(property "Value" "TPS54560BDDAR"
+			(property "Value" "RY9430DP8"
 				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5410,7 +5410,7 @@
 					)
 				)
 			)
-			(property "Footprint" "JLCImport:POWERPAD-SO-8_L4.9-W3.9-P1.27-LS6.0-BL-EP"
+			(property "Footprint" "JLCImport:ESOP-8_L4.9-W3.9-P1.27-LS6.2-BL-EP"
 				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5421,7 +5421,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C1850354.pdf"
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C2879809.pdf"
 				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5432,7 +5432,7 @@
 					)
 				)
 			)
-			(property "Description" "-40℃~+150℃@(TJ) 1 146uA 4.5V~60V 500kHz 5A 800mV~58.8V Adjustable Buck Buck Built-in No SO-8 DC-DC Converters ROHS"
+			(property "Description" "38 V 3 A 500 kHz synchronous buck, internal compensation, VFB 0.923 V, ESOP-8 (EP = GND)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5443,7 +5443,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "TI(德州仪器)"
+			(property "Manufacturer" "RYCHiP(蕊源)"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5454,7 +5454,7 @@
 					)
 				)
 			)
-			(property "MPN" "TPS54560BDDAR"
+			(property "MPN" "RY9430DP8"
 				(at 0 -20.32 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5465,7 +5465,7 @@
 					)
 				)
 			)
-			(property "LCSC" "C1850354"
+			(property "LCSC" "C2879809"
 				(at 0 -22.86 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5487,7 +5487,7 @@
 					)
 				)
 			)
-			(symbol "TPS54560BDDAR_0_1"
+			(symbol "RY9430DP8_0_1"
 				(rectangle
 					(start -7.62 6.604)
 					(end 7.62 -7.62)
@@ -5513,7 +5513,7 @@
 				(pin passive line
 					(at -10.16 2.54 0)
 					(length 2.54)
-					(name "BOOT"
+					(name "BST"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5546,7 +5546,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin input line
 					(at -10.16 -2.54 0)
 					(length 2.54)
 					(name "EN"
@@ -5556,7 +5556,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5564,17 +5564,17 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin no_connect line
 					(at -10.16 -5.08 0)
 					(length 2.54)
-					(name "RT/CLK"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5582,7 +5582,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin input line
 					(at 10.16 -5.08 180)
 					(length 2.54)
 					(name "FB"
@@ -5600,10 +5600,10 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin no_connect line
 					(at 10.16 -2.54 180)
 					(length 2.54)
-					(name "COMP"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5628,7 +5628,7 @@
 							)
 						)
 					)
-					(number "7"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5646,7 +5646,7 @@
 							)
 						)
 					)
-					(number "8"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5655,11 +5655,11 @@
 					)
 				)
 			)
-			(symbol "TPS54560BDDAR_1_1"
+			(symbol "RY9430DP8_1_1"
 				(pin passive line
 					(at 10.16 5.08 180)
 					(length 2.54)
-					(name "PAD"
+					(name "EP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6795,7 +6795,7 @@
 		)
 		(uuid "0f4cd1a6-ff47-4e80-bc30-99d4070b2d95")
 	)
-	(text "5V USB, SENSORS, LiDAR POWER RAIL\n- set 5V_EN HIGH to enable\n\nTPS54560B (U21, U22):\n- non-synchronous\n- COMP 4.7k + 47nF (all-ceramic Cout, no pole cap)\n- SS56 catch diode; Fsw 418 kHz (RT 232k)"
+	(text "5V USB, SENSORS, LiDAR POWER RAIL\n- set 5V_EN HIGH to enable\n\nRY9430DP8 (U21, U22):\n- synchronous, 500 kHz, internal compensation\n- VFB 0.923 V: 12k / 2.7k = 5.03 V"
 		(exclude_from_sim no)
 		(at 105.41 36.83 0)
 		(effects
@@ -6826,16 +6826,6 @@
 			(justify left bottom)
 		)
 		(uuid "ab7dece4-24de-4f54-83d7-cbf99fa6a482")
-	)
-	(text "TPS54560B RT: fsw = 92417 x RT(k)^-0.991 = 418 kHz"
-		(exclude_from_sim no)
-		(at 59.436 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ac601ad5-475b-4c34-b873-421dce4f84d0")
 	)
 	(text "MOTOR POWER RAIL 14.4V\n- on/off motor power, no soft ramp\n- set VMOT-14V4-EN LOW to enable power\n  - floating (MCU flash/reset) disables power\n- WD_OK LOW shuts power off\nVMOT-14V4: Q1 + Q2 AO4407C in parallel\n- ~7.5 A normal (with the MSD-G fan) is ~0.25 W each\n- short stall peaks (~13 A) fine with copper under the drain\n- Vgs +/-25 V, no gate divider needed\n"
 		(exclude_from_sim no)
@@ -6869,7 +6859,7 @@
 		)
 		(uuid "f3a51cfa-84b8-4f6d-b328-71f0367ad744")
 	)
-	(text "3.3V MCU POWER RAIL\n\n- POWER_EN is 14.4V\n- set POWER_EN HIGH to enable\n\nTPS54560B (U21, U22):\n- non-synchronous\n- COMP 4.7k + 47nF (all-ceramic Cout, no pole cap)\n- SS56 catch diode; fsw 418 kHz (RT 232k)\n- EN abs max 8.4 V: R207/R208 on U21"
+	(text "3.3V MCU POWER RAIL\n\n- POWER_EN is 14.4V\n- set POWER_EN HIGH to enable\n\nRY9430DP8 (U21, U22):\n- synchronous, 500 kHz, internal compensation\n- VFB 0.923 V: 12k / 4.7k = 3.28 V\n- R207/R208: U21 turns on above ~6 V (EN 1.1 V)"
 		(exclude_from_sim no)
 		(at 249.174 125.476 0)
 		(effects
@@ -7044,12 +7034,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "46c85def-4cb6-4e53-9ba2-2f8da53afc89")
-	)
-	(junction
-		(at 196.85 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4793b437-a4be-4ab7-843e-e11f5b0d068c")
 	)
 	(junction
 		(at 212.09 43.18)
@@ -7243,12 +7227,7 @@
 		(color 0 0 0 0)
 		(uuid "aa31b568-e6c1-4f6d-84bf-7bb1efb34e23")
 	)
-	(junction
-		(at 116.84 46.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ab8e9cb3-b77b-4282-9091-dfd09a60c426")
-	)
+
 	(junction
 		(at 255.27 36.83)
 		(diameter 0)
@@ -7285,12 +7264,7 @@
 		(color 0 0 0 0)
 		(uuid "b6943f6a-5545-4013-a72d-62dd5cafa2ad")
 	)
-	(junction
-		(at 248.92 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b9a4f270-8fcc-411b-ab37-512e53c82486")
-	)
+
 	(junction
 		(at 76.2 132.08)
 		(diameter 0)
@@ -7380,12 +7354,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e207958d-4d8f-4ea0-8421-025886da01bc")
-	)
-	(junction
-		(at 58.42 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e44d111b-451a-4463-ad22-ff48ce32212b")
 	)
 	(junction
 		(at 149.86 73.66)
@@ -7662,16 +7630,6 @@
 			(type default)
 		)
 		(uuid "0c8151e5-0e66-4710-ac29-4ad239438b5d")
-	)
-	(wire
-		(pts
-			(xy 205.74 163.83) (xy 205.74 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e23d09f-d517-4f8c-aab7-63fe010724aa")
 	)
 	(wire
 		(pts
@@ -8345,16 +8303,6 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 143.51) (xy 227.33 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4fe3e7d3-89c1-46bd-8346-16de17f5d6cc")
-	)
-	(wire
-		(pts
 			(xy 213.36 213.36) (xy 220.98 213.36)
 		)
 		(stroke
@@ -8575,16 +8523,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 69.85) (xy 58.42 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68ff9e44-9987-4a6b-a37f-4f270c5b9023")
-	)
-	(wire
-		(pts
 			(xy 274.32 33.02) (xy 279.4 33.02)
 		)
 		(stroke
@@ -8642,16 +8580,6 @@
 			(type default)
 		)
 		(uuid "6d75657f-0766-4336-9367-0e8ae73e7697")
-	)
-	(wire
-		(pts
-			(xy 205.74 165.1) (xy 196.85 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d86247a-584c-4820-8065-42ec41df1291")
 	)
 	(wire
 		(pts
@@ -8942,16 +8870,6 @@
 			(type default)
 		)
 		(uuid "8bc12b2b-5aad-4f39-94d4-c6ef73babc61")
-	)
-	(wire
-		(pts
-			(xy 106.68 55.88) (xy 106.68 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90bc5012-3f10-41fa-b3cc-9ce6845650f8")
 	)
 	(wire
 		(pts
@@ -9435,16 +9353,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 146.05) (xy 205.74 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3c7d601-a3bb-487d-9a98-5ff127e97316")
-	)
-	(wire
-		(pts
 			(xy 198.12 226.06) (xy 198.12 228.6)
 		)
 		(stroke
@@ -9535,16 +9443,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 54.61) (xy 72.39 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4ef8bed-13d5-44c2-9267-6fb4fd8eb69e")
-	)
-	(wire
-		(pts
 			(xy 154.94 46.99) (xy 162.56 46.99)
 		)
 		(stroke
@@ -9585,16 +9483,6 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 146.05) (xy 205.74 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ddd7dc2b-2fe2-40a4-ab9f-94534fe13094")
-	)
-	(wire
-		(pts
 			(xy 267.97 154.94) (xy 243.84 154.94)
 		)
 		(stroke
@@ -9615,16 +9503,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 54.61) (xy 58.42 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e29adc64-1722-420f-97cb-914c395f790d")
-	)
-	(wire
-		(pts
 			(xy 71.12 166.37) (xy 63.5 166.37)
 		)
 		(stroke
@@ -9632,16 +9510,6 @@
 			(type default)
 		)
 		(uuid "e499df37-d63d-4e12-b761-db4ad6eb9dc9")
-	)
-	(wire
-		(pts
-			(xy 240.03 148.59) (xy 240.03 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e668d111-1367-44d5-aa8c-3d4af75df254")
 	)
 	(wire
 		(pts
@@ -9942,16 +9810,6 @@
 			(type default)
 		)
 		(uuid "f99569c1-ad26-4840-807e-555bcff9d73d")
-	)
-	(wire
-		(pts
-			(xy 106.68 52.07) (xy 92.71 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9fc88c9-091c-4714-94ab-fefead161518")
 	)
 	(wire
 		(pts
@@ -10593,7 +10451,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "69.8k"
+		(property "Value" "12k"
 			(at 265.43 146.0499 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10615,7 +10473,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2930012.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C22790.pdf"
 			(at 257.81 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10626,7 +10484,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+155℃ 100mW 69.8kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+		(property "Description" "-55℃~+155℃ 100mW 12kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
 			(at 267.97 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10637,7 +10495,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FOJAN(富捷)"
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
 			(at 255.27 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10648,7 +10506,7 @@
 				)
 			)
 		)
-		(property "MPN" "FRC0603F6982TS"
+		(property "MPN" "0603WAF1202T5E"
 			(at 252.73 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10659,7 +10517,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2930012"
+		(property "LCSC" "C22790"
 			(at 250.19 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10911,82 +10769,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "#PWR0938")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 106.68 73.66 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0b71fe14-ac64-45c2-bf55-a90b2ef28497")
-		(property "Reference" "#PWR0112"
-			(at 106.68 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 106.68 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 106.68 73.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 106.68 73.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 106.68 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8aae9b00-8ebc-4010-9f8d-18e4c69d2716")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "#PWR0112")
 					(unit 1)
 				)
 			)
@@ -11981,7 +11763,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
+		(property "Value" "2.7k"
 			(at 135.89 69.8499 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12003,7 +11785,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907005.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C13167.pdf"
 			(at 148.59 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -12014,7 +11796,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+155℃ 100mW 2.2kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+		(property "Description" "-55℃~+155℃ 100mW 2.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
 			(at 138.43 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -12025,7 +11807,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FOJAN(富捷)"
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
 			(at 151.13 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -12036,7 +11818,7 @@
 				)
 			)
 		)
-		(property "MPN" "FRC0603F2201TS"
+		(property "MPN" "0603WAF2701T5E"
 			(at 153.67 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -12047,7 +11829,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907005"
+		(property "LCSC" "C13167"
 			(at 156.21 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -14154,121 +13936,6 @@
 	)
 	(symbol
 		(lib_id "JLCImport:0603WAF2323T5E")
-		(at 58.42 64.77 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2b22d929-0fde-4bf9-8973-202bb45aca66")
-		(property "Reference" "R206"
-			(at 60.96 63.4999 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "232k"
-			(at 60.96 66.0399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 50.8 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_232KR-2323-1_C22913.html"
-			(at 48.26 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100mW 232kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 35.56 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "UNI-ROYAL(厚声)"
-			(at 45.72 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0603WAF2323T5E"
-			(at 43.18 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22913"
-			(at 40.64 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "31da64f4-b244-4738-b5a2-f7f5505f7a30")
-		)
-		(pin "2"
-			(uuid "6cc64c23-e2bb-4376-a6a4-4f2636883ff4")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R206")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:0603WAF2323T5E")
 		(at 242.57 220.98 270)
 		(mirror x)
 		(unit 1)
@@ -14710,7 +14377,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22.1k"
+		(property "Value" "4.7k"
 			(at 265.43 162.5599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14732,7 +14399,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2960862.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907034.pdf"
 			(at 278.13 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -14743,7 +14410,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+155℃ 100mW 22.1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+		(property "Description" "-55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
 			(at 267.97 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -14765,7 +14432,7 @@
 				)
 			)
 		)
-		(property "MPN" "FRC0603F2212TS"
+		(property "MPN" "FRC0603F4701TS"
 			(at 283.21 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -14776,7 +14443,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2960862"
+		(property "LCSC" "C2907034"
 			(at 285.75 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -15791,82 +15458,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 248.92 148.59 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3d49053b-045c-41c0-b5b8-ba494364c266")
-		(property "Reference" "#PWR068"
-			(at 248.92 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 248.92 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 248.92 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 248.92 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 248.92 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "96a816a0-e20c-456e-8c3a-7f0dbb1f141a")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "#PWR068")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 242.57 238.76 0)
 		(unit 1)
 		(body_style 1)
@@ -16603,121 +16194,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "C115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:FRC0603F4701TS")
-		(at 106.68 60.96 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4d5c2f56-26da-4c39-b031-bbde5e7fdf31")
-		(property "Reference" "R147"
-			(at 104.14 59.6899 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 104.14 62.2299 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 99.06 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907034.pdf"
-			(at 96.52 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 106.68 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FOJAN(富捷)"
-			(at 93.98 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "FRC0603F4701TS"
-			(at 91.44 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907034"
-			(at 88.9 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "154c7fd8-f5cb-40af-9e32-23287add6e49")
-		)
-		(pin "1"
-			(uuid "881f639f-3ac7-4e65-89a8-c37ccce4b58f")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R147")
 					(unit 1)
 				)
 			)
@@ -17875,122 +17351,7 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:CL10B473KB8NNNC")
-		(at 106.68 69.85 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "64ea0643-e6eb-49f0-9e23-7e37f7298442")
-		(property "Reference" "C120"
-			(at 102.87 68.5799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47nF/50V"
-			(at 102.87 71.1199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:C0603"
-			(at 114.3 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B473KB8NNNC_47nF-473-10-50V_C1622.html"
-			(at 116.84 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "47nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 129.54 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 119.38 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL10B473KB8NNNC"
-			(at 121.92 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1622"
-			(at 124.46 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "788402ac-d694-4ccb-98e0-376f5f085d41")
-		)
-		(pin "2"
-			(uuid "97e0902e-558f-439d-8356-fba2ea763769")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "C120")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:TPS54560BDDAR")
+		(lib_id "JLCImport:RY9430DP8")
 		(at 217.17 140.97 0)
 		(unit 1)
 		(body_style 1)
@@ -18011,7 +17372,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS54560BDDAR"
+		(property "Value" "RY9430DP8"
 			(at 216.345 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18021,7 +17382,7 @@
 				)
 			)
 		)
-		(property "Footprint" "JLCImport:POWERPAD-SO-8_L4.9-W3.9-P1.27-LS6.0-BL-EP"
+		(property "Footprint" "JLCImport:ESOP-8_L4.9-W3.9-P1.27-LS6.2-BL-EP"
 			(at 217.17 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -18032,7 +17393,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C1850354.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2879809.pdf"
 			(at 217.17 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -18043,7 +17404,7 @@
 				)
 			)
 		)
-		(property "Description" "-40℃~+150℃@(TJ) 1 146uA 4.5V~60V 500kHz 5A 800mV~58.8V Adjustable Buck Buck Built-in No SO-8 DC-DC Converters ROHS"
+		(property "Description" "38 V 3 A 500 kHz synchronous buck, internal compensation, VFB 0.923 V, ESOP-8 (EP = GND)"
 			(at 217.17 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -18054,7 +17415,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "RYCHiP(蕊源)"
 			(at 217.17 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -18065,7 +17426,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPS54560BDDAR"
+		(property "MPN" "RY9430DP8"
 			(at 217.17 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -18076,7 +17437,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C1850354"
+		(property "LCSC" "C2879809"
 			(at 217.17 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -18087,13 +17448,13 @@
 				)
 			)
 		)
-		(pin "4"
+		(pin "8"
 			(uuid "10452f92-e861-4b67-b40a-cafe8b15d3f4")
 		)
 		(pin "6"
 			(uuid "e9fdae15-5f67-4c62-9205-3fa90598faf9")
 		)
-		(pin "8"
+		(pin "3"
 			(uuid "16d0ae79-4048-45f5-8f45-e5f09c1a8679")
 		)
 		(pin "5"
@@ -18102,7 +17463,7 @@
 		(pin "2"
 			(uuid "096d9f92-3f12-40cc-9861-7fc2c1c3b643")
 		)
-		(pin "7"
+		(pin "4"
 			(uuid "f7cb67b6-95f8-4631-9dc8-ba1dbb131dff")
 		)
 		(pin "9"
@@ -18111,7 +17472,7 @@
 		(pin "1"
 			(uuid "e47df287-d7cb-42fd-855c-e6e37c09e1ab")
 		)
-		(pin "3"
+		(pin "7"
 			(uuid "bb580ab6-989b-48ad-8bdf-bed3b7e6e144")
 		)
 		(instances
@@ -20555,82 +19916,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 116.84 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "856eb48b-f724-4b25-a11e-cacd25a6d7cd")
-		(property "Reference" "#PWR0114"
-			(at 116.84 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 116.84 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 116.84 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 116.84 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b48eece6-6f32-4b61-91f5-f65443045aff")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "#PWR0114")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 320.04 226.06 0)
 		(unit 1)
 		(body_style 1)
@@ -20700,121 +19985,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "#PWR0121")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:CL10B473KB8NNNC")
-		(at 240.03 162.56 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "872ecc48-9305-4356-aaef-a341bf5649ea")
-		(property "Reference" "C112"
-			(at 236.22 161.2899 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47nF/50V"
-			(at 236.22 163.8299 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:C0603"
-			(at 247.65 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B473KB8NNNC_47nF-473-10-50V_C1622.html"
-			(at 250.19 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "47nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 262.89 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 252.73 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL10B473KB8NNNC"
-			(at 255.27 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1622"
-			(at 257.81 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3f02f1e7-4a5b-439a-a01b-6b044566d2f5")
-		)
-		(pin "2"
-			(uuid "9e5a4158-2c3a-4451-b6ea-c2ce53dcc222")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "C112")
 					(unit 1)
 				)
 			)
@@ -21785,82 +20955,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 240.03 166.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9bb73a1a-7873-4f87-9919-4f446b913741")
-		(property "Reference" "#PWR067"
-			(at 240.03 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 240.03 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 240.03 166.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 240.03 166.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 240.03 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5f4c9c9b-4145-4c42-a0b0-381548ecd5f2")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "#PWR067")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 115.57 125.73 0)
 		(unit 1)
 		(body_style 1)
@@ -21930,120 +21024,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "#PWR059")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:SS56")
-		(at 248.92 143.51 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a27510ad-af73-4483-ac98-517b7cf1b118")
-		(property "Reference" "D42"
-			(at 257.175 142.875 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SS56"
-			(at 256.54 145.415 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:SS56"
-			(at 248.92 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2407101107_MDD-Microdiode-Semiconductor-SS56_C65009.pdf"
-			(at 248.92 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+150℃ 1mA@60V 5A 60V 700mV@5A Independent SMA(DO-214AC) Schottky Diodes ROHS"
-			(at 248.92 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C65009"
-			(at 248.92 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "MDD(Microdiode Semiconductor)"
-			(at 248.92 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "SS56"
-			(at 248.92 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2181e946-76c2-453c-ae87-798bcb21a112")
-		)
-		(pin "2"
-			(uuid "a5500ae9-14e5-4121-9be0-73a8a7dbc9c1")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "D42")
 					(unit 1)
 				)
 			)
@@ -22964,121 +21944,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:0603WAF2323T5E")
-		(at 205.74 158.75 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b8b01619-b660-435c-ac24-26f2e69a87e3")
-		(property "Reference" "R205"
-			(at 208.28 157.4799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "232k"
-			(at 208.28 160.0199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 198.12 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_232KR-2323-1_C22913.html"
-			(at 195.58 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100mW 232kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 182.88 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "UNI-ROYAL(厚声)"
-			(at 193.04 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0603WAF2323T5E"
-			(at 190.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22913"
-			(at 187.96 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1aac4fe9-8077-4bee-8a48-c6dbddd25f88")
-		)
-		(pin "2"
-			(uuid "141f716f-0795-4ffb-9764-0c13c9d27bd7")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R205")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:AO4407C")
 		(at 280.67 43.18 90)
 		(unit 1)
@@ -23772,7 +22637,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2930069.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C22790.pdf"
 			(at 128.27 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -23783,7 +22648,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+155℃ 100mW 17.4kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+		(property "Description" "-55℃~+155℃ 100mW 12kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
 			(at 138.43 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -23794,7 +22659,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FOJAN(富捷)"
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
 			(at 125.73 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -23805,7 +22670,7 @@
 				)
 			)
 		)
-		(property "MPN" "FRC0603F1742TS"
+		(property "MPN" "0603WAF1202T5E"
 			(at 123.19 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -23816,7 +22681,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2930069"
+		(property "LCSC" "C22790"
 			(at 120.65 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -24642,121 +23507,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "#PWR0944")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:FRC0603F4701TS")
-		(at 240.03 153.67 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d5cbf862-e908-4f3f-a245-7f2d7b49c857")
-		(property "Reference" "R143"
-			(at 237.49 152.3999 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "4.7k"
-			(at 237.49 154.9399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 232.41 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907034.pdf"
-			(at 229.87 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 240.03 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FOJAN(富捷)"
-			(at 227.33 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "FRC0603F4701TS"
-			(at 224.79 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907034"
-			(at 222.25 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6fa30e11-3c81-4950-b8d4-90f35b5be91f")
-		)
-		(pin "1"
-			(uuid "bc96fcb6-2c68-4293-a180-38b378cae633")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "R143")
 					(unit 1)
 				)
 			)
@@ -25644,7 +24394,7 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:TPS54560BDDAR")
+		(lib_id "JLCImport:RY9430DP8")
 		(at 82.55 49.53 0)
 		(unit 1)
 		(body_style 1)
@@ -25665,7 +24415,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS54560BDDAR"
+		(property "Value" "RY9430DP8"
 			(at 81.725 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25675,7 +24425,7 @@
 				)
 			)
 		)
-		(property "Footprint" "JLCImport:POWERPAD-SO-8_L4.9-W3.9-P1.27-LS6.0-BL-EP"
+		(property "Footprint" "JLCImport:ESOP-8_L4.9-W3.9-P1.27-LS6.2-BL-EP"
 			(at 82.55 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -25686,7 +24436,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C1850354.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2879809.pdf"
 			(at 82.55 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -25697,7 +24447,7 @@
 				)
 			)
 		)
-		(property "Description" "-40℃~+150℃@(TJ) 1 146uA 4.5V~60V 500kHz 5A 800mV~58.8V Adjustable Buck Buck Built-in No SO-8 DC-DC Converters ROHS"
+		(property "Description" "38 V 3 A 500 kHz synchronous buck, internal compensation, VFB 0.923 V, ESOP-8 (EP = GND)"
 			(at 82.55 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -25708,7 +24458,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "RYCHiP(蕊源)"
 			(at 82.55 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -25719,7 +24469,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPS54560BDDAR"
+		(property "MPN" "RY9430DP8"
 			(at 82.55 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -25730,7 +24480,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C1850354"
+		(property "LCSC" "C2879809"
 			(at 82.55 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -25747,7 +24497,7 @@
 		(pin "1"
 			(uuid "f95dd7d2-cc6a-4bd0-bb18-03181853d76d")
 		)
-		(pin "7"
+		(pin "4"
 			(uuid "5af84bb7-53f3-4514-a9af-56e2383b301f")
 		)
 		(pin "9"
@@ -25756,16 +24506,16 @@
 		(pin "6"
 			(uuid "56230f48-d465-4a1e-98d1-1457041e5263")
 		)
-		(pin "8"
+		(pin "3"
 			(uuid "c774fbd2-9116-4de6-b5f1-8ee64fc9122f")
 		)
-		(pin "3"
+		(pin "7"
 			(uuid "5b7c98e4-16cd-4598-945a-880adc2a36e8")
 		)
 		(pin "5"
 			(uuid "f66c990c-8326-48e9-91ce-211a17dafe78")
 		)
-		(pin "4"
+		(pin "8"
 			(uuid "031ef2d6-c421-4c08-991d-b711934bb065")
 		)
 		(instances
@@ -25962,120 +24712,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
 					(reference "#PWR0952")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:SS56")
-		(at 116.84 52.07 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f97a3f46-0abb-4dca-a719-239bda9f908d")
-		(property "Reference" "D43"
-			(at 125.095 51.435 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SS56"
-			(at 124.46 53.975 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:SS56"
-			(at 116.84 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2407101107_MDD-Microdiode-Semiconductor-SS56_C65009.pdf"
-			(at 116.84 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+150℃ 1mA@60V 5A 60V 700mV@5A Independent SMA(DO-214AC) Schottky Diodes ROHS"
-			(at 116.84 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C65009"
-			(at 116.84 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "MDD(Microdiode Semiconductor)"
-			(at 116.84 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "SS56"
-			(at 116.84 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "99070698-2f10-4967-9fd1-56761d94c290")
-		)
-		(pin "2"
-			(uuid "73bb822b-5d8d-4e47-b060-282f1575b7a6")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/35c833ed-33c3-4a72-8fc9-e035e67a6b75"
-					(reference "D43")
 					(unit 1)
 				)
 			)

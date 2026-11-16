@@ -1197,208 +1197,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:IRM-H638T"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "IRM-H638T/TR2"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:IRM-H638T"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Infrared-Sensors_IRM-H638T-TR2_C91447.html"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "IRM-H638T/TR2"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "EVERLIGHT(亿光)"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "IRM-H638T/TR2"
-				(at 0 -20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C91447"
-				(at 0 -22.86 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Infrared remote receiver"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "IRM-H638T_0_1"
-				(rectangle
-					(start -2.54 3.81)
-					(end 6.86 -6.1)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(arc
-					(start 6.86 1.52)
-					(mid 9.3889 -1.02)
-					(end 6.86 -3.56)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -7.62 2.54 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 0 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -7.62 -2.54 0)
-					(length 5.08)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 -5.08 0)
-					(length 5.08)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "JLCImport:PZ254R-11-05P"
 			(pin_names
 				(hide yes)
@@ -2245,7 +2043,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "CH32V003F4P6: PA2 = VIN-SENSE (A0), PA1 = DOCK-SENSE (A1), PD2 = PROBE-SENSE (A3),\nPD3 = I-SENSE (A4), PC1 = CHARGE-EN (high = VDOCK-20V on), PC2 = PROBE-DRV,\nPC3/PC4 = IR-L/IR-R (TIM1_CH3/CH4, 38 kHz), PC0 = status LED, PD4 = IR_RX (TIM2_CH1),\nPD5/PD6 = UART, PD1 = SWIO. HSI clock, no crystal.\nADC reference is VDD, and PROBE-DRV high is VDD too, so the probe math is ratiometric."
+	(text "CH32V003F4P6: PA2 = VIN-SENSE (A0), PA1 = DOCK-SENSE (A1), PD2 = PROBE-SENSE (A3),\nPD3 = I-SENSE (A4), PC1 = CHARGE-EN (high = VDOCK-20V on), PC2 = PROBE-DRV,\nPC3/PC4 = IR-L/IR-R (TIM1_CH3/CH4, 38 kHz), PC0 = status LED, PD4 unused,\nPD5/PD6 = UART, PD1 = SWIO. HSI clock, no crystal.\nADC reference is VDD, and PROBE-DRV high is VDD too, so the probe math is ratiometric."
 		(exclude_from_sim no)
 		(at 152.654 164.846 0)
 		(effects
@@ -2256,7 +2054,7 @@
 		)
 		(uuid "903ec630-8fcc-4fd0-93ca-5603cf04db9e")
 	)
-	(text "OOMWOO charging-only dock, v2 (2026-10-27)\n20 V brick in; VDOCK-20V / DOCK- pogo contacts out (energized only after the robot\nis recognised by its ~130k / ~30 uF signature); 38 kHz NEC IR beacon.\nCH32V003 control (Arduino core, ch32fun, PlatformIO). Refs in the 1000s: each board has its\nown range (main board 1-999, dock 1000s, sensor boards 2000s-6000s)."
+	(text "OOMWOO charging-only dock, v2 (2026-10-27)\n20 V brick in; VDOCK-20V / DOCK- spring contacts out (energized only after the robot\nis recognised by its ~130k / ~30 uF signature); 38 kHz NEC IR beacon.\nCH32V003 control (Arduino core, ch32fun, PlatformIO). Refs in the 1000s: each board has its\nown range (main board 1-999, dock 1000s, sensor boards 2000s-7000s)."
 		(exclude_from_sim no)
 		(at 40.64 40.64 0)
 		(effects
@@ -2278,18 +2076,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2cabdf26-7c4a-486c-8954-64bd59fe4634")
-	)
-	(junction
-		(at 59.69 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6681a4eb-5199-49d3-8ac0-8b4a379288c0")
-	)
-	(junction
-		(at 54.61 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eec686a9-c3f6-472c-8a53-2f0a31b2ba32")
 	)
 	(no_connect
 		(at 105.41 91.44)
@@ -2341,16 +2127,6 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 82.55) (xy 59.69 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ec62024-eabc-412b-9f9f-e0217ef2f7b7")
-	)
-	(wire
-		(pts
 			(xy 210.82 78.74) (xy 224.79 78.74)
 		)
 		(stroke
@@ -2358,16 +2134,6 @@
 			(type default)
 		)
 		(uuid "12eadac2-ba35-457a-a083-2b263ec71b76")
-	)
-	(wire
-		(pts
-			(xy 54.61 81.28) (xy 54.61 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15e354ad-0949-4270-966c-680596cf2309")
 	)
 	(wire
 		(pts
@@ -2468,16 +2234,6 @@
 			(type default)
 		)
 		(uuid "48e880ff-8b3a-4491-a793-0c70c6ad988f")
-	)
-	(wire
-		(pts
-			(xy 54.61 81.28) (xy 53.34 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a99242b-9cf6-4729-ae54-6953af6c5f88")
 	)
 	(wire
 		(pts
@@ -2621,16 +2377,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 78.74) (xy 54.61 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa7286b4-7211-4767-a048-bd83e7e7b538")
-	)
-	(wire
-		(pts
 			(xy 208.28 81.28) (xy 224.79 81.28)
 		)
 		(stroke
@@ -2701,16 +2447,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 83.82) (xy 105.41 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1221363-e196-4934-9719-142e3a7ae5e8")
-	)
-	(wire
-		(pts
 			(xy 105.41 88.9) (xy 77.47 88.9)
 		)
 		(stroke
@@ -2718,16 +2454,6 @@
 			(type default)
 		)
 		(uuid "c36df6b7-6455-4c70-aec7-7079c8e59f09")
-	)
-	(wire
-		(pts
-			(xy 59.69 86.36) (xy 53.34 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c971d6a8-652e-42d8-a38d-d1f8d3eb4e74")
 	)
 	(wire
 		(pts
@@ -2748,16 +2474,6 @@
 			(type default)
 		)
 		(uuid "e0461d17-d07a-4e37-aa28-1ec8ea26d6b6")
-	)
-	(wire
-		(pts
-			(xy 54.61 78.74) (xy 54.61 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e689da80-cb8e-4194-81a1-89803adf7525")
 	)
 	(wire
 		(pts
@@ -2809,15 +2525,9 @@
 		)
 		(uuid "12e62e16-6eef-4faa-9e9e-cc107e806315")
 	)
-	(label "IR_RX"
-		(at 105.41 83.82 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1e98c0b9-cd05-40d5-82c1-32cc91f77dce")
+	(no_connect
+		(at 105.41 83.82)
+		(uuid "03a8956c-d677-4dba-bff5-22c9578586ee")
 	)
 	(label "SWIO"
 		(at 62.23 111.76 0)
@@ -3332,85 +3042,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 54.61 88.9 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5bae0509-1f67-4edd-916f-74b4c4b911e1")
-		(property "Reference" "#PWR01016"
-			(at 54.61 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 54.61 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 54.61 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 54.61 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0e682e79-4f87-4581-abab-444b2b6e9959")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 60.96 187.96 0)
 		(unit 1)
 		(body_style 1)
@@ -3488,199 +3119,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:CL10A106KP8NNNC")
-		(at 59.69 91.44 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "608589a3-2df8-4138-8be2-c1292789733c")
-		(property "Reference" "C1003"
-			(at 63.246 90.17 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10uF/10V"
-			(at 63.246 92.71 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:C0603"
-			(at 67.31 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html"
-			(at 69.85 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "10V 10uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 59.69 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 72.39 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL10A106KP8NNNC"
-			(at 74.93 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C19702"
-			(at 77.47 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "24f1fbd8-4c4b-4cdf-ae54-fbe72a2968e6")
-		)
-		(pin "1"
-			(uuid "6a059cb2-7397-4e96-9c4b-8d2a7595c828")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "C1003")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 59.69 72.39 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6a56f6bc-76d9-4005-8abe-a503b6f159d8")
-		(property "Reference" "#PWR01014"
-			(at 59.69 72.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VMCU-3V3"
-			(at 62.484 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "192b756a-642b-441b-95d2-a154e4b6b971")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 31.75 180.34 0)
 		(unit 1)
@@ -3752,121 +3190,6 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR01008")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:FRC0603F1000TS")
-		(at 59.69 77.47 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "77085bf8-6875-46d2-a97f-1a67880f5ea2")
-		(property "Reference" "R1002"
-			(at 62.23 76.1999 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100"
-			(at 62.23 78.7399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 52.07 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2906981.pdf"
-			(at 49.53 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 59.69 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FOJAN(富捷)"
-			(at 46.99 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "FRC0603F1000TS"
-			(at 44.45 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2906981"
-			(at 41.91 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "981c1e72-023c-4d48-81ec-e66fb44049cb")
-		)
-		(pin "2"
-			(uuid "7086f294-c160-4048-a641-eee37ce3f01f")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "R1002")
 					(unit 1)
 				)
 			)
@@ -4180,127 +3503,6 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR01012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:IRM-H638T")
-		(at 45.72 81.28 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "896a1067-1608-4ef9-991c-89b8480e18bc")
-		(property "Reference" "U1002"
-			(at 46.99 75.438 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRM-H638T/TR2"
-			(at 48.26 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:IRM-H638T"
-			(at 45.72 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-Sensors_IRM-H638T-TR2_C91447.html"
-			(at 45.72 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "IRM-H638T/TR2"
-			(at 45.72 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C91447"
-			(at 45.72 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "EVERLIGHT(亿光)"
-			(at 45.72 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "IRM-H638T/TR2"
-			(at 45.72 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6f4550c4-8a6d-4735-8c37-4e122cf7ebb0")
-		)
-		(pin "2"
-			(uuid "2f7d336f-b57c-4fcc-b74d-5318abfdaba3")
-		)
-		(pin "3"
-			(uuid "b47401fd-8ff0-4e26-8610-03704471497d")
-		)
-		(pin "4"
-			(uuid "8a507b93-3ca5-46c0-bfa6-e9bfe0553e7d")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "U1002")
 					(unit 1)
 				)
 			)
@@ -4687,85 +3889,6 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "H1004")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 59.69 96.52 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ac73ac67-c830-43fa-88e7-a82c7d7a479e")
-		(property "Reference" "#PWR01015"
-			(at 59.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 59.69 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9bf1d12a-6aba-40eb-ab4a-f835405573ee")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01015")
 					(unit 1)
 				)
 			)

@@ -2,7 +2,7 @@
 
 The dock the v1 robot ([`../main-phone`](../main-phone/README.md)) charges from. It has two spring charging contacts (VDOCK-20V and DOCK-), an IR beacon so the robot can find it, and a small MCU. Rev 2, 2026-10-27: a full redesign of the first draft. The first draft had a 555 beacon, a third "detector" contact and a 24 V input, and its 5 V buck had no input connection.
 
-Sheets: root (MCU, status LED, debug pads, optional IR receiver, mounting holes), **POWER** (input, 3.3 V, output switch, current sense, robot probe), **IR BEACON**.
+Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.3 V, output switch, current sense, robot probe), **IR BEACON**.
 
 ## What it does
 
@@ -28,11 +28,10 @@ Sheets: root (MCU, status LED, debug pads, optional IR receiver, mounting holes)
 | PC1 | CHARGE-EN | high = VDOCK-20V on (R1013 100k pull-down holds it off in reset) |
 | PC3, PC4 | IR-L, IR-R | TIM1_CH3 / TIM1_CH4, 38 kHz PWM |
 | PC0 | status LED | LED1001 through R1001 (1k) |
-| PD4 | IR_RX | TIM2_CH1 capture, optional receiver U1002 |
 | PD5, PD6 | UART TX, RX | debug |
 | PD1 | SWIO | programming |
 | PC5, PC6, PC7 | spare | on J1005 (not fitted); SPI SCK/MOSI/MISO, or I2C SCL/SDA on PC5/PC6 with the pin remap |
-| PD0, PD7 | unused | PD7 is NRST by default |
+| PD0, PD4, PD7 | unused | PD7 is NRST by default; PD4 (TIM2_CH1) fed the optional IR receiver until 2026-11-15 |
 
 The ADC reference is VDD, and PROBE-DRV high is VDD too, so the probe readings are ratiometric.
 
@@ -60,7 +59,7 @@ Firmware:
 - IR-L and IR-R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C1004/C1006 100 nF, R1003/R1005 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
 - R1004/R1006 are 150 Ω 2512 (1 W): 1.7 W peak, ~0.3 W average at NEC duty.
-- U1002 (IRM-H638T, not fitted) is there for optional robot → dock messages later. Its symbol pinout (1, 2 GND, 3 OUT, 4 VCC) matches Everlight's IRM-H6XX/TR2 datasheet (DMO-0000004); the robot's side board uses the same part.
+- No IR receiver on the dock: the optional, unfitted U1002 (IRM-H638T, for robot → dock messages) and its R1002/C1003 filter were removed on 2026-11-15.
 
 ## PCB notes (for layout)
 
@@ -72,7 +71,7 @@ Firmware:
 
 ## Parts shared with the robot
 
-DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, PZ254R-11-05P, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120, 100) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
+DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, PZ254R-11-05P, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
 
 Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`) and the KiCad standard libraries.
 

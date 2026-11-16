@@ -5,210 +5,6 @@
 	(uuid "75acaab4-ad0e-4d0a-a641-81c0d9a20cb9")
 	(paper "USLegal")
 	(lib_symbols
-		(symbol "JLCImport:ZX-SH1_0-2PLT"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 11.43 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ZX-SH1_0-2PLT"
-				(at 0 -11.43 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:ZX-SH1_0-2PLT"
-				(at 0 -13.97 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430451.pdf"
-				(at 0 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "JST SH compatible 1.0 mm 1x2P, SMD vertical (top entry), 2 mounting pads (3, 4)"
-				(at 0 -29.21 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Megastar"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "ZX-SH1.0-2PLT"
-				(at 0 -21.59 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C7430451"
-				(at 0 -24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C7430451 ZX-SH1.0-2PLT SH1.0 2P vertical Megastar"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ZX-SH1_0-2PLT_0_1"
-				(rectangle
-					(start -2.54 3.81)
-					(end 5.08 -3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center -1.27 2.54)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -1.27 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -6.35 90)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 6.35 270)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "JLCImport:CC0603JRNPO9BN180"
 			(pin_numbers
 				(hide yes)
@@ -4859,7 +4655,7 @@
 		)
 		(uuid "cb635f95-4e31-47b4-92eb-518d319ed623")
 	)
-	(text "Compatible with STDC14 (1.27mm pitch)\n\nPin 11 (GNDDetect) can detect\nJTAG cable presence using a 100k\npull-up plus a spare GPIO\n\nThe watchdog shuts off motors when not petted\nJTAG, SWD, BOOT0 do NOT disable the watchdog\nSo, using JTAG/SWD/flash-over-UART stops motors"
+	(text "Compatible with STDC14 (1.27mm pitch)\n\nPin 11 (GNDDetect) can detect\nJTAG cable presence using a 100k\npull-up plus a spare GPIO\n\nThe watchdog shuts off motors when not petted\nJTAG, SWD, PB8-BOOT0 do NOT disable the watchdog\nSo, using JTAG/SWD/flash-over-UART stops motors"
 		(exclude_from_sim no)
 		(at 107.95 167.64 0)
 		(effects
@@ -4881,7 +4677,7 @@
 		)
 		(uuid "7e37740c-9b46-4fe7-bea5-515dde47faca")
 	)
-	(text "Short BOOT0 to VMCU-3V3 to load firmware via USB"
+	(text "Short PB8-BOOT0 to VMCU-3V3 to load firmware via USB"
 		(exclude_from_sim no)
 		(at 163.576 183.642 0)
 		(effects
@@ -5058,12 +4854,6 @@
 		(uuid "a457982a-2de3-44bb-bcb7-3231eaf87961")
 	)
 	(junction
-		(at 30.48 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a8fe8005-2be2-4a53-b0c2-85dd2bce1eed")
-	)
-	(junction
 		(at 237.49 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5143,465 +4933,6 @@
 		(at 44.45 161.29)
 		(uuid "e23b8a0d-2792-4c5e-b92b-02ff6741058f")
 	)
-	(label "SPARE-PE2"
-		(at 160.02 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7d6ceb8c-a428-4055-9581-61697912519c")
-	)
-	(symbol
-		(lib_id "JLCImport:ZX-SH1_0-2PLT")
-		(at 25.4 92.71 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "434f902c-bd74-4983-9d5e-524628e68b17")
-		(property "Reference" "J9"
-			(at 17.78 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ZX-SH1_0-2PLT"
-			(at 20.32 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "JLCImport:ZX-SH1_0-2PLT"
-			(at 25.4 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430451.pdf"
-			(at 25.4 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Wake-up sensor (LDR) socket, JST SH compatible 1.0 mm 1x2P vertical: 1 VMCU-3V3, 2 LDR (PB12); 3, 4 mounting pads (GND)"
-			(at 25.4 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Megastar"
-			(at 25.4 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "ZX-SH1.0-2PLT"
-			(at 25.4 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C7430451"
-			(at 25.4 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7ac94f6f-7536-4b5c-97e3-43c560374649")
-		)
-		(pin "2"
-			(uuid "fe418dc2-3a55-4919-8c55-5dba217734d3")
-		)
-		(pin "3"
-			(uuid "9bfa5938-7fc4-4365-b3f7-546b4542c130")
-		)
-		(pin "4"
-			(uuid "5935c533-7594-449b-84b2-8935b5309edb")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "J9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:CL10B104KB8NNNC")
-		(at 40.64 106.68 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "46420192-b289-4074-8d5b-4251571ec7a2")
-		(property "Reference" "C1"
-			(at 40.64 116.84 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF/50V"
-			(at 40.64 119.38 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "JLCImport:C0603"
-			(at 227.33 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B104KB8NNNC_100nF-104-10-50V_C1591.html"
-			(at 229.87 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 242.57 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 232.41 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "CL10B104KB8NNNC"
-			(at 234.95 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1591"
-			(at 237.49 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ba12fe68-2825-49a0-9ec4-ad7ecaacefe9")
-		)
-		(pin "2"
-			(uuid "9b632e7d-1bfd-449e-9d12-d08d3a53f1d8")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 17.78 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "cba381c0-34b9-43ba-9773-06b37db7056a")
-		(property "Reference" "#PWR7843"
-			(at 17.78 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 17.78 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 17.78 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 17.78 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 17.78 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e6e63b98-9307-4ae6-9d9e-c67355130004")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR7843")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 40.64 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9b309835-6f9a-46c7-814c-b29f664d6d66")
-		(property "Reference" "#PWR7844"
-			(at 40.64 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 40.64 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 40.64 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 40.64 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5f96c2ae-669a-44f6-8d12-cb20fc9164f3")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR7844")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 30.48 88.9) (xy 30.48 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ff4b2c9-0873-4c26-9898-bfe0ef8b05c5")
-	)
-	(wire
-		(pts
-			(xy 30.48 93.98) (xy 30.48 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "791c44c8-99fa-4774-ba25-acab6c93be00")
-	)
-	(wire
-		(pts
-			(xy 22.86 86.36) (xy 17.78 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f80f0df-4120-469f-89bf-39ffb19bd94a")
-	)
-	(wire
-		(pts
-			(xy 17.78 86.36) (xy 17.78 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6ba13ad-c577-4ca0-9c9e-75c3ab584407")
-	)
-	(wire
-		(pts
-			(xy 17.78 99.06) (xy 22.86 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c3ec877-7ae0-41ff-ab0a-010ab4e88469")
-	)
-	(wire
-		(pts
-			(xy 40.64 100.33) (xy 40.64 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7678dc14-deff-40ac-977b-d483a1e9f680")
-	)
-	(junction
-		(at 40.64 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0aba43a0-1894-4c66-8bc0-ff6a2f69ebc3")
-	)
 	(wire
 		(pts
 			(xy 262.89 147.32) (xy 262.89 154.94)
@@ -5641,16 +4972,6 @@
 			(type default)
 		)
 		(uuid "0c62a2d3-1015-437a-baad-9673cbd0e9a6")
-	)
-	(wire
-		(pts
-			(xy 30.48 101.6) (xy 30.48 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0cb12051-ea49-49d6-97a1-de60ff04e960")
 	)
 	(wire
 		(pts
@@ -6354,16 +5675,6 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 100.33) (xy 30.48 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68e388a3-6f57-4da4-bb4f-21cbd9ee49bb")
-	)
-	(wire
-		(pts
 			(xy 242.57 147.32) (xy 242.57 154.94)
 		)
 		(stroke
@@ -6424,7 +5735,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 90.17) (xy 48.26 101.6)
+			(xy 48.26 90.17) (xy 48.26 96.52)
 		)
 		(stroke
 			(width 0)
@@ -6994,7 +6305,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 100.33) (xy 82.55 100.33)
+			(xy 72.39 100.33) (xy 82.55 100.33)
 		)
 		(stroke
 			(width 0)
@@ -7512,16 +6823,6 @@
 		)
 		(uuid "2cd2c91c-1156-499d-8a34-36a364cc641c")
 	)
-	(label "LDR"
-		(at 73.66 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2da1ce8f-8b20-4b83-843f-55be16ac8202")
-	)
 	(label "SPARE-PC10-TX"
 		(at 160.02 165.1 0)
 		(effects
@@ -7622,6 +6923,16 @@
 		)
 		(uuid "768b289d-eb0a-4c02-bcda-a9fbf0f2d0fe")
 	)
+	(label "SPARE-PE2"
+		(at 160.02 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7d6ceb8c-a428-4055-9581-61697912519c")
+	)
 	(label "SPARE-PD4"
 		(at 168.91 80.01 180)
 		(effects
@@ -7682,7 +6993,7 @@
 		)
 		(uuid "8948226a-61ea-452e-a47a-5f789e667221")
 	)
-	(label "BOOT0"
+	(label "PB8-BOOT0"
 		(at 72.39 90.17 0)
 		(effects
 			(font
@@ -7742,7 +7053,7 @@
 		)
 		(uuid "d3c14626-58c7-4611-9e61-d30716e0d8b4")
 	)
-	(label "BOOT0"
+	(label "PB8-BOOT0"
 		(at 209.55 160.02 180)
 		(effects
 			(font
@@ -8164,6 +7475,17 @@
 			(justify right)
 		)
 		(uuid "78869c50-0144-45fc-9f89-56fa28df47bd")
+	)
+	(hierarchical_label "LDR"
+		(shape input)
+		(at 72.39 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "86a24272-43f6-4fca-8280-1edbf1bffc62")
 	)
 	(hierarchical_label "LIDAR-MOTOR-CTRL"
 		(shape output)
@@ -8922,84 +8244,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 41.91 85.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "195c8108-ae2b-4c60-9d7b-25135706ff56")
-		(property "Reference" "#PWR0667"
-			(at 41.91 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 41.91 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 41.91 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.91 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 41.91 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "33ee2894-c1d0-48d7-9454-9bfc87572b98")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR0667")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:RC0603FR-0710KL")
-		(at 48.26 106.68 90)
+		(at 48.26 101.6 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9010,7 +8256,7 @@
 		(fields_autoplaced yes)
 		(uuid "19e9f468-59bb-4fac-ba04-e33c29cdec75")
 		(property "Reference" "R22"
-			(at 50.8 105.4099 90)
+			(at 50.8 100.3299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9021,7 +8267,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 50.8 107.9499 90)
+			(at 50.8 102.8699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9032,7 +8278,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:R0603"
-			(at 55.88 106.68 0)
+			(at 55.88 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9043,7 +8289,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_10KR-1_C98220.html"
-			(at 58.42 106.68 0)
+			(at 58.42 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9054,7 +8300,7 @@
 			)
 		)
 		(property "Description" "-55℃~+155℃ 100mW 10kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 48.26 106.68 0)
+			(at 48.26 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9065,7 +8311,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO(国巨)"
-			(at 60.96 106.68 0)
+			(at 60.96 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9076,7 +8322,7 @@
 			)
 		)
 		(property "MPN" "RC0603FR-0710KL"
-			(at 63.5 106.68 0)
+			(at 63.5 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9087,7 +8333,7 @@
 			)
 		)
 		(property "LCSC" "C98220"
-			(at 66.04 106.68 0)
+			(at 66.04 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11257,121 +10503,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:RC0603FR-0710KL")
-		(at 30.48 106.68 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "558859c8-afed-4d8c-b2ab-e49b344230b3")
-		(property "Reference" "R103"
-			(at 33.02 105.4099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 33.02 107.9499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 38.1 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_10KR-1_C98220.html"
-			(at 40.64 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100mW 10kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 30.48 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO(国巨)"
-			(at 43.18 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0603FR-0710KL"
-			(at 45.72 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C98220"
-			(at 48.26 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "597a5e1d-6a9a-4a54-8b6d-3c3e5ab7851a")
-		)
-		(pin "2"
-			(uuid "d26241ca-1c62-4abb-bdfa-6e739c49443d")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "R103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VPP")
 		(at 246.38 85.09 0)
 		(unit 1)
@@ -12689,82 +11820,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 30.48 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8930cafe-83c4-4742-862e-fb801f685a29")
-		(property "Reference" "#PWR0669"
-			(at 30.48 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 30.48 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 30.48 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 30.48 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6b5f132e-fd47-4442-9283-a1b9870a5282")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR0669")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:FRC0603J104TS")
 		(at 41.91 80.01 270)
 		(unit 1)
@@ -13533,8 +12588,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VPP")
-		(at 30.48 88.9 0)
+		(lib_id "power:GND")
+		(at 41.91 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13542,10 +12597,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c4ff6fed-485d-4e93-bc5b-d7d1085d821d")
-		(property "Reference" "#PWR012"
-			(at 30.48 92.71 0)
+		(uuid "c1d6773f-ccf3-4145-9ea8-714092d8bffa")
+		(property "Reference" "#PWR0671"
+			(at 41.91 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13555,8 +12609,9 @@
 				)
 			)
 		)
-		(property "Value" "VMCU-3V3"
-			(at 30.48 83.82 0)
+		(property "Value" "GND"
+			(at 41.91 91.44 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13566,8 +12621,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 88.9 0)
-			(hide yes)
+			(at 41.91 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13577,8 +12631,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 88.9 0)
-			(hide yes)
+			(at 41.91 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13587,8 +12640,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VPP\""
-			(at 30.48 88.9 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13599,12 +12652,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "3fa7b869-1e0d-4dd7-beeb-b529f879a029")
+			(uuid "b56b24aa-7d12-460b-9101-ae6956df77ec")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR012")
+					(reference "#PWR0671")
 					(unit 1)
 				)
 			)
@@ -13688,7 +12741,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 48.26 111.76 0)
+		(at 48.26 106.68 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13698,7 +12751,7 @@
 		(dnp no)
 		(uuid "d967c635-83f5-467d-b263-efbe8e6709f2")
 		(property "Reference" "#PWR0664"
-			(at 48.26 111.76 0)
+			(at 48.26 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13709,7 +12762,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 48.26 118.11 0)
+			(at 48.26 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13720,7 +12773,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 111.76 0)
+			(at 48.26 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13730,7 +12783,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 111.76 0)
+			(at 48.26 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13740,7 +12793,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 48.26 111.76 0)
+			(at 48.26 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

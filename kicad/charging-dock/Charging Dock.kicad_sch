@@ -2299,373 +2299,6 @@
 		(at 105.41 101.6)
 		(uuid "f5979920-96e6-4ddf-bb84-1f80523ac51a")
 	)
-	(symbol
-		(lib_id "JLCImport:PZ254R-11-05P")
-		(at 58.42 139.7 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "d01653de-8c57-4b15-8dda-f05a5784298b")
-		(property "Reference" "J1005"
-			(at 57.15 130.048 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PZ254R-11-05P"
-			(at 57.658 150.368 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "JLCImport:HDR-TH_5P-P2.54-H-M-W10.4"
-			(at 58.42 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Pin-Header-Female-Header_XFCN-PZ254R-11-05P_C492413.html"
-			(at 58.42 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Spare GPIO header (not fitted): 1 3V3, 2 PC5, 3 PC6, 4 PC7, 5 GND; same part as J1001"
-			(at 58.42 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "XFCN(兴飞)"
-			(at 58.42 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "PZ254R-11-05P"
-			(at 58.42 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C492413"
-			(at 58.42 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "4932ed89-281a-4420-bfd6-bf4de79c29b8")
-		)
-		(pin "1"
-			(uuid "044c640a-4234-4682-80a4-38b459ad35e9")
-		)
-		(pin "2"
-			(uuid "ac4852fd-92d9-4ca4-b2d5-42953a20cd7d")
-		)
-		(pin "4"
-			(uuid "2c288ff4-a892-4f53-bd5e-27a06b606134")
-		)
-		(pin "3"
-			(uuid "9ea1c00c-0ef2-4f64-bbbc-c771916c2d19")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "J1005")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 66.04 134.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "21589710-92d3-4b25-9fb1-1442c07bb69e")
-		(property "Reference" "#PWR01059"
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VMCU-3V3"
-			(at 66.04 129.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8a19bd31-d652-4cac-8bc1-a646e99fafb6")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01059")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 64.77 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c050ce44-ce36-42c0-89bd-5fa44fdf3e28")
-		(property "Reference" "#PWR01060"
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 64.77 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "547b544b-71d6-4370-ae2f-f75f3879c6ff")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01060")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 66.04 134.62) (xy 62.23 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8fb22b6-d376-44c9-ad69-68bda1c48249")
-	)
-	(wire
-		(pts
-			(xy 62.23 144.78) (xy 64.77 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72a29ebb-e444-4817-9fc6-3dfad5caef41")
-	)
-	(wire
-		(pts
-			(xy 64.77 144.78) (xy 64.77 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0bc25925-74b3-4f48-b14c-e51d96c7f285")
-	)
-	(label "PC5"
-		(at 62.23 137.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "967ac174-d631-41ba-bd31-860a50b8d6be")
-	)
-	(label "PC6"
-		(at 62.23 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c8f2b1f-fd2c-413e-8083-a38ce59ef283")
-	)
-	(label "PC7"
-		(at 62.23 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c66efdde-d927-47d5-af7d-dbe36cb3d640")
-	)
-	(label "PC5"
-		(at 196.85 96.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d0cbe032-3822-4a70-9167-9a9da8bcee12")
-	)
-	(label "PC6"
-		(at 196.85 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "12e62e16-6eef-4faa-9e9e-cc107e806315")
-	)
-	(label "PC7"
-		(at 196.85 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "103aa1be-5b01-408f-a704-5740ea0afc23")
-	)
 	(wire
 		(pts
 			(xy 96.52 99.06) (xy 96.52 100.33)
@@ -2685,6 +2318,16 @@
 			(type default)
 		)
 		(uuid "00c28e95-e851-48a1-9d73-f03ad6e3273d")
+	)
+	(wire
+		(pts
+			(xy 64.77 144.78) (xy 64.77 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bc25925-74b3-4f48-b14c-e51d96c7f285")
 	)
 	(wire
 		(pts
@@ -2908,6 +2551,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 144.78) (xy 64.77 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72a29ebb-e444-4817-9fc6-3dfad5caef41")
+	)
+	(wire
+		(pts
 			(xy 96.52 106.68) (xy 96.52 113.03)
 		)
 		(stroke
@@ -3028,6 +2681,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 134.62) (xy 62.23 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8fb22b6-d376-44c9-ad69-68bda1c48249")
+	)
+	(wire
+		(pts
 			(xy 105.41 99.06) (xy 96.52 99.06)
 		)
 		(stroke
@@ -3126,6 +2789,26 @@
 		)
 		(uuid "f5c5c64b-4936-4df1-a3b9-3614746901d5")
 	)
+	(label "PC7"
+		(at 196.85 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "103aa1be-5b01-408f-a704-5740ea0afc23")
+	)
+	(label "PC6"
+		(at 196.85 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "12e62e16-6eef-4faa-9e9e-cc107e806315")
+	)
 	(label "IR_RX"
 		(at 105.41 83.82 180)
 		(effects
@@ -3146,6 +2829,16 @@
 		)
 		(uuid "4eec2259-6a19-4f4c-9f7e-bce0ff15af6b")
 	)
+	(label "PC6"
+		(at 62.23 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c8f2b1f-fd2c-413e-8083-a38ce59ef283")
+	)
 	(label "UART_TX"
 		(at 62.23 114.3 0)
 		(effects
@@ -3155,6 +2848,36 @@
 			(justify left bottom)
 		)
 		(uuid "929cf765-3890-4660-81b1-ef251d6be053")
+	)
+	(label "PC5"
+		(at 62.23 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "967ac174-d631-41ba-bd31-860a50b8d6be")
+	)
+	(label "PC7"
+		(at 62.23 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c66efdde-d927-47d5-af7d-dbe36cb3d640")
+	)
+	(label "PC5"
+		(at 196.85 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0cbe032-3822-4a70-9167-9a9da8bcee12")
 	)
 	(label "UART_RX"
 		(at 62.23 116.84 0)
@@ -3249,6 +2972,83 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR01053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 66.04 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "21589710-92d3-4b25-9fb1-1442c07bb69e")
+		(property "Reference" "#PWR01059"
+			(at 66.04 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VMCU-3V3"
+			(at 66.04 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 66.04 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8a19bd31-d652-4cac-8bc1-a646e99fafb6")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR01059")
 					(unit 1)
 				)
 			)
@@ -4972,6 +4772,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 64.77 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c050ce44-ce36-42c0-89bd-5fa44fdf3e28")
+		(property "Reference" "#PWR01060"
+			(at 64.77 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 64.77 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 64.77 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "547b544b-71d6-4370-ae2f-f75f3879c6ff")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR01060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 60.96 185.42 0)
 		(unit 1)
@@ -5237,6 +5115,128 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR01010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:PZ254R-11-05P")
+		(at 58.42 139.7 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "d01653de-8c57-4b15-8dda-f05a5784298b")
+		(property "Reference" "J1005"
+			(at 57.15 130.048 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PZ254R-11-05P"
+			(at 57.658 150.368 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JLCImport:HDR-TH_5P-P2.54-H-M-W10.4"
+			(at 58.42 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Pin-Header-Female-Header_XFCN-PZ254R-11-05P_C492413.html"
+			(at 58.42 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Spare GPIO header (not fitted): 1 3V3, 2 PC5, 3 PC6, 4 PC7, 5 GND; same part as J1001"
+			(at 58.42 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XFCN(兴飞)"
+			(at 58.42 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PZ254R-11-05P"
+			(at 58.42 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492413"
+			(at 58.42 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "4932ed89-281a-4420-bfd6-bf4de79c29b8")
+		)
+		(pin "1"
+			(uuid "044c640a-4234-4682-80a4-38b459ad35e9")
+		)
+		(pin "2"
+			(uuid "ac4852fd-92d9-4ca4-b2d5-42953a20cd7d")
+		)
+		(pin "4"
+			(uuid "2c288ff4-a892-4f53-bd5e-27a06b606134")
+		)
+		(pin "3"
+			(uuid "9ea1c00c-0ef2-4f64-bbbc-c771916c2d19")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "J1005")
 					(unit 1)
 				)
 			)

@@ -12,8 +12,12 @@
 	)
 	(lib_symbols
 		(symbol "JLCImport:GL5537-1"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -177,7 +181,7 @@
 						(type none)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at -5.08 -1.27 0)
 					(length 2.54)
 					(name "1"
@@ -195,7 +199,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at 5.08 -1.27 180)
 					(length 2.54)
 					(name "2"
@@ -774,240 +778,149 @@
 			(embedded_fonts no)
 		)
 	)
-	(symbol
-		(lib_id "JLCImport:GL5537-1")
-		(at 140.97 100.33 90)
-		(unit 1)
-		(body_style 1)
+	(text "Use a pin 1 to pin 1 cable to the main board (J9)"
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c65b3d48-3322-4f2d-b94b-b7a95807654d")
-		(property "Reference" "R7001"
-			(at 144.78 99.0599 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
+		(at 147.32 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Value" "GL5537-1"
-			(at 144.78 101.6 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:GL5537-1"
-			(at 140.97 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Senba-Sensing-Tech-GL5537-1_C125628.pdf"
-			(at 140.97 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-30℃~+70℃ 0.6 150V 20kΩ~30kΩ 20ms 2MΩ 30ms 540nm 插件,P=3mm Photoresistors ROHS"
-			(at 140.97 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C125628"
-			(at 140.97 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Senba Sensing Tech"
-			(at 140.97 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "GL5537-1"
-			(at 140.97 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d986c90e-9d7e-4477-b5b6-eaf303b8d1c7")
-		)
-		(pin "1"
-			(uuid "1ffff342-30a5-4d8d-9666-39ee0c40ceae")
-		)
-		(instances
-			(project "Wake Sensor"
-				(path "/cdd6396c-8176-46a7-a5ba-adfb90c635ee"
-					(reference "R7001")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "a79a4060-da7b-41cb-8052-485d2ea86f8e")
 	)
-	(symbol
-		(lib_id "JLCImport:ZX-SH1_0-2PLT")
-		(at 170.18 100.33 0)
-		(unit 1)
-		(body_style 1)
+	(text "OOMWOO wake-up sensor board (rev 1, 2026-11-15). A GL5537 photoresistor on its own small board, so it can sit where\nthe enclosure needs it. With the main board's 10k pull-down (R103) it forms a divider into PB12 (ADC):\nmore light = higher voltage. C1 (100 nF) on the main board filters noise picked up on the cable.\nRefs in the 7000s: each board has its own range."
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b27ddd97-6920-4ffe-b36b-187126f75aa4")
-		(property "Reference" "J7001"
-			(at 165.481 93.472 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+		(at 30.48 25.4 0)
+		(effects
+			(font
+				(size 1.524 1.524)
 			)
+			(justify left bottom)
 		)
-		(property "Value" "ZX-SH1_0-2PLT"
-			(at 165.481 114.046 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+		(uuid "ab81ee52-5d7f-4b6e-968d-5b5a2ab6f378")
+	)
+	(junction
+		(at 177.8 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "105b855e-8cdd-4e8e-92c4-97ec0ce4d14c")
+	)
+	(junction
+		(at 177.8 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88c10a4f-8848-49fb-b9fb-f8fde3c947df")
+	)
+	(wire
+		(pts
+			(xy 160.02 99.06) (xy 165.1 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01568e72-1c7f-4e27-9162-3d9ecf6e144e")
+	)
+	(wire
+		(pts
+			(xy 142.24 105.41) (xy 160.02 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26e3eba0-802e-439b-b71d-f015ebe6cd5b")
+	)
+	(wire
+		(pts
+			(xy 172.72 93.98) (xy 177.8 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66ffdf47-7c3c-477c-b867-81d9c234c1de")
+	)
+	(wire
+		(pts
+			(xy 177.8 106.68) (xy 172.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d2ef104-08ed-46e5-bef6-c008750ef392")
+	)
+	(wire
+		(pts
+			(xy 160.02 95.25) (xy 160.02 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f122e51-5984-4271-be29-01eae20cafab")
+	)
+	(wire
+		(pts
+			(xy 177.8 93.98) (xy 177.8 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d38d0c8-8f01-4f84-87e1-5846ea638a8a")
+	)
+	(wire
+		(pts
+			(xy 160.02 101.6) (xy 165.1 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2194241-ef81-4074-9931-bdd5471166c6")
+	)
+	(wire
+		(pts
+			(xy 160.02 105.41) (xy 160.02 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f86b6115-587c-4096-8aae-c8a44201a2fa")
+	)
+	(wire
+		(pts
+			(xy 142.24 95.25) (xy 160.02 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe783779-78cd-4aee-b979-9b86bf21b7f7")
+	)
+	(label "VMCU-3V3"
+		(at 146.05 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Footprint" "JLCImport:ZX-SH1_0-2PLT"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+		(uuid "221ecab8-4ba3-4a55-a7b9-493d88f59994")
+	)
+	(label "LDR"
+		(at 146.05 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430451.pdf"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "JST SH compatible 1.0 mm 1x2P, SMD vertical (top entry): 1 VMCU-3V3, 2 LDR; 3, 4 mounting pads (GND)"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C7430451"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Megastar"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "ZX-SH1.0-3PLT"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "331a222d-fc0d-4e6c-b81a-670ff2225c31")
-		)
-		(pin "2"
-			(uuid "ce0ab881-504a-407b-aae8-ed5ddda83153")
-		)
-		(pin "3"
-			(uuid "2b4d94ab-5913-448a-9621-b68cfd2c3bff")
-		)
-		(pin "4"
-			(uuid "5e403b24-2a7e-4bdc-9d9c-182d00c1c278")
-		)
-		(instances
-			(project "Wake Sensor"
-				(path "/cdd6396c-8176-46a7-a5ba-adfb90c635ee"
-					(reference "J7001")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "3109c321-68a5-4fc3-8cd4-03e0c3ad6b76")
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
@@ -1167,9 +1080,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 177.8 106.68 0)
-		(mirror y)
+		(lib_id "JLCImport:ZX-SH1_0-2PLT")
+		(at 170.18 100.33 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1177,9 +1089,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f7b17413-5d5a-499d-975e-771b287d513e")
-		(property "Reference" "#PWR7002"
-			(at 177.8 106.68 0)
+		(uuid "b27ddd97-6920-4ffe-b36b-187126f75aa4")
+		(property "Reference" "J7001"
+			(at 165.481 93.472 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ZX-SH1_0-2PLT"
+			(at 165.481 114.046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:ZX-SH1_0-2PLT"
+			(at 170.18 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1189,8 +1123,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 177.8 111.76 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430451.pdf"
+			(at 170.18 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1200,8 +1134,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 177.8 106.68 0)
+		(property "Description" "JST SH compatible 1.0 mm 1x2P, SMD vertical (top entry): 1 VMCU-3V3, 2 LDR; 3, 4 mounting pads (GND)"
+			(at 170.18 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1211,8 +1145,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 177.8 106.68 0)
+		(property "LCSC" "C7430451"
+			(at 170.18 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1222,8 +1156,19 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 177.8 106.68 0)
+		(property "Manufacturer" "Megastar"
+			(at 170.18 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ZX-SH1.0-3PLT"
+			(at 170.18 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1234,12 +1179,136 @@
 			)
 		)
 		(pin "1"
-			(uuid "ee5f392d-7dd9-4da0-b896-0d2dd27ced2b")
+			(uuid "331a222d-fc0d-4e6c-b81a-670ff2225c31")
+		)
+		(pin "2"
+			(uuid "ce0ab881-504a-407b-aae8-ed5ddda83153")
+		)
+		(pin "3"
+			(uuid "2b4d94ab-5913-448a-9621-b68cfd2c3bff")
+		)
+		(pin "4"
+			(uuid "5e403b24-2a7e-4bdc-9d9c-182d00c1c278")
 		)
 		(instances
 			(project "Wake Sensor"
 				(path "/cdd6396c-8176-46a7-a5ba-adfb90c635ee"
-					(reference "#PWR7002")
+					(reference "J7001")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:GL5537-1")
+		(at 140.97 100.33 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c65b3d48-3322-4f2d-b94b-b7a95807654d")
+		(property "Reference" "R7001"
+			(at 144.78 99.0599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "GL5537-1"
+			(at 144.78 101.6 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:GL5537-1"
+			(at 140.97 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Senba-Sensing-Tech-GL5537-1_C125628.pdf"
+			(at 140.97 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-30℃~+70℃ 0.6 150V 20kΩ~30kΩ 20ms 2MΩ 30ms 540nm 插件,P=3mm Photoresistors ROHS"
+			(at 140.97 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125628"
+			(at 140.97 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Senba Sensing Tech"
+			(at 140.97 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "GL5537-1"
+			(at 140.97 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d986c90e-9d7e-4477-b5b6-eaf303b8d1c7")
+		)
+		(pin "1"
+			(uuid "1ffff342-30a5-4d8d-9666-39ee0c40ceae")
+		)
+		(instances
+			(project "Wake Sensor"
+				(path "/cdd6396c-8176-46a7-a5ba-adfb90c635ee"
+					(reference "R7001")
 					(unit 1)
 				)
 			)
@@ -1324,137 +1393,84 @@
 			)
 		)
 	)
-	(text "OOMWOO wake-up sensor board (rev 1, 2026-11-15). A GL5537 photoresistor on its own small board, so it can sit where\nthe enclosure needs it. With the main board's 10k pull-down (R103) it forms a divider into PB12 (ADC):\nmore light = higher voltage. C1 (100 nF) on the main board filters noise picked up on the cable.\nRefs in the 7000s: each board has its own range."
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 106.68 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(at 30.48 25.4 0)
-		(effects
-			(font
-				(size 1.524 1.524)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f7b17413-5d5a-499d-975e-771b287d513e")
+		(property "Reference" "#PWR7002"
+			(at 177.8 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "ab81ee52-5d7f-4b6e-968d-5b5a2ab6f378")
-	)
-	(text "Use a pin 1 to pin 1 cable to the main board (J9)"
-		(exclude_from_sim no)
-		(at 147.32 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Value" "GND"
+			(at 177.8 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "a79a4060-da7b-41cb-8052-485d2ea86f8e")
-	)
-	(wire
-		(pts
-			(xy 142.24 95.25) (xy 160.02 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe783779-78cd-4aee-b979-9b86bf21b7f7")
-	)
-	(wire
-		(pts
-			(xy 160.02 95.25) (xy 160.02 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f122e51-5984-4271-be29-01eae20cafab")
-	)
-	(wire
-		(pts
-			(xy 160.02 99.06) (xy 165.1 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01568e72-1c7f-4e27-9162-3d9ecf6e144e")
-	)
-	(wire
-		(pts
-			(xy 142.24 105.41) (xy 160.02 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26e3eba0-802e-439b-b71d-f015ebe6cd5b")
-	)
-	(wire
-		(pts
-			(xy 160.02 105.41) (xy 160.02 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f86b6115-587c-4096-8aae-c8a44201a2fa")
-	)
-	(wire
-		(pts
-			(xy 160.02 101.6) (xy 165.1 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2194241-ef81-4074-9931-bdd5471166c6")
-	)
-	(wire
-		(pts
-			(xy 172.72 93.98) (xy 177.8 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66ffdf47-7c3c-477c-b867-81d9c234c1de")
-	)
-	(wire
-		(pts
-			(xy 177.8 93.98) (xy 177.8 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d38d0c8-8f01-4f84-87e1-5846ea638a8a")
-	)
-	(wire
-		(pts
-			(xy 177.8 106.68) (xy 172.72 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d2ef104-08ed-46e5-bef6-c008750ef392")
-	)
-	(label "VMCU-3V3"
-		(at 146.05 95.25 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Footprint" ""
+			(at 177.8 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "221ecab8-4ba3-4a55-a7b9-493d88f59994")
-	)
-	(label "LDR"
-		(at 146.05 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(property "Datasheet" ""
+			(at 177.8 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify left bottom)
 		)
-		(uuid "3109c321-68a5-4fc3-8cd4-03e0c3ad6b76")
+		(property "Description" ""
+			(at 177.8 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee5f392d-7dd9-4da0-b896-0d2dd27ced2b")
+		)
+		(instances
+			(project "Wake Sensor"
+				(path "/cdd6396c-8176-46a7-a5ba-adfb90c635ee"
+					(reference "#PWR7002")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(sheet_instances
 		(path "/"

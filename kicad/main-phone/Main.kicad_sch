@@ -11021,6 +11021,16 @@
 				(justify left)
 			)
 		)
+		(pin "BAT_NTC" input
+			(at 200.66 179.07 270)
+			(uuid "ad53a460-3eb4-469e-abc5-060f9036891b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(pin "~{STDBY}" input
 			(at 203.2 179.07 270)
 			(uuid "d59dfda1-01ab-4139-8fbe-5986346d86dd")
@@ -12089,7 +12099,7 @@
 	)
 	(sheet
 		(at 231.14 254)
-		(size 59.69 17.78)
+		(size 59.69 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -12115,7 +12125,7 @@
 			)
 		)
 		(property "Sheetfile" "Battery-Charger.kicad_sch"
-			(at 230.886 272.796 0)
+			(at 230.886 275.336 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12158,6 +12168,16 @@
 		(pin "BAT_SENSE" output
 			(at 231.14 259.08 180)
 			(uuid "6aa07fdb-cf26-4a01-ab3e-e59e116d4a9b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_NTC" output
+			(at 231.14 271.78 180)
+			(uuid "083914b0-76c9-44ef-b36c-d57e6bdcd11d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12238,5 +12258,25 @@
 			(type default)
 		)
 		(uuid "4228f5cc-e9cd-4f80-aedb-39d613ddfaa3")
+	)
+	(wire
+		(pts
+			(xy 200.66 179.07) (xy 200.66 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c45ae27f-fe36-4cdc-8270-b6296679e7de")
+	)
+	(wire
+		(pts
+			(xy 200.66 271.78) (xy 231.14 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05d45ced-8605-44b0-8013-29314fe43549")
 	)
 )

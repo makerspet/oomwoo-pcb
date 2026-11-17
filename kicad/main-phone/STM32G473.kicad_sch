@@ -6813,16 +6813,6 @@
 		)
 		(uuid "2c589fad-2cee-4cf3-bd1b-5de9de3e5c75")
 	)
-	(label "SPARE-PF1"
-		(at 311.15 34.29 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2cd2c91c-1156-499d-8a34-36a364cc641c")
-	)
 	(label "SPARE-PC10-TX"
 		(at 160.02 165.1 0)
 		(effects
@@ -6872,16 +6862,6 @@
 			(justify right bottom)
 		)
 		(uuid "4fb0881e-3e5a-4a35-abff-c554c694912f")
-	)
-	(label "SPARE-PF1"
-		(at 160.02 170.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "55a184d8-8d56-42b4-b785-8d5c600ba04c")
 	)
 	(label "SPARE-PC11-RX"
 		(at 209.55 165.1 180)
@@ -13794,6 +13774,93 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
 					(reference "#PWR09002")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(hierarchical_label "BAT_NTC"
+		(shape input)
+		(at 311.15 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f884aa81-6b5f-4432-bb17-d7f70a42eb4d")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 160.02 170.18 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2de4e139-ca7c-4245-bc35-2f55c4b37568")
+		(property "Reference" "#PWR03303"
+			(at 160.02 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7b579995-9154-46c4-b0d5-13cd7343c4aa")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
+					(reference "#PWR03303")
 					(unit 1)
 				)
 			)

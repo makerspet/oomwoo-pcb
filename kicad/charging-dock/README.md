@@ -16,7 +16,8 @@ Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.
 
 - WCH CH32V003F4P6, TSSOP-20 (LCSC C5187096, ~$0.17): 48 MHz RISC-V, 16 KB flash, 10-bit ADC, internal oscillator (no crystal).
 - Toolchains: WCH's official Arduino core, [ch32fun](https://github.com/cnlohr/ch32fun) and PlatformIO.
-- Programming and debug: a WCH-LinkE on the single-wire SWIO pin (PD1). J1001 (1x5, not fitted) pinout: 1 3V3, 2 SWIO, 3 TX, 4 RX, 5 GND. J1005 (same 1x5 part, not fitted) brings out the spare GPIO: 1 3V3, 2 PC5, 3 PC6, 4 PC7, 5 GND.
+- Programming: the single-wire SWIO pin (PD1) on J1001, a fitted 1x2 right-angle 0.1" header (XFCN PZ254R-11-02P, C492410; since 2026-11-15): 1 SWIO, 2 GND. It carries no 3.3 V, so the dock runs from its brick while it is flashed. Flash it with a WCH-LinkE, or (planned) with two jumper wires to the robot board's spare header J1, where the STM32 acts as the programmer: see the [firmware spec](https://github.com/makerspet/oomwoo-firmware/blob/main/docs/SPEC.md) (Dock programmer).
+- J1005 (2x6 right-angle 0.1" header, XFCN PZ254R-12-12P, C492434, not fitted) brings out every other free pin: 1 VMCU-3V3, 2 GND, 3 UART_TX (PD5), 4 UART_RX (PD6), 5 PC5, 6 PC6, 7 PC7, 8 PD0, 9 PD4, 10 PD7 (NRST), 11 VMCU-3V3, 12 GND.
 
 | Pin | Function | Notes |
 | --- | --- | --- |
@@ -28,10 +29,10 @@ Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.
 | PC1 | CHARGE-EN | high = VDOCK-20V on (R1013 100k pull-down holds it off in reset) |
 | PC3, PC4 | IR-L, IR-R | TIM1_CH3 / TIM1_CH4, 38 kHz PWM |
 | PC0 | status LED | LED1001 through R1001 (1k) |
-| PD5, PD6 | UART TX, RX | debug |
-| PD1 | SWIO | programming |
+| PD5, PD6 | UART TX, RX | debug, on J1005 (not fitted) |
+| PD1 | SWIO | programming, on J1001 (fitted) |
 | PC5, PC6, PC7 | spare | on J1005 (not fitted); SPI SCK/MOSI/MISO, or I2C SCL/SDA on PC5/PC6 with the pin remap |
-| PD0, PD4, PD7 | unused | PD7 is NRST by default; PD4 (TIM2_CH1) fed the optional IR receiver until 2026-11-15 |
+| PD0, PD4, PD7 | spare | on J1005 (not fitted); PD7 is NRST by default; PD4 (TIM2_CH1) fed the optional IR receiver until 2026-11-15 |
 
 The ADC reference is VDD, and PROBE-DRV high is VDD too, so the probe readings are ratiometric.
 
@@ -71,7 +72,7 @@ Firmware:
 
 ## Parts shared with the robot
 
-DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, PZ254R-11-05P, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
+DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, PZ254R-11-02P (programming header), INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
 
 Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`) and the KiCad standard libraries.
 

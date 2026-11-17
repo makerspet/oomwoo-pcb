@@ -1197,7 +1197,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:PZ254R-11-05P"
+		(symbol "JLCImport:PZ254R-11-02P"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(hide yes)
 			)
@@ -1207,7 +1210,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 10.16 0)
+				(at 0 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1216,8 +1219,8 @@
 					)
 				)
 			)
-			(property "Value" "PZ254R-11-05P"
-				(at 0 -10.16 0)
+			(property "Value" "PZ254R-11-02P"
+				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1226,19 +1229,8 @@
 					)
 				)
 			)
-			(property "Footprint" "JLCImport:HDR-TH_5P-P2.54-H-M-W10.4"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Pin-Header-Female-Header_XFCN-PZ254R-11-05P_C492413.html"
-				(at 0 -15.24 0)
+			(property "Footprint" "JLCImport:HDR-TH_2P-P2.54-H-M-W10.4"
+				(at 0 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1248,8 +1240,19 @@
 					)
 				)
 			)
-			(property "Description" "-40℃~+105℃ 1 1x5P 2.54mm 2.5mm 250V 3A 5P 6mm Black Brass Pin Header Right Angle 弯插,P=2.54mm Pin Headers ROHS"
-				(at 0 0 0)
+			(property "Datasheet" "https://lcsc.com/product-detail/Pin-Header-Female-Header_XFCN-PZ254R-11-02P_C492410.html"
+				(at 0 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-40℃~+105℃ 1 1x2P 2.54mm 2.5mm 250V 2P 3A 6mm Black Brass Pin Header Right Angle Pin Headers"
+				(at 0 -24.13 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1260,7 +1263,7 @@
 				)
 			)
 			(property "Manufacturer" "XFCN(兴飞)"
-				(at 0 -17.78 0)
+				(at 0 -13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1270,8 +1273,8 @@
 					)
 				)
 			)
-			(property "MPN" "PZ254R-11-05P"
-				(at 0 -20.32 0)
+			(property "MPN" "PZ254R-11-02P"
+				(at 0 -16.51 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1281,8 +1284,8 @@
 					)
 				)
 			)
-			(property "LCSC" "C492413"
-				(at 0 -22.86 0)
+			(property "LCSC" "C492410"
+				(at 0 -19.05 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1303,10 +1306,10 @@
 					)
 				)
 			)
-			(symbol "PZ254R-11-05P_0_1"
+			(symbol "PZ254R-11-02P_0_1"
 				(rectangle
-					(start -1.27 7.62)
-					(end 3.81 -7.62)
+					(start -1.27 3.81)
+					(end 3.81 -3.81)
 					(stroke
 						(width 0)
 						(type default)
@@ -1316,7 +1319,7 @@
 					)
 				)
 				(circle
-					(center 0 6.35)
+					(center 0 2.54)
 					(radius 0.38)
 					(stroke
 						(width 0)
@@ -1327,7 +1330,7 @@
 					)
 				)
 				(pin passive line
-					(at -3.81 5.08 0)
+					(at -3.81 1.27 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -1345,7 +1348,175 @@
 					)
 				)
 				(pin passive line
-					(at -3.81 2.54 0)
+					(at -3.81 -1.27 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "JLCImport:PZ254R-12-12P"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PZ254R-12-12P"
+				(at 0 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:HDR-TH_12P-P2.54-H-M-R2-C6-S2.54"
+				(at 0 -13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_XFCN-PZ254R-12-12P_C492434.html"
+				(at 0 -16.51 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-40℃~+105℃ 12P 2 2.54mm 2.54mm 2.5mm 2x6P 6mm Black Brass Pin Header Right Angle 弯插,P=2.54mm Pin Headers ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "XFCN(兴飞)"
+				(at 0 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "PZ254R-12-12P"
+				(at 0 -21.59 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C492434"
+				(at 0 -24.13 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Pin Headers"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PZ254R-12-12P_0_1"
+				(rectangle
+					(start -5.08 8.89)
+					(end 5.08 -8.89)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -3.81 7.62)
+					(radius 0.38)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 6.35 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 6.35 180)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -1363,7 +1534,7 @@
 					)
 				)
 				(pin passive line
-					(at -3.81 0 0)
+					(at -7.62 3.81 0)
 					(length 2.54)
 					(name "3"
 						(effects
@@ -1381,7 +1552,7 @@
 					)
 				)
 				(pin passive line
-					(at -3.81 -2.54 0)
+					(at 7.62 3.81 180)
 					(length 2.54)
 					(name "4"
 						(effects
@@ -1399,7 +1570,7 @@
 					)
 				)
 				(pin passive line
-					(at -3.81 -5.08 0)
+					(at -7.62 1.27 0)
 					(length 2.54)
 					(name "5"
 						(effects
@@ -1409,6 +1580,132 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 1.27 180)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -1.27 0)
+					(length 2.54)
+					(name "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -1.27 180)
+					(length 2.54)
+					(name "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -3.81 0)
+					(length 2.54)
+					(name "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -3.81 180)
+					(length 2.54)
+					(name "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -6.35 0)
+					(length 2.54)
+					(name "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -6.35 180)
+					(length 2.54)
+					(name "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2043,9 +2340,31 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "SPARE GPIO"
+		(exclude_from_sim no)
+		(at 184.912 32.512 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "133ca68c-cf78-4c87-a397-ab7663e67f30")
+	)
+	(text "PROGRAM"
+		(exclude_from_sim no)
+		(at 192.532 70.612 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "90069503-73fb-499b-a5f2-e82584fdf9c5")
+	)
 	(text "CH32V003F4P6: PA2 = VIN-SENSE (A0), PA1 = DOCK-SENSE (A1), PD2 = PROBE-SENSE (A3),\nPD3 = I-SENSE (A4), PC1 = CHARGE-EN (high = VDOCK-20V on), PC2 = PROBE-DRV,\nPC3/PC4 = IR-L/IR-R (TIM1_CH3/CH4, 38 kHz), PC0 = status LED, PD4 unused,\nPD5/PD6 = UART, PD1 = SWIO. HSI clock, no crystal.\nADC reference is VDD, and PROBE-DRV high is VDD too, so the probe math is ratiometric."
 		(exclude_from_sim no)
-		(at 152.654 164.846 0)
+		(at 152.4 165.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2077,17 +2396,21 @@
 		(color 0 0 0 0)
 		(uuid "2cabdf26-7c4a-486c-8954-64bd59fe4634")
 	)
-	(no_connect
-		(at 105.41 91.44)
-		(uuid "630b31af-be86-4c17-a0bc-05a23ffa8bd6")
+	(junction
+		(at 172.72 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8190d1f4-31d4-4f63-8102-95b1135c2f86")
 	)
-	(no_connect
-		(at 105.41 101.6)
-		(uuid "f5979920-96e6-4ddf-bb84-1f80523ac51a")
+	(junction
+		(at 199.39 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4df5b68-0cca-4f59-9868-074b5e7da103")
 	)
 	(wire
 		(pts
-			(xy 96.52 99.06) (xy 96.52 100.33)
+			(xy 57.15 102.87) (xy 57.15 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2097,7 +2420,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 88.9) (xy 224.79 88.9)
+			(xy 168.91 92.71) (xy 185.42 92.71)
 		)
 		(stroke
 			(width 0)
@@ -2107,27 +2430,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 144.78) (xy 64.77 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0bc25925-74b3-4f48-b14c-e51d96c7f285")
-	)
-	(wire
-		(pts
-			(xy 62.23 111.76) (xy 200.66 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d2c3455-b465-468e-b5de-f7f64f5aa43c")
-	)
-	(wire
-		(pts
-			(xy 210.82 78.74) (xy 224.79 78.74)
+			(xy 171.45 82.55) (xy 185.42 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2137,17 +2440,17 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 119.38) (xy 64.77 120.65)
+			(xy 157.48 92.71) (xy 165.1 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "180c5ef1-1cc2-4958-96c4-e1f696cc293b")
+		(uuid "2171fd3c-8869-4ee9-a6a9-554b78591908")
 	)
 	(wire
 		(pts
-			(xy 196.85 99.06) (xy 224.79 99.06)
+			(xy 157.48 102.87) (xy 185.42 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2157,17 +2460,17 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 88.9) (xy 77.47 116.84)
+			(xy 208.28 45.72) (xy 198.12 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2cc8188a-be9b-4def-9af6-4e4eb361af27")
+		(uuid "3478d38b-0d13-44f7-a096-41ec28409f4b")
 	)
 	(wire
 		(pts
-			(xy 210.82 91.44) (xy 210.82 106.68)
+			(xy 171.45 95.25) (xy 171.45 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2177,7 +2480,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 88.9) (xy 208.28 104.14)
+			(xy 168.91 92.71) (xy 168.91 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2187,17 +2490,27 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 109.22) (xy 62.23 109.22)
+			(xy 199.39 53.34) (xy 198.12 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3a55ac27-f65c-4e58-9b4b-3504fe07e6c8")
+		(uuid "38baae72-a52b-4d1e-9fe7-a36dd94bedf7")
 	)
 	(wire
 		(pts
-			(xy 196.85 86.36) (xy 224.79 86.36)
+			(xy 208.28 43.18) (xy 198.12 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ad382b5-d0a9-4514-91a3-1213cfaa60ea")
+	)
+	(wire
+		(pts
+			(xy 157.48 90.17) (xy 185.42 90.17)
 		)
 		(stroke
 			(width 0)
@@ -2207,23 +2520,13 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 104.14) (xy 208.28 104.14)
+			(xy 157.48 107.95) (xy 168.91 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3c376b74-035b-4325-8b02-d30764373820")
-	)
-	(wire
-		(pts
-			(xy 62.23 119.38) (xy 64.77 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "488061f0-fded-4bd2-a516-f7ac0f3c851b")
 	)
 	(wire
 		(pts
@@ -2237,7 +2540,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 93.98) (xy 97.79 73.66)
+			(xy 58.42 97.79) (xy 58.42 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2247,7 +2550,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 101.6) (xy 224.79 101.6)
+			(xy 157.48 105.41) (xy 185.42 105.41)
 		)
 		(stroke
 			(width 0)
@@ -2257,7 +2560,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 93.98) (xy 105.41 93.98)
+			(xy 58.42 97.79) (xy 66.04 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2267,7 +2570,37 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 96.52) (xy 95.25 71.12)
+			(xy 175.26 48.26) (xy 182.88 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54fa07a0-7c55-4bb9-98cc-af585d3b794b")
+	)
+	(wire
+		(pts
+			(xy 175.26 50.8) (xy 182.88 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "612b4dfd-df2a-42db-84fc-36aa7b15c570")
+	)
+	(wire
+		(pts
+			(xy 172.72 53.34) (xy 172.72 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6157758a-b304-4633-bd8e-a7c0fc715532")
+	)
+	(wire
+		(pts
+			(xy 55.88 100.33) (xy 55.88 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2277,17 +2610,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 88.9) (xy 200.66 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63982a9b-e89b-420d-8372-4dc0bcfd7fcc")
-	)
-	(wire
-		(pts
-			(xy 95.25 96.52) (xy 105.41 96.52)
+			(xy 55.88 100.33) (xy 66.04 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2297,7 +2620,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 104.14) (xy 87.63 104.14)
+			(xy 66.04 107.95) (xy 48.26 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2307,43 +2630,33 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 144.78) (xy 64.77 144.78)
+			(xy 172.72 40.64) (xy 182.88 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "72a29ebb-e444-4817-9fc6-3dfad5caef41")
+		(uuid "6bf3a597-711c-4cd3-9662-d6582d36d2e7")
 	)
 	(wire
 		(pts
-			(xy 96.52 106.68) (xy 96.52 113.03)
+			(xy 182.88 53.34) (xy 172.72 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7d177888-d8f5-491e-9b3d-0985c26af8d3")
+		(uuid "7398be07-800a-4522-aa9c-bed5eb732423")
 	)
 	(wire
 		(pts
-			(xy 77.47 116.84) (xy 62.23 116.84)
+			(xy 199.39 53.34) (xy 199.39 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7d3f8f1a-8d88-474f-8034-ac40c5db448f")
-	)
-	(wire
-		(pts
-			(xy 74.93 114.3) (xy 62.23 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "854fb180-040b-49e0-9e5b-9dcf26c58db8")
+		(uuid "7863eeed-1b33-4f37-85ab-13af0492a893")
 	)
 	(wire
 		(pts
@@ -2357,17 +2670,27 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 86.36) (xy 74.93 86.36)
+			(xy 208.28 48.26) (xy 198.12 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9307bf6c-dcae-46d7-983d-b46c92993c4e")
+		(uuid "90da217f-b15b-4be0-9785-ade274cd6937")
 	)
 	(wire
 		(pts
-			(xy 196.85 83.82) (xy 224.79 83.82)
+			(xy 175.26 45.72) (xy 182.88 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9afc13e6-3db0-46de-b120-246377a35eef")
+	)
+	(wire
+		(pts
+			(xy 157.48 87.63) (xy 185.42 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2377,7 +2700,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 81.28) (xy 224.79 81.28)
+			(xy 168.91 85.09) (xy 185.42 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2387,7 +2710,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 106.68) (xy 96.52 106.68)
+			(xy 66.04 110.49) (xy 57.15 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2397,7 +2720,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 71.12) (xy 210.82 71.12)
+			(xy 55.88 74.93) (xy 171.45 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2407,7 +2730,17 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 71.12) (xy 210.82 78.74)
+			(xy 208.28 50.8) (xy 198.12 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b287d322-25d0-4c5d-9289-cacd74e14743")
+	)
+	(wire
+		(pts
+			(xy 171.45 74.93) (xy 171.45 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2417,27 +2750,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 88.9) (xy 200.66 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7a00308-9a67-4b53-8ce4-82fc84656635")
-	)
-	(wire
-		(pts
-			(xy 66.04 134.62) (xy 62.23 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8fb22b6-d376-44c9-ad69-68bda1c48249")
-	)
-	(wire
-		(pts
-			(xy 105.41 99.06) (xy 96.52 99.06)
+			(xy 66.04 102.87) (xy 57.15 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2447,27 +2760,17 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 88.9) (xy 77.47 88.9)
+			(xy 199.39 40.64) (xy 198.12 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c36df6b7-6455-4c70-aec7-7079c8e59f09")
+		(uuid "c2801dee-24df-4db8-85a9-48757139a857")
 	)
 	(wire
 		(pts
-			(xy 74.93 86.36) (xy 74.93 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2932da7-0084-4a55-b25a-ca4f9a683c3a")
-	)
-	(wire
-		(pts
-			(xy 97.79 73.66) (xy 208.28 73.66)
+			(xy 58.42 77.47) (xy 168.91 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2477,7 +2780,17 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 91.44) (xy 210.82 91.44)
+			(xy 175.26 43.18) (xy 182.88 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3cfb91a-364f-4c79-b6f3-b2c0c5c53067")
+	)
+	(wire
+		(pts
+			(xy 185.42 95.25) (xy 171.45 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2487,7 +2800,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 106.68) (xy 210.82 106.68)
+			(xy 157.48 110.49) (xy 171.45 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2497,7 +2810,17 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 73.66) (xy 208.28 81.28)
+			(xy 165.1 69.85) (xy 182.88 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f31184d2-3985-4380-8a09-1aa7117e08ed")
+	)
+	(wire
+		(pts
+			(xy 168.91 77.47) (xy 168.91 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2505,8 +2828,18 @@
 		)
 		(uuid "f5c5c64b-4936-4df1-a3b9-3614746901d5")
 	)
+	(wire
+		(pts
+			(xy 165.1 92.71) (xy 165.1 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f86cf932-c3ea-4a5d-b0eb-428ad13dd678")
+	)
 	(label "PC7"
-		(at 196.85 91.44 0)
+		(at 157.48 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2516,7 +2849,7 @@
 		(uuid "103aa1be-5b01-408f-a704-5740ea0afc23")
 	)
 	(label "PC6"
-		(at 196.85 93.98 0)
+		(at 157.48 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2525,62 +2858,88 @@
 		)
 		(uuid "12e62e16-6eef-4faa-9e9e-cc107e806315")
 	)
-	(no_connect
-		(at 105.41 83.82)
-		(uuid "03a8956c-d677-4dba-bff5-22c9578586ee")
-	)
-	(label "SWIO"
-		(at 62.23 111.76 0)
+	(label "PD0"
+		(at 208.28 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "4eec2259-6a19-4f4c-9f7e-bce0ff15af6b")
-	)
-	(label "PC6"
-		(at 62.23 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c8f2b1f-fd2c-413e-8083-a38ce59ef283")
-	)
-	(label "UART_TX"
-		(at 62.23 114.3 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "929cf765-3890-4660-81b1-ef251d6be053")
+		(uuid "24c09bfe-5790-464f-bb0a-572e11792822")
 	)
 	(label "PC5"
-		(at 62.23 137.16 0)
+		(at 175.26 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "967ac174-d631-41ba-bd31-860a50b8d6be")
+		(uuid "3c906f07-6780-4179-b5ec-cbc7fa262892")
+	)
+	(label "PD7"
+		(at 66.04 95.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "41a58495-d109-4f4a-8b4e-141d5aee7b39")
 	)
 	(label "PC7"
-		(at 62.23 142.24 0)
+		(at 175.26 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "c66efdde-d927-47d5-af7d-dbe36cb3d640")
+		(uuid "8e893db3-5d12-4fc3-ad62-0991c286df8e")
+	)
+	(label "UART_RX"
+		(at 208.28 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8f515e18-35a6-4e41-808a-bc7d48aa27b7")
+	)
+	(label "UART_RX"
+		(at 66.04 92.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a4700502-acd1-47fd-8e3e-29aa6ae48fc3")
+	)
+	(label "PD4"
+		(at 175.26 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a5b7756a-5a98-4048-b494-3c6c0563408d")
+	)
+	(label "SWIO"
+		(at 157.48 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c62b694a-7127-48e3-be17-417c1ed038d3")
 	)
 	(label "PC5"
-		(at 196.85 96.52 0)
+		(at 157.48 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2589,18 +2948,38 @@
 		)
 		(uuid "d0cbe032-3822-4a70-9167-9a9da8bcee12")
 	)
-	(label "UART_RX"
-		(at 62.23 116.84 0)
+	(label "PC6"
+		(at 208.28 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "d6c2abb3-0c16-4671-84b0-8121e5cccac8")
+		(uuid "d49d9fae-3559-41d3-a488-5353177d280e")
+	)
+	(label "PD0"
+		(at 66.04 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e2848329-1793-440a-8261-3f0354ba0046")
+	)
+	(label "UART_TX"
+		(at 66.04 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ee8c5e70-9c88-4e1d-b9a7-da4b5691829f")
 	)
 	(label "LED_STAT"
-		(at 105.41 106.68 180)
+		(at 66.04 110.49 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2609,9 +2988,39 @@
 		)
 		(uuid "f5edd2d1-cd19-43a8-8567-f37cd72c1fb2")
 	)
+	(label "UART_TX"
+		(at 175.26 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fce50c68-87aa-4a72-9709-a566ac3355a1")
+	)
+	(label "PD7"
+		(at 208.28 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fd954a29-1d93-43f3-9179-aa737a941e8a")
+	)
+	(label "PD4"
+		(at 66.04 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ff9a4925-cc4c-491c-98ea-59235e4e8cd6")
+	)
 	(symbol
 		(lib_id "power:GND")
-		(at 96.52 100.33 0)
+		(at 57.15 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2621,7 +3030,7 @@
 		(dnp no)
 		(uuid "08f2cb9d-2e60-4f66-84e4-931c952a6c59")
 		(property "Reference" "#PWR01053"
-			(at 96.52 100.33 0)
+			(at 57.15 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2632,7 +3041,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 96.52 105.41 0)
+			(at 57.15 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2643,7 +3052,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 96.52 100.33 0)
+			(at 57.15 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2654,7 +3063,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 100.33 0)
+			(at 57.15 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2665,7 +3074,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 96.52 100.33 0)
+			(at 57.15 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2689,206 +3098,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 66.04 134.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "21589710-92d3-4b25-9fb1-1442c07bb69e")
-		(property "Reference" "#PWR01059"
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VMCU-3V3"
-			(at 66.04 129.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8a19bd31-d652-4cac-8bc1-a646e99fafb6")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01059")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:PZ254R-11-05P")
-		(at 58.42 114.3 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "27a74db8-d4ea-4032-b44e-46f223f058fc")
-		(property "Reference" "J1001"
-			(at 57.15 104.648 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PZ254R-11-05P"
-			(at 57.658 124.968 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "JLCImport:HDR-TH_5P-P2.54-H-M-W10.4"
-			(at 58.42 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Pin-Header-Female-Header_XFCN-PZ254R-11-05P_C492413.html"
-			(at 58.42 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-40℃~+105℃ 1 1x5P 2.54mm 2.5mm 250V 3A 5P 6mm Black Brass Pin Header Right Angle 弯插,P=2.54mm Pin Headers ROHS"
-			(at 58.42 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "XFCN(兴飞)"
-			(at 58.42 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "PZ254R-11-05P"
-			(at 58.42 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C492413"
-			(at 58.42 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "a6bc186d-3f9b-41c1-87ab-5a01c1b8d8a3")
-		)
-		(pin "1"
-			(uuid "4a096b54-4970-4a65-9eb8-230431d9694c")
-		)
-		(pin "2"
-			(uuid "febcd9c6-4859-4ff6-93e3-90152155bb54")
-		)
-		(pin "4"
-			(uuid "2738f42d-6e0d-4145-8463-530a0c67b167")
-		)
-		(pin "3"
-			(uuid "7e62ac5e-731f-4fa8-a6a4-d681c5a9f711")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "J1001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 87.63 104.14 0)
+		(at 48.26 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2898,7 +3108,7 @@
 		(dnp no)
 		(uuid "367f70a7-1da8-496c-8b63-5b5098542890")
 		(property "Reference" "#PWR01022"
-			(at 87.63 104.14 0)
+			(at 48.26 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2909,7 +3119,7 @@
 			)
 		)
 		(property "Value" "VMCU-3V3"
-			(at 87.63 99.06 0)
+			(at 48.26 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2919,7 +3129,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 104.14 0)
+			(at 48.26 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2930,7 +3140,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 104.14 0)
+			(at 48.26 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2941,7 +3151,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 87.63 104.14 0)
+			(at 48.26 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2958,83 +3168,6 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR01022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 66.04 109.22 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "39ba4c92-35a5-4bb4-bb97-26fc938e8607")
-		(property "Reference" "#PWR01011"
-			(at 66.04 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VMCU-3V3"
-			(at 66.04 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "faf208ef-d965-4425-a6f4-def0d43c8a93")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01011")
 					(unit 1)
 				)
 			)
@@ -3119,6 +3252,227 @@
 		)
 	)
 	(symbol
+		(lib_id "JLCImport:PZ254R-12-12P")
+		(at 190.5 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "5cf55643-89d6-4af4-9760-8f6a120c1f13")
+		(property "Reference" "J1005"
+			(at 190.5 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PZ254R-12-12P"
+			(at 190.5 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JLCImport:HDR-TH_12P-P2.54-H-M-R2-C6-S2.54"
+			(at 190.5 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_XFCN-PZ254R-12-12P_C492434.html"
+			(at 190.5 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Expansion header (not fitted): 1/11 VMCU-3V3, 2/12 GND, 3 UART_TX (PD5), 4 UART_RX (PD6), 5 PC5, 6 PC6, 7 PC7, 8 PD0, 9 PD4, 10 PD7 (NRST)"
+			(at 190.5 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XFCN(兴飞)"
+			(at 190.5 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PZ254R-12-12P"
+			(at 190.5 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492434"
+			(at 190.5 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b51b2162-e8c1-4057-97ef-d82570a2419a")
+		)
+		(pin "2"
+			(uuid "ec64a831-1956-4ec8-8d05-b2a5822dc855")
+		)
+		(pin "3"
+			(uuid "bb537c4f-8692-4227-9efe-74e9ce666c87")
+		)
+		(pin "4"
+			(uuid "3099c776-9db7-4f8a-816c-98ae44578030")
+		)
+		(pin "5"
+			(uuid "1a8f7098-7383-4e70-89ce-669ebc163880")
+		)
+		(pin "6"
+			(uuid "1313c776-0c00-45f0-aa42-6eb9196b8277")
+		)
+		(pin "7"
+			(uuid "06448685-f689-44bf-a685-e9860ecd560f")
+		)
+		(pin "8"
+			(uuid "5c06b83a-f24f-43b6-a06a-0c5352d0c1a9")
+		)
+		(pin "9"
+			(uuid "1c76e319-cf3f-403b-845c-eca709ba9a60")
+		)
+		(pin "10"
+			(uuid "a98ceebb-a1b2-4674-b0e7-b2fe99f3c580")
+		)
+		(pin "11"
+			(uuid "d38a2355-6379-485f-b6bb-701ef40cddeb")
+		)
+		(pin "12"
+			(uuid "1a256410-cfb3-4d28-9bbb-d4626d610209")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "J1005")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 199.39 53.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "64bdbc49-ccf9-49ec-9653-4392bd27309f")
+		(property "Reference" "#PWR01065"
+			(at 199.39 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 199.39 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.39 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 199.39 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "60d1241a-13aa-4f0c-9ffe-5e9a049037f3")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR01065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 31.75 180.34 0)
 		(unit 1)
@@ -3190,6 +3544,118 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR01008")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:PZ254R-11-02P")
+		(at 186.69 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "742d17cf-6f72-4693-8d67-d52d3cfc4edc")
+		(property "Reference" "J1001"
+			(at 187.452 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PZ254R-11-02P"
+			(at 186.69 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JLCImport:HDR-TH_2P-P2.54-H-M-W10.4"
+			(at 186.69 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Pin-Header-Female-Header_XFCN-PZ254R-11-02P_C492410.html"
+			(at 186.69 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Programming header (fitted): 1 SWIO, 2 GND. Two jumper wires to the robot board J1 flash the CH32V003"
+			(at 186.69 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XFCN(兴飞)"
+			(at 186.69 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PZ254R-11-02P"
+			(at 186.69 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492410"
+			(at 186.69 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6fea80a8-8915-436f-8ef8-489f726353f3")
+		)
+		(pin "2"
+			(uuid "4bdab400-4764-4f49-9f59-b04295ff9c04")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "J1001")
 					(unit 1)
 				)
 			)
@@ -3353,7 +3819,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 96.52 133.35 0)
+		(at 57.15 130.81 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3363,7 +3829,7 @@
 		(dnp no)
 		(uuid "87a79955-6bca-4ad8-9370-314ae97f6450")
 		(property "Reference" "#PWR01001"
-			(at 96.52 133.35 90)
+			(at 57.15 130.81 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3374,7 +3840,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 96.52 138.43 90)
+			(at 57.15 135.89 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3386,7 +3852,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 96.52 133.35 0)
+			(at 57.15 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3397,7 +3863,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 133.35 0)
+			(at 57.15 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3408,7 +3874,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 96.52 133.35 0)
+			(at 57.15 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3425,84 +3891,6 @@
 			(project "Charging Dock"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR01001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 64.77 120.65 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "88eec4e3-7deb-4e6f-bc71-bb21378ea7fd")
-		(property "Reference" "#PWR01012"
-			(at 64.77 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 64.77 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3aac6ee6-c527-4677-ada3-e0c41265c183")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01012")
 					(unit 1)
 				)
 			)
@@ -3588,7 +3976,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:FRC0603J102TS")
-		(at 96.52 118.11 90)
+		(at 57.15 115.57 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3599,7 +3987,7 @@
 		(fields_autoplaced yes)
 		(uuid "925adc9b-cae4-4fd6-8eba-37acd79b8060")
 		(property "Reference" "R1001"
-			(at 99.06 116.8399 90)
+			(at 59.69 114.2999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3610,7 +3998,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 99.06 119.3799 90)
+			(at 59.69 116.8399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3621,7 +4009,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:R0603"
-			(at 104.14 118.11 0)
+			(at 64.77 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3632,7 +4020,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907113.pdf"
-			(at 106.68 118.11 0)
+			(at 67.31 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3643,7 +4031,7 @@
 			)
 		)
 		(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
-			(at 96.52 118.11 0)
+			(at 57.15 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3654,7 +4042,7 @@
 			)
 		)
 		(property "Manufacturer" "FOJAN(富捷)"
-			(at 109.22 118.11 0)
+			(at 69.85 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3665,7 +4053,7 @@
 			)
 		)
 		(property "MPN" "FRC0603J102 TS"
-			(at 111.76 118.11 0)
+			(at 72.39 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3676,7 +4064,7 @@
 			)
 		)
 		(property "LCSC" "C2907113"
-			(at 114.3 118.11 0)
+			(at 74.93 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3895,84 +4283,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 64.77 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c050ce44-ce36-42c0-89bd-5fa44fdf3e28")
-		(property "Reference" "#PWR01060"
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 64.77 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "547b544b-71d6-4370-ae2f-f75f3879c6ff")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR01060")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 60.96 185.42 0)
 		(unit 1)
@@ -4052,7 +4362,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:YLED0603B")
-		(at 96.52 128.27 90)
+		(at 57.15 125.73 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -4063,7 +4373,7 @@
 		(dnp no)
 		(uuid "c259dff5-d512-4524-a28d-a9c6e4cab670")
 		(property "Reference" "LED1001"
-			(at 99.822 127 90)
+			(at 60.452 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4074,7 +4384,7 @@
 			)
 		)
 		(property "Value" "YLED0603B"
-			(at 99.822 129.54 90)
+			(at 60.452 127 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4085,7 +4395,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:YLED0603B"
-			(at 96.52 128.27 0)
+			(at 57.15 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4096,7 +4406,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2310271814_YONGYUTAI-YLED0603B_C19171394.pdf"
-			(at 96.52 128.27 0)
+			(at 57.15 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4107,7 +4417,7 @@
 			)
 		)
 		(property "Description" "-40℃~+85℃ 120° 2.6V~3.2V 30mA 42mcd~86mcd 460nm~475nm Blue Discrete Diode 0603 LED Indication - Discrete ROHS"
-			(at 96.52 128.27 0)
+			(at 57.15 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4118,7 +4428,7 @@
 			)
 		)
 		(property "LCSC" "C19171394"
-			(at 96.52 128.27 0)
+			(at 57.15 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4129,7 +4439,7 @@
 			)
 		)
 		(property "Manufacturer" "YONGYUTAI"
-			(at 96.52 128.27 0)
+			(at 57.15 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4140,7 +4450,7 @@
 			)
 		)
 		(property "Manufacturer Part" "YLED0603B"
-			(at 96.52 128.27 0)
+			(at 57.15 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4244,128 +4554,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:PZ254R-11-05P")
-		(at 58.42 139.7 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "d01653de-8c57-4b15-8dda-f05a5784298b")
-		(property "Reference" "J1005"
-			(at 57.15 130.048 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PZ254R-11-05P"
-			(at 57.658 150.368 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "JLCImport:HDR-TH_5P-P2.54-H-M-W10.4"
-			(at 58.42 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Pin-Header-Female-Header_XFCN-PZ254R-11-05P_C492413.html"
-			(at 58.42 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Spare GPIO header (not fitted): 1 3V3, 2 PC5, 3 PC6, 4 PC7, 5 GND; same part as J1001"
-			(at 58.42 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "XFCN(兴飞)"
-			(at 58.42 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "PZ254R-11-05P"
-			(at 58.42 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C492413"
-			(at 58.42 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "4932ed89-281a-4420-bfd6-bf4de79c29b8")
-		)
-		(pin "1"
-			(uuid "044c640a-4234-4682-80a4-38b459ad35e9")
-		)
-		(pin "2"
-			(uuid "ac4852fd-92d9-4ca4-b2d5-42953a20cd7d")
-		)
-		(pin "4"
-			(uuid "2c288ff4-a892-4f53-bd5e-27a06b606134")
-		)
-		(pin "3"
-			(uuid "9ea1c00c-0ef2-4f64-bbbc-c771916c2d19")
-		)
-		(instances
-			(project "Charging Dock"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "J1005")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 76.2 187.96 0)
 		(unit 1)
@@ -4445,7 +4633,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:CH32V003F4P6")
-		(at 151.13 95.25 0)
+		(at 111.76 99.06 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4456,7 +4644,7 @@
 		(fields_autoplaced yes)
 		(uuid "d74e5741-98d4-45b2-9d4f-9549ab37f3af")
 		(property "Reference" "U1001"
-			(at 151.13 76.2 0)
+			(at 111.76 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4466,7 +4654,7 @@
 			)
 		)
 		(property "Value" "CH32V003F4P6"
-			(at 151.13 78.74 0)
+			(at 111.76 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4476,7 +4664,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL"
-			(at 151.13 114.3 0)
+			(at 111.76 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4487,7 +4675,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C5187096.pdf"
-			(at 151.13 116.84 0)
+			(at 111.76 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4498,7 +4686,7 @@
 			)
 		)
 		(property "Description" "TSSOP-20-175mil Microcontrollers (MCU/MPU/SOC) ROHS RISC-V MCU, 48 MHz, 16 KB flash, 10-bit ADC; Arduino core / ch32fun / PlatformIO"
-			(at 151.13 95.25 0)
+			(at 111.76 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4509,7 +4697,7 @@
 			)
 		)
 		(property "Manufacturer" "WCH(南京沁恒)"
-			(at 151.13 119.38 0)
+			(at 111.76 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4520,7 +4708,7 @@
 			)
 		)
 		(property "MPN" "CH32V003F4P6"
-			(at 151.13 121.92 0)
+			(at 111.76 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4531,7 +4719,7 @@
 			)
 		)
 		(property "LCSC" "C5187096"
-			(at 151.13 124.46 0)
+			(at 111.76 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4689,6 +4877,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 182.88 72.39 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f97a0e10-a534-4b2e-a7b5-3b94d75a93fd")
+		(property "Reference" "#PWR01061"
+			(at 182.88 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.8 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "42a40185-b166-401b-99f5-7f4bf60b9097")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR01061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:CL10B104KB8NNNC")
 		(at 31.75 185.42 90)
 		(unit 1)
@@ -4802,8 +5069,86 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 172.72 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ff83f555-0c8a-44a3-9352-a1a9333bdbaa")
+		(property "Reference" "#PWR01062"
+			(at 172.72 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VMCU-3V3"
+			(at 172.72 36.83 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "79ababba-6e01-4505-9538-dc6929a82d9a")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#PWR01062")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(sheet
-		(at 224.79 96.52)
+		(at 185.42 100.33)
 		(size 25.4 7.62)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4818,7 +5163,7 @@
 		)
 		(uuid "4bb8f12b-f88e-462d-8d8b-7cab36a6773e")
 		(property "Sheetname" "IR BEACON"
-			(at 234.442 101.346 0)
+			(at 195.072 105.156 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4829,7 +5174,7 @@
 			)
 		)
 		(property "Sheetfile" "IR Beacon.kicad_sch"
-			(at 224.79 104.7246 0)
+			(at 185.42 108.5346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4840,7 +5185,7 @@
 			)
 		)
 		(pin "IR-L" input
-			(at 224.79 101.6 180)
+			(at 185.42 105.41 180)
 			(uuid "8245ead9-27f9-4322-9961-bcfaa17e3e6c")
 			(effects
 				(font
@@ -4850,7 +5195,7 @@
 			)
 		)
 		(pin "IR-R" input
-			(at 224.79 99.06 180)
+			(at 185.42 102.87 180)
 			(uuid "a6c204e0-cfb2-4fe1-a817-a965d1154428")
 			(effects
 				(font
@@ -4868,7 +5213,7 @@
 		)
 	)
 	(sheet
-		(at 224.79 76.2)
+		(at 185.42 80.01)
 		(size 30.48 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4883,7 +5228,7 @@
 		)
 		(uuid "72c6e154-185e-4dc1-b232-13c9d403fda4")
 		(property "Sheetname" "POWER"
-			(at 243.586 86.36 0)
+			(at 204.216 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4894,7 +5239,7 @@
 			)
 		)
 		(property "Sheetfile" "Power.kicad_sch"
-			(at 224.79 94.5646 0)
+			(at 185.42 98.3746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4905,7 +5250,7 @@
 			)
 		)
 		(pin "I-SENSE" bidirectional
-			(at 224.79 83.82 180)
+			(at 185.42 87.63 180)
 			(uuid "8eedff13-4c33-4c91-970d-90112f5d90a7")
 			(effects
 				(font
@@ -4915,7 +5260,7 @@
 			)
 		)
 		(pin "DOCK-SENSE" output
-			(at 224.79 81.28 180)
+			(at 185.42 85.09 180)
 			(uuid "a3d4420b-f09e-4ab2-8ada-e56a39919a59")
 			(effects
 				(font
@@ -4925,7 +5270,7 @@
 			)
 		)
 		(pin "VIN-SENSE" output
-			(at 224.79 78.74 180)
+			(at 185.42 82.55 180)
 			(uuid "eee3364c-e62a-47a2-babf-6c1e3f351454")
 			(effects
 				(font
@@ -4935,7 +5280,7 @@
 			)
 		)
 		(pin "CHARGE-EN" input
-			(at 224.79 91.44 180)
+			(at 185.42 95.25 180)
 			(uuid "e6f6f9cb-4a5d-4fd4-8720-cbb6dd31a1fc")
 			(effects
 				(font
@@ -4945,7 +5290,7 @@
 			)
 		)
 		(pin "PROBE-DRV" input
-			(at 224.79 88.9 180)
+			(at 185.42 92.71 180)
 			(uuid "c62a700d-391a-421a-b694-3dbea7406a8c")
 			(effects
 				(font
@@ -4955,7 +5300,7 @@
 			)
 		)
 		(pin "PROBE-SENSE" output
-			(at 224.79 86.36 180)
+			(at 185.42 90.17 180)
 			(uuid "278e5448-5249-42c0-8399-0ffe42c0fbd5")
 			(effects
 				(font

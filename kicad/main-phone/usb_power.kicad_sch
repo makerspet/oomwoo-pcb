@@ -3228,20 +3228,17 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:1N4148W_C917030"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "JLCImport:HT7533-1_C14289"
 			(pin_names
-				(hide yes)
+				(offset 1.016)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 5.08 0)
+			(property "Reference" "U"
+				(at 0 9.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3250,8 +3247,8 @@
 					)
 				)
 			)
-			(property "Value" "1N4148"
-				(at 0 -5.08 0)
+			(property "Value" "HT7533-1_C14289"
+				(at 0 -9.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3260,29 +3257,7 @@
 					)
 				)
 			)
-			(property "Footprint" "JLCImport:SOD-123_L2.8-W1.8-LS3.7-RD-1"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Switching-Diode_JSMSEMI-1N4148W_C917030.html"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "-55℃~+150℃ 1.25V@150mA 100V 1uA@75V 300mA 400mW 4A 8ns Standalone SOD-123 Switching Diodes ROHS"
+			(property "Footprint" "JLCImport:HT7533-1_C14289"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3293,40 +3268,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "JSMSEMI(杰盛微)"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "1N4148W"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C917030"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Switching Diode"
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2312191111_Holtek-Semicon-HT7533-1_C14289.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3337,59 +3279,84 @@
 					)
 				)
 			)
-			(symbol "1N4148W_C917030_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.78) (xy -1.27 -1.78)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
+			(property "Description" "-40℃~+85℃@(Ta) 1 100mA 2.5uA 25mV@(1mA) 3.3V 30V Fixed Positive SOT-89-3 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
+			)
+			(property "LCSC" "C14289"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
 				)
+			)
+			(property "Manufacturer" "Holtek Semicon"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Part" "HT7533-1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "C14289 HT7533-1 Holtek Semicon SOT-89-3_L4.5-W2.5-P1.50-LS4.2-BR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HT7533-1_C14289_0_1"
 				(polyline
 					(pts
-						(xy 1.27 1.78) (xy -1.27 0) (xy 1.27 -1.78) (xy 1.27 1.78)
+						(xy 4.572 -7.62) (xy 4.6711 -7.6103) (xy 4.7664 -7.5813) (xy 4.8542 -7.5344) (xy 4.9312 -7.4712)
+						(xy 4.9944 -7.3942) (xy 5.0413 -7.3064) (xy 5.0702 -7.2111) (xy 5.08 -7.112) (xy 5.0702 7.2111)
+						(xy 5.0413 7.3064) (xy 4.9944 7.3942) (xy 4.9312 7.4712) (xy 4.8542 7.5344) (xy 4.7664 7.5813)
+						(xy 4.6711 7.6103) (xy 4.572 7.62) (xy -4.6711 7.6103) (xy -4.7664 7.5813) (xy -4.8542 7.5344)
+						(xy -4.9312 7.4712) (xy -4.9944 7.3942) (xy -5.0413 7.3064) (xy -5.0702 7.2111) (xy -5.08 7.112)
+						(xy -5.0702 -7.2111) (xy -5.0413 -7.3064) (xy -4.9944 -7.3942) (xy -4.9312 -7.4712) (xy -4.8542 -7.5344)
+						(xy -4.7664 -7.5813) (xy -4.6711 -7.6103) (xy -4.572 -7.62) (xy 4.572 -7.62)
 					)
 					(stroke
-						(width 0)
-						(type default)
+						(width 0.254)
+						(type solid)
 					)
 					(fill
 						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "C"
+				(pin power_in line
+					(at 10.16 -5.08 180)
+					(length 5.08)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3404,10 +3371,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "A"
+				(pin power_in line
+					(at -10.16 0 0)
+					(length 5.08)
+					(name "Vin"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3422,10 +3389,28 @@
 						)
 					)
 				)
+				(pin power_out line
+					(at 10.16 5.08 180)
+					(length 5.08)
+					(name "Vout"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:TCC0603X7R105K250CT"
+		(symbol "JLCImport:CL10A106MA8NRNC"
 			(pin_numbers
 				(hide yes)
 			)
@@ -3438,7 +3423,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
-				(at 0 10.16 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3447,8 +3432,8 @@
 					)
 				)
 			)
-			(property "Value" "1uF/25V"
-				(at 0 -10.16 0)
+			(property "Value" "10uF/25V"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3458,7 +3443,7 @@
 				)
 			)
 			(property "Footprint" "JLCImport:C0603"
-				(at 0 -12.7 0)
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3468,8 +3453,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_CCTC-TCC0603X7R105K250CT_C380328.html"
-				(at 0 -15.24 0)
+			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106MA8NRNC_10uF-106-20-25V_C96446.html"
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3479,7 +3464,7 @@
 					)
 				)
 			)
-			(property "Description" "1uF 25V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(property "Description" "10uF 25V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3490,30 +3475,30 @@
 					)
 				)
 			)
-			(property "Manufacturer" "CCTC(三环)"
+			(property "Manufacturer" "SAMSUNG(三星)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CL10A106MA8NRNC"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C96446"
 				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "TCC0603X7R105K250CT"
-				(at 0 -20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C380328"
-				(at 0 -22.86 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3534,10 +3519,10 @@
 					)
 				)
 			)
-			(symbol "TCC0603X7R105K250CT_0_1"
+			(symbol "CL10A106MA8NRNC_0_1"
 				(polyline
 					(pts
-						(xy -2.03 0.51) (xy 2.03 0.51)
+						(xy -0.51 0) (xy -2.54 0)
 					)
 					(stroke
 						(width 0)
@@ -3549,7 +3534,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0 0.51)
+						(xy -0.51 -2.03) (xy -0.51 2.03)
 					)
 					(stroke
 						(width 0)
@@ -3561,7 +3546,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -0.51) (xy 0 -2.54)
+						(xy 0.51 2.03) (xy 0.51 -2.03)
 					)
 					(stroke
 						(width 0)
@@ -3573,7 +3558,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.03 -0.51) (xy -2.03 -0.51)
+						(xy 2.54 0) (xy 0.51 0)
 					)
 					(stroke
 						(width 0)
@@ -3584,7 +3569,7 @@
 					)
 				)
 				(pin passive line
-					(at 0 -5.08 90)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -3602,7 +3587,7 @@
 					)
 				)
 				(pin passive line
-					(at 0 5.08 270)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -3622,14 +3607,20 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:VRH3101NTX"
+		(symbol "JLCImport:0603WAF1004T5E"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 7.62 0)
+			(property "Reference" "R"
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3638,17 +3629,28 @@
 					)
 				)
 			)
-			(property "Value" "VRH3101NTX"
+			(property "Value" "1M"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R0603"
 				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "JLCImport:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BL"
+			(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1MR-1004-1_C22935.html"
 				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3659,7 +3661,18 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Dropout-Regulators-LDO_AnaSem-VRH3101NTX_C698001.html"
+			(property "Description" "-55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(厚声)"
 				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3670,18 +3683,7 @@
 					)
 				)
 			)
-			(property "Description" "-40℃~+85℃ 1 250mA 25uA 3.1V 6V 75dB@(1kHz) 90mV Fixed Over Current Protection, Over Temperature Protection, Soft Start, Enable Positive SOT-23-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators"
-				(at 0 -25.4 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "AnaSem(安纳森)"
+			(property "MPN" "0603WAF1004T5E"
 				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3692,7 +3694,7 @@
 					)
 				)
 			)
-			(property "MPN" "VRH3101NTX"
+			(property "LCSC" "C22935"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3703,18 +3705,7 @@
 					)
 				)
 			)
-			(property "LCSC" "C698001"
-				(at 0 -20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Linear Voltage Regulators (LDO)"
+			(property "ki_keywords" "Resistors"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3725,10 +3716,10 @@
 					)
 				)
 			)
-			(symbol "VRH3101NTX_0_1"
+			(symbol "0603WAF1004T5E_0_1"
 				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
+					(start -2.54 1.02)
+					(end 2.54 -1.02)
 					(stroke
 						(width 0)
 						(type default)
@@ -3737,21 +3728,10 @@
 						(type background)
 					)
 				)
-				(circle
-					(center -6.35 3.81)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin passive line
-					(at -10.16 2.54 0)
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "VIN"
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3767,9 +3747,9 @@
 					)
 				)
 				(pin passive line
-					(at -10.16 0 0)
+					(at 5.08 0 180)
 					(length 2.54)
-					(name "VSS"
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3784,53 +3764,138 @@
 						)
 					)
 				)
-				(pin passive line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 10.16 -1.27 180)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+BATT"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
 				)
-				(pin passive line
-					(at 10.16 1.27 180)
-					(length 2.54)
-					(name "VOUT"
+			)
+			(property "Value" "+BATT"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+BATT\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power battery"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+BATT_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+BATT_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3841,6 +3906,18 @@
 			)
 			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 19.05 143.51)
+		(end 151.13 200.66)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "2dd3b1c3-f4ab-4c63-9eaf-d1d1beb2f058")
 	)
 	(rectangle
 		(start 153.67 38.1)
@@ -3900,6 +3977,18 @@
 			(justify left bottom)
 		)
 		(uuid "41c3bc55-4606-4ddf-a7d6-287a90767fc0")
+	)
+	(text "VBUS to VMCU-3V3 (bring-up)"
+		(exclude_from_sim no)
+		(at 22.86 147.32 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "5fd58ece-713b-4668-91e0-f4f9904cdedd")
 	)
 	(text "Not required"
 		(exclude_from_sim no)
@@ -9025,7 +9114,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 25.4 157.48 0)
+		(at 25.4 162.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9034,9 +9123,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "680e09ef-89c9-4cc4-9afa-7de838dff6ef")
+		(uuid "27d1f47e-6c21-4bdd-b630-8b692c2c66c3")
 		(property "Reference" "#PWR07901"
-			(at 25.4 161.29 0)
+			(at 25.4 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9047,7 +9136,7 @@
 			)
 		)
 		(property "Value" "VBUS_5V"
-			(at 25.4 152.4 0)
+			(at 25.4 157.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9057,7 +9146,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 157.48 0)
+			(at 25.4 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9068,7 +9157,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 25.4 157.48 0)
+			(at 25.4 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9079,7 +9168,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 25.4 157.48 0)
+			(at 25.4 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9090,7 +9179,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c031e536-6095-4dc7-a03d-02de9d1d489f")
+			(uuid "7b001613-9960-46f5-8f47-7807b9d7894b")
 		)
 		(instances
 			(project "Main"
@@ -9102,8 +9191,8 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:1N4148W_C917030")
-		(at 33.02 157.48 180)
+		(lib_id "JLCImport:CL10A106MA8NRNC")
+		(at 27.94 167.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9112,29 +9201,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0152615b-a5c0-42a7-a1c2-63534f6c9771")
-		(property "Reference" "D47"
-			(at 33.02 152.4 0)
+		(uuid "88f86890-658f-4b14-97c5-6bff34ebdc37")
+		(property "Reference" "C180"
+			(at 30.48 166.37 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+	(justify right)
 			)
 		)
-		(property "Value" "1N4148"
-			(at 33.02 154.94 0)
+		(property "Value" "10uF/25V"
+			(at 30.48 168.91 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+	(justify right)
 			)
 		)
-		(property "Footprint" "JLCImport:SOD-123_L2.8-W1.8-LS3.7-RD-1"
-			(at 33.02 165.1 0)
+		(property "Footprint" "JLCImport:C0603"
+			(at 20.32 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9144,8 +9235,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Switching-Diode_JSMSEMI-1N4148W_C917030.html"
-			(at 33.02 167.64 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106MA8NRNC_10uF-106-20-25V_C96446.html"
+			(at 17.78 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9155,8 +9246,8 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.25V@150mA 100V 1uA@75V 300mA 400mW 4A 8ns Standalone SOD-123 Switching Diodes ROHS"
-			(at 33.02 157.48 0)
+		(property "Description" "10uF 25V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+			(at 27.94 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9166,8 +9257,8 @@
 				)
 			)
 		)
-		(property "Manufacturer" "JSMSEMI(杰盛微)"
-			(at 33.02 170.18 0)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 15.24 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9177,8 +9268,8 @@
 				)
 			)
 		)
-		(property "MPN" "1N4148W"
-			(at 33.02 172.72 0)
+		(property "MPN" "CL10A106MA8NRNC"
+			(at 12.7 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9188,8 +9279,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C917030"
-			(at 33.02 175.26 0)
+		(property "LCSC" "C96446"
+			(at 10.16 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9200,23 +9291,101 @@
 			)
 		)
 		(pin "2"
-			(uuid "06c6b3de-0ceb-4955-a1e2-892a255fff7f")
+			(uuid "fab7983a-976e-49f8-8330-d9713d057f72")
 		)
 		(pin "1"
-			(uuid "f858468b-1b7b-42e9-8aeb-e91403a09567")
+			(uuid "0f42eb76-bd80-4349-bea9-1fb5f86036e4")
 		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
-					(reference "D47")
+					(reference "C180")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:TCC0603X7R105K250CT")
-		(at 43.18 162.56 0)
+		(lib_id "power:GND")
+		(at 27.94 172.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c26e852f-3dde-4f87-90c1-89653fcc1ae1")
+		(property "Reference" "#PWR07902"
+			(at 27.94 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 27.94 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 27.94 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 27.94 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 27.94 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "98306246-ddc1-4cf8-97cc-ebb62c82b8fd")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "#PWR07902")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:HT7533-1_C14289")
+		(at 48.26 162.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9225,27 +9394,298 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a76293e5-93bf-4c3c-808d-ba402ad2bda6")
-		(property "Reference" "C180"
-			(at 39.37 161.29 0)
+		(uuid "1a1428df-f300-493e-8011-0205b171b4a7")
+		(property "Reference" "U27"
+			(at 48.26 153.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-	(justify right)
 			)
 		)
-		(property "Value" "1uF/25V"
-			(at 39.37 163.83 0)
+		(property "Value" "HT7533-1_C14289"
+			(at 48.26 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-	(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:HT7533-1_C14289"
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2312191111_Holtek-Semicon-HT7533-1_C14289.pdf"
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-40℃~+85℃@(Ta) 1 100mA 2.5uA 25mV@(1mA) 3.3V 30V Fixed Positive SOT-89-3 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS"
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14289"
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Holtek Semicon"
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "HT7533-1"
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Comment" ""
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ac2d4b25-79e3-4cf5-8923-6e100c293370")
+		)
+		(pin "3"
+			(uuid "77704b7f-dab8-432f-a53e-5c4faadd9e27")
+		)
+		(pin "1"
+			(uuid "3b2c7f45-c535-4832-af09-22ac595dd624")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "U27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 58.42 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "631e7466-ba26-493d-a834-955ef50e91ec")
+		(property "Reference" "#PWR07903"
+			(at 58.42 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 58.42 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 58.42 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ea525c47-c64c-4c53-a102-85f5374b0569")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "#PWR07903")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:CL10A106MA8NRNC")
+		(at 63.5 162.56 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d149bc8-d7b0-43f6-8b9f-bea5f3e61834")
+		(property "Reference" "C181"
+			(at 59.69 161.29 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify left)
+			)
+		)
+		(property "Value" "10uF/25V"
+			(at 59.69 163.83 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify left)
 			)
 		)
 		(property "Footprint" "JLCImport:C0603"
@@ -9259,8 +9699,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_CCTC-TCC0603X7R105K250CT_C380328.html"
-			(at 58.42 162.56 0)
+		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106MA8NRNC_10uF-106-20-25V_C96446.html"
+			(at 53.34 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9270,29 +9710,7 @@
 				)
 			)
 		)
-		(property "Description" "1uF 25V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 43.18 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "CCTC(三环)"
-			(at 60.96 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "TCC0603X7R105K250CT"
+		(property "Description" "10uF 25V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 			(at 63.5 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -9303,8 +9721,30 @@
 				)
 			)
 		)
-		(property "LCSC" "C380328"
-			(at 66.04 162.56 0)
+		(property "Manufacturer" "SAMSUNG(三星)"
+			(at 50.8 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A106MA8NRNC"
+			(at 48.26 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C96446"
+			(at 45.72 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9315,480 +9755,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "6890dada-ef1a-474f-a308-8c39f39c331b")
+			(uuid "c6cea350-fd64-4ac5-9075-b2ab3ef78ccd")
 		)
 		(pin "1"
-			(uuid "df2dde22-98cb-4898-9315-acb62aa8a903")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
-					(reference "C180")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 43.18 167.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "571cc6cd-6337-4f9a-883c-d3939dd40d3b")
-		(property "Reference" "#PWR07902"
-			(at 43.18 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 43.18 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 43.18 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "df028e8a-0c21-470a-bcaf-36f05dacf8f9")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
-					(reference "#PWR07902")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:VRH3101NTX")
-		(at 63.5 160.02 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9fc0c2e6-ffdd-400b-85fa-c419b3bcf80f")
-		(property "Reference" "U27"
-			(at 63.5 152.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VRH3101NTX"
-			(at 63.5 154.94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "JLCImport:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BL"
-			(at 63.5 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C698001.pdf"
-			(at 63.5 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3.1 V 250 mA LDO, +/-1 %, 6 V max input, EN low = 160 ohm output discharge, SOT-23-5"
-			(at 63.5 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C698001"
-			(at 63.5 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "AnaSem(安纳森)"
-			(at 63.5 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "VRH3101NTX"
-			(at 63.5 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cd5bee37-2c5e-40b1-beb1-ae2d776096f9")
-		)
-		(pin "2"
-			(uuid "6fd5407c-46af-4bfe-aac8-fb4cd43540ed")
-		)
-		(pin "3"
-			(uuid "2bfe4598-bacb-4b4d-8f0d-5d7a3421a388")
-		)
-		(pin "4"
-			(uuid "a089b360-102f-4528-8be0-71c179df348d")
-		)
-		(pin "5"
-			(uuid "76689b28-19b4-461c-a081-cc793f3e3dd1")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
-					(reference "U27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 53.34 160.02 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a51b67b2-5c6f-42dc-8dc7-44cae033ec1d")
-		(property "Reference" "#PWR07903"
-			(at 53.34 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 53.34 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 53.34 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9ea32a59-8f5e-4a6c-a0ff-45d9b14e68aa")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
-					(reference "#PWR07903")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VPP")
-		(at 78.74 158.75 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "71b7dad1-f8f7-40bc-b146-87f2fbdd5ab6")
-		(property "Reference" "#PWR07904"
-			(at 78.74 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VMCU-3V3"
-			(at 78.74 153.67 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
-			(at 78.74 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3cf81ec7-90a2-4f3f-bd56-f2fdc95bf713")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
-					(reference "#PWR07904")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:TCC0603X7R105K250CT")
-		(at 78.74 163.83 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2c2b1059-6592-4cb4-9e9c-9a4efc05f016")
-		(property "Reference" "C181"
-			(at 82.55 162.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-	(justify left)
-			)
-		)
-		(property "Value" "1uF/25V"
-			(at 82.55 165.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-	(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:C0603"
-			(at 91.44 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_CCTC-TCC0603X7R105K250CT_C380328.html"
-			(at 93.98 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1uF 25V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 78.74 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "CCTC(三环)"
-			(at 96.52 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "TCC0603X7R105K250CT"
-			(at 99.06 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C380328"
-			(at 101.6 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "aec3958c-9f0d-41f0-a00d-73adf3e95cf6")
-		)
-		(pin "1"
-			(uuid "690d1073-d0d3-44e6-b499-5241eced1bf9")
+			(uuid "e319e85b-9869-4885-8a70-5048692d9a67")
 		)
 		(instances
 			(project "Main"
@@ -9801,7 +9771,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 78.74 168.91 0)
+		(at 63.5 167.64 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9809,9 +9779,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "24e7d09a-b61e-4fac-ae55-d94785513946")
-		(property "Reference" "#PWR07905"
-			(at 78.74 175.26 0)
+		(uuid "c0ba0a5c-4f8f-4f50-a3a9-fe694931207c")
+		(property "Reference" "#PWR07904"
+			(at 63.5 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9822,7 +9792,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 78.74 175.26 0)
+			(at 63.5 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9833,7 +9803,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 168.91 0)
+			(at 63.5 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9844,7 +9814,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 168.91 0)
+			(at 63.5 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9855,7 +9825,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 168.91 0)
+			(at 63.5 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9866,7 +9836,201 @@
 			)
 		)
 		(pin "1"
-			(uuid "b725bba4-3dc1-46ac-9a16-82ce5240b9c7")
+			(uuid "103ac4c2-9819-4cfc-905c-3866fda5e3f3")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "#PWR07904")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:AO3401")
+		(at 71.12 157.48 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "09babc34-1654-43b4-8d5b-8a70e2256fe7")
+		(property "Reference" "Q39"
+			(at 73.66 162.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify right)
+			)
+		)
+		(property "Value" "AO3401"
+			(at 73.66 165.1 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:AO3401"
+			(at 71.12 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3401_C20628875.pdf"
+			(at 71.12 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 71.12 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C20628875"
+			(at 71.12 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FOSAN"
+			(at 71.12 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part" "AO3401"
+			(at 71.12 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fa47bbc4-3802-4303-9d65-b676a0628d8d")
+		)
+		(pin "2"
+			(uuid "31cbf4c0-7add-4b6e-ba75-be0ced99cd54")
+		)
+		(pin "3"
+			(uuid "8d2888b1-b256-42ce-a0bb-f9afb3f8a2fe")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "Q39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VPP")
+		(at 81.28 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9006ed18-2e0f-4a18-9ccf-088a93630253")
+		(property "Reference" "#PWR07905"
+			(at 81.28 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VMCU-3V3"
+			(at 81.28 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC-5V-REG\""
+			(at 81.28 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "80a6a68f-d093-46cb-94f7-17c30a9d386d")
 		)
 		(instances
 			(project "Main"
@@ -9877,131 +10041,489 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 25.4 157.48) (xy 27.94 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8390296-8121-4fbb-9d09-70cfa80c78a8")
-	)
-	(wire
-		(pts
-			(xy 38.1 157.48) (xy 43.18 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4dafe3d2-a59d-4154-bd15-86c07c9b863b")
-	)
-	(wire
-		(pts
-			(xy 43.18 157.48) (xy 48.26 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad0c9d05-9c85-4cf1-a711-9d5f6cc1ef03")
-	)
-	(wire
-		(pts
-			(xy 48.26 157.48) (xy 53.34 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d28be3c1-586e-4e10-9d3d-0321248bdd63")
-	)
-	(wire
-		(pts
-			(xy 53.34 162.56) (xy 48.26 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2441136-3ef4-4d24-94ce-b0563bb78d5e")
-	)
-	(wire
-		(pts
-			(xy 48.26 162.56) (xy 48.26 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c8981fd-7f0b-4a97-bef8-d6c0d26c7d83")
-	)
-	(wire
-		(pts
-			(xy 73.66 158.75) (xy 78.74 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "846cb818-52f0-4a4c-8d1c-c975cd5dffc9")
-	)
-	(junction
-		(at 43.18 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3f810703-775a-49a4-94ed-983cb321d685")
-	)
-	(junction
-		(at 48.26 157.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b5e2e1d7-c2b4-4988-b840-d13c2ac1e685")
-	)
-	(junction
-		(at 78.74 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "64cbed87-fea8-4e1e-967b-d7d8374ce966")
-	)
-	(no_connect
-		(at 73.66 161.29)
-		(uuid "ec3dbc53-26fa-47be-a1cf-3ee29be4909d")
-	)
-	(rectangle
-		(start 19.05 143.51)
-		(end 151.13 193.04)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "2dd3b1c3-f4ab-4c63-9eaf-d1d1beb2f058")
-	)
-	(text "Bring-up power: a PC USB-A port (USB-A to USB-C cable) runs the STM32 with the battery out,\nfor the first flash (J1 BOOT0 jumper + USB DFU) and for flashing the dock over SWIO.\nD47 (1N4148W, low leakage) stops VMCU-3V3 back-feeding VBUS_5V when no USB is attached.\nU27 3.1 V: below U21 (3.28 V), so idle while the battery is in; above the 3.0 V USB minimum.\nEN = input: with VMCU-3V3 up, the input is held up through the LDO, so its 160 ohm\noutput discharge (EN low) never acts on VMCU-3V3.\nFirmware: with a phone attached, power-off must first drop the dead-battery Rd (UCPD1_DBDIS),\nor the phone keeps VBUS on and U27 keeps the MCU alive."
+	(symbol
+		(lib_id "power:+BATT")
+		(at 99.06 157.48 0)
+		(unit 1)
+		(body_style 1)
 		(exclude_from_sim no)
-		(at 22.86 175.26 0)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db7765bb-d85a-434c-91af-a0989a0980b4")
+		(property "Reference" "#PWR07906"
+			(at 99.06 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "P+/C+14V4"
+			(at 99.06 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 99.06 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eacf3c4b-761e-4e83-8cd4-789e5f85f8a6")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "#PWR07906")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1004T5E")
+		(at 99.06 162.56 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a35cc905-dd0b-4eae-bcbb-b8cf524bae7a")
+		(property "Reference" "R230"
+			(at 101.6 161.29 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify right)
+			)
+		)
+		(property "Value" "1M"
+			(at 101.6 163.83 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 106.68 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1MR-1004-1_C22935.html"
+			(at 109.22 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 121.92 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 111.76 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1004T5E"
+			(at 114.3 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22935"
+			(at 116.84 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d7e4482-b3cd-4620-8b1a-7cd1e2a30935")
+		)
+		(pin "2"
+			(uuid "1a34e5eb-346f-4d1d-8a25-3801addf55b3")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "R230")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "JLCImport:0603WAF1004T5E")
+		(at 99.06 172.72 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dd745165-7aac-4377-84df-2d46b08a7eaf")
+		(property "Reference" "R231"
+			(at 101.6 171.45 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify right)
+			)
+		)
+		(property "Value" "1M"
+			(at 101.6 173.99 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+	(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R0603"
+			(at 106.68 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1MR-1004-1_C22935.html"
+			(at 109.22 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
+			(at 121.92 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
+			(at 111.76 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0603WAF1004T5E"
+			(at 114.3 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22935"
+			(at 116.84 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e4ac7db-5e07-4919-add5-dc5f880c7cb3")
+		)
+		(pin "2"
+			(uuid "8cfee60b-6896-4c9e-916b-e2dd0877f9c4")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "R231")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 99.06 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "101a64a3-15c8-459a-8ab6-a9eb2d407bcf")
+		(property "Reference" "#PWR07907"
+			(at 99.06 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 99.06 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 99.06 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "05530421-c8ad-4040-85ab-d7f14f500aee")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/d7751c35-54e1-4174-9102-e8c145e1be7f"
+					(reference "#PWR07907")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 25.4 162.56) (xy 27.94 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5aa55ae2-a09e-4c82-960f-2b5b623156bc")
+	)
+	(wire
+		(pts
+			(xy 27.94 162.56) (xy 38.1 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d5d8cb6-358a-4cfc-818b-cd5d748fb930")
+	)
+	(junction
+		(at 27.94 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "45b57974-5820-4faf-93e6-f393f45466cc")
+	)
+	(wire
+		(pts
+			(xy 58.42 157.48) (xy 63.5 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49dcec8e-f7b6-4dee-ad0d-cbb82efffeef")
+	)
+	(wire
+		(pts
+			(xy 63.5 157.48) (xy 66.04 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58024b81-6933-43dc-b99c-42e8bcf024d2")
+	)
+	(junction
+		(at 63.5 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ddc63918-b320-4e9c-93e8-2ebf143df3ca")
+	)
+	(wire
+		(pts
+			(xy 76.2 157.48) (xy 81.28 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57c9e172-24ee-40c2-9938-de67614fc419")
+	)
+	(wire
+		(pts
+			(xy 71.12 165.1) (xy 71.12 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "700e0a83-0315-49d9-90a5-61f4775bbb07")
+	)
+	(wire
+		(pts
+			(xy 71.12 167.64) (xy 99.06 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9a49606-e179-41bd-a0b4-fbad8715e53d")
+	)
+	(junction
+		(at 99.06 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8687b303-3121-4e68-b4a3-2a4b2a1ea126")
+	)
+	(text "Bring-up power: a PC USB-A port (USB-A to USB-C cable) runs the STM32 with the battery out,\nfor the first flash (J1 BOOT0 jumper + USB DFU) and for flashing the dock over SWIO. 100 mA max: keep VSENS-3V3 off.\nBattery out: R231 pulls the Q39 gate to GND; U27 reaches VMCU-3V3 through the Q39 body diode, then Q39 turns on (3.3 V).\nBattery in: R230/R231 hold the gate at P+/2 (6-8.4 V, Vgs <= +8.4 V), so Q39 is off and U27 is isolated:\nno load sharing with U21, and a phone on USB-C can't keep the MCU alive. ~8 uA from the battery.\nP+/C+14V4, not VBAT-14V4: with the battery out, VBAT-14V4 is back-fed to ~2.5 V through U21."
+		(exclude_from_sim no)
+		(at 22.86 182.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
-		(uuid "71e6a113-e12e-4a29-ba50-6d48defc2257")
-	)
-	(text "VBUS to VMCU-3V3 (bring-up)"
-		(exclude_from_sim no)
-		(at 22.86 147.32 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "5fd58ece-713b-4668-91e0-f4f9904cdedd")
+		(uuid "9141d06e-c015-4b2e-b270-b7070714659a")
 	)
 )

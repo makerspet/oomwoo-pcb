@@ -11021,6 +11021,26 @@
 				(justify left)
 			)
 		)
+		(pin "~{STDBY}" input
+			(at 203.2 179.07 270)
+			(uuid "d59dfda1-01ab-4139-8fbe-5986346d86dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{CHRG}" input
+			(at 205.74 179.07 270)
+			(uuid "d47579d5-4796-4701-aa25-3f9cee5b5feb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(pin "LDR" input
 			(at 135.89 176.53 180)
 			(uuid "54fad129-66a3-444a-8fdc-f6a247628dcf")
@@ -12069,7 +12089,7 @@
 	)
 	(sheet
 		(at 231.14 254)
-		(size 59.69 12.7)
+		(size 59.69 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -12095,7 +12115,7 @@
 			)
 		)
 		(property "Sheetfile" "Battery-Charger.kicad_sch"
-			(at 230.886 267.716 0)
+			(at 230.886 272.796 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12145,6 +12165,26 @@
 				(justify left)
 			)
 		)
+		(pin "~{STDBY}" output
+			(at 231.14 269.24 180)
+			(uuid "5896a2cf-a9ff-4ff7-910c-bfb316c4f0af")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{CHRG}" output
+			(at 231.14 266.7 180)
+			(uuid "dd38deb8-0079-48ac-b8c5-fa9cb546310f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
@@ -12159,4 +12199,44 @@
 		)
 	)
 	(embedded_fonts no)
+	(wire
+		(pts
+			(xy 205.74 179.07) (xy 205.74 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29f6e1a3-897c-4a4c-bf1d-06b86119c0e3")
+	)
+	(wire
+		(pts
+			(xy 205.74 266.7) (xy 231.14 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "923fa2a2-28c0-451f-a166-acbb5f944214")
+	)
+	(wire
+		(pts
+			(xy 203.2 179.07) (xy 203.2 269.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d87b6db4-df4f-41a9-b636-1247f207f2f7")
+	)
+	(wire
+		(pts
+			(xy 203.2 269.24) (xy 231.14 269.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4228f5cc-e9cd-4f80-aedb-39d613ddfaa3")
+	)
 )

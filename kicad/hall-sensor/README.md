@@ -1,6 +1,6 @@
 # OOMWOO Hall sensor board
 
-A tiny board with a Hall switch that detects a magnet. The robot fits two of them, from the same design: one for the dust bin (a magnet in the bin) and one for the LiDAR tower bumper (a magnet in the tower cover). Each plugs into the [main board](../main-phone/README.md) (J7 or J8) with a 3-pin cable. Rev 1, 2026-10-28.
+A tiny board with a Hall sensor that detects a magnet. The robot fits four of them, from the same design: one for the dust bin (a magnet in the bin), one for the LiDAR tower bumper (a magnet in the tower cover), and two floor boards that sense magnetic barrier strips (since 2026-11-18). Each plugs into the [main board](../main-phone/README.md) (J7, J8, J10 or J11) with a 3-pin cable. Rev 1, 2026-10-28.
 
 A separate board keeps the mechanics flexible: the bin sits between the blower and the main brush, far from any other board, and the tower cover changes with the LiDAR model.
 
@@ -12,14 +12,25 @@ A separate board keeps the mechanics flexible: the bin sits between the blower a
   - Drop-in alternative with the same pinout (1 VDD, 2 OUT, 3 GND): TI DRV5032FADBZR (C140921, ~$0.10, push-pull).
 - C6001: 100 nF bypass at U6001.
 
+## Floor variant (magnetic barrier strips)
+
+The same PCB with U6001 fitted as a TI DRV5055A1QDBZR (C962987, ~$0.29), a ratiometric linear Hall sensor with the same SOT-23 pinout (1 VCC, 2 OUT, 3 GND). Two of these go on the underside, front left and right, facing the floor.
+
+- Output at 3.3 V: VCC/2 (~1.65 V) with no field, ±60 mV/mT (100 mV/mT at 5 V), linear to about ±22 mT; either pole shows, with opposite signs. 1 mT is ~75 ADC counts at 12 bits.
+- ~6 mA each (the switch draws µA), 20 kHz bandwidth. C6001 (100 nF) is fine as the bypass; no output capacitor needed.
+- Firmware reads it as analog and picks the threshold, so the margin over a real strip can be measured. Zero it at start-up away from magnets; the wheel and brush motors have magnets of their own.
+- The sensing point is the centre of the package's top face, so mount the board with U6001 facing down, as low as the shell allows: a barrier strip's field falls off within millimetres.
+- Fallback if the TI part is short: Hallwee HAL49ESO (C7420984, ~$0.07, ~13 mV/mT at 3.3 V); check its pinout before fitting it.
+- A panel of the Hall board now needs two copies of each variant (BOM variant: U6001 only).
+
 ## Connector J6001
 
 ZX-SH1.0-3PLT (C7430452), vertical SH. It has 3 pins on purpose (changed 2026-10-29, was 4 with one unused): a Hall cable can't go into a 4-pin cliff or rear IR socket, and the cable is cheaper.
 
 | Pin | Signal | Main board |
 | --- | --- | --- |
-| 1 | 3.3 V | VCC-3V3-REG |
-| 2 | OUT (low = magnet) | PE4 (bin) / PE5 (tower) |
+| 1 | 3.3 V | VSENS-3V3 |
+| 2 | OUT (low = magnet; floor variant: analog) | PE4 (bin) / PE5 (tower) / PE10 (floor left) / PF0 (floor right) |
 | 3 | GND | |
 | 4, 5 | mounting pads, GND | |
 

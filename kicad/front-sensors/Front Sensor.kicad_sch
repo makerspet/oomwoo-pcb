@@ -11,6 +11,129 @@
 		(company "OOMWOO front sensors")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:2005WR-2X4P"
 			(pin_names
 				(hide yes)
@@ -890,7 +1013,7 @@
 					)
 				)
 			)
-			(property "Value" "FRC0603F1000TS"
+			(property "Value" "100"
 				(at 0 -4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1194,7 +1317,7 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "CGQ"
+			(property "Reference" "U"
 				(at 0 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2204,129 +2327,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(rectangle
 		(start 36.83 33.02)
@@ -2659,7 +2659,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 69.85) (xy 53.34 69.85)
+			(xy 59.69 69.85) (xy 54.61 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2766,6 +2766,16 @@
 			(type default)
 		)
 		(uuid "87da356e-1f80-4621-8c05-970f9523bad6")
+	)
+	(wire
+		(pts
+			(xy 132.08 64.77) (xy 132.08 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88a70c21-b5cd-4f84-a7c2-80ea986efa3b")
 	)
 	(wire
 		(pts
@@ -2939,7 +2949,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 69.85) (xy 53.34 67.31)
+			(xy 54.61 69.85) (xy 54.61 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3049,6 +3059,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 68.58) (xy 137.16 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fab06d95-7442-4468-bb04-5e595d491b2c")
+	)
+	(wire
+		(pts
 			(xy 171.45 80.01) (xy 176.53 80.01)
 		)
 		(stroke
@@ -3096,6 +3116,16 @@
 			(justify left bottom)
 		)
 		(uuid "343aece2-13a8-4c05-b858-03bbdccc8dc4")
+	)
+	(label "INT"
+		(at 135.89 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "36a7a84b-a920-48b0-85cd-840da01dca1e")
 	)
 	(label "SCL"
 		(at 77.47 72.39 0)
@@ -3163,7 +3193,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "-55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
 			(at 71.12 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -3332,6 +3362,84 @@
 			(project "Front Sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "C2005")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 132.08 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "23337399-85f7-4214-99bf-40ff9a510655")
+		(property "Reference" "TP2001"
+			(at 130.81 61.214 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "INT"
+			(at 128.778 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 132.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 132.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "724f0691-d3b4-4648-8d94-a5d55012ca89")
+		)
+		(instances
+			(project "Front Sensor"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "TP2001")
 					(unit 1)
 				)
 			)
@@ -4096,7 +4204,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 53.34 67.31 0)
+		(at 54.61 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4106,7 +4214,7 @@
 		(dnp no)
 		(uuid "9481a39a-bdc5-46a6-9856-54177a569305")
 		(property "Reference" "#PWR2001"
-			(at 53.34 71.12 0)
+			(at 54.61 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4117,7 +4225,7 @@
 			)
 		)
 		(property "Value" "VDD-3V3"
-			(at 49.276 62.992 0)
+			(at 50.546 62.992 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4128,7 +4236,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 67.31 0)
+			(at 54.61 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4139,7 +4247,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 67.31 0)
+			(at 54.61 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4150,7 +4258,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 53.34 67.31 0)
+			(at 54.61 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5883,102 +5991,4 @@
 		)
 	)
 	(embedded_fonts no)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 121.92 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "23337399-85f7-4214-99bf-40ff9a510655")
-		(property "Reference" "TP2001"
-			(at 115.57 66.04 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "INT"
-			(at 115.57 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 121.92 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 121.92 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "724f0691-d3b4-4648-8d94-a5d55012ca89")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "TP2001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 137.16 68.58) (xy 121.92 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f12a2ff5-703d-4e9f-8442-ff9192c241eb")
-	)
-	(label "INT"
-		(at 128.27 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "36a7a84b-a920-48b0-85cd-840da01dca1e")
-	)
 )

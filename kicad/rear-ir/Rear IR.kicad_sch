@@ -33,7 +33,7 @@
 					)
 				)
 			)
-			(property "Value" "CL10A106KP8NNNC"
+			(property "Value" "10uF/10V"
 				(at 0 -4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -230,7 +230,7 @@
 					)
 				)
 			)
-			(property "Value" "FRC0603F1000TS"
+			(property "Value" "100"
 				(at 0 -4.064 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -374,7 +374,7 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "CGQ"
+			(property "Reference" "U"
 				(at 0 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1303,9 +1303,22 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "J5001 to the main board REAR-IR1, pin 1 to pin 1:\n1 3.3 V, 2 IR_L, 3 IR_R, 4 GND"
+	(rectangle
+		(start 30.48 52.07)
+		(end 196.85 165.1)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 0 255 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "019da26b-2b10-41e1-ad6a-1f4eb0c9bfea")
+	)
+	(text "Use \"same\" (pin 1 to pin 1) cable to main-phone"
 		(exclude_from_sim no)
-		(at 38.1 127 0)
+		(at 38.1 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1314,9 +1327,9 @@
 		)
 		(uuid "2a00e9d8-fc3f-4fb4-a269-7e751fd7c013")
 	)
-	(text "OOMWOO rear docking IR board (rev 1, 2026-10-28). Two top-looking 38 kHz receivers (the same part as the side board\nand the dock's U1202) look out of the board face, which faces backward. Put them ~10 mm apart with a baffle between\nthem: both see the dock = it is straight behind, one = steer that way. The outputs have internal pull-ups.\nRefs in the 5000s: each board has its own range."
+	(text "OOMWOO rear docking IR board (rev 1, 2026-10-28). Two top-looking 38 kHz receivers (the same part as the side board\nand the dock's U1002) look out of the board face, which faces backward. Put them ~10 mm apart with a baffle between\nthem: both see the dock = it is straight behind, one = steer that way. The outputs have internal pull-ups.\nRefs in the 5000s: each board has its own range."
 		(exclude_from_sim no)
-		(at 30.48 39.624 0)
+		(at 30.48 39.37 0)
 		(effects
 			(font
 				(size 1.524 1.524)
@@ -1325,20 +1338,9 @@
 		)
 		(uuid "867c334c-f4f6-405e-8968-ab0ca26ba581")
 	)
-	(text "Mounting: 2x M2 (pads to GND)"
-		(exclude_from_sim no)
-		(at 73.66 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8d096893-a4b9-40ee-93d9-337aaaa24d60")
-	)
 	(text "U5001 = left, U5002 = right, seen from behind the robot\n(looking at the board face)."
 		(exclude_from_sim no)
-		(at 127 160.02 0)
+		(at 123.444 148.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1348,70 +1350,50 @@
 		(uuid "ed8c73c3-f345-4ed1-907e-5244ac2ce849")
 	)
 	(junction
-		(at 59.69 105.41)
+		(at 54.61 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "11293757-a215-4160-8675-72103b2614e0")
+		(uuid "23924a96-85ca-403f-ad88-4cad2d68746d")
 	)
 	(junction
-		(at 133.35 134.62)
+		(at 133.35 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2bf1581d-d671-4a3e-81f5-0a015bea8db0")
 	)
 	(junction
-		(at 143.51 129.54)
+		(at 143.51 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "68508810-574c-4a78-9088-1caa96be0913")
 	)
 	(junction
-		(at 143.51 88.9)
+		(at 143.51 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6fa13fbe-9541-46b5-b507-1c8478e6cfd4")
 	)
 	(junction
-		(at 133.35 93.98)
+		(at 133.35 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "caf0ba66-ef8d-4c01-a87a-78c17a341aeb")
 	)
 	(junction
-		(at 48.26 110.49)
+		(at 48.26 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ec01714c-1e8a-47f4-811c-96f14b02a0fe")
 	)
 	(junction
-		(at 59.69 97.79)
+		(at 59.69 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ee61b4c2-bf01-455e-9457-ee3d5e384419")
 	)
 	(wire
 		(pts
-			(xy 59.69 106.68) (xy 59.69 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "004eb383-7beb-483d-9f73-931da8460f36")
-	)
-	(wire
-		(pts
-			(xy 91.44 154.94) (xy 91.44 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05f998de-4951-4d6c-89bc-801784474ecd")
-	)
-	(wire
-		(pts
-			(xy 144.78 132.08) (xy 137.16 132.08)
+			(xy 144.78 123.19) (xy 137.16 123.19)
 		)
 		(stroke
 			(width 0)
@@ -1421,7 +1403,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 91.44) (xy 137.16 91.44)
+			(xy 144.78 86.36) (xy 137.16 86.36)
 		)
 		(stroke
 			(width 0)
@@ -1431,7 +1413,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 92.71) (xy 44.45 110.49)
+			(xy 44.45 96.52) (xy 44.45 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1441,7 +1423,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 105.41) (xy 59.69 105.41)
+			(xy 54.61 109.22) (xy 57.15 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1451,7 +1433,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 134.62) (xy 133.35 134.62)
+			(xy 144.78 125.73) (xy 133.35 125.73)
 		)
 		(stroke
 			(width 0)
@@ -1461,7 +1443,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 93.98) (xy 133.35 93.98)
+			(xy 144.78 88.9) (xy 133.35 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1471,7 +1453,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 137.16) (xy 143.51 129.54)
+			(xy 143.51 128.27) (xy 143.51 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1481,7 +1463,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 97.79) (xy 62.23 97.79)
+			(xy 59.69 101.6) (xy 62.23 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1491,7 +1473,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 129.54) (xy 143.51 127)
+			(xy 143.51 120.65) (xy 143.51 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1501,7 +1483,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 110.49) (xy 48.26 110.49)
+			(xy 44.45 114.3) (xy 48.26 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1511,7 +1493,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 88.9) (xy 143.51 88.9)
+			(xy 144.78 83.82) (xy 143.51 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1521,7 +1503,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 100.33) (xy 59.69 100.33)
+			(xy 54.61 104.14) (xy 137.16 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1531,17 +1513,27 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 110.49) (xy 48.26 111.76)
+			(xy 48.26 114.3) (xy 54.61 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "96276626-623e-47ae-b9af-fa20c05cfa1b")
+		(uuid "9890c7b7-b6f5-46d7-a3e9-83228d8e7d1a")
 	)
 	(wire
 		(pts
-			(xy 59.69 97.79) (xy 59.69 96.52)
+			(xy 54.61 114.3) (xy 57.15 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b880648-0fa1-4ba2-a516-b432a09210c5")
+	)
+	(wire
+		(pts
+			(xy 59.69 101.6) (xy 59.69 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1551,7 +1543,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 102.87) (xy 59.69 102.87)
+			(xy 54.61 106.68) (xy 137.16 106.68)
 		)
 		(stroke
 			(width 0)
@@ -1561,7 +1553,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 129.54) (xy 143.51 129.54)
+			(xy 144.78 120.65) (xy 143.51 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1571,17 +1563,17 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 154.94) (xy 76.2 157.48)
+			(xy 137.16 104.14) (xy 137.16 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c06e4ef5-4bf8-4854-b97f-8c5070f72597")
+		(uuid "cbc63fd4-617a-4424-b1a9-2293f16b54d1")
 	)
 	(wire
 		(pts
-			(xy 143.51 96.52) (xy 143.51 88.9)
+			(xy 143.51 91.44) (xy 143.51 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1591,7 +1583,17 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 88.9) (xy 143.51 86.36)
+			(xy 57.15 114.3) (xy 57.15 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e275c773-89b6-47b0-9c0b-d26ece83eb67")
+	)
+	(wire
+		(pts
+			(xy 143.51 83.82) (xy 143.51 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1601,7 +1603,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 92.71) (xy 44.45 92.71)
+			(xy 48.26 96.52) (xy 44.45 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1611,7 +1613,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 97.79) (xy 59.69 97.79)
+			(xy 54.61 101.6) (xy 59.69 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1621,7 +1623,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 86.36) (xy 143.51 86.36)
+			(xy 144.78 81.28) (xy 143.51 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1631,7 +1633,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 127) (xy 143.51 127)
+			(xy 144.78 118.11) (xy 143.51 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1639,8 +1641,18 @@
 		)
 		(uuid "f1242748-0a94-4e50-a7a4-2f32d5a7881f")
 	)
+	(wire
+		(pts
+			(xy 137.16 106.68) (xy 137.16 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb1d1c9f-9404-4097-b6ed-c4dcfbebf377")
+	)
 	(label "IR_R"
-		(at 59.69 102.87 180)
+		(at 59.69 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1650,7 +1662,7 @@
 		(uuid "2dbbabc8-6eec-4eb1-82c1-a1df890cf986")
 	)
 	(label "IR_L"
-		(at 59.69 100.33 180)
+		(at 59.69 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1659,29 +1671,9 @@
 		)
 		(uuid "2f70383a-12fc-4cc4-9a5c-2cd0a2bb716a")
 	)
-	(label "IR_R"
-		(at 137.16 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d548d7bf-a988-4892-9bc4-fb9af804ee97")
-	)
-	(label "IR_L"
-		(at 137.16 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f4d13d48-3a35-4dfe-9653-a2b7a061fe44")
-	)
 	(symbol
 		(lib_id "JLCImport:IRM-H638T")
-		(at 152.4 129.54 0)
+		(at 152.4 120.65 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1691,7 +1683,7 @@
 		(dnp no)
 		(uuid "0165511f-c3c9-4893-b305-533b7babeb1a")
 		(property "Reference" "U5002"
-			(at 154.94 123.19 0)
+			(at 148.844 114.046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1702,7 +1694,7 @@
 			)
 		)
 		(property "Value" "IRM-H638T/TR2"
-			(at 154.94 138.43 0)
+			(at 148.844 129.286 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1713,7 +1705,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:IRM-H638T"
-			(at 152.4 129.54 0)
+			(at 152.4 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1724,7 +1716,7 @@
 			)
 		)
 		(property "Datasheet" "https://en.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/DMO-0000004-IRM-H6XX-TR2_Series_Datasheet_V4.pdf"
-			(at 152.4 129.54 0)
+			(at 152.4 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1735,7 +1727,7 @@
 			)
 		)
 		(property "Description" "38 kHz IR receiver, top-looking SMD (lens on the top face); output has an internal pull-up"
-			(at 152.4 129.54 0)
+			(at 152.4 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1746,7 +1738,7 @@
 			)
 		)
 		(property "LCSC" "C91447"
-			(at 152.4 129.54 0)
+			(at 152.4 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1779,86 +1771,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 59.69 106.68 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "02aaa0f4-c340-4b6c-a452-747a711efd00")
-		(property "Reference" "#PWR5001"
-			(at 59.69 106.68 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 59.69 111.76 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2faf72fb-08a3-4022-b989-a451b0c65639")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR5001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 91.44 157.48 0)
+		(at 91.44 154.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1868,7 +1781,7 @@
 		(dnp no)
 		(uuid "06478c7d-6837-488f-a753-2c4b982005c0")
 		(property "Reference" "#PWR5014"
-			(at 91.44 157.48 0)
+			(at 91.44 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1879,7 +1792,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 91.44 162.56 0)
+			(at 91.44 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1890,7 +1803,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 157.48 0)
+			(at 91.44 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1901,7 +1814,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 157.48 0)
+			(at 91.44 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1912,7 +1825,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 91.44 157.48 0)
+			(at 91.44 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1936,7 +1849,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:ZX-SH1_0-4PLT")
-		(at 50.8 101.6 0)
+		(at 50.8 105.41 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -1947,7 +1860,7 @@
 		(dnp no)
 		(uuid "1f8975f3-2abf-45d6-8f4a-45f52e36ceff")
 		(property "Reference" "J5001"
-			(at 46.99 88.9 0)
+			(at 46.99 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1958,7 +1871,7 @@
 			)
 		)
 		(property "Value" "ZX-SH1_0-4PLT"
-			(at 54.356 115.57 0)
+			(at 54.356 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1969,7 +1882,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:ZX-SH1_0-4PLT"
-			(at 50.8 101.6 0)
+			(at 50.8 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1980,7 +1893,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430453.pdf"
-			(at 50.8 101.6 0)
+			(at 50.8 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1991,7 +1904,7 @@
 			)
 		)
 		(property "Description" "-40℃~+85℃ 1 1A 1mm 1x4P 3.05mm 4 4.4mm 4P 50V 6.35mm Auxiliary Solder Pin Beige Brass LCP SH Surface Mount,Vertical Tin SMD,P=1mm Wire To Board Connector ROHS"
-			(at 50.8 101.6 0)
+			(at 50.8 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2002,7 +1915,7 @@
 			)
 		)
 		(property "LCSC" "C7430453"
-			(at 50.8 101.6 0)
+			(at 50.8 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2013,7 +1926,7 @@
 			)
 		)
 		(property "Manufacturer" "Megastar"
-			(at 50.8 123.19 0)
+			(at 50.8 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2024,7 +1937,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ZX-SH1.0-4PLT"
-			(at 50.8 125.73 0)
+			(at 50.8 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2062,86 +1975,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 59.69 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2c2af3dc-601d-46d6-b13a-b6fe9f96fbbe")
-		(property "Reference" "#FLG5004"
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 59.69 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2769e45b-2a96-49b1-8ae2-2a8845ef5dd4")
-		)
-		(instances
-			(project "Rear IR"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#FLG5004")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 133.35 104.14 0)
+		(at 133.35 99.06 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2151,7 +1986,7 @@
 		(dnp no)
 		(uuid "33560557-8a12-4ebf-bfbb-8f2be0050fa8")
 		(property "Reference" "#PWR5008"
-			(at 133.35 104.14 0)
+			(at 133.35 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2162,7 +1997,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 109.22 0)
+			(at 133.35 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2173,7 +2008,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 104.14 0)
+			(at 133.35 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2184,7 +2019,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 104.14 0)
+			(at 133.35 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2195,7 +2030,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 133.35 104.14 0)
+			(at 133.35 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2219,7 +2054,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 59.69 96.52 0)
+		(at 59.69 100.33 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2229,7 +2064,7 @@
 		(dnp no)
 		(uuid "408d8fed-5b0c-45f7-b272-da521d955af8")
 		(property "Reference" "#PWR5005"
-			(at 59.69 96.52 0)
+			(at 59.69 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2240,7 +2075,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 59.69 91.44 0)
+			(at 59.69 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2250,7 +2085,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 96.52 0)
+			(at 59.69 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2261,7 +2096,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 96.52 0)
+			(at 59.69 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2272,7 +2107,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 96.52 0)
+			(at 59.69 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2296,7 +2131,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 48.26 111.76 0)
+		(at 48.26 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2306,7 +2141,7 @@
 		(dnp no)
 		(uuid "4ae0ed95-c90b-4b23-8b24-4d2e49629671")
 		(property "Reference" "#PWR5002"
-			(at 48.26 111.76 0)
+			(at 48.26 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2317,7 +2152,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 48.26 116.84 0)
+			(at 48.26 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2328,7 +2163,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 111.76 0)
+			(at 48.26 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2339,7 +2174,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 111.76 0)
+			(at 48.26 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2350,7 +2185,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 111.76 0)
+			(at 48.26 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2374,7 +2209,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 133.35 83.82 0)
+		(at 133.35 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2384,7 +2219,7 @@
 		(dnp no)
 		(uuid "4f0a6fb3-863a-4727-a467-816c5ca99955")
 		(property "Reference" "#PWR05009"
-			(at 133.35 83.82 0)
+			(at 133.35 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2395,7 +2230,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 133.35 78.74 0)
+			(at 133.35 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2405,7 +2240,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 83.82 0)
+			(at 133.35 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2416,7 +2251,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 83.82 0)
+			(at 133.35 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2427,7 +2262,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 133.35 83.82 0)
+			(at 133.35 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2451,7 +2286,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 144.78 0)
+		(at 133.35 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2461,7 +2296,7 @@
 		(dnp no)
 		(uuid "577d02d9-8810-465c-8301-e89c966c91df")
 		(property "Reference" "#PWR5011"
-			(at 133.35 144.78 0)
+			(at 133.35 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2472,7 +2307,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 149.86 0)
+			(at 133.35 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2483,7 +2318,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 144.78 0)
+			(at 133.35 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2494,7 +2329,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 144.78 0)
+			(at 133.35 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2505,7 +2340,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 133.35 144.78 0)
+			(at 133.35 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2529,7 +2364,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 62.23 97.79 0)
+		(at 62.23 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2539,7 +2374,7 @@
 		(dnp no)
 		(uuid "72d6c394-ac7c-4623-9569-403687f7bc4e")
 		(property "Reference" "#FLG5006"
-			(at 62.23 97.79 0)
+			(at 62.23 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2550,7 +2385,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 62.23 93.98 0)
+			(at 62.23 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2561,7 +2396,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 97.79 0)
+			(at 62.23 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2572,7 +2407,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 97.79 0)
+			(at 62.23 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2583,7 +2418,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 62.23 97.79 0)
+			(at 62.23 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2607,7 +2442,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 133.35 124.46 0)
+		(at 133.35 115.57 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2617,7 +2452,7 @@
 		(dnp no)
 		(uuid "768b2459-e8fe-41a3-be01-277341a39aa5")
 		(property "Reference" "#PWR05012"
-			(at 133.35 124.46 0)
+			(at 133.35 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2628,7 +2463,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 133.35 119.38 0)
+			(at 133.35 110.49 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2638,7 +2473,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 124.46 0)
+			(at 133.35 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2649,7 +2484,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 124.46 0)
+			(at 133.35 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2660,7 +2495,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 133.35 124.46 0)
+			(at 133.35 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2684,7 +2519,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:IRM-H638T")
-		(at 152.4 88.9 0)
+		(at 152.4 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2694,7 +2529,7 @@
 		(dnp no)
 		(uuid "7c5fbe08-13e2-4092-b27c-18e296714655")
 		(property "Reference" "U5001"
-			(at 154.94 82.55 0)
+			(at 148.844 77.216 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2705,7 +2540,7 @@
 			)
 		)
 		(property "Value" "IRM-H638T/TR2"
-			(at 154.94 97.79 0)
+			(at 148.844 92.456 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2716,7 +2551,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:IRM-H638T"
-			(at 152.4 88.9 0)
+			(at 152.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2727,7 +2562,7 @@
 			)
 		)
 		(property "Datasheet" "https://en.everlight.com/wp-content/plugins/ItemRelationship/product_files/pdf/DMO-0000004-IRM-H6XX-TR2_Series_Datasheet_V4.pdf"
-			(at 152.4 88.9 0)
+			(at 152.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2738,7 +2573,7 @@
 			)
 		)
 		(property "Description" "38 kHz IR receiver, top-looking SMD (lens on the top face); output has an internal pull-up"
-			(at 152.4 88.9 0)
+			(at 152.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2749,7 +2584,7 @@
 			)
 		)
 		(property "LCSC" "C91447"
-			(at 152.4 88.9 0)
+			(at 152.4 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2782,7 +2617,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:FRC0603F1000TS")
-		(at 133.35 88.9 90)
+		(at 133.35 83.82 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -2793,7 +2628,7 @@
 		(dnp no)
 		(uuid "7ccac98a-fb09-41e2-8485-f095c8f59244")
 		(property "Reference" "R5001"
-			(at 130.81 87.6299 90)
+			(at 130.81 82.5499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2804,7 +2639,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 130.81 90.1699 90)
+			(at 130.81 85.0899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2815,7 +2650,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:R0603"
-			(at 140.97 88.9 0)
+			(at 140.97 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2826,7 +2661,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C2906981.pdf"
-			(at 143.51 88.9 0)
+			(at 143.51 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2837,7 +2672,7 @@
 			)
 		)
 		(property "Description" "-55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 133.35 88.9 0)
+			(at 133.35 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2848,7 +2683,7 @@
 			)
 		)
 		(property "Manufacturer" "FOJAN(富捷)"
-			(at 146.05 88.9 0)
+			(at 146.05 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2859,7 +2694,7 @@
 			)
 		)
 		(property "MPN" "FRC0603F1000TS"
-			(at 148.59 88.9 0)
+			(at 148.59 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2870,7 +2705,7 @@
 			)
 		)
 		(property "LCSC" "C2906981"
-			(at 151.13 88.9 0)
+			(at 151.13 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2975,7 +2810,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 76.2 157.48 0)
+		(at 76.2 154.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2985,7 +2820,7 @@
 		(dnp no)
 		(uuid "81839c0b-8c51-42bb-886c-4a85faa2f61a")
 		(property "Reference" "#PWR5013"
-			(at 76.2 157.48 0)
+			(at 76.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2996,7 +2831,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 76.2 162.56 0)
+			(at 76.2 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3007,7 +2842,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 157.48 0)
+			(at 76.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3018,7 +2853,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 157.48 0)
+			(at 76.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3029,7 +2864,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 157.48 0)
+			(at 76.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3053,7 +2888,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 143.51 137.16 0)
+		(at 143.51 128.27 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3063,7 +2898,7 @@
 		(dnp no)
 		(uuid "943f1248-b2d9-4c1e-b1ff-4a7750f32b46")
 		(property "Reference" "#PWR5010"
-			(at 143.51 137.16 90)
+			(at 143.51 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3074,7 +2909,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 143.51 142.24 90)
+			(at 143.51 133.35 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3086,7 +2921,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 143.51 137.16 0)
+			(at 143.51 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3097,7 +2932,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 143.51 137.16 0)
+			(at 143.51 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3108,7 +2943,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 143.51 137.16 0)
+			(at 143.51 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3132,7 +2967,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 143.51 96.52 0)
+		(at 143.51 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3142,7 +2977,7 @@
 		(dnp no)
 		(uuid "97b4cd01-9fe5-4cc6-bc81-ac2627ab620a")
 		(property "Reference" "#PWR5007"
-			(at 143.51 96.52 90)
+			(at 143.51 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3153,7 +2988,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 143.51 101.6 90)
+			(at 143.51 96.52 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3165,7 +3000,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 143.51 96.52 0)
+			(at 143.51 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3176,7 +3011,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 143.51 96.52 0)
+			(at 143.51 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3187,7 +3022,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 143.51 96.52 0)
+			(at 143.51 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3210,8 +3045,86 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 54.61 114.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "97b55498-eb39-4747-b446-e7e6e6d9e3fb")
+		(property "Reference" "#FLG05004"
+			(at 54.61 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 54.61 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "41f5e1be-eb89-4c2d-b4d3-c2831129698f")
+		)
+		(instances
+			(project "Rear IR"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
+					(reference "#FLG05004")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "JLCImport:CL10A106KP8NNNC")
-		(at 133.35 139.7 90)
+		(at 133.35 130.81 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -3222,7 +3135,7 @@
 		(dnp no)
 		(uuid "a24015eb-00a4-40ef-8261-bc19b8d003c8")
 		(property "Reference" "C5002"
-			(at 129.54 138.4299 90)
+			(at 129.54 129.5399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3233,7 +3146,7 @@
 			)
 		)
 		(property "Value" "10uF/10V"
-			(at 129.54 140.9699 90)
+			(at 129.54 132.0799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3244,7 +3157,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:C0603"
-			(at 140.97 139.7 0)
+			(at 140.97 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3255,7 +3168,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html"
-			(at 143.51 139.7 0)
+			(at 143.51 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3266,7 +3179,7 @@
 			)
 		)
 		(property "Description" "10V 10uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 133.35 139.7 0)
+			(at 133.35 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3277,7 +3190,7 @@
 			)
 		)
 		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 146.05 139.7 0)
+			(at 146.05 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3288,7 +3201,7 @@
 			)
 		)
 		(property "MPN" "CL10A106KP8NNNC"
-			(at 148.59 139.7 0)
+			(at 148.59 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3299,7 +3212,7 @@
 			)
 		)
 		(property "LCSC" "C19702"
-			(at 151.13 139.7 0)
+			(at 151.13 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3326,7 +3239,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:CL10A106KP8NNNC")
-		(at 133.35 99.06 90)
+		(at 133.35 93.98 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -3337,7 +3250,7 @@
 		(dnp no)
 		(uuid "d1966fd7-7bb9-4feb-bb33-09a2de4f3b18")
 		(property "Reference" "C5001"
-			(at 129.54 97.7899 90)
+			(at 129.54 92.7099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3348,7 +3261,7 @@
 			)
 		)
 		(property "Value" "10uF/10V"
-			(at 129.54 100.3299 90)
+			(at 129.54 95.2499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3359,7 +3272,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:C0603"
-			(at 140.97 99.06 0)
+			(at 140.97 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3370,7 +3283,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html"
-			(at 143.51 99.06 0)
+			(at 143.51 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3381,7 +3294,7 @@
 			)
 		)
 		(property "Description" "10V 10uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 133.35 99.06 0)
+			(at 133.35 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3392,7 +3305,7 @@
 			)
 		)
 		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 146.05 99.06 0)
+			(at 146.05 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3403,7 +3316,7 @@
 			)
 		)
 		(property "MPN" "CL10A106KP8NNNC"
-			(at 148.59 99.06 0)
+			(at 148.59 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3414,7 +3327,7 @@
 			)
 		)
 		(property "LCSC" "C19702"
-			(at 151.13 99.06 0)
+			(at 151.13 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3519,7 +3432,7 @@
 	)
 	(symbol
 		(lib_id "JLCImport:FRC0603F1000TS")
-		(at 133.35 129.54 90)
+		(at 133.35 120.65 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -3530,7 +3443,7 @@
 		(dnp no)
 		(uuid "f7cedb2a-10c2-486b-8b5a-9b8b667dbff6")
 		(property "Reference" "R5002"
-			(at 130.81 128.2699 90)
+			(at 130.81 119.3799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3541,7 +3454,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 130.81 130.8099 90)
+			(at 130.81 121.9199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3552,7 +3465,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:R0603"
-			(at 140.97 129.54 0)
+			(at 140.97 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3563,7 +3476,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C2906981.pdf"
-			(at 143.51 129.54 0)
+			(at 143.51 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3574,7 +3487,7 @@
 			)
 		)
 		(property "Description" "-55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 133.35 129.54 0)
+			(at 133.35 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3585,7 +3498,7 @@
 			)
 		)
 		(property "Manufacturer" "FOJAN(富捷)"
-			(at 146.05 129.54 0)
+			(at 146.05 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3596,7 +3509,7 @@
 			)
 		)
 		(property "MPN" "FRC0603F1000TS"
-			(at 148.59 129.54 0)
+			(at 148.59 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3607,7 +3520,7 @@
 			)
 		)
 		(property "LCSC" "C2906981"
-			(at 151.13 129.54 0)
+			(at 151.13 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

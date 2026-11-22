@@ -1,6 +1,6 @@
 # OOMWOO main board, phone-compute version (v1)
 
-Fork of [`../main`](../main) for the first board: an Android phone is the compute, connected to the STM32 over USB-C. Decided 2026-10-25.
+Fork of [`../main`](../main) for the first board: an Android phone is the compute, connected to the MCU over USB-C. Decided 2026-10-25. Since 2026-11-21 the MCU is a CH32V307 plus a CH32X035 companion ([docs/mcu-ch32v307.md](../../docs/mcu-ch32v307.md)).
 
 Removed compared with `main`:
 - Raspberry Pi CM4/CM5 and everything only it used: SD card, M.2 slot and its 3.3 V buck, CM console header, internal USB header (mic board)
@@ -114,6 +114,7 @@ Changed 2026-11-03:
 - 2026-11-17: charger status to the MCU: SLM6900 NCHRG → R105 → PE6 (~{CHRG}), NSTDBY → R104 → PD4 (~{STDBY}); R104/R105 are now 1k (C2907113, already on the BOM). The charge LEDs LED_CHG1/LED_DONE1 are removed (firmware shows the charge state on the button LEDs). J1 pins 8 and 11 (were PE6, PD4) are now GND. See SPEC, Power control, for the status decoding and the battery NTC notes.
 - 2026-11-17: battery NTC to the MCU: BAT_NTC → PF1. Q40 (AO3400) isolates U1's NTC pin off the dock; Q41 (AO3401) + R232 (10k) bias the NTC from VMCU-3V3 off the dock; R233 (10k) + C182 (100 nF) to the MCU; both gates on DOCKED (the R175/R194 rail-hold node). J1 pin 9 (was PF1) is now GND. No new BOM lines. See SPEC, Power control.
 - 2026-11-18: floor Hall sockets for magnetic barrier strips: J10 (HALL-FLOOR-L → PE10) and J11 (HALL-FLOOR-R → PF0), ZX-SH1.0-3PLT like J7/J8, from VSENS-3V3. J1 pins 7 and 10 (were PF0, PE10) are now GND. They take the Hall board's floor variant (DRV5055A1QDBZR). See SPEC, Rear docking IR and Hall sensors.
+- 2026-11-21: MCU change: the STM32G473VCT6 (U13, $7.39) is replaced by a WCH CH32V307VCT6 (U13, C2943979, same LQFP-100 footprint) plus a CH32X035C8T6 companion (U28, C29779902, LQFP-48). The MCU sheet is now `MCU.kicad_sch` (sheet MCU, was MCU-STM32 / STM32G473.kicad_sch) on A3 paper. U13: USB high speed to the phone (PB6/PB7), DVP camera, every sensor and motor; U28: USB-C PD (CC1/CC2), the slow analog inputs, buttons and LEDs, charger status, power latch, phone charging, camera power, dust-bin Hall and the ToF reset/enable lines. New: J12 camera FPC (24-pin ESP32-CAM pinout) with Q44 (CAM-3V3), U29/U30 (ME6211, 2.8 V and 1.2 V); switched Rd on CC1/CC2 (R236/R237, Q42/Q43, R238); carpet echo amplifier on OPA3 (R239-R241, C186) and envelope detector (D48, C187, R242); U28 support parts R234/R235, C183-C185. X3 is now an 8 MHz HC-49S crystal (C12674) for USB high speed; the 32.768 kHz crystal is gone. Pin map, flashing and the reasoning: [docs/mcu-ch32v307.md](../../docs/mcu-ch32v307.md). Bullets above that name STM32 pins are history.
 - renamed (2026-11-09): BAT2 → J2, US1 → CN1, DC_IN → DC-IN-20V, P+/C+ → P+/C+14V4; more parts on JLC symbols and footprints
 - R106 100 mΩ (RE1206F1R100, C46961734; was 50 mΩ): charge current 1.2 A instead of 2.4 A (2026-11-09)
 - USB power moved out of the Battery-Charger sheet into its own sheet, usb_power (2026-11-08); renamed USB2 → USBC2, PWR_EN → USB_PWR_EN, VBUS → VBUS_5V, VBUS_SRC → VBUS_5V_SRC, D+/D- → DP/DN

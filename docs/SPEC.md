@@ -374,7 +374,8 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
   - obstacle *recognition*; colour helps, and RGB modules are cheaper with more lens choice than NIR
   - non-MIPI and low bandwidth, read by the STM32, so it works with both a Pi CM and an old
     smartphone over USB CDC; this rules out full ToF cameras, stereo depth and structured light
-  - **Open question:** the STM32G473 has **no DCMI** (camera interface) peripheral. Options:
+  - **Resolved 2026-11-21:** the CH32V307 that replaced the STM32 has a DVP port and USB high speed, so the camera connects straight to it (J12; see [mcu-ch32v307.md](mcu-ch32v307.md)). The notes below are the earlier options.
+  - Earlier open question: the STM32G473 has **no DCMI** (camera interface) peripheral. Options:
     GPIO capture with timer-triggered DMA at low resolution; a module with its own SPI/FIFO
     buffer (ArduCAM-style); or a small bridge MCU with a camera interface
   - **Tentative:** a Raspberry Pi Pico-class MCU (RP2040, or RP2350) as the camera bridge. Its PIO
@@ -526,7 +527,9 @@ Design (current schematic)
 
 ## Phone-compute board (v1)
 
-The first board drops the Raspberry Pi: an Android phone is the compute, talking to the STM32 over USB-C (CDC). Schematic: [`kicad/main-phone`](../kicad/main-phone/README.md), forked from `kicad/main` (the Pi carrier stays for later).
+The first board drops the Raspberry Pi: an Android phone is the compute, talking to the MCU over USB-C (CDC). Schematic: [`kicad/main-phone`](../kicad/main-phone/README.md), forked from `kicad/main` (the Pi carrier stays for later).
+
+- **MCU (2026-11-21):** the STM32G473VCT6 went to $7.39 with 20 in stock, so U13 is now a WCH CH32V307VCT6 (USB high speed to the phone, DVP camera, all motors and sensors) with a CH32X035C8T6 companion (U28: USB-C PD, slow analog, buttons and LEDs, charger status, power latch, camera power). Pin map, PD, camera, carpet amplifier and flashing: [mcu-ch32v307.md](mcu-ch32v307.md). The STM32 pin names in the bullets below are history; the schematic and the firmware pin header are current.
 
 - dropped: CM4/CM5, SD card, M.2 + its buck, MIPI cameras, speaker amp (no buzzer; LEDs for debug), water pump, front illumination, the phone's dedicated 5 V buck, the board fan (the phone stays cool), the left side-proximity sensor (OOMWOO One has a right one only)
 - kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
@@ -683,12 +686,12 @@ Power rails (current schematic):
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
 | VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
-| VMCU-3V3 | RY9430 buck (U21); U27 (HT7533-1) + Q39 from VBUS_5V with the battery out (bring-up) | STM32 | VMCU-3V3-POWER-EN |
-| VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic | STM32 (~VSENS_3V3_EN, low = on) |
-| VMCU-BAT-3V3 | HT7533 LDO | STM32 VBAT (RTC keeps time) | always on |
+| VMCU-3V3 | RY9430 buck (U21); U27 (HT7533-1) + Q39 from VBUS_5V with the battery out (bring-up) | MCUs (U13 CH32V307, U28 CH32X035) | VMCU-3V3-POWER-EN |
+| VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic, camera (CAM-3V3 via Q44, U28 ~CAM-EN) | U13 (~VSENS_3V3_EN, low = on) |
+| VMCU-BAT-3V3 | HT7533 LDO | U13 VBAT | always on |
 | VSENS-5V-USB | RY9430 buck (U22, 3 A max) | LiDAR, cliff and bumper LEDs, VUSONIC-14V4 boost, spare header J1 (pin 12), USB-C VBUS to the phone | STM32 (VSENS_5V_USB_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |
-| USB-C VBUS 5 V | VSENS-5V-USB through U2 TMI6240 + Q27 | phone (phone-as-compute option) | STM32 (USB_PWR_EN) |
+| USB-C VBUS 5 V | VSENS-5V-USB through U2 TMI6240 + Q27 | phone (phone-as-compute option) | U28 (USB_PWR_EN) |
 | VUSONIC-14V4 (≈ 14.5 V) | MT3608 boost | carpet sensor | with VSENS-5V-USB |
 | VMOT-14V4 | VBAT-14V4 via Q1 + Q2 AO4407C (parallel) | wheels, brushes, fan | WD_OK AND ~VMOT-14V4-EN |
 | VLIDAR-5V | VSENS-5V-USB via Q25 AO3401 | whole LiDAR, laser included | WD_OK AND ~VMOT-14V4-EN (low = on; the same pin as the motor rail since 2026-10-28) |

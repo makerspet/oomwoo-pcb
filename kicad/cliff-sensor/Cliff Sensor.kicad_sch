@@ -972,9 +972,9 @@
 		)
 		(uuid "8c216909-1227-479f-aa0d-50967425e521")
 	)
-	(text "Assembly (JLC): D4001 and Q4001 THT with the ASSEMBLY STANDOFF (~2 mm) so the leads can be bent;\npin bending to the tilt angle, or bend by hand in the 3D-printed housing. LED: flat side = cathode.\nQ8501: flat side / square pad = emitter. Spacing D4001-Q4001: 18 mm centre to centre.\n\n- VLED PWM period <<15 usec\n- duty cycle ~10%"
+	(text "**Layout**\n- orient D4001, Q4001 two pins parallel to PCB SHORT side\n- D4001-Q4001 spacing 18 mm centre to centre\n\n**Assembly**\n- Q4001 with the ASSEMBLY STANDOFF (1 mm)\n  Later, bend Q4001 into 3D-print housing\n  D4001 - no standoff, no bending\n\nFirmware\n- VLED PWM period <<15 usec\n- duty cycle ~10%"
 		(exclude_from_sim no)
-		(at 76.454 124.714 0)
+		(at 78.232 115.824 0)
 		(effects
 			(font
 				(size 1.27 1.27)

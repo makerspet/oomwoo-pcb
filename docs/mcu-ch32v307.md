@@ -15,7 +15,7 @@ Status: in the schematic since 2026-11-21 (sheet `MCU`, file `kicad/main-phone/M
 - USB to the phone is high speed (480 Mbit/s) on PB6/PB7: a composite device with CDC (robot link) and UVC (camera). No USB hub.
 - 144 MHz RISC-V with FPU; 256 KB flash / 64 KB RAM, or 192 KB / 128 KB through the option bytes.
 
-**U28, CH32X035C8T6, the power/UI companion:** USB-C PD (sink by default, power-role swap to source to charge the phone), the slow analog inputs, charger status, buttons and button LEDs, the power latch, phone-charging enable, camera power, the dust-bin Hall, the ToF reset/enable lines, and later the torch.
+**U28, CH32X035C8T6, the power/UI companion:** USB-C PD (sink by default, power-role swap to source to charge the phone), the slow analog inputs, charger status, buttons and button LEDs, the power latch, phone-charging enable, the camera reset, the dust-bin Hall, the ToF reset/enable lines, and later the torch.
 - It talks to U13 over a UART at 1 Mbit/s suggested, on its PC18/PC19 (USART3 remap 1). Those are also its SDI programming pins, so U13 can program it (see Flashing).
 - U13 drives its reset (X035-NRST) and its boot pin (X035-BOOT).
 
@@ -53,8 +53,8 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PB7 | USBHS_DP | DP | |
 | PB8 | DVP_D6 | CAM-Y8 | |
 | PB9 | DVP_D7 | CAM-Y9 | |
-| PB10 | I2C2_SCL | I2C4_SCL | ToF x2, side VL53L0X, IMU (net keeps its old name) |
-| PB11 | I2C2_SDA | I2C4_SDA | |
+| PB10 | I2C2_SCL | SCL | ToF x2, side VL53L0X, IMU; 400 kHz max (no Fast-mode Plus) |
+| PB11 | I2C2_SDA | SDA | |
 | PB12 | GPIO out | ~VMOT-14V4-EN | R184 pull-up |
 | PB13 | OPA3_CH0P | CARPET-SENSOR-ECHO | the biased, clamped echo node on the carpet sheet |
 | PB14 | GPIO out | VSENS-5V-USB-EN | |
@@ -68,7 +68,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PC11 | DVP_D4 | CAM-Y6 | |
 | PC12 | UART5_TX | LIDAR_RX | |
 | PC13 | GPIO out (open drain) | X035-NRST | |
-| PC14 | GPIO (bit-banged SCCB) | CAM-SCL | low-drive pin, 100 kHz; R246 pull-up to CAM-3V3 |
+| PC14 | GPIO (bit-banged SCCB) | CAM-SCL | low-drive pin, 100 kHz; R246 pull-up. Separate from the sensor bus: SCCB quirks, slower clock, long flex |
 | PC15 | GPIO (bit-banged SCCB) | CAM-SDA | R247 pull-up |
 | PD0 | GPIO out | CLIFF_LED_EN | |
 | PD1, PD3 | TIM10_CH1/CH2 (remap 2) | WHEEL-MOT-L-IN1, -IN2 | PWM |
@@ -97,7 +97,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PE13 | UART7_RX (remap) | STM32-RX | |
 | PE14 | UART8_TX (remap) | X035-RX | to U28 PC19 (RX3 / SDI DCK) |
 | PE15 | UART8_RX (remap) | X035-TX | from U28 PC18 (TX3 / SDI DIO) |
-| BOOT0 | pin 94 | PB8-BOOT0 | J1 pin 2, R22 pull-down |
+| BOOT0 | pin 94 | BOOT0 | J1 pin 2, R22 pull-down |
 | OSC_IN/OUT | pins 12/13 | | X3, 8 MHz, with C42/C39 (18 pF) |
 | NRST | pin 14 | ~RST | R21, C37 |
 | VBAT | pin 6 | VMCU-BAT-3V3 | |
@@ -136,7 +136,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 7 | PA21/RST | NRST | X035-NRST | from U13 PC13; R234 (10k) + C185. Enable the reset function in the option bytes |
 | 23 | PB3 | GPIO in | ~STDBY | internal pull-up |
 | 26 | PB6 | GPIO out | CC-RD-EN | Rd switch, see below |
-| 28 | PB8 | GPIO out | ~CAM-EN | camera power, low = on |
+| 27 | PB7 | GPIO out | CAM-RESET | camera RESETB; R244 (10k) pull-down holds the camera in reset until U28 releases it |
 | 29 | PB9 | TIM1_CH1 | (free) | reserved for the torch PWM |
 | 35 | PB12 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
 | 32 | PC16 | GPIO in | ~CHRG | internal pull-up. PC16 is bonded to PC11: keep PC11 an input |
@@ -147,7 +147,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 39 | PC15 | PD CC2 | USB_CC2 | |
 | 48 / 47 | VDD / GND | | VMCU-3V3 | C183 100 nF + C184 10 µF |
 
-Free: PA3, PA14, PA19, PA20, PA22, PA23, PB2, PB4, PB5, PB7, PB9, PB10, PB11, PB13, PC6, PC7.
+Free: PA3, PA14, PA19, PA20, PA22, PA23, PB2, PB4, PB5, PB8, PB9, PB10, PB11, PB13, PC6, PC7.
 
 The CD4051B mux from the draft is gone: the LQFP-48 has enough ADC inputs.
 
@@ -169,21 +169,22 @@ The CD4051B mux from the draft is gone: the LQFP-48 has enough ADC inputs.
 | 3 | SIO_D (PC15) | | 15 | DGND |
 | 4 | AVDD 2.8 V | | 16 | Y7 (D5, PB3) |
 | 5 | SIO_C (PC14) | | 17 | PCLK (PA6) |
-| 6 | RESETB (R244/C195 from CAM-3V3) | | 18 | Y6 (D4, PC11) |
+| 6 | RESETB (U28 PB7, R244 to GND) | | 18 | Y6 (D4, PC11) |
 | 7 | VSYNC (PA5) | | 19 | Y2 (D0, PA9) |
 | 8 | PWDN (PC10, R245 to GND) | | 20 | Y5 (D3, PC9) |
 | 9 | HREF (PA4) | | 21 | Y3 (D1, PA10) |
 | 10 | DVDD 1.2 V | | 22 | Y4 (D2, PC8) |
-| 11 | DOVDD (CAM-3V3) | | 23 | Y1 (NC, 8-bit mode) |
+| 11 | DOVDD (VSENS-3V3) | | 23 | Y1 (NC, 8-bit mode) |
 | 12 | Y9 (D7, PB9) | | 24 | Y0 (NC) |
 
 **Camera power:**
-- **CAM-3V3** (also DOVDD, so the camera I/O runs at 3.3 V like the MCU): Q44 (AO3401) from VSENS-3V3. R243 (100k) holds it off; U28 ~CAM-EN turns it on.
-- **AVDD 2.8 V:** U29, ME6211C28M5G-N (C53099), from CAM-3V3.
-- **DVDD 1.2 V:** U30, ME6211C12M5G-N (C236672), from CAM-3V3, for OV2640-class sensors. OV3660 and OV5640 regulate their own core.
+- **DOVDD** is VSENS-3V3, so the camera I/O runs at 3.3 V like the MCU and the camera is on whenever the other sensors are. No separate switch (Q44 removed 2026-11-22): PWDN (U13 PC10) is the standby, CAM-RESET (U28 PB7) the hard reset.
+- **AVDD 2.8 V:** U29 (VCAM-2V8), ME6211C28M5G-N (C53099), from VSENS-3V3.
+- **DVDD 1.2 V:** U30 (VCAM-1V2), ME6211C12M5G-N (C236672), from VSENS-3V3, for OV2640-class sensors. OV3660 and OV5640 regulate their own core.
 - 1 µF in and out on each LDO (C188–C191), 100 nF at J12 pins 4, 10 and 11 (C192–C194).
-- SCCB pull-ups R246/R247 (4.7k) go to CAM-3V3, so a camera that's off isn't back-powered through them.
-- **Firmware:** keep XCLK, SCCB and PWDN low or hi-Z while ~CAM-EN is high.
+- SCCB pull-ups R246/R247 (4.7k) go to VSENS-3V3.
+- **Reset sequence:** with VSENS-3V3 up, wait for the LDOs to settle, start XCLK, then release CAM-RESET (U13 asks U28 over the link).
+- **Firmware:** keep XCLK, SCCB, PWDN and CAM-RESET low or hi-Z while VSENS-3V3 is off.
 - **Budget:** ~40–150 mA from VSENS-3V3 depending on the sensor; check the U21 headroom.
 
 ## Carpet echo
@@ -213,7 +214,7 @@ The CD4051B mux from the draft is gone: the LQFP-48 has enough ADC inputs.
 | + 8 MHz crystal, − 32.768 kHz crystal | ≈ −0.05 |
 | + Rd switch (2x AO3400, 2x 4.7k, 100k) | +0.02 |
 | + carpet amplifier and detector (passives, 1N4148) | +0.01 |
-| + J12, 2x ME6211, AO3401, passives | +0.15 |
+| + J12, 2x ME6211, passives | +0.14 |
 | **Net** | **≈ −4.7 per board** |
 
 New BOM lines: CH32V307, CH32X035, the 8 MHz crystal, the FPC socket and two ME6211s. Removed: STM32G473 and the 32.768 kHz crystal. JLC stock of the CH32X035C8T6 is thin (197); check LCSC before a 500–1000-piece run.

@@ -687,7 +687,7 @@ Power rails (current schematic):
 | --- | --- | --- | --- |
 | VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
 | VMCU-3V3 | RY9430 buck (U21); U27 (HT7533-1) + Q39 from VBUS_5V with the battery out (bring-up) | MCUs (U13 CH32V307, U28 CH32X035) | VMCU-3V3-POWER-EN |
-| VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic, camera (CAM-3V3 via Q44, U28 ~CAM-EN) | U13 (~VSENS_3V3_EN, low = on) |
+| VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic, camera (DOVDD; AVDD/DVDD via U29/U30) | U13 (~VSENS_3V3_EN, low = on) |
 | VMCU-BAT-3V3 | HT7533 LDO | U13 VBAT | always on |
 | VSENS-5V-USB | RY9430 buck (U22, 3 A max) | LiDAR, cliff and bumper LEDs, VUSONIC-14V4 boost, spare header J1 (pin 12), USB-C VBUS to the phone | STM32 (VSENS_5V_USB_EN) |
 | VCC3V3_M2 | AP64501 buck (U24) | M.2 slot | CM (PCIE_PWR_EN) |

@@ -124,6 +124,7 @@ Changed 2026-11-03:
 - 2026-11-23: schematic tidy-up; the main I2C bus is renamed SCL/SDA -> IMU-SCL/IMU-SDA (firmware macros PIN_IMU_SCL/PIN_IMU_SDA), CC-RD-EN is a root-level net. No connectivity change.
 - 2026-11-23: VMCU-BAT-3V3 removed with U16 (HT7533-1), D2 (9.1 V zener), C140 and C141. U13 VBAT (pin 6) is on VMCU-3V3 with C36: the RTC has no 32 kHz crystal (PC14/PC15 are the CAM I2C), settings and time live on the phone, and the rail drew a few µA from the battery while the robot was off.
 - 2026-11-24: switchable charge current: R250 (100 mΩ, as R106) + Q44 (AO4407C) in parallel with R106 when CHG-I-HI (U28 PC13, new sheet pin on MCU and BATTERY-CHARGER) is high, ~2.2 A instead of 1.2 A; Q45 (AO3400) drives the gate, R251 100k gate-source, R252 1M pull-down. For the dock's USB-C PD power budget (dock README).
+- 2026-11-24: cliff LEDs overdriven for pulsing: R224-R229 150 Ω 0603 → 10 Ω 1 W 2512 (~320 mA per LED, ~1.9 A total); Q35 gate AC-coupled (C201 100 nF, R253 47k, D49 clamp) so a stuck-high CLIFF_LED_EN turns them off within ~5 ms; C199/C200 10 µF on VSENS-5V-USB.
 - renamed (2026-11-09): BAT2 → J2, US1 → CN1, DC_IN → DC-IN-20V, P+/C+ → P+/C+14V4; more parts on JLC symbols and footprints
 - R106 100 mΩ (RE1206F1R100, C46961734; was 50 mΩ): charge current 1.2 A instead of 2.4 A (2026-11-09)
 - USB power moved out of the Battery-Charger sheet into its own sheet, usb_power (2026-11-08); renamed USB2 → USBC2, PWR_EN → USB_PWR_EN, VBUS → VBUS_5V, VBUS_SRC → VBUS_5V_SRC, D+/D- → DP/DN

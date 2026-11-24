@@ -16,7 +16,7 @@ A small board with an IR LED and a phototransistor that looks down at the floor.
   | 35° | 12.9 mm |
 
   Aim the crossing at the normal floor distance. Past the crossing point the beams diverge, so a far floor returns little light even when it is white. This is what lets the sensor tell a dark floor (close, weak) from a cliff (far).
-- The LED current is set on the main board (150 Ω per connector, R224-R229): (5 V − 1.25 V) / 150 Ω ≈ 25 mA, 94 mW in the resistor if the LED is left on. Until 2026-11-06 this board had its own resistor (R4001); moving it keeps this board smaller and lets the current be changed in one place.
+- The LED current is set on the main board (one resistor per connector, R224-R229). Since 2026-11-24 they are 10 Ω 1 W 2512 for pulsed overdrive: (5 V − ~1.7 V) / 10 Ω ≈ 320 mA per LED while on. The IR333-A takes 100 mA continuous and 1 A in ≤ 100 µs pulses at ≤ 1 % duty, so firmware pulses the LEDs and keeps the average at or below ~50 mA per LED. For continuous drive fit 150 Ω (25 mA), as before. Until 2026-11-06 this board had its own resistor (R4001); moving it keeps this board smaller and lets the current be changed in one place.
 - The main board switches all six LED cathodes at once (Q35, `CLIFF_LED_EN` on PC1) and pulls each phototransistor collector up to 3.3 V (47k). Firmware should modulate the LEDs and use LED-on minus LED-off, so sunlight and lamps cancel out.
 
 ## Connector J4001
@@ -25,13 +25,13 @@ ZX-SH1.0-4PLT (C7430453): JST SH compatible, 1.0 mm pitch, SMD, vertical (top en
 
 | Pin | Signal |
 | --- | --- |
-| 1 | LED_A: LED anode, fed from VSENS-5V-USB through 150 Ω on the main board |
+| 1 | LED_A: LED anode, fed from VSENS-5V-USB through 10 Ω on the main board (~320 mA pulses) |
 | 2 | LED cathode, switched on the main board |
 | 3 | OUT: phototransistor collector, to an ADC pin |
 | 4 | GND: phototransistor emitter |
 | 5, 6 | mounting pads, GND |
 
-The LED current returns on pin 2, not on the signal ground, so it doesn't shift the reading. Use a pin 1 to pin 1 cable.
+The LED current returns on pin 2, not on the signal ground, so it doesn't shift the reading. JST SH contacts are rated 1 A, so 320 mA pulses are fine. Use a pin 1 to pin 1 cable.
 
 ## Main-board channels
 

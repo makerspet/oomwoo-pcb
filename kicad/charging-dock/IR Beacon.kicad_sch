@@ -1489,7 +1489,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Beacon: the MCU sends 38 kHz NEC frames (TIM1 PWM, ~1/3 duty), never a steady carrier:\nthe robot receivers (IRM-H638T) suppress continuous 38 kHz. Left and right strings can send\ndifferent codes. Gates are AC-coupled (100 nF / 100k, ~10 ms): a pin stuck high turns the LEDs off.\nMount the three LEDs of each string fanned out (TSAL6200 is +/-17 deg) to cover the room."
+	(text "Beacon: the MCU sends 38 kHz NEC frames (TIM1 PWM, ~1/3 duty), never a steady carrier:\nthe robot receivers (IRM-H638T) suppress continuous 38 kHz. Left and right strings can send\ndifferent codes. Gates are AC-coupled (100 nF / 100k, ~10 ms): a pin stuck high turns the LEDs off.\nMount the three LEDs of each string fanned out (TSAL6200 is +/-17 deg) to cover the room.\nPulsed overdrive (2026-11-24): 2x 150R per string = 75R, ~210 mA peak (TSAL6200: 200 mA at\ntp/T = 0.5, tp = 100 us; the carrier is ~9 us at 1/3). Fit only R1004/R1006 for ~100 mA."
 		(exclude_from_sim no)
 		(at 30.48 132.08 0)
 		(effects
@@ -4165,5 +4165,275 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_id "JLCImport:25121WJ0151T4E")
+		(at 48.26 44.45 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4df5ff6a-2cea-4035-8a15-817f919e1fbe")
+		(property "Reference" "R1018"
+			(at 49.53 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "150Ω/1W"
+			(at 49.53 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R2512"
+			(at 48.26 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-151-5_C25471.html"
+			(at 48.26 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "In parallel with R1004: 75 ohm per string, ~210 mA peak for the pulsed (NEC) beacon"
+			(at 48.26 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25471"
+			(at 48.26 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "25121WJ0151T4E"
+			(at 48.26 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7aed8900-40d8-47b1-8385-f8274a7b70ef")
+		)
+		(pin "2"
+			(uuid "66f0dff6-9975-411b-9ef6-b4b5730e35b8")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "R1018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 60.96 39.37) (xy 48.26 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "206e364f-d8b3-4810-a6f2-8d04731c9b4e")
+	)
+	(wire
+		(pts
+			(xy 60.96 49.53) (xy 48.26 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "346ce0bb-b964-4cc0-8ece-6bb8653c0178")
+	)
+	(junction
+		(at 60.96 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa1c511c-47ea-4e3e-9157-6e80485effb4")
+	)
+	(junction
+		(at 60.96 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3f44efbf-e785-4b82-8121-273f6056e764")
+	)
+	(symbol
+		(lib_id "JLCImport:25121WJ0151T4E")
+		(at 139.7 44.45 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dbacbf15-3d91-43f8-8487-0070a20e539f")
+		(property "Reference" "R1019"
+			(at 140.97 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "150Ω/1W"
+			(at 140.97 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "JLCImport:R2512"
+			(at 139.7 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_150R-151-5_C25471.html"
+			(at 139.7 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "In parallel with R1006: 75 ohm per string, ~210 mA peak for the pulsed (NEC) beacon"
+			(at 139.7 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25471"
+			(at 139.7 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "25121WJ0151T4E"
+			(at 139.7 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32c2414f-a8b9-45b4-8906-0eec7f5c06a0")
+		)
+		(pin "2"
+			(uuid "da910e2f-9bdf-4bf1-9bf9-ebac0dd12cc1")
+		)
+		(instances
+			(project "Charging Dock"
+				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125/4bb8f12b-f88e-462d-8d8b-7cab36a6773e"
+					(reference "R1019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 152.4 39.37) (xy 139.7 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb2f574c-f6dc-4da9-b230-6285e2823599")
+	)
+	(wire
+		(pts
+			(xy 152.4 49.53) (xy 139.7 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3b8d315-d5e8-4228-9193-bc08693ac512")
+	)
+	(junction
+		(at 152.4 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa05dbdc-9867-40e5-acfd-6bfe0d54576f")
+	)
+	(junction
+		(at 152.4 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "13b6b8c4-e278-440a-9199-b488db50e5b9")
 	)
 )

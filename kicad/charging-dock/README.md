@@ -10,7 +10,7 @@ Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.
 2. With the contacts off, the MCU measures the resistance across them (see [Robot detection](#robot-detection)). It switches 20 V on only when it sees the robot.
 3. Q1003 (AO4407C P-FET) switches VDOCK-20V. R1012/R1015 set Vgs to -10 V, and C1017 (47 nF, gate to drain) ramps VDOCK-20V at ~30 V/ms, so the robot's input capacitors charge at ~0.5 A instead of sparking on the contacts. D1003 (SMAJ22A) protects the exposed contacts.
 4. R1016 (50 mΩ) and U1004 (INA180A1 clone from lingxingic, C48533472, gain 20; TI's INA180A1IDBVR C122228 is the pin-compatible alternative) measure the charging current on DOCK-: I-SENSE = 1 V/A, 3.3 A full scale. The MCU switches VDOCK-20V off when the current drops to ~0 (the robot left) or on overcurrent.
-5. Two IR LED strings (3x TSAL6200 each, ~100 mA peak from 20 V) send 38 kHz NEC frames for the robot's receivers.
+5. Two IR LED strings (3x TSAL6200 each, ~210 mA peak from 20 V since 2026-11-24, ~100 mA before) send 38 kHz NEC frames for the robot's receivers.
 
 ## MCU: CH32V003F4P6
 
@@ -83,7 +83,7 @@ The dock takes any USB-C charger that offers 20 V: in practice most chargers of 
 - The robot's receivers (IRM-H638T, AGC type) suppress a steady 38 kHz carrier, so the beacon must send bursts: NEC frames, with the TIM1 PWM at ~1/3 duty and the frame envelope gated in firmware.
 - IR-L and IR-R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C1004/C1006 100 nF, R1003/R1005 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
-- R1004/R1006 are 150 Ω 2512 (1 W): 1.7 W peak, ~0.3 W average at NEC duty.
+- Each string has two 150 Ω 1 W 2512 in parallel (R1004 + R1018, R1006 + R1019; since 2026-11-24): 75 Ω, ~210 mA peak, ~3.3 W peak and ~0.6 W average per string at NEC duty, ~0.3 W per resistor. The TSAL6200 takes 100 mA continuous and 200 mA at tp/T = 0.5 with tp = 100 µs; the carrier pulses are ~9 µs at 1/3 duty, ~70 mA average while sending. Leave R1018/R1019 off for ~100 mA.
 - The frames carry the power budget for the robot (proposed: the NEC command byte = watts available at the contacts / 2, 0 = refusing). Firmware defines the exact code.
 - No IR receiver on the dock: the optional, unfitted U1002 (IRM-H638T, for robot → dock messages) and its R1002/C1003 filter were removed on 2026-11-15.
 

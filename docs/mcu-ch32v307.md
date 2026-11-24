@@ -71,7 +71,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PC13 | GPIO out (open drain) | MCU2-NRST | U28 reset |
 | PC14 | GPIO (bit-banged I2C) | CAM-SCL | camera SCCB + left VL53L7, 400 kHz; low-drive pin (open drain, only sinks ~1.5 mA); R246 pull-up. Shared with U28 PB10 |
 | PC15 | GPIO (bit-banged I2C) | CAM-SDA | R247 pull-up. Shared with U28 PB11 |
-| PD0 | GPIO out | CLIFF_LED_EN | |
+| PD0 | GPIO out | CLIFF_LED_EN | pulsed cliff LEDs, ~1.9 A total while on; AC-coupled gate, keep pulses under ~1 ms (since 2026-11-24) |
 | PD1, PD3 | TIM10_CH1/CH2 (remap 2) | WHEEL-MOT-L-IN1, -IN2 | PWM |
 | PD5, PD7 | TIM10_CH3/CH4 | WHEEL-MOT-R-IN1, -IN2 | PWM |
 | PD2 | UART5_RX | LIDAR_TX | |

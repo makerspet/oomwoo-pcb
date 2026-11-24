@@ -10404,7 +10404,7 @@
 		)
 		(uuid "d8975a64-0a25-45f0-848d-54cc54708e16")
 	)
-	(text "U28 CH32L103: link to U13 on USART2 (PA2/PA3),\nalso its bootloader port: U13 sets MCU2-BOOT\n(BOOT0) high and pulses MCU2-NRST to flash it.\nPA13/PA14 (SWDIO/SWCLK) free for a WCH-LinkE.\nUSB_VBUS_SENSE is digital (R188/R189: ~3.4 V)."
+	(text "U28 CH32L103: link to U13 on USART2 (PA2/PA3),\nalso its bootloader port: U13 sets MCU2-BOOT\n(BOOT0) high and pulses MCU2-NRST to flash it.\nPA13/PA14 (SWDIO/SWCLK) free for a WCH-LinkE.\nBoard temperature: the U28 and U13 internal sensors."
 		(exclude_from_sim no)
 		(at 287.02 149.352 0)
 		(effects
@@ -15762,121 +15762,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:NTCG164KF104FT1")
-		(at 298.45 82.55 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1fb065b4-c96a-4b0a-bcc2-51a99744e381")
-		(property "Reference" "T1"
-			(at 296.672 77.724 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "NTCG164KF104FT1"
-			(at 295.148 79.502 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:NTCG164KF104FT1"
-			(at 298.45 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1811131630_TDK-NTCG164KF104FT1_C92042.pdf"
-			(at 298.45 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-40℃~+125℃ 0.8mm 1.6mm 100kΩ 100mW 100uA 4419K 4468K 4485K 4508K ±1% 0603 NTC Thermistors ROHS"
-			(at 298.45 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C92042"
-			(at 298.45 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TDK"
-			(at 298.45 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "NTCG164KF104FT1"
-			(at 298.45 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7250e348-667b-4f1d-9442-6df67ba934ba")
-		)
-		(pin "2"
-			(uuid "475e4311-2629-4891-a571-dd0799995004")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "T1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 101.6 226.06 0)
 		(unit 1)
@@ -17932,83 +17817,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
 					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VPP")
-		(at 298.45 77.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "46671b50-1801-4147-86fb-102cf771a8a8")
-		(property "Reference" "#PWR0935"
-			(at 298.45 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VMCU-3V3"
-			(at 298.45 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 298.45 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 298.45 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC-3V3\""
-			(at 298.45 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2da94fe0-390a-4f1c-a16d-a5b650f33d4a")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR0935")
 					(unit 1)
 				)
 			)
@@ -21870,121 +21678,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:FRC0603J104TS")
-		(at 298.45 92.71 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "915f5392-b89f-4e91-8ce0-363b6302c40d")
-		(property "Reference" "R38"
-			(at 300.99 91.4399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 300.99 93.9799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 290.83 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907088.pdf"
-			(at 288.29 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
-			(at 298.45 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FOJAN(富捷)"
-			(at 285.75 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "FRC0603J104 TS"
-			(at 283.21 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2907088"
-			(at 280.67 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9088efa0-851f-434d-a50f-0bd46dddc225")
-		)
-		(pin "2"
-			(uuid "65cca17b-682b-4f8e-97e3-c2ea0f1d8eb0")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "R38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:CH32V307VCT6-OOMWOO")
 		(at 246.38 88.9 0)
 		(unit 3)
@@ -23598,82 +23291,6 @@
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
 					(reference "Q42")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 298.45 97.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c1d6773f-ccf3-4145-9ea8-714092d8bffa")
-		(property "Reference" "#PWR0671"
-			(at 298.45 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 298.45 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 298.45 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 298.45 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 298.45 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b56b24aa-7d12-460b-9101-ae6956df77ec")
-		)
-		(instances
-			(project "Main"
-				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
-					(reference "#PWR0671")
 					(unit 1)
 				)
 			)
@@ -26150,16 +25767,6 @@
 			)
 		)
 	)
-	(label "NTC"
-		(at 298.45 87.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "64defc68-27af-4927-8d84-47d20dfd6a2b")
-	)
 	(wire
 		(pts
 			(xy 330.2 69.85) (xy 327.66 69.85)
@@ -26314,16 +25921,6 @@
 			(type default)
 		)
 		(uuid "859009c9-c633-4ff2-bbb6-a8ae301f54fe")
-	)
-	(label "NTC"
-		(at 327.66 87.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "995913c3-a426-4294-b943-1ee64ceab0da")
 	)
 	(wire
 		(pts
@@ -26707,27 +26304,6 @@
 			(justify left)
 		)
 		(uuid "d3959adf-a25f-4e4f-9e7b-1a7b567fbcf0")
-	)
-	(wire
-		(pts
-			(xy 386.08 100.33) (xy 388.62 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f57c4e65-ec26-4ba2-a763-f0c0a143f9a3")
-	)
-	(hierarchical_label "USB_VBUS_SENSE"
-		(shape input)
-		(at 388.62 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2b621dbd-275b-4bd2-9896-3719057a7928")
 	)
 	(wire
 		(pts
@@ -28001,5 +27577,20 @@
 				)
 			)
 		)
+	)
+	(hierarchical_label "USB_VBUS_SENSE"
+		(shape input)
+		(at 327.66 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "21634282-3cd7-4dcf-820e-511f72648402")
+	)
+	(no_connect
+		(at 386.08 100.33)
+		(uuid "e344b8bb-e54e-4106-96f4-c648ea80d7f1")
 	)
 )

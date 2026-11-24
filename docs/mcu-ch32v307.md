@@ -111,7 +111,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 
 ## U28 CH32L103C8T6 pin map (LQFP-48)
 
-37 GPIO; 29 used, plus the dedicated NRST and BOOT0. 3.3 V part (1.8–3.6 V). The ADC inputs are channels 0–9 (PA0–PA7, PB0, PB1); pins marked FT in the datasheet are 5 V tolerant, the ADC pins are not. USART2's pins (PA2/PA3) are ADC channels too, so with the link there, 8 ADC channels are left for 9 analog signals: USB_VBUS_SENSE became a digital input (R188/R189 swapped to 47k/100k, ~3.4 V at 5 V on a 5 V-tolerant pin).
+37 GPIO; 28 used, plus the dedicated NRST and BOOT0. 3.3 V part (1.8–3.6 V). The ADC inputs are channels 0–9 (PA0–PA7, PB0, PB1); pins marked FT in the datasheet are 5 V tolerant, the ADC pins are not. USART2's pins (PA2/PA3) are ADC channels too, so with the link there, 8 ADC channels are left. The board NTC (T1/R38) was dropped for that (2026-11-23): board temperature comes from the U28 and U13 internal sensors, and USB_VBUS_SENSE stays analog on PA7 (R188/R189 100k/47k, ~1.6 V at 5 V) to help diagnose the phone link and dock-mode phone charging.
 
 | Pin | Port | Function | Net | Notes |
 |---|---|---|---|---|
@@ -122,7 +122,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 14 | PA4 | ADC_IN4 | BAT_SENSE | |
 | 15 | PA5 | ADC_IN5 | DC_IN_SENSE | ≥1 kHz, catches the dock's signature probe |
 | 16 | PA6 | ADC_IN6 | BAT_NTC | battery pulled while docked: the pin sees ~4.5 V through R233 (10k), ~0.1 mA into the clamp diode; check the injection limit on the dev board |
-| 17 | PA7 | ADC_IN7 | NTC | board NTC (T1/R38) |
+| 17 | PA7 | ADC_IN7 | USB_VBUS_SENSE | 100k/47k divider; whether the phone supplies VBUS, and the robot 5 V sag while charging it |
 | 18 | PB0 | ADC_IN8 | BAT_ID | |
 | 19 | PB1 | ADC_IN9 | LDR | wake-up sensor |
 | 29 | PA8 | TIM1_CH1 | LED-HOME | PWM possible |
@@ -134,7 +134,6 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 20 | PB2 | BOOT1 | BOOT1 | R249 (100k) pull-down: BOOT0 = 1 with BOOT1 = 0 starts the bootloader |
 | 21 | PB10 | I2C2_SCL | CAM-SCL | left VL53L7 + camera bus, in parallel with U13 PC14; input (hi-Z) when unused |
 | 22 | PB11 | I2C2_SDA | CAM-SDA | in parallel with U13 PC15 |
-| 25 | PB12 | GPIO in (FT) | USB_VBUS_SENSE | digital, see above |
 | 26 | PB13 | GPIO out | STM-PWR-CTRL | power latch; R172 holds the latch while U28 boots |
 | 27 | PB14 | GPIO out | SIDE-PROXI-CE-R | VL53L0X XSHUT |
 | 28 | PB15 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
@@ -150,7 +149,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
 | 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |
 
-Free: PA13/PA14 (SWDIO/SWCLK: leave them for a WCH-LinkE on the dev board), PC13–PC15 (weak, 2 MHz, can't source current), PD0/PD1 (OSC_IN/OUT, no crystal).
+Free: PB12, PA13/PA14 (SWDIO/SWCLK: leave them for a WCH-LinkE on the dev board), PC13–PC15 (weak, 2 MHz, can't source current), PD0/PD1 (OSC_IN/OUT, no crystal).
 
 ## I2C buses (since 2026-11-23)
 
@@ -240,7 +239,7 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 | + carpet amplifier and detector (passives, 1N4148) | +0.01 |
 | + J12, 2x ME6211, passives | +0.14 |
 | − R196 (47k), the right LPn pull-up (the front boards now carry their own) | ≈ 0 |
-| + R249 (100k), C196–C198 (100 nF) for the CH32L103 | ≈ +0.01 |
+| + R249 (100k), C196–C198 (100 nF) for the CH32L103; − board NTC T1 and R38 | ≈ 0 |
 | **Net** | **≈ −4.7 per board** |
 
 New BOM lines: CH32V307, CH32L103, the 8 MHz crystal, the FPC socket and two ME6211s. Removed: STM32G473 and the 32.768 kHz crystal. JLC had 1,194 CH32L103C8T6 on 2026-11-23; check stock before a 500–1000-piece run.

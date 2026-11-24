@@ -4068,7 +4068,7 @@
 		)
 	)
 	(rectangle
-		(start 19.05 134.62)
+		(start 19.05 133.35)
 		(end 151.13 191.77)
 		(stroke
 			(width 0)
@@ -4127,14 +4127,14 @@
 		)
 		(uuid "2e48c1f9-9ef5-442e-9a2d-e3b868dfade2")
 	)
-	(text "USB-C (phone): phone is the USB host. CC1/CC2 go to the MCU UCPD (PB6/PB4): Rd by default."
+	(text "USB-C (phone): phone is the USB host. CC1/CC2 go to the MCU UCPD (PB6/PB4): Rd by default.\nQ42/Q43 switch 4.7k pull-downs onto CC1/CC2. They are on whenever VMCU-3V3 is up."
 		(exclude_from_sim no)
-		(at 158.75 151.892 0)
+		(at 158.496 148.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left top)
 		)
 		(uuid "41c3bc55-4606-4ddf-a7d6-287a90767fc0")
 	)
@@ -4150,7 +4150,7 @@
 		)
 		(uuid "5fd58ece-713b-4668-91e0-f4f9904cdedd")
 	)
-	(text "Bring-up power: a PC USB-A port (USB-A to USB-C cable) runs the STM32 with the battery out,\nfor the first flash (J1 BOOT0 jumper + USB DFU) and for flashing the dock over SWIO. 100 mA max: keep VSENS-3V3 off.\nBattery out: R231 pulls the Q39 gate to GND; U27 reaches VMCU-3V3 through the Q39 body diode, then Q39 turns on (3.3 V).\nBattery in: R230/R231 hold the gate at P+/2 (6-8.4 V, Vgs <= +8.4 V), so Q39 is off and U27 is isolated:\nno load sharing with U21, and a phone on USB-C can't keep the MCU alive. ~8 uA from the battery.\nP+/C+14V4, not VBAT-14V4: with the battery out, VBAT-14V4 is back-fed to ~2.5 V through U21."
+	(text "Bring-up power: a PC USB-A port (USB-A to USB-C cable) runs the MCUs with the battery out,\nfor the first flash (J1 BOOT0 jumper + USB DFU) and for flashing the dock over SWIO. 100 mA max: keep VSENS-3V3 off.\nBattery out: R231 pulls the Q39 gate to GND; U27 reaches VMCU-3V3 through the Q39 body diode, then Q39 turns on (3.3 V).\nBattery in: R230/R231 hold the gate at P+/2 (6-8.4 V, Vgs <= +8.4 V), so Q39 is off and U27 is isolated:\nno load sharing with U21, and a phone on USB-C can't keep the MCU alive. ~8 uA from the battery.\nP+/C+14V4, not VBAT-14V4: with the battery out, VBAT-14V4 is back-fed to ~2.5 V through U21."
 		(exclude_from_sim no)
 		(at 22.86 173.99 0)
 		(effects

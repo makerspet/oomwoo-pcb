@@ -516,7 +516,7 @@ Put the Linux console to a UART (not USB). Then the single USB port can serve th
 Design (current schematic)
 - CM console: 0.1" 1x5 header (CM_CONSOLE1), TTL-234X-3V3 cable compatible. (A 3-pin JST-SH like the Pi 5 debug connector was considered and not used.)
   - The STM32 link uses a separate UART; the CM4 has UART2–5 available through device-tree overlays.
-- STM32 debug: 0.1" 1x6 UART header (J4, STM32_DEBUG1 until 2026-11-13; TTL-234X-3V3 cable pinout: 1 GND, 4 cable TXD → STM32-RX, 5 cable RXD ← STM32-TX; 2 CTS#, 3 VCC, 6 RTS# not connected) and a 1.27 mm 2x7 STDC14 header (JTAG1) for an STLINK-V3MINIE. STDC14 pin 3 (T_VCC) is a sense input; pin 11 (GNDDetect) is not connected.
+- STM32 debug: 0.1" 1x6 UART header (J4, STM32_DEBUG1 until 2026-11-13; TTL-234X-3V3 cable pinout: 1 GND, 4 cable TXD → MCU-RX, 5 cable RXD ← MCU-TX; 2 CTS#, 3 VCC, 6 RTS# not connected) and a 1.27 mm 2x7 STDC14 header (JTAG1) for an STLINK-V3MINIE. STDC14 pin 3 (T_VCC) is a sense input; pin 11 (GNDDetect) is not connected.
 - The CM reflashes the STM32 itself (STM32 UART bootloader via BOOT0/NRST from CM GPIOs, or SWD over CM GPIOs), so normal firmware updates need no probe.
 - One internal USB header, for example a 4-pin JST-GH, wired to the CM4's USB 2.0 pins.
   - Normal use: the mic board plugs in here. Or makers can plug in a USB hub, a USB stick, or a USB-audio or ReSpeaker-style array; it's their choice.
@@ -570,7 +570,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### Power control (v1)
 
-- Power-on: the button pulls the Q13 (AO4407C) gate low through C14, Q13 feeds VMCU-3V3-POWER-EN and the U21 3.3 V buck turns on the MCU rail. Once the rail is up, R172 (10k from PWR-LATCH to VMCU-3V3) turns Q23 on, and Q23 holds Q13 on: the latch holds itself in hardware, so a blank or crashed MCU stays powered (useful for the first flash). Firmware only turns power off, by driving STM-PWR-CTRL (PA15 → R190 1k → PWR-LATCH) low, which puts the Q23 gate at ~0.3 V. On a blank STM32G4, PA15 comes out of reset as JTDI with its internal pull-up, so it doesn't fight R172. Power-on starts only the MCU rail; firmware enables the other rails.
+- Power-on: the button pulls the Q13 (AO4407C) gate low through C14, Q13 feeds VMCU-3V3-POWER-EN and the U21 3.3 V buck turns on the MCU rail. Once the rail is up, R172 (10k from PWR-LATCH to VMCU-3V3) turns Q23 on, and Q23 holds Q13 on: the latch holds itself in hardware, so a blank or crashed MCU stays powered (useful for the first flash). Firmware only turns power off, by driving PWR-HOLD (PA15 → R190 1k → PWR-LATCH) low, which puts the Q23 gate at ~0.3 V. On a blank STM32G4, PA15 comes out of reset as JTDI with its internal pull-up, so it doesn't fight R172. Power-on starts only the MCU rail; firmware enables the other rails.
   - C2 (10 µF, PWR-LATCH to GND; 10k x 10 µF = 100 ms, since 2026-11-13) stops a firmware "off" from turning itself back on. Without it, the MCU releases PA15 when the falling rail reaches its ~1.7 V reset level, while R172 still pulls the Q23 gate up to that falling rail (above the AO3400's 0.65-1.45 V threshold), which could turn Q13 back on. With C2, PA15 holds the gate at 0 V until reset, and R172 then charges C2 too slowly for the gate to reach the threshold before the rail is gone (~50 ms below 0.65 V). Turn-on still works: firmware charges C2 through R190 in ms; a blank MCU relies on R172 alone, ~60 ms to 1.45 V, well inside the ~0.25 s a button press holds Q13 on (C14 + C22 through R171). Q30 (the off timer) discharges C2 directly
   - to check at bring-up: scope VMCU-3V3 and PWR-SW-G during a firmware off (the rail must not come back) and a blank-MCU power-on (the rail must stay on); tune C2 if needed
 - Off: firmware turns everything off after a 3 s press (all rails first, then PA15 low). 3 s while holding Home = factory reset, and the robot stays on.
@@ -688,7 +688,7 @@ Power rails (current schematic):
 
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
-| VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
+| VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, PWR-HOLD) |
 | VMCU-3V3 | RY9430 buck (U21); U27 (HT7533-1) + Q39 from VBUS_5V with the battery out (bring-up) | MCUs (U13 CH32V307, U28 CH32L103) | VMCU-3V3-POWER-EN |
 | VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic, camera (DOVDD; AVDD/DVDD via U29/U30) | U13 (~VSENS_3V3_EN, low = on) |
 | VSENS-5V-USB | RY9430 buck (U22, 3 A max) | LiDAR, cliff and bumper LEDs, VUSONIC-14V4 boost, spare header J1 (pin 12), USB-C VBUS to the phone | STM32 (VSENS_5V_USB_EN) |

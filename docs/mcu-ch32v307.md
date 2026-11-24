@@ -41,8 +41,8 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PA10 | DVP_D1 | CAM-Y3 | |
 | PA11 | EXTI11 | WHEEL-MOT-L-ENCODE | FT |
 | PA12 | EXTI12 | WHEEL-MOT-R-ENCODE | FT |
-| PA13 | SWDIO | STM32-SWDIO | 2-wire debug (WCH-LinkE), J4 pin 7 |
-| PA14 | SWCLK | STM32-SWCLK | J4 pin 8 |
+| PA13 | SWDIO | MCU-SWDIO | 2-wire debug (WCH-LinkE), J4 pin 7 |
+| PA14 | SWCLK | MCU-SWCLK | J4 pin 8 |
 | PA15 | GPIO | (none) | spare, not connected (was on JTAG1 until 2026-11-23) |
 | PB0 | ADC_IN8 | MAIN-BRUSH-ADC | |
 | PB1 | ADC_IN9 | SIDE-BRUSH-ADC | |
@@ -94,8 +94,8 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PE9 | TIM1_CH1 (remap 3) | BUMP_L_LED_EN | 100–250 kHz PWM; TIM1_CC3/CC4 (no pin output) trigger the ADC |
 | PE10 | GPIO in | WHEEL-MOT-L-DROP | polled |
 | PE11 | TIM1_CH2 (remap 3) | BUMP_R_LED_EN | |
-| PE12 | UART7_TX (remap) | STM32-TX | debug console (J4) |
-| PE13 | UART7_RX (remap) | STM32-RX | |
+| PE12 | UART7_TX (remap) | MCU-TX | debug console (J4) |
+| PE13 | UART7_RX (remap) | MCU-RX | |
 | PE14 | UART8_TX (remap) | MCU2-RX | to U28 PA3 (USART2 RX) |
 | PE15 | UART8_RX (remap) | MCU2-TX | from U28 PA2 (USART2 TX) |
 | BOOT0 | pin 94 | BOOT0 | J1 pin 2, R22 pull-down |
@@ -134,7 +134,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 20 | PB2 | BOOT1 | BOOT1 | R249 (100k) pull-down: BOOT0 = 1 with BOOT1 = 0 starts the bootloader |
 | 21 | PB10 | I2C2_SCL | CAM-SCL | left VL53L7 + camera bus, in parallel with U13 PC14; input (hi-Z) when unused |
 | 22 | PB11 | I2C2_SDA | CAM-SDA | in parallel with U13 PC15 |
-| 26 | PB13 | GPIO out | STM-PWR-CTRL | power latch; R172 holds the latch while U28 boots |
+| 26 | PB13 | GPIO out | PWR-HOLD | power latch; R172 holds the latch while U28 boots |
 | 27 | PB14 | GPIO out | SIDE-PROXI-CE-R | VL53L0X XSHUT |
 | 28 | PB15 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
 | 2 | PC13 | GPIO out | CHG-I-HI | high = ~2.2 A charging (Q45 -> Q44 puts R250 in parallel with R106); gate drive only, R252 (1M) pull-down (since 2026-11-24) |

@@ -10124,7 +10124,7 @@
 		)
 		(uuid "684d6a7d-c5ed-4b75-b45d-a544822f7292")
 	)
-	(text "J4: UART console, reached from\nthe top under a cover\n\nJ4 1-6: USB-serial cable (TTL-234X-3V3):\n1 GND, 4 TXD -> STM32-RX, 5 RXD <- STM32-TX;\n2 CTS#, 3 VCC, 6 RTS# not connected.\nJ4 7 SWDIO, 8 SWCLK, 9 NRST (+ GND on 1):\nWCH-LinkE for U13.\n\nAll debug, spare headers are VERTICAL."
+	(text "J4: UART console, reached from\nthe top under a cover\n\nJ4 1-6: USB-serial cable (TTL-234X-3V3):\n1 GND, 4 TXD -> MCU-RX, 5 RXD <- MCU-TX;\n2 CTS#, 3 VCC, 6 RTS# not connected.\nJ4 7 SWDIO, 8 SWCLK, 9 NRST (+ GND on 1):\nWCH-LinkE for U13.\n\nAll debug, spare headers are VERTICAL."
 		(exclude_from_sim no)
 		(at 169.926 154.432 0)
 		(effects
@@ -10146,14 +10146,14 @@
 		)
 		(uuid "b714eb57-1750-4647-858e-52b8124022c9")
 	)
-	(text "Carpet echo: OPA3 non-inverting AC amplifier (out PE7 = OPA3_OUT1, in- PB2, in+ PB13),\nthen an envelope detector into PA1 (ADC). Gain 11, set on the bench."
+	(text "Carpet echo: OPA3 non-inverting AC amplifier (out PE7 = OPA3_OUT1, in- PB2, in+ PB13),\nthen an envelope detector into PA1 (ADC). Gain 11, set on the bench.\nD48 rectifier with a 56 µs hold feeds the ADC, so the ADC can run slowly.\nA 1M pull-down on PB2 keeps the bootloader working, since that pin doubles as a boot pin."
 		(exclude_from_sim no)
-		(at 125.73 127.508 0)
+		(at 123.952 121.666 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left top)
 		)
 		(uuid "d8975a64-0a25-45f0-848d-54cc54708e16")
 	)
@@ -12818,7 +12818,7 @@
 		)
 		(uuid "2409355d-52bf-4d50-b23b-1c49840ecf1c")
 	)
-	(label "STM32-SWDIO"
+	(label "MCU-SWDIO"
 		(at 132.08 171.45 0)
 		(effects
 			(font
@@ -12828,7 +12828,7 @@
 		)
 		(uuid "262ab2f4-2f38-4cde-9b3f-d5a2b5c9ef90")
 	)
-	(label "STM32-RX"
+	(label "MCU-RX"
 		(at 168.91 64.77 0)
 		(effects
 			(font
@@ -12988,7 +12988,7 @@
 		)
 		(uuid "7283fe9c-2bfd-4e01-8aa6-d3088b33ff98")
 	)
-	(label "STM32-SWCLK"
+	(label "MCU-SWCLK"
 		(at 132.08 173.99 0)
 		(effects
 			(font
@@ -13038,7 +13038,7 @@
 		)
 		(uuid "7d6ceb8c-a428-4055-9581-61697912519c")
 	)
-	(label "STM32-RX"
+	(label "MCU-RX"
 		(at 132.08 163.83 0)
 		(effects
 			(font
@@ -13048,7 +13048,7 @@
 		)
 		(uuid "830f38eb-ed8a-40a2-bdc9-51e66943a506")
 	)
-	(label "STM32-TX"
+	(label "MCU-TX"
 		(at 132.08 166.37 0)
 		(effects
 			(font
@@ -13098,7 +13098,7 @@
 		)
 		(uuid "95b0a36a-2e00-47f0-9378-b87eaacfed34")
 	)
-	(label "STM32-TX"
+	(label "MCU-TX"
 		(at 168.91 62.23 0)
 		(effects
 			(font
@@ -13228,7 +13228,7 @@
 		)
 		(uuid "bbcba2f3-69f5-4cf7-a42f-39545d2812aa")
 	)
-	(label "STM32-SWCLK"
+	(label "MCU-SWCLK"
 		(at 39.37 62.23 0)
 		(effects
 			(font
@@ -13348,7 +13348,7 @@
 		)
 		(uuid "e3983cb1-0ddf-45df-a462-ca384f99e980")
 	)
-	(label "STM32-SWDIO"
+	(label "MCU-SWDIO"
 		(at 39.37 59.69 0)
 		(effects
 			(font
@@ -13504,6 +13504,17 @@
 			(justify left)
 		)
 		(uuid "0dafbfe5-6a66-4d25-88c8-91d38f7c4cd9")
+	)
+	(hierarchical_label "CHG-I-HI"
+		(shape output)
+		(at 318.77 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1797cf6f-99ab-47ff-ab0a-74e10be0b6da")
 	)
 	(hierarchical_label "WHEEL-MOT-L-IN1"
 		(shape output)
@@ -14055,7 +14066,7 @@
 		)
 		(uuid "bc8196f9-78fa-460f-b2d7-842ede13deb0")
 	)
-	(hierarchical_label "STM-PWR-CTRL"
+	(hierarchical_label "PWR-HOLD"
 		(shape output)
 		(at 318.77 62.23 0)
 		(effects
@@ -24479,7 +24490,7 @@
 				)
 			)
 		)
-		(property "Description" "Rd on by default, the same dead-battery behaviour as the STM32 UCPD"
+		(property "Description" "Rd on by default: the usual USB-C dead-battery behaviour"
 			(at 327.66 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -24749,16 +24760,5 @@
 				)
 			)
 		)
-	)
-	(hierarchical_label "CHG-I-HI"
-		(shape output)
-		(at 318.77 72.39 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1797cf6f-99ab-47ff-ab0a-74e10be0b6da")
 	)
 )

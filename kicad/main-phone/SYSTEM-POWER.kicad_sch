@@ -7308,7 +7308,7 @@
 		)
 		(uuid "fbb1d7fe-0e6c-4149-98d9-73391c935980")
 	)
-	(text_box "Power off -> user pushes POWER-BTN -> Q13 enables MCU 3.3V rail -> MCU leaves STM-PWR-CTRL floating -> MCU enables other power rails as needed\nPower on -> user pushes POWER-BTN -> MCU detects PWR-BTN-SENSE press -> firmware acts as needed, including turning off all power rails including MCU 3.3V itself by driving STM-PWR-CTRL low\nPower on -> MCU hung -> user pushes POWER-BTN for ~5 seconds -> Q13 shuts off MCU 3.3V rail -> all other power rails shut off\nautomatically when MCU GPIOs float"
+	(text_box "Power off -> user pushes POWER-BTN -> Q13 enables MCU 3.3V rail -> MCU leaves PWR-HOLD floating -> MCU enables other power rails as needed\nPower on -> user pushes POWER-BTN -> MCU detects PWR-BTN-SENSE press -> firmware acts as needed, including turning off all power rails including MCU 3.3V itself by driving PWR-HOLD low\nPower on -> MCU hung -> user pushes POWER-BTN for ~5 seconds -> Q13 shuts off MCU 3.3V rail -> all other power rails shut off\nautomatically when MCU GPIOs float"
 		(exclude_from_sim no)
 		(at 87.63 150.8654 0)
 		(size 64.77 24.3946)
@@ -10365,7 +10365,7 @@
 		)
 		(uuid "c4f43587-6d93-4ffd-8b11-accdcd435477")
 	)
-	(hierarchical_label "STM-PWR-CTRL"
+	(hierarchical_label "PWR-HOLD"
 		(shape input)
 		(at 36.83 166.37 180)
 		(effects

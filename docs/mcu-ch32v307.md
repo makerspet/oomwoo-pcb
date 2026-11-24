@@ -111,7 +111,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 
 ## U28 CH32L103C8T6 pin map (LQFP-48)
 
-37 GPIO; 28 used, plus the dedicated NRST and BOOT0. 3.3 V part (1.8–3.6 V). The ADC inputs are channels 0–9 (PA0–PA7, PB0, PB1); pins marked FT in the datasheet are 5 V tolerant, the ADC pins are not. USART2's pins (PA2/PA3) are ADC channels too, so with the link there, 8 ADC channels are left. The board NTC (T1/R38) was dropped for that (2026-11-23): board temperature comes from the U28 and U13 internal sensors, and USB_VBUS_SENSE stays analog on PA7 (R188/R189 100k/47k, ~1.6 V at 5 V) to help diagnose the phone link and dock-mode phone charging.
+37 GPIO; 33 used (5 of them spares on J1), plus the dedicated NRST and BOOT0. 3.3 V part (1.8–3.6 V). The ADC inputs are channels 0–9 (PA0–PA7, PB0, PB1); pins marked FT in the datasheet are 5 V tolerant, the ADC pins are not. USART2's pins (PA2/PA3) are ADC channels too, so with the link there, 8 ADC channels are left. The board NTC (T1/R38) was dropped for that (2026-11-23): board temperature comes from the U28 and U13 internal sensors, and USB_VBUS_SENSE stays analog on PA7 (R188/R189 100k/47k, ~1.6 V at 5 V) to help diagnose the phone link and dock-mode phone charging.
 
 | Pin | Port | Function | Net | Notes |
 |---|---|---|---|---|
@@ -143,13 +143,18 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 42 | PB6 | USB PD CC1 | USB_CC1 | |
 | 43 | PB7 | USB PD CC2 | USB_CC2 | |
 | 45 | PB8 | TIM4_CH3 | TORCH | PWM to both front boards' torch LEDs (AO3400 gate, 100k pull-down there) |
+| 25 | PB12 | GPIO | MCU2-PB12 | spare, J1 pin 7 (5 V tolerant) |
+| 5 | PD0 | GPIO | MCU2-PD0 | spare, J1 pin 8 (OSC_IN after reset: remap to PD0 in firmware) |
+| 6 | PD1 | GPIO | MCU2-PD1 | spare, J1 pin 9 (OSC_OUT after reset) |
+| 34 | PA13 | SWDIO | MCU2-SWDIO | J1 pin 10: WCH-LinkE debug, or a spare GPIO once SDI is disabled |
+| 37 | PA14 | SWCLK | MCU2-SWCLK | J1 pin 11 |
 | 46 | PB9 | GPIO out | CAM-RESET | camera RESETB; R244 (10k) pull-down holds the camera in reset until U28 releases it |
 | 7 | NRST | reset | MCU2-NRST | from U13 PC13; R234 (10k) + C185 |
 | 44 | BOOT0 | boot | MCU2-BOOT | from U13 PD4; R235 (100k) pull-down |
 | 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
 | 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |
 
-Free: PB12, PA13/PA14 (SWDIO/SWCLK: leave them for a WCH-LinkE on the dev board), PC13–PC15 (weak, 2 MHz, can't source current), PD0/PD1 (OSC_IN/OUT, no crystal).
+Free: PC13–PC15 (weak, 2 MHz, can't source current).
 
 ## I2C buses (since 2026-11-23)
 
@@ -179,7 +184,7 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 **Rd:**
 - The LQFP-48 CH32L103 has **no built-in Rd** (only its QFN versions do), so the switched Rd stays: R236/R237 (4.7k; Type-C allows 5.1k ±10 %) go from CC1/CC2 to GND through Q42/Q43 (AO3400). Both gates are on CC-RD-EN, with R238 (100k) pulling up to VMCU-3V3.
 - Rd is there whenever VMCU-3V3 is up (dead-battery behaviour). Firmware pulls CC-RD-EN low only while sourcing, with Rp on.
-- R221 (the old 100k pull-up on BUMP_R_LED_EN for the STM32's UCPD dead-battery pin) isn't needed any more; it is harmless and still fitted.
+- R221 (the old 100k pull-up on BUMP_R_LED_EN for the STM32's UCPD dead-battery pin) was removed on 2026-11-23. Q36's gate floats while U13 is in reset, but the LED runs from VSENS-5V-USB, which is off whenever the MCU pins are tristated (boot, programming); firmware configures all GPIOs before turning the sensor rails on.
 
 ## Camera (DVP) connector
 

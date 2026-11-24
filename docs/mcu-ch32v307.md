@@ -1,11 +1,12 @@
-# main-phone MCU: CH32V307 + CH32X035
+# main-phone MCU: CH32V307 + CH32L103
 
-Status: in the schematic since 2026-11-21 (sheet `MCU`, file `kicad/main-phone/MCU.kicad_sch`, was `STM32G473.kicad_sch`). Not yet bench-tested; dev boards are on order.
+Status: in the schematic since 2026-11-21 (sheet `MCU`, file `kicad/main-phone/MCU.kicad_sch`, was `STM32G473.kicad_sch`). Not yet bench-tested; dev boards are on order. U28 was a CH32X035C8T6 until 2026-11-23, then a CH32L103C8T6 (see below).
 
 ## Why
 
 - The STM32G473VCT6 (C730121) went to $7.39 at JLC and LCSC, with 20 in stock.
-- A WCH CH32V307VCT6 (C2943979, LQFP-100, $2.18, 5k+ in stock) plus a CH32X035C8T6 (C29779902, LQFP-48, $0.38) costs $2.56. Both are leaded packages.
+- A WCH CH32V307VCT6 (C2943979, LQFP-100, $2.18, 5k+ in stock) plus a CH32L103C8T6 (C22398291, LQFP-48, $0.41, 1.2k in stock) costs $2.59. Both are leaded packages.
+- U28 was first a CH32X035C8T6 (C29779902, $0.38). It was dropped on 2026-11-23: on lots whose 5th-from-last batch digit is 0, its I2C and ADC channels 3, 7, 11 and 15 don't work, and the dead channels return a neighbour's reading instead of failing (datasheet notes; [community errata](https://github.com/ch32-riscv-ug/CH32X035)). It also has no plain open-drain GPIO output. The CH32L103 has the same PD PHY without those limits.
 - The CH32V307 also has a parallel camera port (DVP) and high-speed USB with a built-in PHY, so the robot can stream a camera to the phone without a bridge chip or USB hub.
 - The firmware isn't written yet, so there is nothing to port.
 
@@ -15,9 +16,9 @@ Status: in the schematic since 2026-11-21 (sheet `MCU`, file `kicad/main-phone/M
 - USB to the phone is high speed (480 Mbit/s) on PB6/PB7: a composite device with CDC (robot link) and UVC (camera). No USB hub.
 - 144 MHz RISC-V with FPU; 256 KB flash / 64 KB RAM, or 192 KB / 128 KB through the option bytes.
 
-**U28, CH32X035C8T6, the power/UI companion:** USB-C PD (sink by default, power-role swap to source to charge the phone), the slow analog inputs, charger status, buttons and button LEDs, the power latch, phone-charging enable, the camera reset, the dust-bin Hall, the side ToF enable, the torch PWM, and possibly the left ToF's I2C (see I2C buses).
-- It talks to U13 over a UART at 1 Mbit/s suggested, on its PC18/PC19 (USART3 remap 1). Those are also its SDI programming pins, so U13 can program it (see Flashing).
-- U13 drives its reset (X035-NRST) and its boot pin (X035-BOOT).
+**U28, CH32L103C8T6, the power/UI companion:** USB-C (see USB-C and PD: baseline and bonus), the slow analog inputs, charger status, buttons and button LEDs, the power latch, phone-charging enable, the camera reset, the dust-bin Hall, the side ToF enable, the torch PWM, and optionally the left ToF's I2C (see I2C buses).
+- It talks to U13 over USART2 (PA2/PA3) at 1 Mbit/s suggested. USART2 is also its bootloader port, so U13 can program it (see Flashing).
+- U13 drives its reset (MCU2-NRST) and its BOOT0 (MCU2-BOOT).
 
 **Memory:** flash need is ~75–135 KB, since the phone uploads the ToF sensor firmware at boot, plus 8–16 KB for an update loader. RAM need is ~20–40 KB plus camera line buffers. Both fit.
 
@@ -67,14 +68,14 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PC10 | GPIO out | CAM-PWDN | R245 (10k) keeps the camera on by default |
 | PC11 | DVP_D4 | CAM-Y6 | |
 | PC12 | UART5_TX | LIDAR_RX | |
-| PC13 | GPIO out (open drain) | X035-NRST | |
-| PC14 | GPIO (bit-banged I2C) | CAM-SCL | camera SCCB + left VL53L7, 400 kHz; low-drive pin (open drain, only sinks ~1.5 mA); R246 pull-up. Shared with U28 PA13 |
-| PC15 | GPIO (bit-banged I2C) | CAM-SDA | R247 pull-up. Shared with U28 PA14 |
+| PC13 | GPIO out (open drain) | MCU2-NRST | U28 reset |
+| PC14 | GPIO (bit-banged I2C) | CAM-SCL | camera SCCB + left VL53L7, 400 kHz; low-drive pin (open drain, only sinks ~1.5 mA); R246 pull-up. Shared with U28 PB10 |
+| PC15 | GPIO (bit-banged I2C) | CAM-SDA | R247 pull-up. Shared with U28 PB11 |
 | PD0 | GPIO out | CLIFF_LED_EN | |
 | PD1, PD3 | TIM10_CH1/CH2 (remap 2) | WHEEL-MOT-L-IN1, -IN2 | PWM |
 | PD5, PD7 | TIM10_CH3/CH4 | WHEEL-MOT-R-IN1, -IN2 | PWM |
 | PD2 | UART5_RX | LIDAR_TX | |
-| PD4 | GPIO out | X035-BOOT | R235 (100k) pull-down |
+| PD4 | GPIO out | MCU2-BOOT | U28 BOOT0; R235 (100k) pull-down |
 | PD6 | GPIO in | ~INT-SENSORS | polled |
 | PD8 | EXTI8 | REAR-IR-R | |
 | PD9 | TIM9_CH1 (remap 2) | MAIN-FAN-PWM | |
@@ -95,8 +96,8 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PE11 | TIM1_CH2 (remap 3) | BUMP_R_LED_EN | |
 | PE12 | UART7_TX (remap) | STM32-TX | debug console (J4, JTAG1) |
 | PE13 | UART7_RX (remap) | STM32-RX | |
-| PE14 | UART8_TX (remap) | X035-RX | to U28 PC19 (RX3 / SDI DCK) |
-| PE15 | UART8_RX (remap) | X035-TX | from U28 PC18 (TX3 / SDI DIO) |
+| PE14 | UART8_TX (remap) | MCU2-RX | to U28 PA3 (USART2 RX) |
+| PE15 | UART8_RX (remap) | MCU2-TX | from U28 PA2 (USART2 TX) |
 | BOOT0 | pin 94 | BOOT0 | J1 pin 2, R22 pull-down |
 | OSC_IN/OUT | pins 12/13 | | X3, 8 MHz, with C42/C39 (18 pF) |
 | NRST | pin 14 | ~RST | R21, C37 |
@@ -108,48 +109,48 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 
 **Timer remaps:** some remaps also route a timer's unused channels, ETR or break input onto pins used for something else, e.g. TIM10 BKIN onto PE2 and TIM9 CH3/CH4 onto PD13/PD15. Firmware must leave those outputs, the break inputs and ETR disabled.
 
-## U28 CH32X035C8T6 pin map (LQFP-48)
+## U28 CH32L103C8T6 pin map (LQFP-48)
 
-46 GPIO; 32 used. The ADC inputs are A0–A9 only (PA0–PA7, PB0, PB1). **ADC channels 3, 7, 11 and 15 and the I2C peripheral don't work on lots whose 5th-from-last batch digit is 0** (datasheet notes). On this package that hits A3 (PA3, left free), A7 (PA7, the board NTC) and the I2C on PA13/PA14, which has a bit-banged fallback (see I2C buses). Check the batch code on the reels.
+37 GPIO; 29 used, plus the dedicated NRST and BOOT0. 3.3 V part (1.8–3.6 V). The ADC inputs are channels 0–9 (PA0–PA7, PB0, PB1); pins marked FT in the datasheet are 5 V tolerant, the ADC pins are not. USART2's pins (PA2/PA3) are ADC channels too, so with the link there, 8 ADC channels are left for 9 analog signals: USB_VBUS_SENSE became a digital input (R188/R189 swapped to 47k/100k, ~3.4 V at 5 V on a 5 V-tolerant pin).
 
 | Pin | Port | Function | Net | Notes |
 |---|---|---|---|---|
-| 10 | PA0 | ADC A0 | USB_VBUS_SENSE | 100k/47k divider |
-| 11 | PA1 | ADC A1 | HALL-FLOOR-L | ≥200 Hz sampling |
-| 12 | PA2 | ADC A2 | HALL-FLOOR-R | |
-| 14 | PA4 | ADC A4 | BAT_SENSE | |
-| 15 | PA5 | ADC A5 | DC_IN_SENSE | ≥1 kHz, catches the dock's signature probe |
-| 16 | PA6 | ADC A6 | BAT_NTC | battery pulled while docked: the pin sees ~4.5 V through R233 (10k), ~0.1 mA into the clamp diodes, inside the ±5 mA limit |
-| 17 | PA7 | ADC A7 | NTC | board NTC (T1/R38); dead on the bad lot (the only ADC signal affected) |
-| 20 | PB0 | ADC A8 | BAT_ID | |
-| 21 | PB1 | ADC A9 | LDR | wake-up sensor |
-| 40 | PA8 | GPIO out | LED-HOME | |
-| 41 | PA9 | GPIO out | LED-PWR | |
-| 42 | PA10 | GPIO in | ~CLEAN-BTN | internal pull-up |
-| 43 | PA11 | GPIO in | ~HOME-BTN | internal pull-up |
-| 44 | PA12 | GPIO in | PWR-BTN-SENSE | |
-| 45 | PA13 | I2C SCL (remap 1) | CAM-SCL | left VL53L7 + camera bus, in parallel with U13 PC14; input (hi-Z) when unused |
-| 46 | PA14 | I2C SDA (remap 1) | CAM-SDA | in parallel with U13 PC15 |
-| 1 | PA15 | GPIO in | HALL-BIN | internal pull-up |
-| 2 | PA16 | GPIO out | STM-PWR-CTRL | power latch (on PA13 until 2026-11-23); R172 holds the latch while U28 boots |
-| 4 | PA18 | GPIO out | SIDE-PROXI-CE-R | VL53L0X XSHUT |
-| 7 | PA21/RST | NRST | X035-NRST | from U13 PC13; R234 (10k) + C185. Enable the reset function in the option bytes |
-| 23 | PB3 | GPIO in | ~STDBY | internal pull-up |
-| 26 | PB6 | GPIO out | CC-RD-EN | Rd switch, see below |
-| 27 | PB7 | GPIO out | CAM-RESET | camera RESETB; R244 (10k) pull-down holds the camera in reset until U28 releases it |
-| 29 | PB9 | TIM1_CH1 | TORCH | PWM to both front boards' torch LEDs (AO3400 gate, 100k pull-down there) |
-| 35 | PB12 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
-| 32 | PC16 | GPIO in | ~CHRG | internal pull-up. PC16 is bonded to PC11: keep PC11 an input |
-| 33 | PC17 | GPIO in | X035-BOOT | **boot detect:** high at power-up starts the bootloader. R235 pull-down; U13 PD4 can drive it. Bonded to PC10: keep PC10 an input |
-| 34 | PC18 | USART3 TX (remap 1) / SDI DIO | X035-TX | to U13 PE15 |
-| 37 | PC19 | USART3 RX (remap 1) / SDI DCK | X035-RX | from U13 PE14 |
-| 38 | PC14 | PD CC1 | USB_CC1 | |
-| 39 | PC15 | PD CC2 | USB_CC2 | |
-| 48 / 47 | VDD / GND | | VMCU-3V3 | C183 100 nF + C184 10 µF |
+| 10 | PA0 | ADC_IN0 | HALL-FLOOR-L | ≥200 Hz sampling |
+| 11 | PA1 | ADC_IN1 | HALL-FLOOR-R | |
+| 12 | PA2 | USART2_TX | MCU2-TX | to U13 PE15; bootloader port |
+| 13 | PA3 | USART2_RX | MCU2-RX | from U13 PE14 |
+| 14 | PA4 | ADC_IN4 | BAT_SENSE | |
+| 15 | PA5 | ADC_IN5 | DC_IN_SENSE | ≥1 kHz, catches the dock's signature probe |
+| 16 | PA6 | ADC_IN6 | BAT_NTC | battery pulled while docked: the pin sees ~4.5 V through R233 (10k), ~0.1 mA into the clamp diode; check the injection limit on the dev board |
+| 17 | PA7 | ADC_IN7 | NTC | board NTC (T1/R38) |
+| 18 | PB0 | ADC_IN8 | BAT_ID | |
+| 19 | PB1 | ADC_IN9 | LDR | wake-up sensor |
+| 29 | PA8 | TIM1_CH1 | LED-HOME | PWM possible |
+| 30 | PA9 | TIM1_CH2 | LED-PWR | PWM possible |
+| 31 | PA10 | GPIO in | ~CLEAN-BTN | internal pull-up |
+| 32 | PA11 | GPIO in | ~HOME-BTN | internal pull-up (USB D- unused) |
+| 33 | PA12 | GPIO in | PWR-BTN-SENSE | (USB D+ unused) |
+| 38 | PA15 | GPIO in | HALL-BIN | internal pull-up |
+| 20 | PB2 | BOOT1 | BOOT1 | R249 (100k) pull-down: BOOT0 = 1 with BOOT1 = 0 starts the bootloader |
+| 21 | PB10 | I2C2_SCL | CAM-SCL | left VL53L7 + camera bus, in parallel with U13 PC14; input (hi-Z) when unused |
+| 22 | PB11 | I2C2_SDA | CAM-SDA | in parallel with U13 PC15 |
+| 25 | PB12 | GPIO in (FT) | USB_VBUS_SENSE | digital, see above |
+| 26 | PB13 | GPIO out | STM-PWR-CTRL | power latch; R172 holds the latch while U28 boots |
+| 27 | PB14 | GPIO out | SIDE-PROXI-CE-R | VL53L0X XSHUT |
+| 28 | PB15 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
+| 39 | PB3 | GPIO in | ~STDBY | internal pull-up |
+| 40 | PB4 | GPIO in | ~CHRG | internal pull-up |
+| 41 | PB5 | GPIO out | CC-RD-EN | Rd switch, see below |
+| 42 | PB6 | USB PD CC1 | USB_CC1 | |
+| 43 | PB7 | USB PD CC2 | USB_CC2 | |
+| 45 | PB8 | TIM4_CH3 | TORCH | PWM to both front boards' torch LEDs (AO3400 gate, 100k pull-down there) |
+| 46 | PB9 | GPIO out | CAM-RESET | camera RESETB; R244 (10k) pull-down holds the camera in reset until U28 releases it |
+| 7 | NRST | reset | MCU2-NRST | from U13 PC13; R234 (10k) + C185 |
+| 44 | BOOT0 | boot | MCU2-BOOT | from U13 PD4; R235 (100k) pull-down |
+| 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
+| 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |
 
-Free: PA3, PA17, PA19, PA20, PA22, PA23, PB2, PB4, PB5, PB8, PB10, PB11, PB13, PC6, PC7.
-
-The CD4051B mux from the draft is gone: the LQFP-48 has enough ADC inputs.
+Free: PA13/PA14 (SWDIO/SWCLK: leave them for a WCH-LinkE on the dev board), PC13–PC15 (weak, 2 MHz, can't source current), PD0/PD1 (OSC_IN/OUT, no crystal).
 
 ## I2C buses (since 2026-11-23)
 
@@ -158,21 +159,28 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 | Bus | Pins | Devices | Pull-ups |
 |---|---|---|---|
 | Main (SCL/SDA) | U13 I2C2, PB10/PB11 | right VL53L7 (J5), side VL53L0X, IMU | R5/R6 2.2k |
-| Camera (CAM-SCL/CAM-SDA) | U13 PC14/PC15 bit-banged; U28 PA13/PA14 hardware I2C | left VL53L7 (J6), camera SCCB (J12) | R246/R247 2.2k |
+| Camera (CAM-SCL/CAM-SDA) | U13 PC14/PC15 bit-banged; U28 I2C2 (PB10/PB11) | left VL53L7 (J6), camera SCCB (J12) | R246/R247 2.2k |
 
-- **Addresses:** the VL53L7s and the VL53L0X all start at 0x52 (0x29 7-bit). On the main bus, firmware holds the VL53L0X off with its XSHUT (SIDE-PROXI-CE-R, U28 PA18), moves the right VL53L7 to another address, then releases XSHUT, every boot. The camera is at 0x30 or 0x3C, so the camera bus has no clash.
+- **Addresses:** the VL53L7s and the VL53L0X all start at 0x52 (0x29 7-bit). On the main bus, firmware holds the VL53L0X off with its XSHUT (SIDE-PROXI-CE-R, U28 PB14), moves the right VL53L7 to another address, then releases XSHUT, every boot. The camera is at 0x30 or 0x3C, so the camera bus has no clash.
 - **Speed:** 400 kHz on both. Neither MCU does Fast-mode Plus. A VL53L7 firmware upload (~84 KB) takes ~2–3 s per sensor; the two buses can upload in parallel.
-- **Camera bus, two masters on the same wires:** U13 has no free hardware I2C (I2C1's pins are taken by USB high speed and DVP), so its PC14/PC15 bit-bang. U28's one I2C is wired in parallel on PA13/PA14 (remap 1). Only one drives at a time; the other keeps its pins as inputs.
+- **Camera bus, two masters on the same wires:** U13 has no free hardware I2C (I2C1's pins are taken by USB high speed and DVP), so its PC14/PC15 bit-bang. U28's I2C2 is wired in parallel on PB10/PB11. Only one drives at a time; the other keeps its pins as inputs.
   - **Bit-banged (always works):** U13 runs the bus itself. Trimmed ToF outputs cost a few % of CPU; full-size debug frames at 15 Hz keep the bus ~40 % busy, so use a lower rate or a timer-paced bit-bang for long debug runs.
-  - **U28 hardware I2C (if its lot isn't affected):** U28 acts as a UART-to-I2C bridge: U13 sends register reads and writes over the link and U28 runs them with DMA. The ~84 KB sensor firmware doesn't fit in U28's 62 KB flash, so U13 streams it through the bridge. At boot firmware tries U28's I2C (read the VL53L7 device ID) and falls back to bit-banging if it fails.
+  - **U28 hardware I2C (optional, offloads U13):** U28 acts as a UART-to-I2C bridge: U13 sends register reads and writes over the link and U28 runs them with DMA. The ~84 KB sensor firmware doesn't fit in U28's 64 KB flash, so U13 streams it through the bridge. Bit-banging stays the fallback.
 - **Rise time:** 2.2k with the flex and two devices (~50–100 pF) gives ~100–200 ns, under the 300 ns allowed at 400 kHz.
 
-## USB-C PD
+## USB-C and PD: baseline and bonus
 
-- The CH32X035 has the PD PHY but **no Rd pull-downs** on its CC pins (WCH adds them with its CH211 companion).
-- R236/R237 (4.7k; Type-C allows 5.1k ±10 %) go from CC1/CC2 to GND through Q42/Q43 (AO3400). Both gates are on CC-RD-EN, with R238 (100k) pulling up to VMCU-3V3.
-- Rd is there whenever VMCU-3V3 is up: the same dead-battery behaviour as the STM32 UCPD. Firmware pulls CC-RD-EN low only to source after a power-role swap; U28 then supplies Rp from its own pull-up modes.
-- R221 (the old 100k pull-up on BUMP_R_LED_EN for the UCPD dead-battery pin) isn't needed any more; it is harmless and still fitted.
+**Baseline (works with any phone, no PD messages): Type-C resistors only.**
+- **Docked, charging, no data:** U28 puts Rp on CC (its PD block's pull-up) and turns USB_PWR_EN on, so the robot's 5 V reaches VBUS. The phone sees a charger and charges at 5 V (it takes 1.5 A or 3 A only if Rp advertises it).
+- **Cleaning, data, the phone powers the link:** USB_PWR_EN off, Rp off, Rd on (CC-RD-EN high). The phone sees a device, turns VBUS on and becomes USB host; U13 enumerates on the high-speed port. The VBUS lockout (Q33/Q34) keeps the robot from driving VBUS while the phone does.
+- Switching between the two is a detach and re-attach, which every Android phone handles. Firmware decides when to switch (wake-up and end-of-cleaning signals).
+
+**Bonus (phones that support it): USB PD power-role swap.** The CH32L103's PD block does BMC, CRC and GoodCRC in hardware, so U28 can negotiate a power-role swap: the phone stays USB host while the robot supplies VBUS, so it charges and talks at the same time. Many phones, older ones in particular, don't support the swap, so nothing may depend on it.
+
+**Rd:**
+- The LQFP-48 CH32L103 has **no built-in Rd** (only its QFN versions do), so the switched Rd stays: R236/R237 (4.7k; Type-C allows 5.1k ±10 %) go from CC1/CC2 to GND through Q42/Q43 (AO3400). Both gates are on CC-RD-EN, with R238 (100k) pulling up to VMCU-3V3.
+- Rd is there whenever VMCU-3V3 is up (dead-battery behaviour). Firmware pulls CC-RD-EN low only while sourcing, with Rp on.
+- R221 (the old 100k pull-up on BUMP_R_LED_EN for the STM32's UCPD dead-battery pin) isn't needed any more; it is harmless and still fitted.
 
 ## Camera (DVP) connector
 
@@ -185,7 +193,7 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 | 3 | SIO_D (PC15) | | 15 | DGND |
 | 4 | AVDD 2.8 V | | 16 | Y7 (D5, PB3) |
 | 5 | SIO_C (PC14) | | 17 | PCLK (PA6) |
-| 6 | RESETB (U28 PB7, R244 to GND) | | 18 | Y6 (D4, PC11) |
+| 6 | RESETB (U28 PB9, R244 to GND) | | 18 | Y6 (D4, PC11) |
 | 7 | VSYNC (PA5) | | 19 | Y2 (D0, PA9) |
 | 8 | PWDN (PC10, R245 to GND) | | 20 | Y5 (D3, PC9) |
 | 9 | HREF (PA4) | | 21 | Y3 (D1, PA10) |
@@ -194,7 +202,7 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 | 12 | Y9 (D7, PB9) | | 24 | Y0 (NC) |
 
 **Camera power:**
-- **DOVDD** is VSENS-3V3, so the camera I/O runs at 3.3 V like the MCU and the camera is on whenever the other sensors are. No separate switch (Q44 removed 2026-11-22): PWDN (U13 PC10) is the standby, CAM-RESET (U28 PB7) the hard reset.
+- **DOVDD** is VSENS-3V3, so the camera I/O runs at 3.3 V like the MCU and the camera is on whenever the other sensors are. No separate switch (Q44 removed 2026-11-22): PWDN (U13 PC10) is the standby, CAM-RESET (U28 PB9) the hard reset.
 - **AVDD 2.8 V:** U29 (VCAM-2V8), ME6211C28M5G-N (C53099), from VSENS-3V3.
 - **DVDD 1.2 V:** U30 (VCAM-1V2), ME6211C12M5G-N (C236672), from VSENS-3V3, for OV2640-class sensors. OV3660 and OV5640 regulate their own core.
 - 1 µF in and out on each LDO (C188–C191), 100 nF at J12 pins 4, 10 and 11 (C192–C194).
@@ -218,7 +226,7 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 ## Flashing
 
 - **U13 (CH32V307):** the built-in bootloader does USB ISP on the high-speed port. Short J1 1-2 (BOOT0) at power-up and flash from a PC over USB-C with WCH's tool or wchisp. The WCH-LinkE on JTAG1 (SWDIO/SWCLK) is only needed for debugging. Phone updates: firmware jumps to the bootloader.
-- **U28 (CH32X035):** U13 bit-bangs WCH's 2-wire SDI protocol on PE14/PE15, the same wires as the UART link, holding X035-NRST as needed. Normal updates go through an update loader in U28 over the UART. Fallback: U13 holds X035-BOOT high and resets U28 to start WCH's built-in bootloader. Test the bit-banged SDI on the dev boards first; the protocol isn't officially documented.
+- **U28 (CH32L103):** its built-in bootloader loads over USART2 (or USB), and USART2 is the link to U13. U13 holds MCU2-BOOT (BOOT0) high, pulses MCU2-NRST, and sends the image with WCH's serial ISP protocol (the one WCH's ISP tool uses over a UART); R249 keeps BOOT1 low. Then BOOT0 low and another reset. No probe needed, so the phone can update U28 through U13. A WCH-LinkE on PA13/PA14 is only for debugging on the dev board.
 
 ## BOM delta (JLC, 1k pcs)
 
@@ -226,15 +234,16 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 |---|---|
 | − STM32G473VCT6 | −7.39 |
 | + CH32V307VCT6 | +2.18 |
-| + CH32X035C8T6 | +0.38 |
+| + CH32L103C8T6 | +0.41 |
 | + 8 MHz crystal, − 32.768 kHz crystal | ≈ −0.05 |
 | + Rd switch (2x AO3400, 2x 4.7k, 100k) | +0.02 |
 | + carpet amplifier and detector (passives, 1N4148) | +0.01 |
 | + J12, 2x ME6211, passives | +0.14 |
 | − R196 (47k), the right LPn pull-up (the front boards now carry their own) | ≈ 0 |
+| + R249 (100k), C196–C198 (100 nF) for the CH32L103 | ≈ +0.01 |
 | **Net** | **≈ −4.7 per board** |
 
-New BOM lines: CH32V307, CH32X035, the 8 MHz crystal, the FPC socket and two ME6211s. Removed: STM32G473 and the 32.768 kHz crystal. JLC stock of the CH32X035C8T6 is thin (197); check LCSC before a 500–1000-piece run.
+New BOM lines: CH32V307, CH32L103, the 8 MHz crystal, the FPC socket and two ME6211s. Removed: STM32G473 and the 32.768 kHz crystal. JLC had 1,194 CH32L103C8T6 on 2026-11-23; check stock before a 500–1000-piece run.
 
 ## Bench tests (dev boards)
 
@@ -242,9 +251,9 @@ New BOM lines: CH32V307, CH32X035, the 8 MHz crystal, the FPC socket and two ME6
 2. Composite CDC + UVC at high speed to the phone: GC2145 YUV at VGA (~9–18 MB/s) and OV2640 JPEG.
 3. DVP at the sensor's PCLK, with DVP_D5 on PB3 and USBHS enabled (check the lot code rule).
 4. The carpet amplifier and envelope detector at 290 kHz.
-5. U28 PD sink with the switched Rd, and a power-role swap with the phone.
-6. U13 programming U28 over bit-banged SDI on the UART pins.
-7. Bit-banged I2C at 400 kHz on PC14/PC15 with the VL53L7 firmware upload; and U28's hardware I2C on PA13/PA14, if the chips aren't from the bad lot.
+5. U28 baseline: Rp + robot 5 V charges the phone; then Rd only, and the phone enumerates U13 as host. Then the bonus: a PD power-role swap with phones that support it.
+6. U13 flashing U28 through its USART2 bootloader (BOOT0, NRST).
+7. Bit-banged I2C at 400 kHz on PC14/PC15 with the VL53L7 firmware upload; and the U28 I2C2 bridge.
 
 ## Open items
 

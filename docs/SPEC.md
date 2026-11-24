@@ -395,7 +395,7 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 - the ToF sensors are on small boards, one design fitted twice: [`kicad/front-sensors`](../kicad/front-sensors/README.md)
   - left board aimed 30° left, right board 30° right
   - board-to-board since 2026-11-06, no cable: each ToF board hangs upright under the main board, sensor on its front face, a 2.0 mm 2x4 right-angle header (HanElectricity 2005WR-2x4P, C6837622) on its back, plugged into a 2x4 vertical socket (2005FV-2x4P, C18723066) on the main board's underside (J6 / J5); a mount screwed to the main board holds it. The mating swaps the rows, so header pin n meets socket pin n+1 / n-1: see the [front ToF README](../kicad/front-sensors/README.md#connector-j2001)
-- RGB camera with white torchlight LEDs: the camera connector (J12) is on the main board since 2026-11-21 ([docs/mcu-ch32v307.md](mcu-ch32v307.md)); since 2026-11-23 each front ToF board has a white torch LED (LED2001, XL-3030UWC-1W-3V, ~190 mA from VSENS-5V-USB, PWM on TORCH from U28 PB9)
+- RGB camera with white torchlight LEDs: the camera connector (J12) is on the main board since 2026-11-21 ([docs/mcu-ch32v307.md](mcu-ch32v307.md)); since 2026-11-23 each front ToF board has a white torch LED (LED2001, XL-3030UWC-1W-3V, ~190 mA from VSENS-5V-USB, PWM on TORCH from U28 PB8)
 
 ## Side sensors module board
 
@@ -529,7 +529,7 @@ Design (current schematic)
 
 The first board drops the Raspberry Pi: an Android phone is the compute, talking to the MCU over USB-C (CDC). Schematic: [`kicad/main-phone`](../kicad/main-phone/README.md), forked from `kicad/main` (the Pi carrier stays for later).
 
-- **MCU (2026-11-21):** the STM32G473VCT6 went to $7.39 with 20 in stock, so U13 is now a WCH CH32V307VCT6 (USB high speed to the phone, DVP camera, all motors and sensors) with a CH32X035C8T6 companion (U28: USB-C PD, slow analog, buttons and LEDs, charger status, power latch, camera power). Pin map, PD, camera, carpet amplifier and flashing: [mcu-ch32v307.md](mcu-ch32v307.md). The STM32 pin names in the bullets below are history; the schematic and the firmware pin header are current.
+- **MCU (2026-11-21):** the STM32G473VCT6 went to $7.39 with 20 in stock, so U13 is now a WCH CH32V307VCT6 (USB high speed to the phone, DVP camera, all motors and sensors) with a companion MCU (U28: USB-C, slow analog, buttons and LEDs, charger status, power latch, camera reset, torch): a CH32X035C8T6 at first, a CH32L103C8T6 since 2026-11-23 (the CH32X035 loses I2C and four ADC channels on some lots). USB-C baseline is resistor-only (charge the phone when docked, Rd and phone-as-host for cleaning); a PD power-role swap is a bonus for phones that support it. Pin map, PD, camera, carpet amplifier and flashing: [mcu-ch32v307.md](mcu-ch32v307.md). The STM32 pin names in the bullets below are history; the schematic and the firmware pin header are current.
 
 - dropped: CM4/CM5, SD card, M.2 + its buck, MIPI cameras, speaker amp (no buzzer; LEDs for debug), water pump, front illumination, the phone's dedicated 5 V buck, the board fan (the phone stays cool), the left side-proximity sensor (OOMWOO One has a right one only)
 - kept: the IMU (gyro heading on the STM32 clock, ~$1.40); no Bluetooth/Wi-Fi in v1 (an iPhone would need one, since iOS apps can't use USB CDC)
@@ -687,7 +687,7 @@ Power rails (current schematic):
 | Rail | Made by | Feeds | Switched by |
 | --- | --- | --- | --- |
 | VBAT-14V4 (11.6-16.8 V) | 4S battery | everything below | power-button latch (Q13 AO4407C, STM-PWR-CTRL) |
-| VMCU-3V3 | RY9430 buck (U21); U27 (HT7533-1) + Q39 from VBUS_5V with the battery out (bring-up) | MCUs (U13 CH32V307, U28 CH32X035) | VMCU-3V3-POWER-EN |
+| VMCU-3V3 | RY9430 buck (U21); U27 (HT7533-1) + Q39 from VBUS_5V with the battery out (bring-up) | MCUs (U13 CH32V307, U28 CH32L103) | VMCU-3V3-POWER-EN |
 | VSENS-3V3 | from VMCU-3V3 via Q16 | sensors, IMU, driver logic, camera (DOVDD; AVDD/DVDD via U29/U30) | U13 (~VSENS_3V3_EN, low = on) |
 | VMCU-BAT-3V3 | HT7533 LDO | U13 VBAT | always on |
 | VSENS-5V-USB | RY9430 buck (U22, 3 A max) | LiDAR, cliff and bumper LEDs, VUSONIC-14V4 boost, spare header J1 (pin 12), USB-C VBUS to the phone | STM32 (VSENS_5V_USB_EN) |

@@ -1,13 +1,13 @@
 """Generate the firmware pin map (C/C++ header) from the KiCad schematic.
 
-Usage: python tools/gen_pins.py [-o OUT.h] [--board kicad/main-phone] [--mcu U13,U28:X035]
+Usage: python tools/gen_pins.py [-o OUT.h] [--board kicad/main-phone] [--mcu U13,U28:MCU2]
 
 Each MCU GPIO gets three macros, named after the net it drives:
     PIN_LIDAR_TXD       PD2     pin name
     PIN_LIDAR_TXD_PORT  GPIOD   port, for WCH/CMSIS-style HAL code
     PIN_LIDAR_TXD_NUM   2       pin number within the port
 --mcu lists the MCU references; REF:NAME puts NAME after PIN_ for that MCU's pins
-(main-phone: U13 is the CH32V307, U28 the CH32X035, so its pins are PIN_X035_...).
+(main-phone: U13 is the CH32V307, U28 the CH32L103, so its pins are PIN_MCU2_...).
 A pin that reaches its net through a series resistor takes that net's name.
 Overbar names (~{X}) become X_N, trailing +/- become _P/_N, and local names of 3 characters or
 less on a sheet other than the MCU's get their sheet name in front (LO -> CARPET_SENSOR_LO).
@@ -97,7 +97,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('-o', '--out', help='output header (default: stdout)')
     ap.add_argument('--board', default='kicad/main-phone')
-    ap.add_argument('--mcu', default='U13,U28:X035')
+    ap.add_argument('--mcu', default='U13,U28:MCU2')
     a = ap.parse_args()
     mcus = dict((m.split(':') + [''])[:2] for m in a.mcu.split(','))
 

@@ -6,7 +6,7 @@ Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.
 
 ## What it does
 
-1. A 20 V brick plugs into J1002 (DC-044A-20A, a 5.5/2.0 mm jack). F1001 (5 A fuse), D1001 (SMAJ22A) and C1011 protect the input. U1003 (HT7533-1) makes 3.3 V for the MCU.
+1. A USB-C PD charger plugs into J1002 (since 2026-11-24; a 20 V brick on a DC-044A-20A jack before), and U1005 (CH224A) asks it for 20 V: see [USB-C PD input](#usb-c-pd-input-and-power-budget-since-2026-11-24). F1001 (5 A fuse), D1001 (SMAJ22A) and C1011 protect the input. U1003 (HT7533-1) makes 3.3 V for the MCU.
 2. With the contacts off, the MCU measures the resistance across them (see [Robot detection](#robot-detection)). It switches 20 V on only when it sees the robot.
 3. Q1003 (AO4407C P-FET) switches VDOCK-20V. R1012/R1015 set Vgs to -10 V, and C1017 (47 nF, gate to drain) ramps VDOCK-20V at ~30 V/ms, so the robot's input capacitors charge at ~0.5 A instead of sparking on the contacts. D1003 (SMAJ22A) protects the exposed contacts.
 4. R1016 (50 mΩ) and U1004 (INA180A1 clone from lingxingic, C48533472, gain 20; TI's INA180A1IDBVR C122228 is the pin-compatible alternative) measure the charging current on DOCK-: I-SENSE = 1 V/A, 3.3 A full scale. The MCU switches VDOCK-20V off when the current drops to ~0 (the robot left) or on overcurrent.
@@ -16,12 +16,12 @@ Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.
 
 - WCH CH32V003F4P6, TSSOP-20 (LCSC C5187096, ~$0.17): 48 MHz RISC-V, 16 KB flash, 10-bit ADC, internal oscillator (no crystal).
 - Toolchains: WCH's official Arduino core, [ch32fun](https://github.com/cnlohr/ch32fun) and PlatformIO.
-- Programming: the single-wire SWIO pin (PD1) on J1001, a fitted 1x2 right-angle 0.1" header (XFCN PZ254R-11-02P, C492410; since 2026-11-15): 1 SWIO, 2 GND. It carries no 3.3 V, so the dock runs from its brick while it is flashed. Flash it with a WCH-LinkE, or (planned) with two jumper wires to the robot board's spare header J1, where the STM32 acts as the programmer: see the [firmware spec](https://github.com/makerspet/oomwoo-firmware/blob/main/docs/SPEC.md) (Dock programmer).
-- J1005 (2x6 right-angle 0.1" header, XFCN PZ254R-12-12P, C492434, not fitted) brings out every other free pin: 1 VMCU-3V3, 2 GND, 3 UART_TX (PD5), 4 UART_RX (PD6), 5 PC5, 6 PC6, 7 PC7, 8 PD0, 9 PD4, 10 PD7 (NRST), 11 VMCU-3V3, 12 GND.
+- Programming: the single-wire SWIO pin (PD1) on J1001, a fitted 1x2 right-angle 0.1" header (XFCN PZ254R-11-02P, C492410; since 2026-11-15): 1 SWIO, 2 GND. It carries no 3.3 V, so the dock runs from its charger while it is flashed. Flash it with a WCH-LinkE, or (planned) with two jumper wires to the robot board's spare header J1, where the STM32 acts as the programmer: see the [firmware spec](https://github.com/makerspet/oomwoo-firmware/blob/main/docs/SPEC.md) (Dock programmer).
+- J1005 (2x6 right-angle 0.1" header, XFCN PZ254R-12-12P, C492434, not fitted) brings out every other free pin: 1 VMCU-3V3, 2 GND, 3 UART_TX (PD5), 4 UART_RX (PD6), 5 PD-SCL (PC5), 6 PD-SDA (PC6), 7 PC7, 8 PD0, 9 PD4, 10 PD7 (NRST), 11 VMCU-3V3, 12 GND.
 
 | Pin | Function | Notes |
 | --- | --- | --- |
-| PA2 (A0) | VIN-SENSE | brick voltage x 11 (R1007/R1008) |
+| PA2 (A0) | VIN-SENSE | input voltage x 11 (R1007/R1008) |
 | PA1 (A1) | DOCK-SENSE | VDOCK-20V x 11 (R1010/R1011) |
 | PD2 (A3) | PROBE-SENSE | probe node, before the diode |
 | PD3 (A4) | I-SENSE | 1 V/A |
@@ -31,7 +31,8 @@ Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.
 | PC0 | status LED | LED1001 through R1001 (1k) |
 | PD5, PD6 | UART TX, RX | debug, on J1005 (not fitted) |
 | PD1 | SWIO | programming, on J1001 (fitted) |
-| PC5, PC6, PC7 | spare | on J1005 (not fitted); SPI SCK/MOSI/MISO, or I2C SCL/SDA on PC5/PC6 with the pin remap |
+| PC5, PC6 | PD-SCL, PD-SDA | I2C1 (full remap) to U1005 (CH224A, 0x22); also on J1005 |
+| PC7 | spare | on J1005 (not fitted) |
 | PD0, PD4, PD7 | spare | on J1005 (not fitted); PD7 is NRST by default; PD4 (TIM2_CH1) fed the optional IR receiver until 2026-11-15 |
 
 The ADC reference is VDD, and PROBE-DRV high is VDD too, so the probe readings are ratiometric.
@@ -48,11 +49,34 @@ The probe: PROBE-DRV → R1014 (100k) → PROBE-SENSE → D1002 (1N4148W) → VD
 Both sides of the diode are measured, so its drop cancels. Expected readings on VDOCK-20V: ~2.6 V with nothing docked, ~1.5 V with the robot, 0 V for a short. With the robot, VDOCK-20V stays near 1.5 V, so the robot's rail-hold FET (Q31) gate sees only ~0.5 V and stays off.
 
 Firmware:
-- check VIN first: refuse to switch on above ~22 V (an old 24 V brick would exceed the robot's limit) or below ~18.5 V (the robot can't finish a 4S charge)
+- check VIN first: refuse to switch on above ~22 V (the robot's limit; PD 20 V is 19-21 V) or below ~18.5 V (the robot can't finish a 4S charge), and read the PD contract and the current limit from U1005
 - probe for a few seconds: the robot's input capacitance makes the reading settle with τ ≈ 1.6 s. Require a stable value inside a window around 130 kΩ (start with 90-180 kΩ and tune it on real robots, including one with a flat battery). The settling time itself is a second check that something capacitive, i.e. a robot, is connected.
 - then PROBE-DRV low and CHARGE-EN high, and check DOCK-SENSE ≈ VIN-SENSE within ~10 ms
 - while on: switch off if I-SENSE drops below ~5 mA for ~100 ms (the robot keeps its MCU on while charging, so it never draws zero), or above ~3.2 A (use the ADC analog watchdog for a fast trip). Read the INA180 zero with VDOCK-20V off; its offset is up to ~3 mA.
 - after switching off, wait for VDOCK-20V to bleed down before probing again
+
+## USB-C PD input and power budget (since 2026-11-24)
+
+The dock takes any USB-C charger that offers 20 V: in practice most chargers of 30 W and up, including cheap laptop chargers. It was a 20 V barrel-jack brick before.
+
+- J1002 is the robot's USB-C receptacle (TYPE-C-31-M-12, C165948, 20 V 5 A). Only VBUS, GND and CC are used; DP/DM and SBU are not connected, so the dock speaks PD only (no QC).
+- U1005 (WCH CH224A, C42459160, ESSOP-10, ~$0.22) is the PD sink. R1017 (120k from CFG1 to GND) requests 20 V and enables its I2C. VHV and VBUS sit on VBUS-IN (before the fuse), with C1019 (1 µF) at VHV. PG is not used.
+- The charger gives 5 V until the PD contract, so the MCU starts first (U1003 runs from 5 V) and waits for VIN-SENSE to reach 20 V.
+- The MCU reads U1005 over I2C1 with the full pin remap (PC5 = SCL, PC6 = SDA), address 0x22, single-byte transfers only (the CH224A doesn't do burst reads):
+  - 0x09 status: bit 3 = PD contract
+  - 0x50: the charger's current limit at the negotiated voltage, in 50 mA units (valid only with a PD contract)
+  - the bus uses the CH224A's internal pull-ups (7-15k, as in WCH's reference design); the CH32V003's internal pull-ups can be switched on too
+- No 20 V (a phone-only charger stays at 5-12 V, VIN-SENSE < 18.5 V) or no PD contract: the contacts stay off and the status LED blinks an "insufficient charger" code.
+- Power budget = 20 V x the 0x50 current, minus ~1 W for the dock itself. The beacon sends it to the robot (see [IR beacon](#ir-beacon)), and the robot fits its draw to it:
+
+| Charger | 20 V budget | Robot |
+| --- | --- | --- |
+| < 30 W (no 20 V) | - | dock refuses and blinks |
+| 30 W (20 V 1.5 A) | ~28 W | 1.2 A charge (~22 W); phone and battery take turns |
+| 45 W (20 V 2.25 A) | ~43 W | 1.2 A charge and the phone together |
+| 60-65 W (20 V 3 A) | ~58 W | ~2.2 A charge (CHG-I-HI, good packs only) and the phone; or take turns |
+
+- Over-current is still the dock's own job: the I-SENSE trip at ~3.2 A stays, and the firmware can lower it to the charger's limit.
 
 ## IR beacon
 
@@ -60,6 +84,7 @@ Firmware:
 - IR-L and IR-R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C1004/C1006 100 nF, R1003/R1005 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
 - R1004/R1006 are 150 Ω 2512 (1 W): 1.7 W peak, ~0.3 W average at NEC duty.
+- The frames carry the power budget for the robot (proposed: the NEC command byte = watts available at the contacts / 2, 0 = refusing). Firmware defines the exact code.
 - No IR receiver on the dock: the optional, unfitted U1002 (IRM-H638T, for robot → dock messages) and its R1002/C1003 filter were removed on 2026-11-15.
 
 ## PCB notes (for layout)
@@ -72,7 +97,7 @@ Firmware:
 
 ## Parts shared with the robot
 
-DC-044A-20A, SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120) and capacitor lines (100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, PZ254R-11-02P (programming header), INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
+TYPE-C-31-M-12 (USB-C, the robot's USBC2), SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120) and capacitor lines (1uF/25V C380328, 100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, CH224A (PD sink), 120k 0603 (0603WAF1203T5E, C25808), PZ254R-11-02P (programming header), INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
 
 Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`) and the KiCad standard libraries.
 
@@ -85,4 +110,5 @@ Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JL
   - rust once the plating wears, near a future mop wash, and hair caught in the open coils
   - the robot's plates cover the Ø22 mm coil end plus the docking tolerance
   Fallbacks: pogo pins (the YZP0670 footprint), or sprung metal strips with a dimple.
+- USB-C PD on the first boards: read U1005 0x09/0x50 with a 30 W, a 45 W and a 65 W charger and a phone-only one; check the I2C edges with only the CH224A's internal pull-ups (add 4.7k to 3.3 V on J1005 pins 5/6 if they are slow); check the 5 V to 20 V step at the PD contract with the contacts off.
 - Measure the real robot signature (resistance and settling time) on the first boards, with a full battery and a flat one, and set the firmware window from that.

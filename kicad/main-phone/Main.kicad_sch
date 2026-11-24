@@ -11938,6 +11938,16 @@
 				(justify left)
 			)
 		)
+		(pin "CHG-I-HI" output
+			(at 215.9 179.07 270)
+			(uuid "0560dfe1-4c00-45a2-98d5-e70edbe821eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(pin "LDR" input
 			(at 135.89 176.53 180)
 			(uuid "54fad129-66a3-444a-8fdc-f6a247628dcf")
@@ -13006,7 +13016,7 @@
 	)
 	(sheet
 		(at 231.14 254)
-		(size 59.69 20.32)
+		(size 59.69 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -13032,7 +13042,7 @@
 			)
 		)
 		(property "Sheetfile" "Battery-Charger.kicad_sch"
-			(at 230.886 275.336 0)
+			(at 230.886 277.876 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13112,6 +13122,16 @@
 				(justify left)
 			)
 		)
+		(pin "CHG-I-HI" input
+			(at 231.14 274.32 180)
+			(uuid "e80ee823-0340-4698-b423-1d9355ad5c81")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "Main"
 				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8"
@@ -13126,4 +13146,24 @@
 		)
 	)
 	(embedded_fonts no)
+	(wire
+		(pts
+			(xy 215.9 179.07) (xy 215.9 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40df591b-b46c-4f9c-a2e3-a6435583766b")
+	)
+	(wire
+		(pts
+			(xy 215.9 274.32) (xy 231.14 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5473745-cbb9-40c2-ae4a-518fa38d6d94")
+	)
 )

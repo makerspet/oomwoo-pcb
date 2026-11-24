@@ -2362,7 +2362,7 @@
 		)
 		(uuid "90069503-73fb-499b-a5f2-e82584fdf9c5")
 	)
-	(text "CH32V003F4P6: PA2 = VIN-SENSE (A0), PA1 = DOCK-SENSE (A1), PD2 = PROBE-SENSE (A3),\nPD3 = I-SENSE (A4), PC1 = CHARGE-EN (high = VDOCK-20V on), PC2 = PROBE-DRV,\nPC3/PC4 = IR-L/IR-R (TIM1_CH3/CH4, 38 kHz), PC0 = status LED, PD4 unused,\nPD5/PD6 = UART, PD1 = SWIO. HSI clock, no crystal.\nADC reference is VDD, and PROBE-DRV high is VDD too, so the probe math is ratiometric."
+	(text "CH32V003F4P6: PA2 = VIN-SENSE (A0), PA1 = DOCK-SENSE (A1), PD2 = PROBE-SENSE (A3),\nPD3 = I-SENSE (A4), PC1 = CHARGE-EN (high = VDOCK-20V on), PC2 = PROBE-DRV,\nPC3/PC4 = IR-L/IR-R (TIM1_CH3/CH4, 38 kHz), PC0 = status LED, PD4 unused,\nPC5/PC6 = PD-SCL/PD-SDA (I2C1 remap, to U1005 CH224A), PD5/PD6 = UART, PD1 = SWIO. HSI clock, no crystal.\nADC reference is VDD, and PROBE-DRV high is VDD too, so the probe math is ratiometric."
 		(exclude_from_sim no)
 		(at 152.4 165.1 0)
 		(effects
@@ -2373,7 +2373,7 @@
 		)
 		(uuid "903ec630-8fcc-4fd0-93ca-5603cf04db9e")
 	)
-	(text "OOMWOO charging-only dock, v2 (2026-10-27)\n20 V brick in; VDOCK-20V / DOCK- spring contacts out (energized only after the robot\nis recognised by its ~130k / ~30 uF signature); 38 kHz NEC IR beacon.\nCH32V003 control (Arduino core, ch32fun, PlatformIO). Refs in the 1000s: each board has its\nown range (main board 1-999, dock 1000s, sensor boards 2000s-7000s)."
+	(text "OOMWOO charging-only dock, v2 (2026-10-27)\nUSB-C PD charger in (20 V, since 2026-11-24; a 20 V brick before); VDOCK-20V / DOCK- spring contacts out (energized only after the robot\nis recognised by its ~130k / ~30 uF signature); 38 kHz NEC IR beacon.\nCH32V003 control (Arduino core, ch32fun, PlatformIO). Refs in the 1000s: each board has its\nown range (main board 1-999, dock 1000s, sensor boards 2000s-7000s)."
 		(exclude_from_sim no)
 		(at 40.64 40.64 0)
 		(effects
@@ -2540,7 +2540,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 97.79) (xy 58.42 77.47)
+			(xy 55.88 97.79) (xy 55.88 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2560,7 +2560,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 97.79) (xy 66.04 97.79)
+			(xy 55.88 97.79) (xy 66.04 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2600,7 +2600,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 100.33) (xy 55.88 74.93)
+			(xy 53.34 100.33) (xy 53.34 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2610,7 +2610,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 100.33) (xy 66.04 100.33)
+			(xy 53.34 100.33) (xy 66.04 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2720,7 +2720,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 74.93) (xy 171.45 74.93)
+			(xy 53.34 74.93) (xy 171.45 74.93)
 		)
 		(stroke
 			(width 0)
@@ -2770,7 +2770,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 77.47) (xy 168.91 77.47)
+			(xy 55.88 77.47) (xy 168.91 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2848,7 +2848,7 @@
 		)
 		(uuid "103aa1be-5b01-408f-a704-5740ea0afc23")
 	)
-	(label "PC6"
+	(label "PD-SDA"
 		(at 157.48 97.79 0)
 		(effects
 			(font
@@ -2868,7 +2868,7 @@
 		)
 		(uuid "24c09bfe-5790-464f-bb0a-572e11792822")
 	)
-	(label "PC5"
+	(label "PD-SCL"
 		(at 175.26 45.72 0)
 		(effects
 			(font
@@ -2938,7 +2938,7 @@
 		)
 		(uuid "c62b694a-7127-48e3-be17-417c1ed038d3")
 	)
-	(label "PC5"
+	(label "PD-SCL"
 		(at 157.48 100.33 0)
 		(effects
 			(font
@@ -2948,7 +2948,7 @@
 		)
 		(uuid "d0cbe032-3822-4a70-9167-9a9da8bcee12")
 	)
-	(label "PC6"
+	(label "PD-SDA"
 		(at 208.28 45.72 180)
 		(effects
 			(font
@@ -5092,14 +5092,13 @@
 			)
 		)
 		(property "Value" "VMCU-3V3"
-			(at 172.72 36.83 90)
+			(at 172.72 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -5249,6 +5248,26 @@
 				(justify left top)
 			)
 		)
+		(pin "PD-SCL" bidirectional
+			(at 215.9 82.55 0)
+			(uuid "fb091acc-1613-4a4e-9780-7ccf31e3b021")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PD-SDA" bidirectional
+			(at 215.9 85.09 0)
+			(uuid "985ad025-adde-494f-8f84-891b946fe46d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(pin "I-SENSE" bidirectional
 			(at 185.42 87.63 180)
 			(uuid "8eedff13-4c33-4c91-970d-90112f5d90a7")
@@ -5323,4 +5342,44 @@
 		)
 	)
 	(embedded_fonts no)
+	(wire
+		(pts
+			(xy 215.9 82.55) (xy 220.98 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06678857-d23e-4d44-9cde-ae3d60c0bf94")
+	)
+	(label "PD-SCL"
+		(at 220.98 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9ba568c-d79d-40e7-8ee6-19255783b3c7")
+	)
+	(wire
+		(pts
+			(xy 215.9 85.09) (xy 220.98 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26ea2c44-10b0-4ea1-b3c9-b0f39ddfdd85")
+	)
+	(label "PD-SDA"
+		(at 220.98 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4beb0e6b-61aa-40c7-b0d7-475d042bf10e")
+	)
 )

@@ -137,6 +137,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 26 | PB13 | GPIO out | STM-PWR-CTRL | power latch; R172 holds the latch while U28 boots |
 | 27 | PB14 | GPIO out | SIDE-PROXI-CE-R | VL53L0X XSHUT |
 | 28 | PB15 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
+| 2 | PC13 | GPIO out | CHG-I-HI | high = ~2.2 A charging (Q45 -> Q44 puts R250 in parallel with R106); gate drive only, R252 (1M) pull-down (since 2026-11-24) |
 | 39 | PB3 | GPIO in | ~STDBY | internal pull-up |
 | 40 | PB4 | GPIO in | ~CHRG | internal pull-up |
 | 41 | PB5 | GPIO out | CC-RD-EN | Rd switch, see below |
@@ -154,7 +155,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
 | 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |
 
-Free: PC13–PC15 (weak, 2 MHz, can't source current).
+Free: PC14, PC15 (weak, 2 MHz, can't source current).
 
 ## I2C buses (since 2026-11-23)
 

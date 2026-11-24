@@ -76,7 +76,6 @@ Consumer vacuums place CPU and MCU on the same PCB board. Since OOMWOO has to be
 - USB power for charging; USB for serial shell, etc.
 - audio encoder/decoder, audio amp, mics (if any)
 - SD card for hacking, cheap large storage
-- connect IMU FSYNC to MCU to synchronize MCU timestamps with IMU data streaming to CPU
 
 Consumer vacuums usually don't have a CPU fan/heatsink because the vacuum's suction fan can (indirectly) cool the CPU/MCU PCB. Therefore, no CPU fan on this I/O board.
 

@@ -10,7 +10,7 @@ Sheets: root (MCU, status LED, debug pads, mounting holes), **POWER** (input, 3.
 2. With the contacts off, the MCU measures the resistance across them (see [Robot detection](#robot-detection)). It switches 20 V on only when it sees the robot.
 3. Q1003 (AO4407C P-FET) switches VDOCK-20V. R1012/R1015 set Vgs to -10 V, and C1017 (47 nF, gate to drain) ramps VDOCK-20V at ~30 V/ms, so the robot's input capacitors charge at ~0.5 A instead of sparking on the contacts. D1003 (SMAJ22A) protects the exposed contacts.
 4. R1016 (50 mΩ) and U1004 (INA180A1 clone from lingxingic, C48533472, gain 20; TI's INA180A1IDBVR C122228 is the pin-compatible alternative) measure the charging current on DOCK-: I-SENSE = 1 V/A, 3.3 A full scale. The MCU switches VDOCK-20V off when the current drops to ~0 (the robot left) or on overcurrent.
-5. Two IR LED strings (3x TSAL6200 each, ~210 mA peak from 20 V since 2026-11-24, ~100 mA before) send 38 kHz NEC frames for the robot's receivers.
+5. Two IR LED strings (3x IR204C-A-L each, 3 mm, ±20°; TSAL6200 5 mm ±17° until 2026-11-24; ~210 mA peak from 20 V) send 38 kHz NEC frames for the robot's receivers.
 
 ## MCU: CH32V003F4P6
 
@@ -83,13 +83,13 @@ The dock takes any USB-C charger that offers 20 V: in practice most chargers of 
 - The robot's receivers (IRM-H638T, AGC type) suppress a steady 38 kHz carrier, so the beacon must send bursts: NEC frames, with the TIM1 PWM at ~1/3 duty and the frame envelope gated in firmware.
 - IR-L and IR-R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C1004/C1006 100 nF, R1003/R1005 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
-- Each string has two 150 Ω 1 W 2512 in parallel (R1004 + R1018, R1006 + R1019; since 2026-11-24): 75 Ω, ~210 mA peak, ~3.3 W peak and ~0.6 W average per string at NEC duty, ~0.3 W per resistor. The TSAL6200 takes 100 mA continuous and 200 mA at tp/T = 0.5 with tp = 100 µs; the carrier pulses are ~9 µs at 1/3 duty, ~70 mA average while sending. Leave R1018/R1019 off for ~100 mA.
+- Each string has two 150 Ω 1 W 2512 in parallel (R1004 + R1018, R1006 + R1019; since 2026-11-24): 75 Ω, ~210 mA peak, ~3.3 W peak and ~0.6 W average per string at NEC duty, ~0.3 W per resistor. The IR204C-A-L takes 100 mA continuous and 1 A in ≤ 100 µs pulses at ≤ 1 % duty; the carrier pulses are ~9 µs at 1/3 duty, ~70 mA average while sending. Leave R1018/R1019 off for ~100 mA.
 - The frames carry the power budget for the robot (proposed: the NEC command byte = watts available at the contacts / 2, 0 = refusing). Firmware defines the exact code.
 - No IR receiver on the dock: the optional, unfitted U1002 (IRM-H638T, for robot → dock messages) and its R1002/C1003 filter were removed on 2026-11-15.
 
 ## PCB notes (for layout)
 
-- Mount the three TSAL6200 of each string fanned out horizontally (they are ±17°), left string and right string to each side, overlapping in the middle.
+- Mount the three IR204C-A-L (Everlight, C98863, 3 mm, ±20°, through hole, straight leads) of each string fanned out horizontally, left string and right string to each side, overlapping in the middle. They replaced the TSAL6200 (±17°, ~$0.07) on 2026-11-24 for cost (~$0.035) and a wider beam; they are dimmer on axis, so check the range on the first dock. In JLC's footprint pad 1 (square) is the anode: the flat side of the LED (cathode) goes to pad 2.
 - Route the INA180 inputs (IN+ on DOCK-, IN- on GND) as a Kelvin pair to R1016's pads.
 - J1003/J1004: F22-20-0.8-2.4UU coil springs (C20626123, since 2026-11-15; YZP0670-20143-01 pogo pins before): Ø22 mm, 20 mm tall, 0.8 mm nickel-plated steel wire, two slotted legs 21.6 mm apart, both on the contact's net. They stand out of the vertical board's front face, rear-vertical for the robot, above the water line; keep their centres ≥ ~30 mm apart. VDOCK-20V / DOCK- traces sized for 4 A.
 - H1001-H1004: four M3 holes (`MountingHole_3.2mm_M3_Pad`, pads to GND, not in the BOM), on the root sheet.
@@ -97,7 +97,7 @@ The dock takes any USB-C charger that offers 20 V: in practice most chargers of 
 
 ## Parts shared with the robot
 
-TYPE-C-31-M-12 (USB-C, the robot's USBC2), SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120) and capacitor lines (1uF/25V C380328, 100nF/50V C1591, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, CH224A (PD sink), 120k 0603 (0603WAF1203T5E, C25808), PZ254R-11-02P (programming header), INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), TSAL6200, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
+TYPE-C-31-M-12 (USB-C, the robot's USBC2), SMAJ22A, AO4407C, AO3400, HT7533-1, 1N4148W, YLED0603B, and the robot's 0603 resistor (1M, 100k, 10k, 1k, 120) and capacitor lines (1uF/25V C380328, 100nF/50V C14663, 10uF/10V C19702, 10uF/50V 1206 C13585, 47nF/50V C1622). New lines for the dock: CH32V003F4P6, CH224A (PD sink), 120k 0603 (0603WAF1203T5E, C25808), PZ254R-11-02P (programming header), INA180A1 (lingxingic clone, ~$0.09 vs ~$0.16 for TI's), IR204C-A-L, F22-20-0.8-2.4UU coil spring, 220 µF/50 V electrolytic, 50 mΩ 2512 shunt, 150 Ω 2512, 5 A fuse (JFC1206-1500FS, the same family as the robot's F1).
 
 Symbols and footprints come from the shared libraries in [`../lib`](../lib) (`JLCImport`) and the KiCad standard libraries.
 

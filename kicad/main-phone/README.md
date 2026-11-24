@@ -122,6 +122,7 @@ Changed 2026-11-03:
 - 2026-11-23: JTAG1 (STDC14, for the STM32's STLINK) and R40 removed; J4 is now a 1x9 0.1" header (PZ254V-11-09P, C492408): 1-6 the USB-serial console as before, 7 SWDIO, 8 SWCLK, 9 NRST for a WCH-LinkE on U13. U13 PA15 (the old SWO spare) is unconnected. U28 debugs through J1 (10 SWDIO, 11 SWCLK).
 - 2026-11-23: R234 (10k pull-up) and C185 (100 nF) on MCU2-NRST removed: the CH32L103 has a 30-50k internal NRST pull-up and filter, and U13 drives the line open-drain.
 - 2026-11-23: schematic tidy-up; the main I2C bus is renamed SCL/SDA -> IMU-SCL/IMU-SDA (firmware macros PIN_IMU_SCL/PIN_IMU_SDA), CC-RD-EN is a root-level net. No connectivity change.
+- 2026-11-23: VMCU-BAT-3V3 removed with U16 (HT7533-1), D2 (9.1 V zener), C140 and C141. U13 VBAT (pin 6) is on VMCU-3V3 with C36: the RTC has no 32 kHz crystal (PC14/PC15 are the CAM I2C), settings and time live on the phone, and the rail drew a few µA from the battery while the robot was off.
 - renamed (2026-11-09): BAT2 → J2, US1 → CN1, DC_IN → DC-IN-20V, P+/C+ → P+/C+14V4; more parts on JLC symbols and footprints
 - R106 100 mΩ (RE1206F1R100, C46961734; was 50 mΩ): charge current 1.2 A instead of 2.4 A (2026-11-09)
 - USB power moved out of the Battery-Charger sheet into its own sheet, usb_power (2026-11-08); renamed USB2 → USBC2, PWR_EN → USB_PWR_EN, VBUS → VBUS_5V, VBUS_SRC → VBUS_5V_SRC, D+/D- → DP/DN

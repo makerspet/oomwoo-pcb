@@ -101,7 +101,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | BOOT0 | pin 94 | BOOT0 | J1 pin 2, R22 pull-down |
 | OSC_IN/OUT | pins 12/13 | | X3, 8 MHz, with C42/C39 (18 pF) |
 | NRST | pin 14 | ~RST | R21, C37 |
-| VBAT | pin 6 | VMCU-BAT-3V3 | |
+| VBAT | pin 6 | VMCU-3V3 | C36 100 nF. Backup domain unused (no 32 kHz crystal: PC14/PC15 are the CAM I2C; settings and time live on the phone), so VBAT is tied to VDD |
 | VDD x3, VIO x2, VDDA, VREF+ | | VMCU-3V3 | VDDA must equal VIO |
 | VSS x5, VSSA, VREF- | | GND | pin 73 is NC |
 

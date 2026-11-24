@@ -149,7 +149,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 34 | PA13 | SWDIO | MCU2-SWDIO | J1 pin 10: WCH-LinkE debug, or a spare GPIO once SDI is disabled |
 | 37 | PA14 | SWCLK | MCU2-SWCLK | J1 pin 11 |
 | 46 | PB9 | GPIO out | CAM-RESET | camera RESETB; R244 (10k) pull-down holds the camera in reset until U28 releases it |
-| 7 | NRST | reset | MCU2-NRST | from U13 PC13; R234 (10k) + C185 |
+| 7 | NRST | reset | MCU2-NRST | from U13 PC13 (open drain); U28's internal 30-50k pull-up and 100 ns filter, no external parts (R234/C185 removed 2026-11-23) |
 | 44 | BOOT0 | boot | MCU2-BOOT | from U13 PD4; R235 (100k) pull-down |
 | 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
 | 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |

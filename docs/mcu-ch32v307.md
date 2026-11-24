@@ -41,9 +41,9 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PA10 | DVP_D1 | CAM-Y3 | |
 | PA11 | EXTI11 | WHEEL-MOT-L-ENCODE | FT |
 | PA12 | EXTI12 | WHEEL-MOT-R-ENCODE | FT |
-| PA13 | SWDIO | STM32-SWDIO | 2-wire debug (WCH-LinkE) on JTAG1 |
-| PA14 | SWCLK | STM32-SWCLK | |
-| PA15 | GPIO | STM32-SWO-SPARE | JTAG1 pin 8, spare |
+| PA13 | SWDIO | STM32-SWDIO | 2-wire debug (WCH-LinkE), J4 pin 7 |
+| PA14 | SWCLK | STM32-SWCLK | J4 pin 8 |
+| PA15 | GPIO | (none) | spare, not connected (was on JTAG1 until 2026-11-23) |
 | PB0 | ADC_IN8 | MAIN-BRUSH-ADC | |
 | PB1 | ADC_IN9 | SIDE-BRUSH-ADC | |
 | PB2 | OPA3_CH0N | ECHO-FB | also BOOT1: R241 (1M) keeps it low |
@@ -94,7 +94,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PE9 | TIM1_CH1 (remap 3) | BUMP_L_LED_EN | 100–250 kHz PWM; TIM1_CC3/CC4 (no pin output) trigger the ADC |
 | PE10 | GPIO in | WHEEL-MOT-L-DROP | polled |
 | PE11 | TIM1_CH2 (remap 3) | BUMP_R_LED_EN | |
-| PE12 | UART7_TX (remap) | STM32-TX | debug console (J4, JTAG1) |
+| PE12 | UART7_TX (remap) | STM32-TX | debug console (J4) |
 | PE13 | UART7_RX (remap) | STM32-RX | |
 | PE14 | UART8_TX (remap) | MCU2-RX | to U28 PA3 (USART2 RX) |
 | PE15 | UART8_RX (remap) | MCU2-TX | from U28 PA2 (USART2 TX) |
@@ -144,7 +144,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 43 | PB7 | USB PD CC2 | USB_CC2 | |
 | 45 | PB8 | TIM4_CH3 | TORCH | PWM to both front boards' torch LEDs (AO3400 gate, 100k pull-down there) |
 | 25 | PB12 | GPIO | MCU2-PB12 | spare, J1 pin 7 (5 V tolerant) |
-| 5 | PD0 | GPIO | MCU2-PD0 | spare, J1 pin 8 (OSC_IN after reset: remap to PD0 in firmware) |
+| 5 | PD0 | GPIO | MCU2-PD0 | spare, J1 pin 8 (OSC_IN after reset: remap to PD0 in firmware). With PD1: USART3 remap 3 (TX PD0, RX PD1) for a U28 debug console |
 | 6 | PD1 | GPIO | MCU2-PD1 | spare, J1 pin 9 (OSC_OUT after reset) |
 | 34 | PA13 | SWDIO | MCU2-SWDIO | J1 pin 10: WCH-LinkE debug, or a spare GPIO once SDI is disabled |
 | 37 | PA14 | SWCLK | MCU2-SWCLK | J1 pin 11 |
@@ -229,7 +229,7 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 
 ## Flashing
 
-- **U13 (CH32V307):** the built-in bootloader does USB ISP on the high-speed port. Short J1 1-2 (BOOT0) at power-up and flash from a PC over USB-C with WCH's tool or wchisp. The WCH-LinkE on JTAG1 (SWDIO/SWCLK) is only needed for debugging. Phone updates: firmware jumps to the bootloader.
+- **U13 (CH32V307):** the built-in bootloader does USB ISP on the high-speed port. Short J1 1-2 (BOOT0) at power-up and flash from a PC over USB-C with WCH's tool or wchisp. A WCH-LinkE on J4 (7 SWDIO, 8 SWCLK, 9 NRST, 1 GND) is only needed for debugging. Phone updates: firmware jumps to the bootloader.
 - **U28 (CH32L103):** its built-in bootloader loads over USART2 (or USB), and USART2 is the link to U13. U13 holds MCU2-BOOT (BOOT0) high, pulses MCU2-NRST, and sends the image with WCH's serial ISP protocol (the one WCH's ISP tool uses over a UART); R249 keeps BOOT1 low. Then BOOT0 low and another reset. No probe needed, so the phone can update U28 through U13. A WCH-LinkE on PA13/PA14 is only for debugging on the dev board.
 
 ## BOM delta (JLC, 1k pcs)

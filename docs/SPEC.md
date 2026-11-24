@@ -651,7 +651,7 @@ Goal: nothing taller than the right-angle wire-to-board connectors and the buck 
 - battery connector (J2, BAT2 until 2026-11-09): not on the top side since 2026-11-07. It is a vertical Micro-Fit 3.0 compatible 1x4, CJT C3030WV-4P (C239441, ~$0.26, 8.5 A, ~10 mm; Molex 43650-0415, C293547, uses the same footprint), fitted on the underside and facing down into the battery compartment, as on older Roborocks. Pinout unchanged: 1 P+ (through F1), 2 NTC, 3 ID, 4 GND. It was a Molex 43650-0412 right angle, SMD, 5.57 mm ($0.55)
 - J3 (the second LiDAR header, LIDAR2 until 2026-11-13) is a 2x3 0.1" right-angle header (PZ254R-12-06P-A40), fitted
 - J1 spare I/O: right-angle 2x7 0.1" header (PZ254R-12-14P since 2026-11-14, 2x6 before; ~5 mm above the board; vertical, ~8.5 mm, until 2026-11-10)
-- exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: J4 1x6 0.1" (XFCN PZ254V-11-06P, C492405, ~8.5 mm above the board; 1x6 since 2026-11-02 so the cable socket seats fully) and JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm). Same pin numbers as before
+- exception (2026-10-28): the debug headers are vertical so they can be reached from the top under a small removable cover: J4 1x9 0.1" (XFCN PZ254V-11-09P, C492408, since 2026-11-23; 1x6 PZ254V-11-06P before, so the cable socket seats fully on pins 1-6) and, until 2026-11-23, JTAG1 2x7 1.27 mm SMD (PZ1.27-2x7PTP-L7.2, C55099228, ~7 mm; removed with R40: WCH-LinkE has no STDC14 cable, so U13 debug moved to J4 pins 7-9). Same pin numbers as before
 - inductors (CYA0630, SMMS0630, XRNR4030): ~3-4 mm
 - exception: the ITR9606 bumper sensors (~11 mm), set by the bumper mechanism
 - PCB engineer: flag any other part taller than ~7 mm

@@ -43,7 +43,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PA12 | EXTI12 | WHEEL-MOT-R-ENCODE | FT |
 | PA13 | SWDIO | MCU-SWDIO | 2-wire debug (WCH-LinkE), J4 pin 7 |
 | PA14 | SWCLK | MCU-SWCLK | J4 pin 8 |
-| PA15 | GPIO | (none) | spare, not connected (was on JTAG1 until 2026-11-23) |
+| PA15 | GPIO | SPARE-PA15 | spare, J13 pin 1 (not fitted; was on JTAG1 until 2026-11-23) |
 | PB0 | ADC_IN8 | MAIN-BRUSH-ADC | |
 | PB1 | ADC_IN9 | SIDE-BRUSH-ADC | |
 | PB2 | OPA3_CH0N | ECHO-FB | also BOOT1: R241 (1M) keeps it low |
@@ -155,7 +155,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
 | 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |
 
-Free: PC14, PC15 (weak, 2 MHz, can't source current).
+PC14, PC15 (MCU2-PC14/15, U28 pins 3/4): spare, J13 pins 2/3 (weak, 2 MHz, can't source current). No free pins left on U13 or U28: every spare is on J1 or J13.
 
 ## I2C buses (since 2026-11-23)
 

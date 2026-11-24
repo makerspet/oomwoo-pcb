@@ -10101,6 +10101,235 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:Header-Male-2.54_2x3"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Header-Male-2.54_2x3"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:HDR-TH_6P-P2.54-V-M-R2-C3-S2.54-1"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Male-Header_2-54mm-2-3P-Header_C65114.html"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Pin header 2x3, 2.54 mm, vertical, through hole (BOOMELE 2.54-2*3P)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "BOOMELE"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "2.54-2*3P"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C65114"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Pin Headers"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Header-Male-2.54_2x3_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Camera: 24-pin ESP32-CAM style FPC (J12), 8-bit DVP to U13. DOVDD from VSENS-3V3; AVDD 2.8 V and DVDD 1.2 V\nfrom ME6211 LDOs. CAM-RESET from U28 PB9 (R244 holds it in reset), CAM-PWDN from U13 PC10.\nFirmware: XCLK, SCCB, PWDN and RESET low or hi-Z while VSENS-3V3 is off."
 		(exclude_from_sim no)
@@ -10289,12 +10518,6 @@
 		(uuid "43018f54-428b-4b3d-bf66-21e49d732d4a")
 	)
 	(junction
-		(at 186.69 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4526e4c5-687e-4cb7-9658-800a89aa4b08")
-	)
-	(junction
 		(at 241.3 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10359,6 +10582,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "75d7cb23-7572-4de7-94f4-89e314b4f3d0")
+	)
+	(junction
+		(at 186.69 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8481f41b-1519-469a-8cf4-8d3d1adb50f8")
 	)
 	(junction
 		(at 323.85 162.56)
@@ -10501,20 +10730,8 @@
 		(uuid "3ebd7e5f-fec3-4e64-ad64-9089b6a3ce57")
 	)
 	(no_connect
-		(at 318.77 74.93)
-		(uuid "45dd5d88-742c-41e3-b070-d897dfaa4212")
-	)
-	(no_connect
-		(at 318.77 77.47)
-		(uuid "61d18a86-1548-4bcb-96e0-160fd98442e2")
-	)
-	(no_connect
 		(at 62.23 191.77)
 		(uuid "715df496-3cd5-476d-bade-a52245decd81")
-	)
-	(no_connect
-		(at 50.8 64.77)
-		(uuid "8462d1c8-20ab-4252-a142-25af41a0c8cd")
 	)
 	(no_connect
 		(at 149.86 161.29)
@@ -11430,7 +11647,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 82.55) (xy 186.69 82.55)
+			(xy 195.58 82.55) (xy 186.69 82.55)
 		)
 		(stroke
 			(width 0)
@@ -11830,7 +12047,7 @@
 	)
 	(wire
 		(pts
-			(xy 13.97 119.38) (xy 194.31 119.38)
+			(xy 13.97 119.38) (xy 195.58 119.38)
 		)
 		(stroke
 			(width 0)
@@ -12060,7 +12277,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 119.38) (xy 194.31 82.55)
+			(xy 195.58 119.38) (xy 195.58 82.55)
 		)
 		(stroke
 			(width 0)
@@ -24760,5 +24977,453 @@
 				)
 			)
 		)
+	)
+	(label "SPARE-PA15"
+		(at 50.8 64.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b871470d-105b-4915-8e99-5f063c7bce2a")
+	)
+	(wire
+		(pts
+			(xy 318.77 74.93) (xy 330.2 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fa71b32-8566-4001-ab8e-cac29b19beb4")
+	)
+	(label "MCU2-PC14"
+		(at 330.2 74.93 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b5e88d12-a6dd-4978-9a46-fb60ac4bb4e0")
+	)
+	(wire
+		(pts
+			(xy 318.77 77.47) (xy 330.2 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7da8d9a4-6bd9-4f39-82d2-ddca7d917270")
+	)
+	(label "MCU2-PC15"
+		(at 330.2 77.47 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3f392adf-5794-4591-ad5a-78bfb3957579")
+	)
+	(symbol
+		(lib_id "JLCImport:Header-Male-2.54_2x3")
+		(at 243.84 190.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "0f02fc02-e5b6-47ee-9f3f-c5102528cb40")
+		(property "Reference" "J13"
+			(at 241.3 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.54-2*3P"
+			(at 241.3 196.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "JLCImport:HDR-TH_6P-P2.54-V-M-R2-C3-S2.54-1"
+			(at 243.84 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Male-Header_2-54mm-2-3P-Header_C65114.html"
+			(at 243.84 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Spare GPIO header, not fitted: every MCU pin that is not on J1, plus U28 NRST"
+			(at 243.84 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C65114"
+			(at 243.84 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "2.54-2*3P"
+			(at 243.84 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "00f1ccfc-b3aa-40ee-9110-7447eef4e729")
+		)
+		(pin "2"
+			(uuid "af766889-5b5a-4929-8fed-80d968fd8eb6")
+		)
+		(pin "3"
+			(uuid "655f31fa-1e0c-4bd0-9131-4759fcbd2443")
+		)
+		(pin "4"
+			(uuid "fda7ddd2-c376-4311-8daa-3b0ddc46f1bf")
+		)
+		(pin "5"
+			(uuid "d315bd0d-0021-482d-bb85-4b39d9d8baee")
+		)
+		(pin "6"
+			(uuid "dbacf4fb-fe09-4287-8c40-162523bd9ae6")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 236.22 187.96) (xy 228.6 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "702c1fec-9be1-4b6a-9434-f7a4e03c6f5b")
+	)
+	(label "SPARE-PA15"
+		(at 228.6 187.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c6538049-9eeb-4653-b174-24255aea67f3")
+	)
+	(wire
+		(pts
+			(xy 236.22 190.5) (xy 228.6 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e216a233-09a0-4c25-a479-a5e0a25555d7")
+	)
+	(label "MCU2-PC15"
+		(at 228.6 190.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f010d787-76b7-4b91-ae2e-326a43924077")
+	)
+	(wire
+		(pts
+			(xy 251.46 187.96) (xy 259.08 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dee86581-d996-4709-b1f4-6c144fc4f9a4")
+	)
+	(label "MCU2-PC14"
+		(at 259.08 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "75f1b73b-2005-40df-b0b9-307e49e94a60")
+	)
+	(wire
+		(pts
+			(xy 251.46 190.5) (xy 259.08 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44578ab4-78df-4762-82a9-4f83c3fe6e72")
+	)
+	(label "MCU2-NRST"
+		(at 259.08 190.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9face921-3820-48dd-8056-16c14a7f6610")
+	)
+	(wire
+		(pts
+			(xy 236.22 193.04) (xy 233.68 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1d2e9e2-2abd-422c-a2b0-c0fd027c2d27")
+	)
+	(wire
+		(pts
+			(xy 233.68 193.04) (xy 233.68 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b6dfc4f-0e3a-4845-a3f6-2929058f53ab")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 233.68 195.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4fa60d84-5c1f-42fc-80c7-8b9ac7efac3d")
+		(property "Reference" "#PWR09739"
+			(at 233.68 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.68 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 233.68 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5894f09a-3309-431c-a62b-cad1faa16ae6")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
+					(reference "#PWR09739")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 193.04) (xy 254 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd3e7339-0231-4a6a-a254-ffbf81cc3225")
+	)
+	(wire
+		(pts
+			(xy 254 193.04) (xy 254 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72c10558-665b-45e6-84bb-f73a448e1596")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 254 195.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "72097d82-3dbe-44ba-b9ad-a016aed952ce")
+		(property "Reference" "#PWR09740"
+			(at 254 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 254 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 254 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 254 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ecb06790-337b-4f55-91fa-b34665ea2593")
+		)
+		(instances
+			(project "Main"
+				(path "/dbcfb655-8d45-4808-9a74-2a0eb03372e8/69859956-756c-40bd-a067-931964e7d42c"
+					(reference "#PWR09740")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "J13 (not fitted): every spare MCU pin that is not on J1, so J1 keeps its size.\n2x3: 1 SPARE-PA15 (U13), 2 MCU2-PC14, 3 MCU2-PC15 (U28; weak pins, sink only ~3 mA),\n4 MCU2-NRST (U28 reset, also driven by U13 PC13), 5 and 6 GND. Put future spares here."
+		(exclude_from_sim no)
+		(at 205.74 207.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed3c0b4f-f86e-4e8a-91cf-c0f704440967")
 	)
 )

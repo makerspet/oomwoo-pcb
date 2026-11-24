@@ -126,6 +126,7 @@ Changed 2026-11-03:
 - 2026-11-24: switchable charge current: R250 (100 mΩ, as R106) + Q44 (AO4407C) in parallel with R106 when CHG-I-HI (U28 PC13, new sheet pin on MCU and BATTERY-CHARGER) is high, ~2.2 A instead of 1.2 A; Q45 (AO3400) drives the gate, R251 100k gate-source, R252 1M pull-down. For the dock's USB-C PD power budget (dock README).
 - 2026-11-24: cliff LEDs overdriven for pulsing: R224-R229 150 Ω 0603 → 10 Ω 1 W 2512 (~320 mA per LED, ~1.9 A total); Q35 gate AC-coupled (C201 100 nF, R253 47k, D49 clamp) so a stuck-high CLIFF_LED_EN turns them off within ~5 ms; C199/C200 10 µF on VSENS-5V-USB.
 - 2026-11-24: nets left over from the STM32 renamed: STM32-TX/RX → MCU-TX/RX, STM32-SWDIO/SWCLK → MCU-SWDIO/SWCLK (U13), STM-PWR-CTRL → PWR-HOLD (U28); notes that still said STM32 reworded. No connectivity change.
+- 2026-11-24: J13 added, a 2x3 0.1" vertical header, not fitted (BOOMELE 2.54-2*3P, C65114): 1 SPARE-PA15 (U13), 2 MCU2-PC14, 3 MCU2-PC15 (U28, weak pins), 4 MCU2-NRST, 5 and 6 GND. Every spare MCU pin not on J1 goes here, so J1 keeps its size.
 - renamed (2026-11-09): BAT2 → J2, US1 → CN1, DC_IN → DC-IN-20V, P+/C+ → P+/C+14V4; more parts on JLC symbols and footprints
 - R106 100 mΩ (RE1206F1R100, C46961734; was 50 mΩ): charge current 1.2 A instead of 2.4 A (2026-11-09)
 - USB power moved out of the Battery-Charger sheet into its own sheet, usb_power (2026-11-08); renamed USB2 → USBC2, PWR_EN → USB_PWR_EN, VBUS → VBUS_5V, VBUS_SRC → VBUS_5V_SRC, D+/D- → DP/DN

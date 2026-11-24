@@ -121,6 +121,7 @@ Changed 2026-11-03:
 - 2026-11-23: J1 pins 7-11 (were GND) carry the U28 spares: 7 PB12, 8 PD0, 9 PD1, 10 SWDIO (PA13), 11 SWCLK (PA14), so J1 also works as U28's WCH-LinkE debug port; 13/14 stay GND. R221 (BUMP_R_LED_EN pull-up) removed.
 - 2026-11-23: JTAG1 (STDC14, for the STM32's STLINK) and R40 removed; J4 is now a 1x9 0.1" header (PZ254V-11-09P, C492408): 1-6 the USB-serial console as before, 7 SWDIO, 8 SWCLK, 9 NRST for a WCH-LinkE on U13. U13 PA15 (the old SWO spare) is unconnected. U28 debugs through J1 (10 SWDIO, 11 SWCLK).
 - 2026-11-23: R234 (10k pull-up) and C185 (100 nF) on MCU2-NRST removed: the CH32L103 has a 30-50k internal NRST pull-up and filter, and U13 drives the line open-drain.
+- 2026-11-23: schematic tidy-up; the main I2C bus is renamed SCL/SDA -> IMU-SCL/IMU-SDA (firmware macros PIN_IMU_SCL/PIN_IMU_SDA), CC-RD-EN is a root-level net. No connectivity change.
 - renamed (2026-11-09): BAT2 → J2, US1 → CN1, DC_IN → DC-IN-20V, P+/C+ → P+/C+14V4; more parts on JLC symbols and footprints
 - R106 100 mΩ (RE1206F1R100, C46961734; was 50 mΩ): charge current 1.2 A instead of 2.4 A (2026-11-09)
 - USB power moved out of the Battery-Charger sheet into its own sheet, usb_power (2026-11-08); renamed USB2 → USBC2, PWR_EN → USB_PWR_EN, VBUS → VBUS_5V, VBUS_SRC → VBUS_5V_SRC, D+/D- → DP/DN

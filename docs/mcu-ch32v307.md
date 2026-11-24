@@ -54,8 +54,8 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PB7 | USBHS_DP | DP | |
 | PB8 | DVP_D6 | CAM-Y8 | |
 | PB9 | DVP_D7 | CAM-Y9 | |
-| PB10 | I2C2_SCL | SCL | right VL53L7, side VL53L0X, IMU; 400 kHz max (no Fast-mode Plus) |
-| PB11 | I2C2_SDA | SDA | |
+| PB10 | I2C2_SCL | IMU-SCL | right VL53L7, side VL53L0X, IMU; 400 kHz max (no Fast-mode Plus) |
+| PB11 | I2C2_SDA | IMU-SDA | |
 | PB12 | GPIO out | ~VMOT-14V4-EN | R184 pull-up |
 | PB13 | OPA3_CH0P | CARPET-SENSOR-ECHO | the biased, clamped echo node on the carpet sheet |
 | PB14 | GPIO out | VSENS-5V-USB-EN | |
@@ -162,7 +162,7 @@ Two buses, so both VL53L7s keep the default address and the front boards need no
 
 | Bus | Pins | Devices | Pull-ups |
 |---|---|---|---|
-| Main (SCL/SDA) | U13 I2C2, PB10/PB11 | right VL53L7 (J5), side VL53L0X, IMU | R5/R6 2.2k |
+| Main (IMU-SCL/IMU-SDA) | U13 I2C2, PB10/PB11 | right VL53L7 (J5), side VL53L0X, IMU | R5/R6 2.2k |
 | Camera (CAM-SCL/CAM-SDA) | U13 PC14/PC15 bit-banged; U28 I2C2 (PB10/PB11) | left VL53L7 (J6), camera SCCB (J12) | R246/R247 2.2k |
 
 - **Addresses:** the VL53L7s and the VL53L0X all start at 0x52 (0x29 7-bit). On the main bus, firmware holds the VL53L0X off with its XSHUT (SIDE-PROXI-CE-R, U28 PB14), moves the right VL53L7 to another address, then releases XSHUT, every boot. The camera is at 0x30 or 0x3C, so the camera bus has no clash.

@@ -3827,7 +3827,7 @@
 		)
 		(uuid "ff610b22-5ae3-4f2d-b1bc-38000afe81f0")
 	)
-	(text "Torch: white LED, ~190 mA from 5 V (R2005).\nPWM on TORCH from main U28 PB8.\nR2006 keeps it off in reset.\nAim it away from the ToF window\nand the IR receiver."
+	(text "Torch: white LED, ~190 mA.\nDriver on the main board since\n2026-11-24: pin 6 = anode (5 V via\nR255/R256), pin 7 = cathode (Q46,\nPWM from U28 PB8).\nAim it away from the ToF window\nand the IR receiver."
 		(exclude_from_sim no)
 		(at 195.58 126.746 0)
 		(effects
@@ -3883,18 +3883,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3c205672-d12f-4348-bb5b-151fa3c8a945")
-	)
-	(junction
-		(at 222.25 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "49e84855-d827-40fa-96d3-311a15cc9bcd")
-	)
-	(junction
-		(at 214.63 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f96b54b-7922-4774-8303-2ec17be2eddd")
 	)
 	(junction
 		(at 135.89 87.63)
@@ -3988,16 +3976,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 99.06) (xy 214.63 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0387d726-3b6d-4e69-bf41-a969d0638d6c")
-	)
-	(wire
-		(pts
 			(xy 171.45 77.47) (xy 176.53 77.47)
 		)
 		(stroke
@@ -4025,16 +4003,6 @@
 			(type default)
 		)
 		(uuid "11f2edaa-0216-4336-8101-2b9d465673d1")
-	)
-	(wire
-		(pts
-			(xy 66.04 77.47) (xy 59.69 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15456a9d-8d75-45db-a4b9-ca6d5654ddaf")
 	)
 	(wire
 		(pts
@@ -4115,16 +4083,6 @@
 			(type default)
 		)
 		(uuid "3422a2f4-ff10-470d-8559-e2d70f9dd854")
-	)
-	(wire
-		(pts
-			(xy 214.63 99.06) (xy 217.17 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "344b7298-ea5b-4cb8-87a5-6fee832ca962")
 	)
 	(wire
 		(pts
@@ -4248,16 +4206,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 64.77) (xy 227.33 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79d89d7c-ecc3-43a6-8f5e-c0e505617eee")
-	)
-	(wire
-		(pts
 			(xy 54.61 72.39) (xy 54.61 87.63)
 		)
 		(stroke
@@ -4295,16 +4243,6 @@
 			(type default)
 		)
 		(uuid "8b60f2f2-8f93-44aa-a0d3-c4c4ead04f90")
-	)
-	(wire
-		(pts
-			(xy 59.69 99.06) (xy 214.63 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91b44229-33e3-42ce-8a25-e6595ae69f64")
 	)
 	(wire
 		(pts
@@ -4478,16 +4416,6 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 99.06) (xy 59.69 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0525a97-ec0b-43f3-9376-4f8838822292")
-	)
-	(wire
-		(pts
 			(xy 57.15 74.93) (xy 57.15 115.57)
 		)
 		(stroke
@@ -4636,7 +4564,7 @@
 		)
 		(uuid "7334d341-eccb-46f8-b4c6-28bbe733a342")
 	)
-	(label "TORCH"
+	(label "TORCH-K"
 		(at 66.04 77.47 180)
 		(effects
 			(font
@@ -5410,176 +5338,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 222.25 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "428ff3f6-c837-4537-aa9e-86e0538cc897")
-		(property "Reference" "#PWR02009"
-			(at 222.25 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VDD-5V"
-			(at 218.186 60.452 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 222.25 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ec069205-2a98-4c00-bd85-2b125e7993dc")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR02009")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:CL10A106KP8NNNC")
-		(at 227.33 69.85 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4687efa4-fecc-42bc-a74d-4f2640be02ed")
-		(property "Reference" "C2006"
-			(at 229.87 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF/10V"
-			(at 229.87 71.12 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:C0603"
-			(at 227.33 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C19702.pdf"
-			(at 227.33 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Torch supply bypass at the LED"
-			(at 227.33 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C19702"
-			(at 227.33 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9095ced8-5a34-4406-9931-9c6911d9936e")
-		)
-		(pin "2"
-			(uuid "0157eaf5-4701-426b-9953-509fc27ed58f")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "C2006")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 175.26 120.65 0)
 		(unit 1)
@@ -6045,7 +5803,7 @@
 				)
 			)
 		)
-		(property "Description" "Torch: white LED 6500K, 1 W 3030, IF max 300 mA; run at ~190 mA (R2005), PWM on TORCH"
+		(property "Description" "Torch: white LED 6500K, 1 W 3030, IF max 300 mA; run at ~190 mA (R255/R256 and Q46 on the main board)"
 			(at 220.98 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -6155,84 +5913,6 @@
 			(project "Front Sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR02021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 214.63 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7fa73c2b-ef3e-496a-8f43-d41ddb0c34a3")
-		(property "Reference" "#PWR2023"
-			(at 214.63 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 214.63 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 214.63 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 214.63 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 214.63 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8eaecffc-5dc0-469e-8e40-077d2e141783")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR2023")
 					(unit 1)
 				)
 			)
@@ -6486,84 +6166,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 86.36 67.31 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9c4371d2-68c1-4e2d-956d-c60be6297ca2")
-		(property "Reference" "#PWR02002"
-			(at 86.36 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VDD-5V"
-			(at 82.296 62.992 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 86.36 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 86.36 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4508054f-d8a6-4694-9dfe-1e056c3b71f0")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR02002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:CC0603KRX7R9BB104")
 		(at 134.62 115.57 90)
 		(mirror x)
@@ -6679,101 +6281,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:AO3400")
-		(at 222.25 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a035784e-4601-4d1a-bdaa-d02bc35be278")
-		(property "Reference" "Q2001"
-			(at 225.806 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AO3400"
-			(at 225.806 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:AO3400"
-			(at 222.25 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403011756_FOSAN-AO3400_C20628874.pdf"
-			(at 222.25 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Torch low-side switch; 3.3 V gate drive from main-board U28 PB8 (TIM4_CH3 PWM)"
-			(at 222.25 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C20628874"
-			(at 222.25 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b05cba98-031c-449c-be97-f2e6da1bd339")
-		)
-		(pin "2"
-			(uuid "8f078685-17c7-46f1-b676-307a5e409a84")
-		)
-		(pin "3"
-			(uuid "69340814-12fb-4cbe-b510-6f2b1de6fc82")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "Q2001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 63.5 69.85 0)
 		(unit 1)
@@ -6846,84 +6353,6 @@
 			(project "Front Sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#FLG02013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 222.25 104.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a3b43459-5d4e-4d71-8d54-9c26f907a8af")
-		(property "Reference" "#PWR2022"
-			(at 222.25 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 222.25 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 222.25 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d5693019-7ac8-4691-9e9c-03c44d51d9b4")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR2022")
 					(unit 1)
 				)
 			)
@@ -7079,99 +6508,6 @@
 			(project "Front Sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR2003")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "JLCImport:0603WAF1003T5E")
-		(at 214.63 106.68 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ad7e6007-798e-4522-bd8b-5105c611c8db")
-		(property "Reference" "R2006"
-			(at 212.344 105.41 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100k"
-			(at 212.344 107.95 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:R0603"
-			(at 214.63 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_100KR-1003-1_C25803.html"
-			(at 214.63 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount"
-			(at 214.63 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25803"
-			(at 214.63 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "79047e1b-3404-4a91-a368-32271d24699d")
-		)
-		(pin "2"
-			(uuid "2b483949-e5f4-490a-86eb-13ea5c2cfe1e")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "R2006")
 					(unit 1)
 				)
 			)
@@ -7754,99 +7090,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:25121WJ0100T4E")
-		(at 222.25 69.85 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d3e03f85-fff6-479c-a912-2d0f1f126c44")
-		(property "Reference" "R2005"
-			(at 219.71 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10Ω/1W"
-			(at 219.71 71.12 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "JLCImport:R2512"
-			(at 222.25 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C16861.pdf"
-			(at 222.25 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Torch LED current: (5 V - ~3.1 V) / 10 ohm = ~190 mA, 0.36 W at full duty; 1 W 2512"
-			(at 222.25 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C16861"
-			(at 222.25 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f08b2fa8-b24f-4b04-8be9-70f8d3d0362b")
-		)
-		(pin "2"
-			(uuid "d5719d5b-ad8f-4f7f-91cf-b05e9ffb3a68")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "R2005")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "JLCImport:0603WAF4702T5E")
 		(at 128.27 85.09 270)
 		(mirror x)
@@ -8341,84 +7584,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 227.33 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ed5674f4-3675-4f2c-80eb-5ada5f1f8aa3")
-		(property "Reference" "#PWR2024"
-			(at 227.33 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 227.33 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 227.33 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 227.33 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 227.33 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fbdbb081-1567-46bf-afc4-a2f2d3fb5d8c")
-		)
-		(instances
-			(project "Front Sensor"
-				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
-					(reference "#PWR2024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 128.27 90.17 0)
 		(unit 1)
 		(body_style 1)
@@ -8727,4 +7892,34 @@
 		)
 	)
 	(embedded_fonts no)
+	(label "TORCH-A"
+		(at 86.36 67.31 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b7f81e3-2549-4f17-982d-d4a8c14b61d3")
+	)
+	(label "TORCH-A"
+		(at 222.25 74.93 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "86d6f321-4a09-47d1-bba4-ac06b1f114a6")
+	)
+	(label "TORCH-K"
+		(at 222.25 93.98 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0f34764e-822f-48f7-898d-f35fe47ce8b4")
+	)
 )

@@ -143,7 +143,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 41 | PB5 | GPIO out | CC-RD-EN | Rd switch, see below |
 | 42 | PB6 | USB PD CC1 | USB_CC1 | |
 | 43 | PB7 | USB PD CC2 | USB_CC2 | |
-| 45 | PB8 | TIM4_CH3 | TORCH | PWM to both front boards' torch LEDs (AO3400 gate, 100k pull-down there) |
+| 45 | PB8 | TIM4_CH3 | TORCH | PWM to both front boards' torch LEDs: gate of Q46 (AO3400, R257 100k pull-down), which switches both cathodes (TORCH-K) |
 | 25 | PB12 | GPIO | MCU2-PB12 | spare, J1 pin 7 (5 V tolerant) |
 | 5 | PD0 | GPIO | MCU2-PD0 | spare, J1 pin 8 (OSC_IN after reset: remap to PD0 in firmware). With PD1: USART3 remap 3 (TX PD0, RX PD1) for a U28 debug console |
 | 6 | PD1 | GPIO | MCU2-PD1 | spare, J1 pin 9 (OSC_OUT after reset) |

@@ -28,14 +28,14 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 
 | Pin | Function | Net | Notes |
 |---|---|---|---|
-| PA0 | ADC_IN0 | WHEEL-MOT-L-ADC | left wheel current |
+| PA0 | ADC_IN0 | WHEEL-MOT-L-ADC | left wheel current, through R258/C204 (10k, 100 nF, 1 ms) since 2026-11-24: the ADC reads the average (I x duty) |
 | PA1 | ADC_IN1 | ECHO-ENV | carpet echo envelope (detector output) |
 | PA2 | ADC_IN2 | BUMP-L | analog: firmware sees how fast the flag moves |
 | PA3 | ADC_IN3 | BUMP-R | |
 | PA4 | DVP_HSYNC | CAM-HREF | |
 | PA5 | DVP_VSYNC | CAM-VSYNC | |
 | PA6 | DVP_PCLK | CAM-PCLK | |
-| PA7 | ADC_IN7 | WHEEL-MOT-R-ADC | |
+| PA7 | ADC_IN7 | WHEEL-MOT-R-ADC | R259/C205 filter |
 | PA8 | MCO | CAM-MCO | camera XCLK through R248 (100 Ω); PLL2 or PLL3 set for 24 MHz, or the 8 MHz HSE |
 | PA9 | DVP_D0 | CAM-Y2 | |
 | PA10 | DVP_D1 | CAM-Y3 | |
@@ -44,8 +44,8 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PA13 | SWDIO | MCU-SWDIO | 2-wire debug (WCH-LinkE), J4 pin 7 |
 | PA14 | SWCLK | MCU-SWCLK | J4 pin 8 |
 | PA15 | GPIO | SPARE-PA15 | spare, J13 pin 1 (not fitted; was on JTAG1 until 2026-11-23) |
-| PB0 | ADC_IN8 | MAIN-BRUSH-ADC | |
-| PB1 | ADC_IN9 | SIDE-BRUSH-ADC | |
+| PB0 | ADC_IN8 | MAIN-BRUSH-ADC | R260/C206 filter |
+| PB1 | ADC_IN9 | SIDE-BRUSH-ADC | R261/C207 filter |
 | PB2 | OPA3_CH0N | ECHO-FB | also BOOT1: R241 (1M) keeps it low |
 | PB3 | DVP_D5 | CAM-Y7 | DVP_D5 moves from PB6 to PB3 when USBHS is enabled (datasheet note 8; recent lots) |
 | PB4 | TIM3_CH1 (remap 2) | MAIN-FAN-FB | tach input capture, FT |
@@ -123,7 +123,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 15 | PA5 | ADC_IN5 | DC_IN_SENSE | ≥1 kHz, catches the dock's signature probe |
 | 16 | PA6 | ADC_IN6 | BAT_NTC | battery pulled while docked: the pin sees ~4.5 V through R233 (10k), ~0.1 mA into the clamp diode; check the injection limit on the dev board |
 | 17 | PA7 | ADC_IN7 | USB_VBUS_SENSE | 100k/47k divider; whether the phone supplies VBUS, and the robot 5 V sag while charging it |
-| 18 | PB0 | ADC_IN8 | BAT_ID | |
+| 18 | PB0 | ADC_IN8 | BAT_ID | R254 (1M) to VMCU-3V3 + C203 (100 nF) since 2026-11-24: ~1.25 V with the pack's 620k ID resistor, ~3.3 V without |
 | 19 | PB1 | ADC_IN9 | LDR | wake-up sensor |
 | 29 | PA8 | TIM1_CH1 | LED-HOME | PWM possible |
 | 30 | PA9 | TIM1_CH2 | LED-PWR | PWM possible |

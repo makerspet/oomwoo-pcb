@@ -27,7 +27,7 @@ I'm keeping the first board as simple as possible, so it can be built and tested
 
 Details for both are in the [I/O board spec](docs/SPEC.md). Symbol, footprint and 3D libraries shared by all boards are in [`kicad/lib`](kicad/lib). Each board folder keeps its schematic PDF and BOM in `output/`, e.g. [the v1 board schematic](kicad/main-phone/output/Main.pdf).
 
-The v1 board comes with a **[charging-only dock](kicad/charging-dock/README.md)**: a 20 V brick, a CH32V003 MCU (Arduino core, ch32fun, PlatformIO), robot detection before the contacts go live, and an IR beacon. The plan is to make the v1 board, the dock and the small sensor boards (including the two [front ToF boards](kicad/front-sensors/README.md), one design fitted twice, the [side sensor board](kicad/side-sensors/README.md) six [cliff sensor boards](kicad/cliff-sensor/README.md), the [rear docking IR board](kicad/rear-ir/README.md) two [Hall sensor boards](kicad/hall-sensor/README.md) and the [wake-up sensor board](kicad/wake-sensor/README.md)) as one panel (V-cuts or mouse bites), so they share parts and cost less to make and ship. To keep part references unique across boards, every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s, wake-up sensor 7000s.
+The v1 board comes with a **[charging-only dock](kicad/charging-dock/README.md)**: a USB-C PD charger in (any charger with 20 V), a CH32V003 MCU (Arduino core, ch32fun, PlatformIO), robot detection before the contacts go live, and an IR beacon. The plan is to make the v1 board, the dock and the small sensor boards (including the two [front ToF boards](kicad/front-sensors/README.md), one design fitted twice, the [side sensor board](kicad/side-sensors/README.md) six [cliff sensor boards](kicad/cliff-sensor/README.md), the [rear docking IR board](kicad/rear-ir/README.md) two [Hall sensor boards](kicad/hall-sensor/README.md) and the [wake-up sensor board](kicad/wake-sensor/README.md)) as one panel (V-cuts or mouse bites), so they share parts and cost less to make and ship. To keep part references unique across boards, every board has its own reference range: main board 1-999, dock 1000s, front ToF 2000s, side sensor 3000s, cliff 4000s, rear IR 5000s, Hall 6000s, wake-up sensor 7000s.
 
 ## Architecture notes
 
@@ -76,7 +76,6 @@ Consumer vacuums place CPU and MCU on the same PCB board. Since OOMWOO has to be
 - USB power for charging; USB for serial shell, etc.
 - audio encoder/decoder, audio amp, mics (if any)
 - SD card for hacking, cheap large storage
-- connect IMU FSYNC to MCU to synchronize MCU timestamps with IMU data streaming to CPU
 
 Consumer vacuums usually don't have a CPU fan/heatsink because the vacuum's suction fan can (indirectly) cool the CPU/MCU PCB. Therefore, no CPU fan on this I/O board.
 

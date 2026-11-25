@@ -28,24 +28,24 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 
 | Pin | Function | Net | Notes |
 |---|---|---|---|
-| PA0 | ADC_IN0 | WHEEL-MOT-L-ADC | left wheel current |
+| PA0 | ADC_IN0 | WHEEL-MOT-L-ADC | left wheel current, through R258/C204 (10k, 100 nF, 1 ms) since 2026-11-24: the ADC reads the average (I x duty) |
 | PA1 | ADC_IN1 | ECHO-ENV | carpet echo envelope (detector output) |
 | PA2 | ADC_IN2 | BUMP-L | analog: firmware sees how fast the flag moves |
 | PA3 | ADC_IN3 | BUMP-R | |
 | PA4 | DVP_HSYNC | CAM-HREF | |
 | PA5 | DVP_VSYNC | CAM-VSYNC | |
 | PA6 | DVP_PCLK | CAM-PCLK | |
-| PA7 | ADC_IN7 | WHEEL-MOT-R-ADC | |
+| PA7 | ADC_IN7 | WHEEL-MOT-R-ADC | R259/C205 filter |
 | PA8 | MCO | CAM-MCO | camera XCLK through R248 (100 Ω); PLL2 or PLL3 set for 24 MHz, or the 8 MHz HSE |
 | PA9 | DVP_D0 | CAM-Y2 | |
 | PA10 | DVP_D1 | CAM-Y3 | |
 | PA11 | EXTI11 | WHEEL-MOT-L-ENCODE | FT |
 | PA12 | EXTI12 | WHEEL-MOT-R-ENCODE | FT |
-| PA13 | SWDIO | STM32-SWDIO | 2-wire debug (WCH-LinkE), J4 pin 7 |
-| PA14 | SWCLK | STM32-SWCLK | J4 pin 8 |
-| PA15 | GPIO | (none) | spare, not connected (was on JTAG1 until 2026-11-23) |
-| PB0 | ADC_IN8 | MAIN-BRUSH-ADC | |
-| PB1 | ADC_IN9 | SIDE-BRUSH-ADC | |
+| PA13 | SWDIO | MCU-SWDIO | 2-wire debug (WCH-LinkE), J4 pin 7 |
+| PA14 | SWCLK | MCU-SWCLK | J4 pin 8 |
+| PA15 | GPIO | SPARE-PA15 | spare, J13 pin 1 (not fitted; was on JTAG1 until 2026-11-23) |
+| PB0 | ADC_IN8 | MAIN-BRUSH-ADC | R260/C206 filter |
+| PB1 | ADC_IN9 | SIDE-BRUSH-ADC | R261/C207 filter |
 | PB2 | OPA3_CH0N | ECHO-FB | also BOOT1: R241 (1M) keeps it low |
 | PB3 | DVP_D5 | CAM-Y7 | DVP_D5 moves from PB6 to PB3 when USBHS is enabled (datasheet note 8; recent lots) |
 | PB4 | TIM3_CH1 (remap 2) | MAIN-FAN-FB | tach input capture, FT |
@@ -71,7 +71,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PC13 | GPIO out (open drain) | MCU2-NRST | U28 reset |
 | PC14 | GPIO (bit-banged I2C) | CAM-SCL | camera SCCB + left VL53L7, 400 kHz; low-drive pin (open drain, only sinks ~1.5 mA); R246 pull-up. Shared with U28 PB10 |
 | PC15 | GPIO (bit-banged I2C) | CAM-SDA | R247 pull-up. Shared with U28 PB11 |
-| PD0 | GPIO out | CLIFF_LED_EN | |
+| PD0 | GPIO out | CLIFF_LED_EN | pulsed cliff LEDs, ~1.9 A total while on; AC-coupled gate, keep pulses under ~1 ms (since 2026-11-24) |
 | PD1, PD3 | TIM10_CH1/CH2 (remap 2) | WHEEL-MOT-L-IN1, -IN2 | PWM |
 | PD5, PD7 | TIM10_CH3/CH4 | WHEEL-MOT-R-IN1, -IN2 | PWM |
 | PD2 | UART5_RX | LIDAR_TX | |
@@ -94,8 +94,8 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | PE9 | TIM1_CH1 (remap 3) | BUMP_L_LED_EN | 100–250 kHz PWM; TIM1_CC3/CC4 (no pin output) trigger the ADC |
 | PE10 | GPIO in | WHEEL-MOT-L-DROP | polled |
 | PE11 | TIM1_CH2 (remap 3) | BUMP_R_LED_EN | |
-| PE12 | UART7_TX (remap) | STM32-TX | debug console (J4) |
-| PE13 | UART7_RX (remap) | STM32-RX | |
+| PE12 | UART7_TX (remap) | MCU-TX | debug console (J4) |
+| PE13 | UART7_RX (remap) | MCU-RX | |
 | PE14 | UART8_TX (remap) | MCU2-RX | to U28 PA3 (USART2 RX) |
 | PE15 | UART8_RX (remap) | MCU2-TX | from U28 PA2 (USART2 TX) |
 | BOOT0 | pin 94 | BOOT0 | J1 pin 2, R22 pull-down |
@@ -123,7 +123,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 15 | PA5 | ADC_IN5 | DC_IN_SENSE | ≥1 kHz, catches the dock's signature probe |
 | 16 | PA6 | ADC_IN6 | BAT_NTC | battery pulled while docked: the pin sees ~4.5 V through R233 (10k), ~0.1 mA into the clamp diode; check the injection limit on the dev board |
 | 17 | PA7 | ADC_IN7 | USB_VBUS_SENSE | 100k/47k divider; whether the phone supplies VBUS, and the robot 5 V sag while charging it |
-| 18 | PB0 | ADC_IN8 | BAT_ID | |
+| 18 | PB0 | ADC_IN8 | BAT_ID | R254 (1M) to VMCU-3V3 + C203 (100 nF) since 2026-11-24: ~1.25 V with the pack's 620k ID resistor, ~3.3 V without |
 | 19 | PB1 | ADC_IN9 | LDR | wake-up sensor |
 | 29 | PA8 | TIM1_CH1 | LED-HOME | PWM possible |
 | 30 | PA9 | TIM1_CH2 | LED-PWR | PWM possible |
@@ -134,15 +134,16 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 20 | PB2 | BOOT1 | BOOT1 | R249 (100k) pull-down: BOOT0 = 1 with BOOT1 = 0 starts the bootloader |
 | 21 | PB10 | I2C2_SCL | CAM-SCL | left VL53L7 + camera bus, in parallel with U13 PC14; input (hi-Z) when unused |
 | 22 | PB11 | I2C2_SDA | CAM-SDA | in parallel with U13 PC15 |
-| 26 | PB13 | GPIO out | STM-PWR-CTRL | power latch; R172 holds the latch while U28 boots |
+| 26 | PB13 | GPIO out | PWR-HOLD | power latch; R172 holds the latch while U28 boots |
 | 27 | PB14 | GPIO out | SIDE-PROXI-CE-R | VL53L0X XSHUT |
 | 28 | PB15 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
+| 2 | PC13 | GPIO out | CHG-I-HI | high = ~2.2 A charging (Q45 -> Q44 puts R250 in parallel with R106); gate drive only, R252 (1M) pull-down (since 2026-11-24) |
 | 39 | PB3 | GPIO in | ~STDBY | internal pull-up |
 | 40 | PB4 | GPIO in | ~CHRG | internal pull-up |
 | 41 | PB5 | GPIO out | CC-RD-EN | Rd switch, see below |
 | 42 | PB6 | USB PD CC1 | USB_CC1 | |
 | 43 | PB7 | USB PD CC2 | USB_CC2 | |
-| 45 | PB8 | TIM4_CH3 | TORCH | PWM to both front boards' torch LEDs (AO3400 gate, 100k pull-down there) |
+| 45 | PB8 | TIM4_CH3 | TORCH | PWM to both front boards' torch LEDs: gate of Q46 (AO3400, R257 100k pull-down), which switches both cathodes (TORCH-K) |
 | 25 | PB12 | GPIO | MCU2-PB12 | spare, J1 pin 7 (5 V tolerant) |
 | 5 | PD0 | GPIO | MCU2-PD0 | spare, J1 pin 8 (OSC_IN after reset: remap to PD0 in firmware). With PD1: USART3 remap 3 (TX PD0, RX PD1) for a U28 debug console |
 | 6 | PD1 | GPIO | MCU2-PD1 | spare, J1 pin 9 (OSC_OUT after reset) |
@@ -154,7 +155,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
 | 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |
 
-Free: PC13–PC15 (weak, 2 MHz, can't source current).
+PC14, PC15 (MCU2-PC14/15, U28 pins 3/4): spare, J13 pins 2/3 (weak, 2 MHz, can't source current). No free pins left on U13 or U28: every spare is on J1 or J13.
 
 ## I2C buses (since 2026-11-23)
 

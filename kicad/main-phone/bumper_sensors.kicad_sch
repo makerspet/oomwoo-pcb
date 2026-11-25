@@ -1563,6 +1563,155 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "JLCImport:0603WAF1001T5E"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1k"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:R0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1KR-1001-1_C21190.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(厚声)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "0603WAF1001T5E"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C21190"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "0603WAF1001T5E_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "- slotted photo-interrupters\n- BUMP-X reads low when light passes the slot\n- drive BUMP_L/R_LED_EN PWM <<15 usec period to enable\n- tune R44, R48, LED PWM duty to let ADC sense full open/close range\n  1k keeps photo transistor output out of saturation\n  so PA4/PA5 (ADC2) see the transition (ITR9606 IC(ON) 0.5-10 mA)\n- R221 enables MCU USB-C Rd on both CC1 and CC2 during MCU *reset*,\n  so the phone detects the robot whichever way the cable is plugged in\n"
 		(exclude_from_sim no)
@@ -2279,7 +2428,7 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:FRC0603J102TS")
+		(lib_id "JLCImport:0603WAF1001T5E")
 		(at 123.19 83.82 270)
 		(unit 1)
 		(body_style 1)
@@ -2323,7 +2472,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907113.pdf"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1KR-1001-1_C21190.html"
 			(at 113.03 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2334,7 +2483,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+		(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount"
 			(at 123.19 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2345,7 +2494,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FOJAN(富捷)"
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
 			(at 110.49 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2356,7 +2505,7 @@
 				)
 			)
 		)
-		(property "MPN" "FRC0603J102 TS"
+		(property "MPN" "0603WAF1001T5E"
 			(at 107.95 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2367,7 +2516,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907113"
+		(property "LCSC" "C21190"
 			(at 105.41 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3210,7 +3359,7 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:FRC0603J102TS")
+		(lib_id "JLCImport:0603WAF1001T5E")
 		(at 204.47 83.82 270)
 		(unit 1)
 		(body_style 1)
@@ -3254,7 +3403,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907113.pdf"
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1KR-1001-1_C21190.html"
 			(at 194.31 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3265,7 +3414,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS"
+		(property "Description" "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount"
 			(at 204.47 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3276,7 +3425,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FOJAN(富捷)"
+		(property "Manufacturer" "UNI-ROYAL(厚声)"
 			(at 191.77 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3287,7 +3436,7 @@
 				)
 			)
 		)
-		(property "MPN" "FRC0603J102 TS"
+		(property "MPN" "0603WAF1001T5E"
 			(at 189.23 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -3298,7 +3447,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907113"
+		(property "LCSC" "C21190"
 			(at 186.69 83.82 0)
 			(hide yes)
 			(show_name no)

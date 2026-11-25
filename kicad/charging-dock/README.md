@@ -51,7 +51,7 @@ Both sides of the diode are measured, so its drop cancels. Expected readings on 
 Firmware:
 - check VIN first: refuse to switch on above ~22 V (the robot's limit; PD 20 V is 19-21 V) or below ~18.5 V (the robot can't finish a 4S charge), and read the PD contract and the current limit from U1005
 - probe for a few seconds: the robot's input capacitance makes the reading settle with τ ≈ 1.6 s. Require a stable value inside a window around 130 kΩ (start with 90-180 kΩ and tune it on real robots, including one with a flat battery). The settling time itself is a second check that something capacitive, i.e. a robot, is connected.
-- then PROBE-DRV low and CHARGE-EN high, and check DOCK-SENSE ≈ VIN-SENSE within ~10 ms
+- then PROBE-DRV low and CHARGE-EN high, and check DOCK-SENSE ≈ VIN-SENSE within ~10 ms (the firmware allows 50 ms for its filtered readings; the ADC watchdog catches a short at once)
 - while on: switch off if I-SENSE drops below ~5 mA for ~100 ms (the robot keeps its MCU on while charging, so it never draws zero), or above ~3.2 A (use the ADC analog watchdog for a fast trip). Read the INA180 zero with VDOCK-20V off; its offset is up to ~3 mA.
 - after switching off, wait for VDOCK-20V to bleed down before probing again
 
@@ -84,7 +84,7 @@ The dock takes any USB-C charger that offers 20 V: in practice most chargers of 
 - IR-L and IR-R drive two strings, so each side of the dock can send its own code.
 - The gates are AC-coupled (C1004/C1006 100 nF, R1003/R1005 100k, ~10 ms), like the robot's carpet driver. A pin stuck high turns the LEDs off within ~30 ms instead of leaving 100 mA flowing.
 - Each string has two 150 Ω 1 W 2512 in parallel (R1004 + R1018, R1006 + R1019; since 2026-11-24): 75 Ω, ~210 mA peak, ~3.3 W peak and ~0.6 W average per string at NEC duty, ~0.3 W per resistor. The IR204C-A-L takes 100 mA continuous and 1 A in ≤ 100 µs pulses at ≤ 1 % duty; the carrier pulses are ~9 µs at 1/3 duty, ~70 mA average while sending. Leave R1018/R1019 off for ~100 mA.
-- The frames carry the power budget for the robot (proposed: the NEC command byte = watts available at the contacts / 2, 0 = refusing). Firmware defines the exact code.
+- The frames carry the power budget for the robot (since 2026-11-25, [`mcu/common/dock_beacon.h`](https://github.com/makerspet/oomwoo-firmware/blob/main/mcu/common/dock_beacon.h)): standard NEC, address 0xD1 from the left string and 0xD2 from the right, command byte = watts available at the contacts / 2 (20 V x the PD limit - 1 W; 0 = refusing: no 20 V, no PD contract, or a fault). The strings take turns, a frame each with 40 ms gaps, and keep sending while the robot charges. Firmware: [`mcu/dock`](https://github.com/makerspet/oomwoo-firmware/tree/main/mcu/dock).
 - No IR receiver on the dock: the optional, unfitted U1002 (IRM-H638T, for robot → dock messages) and its R1002/C1003 filter were removed on 2026-11-15.
 
 ## PCB notes (for layout)

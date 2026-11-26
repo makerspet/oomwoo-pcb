@@ -13,7 +13,7 @@ The robot backs into the dock, as a mop or auto-empty dock would need, so this b
 
 ## Connector J5001
 
-ZX-SH1.0-4PLT (C7430453): JST SH compatible, 1.0 mm pitch, SMD, vertical. The same part as the cliff and Hall boards, and REAR-IR1 on the main board.
+ZX-SH1.0-4PWT (C7430446): JST SH compatible, 1.0 mm pitch, SMD, right angle (since 2026-11-25; the vertical ZX-SH1.0-4PLT before), so the cable leaves along the upright board instead of out of its back. The same series as the cliff boards and REAR-IR1 on the main board, which stay vertical (ZX-SH1.0-4PLT, C7430453); the pinout and the cable are the same.
 
 | Pin | Signal | Main board |
 | --- | --- | --- |

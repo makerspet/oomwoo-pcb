@@ -11,6 +11,192 @@
 		(company "OOMWOO Hall sensor")
 	)
 	(lib_symbols
+		(symbol "JLCImport:CC0603KRX7R9BB104"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100nF/50V"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "JLCImport:C0603"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_100nF-104-10-50V_C14663.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "YAGEO(国巨)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CC0603KRX7R9BB104"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C14663"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CC0603KRX7R9BB104_0_1"
+				(polyline
+					(pts
+						(xy -0.51 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.51 -2.03) (xy -0.51 2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 2.03) (xy 0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 0.51 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "JLCImport:CC6201ST"
 			(pin_names
 				(hide yes)
@@ -384,228 +570,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "JLCImport:ZX-SH1_0-3PLT"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ZX-SH1_0-3PLT"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:ZX-SH1_0-3PLT"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430452.pdf"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "JST SH compatible 1.0 mm 1x3P, SMD vertical (top entry), 2 mounting pads (4, 5)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "Megastar"
-				(at 0 -20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer Part" "ZX-SH1.0-3PLT"
-				(at 0 -22.86 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C7430452"
-				(at 0 -25.4 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "C7430452 ZX-SH1.0-3PLT SH1.0 3P vertical Megastar"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ZX-SH1_0-3PLT_0_1"
-				(rectangle
-					(start -1.27 5.08)
-					(end 5.08 -5.08)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 3.81)
-					(radius 0.38)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 2.54 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -2.54 0)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 -7.62 90)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 7.62 270)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1108,10 +1072,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLCImport:CC0603KRX7R9BB104"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "JLCImport:ZX-SH1_0-3PWT"
 			(pin_names
 				(hide yes)
 			)
@@ -1120,8 +1081,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0 5.08 0)
+			(property "Reference" "J"
+				(at 0 12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1130,61 +1091,17 @@
 					)
 				)
 			)
-			(property "Value" "100nF/50V"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "JLCImport:C0603"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_100nF-104-10-50V_C14663.html"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT"
-				(at 0 -22.86 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "YAGEO(国巨)"
+			(property "Value" "ZX-SH1_0-3PWT"
 				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
-				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "MPN" "CC0603KRX7R9BB104"
+			(property "Footprint" "JLCImport:ZX-SH1_0-3PWT"
 				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1195,7 +1112,7 @@
 					)
 				)
 			)
-			(property "LCSC" "C14663"
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C7430445.pdf"
 				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1206,47 +1123,76 @@
 					)
 				)
 			)
-			(symbol "CC0603KRX7R9BB104_0_1"
-				(polyline
-					(pts
-						(xy -0.51 0) (xy -2.54 0)
+			(property "Description" "-40℃~+85℃ 1 1A 1mm 1x3P 3 3.15mm 3P 4.3mm 5.35mm 50V Auxiliary Solder Pin Beige Brass LCP SH Surface Mount, Right Angle Tin SMD,P=1mm Wire To Board Connector ROHS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
+				)
+			)
+			(property "Manufacturer" "Megastar"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Part" "ZX-SH1.0-3PWT"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C7430445"
+				(at 0 -25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "C7430445 ZX-SH1.0-3PWT SH1.0 3P right angle Megastar"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ZX-SH1_0-3PWT_0_1"
+				(rectangle
+					(start -1.27 5.08)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy -0.51 -2.03) (xy -0.51 2.03)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.51 2.03) (xy 0.51 -2.03)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 0.51 0)
-					)
+				(circle
+					(center 0 3.81)
+					(radius 0.38)
 					(stroke
 						(width 0)
 						(type default)
@@ -1256,7 +1202,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -3.81 2.54 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -1274,7 +1220,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at -3.81 0 0)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -1284,6 +1230,60 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -7.62 90)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 7.62 270)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1308,7 +1308,7 @@
 	)
 	(text "Use \"same\" cable (pin 1 to pin 1) to main-phone board"
 		(exclude_from_sim no)
-		(at 127.762 81.28 0)
+		(at 128.27 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1575,7 +1575,7 @@
 			(uuid "ea43af38-fccf-48ca-bffa-e02cc1035124")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6005")
 					(unit 1)
@@ -1654,7 +1654,7 @@
 			(uuid "eb992658-b554-40d6-b766-cf3a2c443a97")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#FLG6004")
 					(unit 1)
@@ -1733,7 +1733,7 @@
 			(uuid "d53439a0-3ea1-4a53-a86f-944c1af5982b")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6002")
 					(unit 1)
@@ -1811,7 +1811,7 @@
 			(uuid "f77176d3-9151-4632-ae52-853dfb5536e7")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6010")
 					(unit 1)
@@ -1888,7 +1888,7 @@
 			(uuid "75f8f0c3-caa0-4653-ac01-449258a63595")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6009")
 					(unit 1)
@@ -1967,7 +1967,7 @@
 			(uuid "14e73d8e-87e4-481c-89ec-543046c339f0")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#FLG6006")
 					(unit 1)
@@ -1976,7 +1976,7 @@
 		)
 	)
 	(symbol
-		(lib_id "JLCImport:ZX-SH1_0-3PLT")
+		(lib_id "JLCImport:ZX-SH1_0-3PWT")
 		(at 170.18 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -1997,7 +1997,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ZX-SH1_0-3PLT"
+		(property "Value" "ZX-SH1_0-3PWT"
 			(at 165.481 115.316 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2008,7 +2008,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:ZX-SH1_0-3PLT"
+		(property "Footprint" "JLCImport:ZX-SH1_0-3PWT"
 			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2019,7 +2019,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430452.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7430445.pdf"
 			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2030,7 +2030,7 @@
 				)
 			)
 		)
-		(property "Description" "JST SH compatible 1.0 mm 1x3P, SMD vertical (top entry), 2 mounting pads (4, 5)"
+		(property "Description" "-40℃~+85℃ 1 1A 1mm 1x3P 3 3.15mm 3P 4.3mm 5.35mm 50V Auxiliary Solder Pin Beige Brass LCP SH Surface Mount, Right Angle Tin SMD,P=1mm Wire To Board Connector ROHS"
 			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2041,7 +2041,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C7430452"
+		(property "LCSC" "C7430445"
 			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2063,7 +2063,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part" "ZX-SH1.0-3PLT"
+		(property "Manufacturer Part" "ZX-SH1.0-3PWT"
 			(at 170.18 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2090,7 +2090,7 @@
 			(uuid "06340582-03f2-47c6-bd4f-4b4c3e6e96f9")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "J6001")
 					(unit 1)
@@ -2168,7 +2168,7 @@
 			(uuid "9aca99c4-947f-4f47-bca1-a9ed6ea20c2b")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6011")
 					(unit 1)
@@ -2283,7 +2283,7 @@
 			(uuid "9a1a1acc-0fa1-40e0-9be4-a209541c5094")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "C6001")
 					(unit 1)
@@ -2361,7 +2361,7 @@
 			(uuid "32798e4f-c651-42af-b16d-f99db521cc9c")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "H6001")
 					(unit 1)
@@ -2457,7 +2457,7 @@
 			(uuid "753dbbe9-d1b1-42e8-9ec6-ea4845391799")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "U6001")
 					(unit 1)
@@ -2536,7 +2536,7 @@
 			(uuid "7297065f-135a-4ac9-bb23-c71a527b352d")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6007")
 					(unit 1)
@@ -2613,7 +2613,7 @@
 			(uuid "c79e9a7e-484b-4e07-a1ac-ad14e9fc4ed4")
 		)
 		(instances
-			(project "Hall Sensor"
+			(project "hall-sensor"
 				(path "/b1780c3e-7100-4df4-97c9-2fd6186fb125"
 					(reference "#PWR6008")
 					(unit 1)

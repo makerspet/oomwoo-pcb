@@ -25,7 +25,7 @@ The same PCB with U6001 fitted as a TI DRV5055A1QDBZR (C962987, ~$0.29), a ratio
 
 ## Connector J6001
 
-ZX-SH1.0-3PLT (C7430452), vertical SH. It has 3 pins on purpose (changed 2026-10-29, was 4 with one unused): a Hall cable can't go into a 4-pin cliff or rear IR socket, and the cable is cheaper.
+ZX-SH1.0-3PWT (C7430445), right-angle SH since 2026-11-26 (the vertical ZX-SH1.0-3PLT, C7430452, before), to keep the board compact; the main board sockets stay vertical, and the pinout and cable are the same. It has 3 pins on purpose (changed 2026-10-29, was 4 with one unused): a Hall cable can't go into a 4-pin cliff or rear IR socket, and the cable is cheaper.
 
 | Pin | Signal | Main board |
 | --- | --- | --- |

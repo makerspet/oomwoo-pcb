@@ -11,7 +11,7 @@ A separate board lets the sensor sit wherever the enclosure needs it, away from 
 
 ## Connector J7001
 
-ZX-SH1.0-2PLT (C7430451), vertical SH, the same family as the other sensor boards. It has 2 pins, so no other sensor cable fits it.
+ZX-SH1.0-2PWT (C7430444), right-angle SH since 2026-11-26 (the vertical ZX-SH1.0-2PLT, C7430451, before), to keep the board compact; J9 on the main board stays vertical, and the pinout and cable are the same. The same family as the other sensor boards. It has 2 pins, so no other sensor cable fits it.
 
 | Pin | Signal | Main board |
 | --- | --- | --- |

@@ -366,7 +366,7 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 
 - 2x VL53L7CH (or VL53L7CX), 90° diagonal = ~63° horizontal FoV each
   - each turned ~30° left, right to cover ~126° horizontal FoV
-  - JLC, 2026-10-27: VL53L7CH C19183986 $11.46, 2 in stock; VL53L7CX C5270520 $8.46, 77 in stock; VL53L5CX C3178303 $4.81, 3.8k in stock (same footprint and pinout, but 63° diagonal / 45° horizontal). Two per robot, so this is a large BOM line. **Decided:** the sensor is bought from a distributor (DigiKey VL53L7CX $6.06 at 1,000, Mouser $5.17 at 3,600, ST VL53L7CH $5.63 at 500) and placed by hand; JLC assembles the rest of the ToF board. See the [ToF board README](../kicad/front-sensors/README.md#assembly-the-sensor-is-placed-by-hand)
+  - JLC, 2026-10-27: VL53L7CH C19183986 $11.46, 2 in stock; VL53L7CX C5270520 $8.46, 77 in stock; VL53L5CX C3178303 $4.81, 3.8k in stock (same footprint and pinout, but 63° diagonal / 45° horizontal). Two per robot, so this is a large BOM line. **Decided:** the sensor is bought from a distributor (DigiKey VL53L7CX $6.06 at 1,000, Mouser $5.17 at 3,600, ST VL53L7CH $5.63 at 500) and placed by hand; JLC assembles the rest of the ToF board. See the [ToF board README](../kicad/front/README.md#assembly-the-sensor-is-placed-by-hand)
   - obstacle *detection*
 - 1x RGB camera, parallel (DVP) interface, wide-angle, pitched down (changed Oct 2026 from
   2x OV5647 NIR stereo with structured illumination)
@@ -393,14 +393,14 @@ Mystery mini - JST GH 1.25mm 5-pin shrouded housing
 - v1 (changed 2026-10-27): the dock-homing IR receivers move onto the main board, which sits at the very front of the robot anyway (some consumer robots do the same)
   - 2x IRM-V838M3-C (side-looking), U24 left and U25 right, at the board's front edge with a baffle between them, until 2026-11-11. Since then one IRM-H638T on each front ToF board (U2002), aimed 30° left or right with its ToF sensor: see [IR receiver ICs](#ir-receiver-ics)
   - two receivers, not one: when both see the dock it is straight ahead, when one does, steer to that side. With the dock's left and right codes, the robot knows both which way the dock is and which side of the dock it's on. One receiver only sees the dock or not, so it would have to turn and sweep to find the bearing
-- the ToF sensors are on small boards, one design fitted twice: [`kicad/front-sensors`](../kicad/front-sensors/README.md)
+- the ToF sensors are on small boards, one design fitted twice: [`kicad/front`](../kicad/front/README.md)
   - left board aimed 30° left, right board 30° right
-  - board-to-board since 2026-11-06, no cable: each ToF board hangs upright under the main board, sensor on its front face, a 2.0 mm 2x4 right-angle header (HanElectricity 2005WR-2x4P, C6837622) on its back, plugged into a 2x4 vertical socket (2005FV-2x4P, C18723066) on the main board's underside (J6 / J5); a mount screwed to the main board holds it. The mating swaps the rows, so header pin n meets socket pin n+1 / n-1: see the [front ToF README](../kicad/front-sensors/README.md#connector-j2001)
+  - board-to-board since 2026-11-06, no cable: each ToF board hangs upright under the main board, sensor on its front face, a 2.0 mm 2x4 right-angle header (HanElectricity 2005WR-2x4P, C6837622) on its back, plugged into a 2x4 vertical socket (2005FV-2x4P, C18723066) on the main board's underside (J6 / J5); a mount screwed to the main board holds it. The mating swaps the rows, so header pin n meets socket pin n+1 / n-1: see the [front ToF README](../kicad/front/README.md#connector-j2001)
 - RGB camera with white torchlight LEDs: the camera connector (J12) is on the main board since 2026-11-21 ([docs/mcu-ch32v307.md](mcu-ch32v307.md)); since 2026-11-23 each front ToF board has a white torch LED (LED2001, XL-3030UWC-1W-3V, ~190 mA from VSENS-5V-USB); since 2026-11-24 the driver is on the main board: R255/R256 (10 Ω 1 W) feed the anodes, Q46 (AO3400) switches both cathodes, PWM on TORCH from U28 PB8
 
 ## Side sensors module board
 
-- **v1 (decided 2026-10-27): VL53L0X + IRM-H638T** on [`kicad/side-sensors`](../kicad/side-sensors/README.md), right side only, JST SH 7-pin (ZX-SH1.0-7PWT), assembled at JLC
+- **v1 (decided 2026-10-27): VL53L0X + IRM-H638T** on [`kicad/side`](../kicad/side/README.md), right side only, JST SH 7-pin (ZX-SH1.0-7PWT), assembled at JLC
   - VL53L0X (C91199, ~$1.63) over the VL53L4CD (~$2.07) to save cost; it is weak below ~3 cm, so the board is slightly recessed. The VL6180 is NRND/obsolete and needs 2.8 V I/O
   - IRM-H638T (top-looking) replaces the TSOP38238: it catches the dock's beacon while driving past or wall-following, without stopping to spin, and helps when there is no map yet
 - earlier notes:
@@ -528,7 +528,7 @@ Design (current schematic)
 
 ## Phone-compute board (v1)
 
-The first board drops the Raspberry Pi: an Android phone is the compute, talking to the MCU over USB-C (CDC). Schematic: [`kicad/main-phone`](../kicad/main-phone/README.md), forked from `kicad/main` (the Pi carrier stays for later).
+The first board drops the Raspberry Pi: an Android phone is the compute, talking to the MCU over USB-C (CDC). Schematic: [`kicad/main-phone`](../kicad/main-phone/README.md), forked from the earlier Raspberry Pi carrier schematic (removed from the repo on 2026-11-26; the Pi carrier stays in the plans).
 
 - **MCU (2026-11-21):** the STM32G473VCT6 went to $7.39 with 20 in stock, so U13 is now a WCH CH32V307VCT6 (USB high speed to the phone, DVP camera, all motors and sensors) with a companion MCU (U28: USB-C, slow analog, buttons and LEDs, charger status, power latch, camera reset, torch): a CH32X035C8T6 at first, a CH32L103C8T6 since 2026-11-23 (the CH32X035 loses I2C and four ADC channels on some lots). USB-C baseline is resistor-only (charge the phone when docked, Rd and phone-as-host for cleaning); a PD power-role swap is a bonus for phones that support it. Pin map, PD, camera, carpet amplifier and flashing: [mcu-ch32v307.md](mcu-ch32v307.md). The STM32 pin names in the bullets below are history; the schematic and the firmware pin header are current.
 
@@ -608,7 +608,7 @@ The first board drops the Raspberry Pi: an Android phone is the compute, talking
 
 ### Rear docking IR and Hall sensors (v1)
 
-- [Rear docking IR board](../kicad/rear-ir/README.md) on REAR-IR1: two top-looking IRM-H638T, left PC8 (TIM3_CH3), right PC9 (TIM3_CH4). The robot backs into the dock (like a mop or auto-empty dock): LiDAR for the approach, the two receivers for the final alignment.
+- [Rear docking IR board](../kicad/rear/README.md) on REAR-IR1: two top-looking IRM-H638T, left PC8 (TIM3_CH3), right PC9 (TIM3_CH4). The robot backs into the dock (like a mop or auto-empty dock): LiDAR for the approach, the two receivers for the final alignment.
 - Two [Hall sensor boards](../kicad/hall-sensor/README.md) (CC6201ST, omnipolar): dust bin present on J7 (PE4), LiDAR tower bumper on J8 (PE5) (HALL-BIN1 / HALL-TOWER1 until 2026-11-13). Low = magnet near; the MCU's internal pull-ups on PE4/PE5 (R215/R216 removed 2026-11-04; either Hall output type works).
 - Floor Hall sockets (2026-11-18): J10 (HALL-FLOOR-L → PE10, ADC3/4/5_IN14) and J11 (HALL-FLOOR-R → PF0, ADC1_IN10), the same 3-pin SH socket and pinout as J7/J8 (1 VSENS-3V3, 2 OUT, 3 GND). For magnetic barrier strips on the floor (a virtual wall): two Hall boards on the underside at the front left and right corners, as close to the floor as the shell allows, so the robot sees a strip before its wheels reach it. They take the floor variant of the Hall board (linear DRV5055A1QDBZR instead of the CC6201ST switch; see the Hall board README). Both pins are 5 V tolerant analog inputs (FT_a, FT_fa); no MCU pull-ups on them. Sensor current: ~6 mA each from VSENS-3V3, so the rail must be on to read them.
   - Open: the strip's field at the sensor height. Typical barrier strips are multi-pole rubber magnets whose field falls off within millimetres; measure a real strip at the planned height on the first prototype, and keep the boards away from the wheel and side-brush motor magnets.

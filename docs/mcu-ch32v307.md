@@ -1,6 +1,6 @@
 # main-phone MCU: CH32V307 + CH32L103
 
-Status: in the schematic since 2026-11-21 (sheet `MCU`, file `kicad/main-phone/MCU.kicad_sch`, was `STM32G473.kicad_sch`). Not yet bench-tested; dev boards are on order. U28 was a CH32X035C8T6 until 2026-11-23, then a CH32L103C8T6 (see below).
+Status: in the schematic since 2026-11-21 (sheet `MCU`, file `kicad/main-phone/mcu.kicad_sch`, was `STM32G473.kicad_sch`). Not yet bench-tested; dev boards are on order. U28 was a CH32X035C8T6 until 2026-11-23, then a CH32L103C8T6 (see below).
 
 ## Why
 

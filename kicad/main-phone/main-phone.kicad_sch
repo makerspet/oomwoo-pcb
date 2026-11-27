@@ -3721,8 +3721,8 @@
 		)
 	)
 	(rectangle
-		(start 322.58 140.97)
-		(end 400.05 223.52)
+		(start 322.58 139.7)
+		(end 400.05 218.44)
 		(stroke
 			(width 0)
 			(type solid)
@@ -3814,7 +3814,7 @@
 	)
 	(text "FRONT PCBs"
 		(exclude_from_sim no)
-		(at 337.82 220.98 0)
+		(at 333.502 212.598 0)
 		(effects
 			(font
 				(size 3.048 3.048)
@@ -3882,7 +3882,7 @@
 		)
 		(uuid "77d69faf-b1b6-4686-9224-4360c7083800")
 	)
-	(text "MCU"
+	(text "MCU + CAMERA"
 		(exclude_from_sim no)
 		(at 193.04 119.38 0)
 		(effects
@@ -3892,7 +3892,6 @@
 				(bold yes)
 				(italic yes)
 			)
-			(justify left)
 		)
 		(uuid "8bfd907e-233f-4d41-a4ed-21c64d15f30d")
 	)
@@ -4138,7 +4137,7 @@
 		(at 256.54 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b612350d-2c9d-495d-bee4-b17b8d7dd3aa")
+		(uuid "b1c4d239-f3f1-4164-bcaf-fc218629990c")
 	)
 	(junction
 		(at 375.92 203.2)
@@ -4502,7 +4501,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 217.17) (xy 271.78 205.74)
+			(xy 271.78 214.63) (xy 271.78 205.74)
 		)
 		(stroke
 			(width 0)
@@ -4702,7 +4701,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 214.63) (xy 275.59 214.63)
+			(xy 177.8 217.17) (xy 275.59 217.17)
 		)
 		(stroke
 			(width 0)
@@ -4732,7 +4731,7 @@
 	)
 	(wire
 		(pts
-			(xy 318.77 109.22) (xy 318.77 137.16)
+			(xy 313.69 109.22) (xy 313.69 137.16)
 		)
 		(stroke
 			(width 0)
@@ -4962,7 +4961,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 217.17) (xy 271.78 217.17)
+			(xy 177.8 214.63) (xy 271.78 214.63)
 		)
 		(stroke
 			(width 0)
@@ -5542,7 +5541,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 137.16) (xy 318.77 137.16)
+			(xy 256.54 137.16) (xy 313.69 137.16)
 		)
 		(stroke
 			(width 0)
@@ -5812,7 +5811,7 @@
 	)
 	(wire
 		(pts
-			(xy 275.59 214.63) (xy 275.59 203.2)
+			(xy 275.59 217.17) (xy 275.59 203.2)
 		)
 		(stroke
 			(width 0)
@@ -6262,7 +6261,7 @@
 	)
 	(wire
 		(pts
-			(xy 318.77 109.22) (xy 322.58 109.22)
+			(xy 313.69 109.22) (xy 322.58 109.22)
 		)
 		(stroke
 			(width 0)
@@ -13397,6 +13396,16 @@
 				(justify left)
 			)
 		)
+		(pin "LED-CLEAN" output
+			(at 186.69 179.07 270)
+			(uuid "f08149ed-3a79-46d3-90d9-f25db00d79fc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(pin "LED-PWR" output
 			(at 191.77 179.07 270)
 			(uuid "42802ee8-4a68-4397-9974-a34b0a94f455")
@@ -14126,7 +14135,7 @@
 			)
 		)
 		(pin "IMU-SCL" input
-			(at 177.8 217.17 0)
+			(at 177.8 214.63 0)
 			(uuid "f18609c5-6564-4e79-9398-b981c994be19")
 			(effects
 				(font
@@ -14136,7 +14145,7 @@
 			)
 		)
 		(pin "IMU-SDA" bidirectional
-			(at 177.8 214.63 0)
+			(at 177.8 217.17 0)
 			(uuid "f09bc33f-30fa-4eb8-91d4-884cb9f10465")
 			(effects
 				(font
@@ -15064,6 +15073,16 @@
 				(justify right)
 			)
 		)
+		(pin "LED-CLEAN" input
+			(at 182.88 237.49 0)
+			(uuid "01e2a07a-3ea0-46c5-bc8c-73400e198b9b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(pin "LED-PWR" input
 			(at 182.88 245.11 0)
 			(uuid "19370dfb-d4ee-40c7-980a-c49ad48d0fcb")
@@ -15245,4 +15264,24 @@
 		)
 	)
 	(embedded_fonts no)
+	(wire
+		(pts
+			(xy 186.69 179.07) (xy 186.69 237.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddeade65-c005-4b98-8b1b-b9940cf64bb8")
+	)
+	(wire
+		(pts
+			(xy 186.69 237.49) (xy 182.88 237.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af8dcc0a-ed4a-4fc9-9fa1-67d545b924bc")
+	)
 )

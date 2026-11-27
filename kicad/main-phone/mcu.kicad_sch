@@ -14024,16 +14024,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 170.18) (xy 175.26 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dee86581-d996-4709-b1f4-6c144fc4f9a4")
-	)
-	(wire
-		(pts
 			(xy 60.96 168.91) (xy 60.96 196.85)
 		)
 		(stroke
@@ -14602,16 +14592,6 @@
 		)
 		(uuid "752b5e9f-c6ad-498b-b999-a44199fc995f")
 	)
-	(label "MCU2-PC14"
-		(at 175.26 170.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "75f1b73b-2005-40df-b0b9-307e49e94a60")
-	)
 	(label "MCU2-RX"
 		(at 254 36.83 0)
 		(effects
@@ -14821,16 +14801,6 @@
 			(justify left bottom)
 		)
 		(uuid "abc5d643-c6c2-4d1b-a094-5cec5e9a74ab")
-	)
-	(label "MCU2-PC14"
-		(at 330.2 74.93 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b5e88d12-a6dd-4978-9a46-fb60ac4bb4e0")
 	)
 	(label "MCU2-NRST"
 		(at 330.2 90.17 180)
@@ -15774,8 +15744,8 @@
 		)
 		(uuid "cc58f0d4-529e-4a67-97bd-014a6eaf53d7")
 	)
-	(hierarchical_label "~{CLEAN-BTN}"
-		(shape input)
+	(hierarchical_label "LED-CLEAN"
+		(shape output)
 		(at 262.89 54.61 180)
 		(effects
 			(font
@@ -26691,5 +26661,20 @@
 				)
 			)
 		)
+	)
+	(hierarchical_label "~{CLEAN-BTN}"
+		(shape input)
+		(at 330.2 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "65e64592-564b-48cc-9f30-1a3284bc67e8")
+	)
+	(no_connect
+		(at 167.64 170.18)
+		(uuid "3396243a-8af1-4aa0-81ee-5952837cc86a")
 	)
 )

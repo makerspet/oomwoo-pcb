@@ -127,7 +127,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 19 | PB1 | ADC_IN9 | LDR | wake-up sensor |
 | 29 | PA8 | TIM1_CH1 | LED-HOME | PWM possible |
 | 30 | PA9 | TIM1_CH2 | LED-PWR | PWM possible |
-| 31 | PA10 | GPIO in | ~CLEAN-BTN | internal pull-up |
+| 31 | PA10 | TIM1_CH3 | LED-CLEAN | PWM possible (since 2026-11-27; ~CLEAN-BTN before) |
 | 32 | PA11 | GPIO in | ~HOME-BTN | internal pull-up (USB D- unused) |
 | 33 | PA12 | GPIO in | PWR-BTN-SENSE | (USB D+ unused) |
 | 38 | PA15 | GPIO in | HALL-BIN | internal pull-up |
@@ -137,6 +137,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 26 | PB13 | GPIO out | PWR-HOLD | power latch; R172 holds the latch while U28 boots |
 | 27 | PB14 | GPIO out | SIDE-PROXI-CE-R | VL53L0X XSHUT |
 | 28 | PB15 | GPIO out | USB_PWR_EN | phone charging switch (TMI6240 + Q27) |
+| 3 | PC14 | GPIO in | ~CLEAN-BTN | internal pull-up; a low-drive backup-domain pin, fine for a button (since 2026-11-27; spare MCU2-PC14 on J13 pin 2 before) |
 | 2 | PC13 | GPIO out | CHG-I-HI | high = ~2.2 A charging (Q45 -> Q44 puts R250 in parallel with R106); gate drive only, R252 (1M) pull-down (since 2026-11-24) |
 | 39 | PB3 | GPIO in | ~STDBY | internal pull-up |
 | 40 | PB4 | GPIO in | ~CHRG | internal pull-up |
@@ -155,7 +156,7 @@ All 80 GPIO are used. Pins marked FT are 5 V tolerant; the ADC-capable pins (PA0
 | 1, 9, 24, 36, 48 | VBAT, VDDA, VDD x3 | | VMCU-3V3 | C183 100 nF + C184 10 µF, C196/C197 (pins 24/36), C198 (VDDA) |
 | 8, 23, 35, 47 | VSSA, VSS x3 | | GND | |
 
-PC14, PC15 (MCU2-PC14/15, U28 pins 3/4): spare, J13 pins 2/3 (weak, 2 MHz, can't source current). No free pins left on U13 or U28: every spare is on J1 or J13.
+PC15 (MCU2-PC15, U28 pin 4): spare, J13 pin 3 (weak, 2 MHz, can't source current). PC14 is the clean button since 2026-11-27, so J13 pin 2 is not connected. No free pins left on U13 or U28: every spare is on J1 or J13.
 
 ## I2C buses (since 2026-11-23)
 
